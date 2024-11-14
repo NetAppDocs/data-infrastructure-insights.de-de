@@ -1,0 +1,177 @@
+---
+sidebar: sidebar 
+permalink: reporting_querying_database.html 
+summary: Verwenden Sie Data Infrastructure Insights APIs, um die Berichtsdatenbank direkt abzufragen. 
+keywords: reporting, cognos, data warehouse, dwh, API 
+---
+= Greifen Sie über die API auf die Berichtsdatenbank zu
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Dank der leistungsstarken API von Data Infrastructure Insights können Benutzer die Data Infrastructure Insights Reporting-Datenbank direkt abfragen, ohne die Cognos Reporting-Umgebung zu durchlaufen.
+
+
+NOTE: Diese Dokumentation bezieht sich auf die Data Infrastructure Insights Reporting-Funktion, die in der Data Infrastructure Insights Premium Edition verfügbar ist.
+
+
+
+== Odata
+
+Die Data Infrastructure Insights Reporting API folgt dem link:https://www.odata.org/["OData v4"]Standard (Open Data Protocol) für die Abfrage der Berichtsdatenbank. Weitere Informationen oder weitere Informationen finden Sie link:https://www.odata.org/getting-started/basic-tutorial/["Dieses Lernprogramm"]unter OData.
+
+Alle Anfragen beginnen mit der url _\https://<Data-Infrastruktureinblicke-URL>/Rest/v1/dwh-Management/odata_
+
+
+
+== APIKey wird generiert
+
+Lesen Sie mehr über link:API_Overview.html["Einblick in die Dateninfrastruktur – APIs"].
+
+Gehen Sie zum Generieren eines API-Schlüssels wie folgt vor:
+
+* Melden Sie sich bei Ihrer Data Infrastructure Insights-Umgebung an, und wählen Sie *Admin > API Access*.
+* Klicken Sie auf „+ API Access Token“.
+* Geben Sie einen Namen und eine Beschreibung ein.
+* Wählen Sie für Typ _Data Warehouse_.
+* Legen Sie Berechtigungen als Lese-/Schreibzugriff fest.
+* Legen Sie ein Ablaufdatum für „Wünsche“ fest.
+* Klicken Sie auf „Speichern“, dann kopieren Sie den Schlüssel und speichern Sie ihn* irgendwo sicher. Sie können später nicht auf den vollständigen Schlüssel zugreifen.
+
+
+APIkeys sind gut für<<synchronous-or-asynchronous,_Sync_ oder _Async_>>.
+
+
+
+== Direkte Abfrage von Tabellen
+
+Mit dem vorhandenen API-Schlüssel sind nun direkte Abfragen der Reporting-Datenbank möglich. Lange URLs können zu Anzeigezwecken auf \https://.../odata/ vereinfacht werden, anstatt die vollständige \https://<Data-Infrastruktur-Insights-URL>/Rest/v1/dwh-Management/odata/
+
+Versuchen Sie einfache Abfragen wie
+
+* Einblicke in die \https://<Data-Infrastruktur – URL>/Rest/v1/dwh-Management/odata/dwh_Custom
+* \https://<Data-Infrastruktureinblicke URL>/Rest/v1/dwh-Management/odata/dwh_Inventory
+* Einblicke in die \https://<Data-Infrastruktur – URL>/Rest/v1/dwh-Management/odata/dwh_Inventory/Storage
+* \https://<Data-Infrastruktureinblicke URL>/Rest/v1/dwh-Management/odata/dwh_Inventory/Disk
+* \https://.../odata/dwh_custom/custom_queries
+
+
+
+
+== Beispiele FÜR REST-API
+
+Die URL für alle Aufrufe lautet _\https://<Data Infrastructure Insights URL>/Rest/v1/dwh-Management/odata_.
+
+* GET /{Schema}/** - ruft Daten aus der Berichtsdatenbank ab.
+
+
+Format: _\https://<Data-Infrastruktureinblicke URL>/Rest/v1/dwh-Management/odata/<schema_name>/<query>_
+
+Beispiel:
+
+ https://<domain>/rest/v1/dwh-management/odata/dwh_inventory/fabric?$count=true&$orderby=name
+Ergebnis:
+
+....
+{
+   "@odata.context": "$metadata#fabric",
+   "@odata.count": 2,
+   "value": [
+       {
+           "id": 851,
+           "identifier": "10:00:50:EB:1A:40:3B:44",
+           "wwn": "10:00:50:EB:1A:40:3B:44",
+           "name": "10:00:50:EB:1A:40:3B:44",
+           "vsanEnabled": "0",
+           "vsanId": null,
+           "zoningEnabled": "0",
+           "url": "https://<domain>/web/#/assets/fabrics/941716"
+       },
+       {
+           "id": 852,
+           "identifier": "10:00:50:EB:1A:40:44:0C",
+           "wwn": "10:00:50:EB:1A:40:44:0C",
+           "name": "10:00:50:EB:1A:40:44:0C",
+           "vsanEnabled": "0",
+           "vsanId": null,
+           "zoningEnabled": "0",
+           "url": "https://<domain>/web/#/assets/fabrics/941836"
+        }
+    ]
+}
+....
+
+
+== Hilfreiche Tipps
+
+Beachten Sie bei der Arbeit mit Reporting API-Abfragen Folgendes:
+
+* Die Zuladung der Abfrage muss ein gültiger JSON-String sein
+* Die Zuladung der Abfrage muss in einer einzigen Zeile enthalten sein
+* Doppelte Anführungszeichen müssen entfloh werden, d. h. \“
+* Registerkarten werden als \t unterstützt
+* Kommentare vermeiden
+* Tabellennamen mit niedrigerer Groß-/Kleinschreibung werden unterstützt
+
+
+Zusätzlich:
+
+* 2 Kopfzeilen sind erforderlich:
++
+** Name „X-CloudInsights-ApiKey“
+** Attributwert „<apikey>“
+
+
+
+
+Ihr API-Schlüssel ist spezifisch für Ihre Data Infrastructure Insights Umgebung.
+
+
+
+== Synchron oder asynchron?
+
+Standardmäßig wird ein API-Befehl im _synchronen_-Modus ausgeführt, d. h., Sie senden die Anforderung und die Antwort wird sofort zurückgegeben. Manchmal kann die Ausführung einer Abfrage jedoch lange dauern, was zu einer Zeitüberschreitung der Anfrage führen kann. Um dies zu umgehen, können Sie eine Anfrage _asynchron_ ausführen. Im asynchronen Modus gibt die Anforderung eine URL zurück, über die die Ausführung überwacht werden kann. Die URL gibt das Ergebnis zurück, wenn sie fertig ist.
+
+Um eine Abfrage im asynchronen Modus auszuführen, fügen Sie die Kopfzeile der Anforderung hinzu `*Prefer: respond-async*`. Nach erfolgreicher Ausführung enthält die Antwort die folgenden Kopfzeilen:
+
+....
+Status Code: 202 (which means ACCEPTED)
+preference-applied: respond-async
+location: https://<Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/dwh_custom/asyncStatus/<token>
+....
+Wenn Sie die URL für den Speicherort abfragen, werden die gleichen Header zurückgegeben, wenn die Antwort noch nicht bereit ist, oder wenn die Antwort bereit ist, wird sie mit dem Status 200 zurückgegeben. Der Antwortinhalt ist vom Typ Text und enthält den http-Status der ursprünglichen Abfrage sowie einige Metadaten, gefolgt von den Ergebnissen der ursprünglichen Abfrage.
+
+....
+HTTP/1.1 200 OK
+ OData-Version: 4.0
+ Content-Type: application/json;odata.metadata=minimal
+ oDataResponseSizeCounted: true
+
+ { <JSON_RESPONSE> }
+....
+Um eine Liste aller asynchronen Abfragen zu sehen und welche davon bereit sind, verwenden Sie den folgenden Befehl:
+
+ GET https://<Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/dwh_custom/asyncList
+Die Antwort hat das folgende Format:
+
+....
+{
+   "queries" : [
+       {
+           "Query": "https://<Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/dwh_custom/heavy_left_join3?$count=true",
+           "Location": "https://<Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/dwh_custom/asyncStatus/<token>",
+           "Finished": false
+       }
+   ]
+}
+....

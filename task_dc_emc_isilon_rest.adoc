@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_isilon_rest.html 
+keywords: data collector, isilon, EMC, DELL, PowerScale 
+summary: Konfiguration des Dell EMC Isilon/PowerScale REST Data Collectors. 
+---
+= Rest-Datensammler Dell EMC Isilon/PowerScale
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights verwendet den REST-Datensammler Dell EMC Isilon/PowerScale, um Bestands- und Performance-Daten von Dell EMC Isilon- oder PowerScale-Speicher zu erfassen. Dieser Collector unterstützt Arrays, auf denen OneFS 8.0.0+ ausgeführt wird.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus diesem Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Laufwerk | Festplatte 
+
+
+| Cluster | Storage 
+
+
+| Knoten | Storage-Node 
+
+
+| OneFS File System | Internes Volumen 
+
+
+| OneFS File System | Storage-Pool 
+
+
+| Qtree | Qtree 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurieren:
+
+* Ein Benutzerkonto und ein Passwort. Dieses Konto muss nicht Administrator/Root sein, aber Sie MÜSSEN Ihrem Servicekonto eine beträchtliche Anzahl an schreibgeschützten Berechtigungen gewähren - siehe Tabelle unten
+* IP-Adresse / Fully Qualified Domain Name des Dell EMC Isilon / PowerScale Clusters
+* HTTPS-Zugriff auf Port 8080
+* Isilon/PowerScale-Cluster mit OneFS 8.0.0 oder höher
+
+
+[cols="3*"]
+|===
+| Berechtigungsname | Beschreibung | r(Lesen) oder rw (Lesen+Schreiben) 
+
+
+| ISI_PRIV_LOGIN_PAPI | Plattform-API | r 
+
+
+| ISI_PRIV_SYS_TIME | Zeit | r 
+
+
+| ISI_PRIV_AUTH | Auth | r 
+
+
+| ISI_PRIV_ROLE | Berechtigung | r 
+
+
+| ISI_PRIV_DEVICES | Geräte | r 
+
+
+| ISI_PRIV_EVENT | Ereignis | r 
+
+
+| ISI_PRIV_HDFS | HDFS | r 
+
+
+| ISI_PRIV_NDMP | NDMP | r 
+
+
+| ISI_PRIV_NETWORK | Netzwerk | r 
+
+
+| ISI_PRIV_NFS | NFS | r 
+
+
+| ISI_PRIV_PAPI_CONFIG | Konfigurieren Sie die Plattform-API | r 
+
+
+| ISI_PRIV_QUOTA | Kontingente | r 
+
+
+| ISI_PRIV_SMARTPOOLS | SmartPools | r 
+
+
+| ISI_PRIV_SMB | SMB | r 
+
+
+| ISI_PRIV_STATISTICS | Statistiken | r 
+
+
+| ISI_PRIV_SWIFT | Swift | r 
+
+
+| ISI_PRIV_JOB_ENGINE | Job-Engine | r 
+|===
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Isilon IP-Adresse | Die IP-Adresse oder der vollqualifizierte Domain-Name des Isilon-Speichers 
+
+
+| Benutzername | Benutzername für Isilon 
+
+
+| Passwort | Passwort, das für Isilon verwendet wird 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| HTTPS-Anschluss | Der Standardwert ist 8080. 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 20. 
+
+
+| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Der Standardwert ist 300. 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| „Ungültige Anmeldeinformationen“ mit Fehlermeldungen „Befehle, die für die rollenbasierte Administration nicht aktiviert sind, benötigen Root-Benutzerzugriff“ | * Überprüfen Sie, dass der Benutzer über die Berechtigungen verfügt, um die folgenden Befehle auf dem Gerät auszuführen: > isi Version osselease > isi Status -q > isi Status -n > isi Devices -d %s > isi Lizenz * Überprüfen Sie, dass die im Assistenten verwendeten Anmeldeinformationen mit den Geräteanmeldeinformationen übereinstimmen 
+
+
+| „Interner Fehler“ mit Fehlermeldungen “Befehl <Ihr Befehl> Ausführen fehlgeschlagen mit Berechtigung: <Ihre aktuelle Berechtigung>. Sudo Befehl ausführen Berechtigungsproblem“ | Überprüfen Sie, ob der Benutzer über sudo-Berechtigungen verfügt, um den folgenden Befehl auf dem Gerät auszuführen 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

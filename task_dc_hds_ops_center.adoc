@@ -1,0 +1,125 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hds_ops_center.html 
+keywords: data collector, Hitachi Ops Center 
+summary: Konfiguration des HDS Ops Center Data Collector 
+---
+= Datensammler Hitachi Ops Center
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Dieser Datensammler verwendet die integrierte Anwendungssuite von Hitachi Ops Center, um auf Bestands- und Performancedaten mehrerer Speichergeräte zuzugreifen. Eine Bestandsaufnahme und Kapazitätserkennung muss in Ihrer Ops Center-Installation sowohl die Komponenten „Common Services“ als auch „Administrator“ enthalten. Zur Performance-Erfassung muss zusätzlich „Analyzer“ implementiert sein.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus diesem Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Storage-Systeme | Storage 
+
+
+| Datenmenge | Datenmenge 
+
+
+| Paritätsgruppen | Speicherpool (RAID), Festplattengruppen 
+
+
+| Festplatte | Festplatte 
+
+
+| Storage-Pool | Speicherpool (Thin, SNAP) 
+
+
+| Externe Paritätsgruppen | Speicherpool (Backend), Festplattengruppen 
+
+
+| Port | Storage-Node → Controller-Node →-Port 
+
+
+| Host-Gruppen | Volume-Zuordnung und -Maskierung 
+
+
+| Volume-Paare | Storage-Synchronisierung 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Inventaranforderungen
+
+Zur Erfassung von Bestandsdaten müssen Sie Folgendes haben:
+
+* IP-Adresse oder Hostname des Ops Center-Servers, der die „Common Services“-Komponente hostet
+* Root/sysadmin Benutzerkonto und Passwort, die auf allen Servern vorhanden sind, auf denen Ops Center Komponenten gehostet werden. HDS hat KEINE REST-API-Unterstützung für LDAP/SSO-Benutzer bis Ops Center 10.8+ implementiert
+
+
+
+
+== Performance-Anforderungen erfüllt
+
+Zur Erfassung von Leistungsdaten müssen die folgenden Anforderungen erfüllt sein:
+
+Das HDS Ops Center „Analyzer“-Modul muss installiert sein Storage Arrays müssen das Ops Center-Modul „Analyzer“ speisen
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Hitachi Ops Center-IP-Adresse | IP-Adresse oder vollqualifizierter Domänenname des Ops Center-Servers, der die Komponente „Allgemeine Dienste“ hostet 
+
+
+| Benutzername | Benutzername für den Ops-Center-Server. 
+
+
+| Passwort | Passwort, das für den Ops-Center-Server verwendet wird. 
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+| Verbindungstyp | HTTPS (Port 443) ist der Standard 
+
+
+| TCP-Port überschreiben | Geben Sie den zu verwendenden Port an, wenn nicht der Standardport 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 40. 
+
+
+| Wählen Sie „Ausschließen“ oder „Einschließen“, um eine Liste anzugeben | Geben Sie an, ob die unten aufgeführte Array-Liste beim Sammeln von Daten aufgenommen oder ausgeschlossen werden soll. 
+
+
+| Geräteliste filtern | Kommagetrennte Liste der einzuschließenden oder auszuschließenden Geräteseriennummer 
+
+
+| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Der Standardwert ist 300. 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_xio.html 
+keywords: data collector, XtremeIO, EMC 
+summary: Konfigurieren des XtremeIO-Datensammlers. 
+---
+= Dell EMC XtremeIO-Datensammler
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Der EMC XtremIO Data Collector erwirbt Bestands- und Performance-Daten vom EMC XtremIO Storage-System.
+
+
+
+== Anforderungen
+
+Zum Konfigurieren des EMC XtremIO (HTTP) Datensammlers sind folgende Funktionen erforderlich:
+
+* Die Host-Adresse des XtremIO Management Servers (XMS)
+* Ein Konto mit Administratorrechten
+* Zugriff auf Port 443 (HTTPS)
+
+
+
+
+== Terminologie
+
+Data Infrastructure Insights bezieht die folgenden Inventarinformationen aus dem EMC XtremIO Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Festplatte (SSD) | Festplatte 
+
+
+| Cluster | Storage 
+
+
+| Controller | Storage-Node 
+
+
+| Datenmenge | Datenmenge 
+
+
+| LUN-Zuordnung | Volume-Zuordnung 
+
+
+| Ziel-FC-Initiator | Volume-Maske 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In dieser Datenquelle fallen möglicherweise nicht alle Fälle an.
+
+
+
+== Anforderungen
+
+* Die XMS-Host-IP-Adresse des XtremIO Management Servers (XMS)
+* Administratorbenutzername und -Passwort für den XtremIO
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| XMS Host | IP-Adresse oder vollqualifizierter Domain-Name des XtremIO Management Servers 
+
+
+| Benutzername | Benutzername für den XtremIO Management Server 
+
+
+| Passwort | Passwort für den XtremIO Management Server 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| TCP-Port | TCP-Port für die Verbindung mit dem XtremIO Management Server. Der Standardwert ist 443. 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+
+
+| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

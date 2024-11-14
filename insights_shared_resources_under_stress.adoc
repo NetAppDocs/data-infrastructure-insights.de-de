@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: insights_shared_resources_under_stress.html 
+keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
+summary: Anhand der Einblicke erhalten Sie einen Einblick, wie sich Ressourcen auf andere Ressourcen in Ihrer Umgebung auswirken. 
+---
+= Einblicke: Shared Ressourcen Unter Stress
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Durch Workloads mit hohen Auswirkungen kann die Performance anderer Workloads in einer gemeinsamen Ressource reduziert werden. Dadurch wird die gemeinsam genutzte Ressource unter Druck. Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und Beeinträchtigungen Ihrer Umgebung untersuchen können.
+
+
+
+== Terminologie
+
+Wenn wir über Workload- oder Ressourcenauswirkungen sprechen, sind die folgenden Definitionen hilfreich.
+
+Ein *anspruchsvoller Workload* ist ein Workload, der derzeit als Auswirkungen auf andere Ressourcen im Shared Storage Pool identifiziert wird. Diese Workloads führen zu höheren IOPS (zum Beispiel) und reduzieren somit die IOPS für die betroffenen Workloads. Anspruchsvolle Workloads werden manchmal „_High-verbrauchende Workloads_“ genannt.
+
+Ein *betroffener Workload* ist ein Workload, der von einer hohen Auslastung im Shared Storage Pool beeinflusst wird. Diese Workloads verzeichnen aufgrund anspruchsvoller Workloads einen geringeren IOPS-Wert und/oder eine höhere Latenz.
+
+Beachten Sie, dass das Volume oder das interne Volume selbst als Workload erkannt wird, falls Data Infrastructure Insights den führenden Computing-Workload nicht erkannt hat. Dies gilt sowohl für anspruchsvolle als auch für betroffene Workloads.
+
+*Shared Resource Sättigung* ist das Verhältnis der IOPS-Auswirkung zu _Baseline_.
+
+*Baseline* wird als der maximal gemeldete Datenpunkt für jeden Workload in der Stunde definiert, die unmittelbar vor der erkannten Sättigung liegt.
+
+Ein *Konflikt* oder *Sättigung* tritt auf, wenn sich die IOPS auf andere Ressourcen oder Workloads im Shared Storage Pool auswirken.
+
+
+
+== Anspruchsvolle Workloads
+
+Wenn Sie sich mit anspruchsvollen und beeinträchtigten Workloads in Ihren gemeinsam genutzten Ressourcen vertraut machen möchten, klicken Sie auf *Dashboards > Insights* und wählen Sie die Option *Shared Resources under Stress* Insight aus.
+
+image:InsightsMenu.png["Menü „Insights“"]
+
+Data Infrastructure Insights zeigt eine Liste aller Workloads an, bei denen eine Sättigung erkannt wurde. Beachten Sie, dass Data Infrastructure Insights Workloads zeigt, bei denen mindestens eine _anspruchsvolle Ressource_ *oder* _betroffene Ressource_ erkannt wurde.
+
+Klicken Sie auf einen Workload, um die Detailseite anzuzeigen. Das obere Diagramm zeigt den Vorgang auf der gemeinsam genutzten Ressource (z. B. einen Storage-Pool), über den Konflikte/Sättigung stattfinden.
+
+image:ResourceInsightShared.png["Gemeinsam genutzte Ressourcen mit Konflikten"]
+
+Im Folgenden werden die beiden Diagramme mit den _anspruchsvollen_ Workloads und den Workloads angezeigt, die _durch diese anspruchsvollen Workloads beeinträchtigt sind.
+
+image:ResourceInsightDemanding.png["Diagramm mit anspruchsvollen Workloads"] image:ResourceInsightImpacted-a.png["Betroffene Workload-Grafik"]
+
+Unter den einzelnen Tabellen finden Sie eine Liste mit Workloads und/oder Ressourcen, die von den Engpässen betroffen sind oder die von diesen Konflikten betroffen sind. Wenn Sie auf eine Ressource klicken (z. B. auf eine VM), wird eine Detailseite für diese Ressource geöffnet. Wenn Sie auf einen Workload klicken, wird eine Abfrageseite geöffnet, auf der die beteiligten Pods angezeigt werden. Beachten Sie, dass, wenn der Link eine leere Abfrage öffnet, es sein kann, dass der betroffene Pod nicht mehr Teil der aktiven Konflikte ist. Sie können den Zeitbereich der Abfrage ändern, um die Pod-Liste in einem größeren oder stärker fokussierten Zeitbereich anzuzeigen.
+
+
+
+== Was muss ich tun, um Sättigung zu lösen?
+
+Es gibt eine Reihe von Schritten, die Sie ergreifen können, um die Wahrscheinlichkeit einer Sättigung in Ihrer Umgebung zu verringern oder zu beseitigen. Diese werden durch erweitern des Links *+Empfehlungen anzeigen* auf der Seite angezeigt. Hier sind ein paar Dinge, die Sie versuchen können.
+
+* Kunden mit hohen IOPS-Werten bewegen
++
+Verschieben Sie die „gierigen“ Workloads in weniger gesättigte Storage-Pools. Es wird empfohlen, die Ebene und die Kapazität dieser Pools vor der Verschiebung der Workloads zu bewerten, um unnötige Kosten oder zusätzliche Konflikte zu vermeiden.
+
+* Implementierung einer QoS-Richtlinie (Quality of Service
++
+Implementierung einer QoS-Richtlinie pro Workload, um sicherzustellen, dass genügend freie Ressourcen verfügbar sind, um die Sättigung des Storage-Pools zu verringern. Das ist eine langfristige Lösung.
+
+* Fügen Sie weitere Ressourcen hinzu
++
+Wenn die gemeinsam genutzte Ressource (zum Beispiel Storage Pool) den IOPS-Sättigungspunkt erreicht hat, stellt das Hinzufügen von mehr oder schnelleren Festplatten zum Pool sicher, dass genügend freie Ressourcen zur Verfügung stehen, um die Sättigung zu verringern.
+
+
+
+Zum Schluss können Sie auf den *Insight-Link kopieren* klicken, um die Seiten-url in die Zwischenablage zu kopieren, um sie leichter mit Kollegen zu teilen.

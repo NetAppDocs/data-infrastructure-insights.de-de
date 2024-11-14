@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hds_hcp.html 
+keywords: data collector, Hitachi HDS, HCP 
+summary: Konfiguration des HDS Datensammlers 
+---
+= Datensammler Hitachi HCP
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Dieser Datensammler unterstützt die Hitachi Content Platform (HCP) mithilfe der HCP Management API.
+
+
+NOTE: Hitachi Content Platform wird mit einer anderen Rate (Raw TB) für Managed Unit gemessen. Jede 40 TB unformatierte HCP-Kapazität wird als 1 berechnetlink:concept_subscribing_to_cloud_insights.html#pricing["Verwaltete Einheit (ME)"].
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Hitachi HCP-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| HCP-Cluster | Storage 
+
+
+| Mandant | Storage-Pool 
+
+
+|  | Namespace 
+
+
+| Internes Volumen | Knoten 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Inventaranforderungen
+
+Zur Erfassung von Bestandsdaten müssen Sie Folgendes haben:
+
+* IP-Adresse des HCP-Servers
+* Schreibgeschützter Benutzername und Kennwort für die HCP-Software und die Peer-Rechte
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| HCP Host | IP-Adresse oder vollqualifizierter Domänenname des HCP-Hosts 
+
+
+| HCP-Anschluss | Der Standardwert ist 9090 
+
+
+| HCP-Benutzer-ID | Benutzername für den HCP-Host. 
+
+
+| HCP-Kennwort | Passwort, das für den HCP-Host verwendet wird. 
+
+
+| HCP-Authentifizierungstyp | Wählen Sie HCP_LOCAL oder ACTIVE_DIRECTORY 
+|===
+
+
+== Erweiterte Konfiguration
+
+|===
+
+
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 60. 
+
+
+| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Der Standardwert ist 900. 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

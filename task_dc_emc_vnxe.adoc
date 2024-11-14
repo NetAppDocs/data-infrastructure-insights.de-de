@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_vnxe.html 
+keywords: data collector, VNXe, EMC 
+summary: VNXe-Datensammler wird konfiguriert. 
+---
+= Konfigurieren des EMC VNXe-Datensammlers
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+DER DELL EMC VNXe Data Collector bietet Bestandsunterstützung für VNXe Unified Storage-Arrays. Data Infrastructure Insights unterstützt derzeit iSCSI- und NAS-Protokolle.
+
+
+
+== Anforderungen
+
+* Der VNXe-Datensammler ist CLI-basiert. Sie müssen Unisphere for VNXe CLI (uemcli.exe) auf der Erfassungseinheit installieren, in der sich Ihr VNXe-Datensammler befindet.
+* uemcli.exe verwendet HTTPS als Transportprotokoll, sodass die Erfassungseinheit in der Lage sein muss, HTTPS-Verbindungen zur VNXe zu initiieren.
+* IP-Adresse oder vollqualifizierter Domänenname des VNXe -Geräts
+* Sie müssen mindestens einen schreibgeschützten Benutzer zur Verwendung durch den Datensammler haben.
+* IP-Adresse des Managing Solutions Enabler Servers.
+* HTTPS am Port 443 ist erforderlich
+* Der EMC VNXe Data Collector bietet NAS- und iSCSI-Unterstützung für die Bestandsaufnahme. Fibre-Channel-Volumes werden erkannt, Data Infrastructure Insights jedoch keine Berichte zu FC-Mapping-, Maskierungs- oder Speicherports.
+
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem VNXe-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Festplatte | Festplatte 
+
+
+| Storage Array Durchführt | Storage 
+
+
+| Prozessor | Storage-Node 
+
+
+| Storage-Pool | Storage-Pool 
+
+
+| Allgemeine Informationen zu iSCSI Block, VMware VMFS | Share 
+
+
+| Remote-Replikationssystem | Synchronisierung 
+
+
+| ISCSI-Node | ISCSI-Ziel-Node 
+
+
+| ISCSI-Initiator | ISCSI-Target-Initiator 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In dieser Datenquelle fallen möglicherweise nicht alle Fälle an.
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| VNXe-Speicher | IP-Adresse oder vollqualifizierter Domänenname des VNXe -Geräts 
+
+
+| Benutzername | Benutzername für das VNXe-Gerät 
+
+
+| Passwort | Kennwort für das VNXe -Gerät 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 40 Minuten 
+
+
+| CLI-Anschluss | Port, der für die VNXe-CLI verwendet wird 
+
+
+| Leistungsintervall (Sek.) | Der Standardwert ist 300. 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| „Externes Dienstprogramm konnte nicht ausgeführt werden“ mit Fehlermeldungen „Unisphere executable uemcli konnte nicht gefunden werden“ | * Korrekte IP-Adresse, Benutzername und Kennwort überprüfen * Bestätigen Sie, dass Unisphere CLI auf der Data Infrastructure Insights Acquisition Unit installiert ist * Bestätigen Sie, dass das Unisphere CLI-Installationsverzeichnis in der Datenquelle korrekt ist * Bestätigen Sie, dass die IP-Adresse der VNXe in der Konfiguration der Datenquelle korrekt ist. Öffnen Sie in der Data Infrastructure Insights Acquisition Unit eine CMD und wechseln Sie in das konfigurierte Installationsverzeichnis: €{INSTALLDIR. Versuchen Sie, eine Verbindung zum VNXe-Gerät herzustellen, indem Sie Folgendes eingeben: Uemcli -d <Ihre IP> -U <Ihre ID> /sys/General show 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

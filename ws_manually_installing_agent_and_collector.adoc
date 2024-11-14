@@ -1,0 +1,567 @@
+---
+sidebar: sidebar 
+permalink: ws_manually_installing_agent_and_collector.html 
+keywords: install, configure, agent, collector, workload, security, cloud secure 
+summary: Workload Security Agents können manuell installiert oder aktualisiert werden, um mehr Kontrolle über die in Ihrer Umgebung installierte Software zu erhalten. 
+---
+= Manuelles Installieren von Workload Security Agent und Collector
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn eine neue Version eines Workload Security Agent oder Collectors verfügbar ist, wird standardmäßig eine Benachrichtigung vor dem Upgrade gesendet, und Agenten und Collectors werden in Ihrer Umgebung automatisch aktualisiert. In einer gesicherten kontrollierten Umgebung sind jedoch möglicherweise keine automatischen Upgrades erforderlich. In solchen Fällen kann Workload Security für die manuelle Installation/Aktualisierung von Agenten und Collectors konfiguriert werden, um mehr Kontrolle über die auf Ihren Systemen installierte Software zu erhalten.
+
+
+
+== Bevor Sie Beginnen
+
+. Überprüfen Sie in swagger, ob die API-Kategorien „cloudSecure_Installers.Agent“ und „cloudSecure_Installers.Collector“ verfügbar sind. Ist dies nicht der Fall, ist die Unterstützung für die manuelle Agenteninstallation nicht aktiviert. Bitte wenden Sie sich an den NetApp Support, damit die Funktion aktiviert ist.
++
+image:ws_manual_install_APIs.png["Manuelle Installation von APIs"]
+
+. Führen Sie alle in diesem Dokument genannten Befehle als ‘root’-Benutzer aus, oder führen Sie, wenn Sie mit einem anderen Benutzer ausgeführt werden, die Befehle mit ‘sudo’ aus.
+
+
+
+
+== Installieren eines neuen Agenten
+
+. Erstellen Sie ein neues Zugriffstoken für die Workload-Sicherheits-API.
++
+.. Navigieren Sie zu *Admin > API Access*. Wählen Sie die Registerkarte „Workload Security Tokens“ aus und klicken Sie auf „+ API Access Token“.
++
+... Legen Sie einen Namen und eine Beschreibung fest, die leicht zu identifizieren sind.
+... Wählen Sie im Dropdown „welche Art von APIs wird dieses Token zum Aufruf verwendet?“ die Option _Collector Management_ und _Agent & Collector Installation_ aus.
+... Wählen Sie eine gewünschte Ablaufdauer aus.
+
+
+.. Klicken Sie Auf _Speichern_.
+
+
+
+
+[[copy-access-token]]
+. Kopieren Sie das generierte API-Zugriffstoken. Bitte beachten Sie, dass das Token nach dem Schließen des Fensters nicht mehr abgerufen werden kann. In diesem Fall müssten Sie ein neues Token generieren.
++
+image:ws_create_and_save_token.png["API-Token erstellen und speichern"]
+
++
+image:ws_create_and_save_token_confirm.png["Bestätigen Sie die Token-Erstellung"]
+
++
+.. Navigieren Sie zu *Admin > API Access > API Documentation* (oben rechts auf der Seite) und wählen Sie das Symbol „_Workload Security_“. Dadurch wird die Dokumentation von Swagger für Workload Security APIs geöffnet.
++
+image:ws_swagger_documentation_link.png["Swagger-Dokumentation für Workload Security"]
+
+.. Autorisieren Sie den Zugriff auf _Workload Security_ APIs.
+
+
+. Klicken Sie oben rechts auf der Seite auf die Schaltfläche _autorisieren_.
+. Fügen Sie im Textfeld _Customer ApiKey (apiKey)_ das zuvor kopierte API-Token ein<<copy-access-token,Schritt 1c>>.
+. Klicken Sie auf _autorisieren_ und schließen Sie das Fenster.
++
+image:ws_API_authorization.png["Autorisieren Sie die API"]
+
++
+.. Laden Sie das Agent-Installationsprogramm herunter.
+
+
+. Wählen Sie in Swagger _CloudSecure_Installers.Agent_ > _/v1/CloudSecure/Agents/Installers/{Platform}/latest_ (GET) API. Klicken Sie auf _Try it out_.
+. Geben Sie im Feld _Platform_ _linux_ ein. Klicken Sie Auf _Ausführen_.
++
+image:ws_installers_agent_api_swagger.png["Swagger für Agent Installer API - top"] image:ws_installers_agent_api_swagger-2.png["Swagger für Agent Installer API - Antwort"]
+
+. Klicken Sie auf ‘Datei herunterladen’, um das Installationsprogramm herunterzuladen.
+. Wenn die Installer-Datei extern auf einen anderen Computer als das System heruntergeladen wird, auf dem der Agent installiert werden soll, kopieren Sie die Installer-Datei auf dieses System.
+. Alternativ können Sie den Curl-Befehl kopieren und direkt auf dem System ausführen, auf dem der Agent installiert werden soll.
++
+** Hängen Sie das Argument „-o {{file_Name}}“ an den Befehl curl an, um die Installer-Datei mit dem gewünschten Namen zu speichern. Der tatsächliche Name der Installer-Datei ist im Abschnitt „swagger Response Headers“ zu finden. Dieser Name kann auch verwendet werden.
++
+image:ws_installers_agent_api_swagger_installer_file.png["Auswahl des neuesten Agenten über API - Swagger"]
+
+** Obwohl die Datei an einen beliebigen Speicherort heruntergeladen werden kann, wird empfohlen, sie in einen leeren Ordner herunterzuladen, in dem das Installationsprogramm .zip extrahiert werden kann.
++
+... Erstellen Sie einen neuen Ordner (empfohlen), kopieren Sie die Installationsdatei in diesen Ordner und entpacken Sie:
++
+[listing]
+----
+[root@demo-agent /]# mkdir agent_installers
+[root@demo-agent /]# cd agent_installers/
+[root@demo-agent agent_installers]# pwd
+/agent_installers
+[root@demo-agent agent_installers]# ll
+total 0
+[root@demo-agent agent_installers]# curl -X GET "https://netapp-demo.dev.cloudsecure.netapp.com/rest/v1/cloudsecure/agents/installers/linux/latest" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <<API Access Token>>" -o cloudsecure-linux-agent-installer-1.617.0.zip
+[root@demo-agent agent_installers]# ll
+total 76012
+-rw------- 1 root root 77834705 Apr 26 14:34 cloudsecure-linux-agent-installer-1.617.0.zip
+----
++
+[listing]
+----
+[root@demo-agent agent_installers]# unzip cloudsecure-linux-agent-installer-1.617.0.zip
+Archive:  cloudsecure-linux-agent-installer-1.617.0.zip
+  inflating: cloudsecure-agent-image.zip
+  inflating: cloudsecure-agent-install.sh
+  inflating: cloudsecure-agent-upgrade.sh
+----
+... Legen Sie _execute_ permission für die Datei „CloudSecure-Agent-install.sh“ fest.
++
+[listing]
+----
+[root@demo-agent agent_installers]# chmod +x cloudsecure-agent-install.sh
+[root@demo-agent agent_installers]# ll
+total 153344
+-rw------- 1 root root 79154250 Apr 26 06:37 cloudsecure-agent-image.zip
+-rwx------ 1 root root    16574 Apr 26 06:25 cloudsecure-agent-install.sh
+-rw------- 1 root root     8586 Apr 26 06:25 cloudsecure-agent-upgrade.sh
+-rw------- 1 root root 77834705 Apr 26 14:34 cloudsecure-linux-agent-installer-1.617.0.zip
+
+----
+... Erstellen Sie ein einmaliger Token für die Installation eines neuen Agenten.
++
+Hinweis: Das einmalige Token, das in diesem Schritt generiert wird, unterscheidet sich von dem API-Zugriffstoken, das unter generiert <<copy-access-token,Schritt 1c>>wurde.
+
+
+
+
+
+. Führen Sie in Swagger _CloudSecure_Installers.Agent > /v1/CloudSecure/Agent/oneTimeToken_ API aus und kopieren Sie das Token von der Antwort.
++
+.. Exportieren Sie das einmalige Token als Umgebungsvariable.
++
+[listing]
+----
+[root@demo-agent ~]# export TOKEN=<<one time token generated in step 7>>
+----
+.. Wenn ein Proxy-Server verwendet wird, exportieren Sie https_Proxy als Umgebungsvariable in dem unten genannten Format.
++
+[listing]
+----
+[root@demo-agent ~]# export HTTPS_PROXY='USER:PASSWORD@PROXY_SERVER:PORT'
+----
+.. Optional: Standardmäßig werden Agent & Collectors im Pfad „/opt/NetApp“ installiert. Um in einem anderen Pfad zu installieren, legen Sie die folgende Umgebungsvariable fest.“
++
+[listing]
+----
+[root@demo-agent ~]# export AGENT_INSTALL_PATH=/test_user/apps
+----
++
+Hinweis: Wenn die Installation in einem benutzerdefinierten Pfad erfolgt, werden Datensammler und alle anderen Artefakte wie Agentenprotokolle nur innerhalb des benutzerdefinierten Pfads erstellt. Installationsprotokolle sind weiterhin in - _/var/log/NetApp/cloudSecure/install_ vorhanden.
+
+.. Gehen Sie zurück zu dem Verzeichnis, in dem das Agent-Installationsprogramm heruntergeladen wurde, und führen Sie „CloudSecure-Agent-install.sh“ aus.
++
+[listing]
+----
+[root@demo-agent agent_installers]# ./ cloudsecure-agent-install.sh
+----
++
+Hinweis: Wenn der Benutzer nicht in einer Bash-Shell läuft, funktioniert der Exportbefehl möglicherweise nicht. In diesem Fall können die Schritte 8 bis 11 kombiniert und wie unten beschrieben ausgeführt werden. HTTPS_PROXY und AGENT_INSTALL_PATH sind optional und können ignoriert werden, wenn sie nicht benötigt werden.
+
++
+[listing]
+----
+sudo /bin/bash -c "TOKEN=<<one time token generated in step 7>> HTTPS_PROXY=<<proxy details in the format mentioned in step 9>> AGENT_INSTALL_PATH=<<custom_path_to_install_agent>> ./cloudsecure-agent-install.sh"
+----
++
+An dieser Stelle sollte der Agent erfolgreich installiert werden.
+
+.. Überprüfung der Sachbearbeiterinstallation:
+
+
+. Führen Sie „systemctl Status cloudsecure-agent.service” aus, und überprüfen Sie, ob sich der Agent-Dienst im _Running_-Status befindet.
++
+[listing]
+----
+[root@demo-agent ~]# systemctl status cloudsecure-agent.service
+ cloudsecure-agent.service - Cloud Secure Agent Daemon Service
+   Loaded: loaded (/usr/lib/systemd/system/cloudsecure-agent.service; enabled; vendor preset: disabled)
+   Active: active (running) since Fri 2024-04-26 02:50:37 EDT; 12h ago
+ Main PID: 15887 (java)
+    Tasks: 72
+   CGroup: /system.slice/cloudsecure-agent.service
+           ├─15887 java -Dconfig.file=/test_user/apps/cloudsecure/agent/conf/application.conf -Dagent.proxy.host= -Dagent.proxy.port= -Dagent.proxy.user= -Dagent.proxy.password= -Dagent.env=prod -Dagent.base.path=/test_user/apps/cloudsecure/agent -...
+
+----
+. Der Agent sollte auf der Seite „Agents“ sichtbar sein und sich im Status ‘Connected’ befinden.
++
+image:ws_agentsPageShowingConnected.png["Benutzeroberfläche mit verbundenen Agenten"]
+
++
+.. Bereinigung nach der Installation.
+
+
+. Wenn die Agenteninstallation erfolgreich war, können die heruntergeladenen Agenteninstallationsdateien gelöscht werden.
+
+
+
+
+== Installieren eines neuen Datensammlers.
+
+Hinweis: Dieses Dokument enthält Anweisungen zur Installation von „ONTAP SVM Data Collector“. Die gleichen Schritte gelten für den „Cloud Volumes ONTAP Datensammler“ und den „Amazon FSX for NetApp ONTAP Datensammler“.
+
+. Gehen Sie zu dem System, in dem Collector installiert werden muss, und erstellen Sie unter dem Verzeichnis „/tmp“ ein Verzeichnis mit dem Namen „Collectors“.
++
+[listing]
+----
+[root@demo-agent ~]# mkdir -p /tmp/collectors
+----
+. Ändern Sie die Eigentumsrechte für das Verzeichnis „Collectors“ in „cssys:cssys“ (cssys Benutzer und Gruppe werden während der Agenteninstallation erstellt).
++
+[listing]
+----
+[root@demo-agent /]# chown cssys:cssys /tmp/collectors
+[root@demo-agent /]# cd /tmp/
+[root@demo-agent tmp]# ll | grep collectors
+drwx------ 2 cssys         cssys 4096 Apr 26 15:56 collectors
+
+----
+. Jetzt müssen wir Collector Version und UUID von Collector abrufen. Navigieren Sie zur API „CloudSecure_config.Collector-types“.
+. Gehen Sie zu swagger, „cloudSecure_config.Collector-types > /v1/cloudSecure/Collector-types“ (GET) API. Wählen Sie in der Dropdown-Liste „collectorCategory“ den Collector-Typ als „DATA“ aus. Wählen Sie „ALLE“, um alle Details zum Kollektortyp abzurufen.
+. Kopieren Sie die UUID des erforderlichen Collector-Typs.
++
+image:ws_collectorAPIShowingUUID.png["Collector API-Antwort mit UUID"]
+
+. Laden Sie das Collector-Installationsprogramm herunter.
++
+.. Navigieren Sie zur API „cloudSecure_Installers.Collector > /v1/cloudSecure/Collector-types/Installers/{collectorTypeUUID}“ (GET). Geben Sie die aus dem vorherigen Schritt kopierte UUID ein, und laden Sie die Installationsdatei herunter.
++
+image:ws_downloadCollectorByUUID.png["API zum Herunterladen des Collectors nach UUID"]
+
+.. Wenn die Installer-Datei extern auf einen anderen Rechner heruntergeladen wird, kopieren Sie die Installer-Datei auf das System, auf dem der Agent ausgeführt wird, und platzieren Sie sie im Verzeichnis „/tmp/Collectors“.
+.. Alternativ können Sie den Curl-Befehl von derselben API kopieren und direkt auf dem System ausführen, auf dem der Collector installiert werden soll.
++
+Beachten Sie, dass der Dateiname der gleiche sein sollte wie in den Antwortheadern der Download-Collector-API. Siehe Abbildung unten.
+
++
+image:ws_curl_command.png["Beispiel für den Befehl Curl, der das verkopfte Token anzeigt"]
+
++
+[listing]
+----
+[root@demo-agent collectors]# pwd
+/tmp/collectors
+[root@demo-agent collectors]# curl -X GET "https://netapp-demo.dev.cloudsecure.netapp.com/rest/v1/cloudsecure/collector-types/installers/1829df8a-c16d-45b1-b72a-ed5707129870" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <<API Access Token>>" -o cs-ontap-dsc_1.286.0.zip
+
+-rw------- 1 root root 50906252 Apr 26 16:11 cs-ontap-dsc_1.286.0.zip
+[root@demo-agent collectors]# chown cssys:cssys cs-ontap-dsc_1.286.0.zip
+[root@demo-agent collectors]# ll
+total 49716
+-rw------- 1 cssys cssys 50906252 Apr 26 16:11 cs-ontap-dsc_1.286.0.zip
+----
+
+
+. Navigieren Sie zu *Workload Security > Collectors* und wählen Sie *+Collector*. Wählen Sie den _ONTAP SVM_ Collector.
+. Konfigurieren Sie die Collector-Details und _Save_ den Collector.
+. Wenn Sie auf „Speichern“ klicken, sucht der Agent-Prozess den Collector-Installer im Verzeichnis „/tmp/Collectors/“ und installiert den Collector.
+. Alternativ kann der Collector auch über API hinzugefügt werden, anstatt ihn über UI hinzuzufügen.
++
+.. Navigieren Sie zu „CloudSecure_config.Collectors“ > „/v1/CloudSecure/Collectors“ (POST) API.
+.. Wählen Sie im Beispiel-Dropdown „ONTAP SVM Data Collector json sample“ aus, aktualisieren Sie die config-Details für den Collector und führen Sie die Option aus.
++
+image:ws_API_add_collector.png["API zum Hinzufügen von Collector"]
+
+
+
+. Collector sollte nun unter ‘Data Collectors’ angezeigt werden.
++
+image:ws_collectorPageList.png["UI-Listenseite mit Sammlern"]
+
+. Bereinigung nach der Installation.
++
+.. Wenn die Collector-Installation erfolgreich ist, können alle Dateien im Verzeichnis „/tmp/Collectors“ gelöscht werden.
+
+
+
+
+
+
+== Installieren eines neuen User Directory Collectors
+
+Hinweis: In diesem Dokument haben wir die Schritte zur Installation eines LDAP Collectors erwähnt. Die gleichen Schritte gelten für die Installation eines AD-Collectors.
+
+. Gehen Sie zu dem System, in dem Collector installiert werden muss, und erstellen Sie unter dem Verzeichnis „/tmp“ ein Verzeichnis mit dem Namen „Collectors“.
++
+[listing]
+----
+[root@demo-agent ~]# mkdir -p /tmp/collectors
+[root@demo-agent /]# chown cssys:cssys /tmp/collectors
+[root@demo-agent /]# cd /tmp/
+[root@demo-agent tmp]# ll | grep collectors
+drwx------ 2 cssys         cssys 4096 Apr 26 15:56 collectors
+----
+. Jetzt müssen wir Version und UUID des Collectors abrufen. Navigieren Sie zur API „CloudSecure_config.Collector-types“. Wählen Sie in der Dropdown-Liste collectorCategory den Collector-Typ als „USER“ aus. Wählen Sie „ALLE“, um alle Details zum Kollektortyp in einer einzigen Anfrage abzurufen.
++
+image:ws_API_collector_all.png["API, um alle Collectors zu erhalten"]
+
+. Kopieren Sie die UUID des LDAP-Collectors.
++
+image:ws_LDAP_collector_UUID.png["API-Antwort mit der LDAP-Collector-UUID"]
+
+. Laden Sie das Collector-Installationsprogramm herunter.
++
+.. Navigieren Sie zu „cloudSecure_Installers.Collector“ > „/v1/cloudSecure/Collector-types/Installers/{collectorTypeUUID}“ (GET) API. Geben Sie die aus dem vorherigen Schritt kopierte UUID ein, und laden Sie die Installationsdatei herunter.
++
+image:ws_LDAP_collector_UUID_download.png["API und Antwort zum Download-Collector"]
+
+.. Wenn die Installer-Datei extern auf einen anderen Rechner heruntergeladen wird, kopieren Sie die Installer-Datei auf das System, auf dem der Agent ausgeführt wird, und in das Verzeichnis „/tmp/Collectors“.
+.. Alternativ können Sie den Curl-Befehl von derselben API kopieren und direkt auf dem System ausführen, auf dem Collector installiert werden soll.
++
+Beachten Sie, dass der Dateiname der gleiche sein sollte wie in den Antwortheadern der Download-Collector-API. Siehe Abbildung unten.
+
++
+image:ws_curl_command.png["Curl-Befehl-API"]
+
+
+
++
+[listing]
+----
+[root@demo-agent collectors]# pwd
+/tmp/collectors
+[root@demo-agent collectors]# curl -X GET "https://netapp-demo.dev.cloudsecure.netapp.com/rest/v1/cloudsecure/collector-types/installers/37fb37bd-6078-4c75-a64f-2b14cb1a1eb1" -H "accept: application/octet-stream" -H "X-CloudInsights-ApiKey: <<API Access Token>>" -o cs-ldap-dsc_1.322.0.zip
+----
+. Ändern Sie die Eigentumsrechte für die ZIP-Datei des Collector Installers in cssys:cssys.
++
+[listing]
+----
+[root@demo-agent collectors]# ll
+total 37156
+-rw------- 1 root root 38045966 Apr 29 10:02 cs-ldap-dsc_1.322.0.zip
+[root@demo-agent collectors]# chown cssys:cssys cs-ldap-dsc_1.322.0.zip
+[root@demo-agent collectors]# ll
+total 37156
+-rw------- 1 cssys cssys 38045966 Apr 29 10:02 cs-ldap-dsc_1.322.0.zip
+
+----
+. Navigieren Sie zur Seite ‘User Directory Collectors’ und klicken Sie auf ‘+ User Directory Collector’.
++
+image:ws_user_directory_collector.png["Benutzerverzeichnissammler wird hinzugefügt"]
+
+. Wählen Sie ‘LDAP-Verzeichnisserver’ aus.
++
+image:ws_LDAP_user_select.png["UI-Fenster zur Auswahl eines LDAP-Benutzers"]
+
+. Geben Sie die Details zum LDAP-Verzeichnisserver ein, und klicken Sie auf ‘Speichern’
++
+image:ws_LDAP_user_Details.png["UI, die LDAP-Benutzerdetails anzeigt"]
+
+. Wenn Sie auf „Speichern“ klicken, sucht der Agent-Service den Collector-Installer im Verzeichnis „/tmp/Collectors/“ und installiert den Collector.
+. Alternativ kann auch Collector über die Benutzeroberfläche hinzugefügt werden, anstatt Collector über die API hinzuzufügen.
++
+.. Navigieren Sie zu „CloudSecure_config.Collectors“ > „/v1/CloudSecure/Collectors“ (POST) API.
+.. Wählen Sie im Beispiel-Dropdown „LDAP Directory Server user Collector json sample“ aus, aktualisieren Sie die Details der Collector-Konfiguration und klicken Sie auf „Ausführen“.
++
+image:ws_API_LDAP_Collector.png["API für LDAP-Collector"]
+
+
+
+. Der Collector sollte nun unter „User Directory Collectors“ sichtbar sein.
++
+image:ws_LDAP_collector_list.png["Liste der LDAP-Collector in der Benutzeroberfläche"]
+
+. Bereinigung nach der Installation.
++
+.. Wenn die Collector-Installation erfolgreich ist, können alle Dateien im Verzeichnis „/tmp/Collectors“ gelöscht werden.
+
+
+
+
+
+
+== Aktualisieren eines Agenten
+
+Eine E-Mail-Benachrichtigung wird gesendet, wenn eine neue Version des Agenten/Collectors verfügbar ist.
+
+. Laden Sie das neueste Agent-Installationsprogramm herunter.
++
+.. Die Schritte zum Herunterladen des neuesten Installers sind ähnlich wie in „Installieren eines neuen Agenten“. Wählen Sie in swagger die API „cloudSecure_Installers.Agent“ > „/v1/cloudSecure/Agents/Installers/{Platform}/latest“, geben Sie die Plattform als „linux“ ein und laden Sie die ZIP-Datei des Installers herunter. Alternativ kann auch ein Curl-Befehl verwendet werden. Entpacken Sie die Installationsdatei.
+
+
+. Legen Sie die Ausführungsberechtigung für die Datei „CloudSecure-Agent-Upgrade.sh“ fest.
++
+[listing]
+----
+[root@demo-agent agent_installers]# unzip cloudsecure-linux-agent-installer-1.618.0.zip
+Archive:  cloudsecure-linux-agent-installer-1.618.0.zip
+  inflating: cloudsecure-agent-image.zip
+  inflating: cloudsecure-agent-install.sh
+  inflating: cloudsecure-agent-upgrade.sh
+[root@demo-agent agent_installers]# ll
+total 153344
+-rw------- 1 root root 79154230 Apr 26  2024 cloudsecure-agent-image.zip
+-rw------- 1 root root    16574 Apr 26  2024 cloudsecure-agent-install.sh
+-rw------- 1 root root     8586 Apr 26  2024 cloudsecure-agent-upgrade.sh
+-rw------- 1 root root 77834660 Apr 26 17:35 cloudsecure-linux-agent-installer-1.618.0.zip
+[root@demo-agent agent_installers]# chmod +x cloudsecure-agent-upgrade.sh
+[root@demo-agent agent_installers]# ll
+total 153344
+-rw------- 1 root root 79154230 Apr 26  2024 cloudsecure-agent-image.zip
+-rw------- 1 root root    16574 Apr 26  2024 cloudsecure-agent-install.sh
+-rwx------ 1 root root     8586 Apr 26  2024 cloudsecure-agent-upgrade.sh
+-rw------- 1 root root 77834660 Apr 26 17:35 cloudsecure-linux-agent-installer-1.618.0.zip
+
+----
+. Führen Sie das Skript „CloudSecure-Agent-Upgrade.sh“ aus. Wenn das Skript erfolgreich ausgeführt wurde, wird die Meldung „CloudSecure Agent hat erfolgreich aktualisiert.“ in der Ausgabe gedruckt.
+. Führen Sie den folgenden Befehl ‘systemctl daemon-reload’ aus
++
+[listing]
+----
+[root@demo-agent ~]# systemctl daemon-reload
+----
+. Starten Sie den Agentendienst neu.
++
+[listing]
+----
+[root@demo-agent ~]# systemctl restart cloudsecure-agent.service
+----
++
+Zu diesem Zeitpunkt sollte der Agent erfolgreich aktualisiert werden.
+
+. Überprüfung der Sachbearbeiter nach dem Upgrade.
++
+.. Navigieren Sie zu dem Pfad, in dem der Agent installiert ist (z. B. „/opt/NetApp/CloudSecure/“). Der Symlink „Agent“ sollte auf die neue Version des Agenten verweisen.
++
+[listing]
+----
+[root@demo-agent cloudsecure]# pwd
+/opt/netapp/cloudsecure
+[root@demo-agent cloudsecure]# ll
+total 40
+lrwxrwxrwx  1 cssys cssys  114 Apr 26 17:38 agent -> /test_user/apps/cloudsecure/cloudsecure-agent-1.618.0
+drwxr-xr-x  4 cssys cssys 4096 Apr 25 10:45 agent-certs
+drwx------  2 cssys cssys 4096 Apr 25 16:18 agent-logs
+drwx------ 11 cssys cssys 4096 Apr 26 02:50 cloudsecure-agent-1.617.0
+drwx------ 11 cssys cssys 4096 Apr 26 17:42 cloudsecure-agent-1.618.0
+drwxr-xr-x  3 cssys cssys 4096 Apr 26 02:45 collector-image
+drwx------  2 cssys cssys 4096 Apr 25 10:45 conf
+drwx------  3 cssys cssys 4096 Apr 26 16:39 data-collectors
+-rw-r--r--  1 root  root    66 Apr 25 10:45 sysctl.conf.bkp
+drwx------  2 root  root  4096 Apr 26 17:38 tmp
+
+----
+.. Der Agent sollte auf der Seite „Agents“ sichtbar sein und sich im Status ‘Connected’ befinden.
++
+image:ws_agentsPageShowingConnected.png["Benutzeroberfläche mit verbundenen Agenten"]
+
+
+
+. Bereinigung nach der Installation.
++
+.. Wenn die Agenteninstallation erfolgreich war, können die heruntergeladenen Agenteninstallationsdateien gelöscht werden.
+
+
+
+
+
+
+== Collectors werden aktualisiert
+
+Hinweis: Die Upgrade-Schritte sind für alle Arten von Kollektoren gleich. In diesem Dokument präsentieren wir das Collector-Upgrade „ONTAP SVM“.
+
+. Gehen Sie zu dem System, in dem Collectors aktualisiert werden müssen, und erstellen Sie das Verzeichnis „/tmp/Collectors“, wenn es nicht bereits vorhanden ist.
++
+[listing]
+----
+mkdir -p /tmp/collectors
+----
+. Stellen Sie sicher, dass das Verzeichnis „Collectors“ im Besitz von _cssys:cssys_ ist.
++
+[listing]
+----
+[root@demo-agent /]# chown cssys:cssys /tmp/collectors
+[root@demo-agent /]# cd /tmp/
+[root@demo-agent tmp]# ll | grep collectors
+drwx------ 2 cssys         cssys 4096 Apr 26 15:56 collectors
+
+----
+. Navigieren Sie in swagger zu „cloudSecure_config.Collector-types“ GET API. Wählen Sie in der Dropdown-Liste „collectorCategory“ „DATA“ (wählen Sie „USER“ für user Directory Collector oder „ALL“ aus).
++
+UUID und Version aus Antworttext kopieren.
+
++
+image:ws_collector_uuid_and_version.png["API-Antwort, die die Collector-UUID und die hervorgehobene Version anzeigt"]
+
+. Laden Sie die neueste Collector Installer-Datei herunter.
++
+.. Navigieren Sie zu „cloudSecure_Installers.Collector“ > „/v1/cloudSecure/Collector-types/Installers/{collectorTypeUUID}“ API. Geben Sie „collectorTypeUUID“ ein, die aus dem vorherigen Schritt kopiert wurde. Laden Sie das Installationsprogramm im Verzeichnis „/tmp/Collectors“ herunter.
+.. Alternativ kann auch der Curl-Befehl derselben API verwendet werden.
++
+image:ws_curl_command_only.png["Beispiel für den Befehl „Curl“"]
+
++
+Hinweis: Der Dateiname sollte der gleiche sein wie in den Antwortheadern der Download-Collector-API.
+
+
+
+. Ändern Sie die Eigentumsrechte für die ZIP-Datei des Collector Installers in cssys:cssys.
++
+[listing]
+----
+[root@demo-agent collectors]# ll
+total 55024
+-rw------- 1 root root 56343750 Apr 26 19:00 cs-ontap-dsc_1.287.0.zip
+[root@demo-agent collectors]# chown cssys:cssys cs-ontap-dsc_1.287.0.zip
+[root@demo-agent collectors]# ll
+total 55024
+-rw------- 1 cssys cssys 56343750 Apr 26 19:00 cs-ontap-dsc_1.287.0.zip
+
+----
+. Upgrade Collector API auslösen.
++
+.. Navigieren Sie in swagger zu „cloudSecure_Installers.Collector“ > „/v1/cloudSecure/Collector-types/Upgrade“ (PUT) API.
+.. Wählen Sie in der Dropdown-Liste „Beispiele“ den Eintrag „ONTAP SVM Data Collector Upgrade json sample“ aus, um die Beispiel-Nutzlast zu füllen.
+.. Ersetzen Sie die Version durch die kopierte Version <<copy-access-token,Schritt 3>>und klicken Sie auf ‘Ausführen’.
++
+image:ws_svm_ontap_collector_upgrade_example_json.png["Beispiel für ein SVM-Upgrade in der Swagger-UI"]
+
++
+Warten Sie einige Sekunden. Collectors werden automatisch aktualisiert.
+
+
+
+. Überprüfung des gesunden Menschenverstand.
++
+Collectors sollten sich in der Benutzeroberfläche im Status Running befinden.
+
+. Bereinigung nach dem Upgrade:
++
+.. Wenn die Collector-Aktualisierung erfolgreich ist, können alle Dateien im Verzeichnis „/tmp/Collectors“ gelöscht werden.
+
+
+
+
+Wiederholen Sie die oben genannten Schritte für die Aktualisierung anderer Kollektortypen.
+
+
+
+== Commons-Probleme und -Korrekturen.
+
+. AGENT014-Fehler
++
+Dieser Fehler tritt auf, wenn die Collector-Installer-Datei nicht im Verzeichnis „/tmp/Collectors“ vorhanden ist oder nicht zugänglich ist. Stellen Sie sicher, dass die Installer-Datei heruntergeladen wird und das Verzeichnis „Collectors“ und Installer zip-Datei im Besitz von cssys:cssys ist und starten Sie Agent-Dienst – „systemctl restart cloudsecure-agent.service”
+
++
+image:ws_agent014_error.png["UI-Bildschirm mit dem Hinweis „Agent 014“ zum Hover-Fehler"]
+
+. Nicht autorisierter Fehler
++
+[listing]
+----
+{
+  "errorMessage": "Requested public API is not allowed to be accessed by input API access token.",
+  "errorCode": "NOT_AUTHORIZED"
+}
+
+----
++
+Dieser Fehler wird angezeigt, wenn ein API-Zugriffstoken generiert wird, ohne alle erforderlichen API-Kategorien auszuwählen. Generieren Sie ein neues API-Zugriffstoken, indem Sie alle erforderlichen API-Kategorien auswählen.
+
+

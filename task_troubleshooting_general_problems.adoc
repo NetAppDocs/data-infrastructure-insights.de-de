@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task_troubleshooting_general_problems.html 
+summary: Allgemeine Tipps zur Fehlerbehebung rund um die Dateninfrastruktur 
+keywords: troubleshooting, problems, browser, login, log in, accessing, access to, Trident, qtree, quota 
+---
+= Fehlerbehebung Bei Allgemeinen Problemen Mit Data Infrastructure Insights
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hier finden Sie Vorschläge für die Fehlerbehebung Data Infrastructure Insights.
+
+Siehe auch link:task_troubleshooting_linux_acquisition_unit_problems.html["Fehlerbehebung Bei Problemen Mit Der Linux-Erfassungseinheit"] und link:task_troubleshooting_windows_acquisition_unit_problems.html["Fehlerbehebung Bei Problemen Mit Der Windows-Erfassungseinheit"].
+
+
+
+== Probleme bei der Anmeldung
+
+|===
+| *Problem:* | *Teste das:* 
+
+
+| Data Infrastructure Insights meldet sich automatisch alle 6 Stunden ab | Dies ist auf deaktivierte Browser-Cookies von Drittanbietern zurückzuführen. Benutzer können ihren Browser so konfigurieren, dass alle Drittanbieter-Cookies aktiviert werden, oder eine engere Ausnahmeliste verwenden, um nur diejenigen für Data Infrastructure Insights zu aktivieren. Beispiel: Browser-Einstellungen öffnen Wählen Sie die Option "Alle Cookies zulassen". *ODER* Wählen Sie „Cookies von Drittanbietern blockieren“ und fügen Sie Ausnahmen für _[\*.]auth0.com_ und _[*.]NetApp.com_ hinzu. Microsoft Edge follows das gleiche Format für Ausnahmen wie Chrome. In Firefox werden Cookie-Ausnahmen einfach als _auth0.com_ und _netapp.com_ bezeichnet. 
+
+
+| Ich habe ein BlueXP Konto, kann mich aber nicht bei BlueXP anmelden. | Öffnen Sie ein Ticket von https://mysupport.netapp.com/site/help[]. Wählen Sie die Kategorie „blueXP.netapp.com > Probleme mit Account/Login“ oder „bluexp.netapp.com > Probleme mit der Federation“ aus. Diese betreffen speziell Probleme oder Fragen zu BlueXP. Für alle anderen Fragen zum technischen Support von Data Infrastructure Insights wenden Sie sich an link:concept_requesting_support.html["NetApp Support"]. 
+
+
+| Ich wurde zu Data Infrastructure Insights eingeladen, aber ich erhalte eine Nachricht „nicht autorisiert“. | Überprüfen Sie, ob Sie sich für ein BlueXP Konto registriert haben oder ob Ihr Unternehmen SSO-Anmeldedaten mit BlueXP verwendet. Überprüfen Sie, ob Ihre E-Mail-Adresse für Ihr BlueXP -Profil mit der E-Mail-Adresse übereinstimmt, die in Ihrer Begrüßungs-E-Mail zu Einblicke von Dateninfrastruktur Stimmt die E-Mail nicht überein, fordern Sie eine neue Einladung mit der richtigen E-Mail-Adresse an. 
+
+
+| Ich habe mich bei BlueXP  abgemeldet und wurde automatisch bei „Data Infrastructure Insights“ abgemeldet. | Bei Single Sign On (SSO) über NetApp-Cloud-Services werden alle Sitzungen zu Dateninfrastruktur-Einblicken abgehört. Wenn Sie Zugriff auf mehrere Konten für Data Infrastructure Insights haben, werden alle aktiven Sitzungen bei einer beliebigen Abmeldung abmeldet. Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
+
+
+| Ich wurde nach einigen Tagen automatisch abgemeldet. | Für NetApp Cloud-Konten muss alle paar Tage eine erneute Authentifizierung durchgeführt werden (die aktuelle BlueXP Einstellung beträgt 7 Tage). Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
+
+
+| Ich erhalte eine Fehlermeldung „Anmeldung nicht mehr zulässig“. | Wenden Sie sich an Ihren Account-Administrator, um den Zugriff auf Data Infrastructure Insights zu überprüfen. Überprüfen Sie, ob Ihre E-Mail-Adresse für Ihr BlueXP -Profil mit der E-Mail-Adresse übereinstimmt, die in Ihrer Begrüßungs-E-Mail zu Einblicke von Dateninfrastruktur 
+
+
+| Andere Anmeldefehler | Testen Sie den Inkognito-Modus in Chrome, oder löschen Sie den Browserverlauf, Cookies und Cache. Versuchen Sie es mit einem anderen Browserprofil (d.h. Chrome - Person hinzufügen). 
+|===
+
+
+== Andere Probleme
+
+|===
+
+
+| *Frage:* | *Antwort:* 
+
+
+| Meine Qtree-Hard-Quoten werden korrekt in Abfragen angezeigt, aber meine Soft Quotas werden als Gesamtkapazität des Volumes angezeigt. Ist das richtig? | Nur harte Kontingente - die entweder manuell festgelegt oder durch Trident eingestellt sind - werden als festgelegte Kontingente angezeigt; wenn keine harten Kontingente angegeben werden, wird die Qtree-Kapazität die interne Volume-Kapazität sein. 
+
+
+| Ich habe sowohl eine weiche als auch eine harte Quote manuell im selben Qtree eingestellt, aber die insgesamt darstellende Kapazität ist die harte Quote; ist das richtig? | Ja, wenn eine harte Quote angegeben wird, wird diese als Gesamtkapazität angezeigt. 
+
+
+| Bei der Eingabe eines Cognos Report-Zeitplans endet manchmal ein zusätzliches „m“ in der Zeitplanung. Wenn ich die Zeit beispielsweise als „02:15 PM“ eingebe, kann ein zusätzliches Zeichen hinzugefügt werden: „02:15 PMM“ (oder PMM). Wenn ich draußen klicke, ändert es sich zu "2:15 AM". Ich kann den Bericht speichern, aber wenn ich den gespeicherten Bericht erneut öffne, wird die Zeitplanzeit als AM (d. h. morgens) angezeigt, unabhängig davon, ob ich in der Zeitplanzeit AM oder PM eingegeben habe. | Geben Sie die Zeitplanzeit erneut ein. Achten Sie dabei darauf, nicht die vollständigen Zeichen „AM“ oder „PM“ einzugeben. Es reicht aus, „A“ für „AM“ oder „P“ für „PM“ einzugeben. Wenn das zusätzliche Zeichen nicht angezeigt wird, wird die Zeitplanzeit korrekt eingestellt. 
+|===
+
+
+== Ressourcen
+
+Weitere Tipps zur Fehlerbehebung finden Sie im link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
+
+Weitere Support-Informationen finden Sie auf der Seite Data Infrastructure Insightslink:concept_requesting_support.html["Support"].
+
+Wenn Sie über ein aktives Abonnement von Data Infrastructure Insights verfügen, können Sie die folgenden Support-Optionen nutzen:
+
+link:https://www.netapp.com/us/contact-us/support.aspx["Telefon"] link:https://mysupport.netapp.com/site/cases/mine/create?serialNumber=95001014387268156333["Support-Ticket"]
+
+Weitere Informationen finden Sie im https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Support-Dokumentation Zu Data Infrastructure Insights"].

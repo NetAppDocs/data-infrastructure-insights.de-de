@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_redhat_virtualization.html 
+keywords: data collector, Red Hat Virtualization 
+summary: Konfiguration von Red hat Virtualization Data Collector 
+---
+= Datensammler Red hat Virtualization
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights verwendet den Datensammler Red hat Virtualization zur Erfassung von Bestandsdaten aus virtualisierten Linux- und Microsoft Windows-Workloads.
+
+
+
+== Terminologie
+
+Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die gängigste Terminologie für die Ressource angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Festplatte | Virtuelles Laufwerk 
+
+
+| Host | Host 
+
+
+| Virtual Machine | Virtual Machine 
+
+
+| Storage Domain | Datastore 
+
+
+| Logische Einheit | LUN 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+* IP-Adresse des RHEV-Servers über Port 443 über REST-API
+* Nur-Lese-Benutzername und Kennwort
+* RHEV Version 3.0+
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| IP-Adresse des RHEV-Servers | IP-Adresse des Storage-Systems 
+
+
+| Benutzername | Benutzername mit Administratorrechten 
+
+
+| Passwort für das Administratorkonto | Passwort 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| HTTPS-Kommunikationsschnittstelle | Port, der für die HTTPS-Kommunikation mit RHEV verwendet wird 
+
+
+| Abfrageintervall für Bestand (min) | Die Standardeinstellung ist 20 Minuten. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

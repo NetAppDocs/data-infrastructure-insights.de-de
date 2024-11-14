@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task_webhook_example_teams.html 
+keywords: webhook, notification, Microsoft, Teams, integration 
+summary: Erstellen Sie einen Webhook, um für Microsoft-Teams über die Schwellenwerte für Leistung oder Bestand zu informieren 
+---
+= Webhook-Beispiel für Microsoft-Teams
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Mit Webhooks können Benutzer über einen benutzerdefinierten Webhook-Kanal Benachrichtigungen an verschiedene Anwendungen senden. Diese Seite enthält ein Beispiel für das Einrichten von Webhooks für Teams.
+
+
+NOTE: Diese Seite bezieht sich auf Anweisungen von Dritten, die möglicherweise geändert werden können. Die aktuellsten Informationen finden Sie imlink:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["Die Dokumentation des Teams"].
+
+
+
+== Teameinstellungen:
+
+. Wählen Sie in Teams den Kebab aus, und suchen Sie nach eingehender Webhook.
++
+image:Webhooks_Teams_Create_Webhook.png["Eingehender Webhook in Teams"]
+
+. Wählen Sie *zu einem Team hinzufügen > Team auswählen > Connector einrichten*.
+. Kopieren Sie die Webhook-URL. Sie müssen diese in die Data Infrastructure Insights Webhook-Konfiguration einfügen.
+
+
+
+
+== Data Infrastructure Insights Webhook Erstellen:
+
+. Navigieren Sie in Data Infrastructure Insights zu *Admin > Notifications* und wählen Sie die Registerkarte *Webhooks* aus. Klicken Sie auf *+Webhook*, um einen neuen Webhook zu erstellen.
+. Geben Sie dem Webhook einen aussagekräftigen Namen, z. B. „Teams Webhook“.
+. Wählen Sie in der Dropdown-Liste _Template Type_ die Option *Teams* aus.
+
+
+image:Webhooks-Teams_example.png["Mannschaften Webhook Vorlage"]
+
+. Fügen Sie die URL von oben in das Feld _URL_ ein.
+
+
+
+
+== Benachrichtigungen über Webhook
+
+Um Ereignisse über Webhook zu benachrichtigen, navigieren Sie in Data Infrastructure Insights zu *Alerts > Monitors* und klicken Sie auf *+Monitor*, um eine neue zu erstellenlink:task_create_monitor.html["Überwachen"].
+
+* Wählen Sie eine Metrik aus, und definieren Sie die Bedingungen des Monitors.
+* Wählen Sie unter „ Team-Benachrichtigung(en) einrichten“ die Option „ *Webhook* Liefermethode“.
+* Wählen Sie den Webhook „Teams“ für die gewünschten Ereignisse (kritisch, Warnung, gelöst)
++
+image:Webhooks_Teams_Notifications.png["Webhook-Benachrichtigungen"]
+
+

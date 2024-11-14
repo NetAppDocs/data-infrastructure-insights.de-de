@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: task_cs_user_management.html 
+keywords: Workload Security, User, Login, account, cloud secure 
+summary: Benutzerkonten für Workload-Sicherheit werden über Data Infrastructure Insights User Management gemanagt 
+---
+= Benutzerverwaltung
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Benutzerkonten für Workload-Sicherheit werden über Data Infrastructure Insights gemanagt.
+
+Data Infrastructure Insights bietet vier Benutzerkontoebenen: Kontoinhaber, Administrator, Benutzer und Gast. Jedem Konto werden bestimmte Berechtigungsebenen zugewiesen. Ein Benutzerkonto mit Administratorrechten kann Benutzer erstellen oder ändern und jedem Benutzer eine der folgenden Workload-Sicherheitsrollen zuweisen:
+
+|===
+
+
+| Rolle | Zugriff Auf Die Workload-Sicherheit 
+
+
+| Verwalter | Alle Workload-Sicherheitsfunktionen, einschließlich derer für Warnmeldungen, Forensik, Datensammler, automatisierte Antwortrichtlinien und APIs für Workload-Sicherheit, sind möglich. Ein Administrator kann auch andere Benutzer einladen, kann aber nur Workload-Sicherheitsrollen zuweisen. 
+
+
+| Benutzer | Kann Warnungen anzeigen und verwalten und Forensik anzeigen. Benutzer können den Alarmstatus ändern, eine Notiz hinzufügen, Snapshots manuell erstellen und den Benutzerzugriff einschränken. 
+
+
+| Gast | Kann Warnungen und Forensik anzeigen. Gastrolle kann den Alarmstatus nicht ändern, Notizen hinzufügen, Snapshots manuell erstellen oder den Benutzerzugriff einschränken. 
+|===
+.Schritte
+. Melden Sie sich bei Workload Security an
+. Klicken Sie im Menü auf *Admin > Benutzerverwaltung*
++
+Sie werden auf die Seite User Management von Data Infrastructure Insights weitergeleitet.
+
+. Wählen Sie die gewünschte Rolle für jeden Benutzer aus.
+
+
+Wählen Sie beim Hinzufügen eines neuen Benutzers einfach die gewünschte Rolle aus (normalerweise Benutzer oder Gast).
+
+Weitere Informationen zu Benutzerkonten und Rollen finden Sie in der Dokumentation zu Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["Benutzerrolle"].

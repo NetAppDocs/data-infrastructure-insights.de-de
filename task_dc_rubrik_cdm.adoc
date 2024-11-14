@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task_dc_rubrik_cdm.html 
+keywords: data collector, Rubrik, 
+summary: Konfigurieren des Rubrik CDM-Datensammlers. 
+---
+= Rubrik CDM Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights erfasst mithilfe des Rubrik Datensammlers Inventar- und Performance-Daten von Rubrik Storage Appliances.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Inventarinformationen aus dem Datensammler Rubrik. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Cluster | Storage, Storage-Pool 
+
+
+| Knoten | Storage-Node 
+
+
+| Festplatte | Festplatte 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In dieser Datenquelle fallen möglicherweise nicht alle Fälle an.
+
+
+
+== Anforderungen
+
+Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlich:
+
+* Die Data Infrastructure Insights Acquisition Unit initiiert Verbindungen zum TCP-Port 443 zum Cluster Rubrik. Ein Collector pro Cluster.
+* IP-Adresse des Rubrik Clusters.
+* Benutzername und Passwort für das Cluster.
+* Rubrik Cluster IP-Adresse oder Hostname.
+* Für die Basisauthentifizierung müssen ein Benutzername und ein Passwort für das Cluster eingegeben werden. Wenn Sie die Service Account-basierte Authentifizierung bevorzugen, benötigen Sie ein Dienstkonto, einen geheimen Schlüssel und eine Unternehmens-ID
+* Port-Anforderung: HTTPS 443
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| IP | IP-Adresse des Clusters Rubrik 
+
+
+| Benutzername | Benutzername für das Cluster 
+
+
+| Passwort | Passwort für das Cluster 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 
+
+
+| Leistungsintervall (Sek.) | Der Standardwert ist 300 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| Ich erhielt die Nachricht, dass mehr als ein Speicher erstellt wird. | Überprüfen Sie, ob das Cluster ordnungsgemäß konfiguriert ist und der Collector auf ein einzelnes Cluster verweist. 
+
+
+| Ich erhielt eine Warnung, dass die Disk API mehr Daten zurückgegeben hat | Wenden Sie sich an den Support, um zusätzliche Daten zu erhalten. 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

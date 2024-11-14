@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: infrastructure_change_analytics.html 
+keywords: changes, management, analysis, infra, infrastructure 
+summary: Cloud Insights verfolgt Infrastrukturänderungen auf einfache Weise und erleichtert so die Analyse und Fehlerbehebung. 
+---
+= Analyse Von Infrastrukturänderungen
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Infrastructure Change Analysis bieten einen All-in-One-Überblick über aktuelle Infrastrukturänderungen (Storage, Switch usw.) in Ihrer Umgebung. Mit der Änderungsanalyse können Sie Konfigurationsänderungen verfolgen und sowohl erwartete als auch unerwartete Probleme untersuchen.
+
+
+
+== Wie hilft die Infrastrukturänderungsanalyse?
+
+In jeder Umgebung können Änderungen an Ihren Ressourcen aufgrund von falsch konfigurierten Änderungen, Stromausfällen usw. auftreten. Mithilfe der Änderungsanalyse können Sie den Zustand Ihrer Ressourcen in einem einzigen Fenster anzeigen und mit Ausfällen oder geplanten Änderungen in Beziehung setzen. Änderungen werden mit jeder Bestandsabfrage berechnet (nach der ersten Abfrage eines neuen Sammlers).
+
+Um Infrastrukturänderungen zu analysieren, navigieren Sie zu *Observability > Change Analysis*. Warnungen und Konfigurationsänderungen für den aktuellen Zeitraum werden aufgelistet. Warnungszeilen zeigen den aktuellen Warnungsstatus an (aktiv oder gelöst).
+
+Sie können auch zu einer Landing Page für eine Ressource navigieren. Wenn Änderungen an dieser Ressource oder zugehörigen Ressourcen vorgenommen wurden, werden diese im Abschnitt „Expertenansicht“ der Seite angezeigt. Vergrößern Sie die Ansicht, um einzelne Änderungen zu untersuchen, oder lassen Sie die Ansicht breit, um alle Änderungen innerhalb des ausgewählten Zeitbereichs anzuzeigen. Wenn Sie den Mauszeiger über eine Änderung bewegen, erhalten Sie eine Zusammenfassung der Änderung. Wenn Sie auf diese Änderung klicken, wird die Expertenansicht auf den Zeitpunkt dieser Änderung fokussiert.
+
+image:change_analysis_on_a_landing_page.png["Änderungsanalyse auf einer Landing Page"]
+
+Wenn Sie ein Element in der Liste auswählen, wird ein Schiebefenster geöffnet, in dem Sie mehr Details über die Warnmeldung oder die Änderung erhalten.
+
+
+
+== Filtern
+
+Wie bei allen Funktionen von Cloud Insights ist das Filtern der Änderungsliste intuitiv: Oben auf der Seite können Sie nach bestimmten Asset-Typen (_triggert on:type_) filtern und/oder nach Assets mit bestimmten Namen filtern (_triggert on:Name_) oder Ihre eigenen Filter hinzufügen, indem Sie die Schaltfläche {+] wählen.
+
+image:infraChange_filter_dropdown.png["Dropdown-Liste „Infrastrukturänderungsfilter“"]
+
+Sie können auch direkt zu den wichtigsten Warnmeldungen oder Änderungen im Statusbereich unterhalb der Filtereinstellungen wechseln, einschließlich der aktuellen drei Ressourcen mit den meisten Warnmeldungen.
+
+image:Change_Analysis_filters_and_status.png["Status und Quick Links zu Warnmeldungen und Änderungen"]
+
+
+
+== Welche Objekte werden auf Änderungen analysiert?
+
+In der folgenden Tabelle sind die Objekte und Attribute aufgeführt, die in der Analyse von Infrastrukturänderungen enthalten sind.
+
+|===
+
+
+| Objekttyp | Merkmale 
+
+
+| Festplatte | DiskSize.total isVirtual diskGruppe Geschwindigkeitstyp Standort Seriennummer Rollenstatus Anbietermodell storage.name storagePools.name Name isVerschlüsseln 
+
+
+| Storage | Familie ip ist Active MicrocodeVersion Modell Name Protokolle Serialnummer Hersteller 
+
+
+| StorageNode | Name storage.name nodeVersion model serialnumber numberOfProcessors State partner.name Cache Memory ManagementIpAddresses parentSerialNumber Standortname 
+
+
+| Storage Pool | Namenstyp isAutoTiering isVirtual Redundancy VendorTier usesFlashPools Storage.Vendor Storage.ip Storage.model Storage.family storage.name storageNodes.name capacity.total (Dynamic Attribute) isCompactionSavingsEnabled isEncrypted objectStoreName objectStoreName objectStoreProviderType objectStoreSizeLimit objectStoreTieringFullnessThreshold objectStoreS3Name objectStoreServer 
+
+
+| Qtree | Geben Sie securityStyle isOplocksEnabled shares.name storage.name internalVolume.name storageVirtualMachine.name simpleName StatusTextname ein 
+
+
+| Storage Virtual Machine | Name storage.name Zustandsart ipSpace Protokolle internalVolumeLimit 
+
+
+| Datenmenge | Name simpleName Label type storage.name Storage.Vendor Storage.ip Storage.model Storage.family isAutoTiering isThinProvisioned disk GruppenrichtlinienMainframe isMeta isReplicaSource isReplicaTarget isSnapshot isVirtual internalVolume.name internalVolume.virtualStorage storageNodes.name storageNodes.partner.name storagePools.name storageVirtualMachine.name storageGroups isEncrypted isCompressionEnabled qosBurstIOPS qosLimitIOPS qosLimitMBPS qosMinIOPS qosMinisqosPolicy qosLimitRaw 
+
+
+| InternalVolume | FlashPoolEignungsname simpleName spaceGarantiestatus virtualStorage replicaSources.name storageNodes.name storageNodes.partner.name storage.name Storage.Vendor Storage.ip Storage.model Storage.family storageVirtualMachine.name storagePool.name capacity.isThinProvisioned qosPolicy qosLimitRaw qosLimitIOPS qosLimitMBPS isVerschlüsselte AdaptiveQosPolicy junctionPath objectStoreTieringPolicy TieringMinimumCoolingDays 
+
+
+| Virtual Machine | Name dnsName ip os Speicherprozessoren guestState powerstate host.name Host.clusterName Host.ip Host.os dataStore.name instanceTyp publicIps sicherheitGroups virtualCenterIp 
+
+
+| Datenspeicher | Name virtualCenterIp-Typ 
+
+
+| Host | Namensmodell ip ist Active os Hersteller cpuCount Speicher isHypervisor ClusterName virtualCenterIp 
+
+
+| vmdk (Virtual Machine Disk) | Namenstyp dataStore.name isRdm virtualMachine.host.name virtualMachine.name isSnapshot 
+
+
+| Port | Name isActive wwn typPortIndex Blade Speed gbicType connectedPorts.device.name connectedPorts.device.type connectedPorts.name connectedPorts.nodeWwn connectedPorts.wwn Controller device.name device.type fabrics.name Fabrics.vsanId nodeWwn description 
+|===
+In der „Änderungsanalyse“ werden Warnmeldungen für die folgenden Fälle verfolgt:
+
+* Warnmeldungen von Protokollüberwachern zu den Protokolltypen von _logs.vmware.Events_ und _logs.NetApp.ems_.
+* Warnungen von metrischen Monitoren für die oben genannten Objekttypen; diese müssen im Feld _Group by_ ausgewählt werden, damit die Änderungsanalyse sie nachverfolgen kann.
+

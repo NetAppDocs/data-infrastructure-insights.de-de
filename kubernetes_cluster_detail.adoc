@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: kubernetes_cluster_detail.html 
+keywords: kubernetes, pods, clusters, nodes. troubleshooting, planning 
+summary: Die Kubernetes-Detailseite bietet Informationen und Details zur Unterstützung bei der Fehlerbehebung und Planung. 
+---
+= Detailseite Zu Kubernetes Cluster
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Auf der Kubernetes-Cluster-Detailseite wird eine detaillierte Übersicht über das Kubernetes-Cluster angezeigt.
+
+image:Kubernetes_Detail_Page_new.png["Cluster-Detailseite"]
+
+
+
+== Namespace, Node und Pod-Anzahl
+
+Die Zählungen oben auf der Seite zeigen Ihnen die Gesamtzahl der Namespaces, Nodes und Pods im Cluster sowie die Anzahl der Pops, die derzeit Warnungen und ausstehend sind.
+
+
+
+== Shared Ressourcen und Sättigung
+
+Oben rechts auf der Detailseite ist Ihre Cluster-Sättigung als aktueller Prozentsatz sowie ein Diagramm, das den letzten Trend im Laufe der Zeit zeigt. Cluster-Sättigung ist der höchste CPU-, Arbeitsspeicher- oder Storage-Sättigung bei jedem Zeitpunkt.
+
+Im Folgenden wird die Seite standardmäßig *Nutzung von freigegebenen Ressourcen* mit Registerkarten für CPU, Speicher und Speicher angezeigt. Auf jeder Registerkarte werden der Sättigungspunkt und der Trend über die Zeit mit zusätzlichen Nutzungsdetails angezeigt. Für den Storage ist der angezeigte Wert der größere Backend- und Filesystem-Sättigung, die unabhängig voneinander berechnet wird.
+
+Die Geräte mit der höchsten Nutzung werden in einer Tabelle unten angezeigt. Klicken Sie auf einen beliebigen Link, um diese Geräte zu durchsuchen.
+
+
+
+== Namespaces
+
+Auf der Registerkarte Namespaces wird eine Liste aller Namespaces in der Kubernetes-Umgebung angezeigt. Die CPU- und Arbeitsspeicherauslastung sowie die Anzahl der Workloads in jedem Namespace werden angezeigt. Klicken Sie auf die Namenslinks, um die einzelnen Namespaces zu erkunden.
+
+image:Kubernetes_Namespace_tab_new.png["Liste der aktuellen Namespaces in Ihrer K8s-Umgebung"]
+
+
+
+== Workloads
+
+Auf der Registerkarte Workloads wird zudem eine Liste der Workloads in den einzelnen Namespace angezeigt. Auch hier wird die CPU- und Arbeitsspeicherauslastung angezeigt. Wenn Sie auf den Namespace-Links klicken, ist jeder Link bohrt.
+
+image:Kubernetes_Workloads_tab_new.png["Liste der aktuellen Namespaces in Ihrer K8s-Umgebung"]
+
+
+
+== Das Cluster „Wheel“
+
+image:Kubernetes_Wheel_Section.png["Cluster Wheel"]
+
+Im Abschnitt „Cluster „Wheel“ finden Sie auf einen Blick den Zustand der Nodes und des POD. Weitere Informationen hierzu finden Sie unter. Wenn Ihr Cluster mehr Nodes enthält, als in diesem Bereich der Seite angezeigt werden kann, können Sie das Rad mit den verfügbaren Schaltflächen drehen.
+
+AlarmPods oder Nodes werden rot angezeigt. Die Bereiche „Warnung“ werden orange angezeigt. PODs, die nicht geplant sind (d.h. unangebracht), werden in der unteren Ecke des Cluster „Wheel“ angezeigt.
+
+Wenn Sie sich über einen Pod (Kreis) oder Knoten (Balken) bewegen, wird die Ansicht des Knotens erweitert.
+
+image:Kubernetes_Node_Expand.png["Erweiterter Node"]
+
+Wenn Sie in der Ansicht auf den Pod oder Node klicken, wird die Ansicht „erweiterter Node“ vergrößert.
+
+image:Kubernetes_Critical_Pod_Zoom.png["Erweiterte Knotenansicht"]
+
+Von hier aus können Sie mit dem Mauszeiger auf ein Element zeigen, um Details zu diesem Element anzuzeigen. Beispiel: Wenn Sie den Mauszeiger über den kritischen POD in diesem Beispiel halten, werden Details zu diesem POD angezeigt.
+
+image:Kubernetes_Pod_Red.png["Wichtige Pod-Informationen"]
+
+Sie können Filesystem-, Speicher- und CPU-Informationen anzeigen, indem Sie den Mauszeiger über die Knoten-Elemente bewegen.
+
+image:Kubernetes_Capacity_Info.png["Node-Kapazität und -Zuweisung"]
+
+
+
+== Ein Hinweis zu den Messgeräten
+
+Die Speicher- und CPU-Anzeigen zeigen drei Farben, da sie _used_ in Bezug auf _zuteilbare Kapazität_ und _Gesamtkapazität_ zeigen.

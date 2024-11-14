@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_unisphere_rest.html 
+keywords: data collector, Unisphere, EMC 
+summary: Dell EMC Unisphere REST Data Collector konfigurieren. 
+---
+= Konfigurieren des Dell EMC Unisphere REST-Datensammlers
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Dieser Datensammler erfasst Bestands- und Performancedaten von Dell EMC Unisphere für PowerMax/VMAX 3 Managementsystemen.
+
+Bitte beachten Sie, dass Dell/EMC bis Unisphere 10.0 keine Statistiken pro Volume eingeführt hat - dieser Datensammler unterstützt 9.2.0+, kann aber keine Volume-Statistiken sammeln, da sie nicht vorhanden sind.
+
+Eine Unisphere for VMAX/PowerMax-Instanz verwaltet möglicherweise ein oder mehrere Symmetrix VMAX 3 oder höhere Speicher-Arrays. Dieser Collector versucht standardmäßig, alle Speicherarrays zu ermitteln, die „lokal“ zu dieser Unisphere-Instanz sind. Wenn in einer Unisphere-Instanz „Remote“-Arrays (d. h. über SRDF-Replikation verbundene Arrays) angezeigt werden, werden diese ignoriert. Um diese zu ermitteln, sollten Sie einen zusätzlichen Unisphere Collector in Data Infrastructure Insights erstellen, auf den die Unisphere-Instanz an diesem Standort verweist.
+
+Für die Konfiguration benötigt der Datensammler eine IP-Adresse/FQDN des Unisphere-Servers, eine TCP-Verbindung zu Port 8443 sowie einen Benutzernamen und ein Passwort.
+
+
+
+== Anforderungen
+
+* Eine IP-Adresse/ein vollständig qualifizierter Domain-Name des Unisphere-Servers
+* Benutzername und Passwort
+* Port 8443:
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| IP-Adresse des Unisphere-Servers | IP-Adresse oder vollqualifizierter Domänenname des Unisphere-Servers 
+
+
+| Unisphere-Port | Der Standardwert ist 8443 
+
+
+| Benutzername | Benutzername für Unisphere-Server 
+
+
+| Passwort | Kennwort, das für Unisphere-Server verwendet wird 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Die Standardeinstellung ist 40 Minuten. 
+
+
+| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen 
+
+
+| Wählen Sie „Ausschließen“ oder „Einschließen“, um eine Liste anzugeben | Geben Sie an, ob VMs ein- oder ausgeschlossen werden sollen 
+
+
+| Bestandsfilter Geräteliste | Liste der zu filternden VMs (durch Komma getrennt oder durch Semikolon getrennt, wenn Komma im Wert verwendet wird) für die Filterung 
+
+
+| Unisphere-Leistungsintervall (Sek.) | Der Standardwert beträgt 300 Sekunden 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| Fehler: Benutzerauthentifizierung fehlgeschlagen. | Stellen Sie sicher, dass Ihre Anmeldeinformationen für dieses Gerät korrekt sind. 
+
+
+| Bestandsaufnahme Aktu. Status: Unerwartete Daten abgerufen -Array hat 0 Volumen gemeldet | Zeigt in der Regel ein Autorisierungsproblem (nicht die Authentifizierung) an. Stellen Sie sicher, dass Ihre Anmeldeinformationen korrekt sind und dass der Benutzername die Möglichkeit hat, alle Volumes aufzulisten und ihre Attribute anzuzeigen. 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

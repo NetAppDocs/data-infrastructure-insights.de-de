@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: task_dc_google_cloud.html 
+summary: Konfigurieren Sie Google Compute Data Collector 
+keywords: data collector, queries, create 
+---
+= NetApp Google Compute Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Dieser Datensammler unterstützt Inventar- und Performance-Erfassung aus Google Compute Cloud-Plattformkonfigurationen. Dieser Sammler wird versuchen, alle Computing-Ressourcen in allen Projekten innerhalb einer Google-Organisation zu entdecken. Wenn Sie über mehrere Google-Unternehmen verfügen, die Sie mit Data Infrastructure Insights ermitteln möchten, möchten Sie pro Unternehmen einen Data Infrastructure Insights Collector implementieren.
+
+
+
+== Anforderungen Für Servicekonten
+
+* Sie müssen ein Service-Konto erstellen, indem Sie die Anweisungen in befolgenlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Erstellen/Verwalten Von Servicekonten"]. Ein solches Dienstkonto wird durch eine eindeutige ID identifiziert, die als _ClientID_ bezeichnet wird und als Benutzername verwendet wird.
+* Erstellen Sie außerdem einen Servicekontoschlüssel, indem Sie die Anweisungen in befolgenlink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Erstellen/Verwalten Von Servicekontoschlüsseln"]. Dieser Schlüssel kann als json-Datei heruntergeladen werden, deren Inhalt als Passwort verwendet wird.
+* Das Servicekonto muss für _Compute.Readonly_, _Monitoring.read_ und _Cloud-Platform_ berücksichtigt werden.
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Organisation-ID | Die Organisations-ID, die Sie mit diesem Sammler entdecken möchten. Dieses Feld ist erforderlich, wenn Ihr Servicekonto mehr als eine Organisation sehen kann 
+
+
+| Wählen Sie „Ausschließen“ oder „Einschließen“, um GCP-Projekte nach IDs zu filtern | Wenn Sie einschränken möchten, welche Projektressourcen in Data Infrastructure Insights einfließen. 
+
+
+| Projekt-IDs | Die Liste der Projekt-IDs, die Sie in oder aus der Erkennung filtern möchten, hängt vom Wert des Werts "Ausschließen"... ab. Die Standardliste ist leer 
+
+
+| Client-ID | Client-ID für die Konfiguration der Google Cloud Platform 
+
+
+| Kopieren Sie den Inhalt Ihrer Google Credential-Datei hier | Kopieren Sie Ihre Google-Anmeldedaten für das Cloud-Plattform-Konto in dieses Feld 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten 
+
+
+| Wählen Sie „Exclude“ oder „include“, um VMs nach Etiketten filtern zu können | Geben Sie an, ob VM's by Labels beim Sammeln von Daten einbezogen oder ausgeschlossen werden sollen. Wenn ‘include’ ausgewählt ist, kann das Feld Label Key nicht leer sein. 
+
+
+| Bezeichnungsschlüssel und Werte, auf denen VMs gefiltert werden sollen | Klicken Sie auf *+ Filter Label*, um die VMs (und zugehörigen Festplatten) auszuwählen, die durch Filtern nach Schlüsseln und Werten, die Schlüssel und Werte der Labels auf der VM entsprechen, einzuschließen bzw. auszuschließen. Etikettenschlüssel ist erforderlich, Etikettenwert ist optional. Wenn der Etikettenwert leer ist, wird die VM solange gefiltert, wie sie dem Etikettenschlüssel entspricht. 
+
+
+| Leistungsintervall (Sek.) | Der Standardwert ist 1800 Sekunden 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

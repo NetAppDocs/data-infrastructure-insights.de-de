@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: concept_storage_virtualization.html 
+summary: Data Infrastructure Insights bietet Einblicke in virtualisierten Front-End- und Back-End-Storage. 
+keywords: storage, virtual, virtualized, virtualization, 
+---
+= Storage-Virtualisierung
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Anhand von Dateninfrastrukturdaten können Storage-Arrays mit lokalem Storage oder der Virtualisierung anderer Storage-Arrays unterschieden werden. So können Sie Kosten nachvollziehen und die Performance vom Front-End bis zum Back-End Ihrer Infrastruktur differenzieren.
+
+
+
+=== Widget „Virtualisierung in einer Tabelle“
+
+Eine der einfachsten Möglichkeiten zur Betrachtung Ihrer Storage-Virtualisierung ist die Erstellung eines Dashboard-Tabellen-Widgets mit virtualisierter Art. Wenn Sie die Abfrage für das Widget erstellen, fügen Sie einfach „virtualizedType“ zu Ihrer Gruppierung oder Ihrem Filter hinzu.
+
+image:StorageVirtualization_TableWidgetSettings.png["Einfache Abfrage zur Anzeige von Storage-virtualisierten Typen"]
+
+Das resultierende Tabellen-Widget zeigt Ihnen die _Standard_, _Backend_ und _Virtual_ Speicher in Ihrer Umgebung.
+
+image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tabelle mit virtualisierten Typen"]
+
+
+
+=== Landing Pages zeigen virtualisierte Informationen an
+
+Auf einer Storage-, Volume-, internen Volume- oder Disk-Landing Page können Sie die relevanten Virtualisierungsinformationen sehen. Wenn Sie beispielsweise auf der unten stehenden Storage-Landing Page sehen, sehen Sie, dass es sich um einen virtuellen Storage handelt und welches Back-End-Storage-System angewendet wird. Alle relevanten Tabellen auf Landing-Pages enthalten je nach Bedarf auch Virtualisierungsinformationen.
+
+image:StorageVirtualization_StorageSummary.png["Storage-Landing Page, auf der Informationen zu virtuellem und gesichertem Speicher angezeigt werden"]
+
+
+
+=== Vorhandene Landing Pages und Dashboards
+
+Beachten Sie, dass wenn Sie derzeit benutzerdefinierte Landing Pages oder Dashboards in Ihrer Umgebung haben, diese nicht automatisch alle Virtualisierungsinformationen standardmäßig anzeigen. Sie können jedoch jedes benutzerdefinierte Dashboard oder jede Landing Page _revert to Default_ (Sie müssen Ihre Anpassungen neu implementieren) oder die relevanten Widgets so ändern, dass sie die gewünschten Virtualisierungsattribute oder Metriken enthalten.
+
+_Auf Standard zurücksetzen_ ist in der oberen rechten Ecke eines benutzerdefinierten Dashboard- oder Landing Page-Bildschirms verfügbar.
+
+image:RevertToDefault.png["Schaltfläche „auf Standard zurücksetzen“"]

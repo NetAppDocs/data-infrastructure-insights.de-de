@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ms_hyperv.html 
+keywords: data collector, Microsoft, Hyper-V 
+summary: Microsoft Hyper-V-Datensammler konfigurieren. 
+---
+= Microsoft Hyper-V Datensammler
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Der Microsoft Hyper-V Datensammler erfasst Bestands- und Performancedaten aus der virtualisierten Server Computing-Umgebung. Dieser Datensammler kann einen eigenständigen Hyper-V-Host oder einen gesamten Cluster erkennen und einen Collector pro eigenständigen Host oder Cluster erstellen.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Inventarinformationen aus dem Microsoft Hyper-V (WMI). Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Virtuelle Festplatte | Virtuelles Laufwerk 
+
+
+| Host | Host 
+
+
+| Virtual Machine | Virtual Machine 
+
+
+| Cluster Shared Volumes (CSV), Partition Volume | Datastore 
+
+
+| Internet SCSI-Gerät, Multi Path SCSI LUN | LUN 
+
+
+| Fibre Channel-Port | Port 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlich:
+
+* Für die Hyper-V muss Port 5985 geöffnet sein, damit Daten erfasst und Remote-Zugriff/-Management erfolgen können.
+* IP-Adresse oder FQDN des Clusters oder Standalone-Hypervisors. Die Verwendung des unverankerten Cluster-Hostnamens oder der IP ist wahrscheinlich der zuverlässigste Ansatz im Vergleich dazu, den Collector nur auf einen bestimmten Knoten in einem Cluster zu verweisen.
+* Benutzerkonto auf administrativer Ebene, das für alle Hypervisoren im Cluster funktioniert.
+* WinRM muss aktiviert sein und alle Hypervisoren abhören
+* Port-Anforderungen: Port 135 über WMI & Dynamic TCP Ports zugewiesen 1024-65535 für Windows 2003 und älter und 49152-65535 für Windows 2008.
+* DNS-Auflösung muss erfolgreich sein, auch wenn der Datensammler nur auf eine IP-Adresse verweist
+* Für jeden Hyper-V Hypervisor muss für jede VM, auf jedem Host, „Resource Metering“ aktiviert sein. Dadurch kann jeder Hypervisor bei jedem Gast mehr Daten für Data Infrastructure Insights zur Verfügung haben. Wenn diese Einstellung nicht festgelegt ist, werden für jeden Gast weniger Performance-Metriken erfasst. Weitere Informationen zur Ressourcenmessung finden Sie in der Microsoft-Dokumentation:
++
+link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831661(v=ws.11)["Hyper-V Übersicht zur Ressourcenmessung"]
+
++
+link:https://docs.microsoft.com/en-us/powershell/module/hyper-v/enable-vmresourcemetering?view=win10-ps["Aktivieren-VMressourcenMetering"]
+
+
+
+
+NOTE: Für den Hyper-V-Datensammler ist eine Windows Acquisition Unit erforderlich.
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Cluster-IP-Adresse oder fließender Cluster-FQDN | Die IP-Adresse oder der vollständig qualifizierte Domänenname für das Cluster oder ein eigenständiger Hypervisor ohne Cluster 
+
+
+| Benutzername | Administrator-Benutzername für den Hypervisor 
+
+
+| Passwort | Kennwort für den Hypervisor 
+
+
+| DNS-Domain-Suffix | Das Hostnamen-Suffix, das mit dem einfachen Hostnamen kombiniert wird, um den FQDN eines Hypervisors zu rendern 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Die Standardeinstellung ist 20 Minuten. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

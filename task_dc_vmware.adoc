@@ -1,0 +1,178 @@
+---
+sidebar: sidebar 
+permalink: task_dc_vmware.html 
+keywords: data collector, VMware, 
+summary: VMware Data Collector wird konfiguriert. 
+---
+= VMware vSphere Data Collector konfigurieren
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Der Datensammler für VMware vSphere erfasst Performance- und Konfigurationsinformationen für die VM-Gast- und ESXi Hosts und erfordert schreibgeschützte Privileges für alle Objekte in vSphere. Ab August 2024 werden bei vSphere Collector zusätzlich Protokollmeldungen aus vSphere-Umgebungen und einige VMware-spezifische Kennzahlen integriert. Beachten Sie bitte, dass Data Infrastructure Insights nur Informationen zu VMware-Protokollen aus Umgebungen mit vSphere 8.0.1 oder höher abrufen kann. Ebenso werden die anbieterspezifischen Metriken nur für vSphere 7+-Umgebungen unterstützt. Daher können Sie das Kontrollkästchen Protokolle und/oder anbieterspezifische Metriken für einen bestimmten Collector deaktivieren, wenn auf eine ältere vSphere-Instanz verwiesen wird.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights bezieht die folgenden Inventarinformationen aus dem VMware vSphere-Datensammler. Für jeden erworbenen Asset-Typ wird die am häufigsten für das Asset verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Virtuelle Festplatte | Festplatte 
+
+
+| Host | Host 
+
+
+| Virtual Machine | Virtual Machine 
+
+
+| Datastore | Datastore 
+
+
+| LUN | Datenmenge 
+
+
+| Fibre-Channel-Port | Port 
+|===
+Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die für diesen Datensammler möglicherweise nicht alle Fälle darstellen.
+
+
+
+== Anforderungen
+
+Zur Konfiguration dieses Datensammlers sind folgende Informationen erforderlich:
+
+* IP-Adresse des Virtual Center-Servers
+* Schreibgeschützter Benutzername und Kennwort in Virtual Center
+* Für alle Objekte im Virtual Center benötigen wir schreibgeschützte Berechtigungen.
+* SDK-Zugriff auf dem Virtual Center-Server – in der Regel bereits eingerichtet.
+* Port-Anforderungen: http-80 HTTPS-443
+* Zugriff validieren:
++
+** Melden Sie sich mit dem oben genannten Benutzernamen und Kennwort beim Virtual Center Client an
+** Überprüfen Sie, ob das SDK aktiviert ist: telnet <vc_ip> 443
+
+
+
+
+
+
+== Einrichtung und Verbindung
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Name | Eindeutiger Name für den Datensammler 
+
+
+| Erfassungseinheit | Name der Erfassungseinheit 
+|===
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| IP-Adresse für Virtual Center | IP-Adresse des Virtual Center 
+
+
+| Benutzername | Benutzername für den Zugriff auf das Virtual Center 
+
+
+| Passwort | Passwort für den Zugriff auf das Virtual Center 
+|===
+
+
+== Erweiterte Konfiguration
+
+Aktivieren Sie im Bildschirm Erweiterte Konfiguration die Option *VM Performance*, um Leistungsdaten zu sammeln. Bestandserfassung ist standardmäßig aktiviert. Die folgenden Felder können konfiguriert werden:
+
+[cols="2*"]
+|===
+
+
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Der Standardwert ist 20 
+
+
+| Filtern von VMs | Wählen Sie EINEN CLUSTER-, DATACENTER- oder ESX-HOST aus 
+
+
+| Wählen Sie „Ausschließen“ oder „Einschließen“, um eine Liste anzugeben | Filterliste erstellen (CLUSTER, DATACENTER und/oder ESX_HOST) 
+
+
+| Anzahl der Wiederholungen | Der Standardwert ist 3 
+
+
+| Kommunikations-Port | Der Standardwert ist 443 
+
+
+| Geräteliste Filtern... | Diese Liste muss aus exakten String-Übereinstimmungen bestehen. Wenn Sie nach ESX_HOST filtern möchten, müssen Sie eine kommagetrennte Liste mit den genauen „Namen“ Ihrer ESX-Hosts erstellen, wie in Data Infrastructure Insights und vSphere gemeldet. Bei diesen „Namen“ handelt es sich entweder um IP-Adressen, einfache Hostnamen oder vollqualifizierte Domain-Namen (FQDNs) – dies wird durch den Namen dieser Hosts bestimmt, als sie ursprünglich zu vSphere hinzugefügt wurden. Verwenden Sie bei der Filterung nach CLUSTER die von CI auf Hypervisoren gemeldeten Cluster-Namen im Stil von Data Infrastructure Insights – Data Infrastructure Insights setzt den vSphere-Cluster-Namen mit dem vSphere-Datacenter-Namen und einem Schrägstrich voraus – „DC1/clusterA“ ist der Cluster-Name Data Infrastructure Insights würde über einen Hypervisor in ClusterA im Rechenzentrum DC1 berichten. 
+
+
+| Leistungsintervall (Sek.) | Der Standardwert ist 300 
+|===
+
+
+== Zuordnen von VMware Tags zu Annotationen zu Data Infrastructure Insights
+
+Der VMware Datensammler ermöglicht das Befüllen von Data Infrastructure Insights Annotationen mit Tags, die auf VMware konfiguriert sind. Die Annotationen müssen genau mit den VMware Tags benannt werden. Data Infrastructure Insights füllt immer Anmerkungen vom gleichen Namen aus und versucht, Anmerkungen anderer Typen (Zahl, Boolescher Wert usw.) zu füllen. Wenn Ihre Anmerkung einen anderen Typ hat und der Datensammler sie nicht füllt, kann es erforderlich sein, die Anmerkung zu entfernen und sie als Texttyp neu zu erstellen.
+
+Achten Sie darauf, dass bei VMware Tags die Groß-/Kleinschreibung beachtet wird, während bei Data Infrastructure Insights die Tags nicht beachtet werden müssen. Wenn Sie in Data Infrastructure Insights eine Annotation mit dem Namen „BESITZER“ und Tags mit den Namen „EIGENTÜMER“, „Eigentümer“ und „Eigentümer“ in VMware erstellen, würden alle diese Variationen von „Eigentümer“ auch der Annotation von Cloud Insight zugeordnet.
+
+Beachten Sie Folgendes:
+
+* Data Infrastructure Insights veröffentlicht derzeit nur automatisch Supportinformationen für NetApp-Geräte.
+* Da diese Support-Informationen in Anmerkungsform gespeichert sind, können Sie sie abfragen oder in Dashboards verwenden.
+* Wenn ein Benutzer den Anmerkungswert überschreibt oder leert, wird der Wert erneut automatisch gefräst, wenn Data Infrastructure Insights die Anmerkungen aktualisiert, die er einmal täglich tut.
+
+
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| Fehler: Liste einschließen, um VMs zu filtern, darf nicht leer sein | Wenn Liste einschließen ausgewählt ist, geben Sie gültige DataCenter-, Cluster- oder Hostnamen an, um VMs zu filtern 
+
+
+| Fehler: Es konnte keine Verbindung zu VirtualCenter bei IP hergestellt werden | Mögliche Lösungen: * Überprüfen Sie die eingegebenen Anmeldeinformationen und die eingegebene IP-Adresse. * Versuchen Sie, mit Virtual Center über den VMware Infrastructure Client zu kommunizieren. * Versuchen Sie, mit Virtual Center über Managed Object Browser (z. B. MOB) zu kommunizieren. 
+
+
+| Fehler: VirtualCenter at IP verfügt über kein von JVM einkonformes Zertifikat | Mögliche Lösungen: * Empfohlen: Zertifikat für Virtual Center durch Verwendung von Stronger (z.B. neu generieren 1024-Bit) RSA-Schlüssel * Nicht empfohlen: Ändern Sie die JVM java.security-Konfiguration, um die Einschränkung jdk.certpath.diabledAlgorithms zu nutzen, um einen 512-Bit-RSA-Schlüssel zu ermöglichen. Siehe link:http://www.oracle.com/technetwork/java/javase/7u40-relnotes-2004172.html["JDK 7 Update 40 Versionshinweise"]. 
+
+
+| Ich sehe die Meldung: „VMware Logs-Paket wird nicht auf VMware unterstützt, unter Version 8.0.1“ | Die Protokollerfassung wird auf VMware-Versionen vor Version 8.0 nicht unterstützt. Aktualisieren Sie Ihre VI Center-Infrastruktur auf Version 8.0.1 oder höher, wenn Sie die Funktion Protokollsammlung in Data Infrastructure Insights verwenden möchten. Weitere Informationen finden Sie in diesem link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Insights/VMware_Logs_package_is_not_supported_on_VMware_below_version_8.0.1___Data_Infrastructure_Insights["KB-Artikel"]. 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_nutanix.html 
+keywords: data collector, Nutanix, NX Series 
+summary: Nutanix Datensammler wird konfiguriert. 
+---
+= Nutanix NX-Datensammler
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights nutzt den Nutanix Datensammler zur Erkennung von Bestands- und Performancedaten für Nutanix NX-Speichersysteme.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Nutanix Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Storage-Pool | Storage-Pool 
+
+
+| Nutanix Container | Internes Volumen 
+
+
+| Nutanix Container | Dateifreigabe 
+
+
+| NFS-Share | Share 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+* Die IP-Adresse für externe Datendienste für den Cluster
+* Schreibgeschützter Benutzername und Kennwort, sofern keine Volume_groups verwendet werden, sind in diesem Fall Administratorbenutzername und Passwort erforderlich
+* Port-Anforderung: HTTPS 443
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Externe IP-Adresse des Prism | Die IP-Adresse für externe Datendienste für den Cluster 
+
+
+| Benutzername | Benutzername für das Administratorkonto 
+
+
+| Passwort | Kennwort für das Administratorkonto 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| TCP-Port | TCP Port für die Verbindung mit dem Nutanix Array. Der Standardwert ist 9440. 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+
+
+| Abfrageintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

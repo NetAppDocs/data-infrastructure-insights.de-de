@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: concept_preview_features.html 
+summary: Die Vorschaufunktionen stehen nur mit begrenzter Kapazität zur Verfügung und bieten noch keine Highlights-Funktionen zur Prime Time. 
+keywords: coming soon, preview, 
+---
+= Funktionen und Funktionen der Vorschau
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights stellt neue Features und Funktionen _Preview_ vor. Die Vorschaufunktionen werden in begrenzten Umgebungen oder mit begrenzter Kapazität verfügbar gemacht.
+
+Wenn Sie eine oder mehrere dieser Funktionen in der Vorschau anzeigen möchten, wenden Sie sich an Ihrenlink:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertriebsteam"], um weitere Informationen zu erhalten.
+
+|===
+
+
+| *Funktion* | *Beschreibung* 
+
+
+| Rückgewinnung von ONTAP Cold Storage | Bietet Visualisierungen für ONTAP Volume Workloads mit inkalter Kapazität sowie andere zugehörige Kennzahlen. 
+|===

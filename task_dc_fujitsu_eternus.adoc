@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: task_dc_fujitsu_eternus.html 
+keywords: data collector, Fujitsu, Eternus 
+summary: Fujitsu ETERNUS-Datensammler konfigurieren. 
+---
+= Fujitsu ETERNUS Datensammler
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Der Fujitsu ETERNUS-Datensammler erfasst Bestandsdaten über administrativen Zugriff auf das Speichersystem.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights bezieht die folgenden Bestandsinformationen aus dem Fujitsu ETERNUS Storage. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Festplatte | Festplatte 
+
+
+| Storage | Storage 
+
+
+| Thin Pool, Flexible Tier Pool, Raid-Gruppe | Storage-Pool 
+
+
+| Standard-Volume, Snap Data Volume (SDV), Snap Data Pool Volume (SDPV), Thin Provisioning Volume (TPV), Flexible Tier Volume (FTV), Wide Striping Volume (WSV) | Datenmenge 
+
+
+| Channel-Adapter | Controller 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diese Datensammlung möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlich:
+
+* Eine IP-Adresse des ETERNUS-Speichers, die nicht durch Komma getrennt werden kann
+* Benutzername und Passwort der SSH-Administration
+* Anschluss 22
+* Stellen Sie sicher, dass die Seitenscrollen deaktiviert ist (clienv-show-more-Scroll deaktiviert)
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| IP-Adresse des ETERNUS-Speichers | IP-Adresse des ETERNUS-Speichers 
+
+
+| Benutzername | Benutzername für ETERNUS-Speicher 
+
+
+| Passwort | Passwort für den ETERNUS-Speicher 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Die Standardeinstellung ist 20 Minuten. 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| „Fehler beim Abrufen von Daten“ mit Fehlermeldungen „Error Finding prompt CLI“ oder „Error Finding prompt at the end of Shell results“ | Wahrscheinlich verursacht durch: Speichersystem hat Seite Scrollen aktiviert. Mögliche Lösung: * Versuchen Sie, den Bildlauf zu deaktivieren, indem Sie den folgenden Befehl ausführen: Clienv-show-more -scroll disable 
+
+
+| „Verbindungsfehler“ mit Fehlermeldungen „konnte eine SSH-Verbindung zum Storage nicht instanziieren“ oder „Verbindung zum VirtualCenter konnte nicht hergestellt werden“ | Wahrscheinliche Ursachen: * Falsche Anmeldeinformationen. * Falsche IP-Adresse. * Netzwerkproblem. * Storage kann ausgefallen oder nicht mehr reagiert werden. Mögliche Lösungen: * Überprüfen Sie die eingegebenen Anmeldeinformationen und die eingegebene IP-Adresse. * Versuchen Sie, mit dem Speicher über SSH Client zu kommunizieren. 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

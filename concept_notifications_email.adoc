@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: concept_notifications_email.html 
+summary: E-Mail-Adressen für Benachrichtigungen werden hinzugefügt. 
+keywords: email, notifications, signature, recipient, list, subscription 
+---
+= E-Mail-Benachrichtigungen Werden Konfiguriert
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Sie können eine E-Mail-Liste für abonnementbezogene Benachrichtigungen sowie eine globale E-Mail-Liste mit Empfängern für die Benachrichtigung über Schwellenverletzungen für Leistungsrichtlinien konfigurieren.
+
+Um die Einstellungen für Benachrichtigungen-E-Mail-Empfänger zu konfigurieren, gehen Sie zur Seite *Admin > Benachrichtigungen* und wählen Sie die Registerkarte _E-Mail_ aus.
+
+[role="thumb"]
+image:Notifications_email_list.png["E-Mail-Benachrichtigungen"]
+
+
+
+== Empfänger Für Abonnementbenachrichtigung
+
+Um Empfänger für abonnementbezogene Ereignisbenachrichtigungen zu konfigurieren, gehen Sie zum Abschnitt „Empfänger für Abonnementbenachrichtigungen“. Sie können wählen, dass E-Mail-Benachrichtigungen für abonnierte Ereignisse an einen oder alle der folgenden Empfänger gesendet werden:
+
+* Alle Account-Inhaber
+* Alle _Monitor & Optimize_ Administratoren
+* Zusätzliche E-Mail-Adressen, die Sie angeben
+
+
+Im Folgenden finden Sie Beispiele für die Art von Benachrichtigungen, die gesendet werden können, und Benutzeraktionen, die Sie durchführen können.
+
+|===
+
+
+| *Hinweis:* | *Benutzeraktion:* 
+
+
+| Testversion oder Abonnement wurde aktualisiert | Lesen Sie die Abonnementdetails auf der link:concept_subscribing_to_cloud_insights.html["Abonnement"] Seite 
+
+
+| Das Abonnement läuft in 90 Tagen ab das Abonnement läuft in 30 Tagen ab | Wenn „Auto Renewal“ aktiviert ist, ist keine Aktion erforderlich. Wenden Sie sich an die link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertrieb"]Verlängerung des Abonnements 
+
+
+| Die Testversion endet in 2 Tagen | Testversion von der  Seite erneuernlink:concept_subscribing_to_cloud_insights.html["Abonnement"]. Sie können eine einmalige Testversion erneuern. Kontaktieren Sie, link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertrieb"] um ein Abonnement zu erwerben 
+
+
+| Testversion oder Abonnement abgelaufen Konto wird das Sammeln von Daten in 48 Stunden beendet Konto wird nach 48 Stunden gelöscht | Kontaktieren Sie, link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertrieb"] um ein Abonnement zu erwerben 
+|===
+
+
+== Globale Empfängerliste für Warnungen
+
+Für jede Aktion der Warnmeldung werden E-Mail-Benachrichtigungen an die Benachrichtigungsliste gesendet. Sie können Benachrichtigungen an eine globale Empfängerliste senden.
+
+Wählen Sie zum Konfigurieren von Empfängern für globale Warnmeldungen die gewünschten Empfänger im Abschnitt *Empfänger für globale Monitorbenachrichtigungen* aus.
+
+Sie können die globale Empfängerliste für einen einzelnen Monitor immer überschreiben, wenn Sie den Monitor erstellen oder ändern.
+
+
+NOTE: ONTAP Data Collector-Benachrichtigungen haben Vorrang vor allen spezifischen Monitoring-Benachrichtigungen, die für den Cluster/den Datensammler relevant sind. Die Empfängerliste, die Sie für den Data Collector selbst festgelegt haben, erhält die Warnungen zum Datensammler. Wenn keine aktiven Warnungen zur Datenerfassung vorhanden sind, werden die von Monitor erzeugten Warnmeldungen an bestimmte Überwachungsempfänger gesendet.
+
+
+
+== Bearbeiten von Benachrichtigungen für ONTAP
+
+Sie können Benachrichtigungen für ONTAP-Cluster ändern, indem Sie in der oberen rechten Dropdown-Liste auf einer Storage-Landing-Page „_Benachrichtigungen bearbeiten“ auswählen.
+
+image:EditONTAPNotifications.png["ONTAP Benachrichtigungen bearbeiten"]
+
+Von hier aus können Sie Benachrichtigungen für kritische, Warn-, Informations- und/oder gelöste Warnmeldungen festlegen. Jedes Szenario kann die Liste der globalen Empfänger oder andere von Ihnen ausgewählte Empfänger benachrichtigen.
+
+image:EditONTAPNotifications_MultipleScenarios.png["ONTAP-Benachrichtigungen für verschiedene Szenarien"]

@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: concept_feature_tutorials.html 
+summary: Data Infrastructure Insights bietet Tutorials, die Ihnen zeigen, wie Sie viele Aufgaben erledigen können. 
+keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
+---
+= Lernprogramme Zu Funktionen
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights enthält viele nützliche Funktionen, mit denen Sie Daten schnell und einfach finden, Probleme beheben und Einblicke in Ihre Unternehmensumgebung erhalten. Nutzen Sie leistungsstarke Abfragen, visualisieren Sie Daten in Dashboards und senden Sie E-Mail-Benachrichtigungen für die von Ihnen festgelegten Datenschwellenwerte.
+
+Data Infrastructure Insights enthält eine Reihe von Video-Tutorials, die Ihnen dabei helfen, diese Funktionen zu verstehen und Ihre Business-Insight-Strategien besser zu implementieren. Diese Tutorials nutzen alle Benutzer, die Zugriff auf Ihre Data Infrastructure Insights Umgebung haben.
+
+
+
+== Einführung
+
+Sehen Sie sich ein kurzes Tutorial an, das erklärt, wie Data Infrastructure Insights funktioniert.
+
+video::howTo.mp4[]
+
+
+== Checkliste und Video Tutorials
+
+Die *Startup Checklist*, die auf Ihrer Data Infrastructure Insights Seite angezeigt wird, enthält eine Liste mit mehreren nützlichen Aufgaben und Konzepten. Durch Auswahl eines Elements in der Checkliste gelangen Sie zur entsprechenden Seite „Einblicke in die Dateninfrastruktur“ für dieses Konzept. Wenn Sie beispielsweise auf das Element _Create a Dashboard_ klicken, wird die Seite Data Infrastructure Insights *Dashboards* geöffnet.
+
+image:OnboardingChecklist.png["Lernprogramm – Checkliste – Fortschritt"]
+
+Oben auf der Seite befindet sich ein Link zu einem Video-Tutorial, das zeigt, wie ein Dashboard erstellt wird. Sie können das Video so oft ansehen, wie Sie möchten, bis Sie auf das _Got klicken! Diesen Link nicht mehr anzeigen_ für dieses Video. Das Video ist jedes Mal verfügbar, wenn Sie die Seite Dashboards aufrufen, bis Sie es verwerfen.
+
+image:Startup-DashboardWatchVideo.png["Video-Link Ansehen"]
+
+Nachdem Sie sich das Video mindestens einmal angesehen haben, wird die Option _Dashboard erstellen_ in der Checkliste deaktiviert, was darauf hinweist, dass Sie das Tutorial abgeschlossen haben. Sie können dann mit dem nächsten Tutorial fortfahren.
+
+
+NOTE: Sie können die Tutorials in jeder beliebigen Reihenfolge anzeigen, die Sie mögen, so oft wie Sie mögen, bis Sie entlassen.
+
+
+
+=== Die Checkliste nicht ausfüllen
+
+Die Startup-Checkliste wird auf Ihrer Site angezeigt, bis Sie unten in der Checkliste auf den Link _Do't Show This_ klicken. Selbst wenn Sie die Checkliste nicht mehr verwenden, sind die Tutorials immer noch auf jeder entsprechenden Seite „Data Infrastructure Insights“ verfügbar, bis Sie sie in der Kopfzeile der Nachricht verwerfen.
+
+
+
+== Tutorials anzeigen
+
+
+
+=== Abfragen Von Daten
+
+video::Queries.mp4[]
+
+
+=== Erstellen eines Dashboards
+
+video::Dashboards.mp4[]
+
+
+=== Fehlerbehebung
+
+video::Troubleshooting.mp4[]
+
+
+=== Auflösen Von Geräten
+
+video::AHR_small.mp4[]

@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: task_dc_lenovo.html 
+keywords: data collector,Lenovo, HX Series 
+summary: Lenovo Datensammler konfigurieren. 
+---
+= Lenovo Datensammler
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights verwendet den Lenovo Datensammler zur Ermittlung von Bestands- und Leistungsdaten für Lenovo HX-Speichersysteme.
+
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+* Externe IP-Adresse des Prism
+* Administrator-Benutzername und -Passwort
+* TCP-Port-Anforderung: 9440
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Externe IP-Adresse des Prism | Die IP-Adresse für externe Datendienste für den Cluster 
+
+
+| Benutzername | Benutzername für das Administratorkonto 
+
+
+| Passwort | Kennwort für das Administratorkonto 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| TCP-Port | TCP-Port für die Verbindung zum Array. Der Standardwert ist 9440. 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+
+
+| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

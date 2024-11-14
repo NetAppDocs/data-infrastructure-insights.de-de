@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_db_host.html 
+keywords: data collector, generic db 
+summary: Generischer Datenbank-Host-Resolver-Collector 
+---
+= NetApp-Hostauflösung für allgemeine DB
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dieser Datensammler erfasst Inventar
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst Bestände aus diesem Collector.
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| IP-Adresse des DB-Servers | IP-Adresse des DB-Servers 
+
+
+| DB-Server-Port | Der Standardwert ist 3306 
+
+
+| Qualifizierter Name Der Treiberklasse | Klassenname für den Treiber. 
+
+
+| JDBC-Treiber-URL | URL für den Treiber 
+
+
+| SQL-Abfrage | Die Abfrage, die verwendet wird, um Daten aus der Tabelle zurückzugeben 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Intervall Für Bestandsabfrage (Min.) | Der Standardwert ist 60 Minuten 
+
+
+| Aktivieren Sie die SSL-Verbindung | Wählen Sie diese Option, um die Verbindung über SSL zu aktivieren 
+
+
+| Bericht WWN Alias | Wählen Sie diese Option, um den WWN-Alias zu melden 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

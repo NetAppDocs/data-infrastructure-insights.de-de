@@ -1,0 +1,195 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_vnx_block.html 
+keywords: data collector, EMC, clariion, VNX block 
+summary: 'Konfiguration VON DELL EMC VNX Block Storage (ehemals CLARiiON)' 
+---
+= Datensammler Dell EMC VNX Block Storage (NaviCLI
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights verwendet den Dell EMC VNX Block Storage (NaviSec) Data Collector (ehemals CLARiiON) zur Erfassung von Bestands- und Performance-Daten.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem EMC VNX Block Storage Data Collector. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Festplatte | Festplatte 
+
+
+| Storage | Storage 
+
+
+| Storage Processor | Storage-Node 
+
+
+| Dieser Pool, RAID-Gruppe | Storage-Pool 
+
+
+| LUN | Datenmenge 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In dieser Datenquelle fallen möglicherweise nicht alle Fälle an.
+
+
+
+== Anforderungen
+
+Zur Datenerfassung müssen die folgenden Anforderungen erfüllt sein:
+
+* Eine IP-Adresse jedes VNX-Blockspeicherprozessors
+* Schreibgeschützter Navisphere-Benutzername und Kennwort für die VNX-Block-Speicher-Arrays
+* Naviseccli muss auf der Data Infrastructure Insights AU installiert sein
+* Zugriffsvalidierung: Führen Sie NaviSecCLI von der Data Infrastructure Insights AU zu jedem Array mit dem Benutzernamen und Passwort aus.
+* Port-Anforderungen: 80, 443
+* Naviseccli Version sollte mit dem neuesten FLARE-Code auf Ihrem Array entsprechen
+* Zur Performance muss die Statistik-Protokollierung aktiviert sein.
+
+
+
+
+== Syntax der Navisphere Befehlszeilenschnittstelle
+
+NaviSECCLI.exe -h <IP-Adresse> -user <user> -password <password> -scope <scope,use 0 for global Scope> -Port <use 443 by default> Command
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| VNX Block Storage-IP-Adresse | IP-Adresse oder vollqualifizierter Domain-Name des VNX-Blockspeichers 
+
+
+| Benutzername | Name, der für die Anmeldung beim VNX-Block-Speichergerät verwendet wird. 
+
+
+| Passwort | Passwort zur Anmeldung beim VNX-Block-Speichergerät. 
+
+
+| CLI-Pfad zu NaviSECCLI.exe | Vollständiger Pfad zum Ordner mit der ausführbaren Datei _naviseccli.exe_ 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 40 Minuten. 
+
+
+| Umfang | Der Umfang des sicheren Clients. Die Standardeinstellung ist Global. 
+
+
+| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2a, 2a"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+ a| 
+Fehler:
+
+* Agent Wird Nicht Ausgeführt
+* Naviseccli konnte nicht gefunden werden
+* Fehler beim Ausführen eines Befehls
+
+ a| 
+* Vergewissern Sie sich, dass Navisphere CLI auf der Cloud Insight Acquisition Unit installiert ist
+* Sie haben die Option „Secure Client verwenden“ im Assistenten für die Konfiguration des Datensammlers nicht ausgewählt und haben keine nicht sichere Version der Navisphere CLI installiert.
+* Vergewissern Sie sich, dass das Navisphere CLI-Installationsverzeichnis in der Data Collector-Konfiguration korrekt ist
+* Vergewissern Sie sich, dass die IP-Adresse des VNX-Blockspeichers in der Data Collector-Konfiguration korrekt ist:
+* Aus der Abteilung Data Infrastructure Insights Acquisition:
++
+** Öffnen Sie eine CMD.
+** Ändern Sie das Verzeichnis in das konfigurierte Installationsverzeichnis
+** Versuchen Sie, eine Verbindung mit dem VNX-Blockspeichergerät herzustellen, indem Sie „navicli -h} ip {getagent“ eingeben (ersetzen Sie die {ip} durch die tatsächliche IP).
+
+
+
+
+
+
+ a| 
+Fehler: 4.29 emc235848 emc241018 getall konnte keine Host-Alias-Info analysieren
+ a| 
+Dies wird wahrscheinlich durch eine FLARE 29-Fehlerproblematik der Host-Initiator-Datenbank auf dem Array selbst verursacht. Siehe EMC Knowledge Base Artikel: Emc235848, emc241018. Sie können auch überprüfen https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[]
+
+
+
+ a| 
+Fehler: Die Meta-LUNs können nicht abgerufen werden. Fehler beim Ausführen von java -jar navicli.jar
+ a| 
+* Ändern der Datensammlerkonfiguration zur Verwendung des sicheren Clients (empfohlen)
+* Installieren Sie navicli.jar im CLI-Pfad zu navicli.exe ODER NaviSECCLI.exe
+* Hinweis: navicli.jar ist ab EMC Navisphere Version 6.26 veraltet
+* Das navicli.jar steht möglicherweise auf \http://powerlink.emc.com zur Verfügung
+
+
+
+
+ a| 
+Fehler: Speicherpools melden keine Festplatten auf dem Serviceprozessor bei der konfigurierten IP-Adresse
+ a| 
+Konfigurieren Sie den Datensammler mit beiden Service-Prozessor-IPs, getrennt durch Komma
+
+
+
+ a| 
+Fehler: Fehler bei nicht übereinstimmender Revision
+ a| 
+* Dies wird normalerweise durch die Aktualisierung der Firmware auf dem VNX-Blockspeichergerät verursacht, aber nicht durch die Aktualisierung der Installation von NaviCLI.exe. Dies kann auch dadurch verursacht werden, dass verschiedene Geräte mit unterschiedlichen Firmwares installiert sind, aber nur eine CLI (mit einer anderen Firmware-Version).
+* Vergewissern Sie sich, dass sowohl das Gerät als auch der Host identische Versionen der Software ausführen:
++
+** Öffnen Sie in der Data Infrastructure Insights Acquisition Unit ein Befehlszeilenfenster
+** Ändern Sie das Verzeichnis in das konfigurierte Installationsverzeichnis
+** Stellen Sie eine Verbindung mit dem CLARiiON-Gerät her, indem Sie „navicli -h <ip> getagent“ eingeben.
+** Achten Sie auf die Versionsnummer auf den ersten Zeilen. Beispiel: „Agent Rev: 6.16.2 (0.1)“
+** Suchen und vergleichen Sie die Version in der ersten Zeile. Beispiel: „Navisphere CLI Revision 6.07.00.04.07“
+
+
+
+
+
+
+ a| 
+Fehler: Nicht Unterstützte Konfiguration - Keine Fibre-Channel-Ports
+ a| 
+Das Gerät ist nicht mit Fibre-Channel-Ports konfiguriert. Aktuell werden nur FC-Konfigurationen unterstützt. Überprüfen Sie, ob diese Version/Firmware unterstützt wird.
+
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

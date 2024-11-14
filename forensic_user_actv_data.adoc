@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: forensic_user_actv_data.html 
+keywords: Forensic, user activity, user activity data, 
+summary: Daten zu forensischen Benutzeraktivitäten 
+---
+= Daten Zu Forensischen Benutzeraktivitäten
+:toc: macro
+:hardbreaks:
+:toclevels: 
+:allow-uri-read: 
+:toc: 
+:toclevels: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Die Seite Benutzeraktivität hilft Ihnen, die Aktionen zu verstehen, die von Benutzern für Einheiten durchgeführt werden.
+
+Die auf dieser Seite verfügbaren Daten beschreiben:
+
+* Zugriffszeit für die Einheit, einschließlich Monat, Tag, Jahr und Zeit.
+* Der Benutzer, der auf die Entität mit einem Link zum zugegriffen link:forensic_user_overview.html["Benutzerdaten"]hat.
+* Die Aktivität, die der Benutzer durchgeführt hat:
++
+** Schreiben
+** Lesen
+** Zugreifen Auf Metadaten
+
+
+* Der Pfad zur Entität mit einem Link zum link:forensic_entity_detail.html["Entity Detail-Daten"]
+* Der Entitätstyp:
++
+** Datei
+** Pfad
+
+
+* Die IP-Adresse, aus der der Vorgang ausgeführt wurde.
+

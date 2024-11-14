@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: task_config_cs_incloud.html 
+keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet,  cloud secure 
+summary: Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen. 
+---
+= Konfiguration des Cloud Volumes ONTAP und Amazon FSX für NetApp ONTAP Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen.
+
+
+
+== Cloud Volumes ONTAP Storage-Konfiguration
+
+In der OnCommand Cloud Volumes ONTAP-Dokumentation finden Sie Informationen zur Konfiguration einer Single-Node-/HA-AWS-Instanz zum Hosten des Workload Security Agent: https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
+
+Befolgen Sie nach Abschluss der Konfiguration die Schritte zur Einrichtung Ihrer SVM: https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html[]
+
+
+
+== Unterstützte Plattformen
+
+* Cloud Volumes ONTAP, unterstützt bei allen verfügbaren Cloud-Service-Providern. Zum Beispiel Amazon, Azure, Google Cloud.
+* ONTAP Amazon FSX
+
+
+
+
+== Agent-Gerätekonfiguration
+
+Die Agent-Maschine muss in den jeweiligen Subnetzen der Cloud-Service-Provider konfiguriert sein. Weitere Informationen zum Netzwerkzugriff finden Sie unter [Agent-Anforderungen].
+
+Unten sind die Schritte für die Installation von Agenten in AWS aufgeführt. Die entsprechenden Schritte, die für den Cloud-Service-Provider gelten, können für die Installation in Azure oder Google Cloud befolgt werden.
+
+Konfigurieren Sie in AWS die Maschine, die als Workload Security Agent verwendet werden soll, mit den folgenden Schritten:
+
+Konfigurieren Sie die Maschine, die als Workload Security Agent verwendet werden soll, wie folgt:
+
+.Schritte
+. Melden Sie sich bei der AWS Konsole an, und navigieren Sie zur Seite EC2-instances, und wählen Sie _Launch Instance_ aus.
+. Wählen Sie ein RHEL oder CentOS AMI mit der entsprechenden Version aus, wie auf dieser Seite erwähnt: https://docs.netapp.com/us-en/cloudinsights/concept_cs_agent_requirements.html[]
+. Wählen Sie die VPC und das Subnetz aus, in der die Cloud-ONTAP-Instanz residiert.
+. Wählen Sie _t2.xlarge_ (4 vcpus und 16 GB RAM) als zugewiesene Ressourcen aus.
++
+.. Erstellen Sie die EC2-Instanz.
+
+
+. Installieren Sie die erforderlichen Linux-Pakete mithilfe des YUM-Paketmanagers:
++
+.. Installieren Sie die nativen Linux-Pakete _wget_ und _unzip_.
+
+
+
+
+
+
+== Installieren Sie den Workload Security Agent
+
+. Melden Sie sich als Administrator oder Account Owner bei Ihrer Data Infrastructure Insights-Umgebung an.
+. Navigieren Sie zu Workload Security *Collectors* und klicken Sie auf die Registerkarte *Agents*.
+. Klicken Sie auf *+Agent* und geben Sie RHEL als Zielplattform an.
+. Kopieren Sie den Befehl Agenteninstallation.
+. Fügen Sie den Befehl „Agent Installation“ in die RHEL EC2-Instanz ein, bei der Sie angemeldet sind. Auf diese Weise wird der Workload Security Agent installiert, der alle link:concept_cs_agent_requirements.html["Agent-Voraussetzungen"]erfüllt.
+
+
+Detaillierte Schritte finden Sie unter diesem Link: https://docs.NetApp.com/US-en/cloudinsights/Task_cs_add_Agent.HTML#Steps-to-install-Agent
+
+
+
+== Fehlerbehebung
+
+Bekannte Probleme und deren Lösungen sind in der folgenden Tabelle beschrieben.
+
+|===
+
+
+| Problem | Auflösung 
+
+
+| „Workload-Sicherheit: Fehler beim ermitteln des ONTAP-Typs für Amazon FxSN Datensammler“ Fehler wird vom Data Collector angezeigt. Der Kunde kann den neuen Amazon FSxN Data Collector nicht zur Workload Security hinzufügen. Die Verbindung zum FSxN-Cluster an Port 443 vom Agenten ist zeitabhängig. Für die Kommunikation sind Firewall- und AWS Sicherheitsgruppen die erforderlichen Regeln aktiviert. Ein Agent wurde bereits bereitgestellt und befindet sich auch im selben AWS Konto. Dieser Agent wird verwendet, um die verbleibenden NetApp-Geräte zu verbinden und zu überwachen (und alle funktionieren). | Lösen Sie dieses Problem, indem Sie fsxadmin LIF-Netzwerksegment zur Sicherheitsregel des Agenten hinzufügen. Erlaubt alle Ports, wenn Sie sich nicht sicher über die Ports sind. 
+|===

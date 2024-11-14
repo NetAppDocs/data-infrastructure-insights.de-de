@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_vnx_file.html 
+keywords: data collector, Celerra, EMC, DELL, VNX File 
+summary: KONFIGURIEREN DES DELL EMC Celerra-Datensammlers. 
+---
+= DATENSAMMLUNG FÜR DELL EMC VNX File (ehemals Celerra Unified Storage System
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Dieser Datensammler erfasst Bestandsinformationen vom VNX File Storage System. Für die Konfiguration benötigt dieser Datensammler die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Kennwort.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem VNX File Data Collector. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Celerra Network Server/Celerra Storage-Pool | Storage-Pool 
+
+
+| File-System | Internes Volumen 
+
+
+| Data Mover | Controller 
+
+
+| Auf einem Data Mover gemountet | Dateifreigabe 
+
+
+| CIFS- und NFS-Exporte | Share 
+
+
+| Festplatten-Volume | Back-End LUN 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+Sie benötigen Folgendes, um diesen Datensammler zu konfigurieren:
+
+* Die IP-Adresse des Speicherprozessors
+* Schreibgeschützter Benutzername und Kennwort
+* SSH-Port 22
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| VNX-Datei-IP-Adresse | IP-Adresse oder vollqualifizierter Domänenname des VNX-Dateigeräts 
+
+
+| Benutzername | Name, der zum Anmelden am VNX-Speichergerät verwendet wird 
+
+
+| Passwort | Passwort zur Anmeldung beim VNX-Speichergerät 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (Minuten) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 20 Minuten. 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| Fehler: Fortfahren nicht möglich, während die DART-Aktualisierung ausgeführt wird | Mögliche Lösung: Unterbrechen Sie den Datensammler, und warten Sie, bis die DART-Aktualisierung abgeschlossen ist, bevor Sie eine andere Erfassungsanforderung versuchen. 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

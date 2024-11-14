@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: insights_overview.html 
+keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload, ttf, time to full, k8s, kubernetes, namespace 
+summary: Einblicke geben Ihnen einen Einblick in die Ressourcennutzung und Trendanalysen. 
+---
+= Einblick
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Einblicke ermöglichen es Ihnen, sich über Dinge wie die Ressourcennutzung und die Auswirkungen auf andere Ressourcen oder die Zeit-zu-volle Analyse zu informieren.
+
+Eine Reihe von Einsichten stehen zur Verfügung. Navigieren Sie zu *Dashboards > Insights*, um mit dem Tauchen zu beginnen. Sie können aktive Insights (Insights, die derzeit auftreten) auf der Hauptregisterkarte oder inaktive Insights auf der Registerkarte _Inactive Insights_ anzeigen. Inaktive Einblicke sind solche, die zuvor aktiv waren, aber nicht mehr auftreten.
+
+
+
+== Insight Typen
+
+
+
+=== Unter Stress Abbauen
+
+Durch Workloads mit hohen Auswirkungen kann die Performance anderer Workloads in einer gemeinsamen Ressource reduziert werden. Dadurch wird die gemeinsam genutzte Ressource unter Druck. Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und Beeinträchtigungen Ihrer Umgebung untersuchen können. link:insights_shared_resources_under_stress.html["Weitere Informationen"]
+
+
+
+=== Kubernetes Namespaces sind nicht mehr platzsparend
+
+Die Kubernetes-Namespaces, bei denen der Space Insight nicht voll ist, bieten einen Einblick in die Workloads in den Kubernetes-Namespaces, bei denen das Risiko besteht, dass der Speicherplatz knapp wird. Sie schätzen die Anzahl der verbleibenden Tage, bevor der Speicherplatz voll wird. link:insights_k8s_namespaces_running_out_of_space.html["Weitere Informationen"]
+
+
+
+=== Rückgewinnung von ONTAP Cold Storage
+
+Der _Reclaim ONTAP Cold Storage_ Insight liefert Daten zur kalten Kapazität, zu potenziellen Kosten-/Energieeinsparungen sowie empfohlene Maßnahmen für Volumes auf ONTAP Systemen. link:insights_reclaim_ontap_cold_storage.html["Weitere Informationen"]
+
+
+NOTE: Dies ist eine _Preview_ Funktion und kann sich im Laufe der Zeit ändern, wenn Verbesserungen vorgenommen werden. link:/concept_preview_features.html["Weitere Informationen ."] Informationen zu den Funktionen der Data Infrastructure Insights Preview.

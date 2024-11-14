@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: ws_allowed_file_types.html 
+keywords: workload security, cloud secure, include list, allowed, file types, ransomware 
+summary: Fügen Sie Dateierweiterungen zu einer Liste zulässiger Dateitypen hinzu, um Warnungen zu reduzieren. 
+---
+= Richtlinien Für Zulässige Dateitypen
+:allow-uri-read: 
+
+
+[role="lead"]
+Wenn ein Ransomware-Angriff auf eine bekannte Dateierweiterung erkannt wird und auf dem Bildschirm „Alerts“ Warnmeldungen generiert werden, kann diese Dateiendung zu einer Liste „Allowed file types_“ hinzugefügt werden, um unnötige Warnmeldungen zu vermeiden.
+
+Navigieren Sie zu *Workload-Sicherheit > Richtlinien*, und wechseln Sie zur Registerkarte _allowed File Type Policies_.
+
+image:WS_Allowed_File_Type_Policies.png["Richtlinien Für Zulässige Dateitypen"]
+
+Nach dem Hinzufügen zur Liste _allowed file types_ wird für diesen zulässigen Dateityp keine Ransomware-Angriffswarnung generiert. Beachten Sie, dass die _allowed File Types_-Richtlinie nur für die Ransomware-Erkennung gilt.
+
+Wenn beispielsweise eine Datei namens _Test.txt_ in _Test.txt.abc_ umbenannt wird und Workload Security einen Ransomware-Angriff aufgrund der Erweiterung _.abc_ erkennt, kann die Erweiterung _.abc_ zur Liste _allowed file types_ hinzugefügt werden. Nachdem sie in die Liste aufgenommen wurde, werden Ransomware-Angriffe gegen Dateien mit der Erweiterung _.abc_ nicht mehr ausgelöst.
+
+Zulässige Dateitypen sind exakte Übereinstimmungen (z. B. ".abc") oder Ausdrücke (z. B. ".*type", ".type*" oder "*type*"). Ausdrücke der Typen ".a*c", ".p*f" werden nicht unterstützt.

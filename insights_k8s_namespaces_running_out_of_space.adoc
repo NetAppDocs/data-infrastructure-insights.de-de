@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: insights_k8s_namespaces_running_out_of_space.html 
+keywords: insight, pv, persistent volume, backend 
+summary: Anhand dieser Informationen können Sie vorhersagen, wann Kubernetes Spaces voraussichtlich voll werden. 
+---
+= Kubernetes-Namesaces: Der Speicherplatz wird nicht mehr durch den Platzbedarf bestimmt
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Speicherplatzbelegung in Ihrer Umgebung ist nie eine gute Situation. Mit Einblick in die Dateninfrastruktur können Sie die benötigte Zeit vorhersagen, bevor die persistenten Kubernetes-Volumes voll werden.
+
+Die _Kubernetes Namesaces sind nicht mehr genügend Speicherplatz für Insight. Sie erhalten eine Übersicht über Workloads auf Ihren Kubernetes-Namespaces, die Gefahr laufen, dass der Speicherplatz zu knapp wird. Eine Schätzung für die verbleibende Anzahl an Tagen, bevor jedes persistente Volume voll wird.
+
+Sie können sich diese Insight anzeigen lassen, indem Sie zu *Dashboards > Einblicke* navigieren.
+
+image:K8sRunningOutOfSpaceWorkloadList.png["Liste der Workloads in K8s-Namespaces, die Gefahr laufen, dass der Speicherplatz nicht mehr zur Verfügung steht"]
+
+Klicken Sie auf einen Workload, um eine Detailseite für die Insight zu öffnen. Auf dieser Seite sehen Sie ein Diagramm, das die Workload-Kapazitätstrends sowie eine Tabelle mit den folgenden Angaben zeigt:
+
+* Workload-Name
+* Betroffene persistente Volumes
+* Prognostizierte Zeitdauer innerhalb von Tagen
+* Kapazität des persistenten Volumes
+* Betroffen ist die Back-End Storage-Ressource, wobei die aktuelle Kapazität nicht mehr insgesamt belegt wird. Wenn Sie auf diesen Link klicken, wird die detaillierte Landing Page für das Backend-Volume geöffnet.
+
+
+image:K8sRunningOutOfSpaceWorkloadTable.png["Workload-Tabelle mit Details"]
+
+
+
+=== Was kann ich tun, wenn mir der Platz knapp wird?
+
+Klicken Sie auf der Insight Seite auf *+Empfehlungen anzeigen*, um mögliche Lösungen anzuzeigen. Wenn der Speicherplatz knapp wird, ist es am einfachsten, immer mehr Kapazität hinzuzufügen, und Data Infrastructure Insights bietet Ihnen die optimale Kapazität, um eine 60-Tage-Zielprognose zu verlängern. Weitere Empfehlungen sind ebenfalls aufgeführt.
+
+image:K8sRunningOutOfSpaceRecommendations.png["Zusätzliche Kapazität für die Rückkehr in die 60-Tage-TTF"]
+
+Hier können Sie auch einen bequemen Link zu dieser Insight kopieren, die Seite als Lesezeichen hinzufügen oder sie ganz einfach mit Ihrem Team teilen.

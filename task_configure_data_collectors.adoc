@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task_configure_data_collectors.html 
+keywords: acquisition, AU, data collector, collector, notification, notify, 
+summary: Allgemeine Anweisungen zur Datenerfassung 
+---
+= Konfigurieren Von Datensammlern
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Sie konfigurieren Data Collectors in Ihrer Data Infrastructure Insights-Umgebung, um Daten von Geräten im Rechenzentrum zu erfassen.
+
+.Bevor Sie beginnen
+* Sie müssen eine Erfassungseinheit konfiguriert haben, bevor Sie mit dem Erfassen von Daten beginnen können.
+* Sie benötigen Anmeldedaten für die Geräte, von denen Sie Daten erfassen.
+* Für alle Geräte, von denen Sie Daten erfassen, sind Netzwerkadressen, Kontoinformationen und Passwörter erforderlich.
+
+
+.Schritte
+. Klicken Sie im Menü Data Infrastructure Insights auf *Observability > Collectors*
++
+Das System zeigt die verfügbaren Datensammler an, die nach Hersteller geordnet sind.
+
+. Klicken Sie auf *+ Collector*, und wählen Sie den zu konfigurierenden Data Collector aus.
++
+Im Dialogfeld können Sie den Datensammler konfigurieren und eine Erfassungseinheit hinzufügen.
+
+. Geben Sie einen Namen für den Datensammler ein.
+. Klicken Sie auf *Erweiterte Konfiguration*, um weitere Konfigurationsfelder hinzuzufügen. (Nicht alle Datensammler benötigen erweiterte Konfiguration.)
+. Klicken Sie auf *Testkonfiguration*, um zu überprüfen, ob der Datensammler ordnungsgemäß konfiguriert ist.
+. Klicken Sie auf *Add Collector*, um die Konfiguration zu speichern und den Data Collector zu Ihrem Data Infrastructure Insights-Mandanten hinzuzufügen.
+
+
+Es kann bis zu zwei Abfrageperioden dauern, bis die Daten aus dem Dienst in Dashboards angezeigt oder für die Abfrage verfügbar sind.
+
+* 1. Bestandsabfrage: Sofort
+* Erste Leistungsdatenabfrage, um eine Basislinie zu erstellen: Unmittelbar nach Bestandsabfrage
+* 2. Leistungsumfrage: Innerhalb von 15 Sekunden nach Abschluss der 1. Leistungsumfrage
+
+
+Die Abfrage erfolgt dann nach den konfigurierten Abfrageintervallen für Bestand und Leistung.

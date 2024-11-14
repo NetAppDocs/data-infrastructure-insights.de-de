@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ibm_powervm.html 
+keywords: IBM, powerVM, 
+summary: Konfigurieren des IBM PowerVM-Datensammlers. 
+---
+= Konfigurieren des IBM PowerVM-Datensammlers
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Der IBM PowerVM (SSH) Datensammler wird verwendet, um Informationen über virtuelle Partitionen zu sammeln, die auf IBM POWER Hardware-Instanzen ausgeführt werden, die von einer Hardware Management Console (HMC) verwaltet werden.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst Bestandsinformationen von den virtuellen Partitionen, die auf IBM POWER Hardware-Instanzen ausgeführt werden. Für jeden erworbenen Asset-Typ wird die am häufigsten für das Asset verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Hdisk | Virtuelles Laufwerk 
+
+
+| Managed System | Host 
+
+
+| LPAR, VIO Server | Virtual Machine 
+
+
+| Volume-Gruppe | Datastore 
+
+
+| Physisches Volume | LUN 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+Zur Konfiguration und Nutzung dieses Datensammlers müssen die folgenden Anforderungen erfüllt sein:
+
+* IP-Adresse der Hardware Management Console (HMC)
+* Benutzername und Passwort, die Zugriff auf die Hardware Management Console (HMC) über SSH ermöglichen
+* Port-Anforderung SSH-22
+* Zeigen Sie Berechtigungen auf allen Verwaltungssystemen und Sicherheitsdomänen logischer Partitionen an
++
+Der Benutzer muss darüber hinaus über die Berechtigung View für HMC-Konfigurationen und die Möglichkeit verfügen, VPD-Informationen für die Sicherheitsgruppierung der HMC-Konsole zu sammeln. Der Benutzer muss außerdem den Zugriff auf den virtuellen IO-Server-Befehl unter der Sicherheitsgruppierung der logischen Partition zulassen. Es ist eine bewährte Vorgehensweise, von einer Rolle eines Bedieners zu beginnen und dann alle Rollen zu entfernen. Schreibgeschützte Benutzer auf dem HMC haben keine Berechtigungen zum Ausführen von Proxed-Befehlen auf AIX-Hosts.
+
+* Die Best Practice von IBM besteht darin, dass die Geräte von zwei oder mehr HMCs überwacht werden. Beachten Sie, dass dies dazu führen kann, dass OnCommand Insight doppelte Geräte meldet. Daher wird dringend empfohlen, redundante Geräte zur Liste „Geräte ausschließen“ in der erweiterten Konfiguration für diesen Datensammler hinzuzufügen.
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| IP-Adresse für Hardware Management Console (HMC) | IP-Adresse oder vollqualifizierter Domänenname der PowerVM Hardware Management Console 
+
+
+| HMC-Benutzer | Benutzername für die Hardware Management Console 
+
+
+| Passwort | Kennwort, das für die Hardware-Verwaltungskonsole verwendet wird 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 20 Minuten. 
+
+
+| SSH-Anschluss | Port, der für SSH zu PowerVM verwendet wird 
+
+
+| Passwort | Kennwort, das für die Hardware-Verwaltungskonsole verwendet wird 
+
+
+| Anzahl Wiederholungen | Anzahl der Versuche für einen erneuten Versuch in der Bestandsaufnahme 
+
+
+| Geräte Ausschließen | Kommagetrennte Liste von Geräte-IDs oder zu schließenden Anzeigenamen 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

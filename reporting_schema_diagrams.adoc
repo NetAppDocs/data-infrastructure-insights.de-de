@@ -1,0 +1,335 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_diagrams.html 
+keywords: Schema, DB Schema, premium, dwh, data warehouse 
+summary: Diagramme Für Berichtsschemas 
+---
+= Data Infrastructure Insights Reporting Schema Diagramms
+:hardbreaks:
+:allow-uri-read: 
+:toclevekls: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dieses Dokument enthält die Schemadiagramme für die Berichtsdatenbank. Sie können auch eine Datei herunterladen, die den enthältlink:ci_reporting_database_schema.pdf["Schematabellen"].
+
+
+NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+
+
+
+== Inventory Datamart
+
+Die folgenden Bilder beschreiben das Inventurdatamart.
+
+
+
+=== Anmerkungen
+
+image:annotations.png["Anmerkungen"]
+
+
+
+=== Applikationen Unterstützt
+
+image:apps_annot.png["Applikationen unterstützt"]
+
+
+
+=== Kubernetes-Kennzahlen
+
+image:k8s_schema.jpg["Kubernetes"]
+
+
+
+==== Kennzahlen Für Kubernetes Cluster
+
+image:k8s_cluster_metrics_fact.jpg["Kennzahlen Für Kubernetes Cluster"]
+
+
+
+==== Kenngrößen Für Kubernetes-Namespace
+
+image:k8s_namespace_metrics_fact.jpg["Kenngrößen Für Kubernetes-Namespace"]
+
+
+
+==== Kenngrößen Für Kubernetes-Nodes
+
+image:k8s_node_metrics_fact.jpg["Kenngrößen Für Kubernetes-Nodes"]
+
+
+
+==== Kennzahl der Kubernetes PVC
+
+image:k8s_pvc_metrics_fact.jpg["Kennzahl der Kubernetes PVC"]
+
+
+
+==== Kenngrößen Für Kubernetes-Workloads
+
+image:k8s_workload_metrics_fact.jpg["Kenngrößen Für Kubernetes-Workloads"]
+
+
+
+=== NAS
+
+image:nas.png["nas"]
+
+
+
+=== Pfade und Verstöße
+
+image:logical.png["Pfade und Verstöße"]
+
+
+
+=== Port-Konnektivität
+
+image:connectivity.png["Port-Konnektivität"]
+
+
+
+=== SAN-Fabric
+
+image:fabric.png["San Fabric"]
+
+
+
+=== Storage
+
+image:storage.png["Storage"]
+
+
+
+=== Storage-Node
+
+image:storage_node.png["Storage-Node"]
+
+
+
+=== VM
+
+image:vm.png["Virtual Machine"]
+
+'''
+
+
+== Kapazitätsdatamart
+
+Die folgenden Bilder beschreiben die Datenkapazität.
+
+
+
+=== Kostenverrechnung
+
+image:Chargeback_Fact.png["Kostenzuordnung"]
+
+
+
+=== Kapazität Der Festplattengruppe
+
+image:Disk_Group_Capacity.png["Kapazität Der Festplattengruppe"]
+
+
+
+=== Auslastung Des Filesystems
+
+image:fs_util.png["Auslastung Des Filesystems"]
+
+
+
+=== Kapazität Des Internen Volumes
+
+image:Internal_Volume_Capacity_Fact.png["Kapazität Des Internen Volumes"]
+
+
+
+=== Kubernetes PV-Kapazität
+
+image:k8s_pvc_capacity_fact.jpg["Kubernetes PV-Kapazität"]
+
+
+
+=== Port-Kapazität
+
+image:ports.png["Port-Kapazität"]
+
+
+
+=== Qtree-Kapazität
+
+image:Qtree_Capacity_Fact.png["Qtree-Kapazität"]
+
+
+
+=== Storage-Kapazitätseffizienz
+
+image:efficiency.png["Storage-Kapazitätseffizienz"]
+
+
+
+=== Kapazität im Storage- und Speicherpool
+
+image:Storage_and_Storage_Pool_Capacity_Fact.png["Kapazität im Storage- und Speicherpool"]
+
+
+
+=== Kapazität Des Storage-Nodes
+
+image:Storage_Node_Capacity_Fact.jpg["Kapazität Des Storage-Nodes"]
+
+
+
+=== VM-Kapazität
+
+image:VM_Capacity_Fact.png["VM-Kapazität"]
+
+
+
+=== Volume-Kapazität
+
+image:Volume_Capacity.png["Volume-Kapazität"]
+
+'''
+
+
+== Performance Datamart
+
+Die folgenden Bilder beschreiben das Performance-Datum.
+
+
+
+=== Stündliche Performance Des Applikations-Volumes
+
+image:application_performance_fact.jpg["Stündliche Performance Des Applikations-Volumes"]
+
+
+
+=== Tägliche Festplatten-Performance
+
+image:disk_daily_performance_fact.png["Tägliche Festplatten-Performance"]
+
+
+
+=== Stündliche Festplatten-Performance
+
+image:disk_hourly_performance_fact.png["Stündliche Festplatten-Performance"]
+
+
+
+=== Stündliche Host-Performance
+
+image:host_performance_fact.jpg["Stündliche Host-Performance"]
+
+
+
+=== Stündliche Performance Des Internen Volumes
+
+image:internal_volume_performance_fact.jpg["Stündliche Performance Des Internen Volumes"]
+
+
+
+=== Tägliche Performance Des Internen Volumes
+
+image:internal_volume_daily_performance_fact.jpg["Tägliche Performance Des Internen Volumes"]
+
+
+
+=== Tägliche Qtree Performance
+
+image:QtreeDailyPerformanceFact.png["Tägliche Qtree Performance"]
+
+
+
+=== Tägliche Storage-Node-Performance
+
+image:storage_node_daily_performance_fact.jpg["Tägliche Storage-Node-Performance"]
+
+
+
+=== Stündliche Storage-Node-Performance
+
+image:storage_node_hourly_performance_fact.jpg["Stündliche Storage-Node-Performance"]
+
+
+
+=== Wechseln Sie die stündliche Performance für den Host
+
+image:switch_performance_for_host_hourly_fact.png["Wechseln Sie die stündliche Performance für den Host"]
+
+
+
+=== Wechseln Sie die stündliche Leistung für den Port
+
+image:switch_performance_for_port_hourly_fact.png["Wechseln Sie die stündliche Leistung für den Port"]
+
+
+
+=== Stündliche Wechsel der Performance für Storage erforderlich
+
+image:switch_performance_for_storage_hourly_fact.png["Stündliche Wechsel der Performance für Storage erforderlich"]
+
+
+
+=== Stündliche Wechsel der Performance für Tape möglich
+
+image:switch_performance_for_tape_hourly_fact.png["Stündliche Wechsel der Performance für Tape möglich"]
+
+
+
+=== VM Performance
+
+image:vm_hourly_performance_fact.png["VM Performance"]
+
+
+
+=== VM tägliche Performance für Host
+
+image:vm_daily_performance_fact.png["VM tägliche Performance für Host"]
+
+
+
+=== VM stündliche Performance für Host
+
+image:vm_hourly_performance_fact.png["VM stündliche Performance für Host"]
+
+
+
+=== VM tägliche Performance für Host
+
+image:vm_daily_performance_fact.png["VM tägliche Performance für Host"]
+
+
+
+=== VM stündliche Performance für Host
+
+image:vm_hourly_performance_fact.png["VM stündliche Performance für Host"]
+
+
+
+=== VMDK tägliche Performance
+
+image:vmdk_daily_performance_fact.png["VMDK tägliche Performance"]
+
+
+
+=== Stündliche VMDK-Performance
+
+image:vmdk_hourly_performance_fact.png["Stündliche VMDK-Performance"]
+
+
+
+=== Stündliche Volume-Performance
+
+image:volume_performance_fact.jpg["Stündliche Volume-Performance"]
+
+
+
+=== Tägliche Volume Performance
+
+image:volume_daily_performance_fact.jpg["Tägliche Volume Performance"]

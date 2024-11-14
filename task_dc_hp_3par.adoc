@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hp_3par.html 
+keywords: data collector, 3PAR, HP, HP 3PAR, HPE, 
+summary: 'Konfiguration des Datensammlers HP Enterprise Alletra 9000 / Primera (ehemals 3PAR).' 
+---
+= HP Enterprise Alletra 9000 / Primera Storage Datensammler
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights verwendet den Datensammler HP Enterprise Alletra 9000 / HP Enterprise Primera (ehemals 3PAR) zur Ermittlung von Bestand und Leistung.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus diesem Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Physisches Laufwerk | Festplatte 
+
+
+| Storage-System | Storage 
+
+
+| Controller-Node | Storage-Node 
+
+
+| Gemeinsame Bereitstellungsgruppe | Storage-Pool 
+
+
+| Virtual Volume | Datenmenge 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlich:
+
+* IP-Adresse oder FQDN des InServ-Clusters
+* Für den Bestand können Sie den schreibgeschützten Benutzernamen und das Kennwort für den StoreServ Server verwenden
+* Für eine bessere Leistung können Sie den Benutzernamen und das Kennwort für Lese- und Schreibvorgänge auf dem StoreServ Server verwenden
+* Port-Anforderungen: 22 (Bestandsaufnahme), 5988 oder 5989 (Performance-Sammlung) [Hinweis: Leistung wird für StoreServ OS 3.x+ unterstützt]
+* Bei der Erfassung der Performance bestätigen Sie, dass SMI-S durch Anmeldung am Array über SSH aktiviert ist.
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Storage-IP-Adresse | Speicher-IP-Adresse oder vollqualifizierter Domain-Name des StoreServ-Clusters 
+
+
+| Benutzername | Benutzername für den StoreServ Server 
+
+
+| Passwort | Passwort, das für den StoreServ Server verwendet wird 
+
+
+| SMI-S-Benutzername | Benutzername für den SMI-S Provider Host 
+
+
+| SMI-S-Passwort | Passwort, das für den SMI-S Provider-Host verwendet wird 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 40 Minuten. 
+
+
+| SMI-S-Konnektivität | Protokoll für die Verbindung mit dem SMI-S-Provider 
+
+
+| SMI-S-Standardport überschreiben | Wenn Sie leer sind, verwenden Sie den Standardport von SMI-S Connectivity. Andernfalls geben Sie den zu verwendenden Verbindungsport ein 
+
+
+| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| Der Befehl „showsys“ gibt kein Ergebnis zurück. | Führen Sie „showsys“ und „showversion -A“ über die Befehlszeile aus und prüfen Sie, ob die Version vom Array unterstützt wird. 
+|===
+
+
+=== Performance
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| Verbindung oder Anmeldung fehlgeschlagen. Fehler bei der Initialisierung des Providers. | Ein Name eines rein numerischen Arrays kann Probleme mit dem SMI-S-Server verursachen. Versuchen Sie, den Namen des Arrays zu ändern. 
+
+
+| Der konfigurierte SMI-S-Benutzer verfügt über keine Domäne | Gewähren Sie dem konfigurierten SMI-S-Benutzer entsprechende Domänenberechtigungen 
+
+
+| Data Infrastructure Insights gibt an, dass keine Verbindung zum SMI-S-Service hergestellt bzw. angemeldet werden kann. | Vergewissern Sie sich, dass es keine Firewall zwischen der CI AU und dem Array gibt, die die CI AU daran versperren würde, TCP-Verbindungen zu 5988 oder 5989 zu machen. Sobald das geschehen ist, und wenn Sie bestätigt haben, dass es keine Firewall gibt, sollten Sie SSH auf das Array, und verwenden Sie den "showcim" Befehl zu bestätigen. Überprüfen Sie, dass: * Dienst aktiviert ist * HTTPS-Port sollte 5989 sein. Wenn alle diese sind, können Sie versuchen, „stopcim“ und dann ein „startcim“, um den CIM neu zu starten (d.h. SMI-S-Service). 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

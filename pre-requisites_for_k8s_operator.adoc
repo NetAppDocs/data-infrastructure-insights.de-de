@@ -1,0 +1,182 @@
+---
+sidebar: sidebar 
+permalink: pre-requisites_for_k8s_operator.html 
+keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s 
+summary: Data Infrastructure Insights unterstützt Telegraf als Agent für die Erfassung von Integrationsdaten auf Kubernetes. 
+---
+= Bevor Sie den NetApp Kubernetes Monitoring Operator installieren oder aktualisieren
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:toclevels: 2
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Lesen Sie diese Informationen, bevor Sie das installieren oder aktualisierenlink:task_config_telegraf_agent_k8s.html["Kubernetes Monitoring Operator"].
+
+|===
+| Komponente | Anforderungen 
+
+
+| Kubernetes-Version | Kubernetes v1.20 und höher 
+
+
+| Kubernetes Distributionen | AWS Elastic Kubernetes Service (EKS) Azure Kubernetes Service (AKS) Google Kubernetes Engine (GKE) Red hat OpenShift Rancher Kubernetes Engine (RKE) VMware Tanzu 
+
+
+| Linux BS | Data Infrastructure Insights unterstützt keine Nodes, die mit einer Arm64-Architektur ausgeführt werden. Netzwerküberwachung: Muss Linux Kernel Version 4.18.0 oder höher ausführen. Photon OS wird nicht unterstützt. 
+
+
+| Etiketten | Data Infrastructure Insights unterstützt das Monitoring von Kubernetes-Nodes, auf denen Linux ausgeführt wird, indem eine Kubernetes-Node-Auswahl angegeben wird, die auf diesen Plattformen nach den folgenden Kubernetes-Labels sucht: Kubernetes v1.20 und höher: Kubernetes.io/os = linux Rancher + Cattle.io als Orchestrierungs-/Kubernetes-Plattform: Cattle.io/os = linux 
+
+
+| Befehle | Die Befehle Curl und kubectl müssen verfügbar sein.; für optimale Ergebnisse fügen Sie diese Befehle dem PFAD hinzu. 
+
+
+| Konnektivität | Kubectl cli ist für die Kommunikation mit dem Ziel-K8s-Cluster konfiguriert und verfügt über eine Internetverbindung zur Data Infrastructure Insights Umgebung. Wenn Sie während der Installation hinter einem Proxy stehen, befolgen Sie die Anweisungen im link:task_config_telegraf_agent_k8s.html#configuring-proxy-support["Proxy-Unterstützung Wird Konfiguriert"]Abschnitt der Installation des Bedieners. Für genaue Audit- und Datenberichte synchronisieren Sie die Zeit auf dem Agent-Computer mit Network Time Protocol (NTP) oder Simple Network Time Protocol (SNTP). 
+
+
+| Sonstiges | Wenn Sie OpenShift 4.6 oder höher ausführen, müssen Sie zusätzlich zur Erfüllung dieser Voraussetzungen die folgenden Schritte ausführenlink:task_config_telegraf_agent_k8s.html#openshift-instructions["OpenShift-Anweisungen"]. 
+
+
+| API-Token | Wenn Sie den Operator neu bereitstellen (d. h. aktualisieren oder ersetzen), müssen Sie kein neues API-Token erstellen; Sie können das vorherige Token erneut verwenden. 
+|===
+
+
+== Wichtige Dinge, die Sie beachten sollten, bevor Sie beginnen
+
+Wenn Sie mit einem laufen <<configuring-proxy-support,Proxy>>, haben ein <<using-a-custom-or-private-docker-repository,Benutzerdefiniertes Repository>>, oder verwenden <<openshift-instructions,OpenShift>>, lesen Sie die folgenden Abschnitte sorgfältig.
+
+Lesen Sie auch über <<Berechtigungen,Berechtigungen>>.
+
+
+
+=== Proxy-Unterstützung Wird Konfiguriert
+
+An zwei Stellen können Sie in Ihrer Umgebung einen Proxy verwenden, um den NetApp Kubernetes Monitoring Operator zu installieren. Es kann sich um dieselben oder separate Proxy-Systeme handelt:
+
+* Proxy wird während der Ausführung des Installationscode-Snippets (mit „Curl“) benötigt, um das System zu verbinden, auf dem das Snippet ausgeführt wird, mit Ihrer Data Infrastructure Insights-Umgebung
+* Der vom Kubernetes Ziel-Cluster benötigte Proxy für die Kommunikation mit der Insights Umgebung Ihrer Dateninfrastruktur ist erforderlich
+
+
+Wenn Sie einen Proxy für eine oder beide dieser Optionen verwenden, müssen Sie zuerst sicherstellen, dass Ihr Proxy für eine gute Kommunikation mit Ihrer Data Infrastructure Insights-Umgebung konfiguriert ist, um den NetApp Kubernetes Operating Monitor zu installieren. Beispielsweise müssen Sie auf den Servern/VMs, von denen Sie den Operator installieren möchten, auf Data Infrastructure Insights zugreifen und Binärdateien von Data Infrastructure Insights herunterladen können.
+
+Legen Sie für den Proxy, der zur Installation des NetApp Kubernetes Operating Monitor verwendet wurde, vor der Installation des Operators die Umgebungsvariablen _http_Proxy/https_Proxy_ fest. In einigen Proxy-Umgebungen müssen Sie möglicherweise auch die Variable _no_Proxy Environment_ festlegen.
+
+Um die Variable(en) festzulegen, führen Sie auf Ihrem System *vor* der Installation des NetApp Kubernetes Monitoring Operators folgende Schritte aus:
+
+. Legen Sie die Umgebungsvariable _https_Proxy_ und/oder _http_Proxy_ für den aktuellen Benutzer fest:
++
+.. Wenn der Proxy, der eingerichtet wird, keine Authentifizierung (Benutzername/Passwort) aufweist, führen Sie den folgenden Befehl aus:
++
+ export https_proxy=<proxy_server>:<proxy_port>
+.. Wenn der Proxy, der eingerichtet wird, über Authentifizierung (Benutzername/Passwort) verfügt, führen Sie folgenden Befehl aus:
++
+ export http_proxy=<proxy_username>:<proxy_password>@<proxy_server>:<proxy_port>
+
+
+
+
+Wenn der Proxy, der für das Kubernetes-Cluster zur Kommunikation mit der Insights Umgebung für die Dateninfrastruktur verwendet wird, verwendet wird, installieren Sie den NetApp Kubernetes Monitoring Operator, nachdem Sie alle diese Anweisungen gelesen haben.
+
+Konfigurieren Sie den Proxy-Abschnitt von AgentConfiguration in Operator-config.yaml, bevor Sie den NetApp Kubernetes Monitoring Operator bereitstellen.
+
+[listing]
+----
+agent:
+  ...
+  proxy:
+    server: <server for proxy>
+    port: <port for proxy>
+    username: <username for proxy>
+    password: <password for proxy>
+
+    # In the noproxy section, enter a comma-separated list of
+    # IP addresses and/or resolvable hostnames that should bypass
+    # the proxy
+    noproxy: <comma separated list>
+
+    isTelegrafProxyEnabled: true
+    isFluentbitProxyEnabled: <true or false> # true if Events Log enabled
+    isCollectorsProxyEnabled: <true or false> # true if Network Performance and Map enabled
+    isAuProxyEnabled: <true or false> # true if AU enabled
+  ...
+...
+----
+
+
+=== Verwenden eines benutzerdefinierten oder privaten Docker Repositorys
+
+Standardmäßig zieht der NetApp-Kubernetes-Überwachungsoperator Container-Images aus dem Repository „Einblicke in die Dateninfrastruktur“. Wenn Sie ein Kubernetes-Cluster als Ziel für das Monitoring verwenden und der Cluster so konfiguriert ist, dass er nur Container-Images aus einem benutzerdefinierten oder privaten Docker-Repository oder der Container-Registrierung zieht, müssen Sie den Zugriff auf die Container konfigurieren, die vom NetApp Kubernetes Monitoring Operator benötigt werden.
+
+Führen Sie das „Image Pull Snippet“ aus der NetApp Monitoring Operator Installationskachel aus. Dieser Befehl meldet sich beim Repository Data Infrastructure Insights an, zieht alle Image-Abhängigkeiten für den Operator ab und meldet sich vom Repository Data Infrastructure Insights ab. Wenn Sie dazu aufgefordert werden, geben Sie das angegebene temporäre Repository-Passwort ein. Mit diesem Befehl werden alle vom Bediener verwendeten Bilder heruntergeladen, einschließlich optionaler Funktionen. Nachfolgend sehen Sie, für welche Funktionen diese Bilder verwendet werden.
+
+Core Operator-Funktionalität und Kubernetes Monitoring
+
+* netapp Monitoring
+* kube-rbac-Proxy
+* status-Kennzahlen von kube
+* telegraf
+* Distroless-root-user
+
+
+Ereignisprotokoll
+
+* Fluent-Bit
+* kubernetes Event Exporter
+
+
+Netzwerkleistung und -Zuordnung
+
+* ci-Netz-Beobachter
+
+
+Übertragen Sie das Operator-Docker-Image gemäß Ihren Unternehmensrichtlinien in das private/lokale/unternehmenseigene Docker-Repository. Stellen Sie sicher, dass die Bild-Tags und Verzeichnispfade zu diesen Images in Ihrem Repository mit denen im Data Infrastructure Insights Repository übereinstimmen.
+
+Bearbeiten Sie die Bereitstellung des Monitoring-Operators in Operator-Deployment.yaml, und ändern Sie alle Bildverweise, um Ihr privates Docker-Repository zu verwenden.
+
+....
+image: <docker repo of the enterprise/corp docker repo>/kube-rbac-proxy:<kube-rbac-proxy version>
+image: <docker repo of the enterprise/corp docker repo>/netapp-monitoring:<version>
+....
+Bearbeiten Sie die AgentConfiguration in Operator-config.yaml, um die neue Position des Docker-Repo zu berücksichtigen. Erstellen Sie ein neues imagePullSecret für Ihr privates Repository. Weitere Informationen finden Sie unter _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_
+
+[listing]
+----
+agent:
+  ...
+  # An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
+  # Please see documentation for link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository[using a custom or private docker repository].
+  dockerRepo: your.docker.repo/long/path/to/test
+  # Optional: A docker image pull secret that maybe needed for your private docker registry
+  dockerImagePullSecret: docker-secret-name
+----
+
+
+=== OpenShift-Anweisungen
+
+Wenn Sie OpenShift 4.6 oder höher ausführen, müssen Sie die AgentConfiguration in _Operator-config.yaml_ bearbeiten, um die Einstellung _runPrivileged_ zu aktivieren:
+
+....
+# Set runPrivileged to true SELinux is enabled on your kubernetes nodes
+runPrivileged: true
+....
+OpenShift kann zusätzliche Sicherheitsstufen implementieren, die den Zugriff auf einige Kubernetes-Komponenten blockieren könnten.
+
+
+
+=== Berechtigungen
+
+Wenn das zu überwachende Cluster benutzerdefinierte Ressourcen enthält, die nicht über einen ClusterRole verfügenlink:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["AnzuzeiEinblick in Aggregate"], müssen Sie dem Bediener manuell Zugriff auf diese Ressourcen gewähren, um sie mit Ereignisprotokollen zu überwachen.
+
+. Bearbeiten Sie _Operator-additional-permissions.yaml_ vor der Installation oder nach der Installation bearbeiten Sie die Ressource _ClusterRole/<namespace>-additional-permissions_
+. Erstellen Sie eine neue Regel für die gewünschten apiGroups und Ressourcen mit den Verben ["get", "watch", "list"]. Siehe \https://kubernetes.io/docs/reference/access-authn-authz/rbac/
+. Übernehmen Sie die Änderungen auf das Cluster
+

@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_dc_dell_xc_series.html 
+keywords: data collector, Dell, EMC, xc 
+summary: Konfigurieren des Dell EMC XC-Datensammlers. 
+---
+= Datensammler der Dell EMC XC-Serie
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights verwendet diesen Datensammler, um Bestands- und Leistungsinformationen für die Dell Speicherarrays der EMC XC-Serie zu ermitteln.
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Externe IP-Adresse des Prism | IP-Adresse des XC-Servers 
+
+
+| Benutzername | Benutzername für den XC-Server 
+
+
+| Passwort | Für den XC-Server verwendetes Passwort 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| TCP-Anschluss | Port, der für die TCP-Kommunikation mit dem XC-Server verwendet wird 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+
+
+| Leistungsintervall (min) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

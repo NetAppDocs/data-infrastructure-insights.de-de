@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: concept_ws_integration_with_ontap_access_denied.html 
+summary: Workload-Sicherheit lässt sich in ONTAP integrieren, um Ereignisse, die auf Zugangsverweigerung zugreifen, zu empfangen und eine zusätzliche Analyse und automatische Antwortebene bereitzustellen. 
+keywords: ransomware, ARP, Protection, Security, access 
+---
+= Integration mit ONTAP-Zugriff verweigert
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Die ONTAP-Zugriffsverweigerung verwendet Workload-Analysen in NAS-Umgebungen (NFS und SMB), um proaktiv fehlgeschlagene Dateivorgänge zu erkennen und zu warnen (d. h. Benutzer, die versuchen, einen Vorgang auszuführen, für den sie keine Berechtigung haben). Diese Benachrichtigungen über fehlgeschlagene Dateioperationen – insbesondere bei sicherheitsrelevanten Fehlern – werden auch dazu beitragen, Insider-Angriffe frühzeitig zu blockieren.
+
+Einblicke in die Dateninfrastruktur Workload Security lässt sich in ONTAP integrieren, um Ereignisse mit Zugriffsverweigerung zu empfangen und eine zusätzliche Analyse- und automatische Antwortebene bereitzustellen.
+
+Voraussetzungen
+
+* Minimale ONTAP-Version: 9.13.0.
+* Ein Workload Security-Administrator muss die Funktion Zugriff verweigert aktivieren, während er einen neuen Collector hinzufügt oder vorhandene Collector bearbeitet, indem er das Kontrollkästchen _Zugriff verweigert überwachen_ unter Erweiterte Konfiguration aktiviert.
+
+
+image:WS_Access_Denied_Enable_in_Collector.png["Aktivierung des Zugriffs verweigert in der erweiterten Konfiguration des ONTAP Collectors"]
+
+
+
+== Benutzerberechtigungen erforderlich
+
+Wenn der Data Collector mithilfe der Anmeldeinformationen für die Clusteradministration hinzugefügt wird, sind keine neuen Berechtigungen erforderlich.
+
+Wenn der Collector mithilfe eines benutzerdefinierten Benutzers (z. B. _csuser_) mit den Berechtigungen für den Benutzer hinzugefügt wird, führen Sie die folgenden Schritte aus, um Workload Security die erforderliche Berechtigung zur Registrierung für Ereignisse mit Zugangsverweigerung bei ONTAP zu erteilen.
+
+Führen Sie für csuser mit _Cluster_-Anmeldeinformationen die folgenden Befehle über die ONTAP-Befehlszeile aus. Beachten Sie, dass _csrestrole_ eine benutzerdefinierte Rolle ist und _csuser_ ein benutzerdefinierter ONTAP-Benutzer ist.
+
+[listing]
+----
+ security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
+ security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
+----
+Führen Sie für csuser mit _SVM_-Anmeldeinformationen die folgenden Befehle über die ONTAP-Befehlszeile aus:
+
+[listing]
+----
+ security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
+ security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
+----
+Lesen Sie mehr über die Konfiguration anderer link:task_add_collector_svm.html["ONTAP-Berechtigungen"].
+
+
+
+== Zugriff verweigert Ereignisse
+
+Sobald Ereignisse vom ONTAP-System erfasst wurden, werden auf der Seite Forensik für Workload-Sicherheit Ereignisse mit Zugriffsverweigerung angezeigt. Zusätzlich zu den angezeigten Informationen können Sie die fehlenden Benutzerberechtigungen für eine bestimmte Operation anzeigen, indem Sie die Spalte _gewünschte Aktivität_ aus dem Zahnradsymbol zur Tabelle hinzufügen.
+
+image:WS_Access_Denied_Example_Event_1.png["Beispiel Für Ereignis „Zugriff Verweigert“"]

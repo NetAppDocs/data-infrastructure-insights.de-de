@@ -1,0 +1,317 @@
+---
+sidebar: sidebar 
+permalink: API_Overview.html 
+keywords: API, customer API, premium, JSON, Swagger, Access Token, token, rotate, expired 
+summary: Die Data Infrastructure Insights API ermöglicht die Integration in andere Applikationen, beispielsweise Systeme für Monitoring und Berichterstellung. 
+---
+= Data Infrastructure Insights API
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Die Insights API der Dateninfrastruktur ermöglicht es NetApp Kunden und unabhängigen Softwareanbietern (ISVs), Dateninfrastrukturanalysen mit anderen Applikationen wie beispielsweise CMDBs oder anderen Ticketsystemen zu integrieren.
+
+Ihre Dateninfrastruktur Insights link:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html#permission-levels["Funktionsgruppe Rolle"]bestimmt, auf welche APIs Sie zugreifen können. Benutzer- und Gastrollen haben weniger Berechtigungen als Administratorrolle. Wenn Sie z. B. in Überwachen und Optimieren eine Administratorrolle haben, die Rolle Benutzer jedoch in Reporting verwendet wird, können Sie alle API-Typen außer Data Warehouse verwalten.
+
+
+
+== Anforderungen für den API-Zugriff
+
+* Ein API-Zugriffstoken-Modell wird verwendet, um den Zugriff zu gewähren.
+* Das API-Token-Management wird von Benutzern von Data Infrastructure Insights mit der Administratorrolle ausgeführt.
+
+
+
+
+== API-Dokumentation (Swagger)
+
+Die neuesten API-Informationen finden Sie, indem Sie sich bei Data Infrastructure Insights anmelden und zu *Admin > API Access* navigieren. Klicken Sie auf den Link *API Documentation*.
+
+image:API_Swagger_Types.png["API-Typen"]
+
+Die API-Dokumentation ist Swagger-basiert, die eine kurze Beschreibung und Verwendungsinformationen für die API, und ermöglicht es Ihnen, es in Ihrer Umgebung zu testen. Abhängig von Ihrer Benutzerrolle und/oder Data Infrastructure Insights Edition können die für Sie verfügbaren API-Typen variieren.
+
+image:API_Swagger_Example.png["Beispiel für API-Swagger"]
+
+
+
+== API-Zugriffs-Tokens
+
+Bevor Sie die Data Infrastructure Insights API verwenden können, müssen Sie mindestens ein *API Access Token* erstellen. Access Tokens werden für angegebene API-Typen verwendet und können Lese- und/oder Schreibberechtigungen gewähren. Sie können auch die Ablauffrist für jedes Access Token festlegen. Alle APIs unter den angegebenen Typen sind für das Access-Token gültig. Jedes Token ist ungültig für einen Benutzernamen oder ein Kennwort.
+
+So erstellen Sie ein Access Token:
+
+* Klicken Sie auf *Admin > API Access*
+* Klicken Sie auf *+API Access Token*
++
+** Geben Sie Den Namen Des Tokens Ein
+** Wählen Sie API-Typen aus
+** Geben Sie die Berechtigungen an, die für diesen API-Zugriff gewährt wurden
+** Legen Sie Den Ablauf Des Tokens Fest
+
+
+
+
+
+NOTE: Ihr Token kann nur während des Erstellungsvorgangs in die Zwischenablage kopiert und gespeichert werden. Token können nicht abgerufen werden, nachdem sie erstellt wurden. Daher wird dringend empfohlen, das Token zu kopieren und an einem sicheren Ort zu speichern. Sie werden aufgefordert, auf die Schaltfläche *Copy API Access Token* zu klicken, bevor Sie den Bildschirm zur Tokenerstellung schließen können.
+
+Sie können Token deaktivieren, aktivieren und widerrufen. Deaktivierte Token können aktiviert werden.
+
+Tokens gewähren aus Kundensicht allgemeinen Zugang zu APIs; Management des Zugriffs auf APIs im Umfang ihres eigenen Mandanten. Kundenadministratoren können diese Token ohne direkte Beteiligung des Back-End-Personals von Data Infrastructure Insights gewähren und widerrufen.
+
+Die Anwendung erhält ein Zugriffstoken, nachdem ein Benutzer den Zugriff erfolgreich authentifiziert und autorisiert hat, und übergibt das Access Token dann als Berechtigung, wenn es die Ziel-API anruft. Das übergebene Token informiert die API, dass der Inhaber des Tokens berechtigt ist, auf die API zuzugreifen und bestimmte Aktionen durchzuführen, die vom Umfang festgelegt wurden, der während der Autorisierung gewährt wurde.
+
+Der HTTP-Header, in dem das Access Token übergeben wird, ist *X-CloudInsights-ApiKey:*.
+
+Verwenden Sie zum Abrufen von Lagerbeständen beispielsweise Folgendes:
+
+ curl https://<tenant_host_name>/rest/v1/assets/storages -H 'X-CloudInsights-ApiKey:<API_Access_Token>'
+Wobei _<API_Access_Token>_ das Token ist, das Sie bei der Erstellung des API-Zugriffs gespeichert haben.
+
+Beispiele für die API, die Sie verwenden möchten, finden Sie auf den Seiten der Schwagger.
+
+
+
+== API-Typ
+
+Die Data Infrastructure Insights API ist kategorienbasiert und enthält derzeit die folgenden Typen:
+
+* DER ASSET-Typ enthält Asset-, Abfrage- und Such-APIs.
++
+** Assets: Listen Sie Objekte der obersten Ebene auf und rufen Sie ein bestimmtes Objekt oder eine Objekthierarchie ab.
+** Abfrage: Abrufen und Verwalten von Dateninfrastruktur Insights Abfragen.
+** Import: Importieren Sie Anmerkungen oder Anwendungen und weisen Sie sie Objekten zu
+** Suche: Suchen Sie ein bestimmtes Objekt, ohne die eindeutige ID oder den vollständigen Namen des Objekts zu kennen.
+
+
+* DER DATENERFASSUNGSTYP dient zum Abrufen und Verwalten von Datensammlern.
+* Mit DEM AUFNAHMERUNGSTYP können Aufnahmedaten und benutzerdefinierte Metriken abgerufen und gemanagt werden, beispielsweise von Telegraf-Agenten
+* MITHILFE DER PROTOKOLLAUFNAHME werden Protokolldaten abgerufen und gemanagt
+
+
+Weitere Typen und/oder APIs können im Laufe der Zeit verfügbar sein. Die neuesten API-Informationen finden Sie im link:#api-documentation-swagger["API-Swagger-Dokumentation"].
+
+Beachten Sie, dass die API-Typen, auf die ein Benutzer Zugriff link:concept_user_roles.html["Benutzerrolle"]hat, auch von den in den einzelnen Funktionen von Data Infrastructure Insights (Monitoring, Workload Security, Reporting) vorhanden sind.
+
+
+
+== Inventurtraversal
+
+In diesem Abschnitt wird beschrieben, wie eine Hierarchie von Data Infrastructure Insights Objekten durchlaufen wird.
+
+
+
+=== Objekte Der Obersten Ebene
+
+Einzelne Objekte werden in Anfragen durch eindeutige URL identifiziert (in JSON auch als „selbst“ bezeichnet) und erfordern Kenntnisse des Objekttyps und der internen ID. Für einige der Objekte der obersten Ebene (Hosts, Speicher usw.) bietet REST API Zugriff auf die gesamte Sammlung.
+
+Das allgemeine Format einer API-URL lautet:
+
+ https://<tenant>/rest/v1/<type>/<object>
+Um beispielsweise alle Speicher von einem Mandanten mit dem Namen _mysite.c01.cloudinsights.netapp.com_ abzurufen, lautet die Anfrage-URL:
+
+ https://mysite.c01.cloudinsights.netapp.com/rest/v1/assets/storages
+
+
+=== Kinder und verwandte Objekte
+
+Objekte auf oberster Ebene, wie z. B. Speicherung, können für andere Kinder und verwandte Objekte verwendet werden. Zum Beispiel, um alle Datenträger für einen bestimmten Speicher abzurufen, verketten Sie die Speicher-URL „selbst“ mit „/Disks“, zum Beispiel:
+
+ https://<tenant>/rest/v1/assets/storages/4537/disks
+
+
+== Erweitert
+
+Viele API-Befehle unterstützen den Parameter *Expand*, der zusätzliche Details zum Objekt oder URLs für verwandte Objekte enthält.
+
+Der gemeinsame Expand-Parameter ist _Expands_. Die Antwort enthält eine Liste aller verfügbaren spezifischen Expands für das Objekt.
+
+Beispiel: Wenn Sie Folgendes anfordern:
+
+ https://<tenant>/rest/v1/assets/storages/2782?expand=_expands
+Die API gibt alle verfügbaren Expands für das Objekt wie folgt zurück:
+
+image:expands.gif["Expands Beispiel"]
+
+Jede Erweiterung enthält Daten, eine URL oder beides. Der Parameter Expand unterstützt mehrere und verschachtelte Attribute, z. B.:
+
+ https://<tenant>/rest/v1/assets/storages/2782?expand=performance,storageResources.storage
+Mit Expand lassen sich zahlreiche verwandte Daten in einer einzigen Lösung integrieren. NetApp rät Ihnen, nicht zu viele Informationen gleichzeitig anzufordern. Dies kann zu einer Verschlechterung der Performance führen.
+
+Um dies zu entmutigen, können Anfragen nach Beständen der obersten Ebene nicht erweitert werden. Beispielsweise können Sie keine Expand-Daten für alle Speicherobjekte gleichzeitig anfordern. Die Clients müssen die Liste der Objekte abrufen und dann spezifische Objekte auswählen, die erweitert werden sollen.
+
+
+
+== Performance-Daten
+
+Performancedaten werden über viele Geräte als separate Proben erfasst. Data Infrastructure Insights sammelt stündlich (standardmäßig) Performance-Proben und fasst sie zusammen.
+
+Die API ermöglicht den Zugriff auf sowohl die Proben als auch auf die zusammengefassten Daten. Bei einem Objekt mit Performance-Daten ist eine Performance-Zusammenfassung als _Expand=Performance_ verfügbar. Die Zeitreihen für den Leistungsverlauf sind über die verschachtelte_Expand=Performance.history_ verfügbar.
+
+Beispiele für Performance-Datenobjekte:
+
+* Storage Performance
+* StoragePoolPerformance
+* PortPerformance
+* DiskPerformance
+
+
+Eine Leistungsmetric hat eine Beschreibung und einen Typ und enthält eine Sammlung von Leistungsübersichten. Beispiel: Latenz, Datenverkehr und Rate.
+
+Eine Leistungsübersicht enthält eine Beschreibung, Einheit, Beispielstartzeit, Probenendzeit und eine Sammlung von zusammengefassten Werten (Strom, min, max, avg usw.), die aus einem einzelnen Leistungszähler über einen Zeitbereich (1 Stunde, 24 Stunden, 3 Tage usw.) berechnet werden.
+
+image:API_Performance.png["Beispiel für eine API-Performance"]
+
+Das resultierende Wörterbuch für Leistungsdaten enthält die folgenden Schlüssel:
+
+* „Selbst“ ist die eindeutige URL des Objekts
+* „History“ ist die Liste der Paare von Zeitstempel und Karte von Zählerwerten
+* Jeder andere Wörterbuchschlüssel („diskThrughput“ usw.) ist der Name einer Leistungsmetrik.
+
+
+Jeder Performance-Datenobjekttyp verfügt über einen eigenen Satz von Performance-Kennzahlen. Das Performance-Objekt der virtuellen Maschine unterstützt beispielsweise „diskThrughput“ als Leistungskennzahl. Jede unterstützte Leistungsmetrik ist eine bestimmte „performanceCategory“, die im metrischen Wörterbuch dargestellt wird. Data Infrastructure Insights unterstützt mehrere später in diesem Dokument aufgeführte Performance-Kenngrößen. Jedes Wörterbuch der Leistungsmetrik hat auch das Feld „Beschreibung“, das eine vom Menschen lesbare Beschreibung dieser Leistungsmetrik und eine Reihe von Zähleinträgen mit Leistungszusammenfassung ist.
+
+Der Zähler der Leistungsübersicht ist die Zusammenfassung der Leistungsindikatoren. Er zeigt typische aggregierte Werte wie Min., Max. Und Avg für einen Zähler sowie den neuesten beobachteten Wert, den Zeitbereich für zusammengefasste Daten, den Einheitstyp für Zähler und die Schwellenwerte für Daten. Nur Schwellenwerte sind optional; die restlichen Attribute müssen angegeben werden.
+
+Leistungsübersichten stehen für diese Zählertypen zur Verfügung:
+
+* Lesen – Zusammenfassung für Lesevorgänge
+* Write – Zusammenfassung für Schreibvorgänge
+* Gesamt: Zusammenfassung für alle Operationen. Es kann höher sein als die einfache Summe von Lesen und Schreiben; es kann auch andere Operationen.
+* Total Max – Zusammenfassung für alle Operationen. Dies ist der maximale Gesamtwert im angegebenen Zeitbereich.
+
+
+
+
+== Kennzahlen Für Die Objekt-Performance
+
+Die API kann detaillierte Metriken für Objekte in Ihrer Umgebung zurückgeben, z. B.:
+
+* Storage-Performance-Kennzahlen wie IOPS (Anzahl der ein-/Ausgabe-Anfragen pro Sekunde), Latenz oder Durchsatz.
+
+
+* Kennzahlen zur Switch-Performance, z. B. Datenverkehrsnutzung, BB Credit Zero Daten oder Port-Fehler.
+
+
+Informationen zu Metriken für jeden Objekttyp finden Sie imlink:#api-documentation-swagger["API-Swagger-Dokumentation"].
+
+
+
+== Performance-Verlaufsdaten
+
+Verlaufsdaten werden in Leistungsdaten als Liste der Zeitstempel- und Zählermaps-Paare präsentiert.
+
+Verlaufszähler werden basierend auf dem Objektnamen der Performance-Metrik benannt. Das Performance-Objekt der virtuellen Maschine unterstützt beispielsweise „diskThrughput“, so dass die Geschichtskarte Schlüssel mit den Namen „diskThrughput.read“, „diskThrughput.write“ und „diskThrughput.total“ enthält.
+
+
+NOTE: Zeitstempel befindet sich im UNIX-Zeitformat.
+
+Dies ist ein Beispiel für einen Performance-Daten-JSON für eine Festplatte:
+
+image:DiskPerformanceExample.png["Festplatten-Performance-JSON"]
+
+
+
+== Objekte mit Kapazitätsattributen
+
+Objekte mit Kapazitätsattributen verwenden grundlegende Datentypen und das kapazitätItem zur Darstellung.
+
+
+
+=== KapazitätArtikel
+
+KapazitätItem ist eine einzige logische Einheit der Kapazität. Er hat „Wert“ und „highThreshold“ in Einheiten, die durch sein übergeordnetes Objekt definiert sind. Zudem unterstützt es eine optionale Übersichtskarte, in der die Konstruktion des Kapazitätswerts erläutert wird. So wäre beispielsweise die Gesamtkapazität eines 100 TB StoragePool ein KapazitätItem mit einem Wert von 100. Die Aufschlüsselung kann 60 TB für „Daten“ und 40 TB für „Snapshots“ zugewiesen zeigen.
+
+Hinweis:: „HighThreshold“ stellt systemdefinierte Schwellenwerte für die entsprechenden Metriken dar, mit denen ein Kunde Alarme oder visuelle Hinweise auf Werte generieren kann, die außerhalb des zulässigen konfigurierten Messebereiches liegen.
+
+
+Die folgende Anzeige zeigt die Kapazität von StoragePools mit mehreren Kapazitätszählern:
+
+image:StoragePoolCapacity.png["Beispiel Für Die Speicherpool-Kapazität"]
+
+
+
+== Suchen von Objekten mit Suchen
+
+Die Such-API ist ein einfacher Einstiegspunkt zum System. Der einzige Eingabeparameter für die API ist eine freie Zeichenfolge, und der resultierende JSON enthält eine kategorisierte Liste der Ergebnisse. Typen sind verschiedene Asset-Typen aus dem Inventar, z. B. Speicher, Hosts, Datenspeicher usw. Jeder Typ würde eine Liste von Objekten des Typs enthalten, die den Suchkriterien entsprechen.
+
+Data Infrastructure Insights ist eine erweiterbare (weit offene) Lösung, die die Integration in Orchestrierungs-, Business Management-, Change Control- und Ticketsysteme von Drittanbietern sowie benutzerdefinierte CMDB-Integrationen ermöglicht.
+
+Die RESTful API von Cloud Insight ist ein primärer Integrationspunkt für eine einfache und effektive Datenverschiebung und ermöglicht Anwendern nahtlosen Zugriff auf ihre Daten.
+
+
+
+== Deaktivieren oder Deaktivieren eines API-Tokens
+
+Um ein API-Token vorübergehend zu deaktivieren, klicken Sie auf der API-Token-Listenseite auf das Menü „drei Punkte“ für die API und wählen Sie _Disable_. Sie können das Token jederzeit über dasselbe Menü wieder aktivieren und _Enable_ auswählen.
+
+Um ein API-Token dauerhaft zu entfernen, wählen Sie im Menü die Option „Widerruf“. Sie können ein entzogen Token nicht erneut aktivieren; Sie müssen ein neues Token erstellen.
+
+image:API_Disable_Token.png["Deaktivieren oder widerrufen und API-Token"]
+
+
+
+== Token für abgelaufenen API-Zugriff werden gedreht
+
+Die Token für den API-Zugriff haben ein Ablaufdatum. Wenn ein API-Zugriffstoken abläuft, müssen Benutzer ein neues Token generieren (vom Typ _Datenaufnahme_ mit Lese-/Schreibberechtigungen) und Telegraf neu konfigurieren, um das neu generierte Token anstelle des abgelaufenen Tokens zu verwenden. In den folgenden Schritten wird die Vorgehensweise beschrieben.
+
+
+
+==== Kubernetes
+
+Beachten Sie, dass diese Befehle den Standard-Namespace „netapp-Monitoring“ verwenden. Wenn Sie Ihren eigenen Namespace festgelegt haben, ersetzen Sie diesen Namespace in diesen und allen nachfolgenden Befehlen und Dateien.
+
+Hinweis: Wenn Sie die neueste Installation von NetApp Kubernetes Monitoring Operator und ein erneuerbares API-Zugriffstoken verwenden, werden auslaufende Tokens automatisch durch neue/aktualisierte API-Zugriffs-Tokens ersetzt. Die unten aufgeführten manuellen Schritte müssen nicht ausgeführt werden.
+
+* Bearbeiten Sie den NetApp Kubernetes Monitoring Operator.
++
+ kubectl -n netapp-monitoring edit agent agent-monitoring-netapp
+* Ändern Sie den Wert _spec.output-sink.API-key_ und ersetzen Sie das alte API-Token durch das neue API-Token.
++
+....
+spec:
+…
+  output-sink:
+  - api-key:<NEW_API_TOKEN>
+....
+
+
+
+
+==== RHEL/CentOS und Debian/Ubuntu
+
+* Bearbeiten Sie die Telegraf-Konfigurationsdateien und ersetzen Sie alle Instanzen des alten API-Tokens durch das neue API-Token.
++
+ sudo sed -i.bkup ‘s/<OLD_API_TOKEN>/<NEW_API_TOKEN>/g’ /etc/telegraf/telegraf.d/*.conf
+* Telegraf Neu Starten.
++
+ sudo systemctl restart telegraf
+
+
+
+
+==== Windows
+
+* Ersetzen Sie für jede Telegraf-Konfigurationsdatei in _C:\Programme\telegraf\telegraf.d_ alle Instanzen des alten API-Tokens durch das neue API-Token.
++
+....
+cp <plugin>.conf <plugin>.conf.bkup
+(Get-Content <plugin>.conf).Replace(‘<OLD_API_TOKEN>’, ‘<NEW_API_TOKEN>’) | Set-Content <plugin>.conf
+....
+* Telegraf Neu Starten.
++
+....
+Stop-Service telegraf
+Start-Service telegraf
+....
+

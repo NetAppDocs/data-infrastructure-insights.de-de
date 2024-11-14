@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: task_export_query_results.html 
+summary: Exportieren der Ergebnisse einer Abfrage in eine CSV-Datei 
+keywords: query, queries, export, csv 
+---
+= Abfrageergebnisse werden in eine CSV-Datei exportiert
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Sie können die Ergebnisse einer beliebigen Abfrage in eine .CSV-Datei exportieren, die es Ihnen ermöglicht, die Daten zu analysieren oder in eine andere Anwendung zu importieren.
+
+.Schritte
+. Melden Sie sich bei Data Infrastructure Insights an.
+. Klicken Sie auf *Abfragen* und wählen Sie *Alle Anfragen anzeigen*.
++
+Die Seite Abfragen wird angezeigt.
+
+. Klicken Sie auf eine Abfrage.
+. Klicken Sie hierimage:ExportButton.png["Schaltfläche Exportieren"], um die Abfrageergebnisse in eine CSV-Datei zu exportieren.
+
+
+
+NOTE: Der Export nach .CSV ist auch im Menü „drei Punkte“ in den Dashboard-Tabellen Widgets sowie in den meisten Landing Page-Tabellen verfügbar.
+
+Die exportierten Daten geben die aktuell angezeigten Filter-, Spalten- und Spaltennamen wieder.
+
+Hinweis: Wenn ein Komma in einem Asset-Namen angezeigt wird, schließt der Export den Namen in Anführungszeichen ein, wobei der Asset-Name und das richtige .csv-Format beibehalten werden.
+
+Wenn Sie eine exportierte CSV-Datei mit Excel öffnen, wenn Sie einen Objektnamen oder ein anderes Feld im Format NN:NN haben (zwei Ziffern gefolgt von einem Doppelpunkt gefolgt von zwei weiteren Ziffern), interpretiert Excel diesen Namen manchmal als Zeitformat, statt Textformat. Dies kann dazu führen, dass in Excel falsche Werte in diesen Spalten angezeigt werden. Ein Objekt mit dem Namen „81:45“ wird beispielsweise in Excel als „81:45:00“ angezeigt.
+
+Um dies zu umgehen, importieren Sie die .CSV-Datei in Excel anhand der folgenden Schritte:
+
+. Öffnen Sie ein neues Blatt in Excel.
+. Wählen Sie auf der Registerkarte „Daten“ die Option „aus Text“.
+. Suchen Sie die gewünschte .CSV-Datei und klicken Sie auf „Importieren“.
+. Wählen Sie im Importassistenten die Option "getrennt" und klicken Sie auf Weiter.
+. Wählen Sie "Komma" für das Trennzeichen und klicken Sie auf Weiter.
+. Wählen Sie die gewünschten Spalten aus und wählen Sie „Text“ für das Spaltendatenformat.
+. Klicken Sie Auf Fertig Stellen.
++
+Ihre Objekte sollten in Excel im richtigen Format angezeigt werden.
+
+

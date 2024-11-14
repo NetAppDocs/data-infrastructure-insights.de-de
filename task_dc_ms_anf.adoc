@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ms_anf.html 
+keywords: data collector, azure, Netapp files, anf 
+summary: Azure NetApp Files Data Collector wird konfiguriert. 
+---
+= Konfigurieren des Azure NetApp Files-Datensammlers
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights verwendet den Azure NetApp Files Datensammler zur Erfassung von Bestands- und Performance-Daten.
+
+
+
+== Anforderungen
+
+Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurieren.
+
+* Port-Anforderung: 443 HTTPS
+* Azure Management Rest-IP (management.azure.com)
+* Principal Client-ID für den Azure-Service (Benutzerkonto)
+* Azure Service Principal Authentifizierungsschlüssel (Benutzerkennwort)
+* Sie müssen ein Azure-Konto für die Erkennung von Data Infrastructure Insights einrichten.
++
+Sobald das Konto ordnungsgemäß konfiguriert ist und Sie die Applikation in Azure registrieren, verfügen Sie über die erforderlichen Zugangsdaten, um die Azure-Instanz mit Data Infrastructure Insights zu ermitteln. Über den folgenden Link wird beschrieben, wie Sie das Konto für die Ermittlung einrichten:
+
+
+
+https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+
+
+
+== Konfiguration
+
+Geben Sie die Daten in die Felder des Datensammlers gemäß der folgenden Tabelle ein:
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Azure Service Principal Client-ID | Anmelde-ID bei Azure 
+
+
+| Azure Mandanten-ID | Azure Mandanten-ID 
+
+
+| Authentifizierungsschlüssel Des Azure Service Principal | Anmeldeauthentifizierungsschlüssel 
+
+
+| Ich verstehe, dass Microsoft mir API-Anforderungen in Rechnung stellt | Überprüfen Sie dies, um zu überprüfen, ob Microsoft Ihnen die durch eine Insight-Umfrage gestellten API-Anforderungen abrechnungen aufstellt. 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 
+|===
+
+
+== Fehlerbehebung
+
+* Die von Ihrem ANF-Datensammler verwendeten Zugangsdaten müssen auf alle Azure-Abonnements zugreifen können, die ANF-Volumes enthalten.
+* Wenn der Zugang zum Reader dazu führt, dass die Leistensammlung fehlschlägt, versuchen Sie, den Zugriff auf Mitarbeiter auf Ressourcengruppenebene zu gewähren.
+
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

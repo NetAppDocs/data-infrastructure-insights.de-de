@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: cs_restrict_user_access.html 
+keywords: alert, snapshot,  attack 
+summary: Mit Workload Security können Sie den Benutzerzugriff auch nach vermuteter Sabotage einschränken 
+---
+= Blockieren Des Benutzerzugriffs
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media
+
+
+[role="lead"]
+Sobald ein Angriff erkannt wurde, kann Workload Security den Angriff beenden, indem der Benutzerzugriff auf das Dateisystem blockiert wird. Der Zugriff kann automatisch mithilfe von Automated Response Policies oder manuell über die Alarm- oder Benutzerdetails-Seiten gesperrt werden.
+
+Beim Blockieren des Benutzerzugriffs sollten Sie einen Sperrzeitraum festlegen. Nach Ende des ausgewählten Zeitraums wird der Benutzerzugriff automatisch wiederhergestellt. Das Zugriffssperre wird sowohl für SMB- als auch für NFS-Protokolle unterstützt.
+
+Benutzer ist direkt für SMB gesperrt und die IP-Adresse der Host Machines, die den Angriff verursachen, wird für NFS blockiert. Diese Computer-IP-Adressen dürfen nicht auf alle Storage Virtual Machines (SVMs) zugreifen, die durch Workload Security überwacht werden.
+
+Zum Beispiel, sagen wir, Workload Security verwaltet 10 SVMs und die automatische Antwortrichtlinie ist für vier dieser SVMs konfiguriert. Wenn der Angriff in einer der vier SVMs stammt, wird der Zugriff des Benutzers in allen 10 SVMs blockiert. Auf der ursprünglichen SVM wird noch ein Snapshot erstellt.
+
+Falls vier SVMs mit einer für SMB konfigurierten SVM und eine für NFS konfigurierte SVM und die übrigen beiden für NFS und SMB konfiguriert sind, werden alle SVMs blockiert, wenn der Angriff aus einer der vier SVMs stammt.
+
+
+
+== Voraussetzungen für die Sperrung des Benutzerzugriffs
+
+Für diese Funktion sind Anmeldedaten auf Cluster-Ebene erforderlich.
+
+Wenn Sie Anmeldedaten für die Cluster-Administration verwenden, sind keine neuen Berechtigungen erforderlich.
+
+Wenn Sie einen benutzerdefinierten Benutzer (z. B. _cscuser_) mit den dem Benutzer angegebenen Berechtigungen verwenden, führen Sie die folgenden Schritte aus, um Workload Security-Berechtigungen zum Blockieren des Benutzers zu erteilen.
+
+Führen Sie für CSuser mit Cluster-Anmeldedaten die folgenden Schritte in der ONTAP-Befehlszeile aus:
+
+....
+security login role create -role csrole -cmddirname "vserver export-policy rule" -access all
+security login role create -role csrole -cmddirname set -access all
+security login role create -role csrole -cmddirname "vserver cifs session" -access all
+security login role create -role csrole -cmddirname "vserver services access-check authentication translate" -access all
+security login role create -role csrole -cmddirname "vserver name-mapping" -access all
+....
+Überprüfen Sie auch den Abschnitt Berechtigungen auf der link:task_add_collector_svm.html["Konfiguration des ONTAP SVM Data Collector"] Seite.
+
+
+
+== Wie wird die Funktion aktiviert?
+
+* Navigieren Sie in Workload Security zu *Workload Security > Policies > Automated Response Policies*. Wählen Sie *+Angriffsrichtlinie*.
+* Wählen Sie _Benutzerdateizugriff blockieren_.
+
+
+
+
+== Wie richten Sie die automatische Sperrung des Benutzerzugriffs ein?
+
+* Erstellen Sie eine neue Angriffsrichtlinie oder bearbeiten Sie eine vorhandene Angriffsrichtlinie.
+* Wählen Sie die SVMs aus, auf denen die Angriffsrichtlinie überwacht werden soll.
+* Klicken Sie auf das Kontrollkästchen „Benutzerdateizugriff blockieren“. Die Funktion wird aktiviert, wenn diese Option ausgewählt ist.
+* Wählen Sie unter „Zeitraum“ die Zeit aus, bis die Blockierung angewendet werden soll.
+* Um die automatische Benutzerblockierung zu testen, können Sie einen Angriff über ein simulierenlink:concept_cs_attack_simulator.html["Simuliertes Skript"].
+
+
+
+
+== Wie kann man wissen, ob es blockierte Benutzer im System gibt?
+
+* Auf der Seite Alarmlisten wird ein Banner oben auf dem Bildschirm angezeigt, falls ein Benutzer blockiert ist.
+* Durch Klicken auf das Banner gelangen Sie zur Seite „Benutzer“, wo die Liste der blockierten Benutzer angezeigt wird.
+* Auf der Seite „Benutzer“ befindet sich eine Spalte mit dem Namen „Benutzer/IP-Zugriff“. In dieser Spalte wird der aktuelle Status der Benutzerblockierung angezeigt.
+
+
+
+
+== Benutzerzugriff manuell einschränken und verwalten
+
+* Sie können zu den Warnungsdetails oder Benutzerdetails gehen und einen Benutzer dann manuell von diesen Bildschirmen blockieren oder wiederherstellen.
+
+
+
+
+== Verlauf Der Benutzerzugriffsbeschränkung
+
+Auf der Seite Warnungsdetails und Benutzerdetails im Bedienfeld können Sie eine Prüfung des Zugriffsbegrenzungsverlaufs des Benutzers anzeigen: Zeit, Aktion (Blockieren, Entsperren), Dauer, Aktion ausgeführt von, Manuelle/automatische und betroffene IPs für NFS.
+
+
+
+== Wie wird die Funktion deaktiviert?
+
+Sie können die Funktion jederzeit deaktivieren. Wenn es eingeschränkte Benutzer im System gibt, müssen Sie zuerst den Zugriff wiederherstellen.
+
+* Navigieren Sie in Workload Security zu *Workload Security > Policies > Automated Response Policies*. Wählen Sie *+Angriffsrichtlinie*.
+* Deaktivieren Sie die Option _Benutzerdateizugriff blockieren_.
+
+
+Die Funktion wird von allen Seiten ausgeblendet.
+
+
+
+== Manuelle Wiederherstellung der IPs für NFS
+
+Führen Sie die folgenden Schritte aus, um IP-Adressen von ONTAP manuell wiederherzustellen, wenn Ihre Workload-Sicherheitsstudie abläuft oder wenn der Agent/Collector nicht verfügbar ist.
+
+. Listen Sie alle Exportrichtlinien auf einer SVM auf.
++
+....
+contrail-qa-fas8020::> export-policy rule show -vserver <svm name>
+             Policy          Rule    Access   Client                RO
+Vserver      Name            Index   Protocol Match                 Rule
+------------ --------------- ------  -------- --------------------- ---------
+svm0        default         1       nfs3,    cloudsecure_rule,     never
+                                    nfs4,    10.11.12.13
+                                    cifs
+svm1        default         4       cifs,    0.0.0.0/0             any
+                                    nfs
+svm2        test            1       nfs3,    cloudsecure_rule,     never
+                                    nfs4,    10.11.12.13
+                                    cifs
+svm3        test            3       cifs,    0.0.0.0/0             any
+                                    nfs,
+                                    flexcache
+4 entries were displayed.
+....
+. Löschen Sie die Regeln über alle Richtlinien auf der SVM, die als Client Match „cloudSecure_rule“ haben, indem Sie den entsprechenden RegelIndex angeben. Workload-Sicherheitsregel liegt in der Regel bei 1.
++
+ contrail-qa-fas8020::*> export-policy rule delete -vserver <svm name> -policyname * -ruleindex 1
+. Stellen Sie sicher, dass die Sicherheitsregel für Workloads gelöscht wird (optionaler Schritt zur Bestätigung).
++
+....
+contrail-qa-fas8020::*> export-policy rule show -vserver <svm name>
+             Policy          Rule    Access   Client                RO
+Vserver      Name            Index   Protocol Match                 Rule
+------------ --------------- ------  -------- --------------------- ---------
+svm0         default         4       cifs,    0.0.0.0/0             any
+                                    nfs
+svm2         test            3       cifs,    0.0.0.0/0             any
+                                    nfs,
+                                    flexcache
+2 entries were displayed.
+....
+
+
+
+
+== Benutzer für SMB manuell wiederherstellen
+
+Führen Sie die folgenden Schritte aus, um alle Benutzer von ONTAP manuell wiederherzustellen, wenn Ihre Testversion für die Workload-Sicherheit abläuft oder wenn der Agent/Collector nicht verfügbar ist.
+
+Sie können die Liste der in Workload Security blockierten Benutzer auf der Benutzer-Listenseite abrufen.
+
+. Melden Sie sich mit Cluster_admin_-Anmeldedaten beim ONTAP Cluster an (wo Sie die Blockierung von Benutzern aufheben möchten). (Bei Amazon FSX melden Sie sich mit FSX-Anmeldeinformationen an).
+. Führen Sie den folgenden Befehl aus, um alle durch Workload Security für SMB blockierten Benutzer in allen SVMs aufzulisten:
++
+ vserver name-mapping show -direction win-unix -replacement " "
++
+....
+Vserver:   <vservername>
+Direction: win-unix
+Position Hostname         IP Address/Mask
+-------- ---------------- ----------------
+1       -                 -                   Pattern: CSLAB\\US040
+                                         Replacement:
+2       -                 -                   Pattern: CSLAB\\US030
+                                         Replacement:
+2 entries were displayed.
+....
+
+
+In der obigen Ausgabe wurden 2 Benutzer (US030, US040) mit Domain CSLAB blockiert.
+
+. Führen Sie den folgenden Befehl aus, um den Benutzer zu entsperren, wenn Sie die Position aus der obigen Ausgabe identifiziert haben:
++
+ vserver name-mapping delete -direction win-unix -position <position>
+. Bestätigen Sie, dass die Sperrung der Benutzer aufgehoben wird, indem Sie den folgenden Befehl ausführen:
++
+ vserver name-mapping show -direction win-unix -replacement " "
+
+
+Für die zuvor blockierten Benutzer sollten keine Einträge angezeigt werden.
+
+
+
+== Fehlerbehebung
+
+|===
+| Problem | Versuchen Sie Dies 
+
+
+| Einige der Benutzer werden nicht eingeschränkt, obwohl es einen Angriff gibt. | 1. Stellen Sie sicher, dass der Data Collector und der Agent für die SVMs den Status _Running_ haben. Workload Security kann keine Befehle senden, wenn der Data Collector und der Agent angehalten sind. 2. Dies liegt daran, dass der Benutzer möglicherweise von einem Computer mit einer neuen IP, die zuvor nicht verwendet wurde, auf den Speicher zugegriffen hat. Die Einschränkung erfolgt über die IP-Adresse des Hosts, über den der Benutzer auf den Speicher zugreift. Überprüfen Sie in der UI (Warndetails > Zugriffsbegrenzungsverlauf für diesen Benutzer > betroffene IP-Adressen) die Liste der eingeschränkten IP-Adressen. Wenn der Benutzer von einem Host aus auf Speicher zugreift, der eine andere IP als die eingeschränkten IP hat, kann der Benutzer weiterhin über die nicht eingeschränkte IP auf den Speicher zugreifen. Wenn der Benutzer versucht, von den Hosts, deren IP-Adressen eingeschränkt sind, auf den Speicher zuzugreifen, wird nicht zugegriffen werden können. 
+
+
+| Manuelles Klicken auf Zugriff beschränken gibt „IP-Adressen dieses Benutzers wurden bereits eingeschränkt“. | Die zu beschränkte IP wird bereits von einem anderen Benutzer eingeschränkt. 
+
+
+| Richtlinie konnte nicht geändert werden. Grund: Nicht autorisiert für diesen Befehl. | Überprüfen Sie, ob Sie cscuser verwenden, dass dem Benutzer Berechtigungen wie oben beschrieben erteilt werden. 
+
+
+| Benutzer (IP-Adresse) Blockieren für NFS funktioniert, aber für SMB / CIFS, sehe ich eine Fehlermeldung: “SID to DomainName Transformation fehlgeschlagen. Grund-Timeout: Socket wurde nicht hergestellt“ | Dies kann vorkommen, dass _csuser_ nicht über die Berechtigung verfügt, ssh auszuführen. (Stellen Sie die Verbindung auf Cluster-Ebene sicher, und stellen Sie dann sicher, dass der Benutzer ssh ausführen kann.) _Csuser_ Rolle erfordert diese Berechtigungen.  https://docs.netapp.com/us-en/cloudinsights/cs_restrict_user_access.html#prerequisites-for-user-access-blocking[] Gehen Sie für _csuser_ mit Cluster-Anmeldeinformationen über die ONTAP-Befehlszeile wie folgt ONTAP vor: Security Login Role create -role csrole -cmddirname "vserver Export-Policy rule" -Access all Security Login Role create -role csrdirname -dirmake used user role -dircsname -diralle used user Access -dircsh role 
+
+
+| Ich erhalte die Fehlermeldung _SID Translate failed._ _Grund:255:Fehler: Befehl fehlgeschlagen: Nicht autorisiert für diesen Befehl Fehler: "Access-Check" ist kein erkannter Befehl_, wenn ein Benutzer blockiert werden sollte. | Dies kann passieren, wenn _csuser_ nicht über die richtigen Berechtigungen verfügt. Weitere Informationen finden Sie unter link:cs_restrict_user_access.html#prerequisites-for-user-access-blocking["Voraussetzungen für die Sperrung des Benutzerzugriffs"] . Nach dem Anwenden der Berechtigungen wird empfohlen, den ONTAP-Datensammler und den Benutzerverzeichnisdatensammler neu zu starten. Die erforderlichen Berechtigungsbefehle sind unten aufgeführt. ---- Sicherheits-Login Rolle create -role csrole -cmddirname "vserver Export-Policy rule" -Access all Security Login role create -role csrdirname set -Access all Security Login role create -role csrole -cmddirname "vserver cifs Session" -Access all Security Login role create -role csrole -cmddirname "vserver Services Access-Check Authentication Translate" -Access all Security Login Role create -role csrole -cmddirname „vserver Name-Mapping“ -Access all ---- 
+|===

@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: task_cloud_insights_onboarding_1.html 
+summary: Melden Sie sich für Einblicke in die Dateninfrastruktur an und erstellen Sie Ihre Umgebung. 
+keywords: onboarding, new user 
+---
+= Einblicke Aus Die Dateninfrastruktur
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bevor Sie mit der Arbeit mit Data Infrastructure Insights beginnen können, müssen Sie sich im *NetApp BlueXP *-Portal anmelden. Wenn Sie bereits über ein NetApp BlueXP  Login verfügen, können Sie mit ein paar schnellen Schritten eine kostenlose Testversion von Data Infrastructure Insights starten.
+
+
+toc::[]
+
+
+== Sie erstellen Ihr NetApp BlueXP Konto
+
+Um mit den Cloud-Services von NetApp zu beginnen, gehen Sie zu link:https://cloud.netapp.com["*NetApp BlueXP*"^] und klicken Sie auf *erste Schritte*.
+
+* Wenn Sie sich noch nicht angemeldet haben, wählen Sie *Anmelden*
+* Geben Sie eine gültige geschäftliche E-Mail-Adresse ein und wählen Sie ein Passwort.
+* Geben Sie Ihren Firmennamen und Ihren vollständigen Namen ein.
+* Akzeptieren Sie die Geschäftsbedingungen und wählen Sie *Weiter*.
+* BlueXP zeigt Ihnen die ersten Schritte auf.
+
+
+
+
+=== Was ist, wenn ich bereits über einen NetApp BlueXP Login spreche?
+
+Sobald Sie ein NetApp BlueXP -Konto haben, wählen Sie einfach *Anmelden* auf der link:https://cloud.netapp.com["*NetApp BlueXP*"^] Portalseite.
+
+Geben Sie Ihre E-Mail-Adresse und Ihr Kennwort ein. Anschließend gelangen Sie zu den Cloud-Angeboten von NetApp.
+
+Wählen Sie Dateninfrastruktur Insights.
+
+image:BlueXP_CloudInsights.png["Dateninfrastruktur Insights kostenlos testen auf BlueXP"]
+
+
+
+== Starten Sie Ihre Data Infrastructure Insights kostenlos
+
+Wenn Sie sich zum ersten Mal bei Data Infrastructure Insights anmelden, klicken Sie unter Data Infrastructure Insights auf *kostenlose Testversion starten*. Data Infrastructure Insights unterstützt Sie beim Aufbau Ihrer Unternehmensumgebung und zeigt Ihnen, welche Region Sie für die gewünschte Umgebung auswählen.
+
+image:trial_region_selector.png["Auswahl der Region, in der Sie Ihre Data Infrastructure Insights-Umgebung hosten sollen"]
+
+Nach Abschluss der Erstellung Ihrer Umgebung können Sie Ihre BlueXP  Zugangsdaten verwenden, um sich anzumelden und Ihre kostenlose 30-Tage-Testversion von Data Infrastructure Insights zu starten. Entdecken Sie bei diesem Testlauf die Features, die Data Infrastructure Insights zu bieten hat.
+
+Während der kostenlosen Testversion können Sie link:concept_subscribing_to_cloud_insights.html["Starten Sie Ihr Abonnement"]Data Infrastructure Insights jederzeit zur Verfügung stellen. Nach dem Abonnement können Sie die Funktionen von Data Infrastructure Insights basierend auf Ihrem aktuellen Abonnement nutzen.
+
+
+
+== Melden Sie sich an und gehen Sie
+
+Sobald Ihre Umgebung erstellt wurde, können Sie sich jederzeit einfach im NetApp BlueXP -Portal anmelden und auf *Gehe zu Dateninfrastrukturinformationen* klicken. Sie gelangen direkt zu Ihrer Data Infrastructure Insights Umgebung.
+
+Sie können einen Browser auch direkt öffnen, um die URL Ihrer Data Infrastructure Insights Umgebung aufzurufen, zum Beispiel:
+
+ \https://<environment-prefix>.c01.cloudinsights.netapp.com/
+Die URL wird auch in die Einladungs-E-Mail jedes Benutzers für einfachen Zugriff und Lesezeichen enthalten. Wenn der Benutzer noch nicht bei BlueXP angemeldet ist, wird er zur Anmeldung aufgefordert.
+
+
+NOTE: Neue Benutzer müssen sich nach wie vor für den Zugriff auf BlueXP registrieren, bevor sie auf die URL ihrer Umgebung zugreifen können.
+
+Wenn Sie sich zum ersten Mal in einer neuen Umgebung anmelden, werden Sie durch die Einrichtung von bis geführtlink:task_getting_started_with_cloud_insights.html["*Datensammlung beginnen*"].
+
+
+
+== Abmelden
+
+Um sich bei Data Infrastructure Insights abzumelden, klicken Sie auf Ihren *Benutzernamen* und wählen *Abmelden*. Sie werden zurück zum Anmeldefenster von BlueXP angezeigt.
+
+
+NOTE: Wenn Sie von Dateninfrastruktur Insights abmelden, werden Sie von BlueXP  abgebloggt. Sie werden außerdem von anderen NetApp-Cloud-Services, die die BlueXP-Anmeldung verwenden, abgemeldet.
+
+
+
+=== Zeitüberschreitung Bei Inaktivität
+
+BlueXP meldet einen Benutzer standardmäßig ab, wenn sechs Stunden (360 Minuten) keine Aktivitäten bestehen. Unabhängig von der Aktivität werden Benutzer nach sieben Tagen abgemeldet.

@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: task_dc_huawei_oceanstor.html 
+keywords: data collector, Huawei, OceanStor, Dorado 
+summary: 'Konfigurieren des Datensammlers Huawei OceanStor (REST/HTTPS)' 
+---
+= Huawei OceanStor Datensammler
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights nutzt den Huawei OceanStor (REST/HTTPS) Datensammler zur Ermittlung von Inventar und Leistung für Huawei OceanStor und OceanStor Dorado Speicher.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestands- und Leistungsinformationen vom Huawei OceanStor. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Storage-Pool | Storage-Pool 
+
+
+| File-System | Internes Volumen 
+
+
+| Controller | Storage-Node 
+
+
+| FC-Port (zugeordnet) | Volume-Zuordnung 
+
+
+| Host FC Initiator (zugeordnet) | Volume-Maske 
+
+
+| NFS/CIFS-Freigabe | Share 
+
+
+| ISCSI-Link-Ziel | ISCSI-Ziel-Node 
+
+
+| ISCSI-Link-Initiator | ISCSI-Initiator-Node 
+
+
+| Festplatte | Festplatte 
+
+
+| LUN | Datenmenge 
+|===
+
+
+== Anforderungen
+
+Zur Konfiguration dieses Datensammlers sind folgende Anforderungen erforderlich:
+
+* IP-Adresse des Geräts
+* Anmeldeinformationen für den Zugriff auf OceanStor Geräte-Manager
+* Port 8088 muss verfügbar sein
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| OceanStor Host-IP-Adresse | IP-Adresse oder vollqualifizierter Domain-Name des OceanStor Device Managers 
+
+
+| Benutzername | Name, der zur Anmeldung beim OceanStor Device Manager verwendet wird 
+
+
+| Passwort | Passwort zur Anmeldung beim OceanStor Device Manager 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| TCP-Anschluss | TCP-Port zur Verbindung mit dem OceanStor Device Manager. Der Standardwert ist 8088. 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+
+
+| Leistungsintervall (Sek.). | Die Standardeinstellung ist 300 Sekunden. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

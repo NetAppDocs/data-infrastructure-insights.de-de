@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: security_information_and_region.html 
+summary: Data Infrastructure Insights befolgt während des gesamten Release-Lebenszyklus sicherheitstechnikrelevante Best Practices. 
+keywords: security, risk, protection 
+---
+= Informationen und Region
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+NetApp nimmt die Sicherheit von Kundeninformationen sehr ernst. Hier erfahren Sie, wie und wo Data Infrastructure Insights Ihre Informationen speichert.
+
+
+
+== Welche Informationen werden in Data Infrastructure Insights gespeichert?
+
+Data Infrastructure Insights speichert folgende Informationen:
+
+* Performance-Daten
++
+Performancedaten sind Zeitreihendaten, die Informationen zur Leistung des überwachten Geräts/der überwachten Quelle liefern. Dazu zählen beispielsweise die Anzahl der von einem Speichersystem bereitgestellten iOS, der Durchsatz eines FibreChannel-Ports, die Anzahl der von einem Webserver bereitgestellten Seiten, die Reaktionszeit einer Datenbank und vieles mehr.
+
+* Bestandsdaten
++
+Bestandsdaten bestehen aus Metadaten, die das überwachte Gerät/die Quelle beschreiben und wie es konfiguriert wird. Dazu gehören beispielsweise installierte Hardware- und Softwareversionen, Festplatten und LUNs in einem Storage-System, CPU-Kerne, RAM und Festplatten einer Virtual Machine, die Tabellen einer Datenbank, die Anzahl und die Art der Ports auf einem SAN Switch, Verzeichnis-/Dateinamen (bei aktivierter Storage Workload Security) usw.
+
+* Konfigurationsdaten
++
+Dies fasst vom Kunden bereitgestellte Konfigurationsdaten zusammen, die zur Verwaltung von Kundeninventar und -Vorgängen verwendet werden, z. B. Hostnamen oder IP-Adressen der überwachten Geräte, Abfrageintervalle, Zeitlimits usw.
+
+* Secrets
++
+Geheimnisse umfassen die Anmeldeinformationen, die von der Data Infrastructure Insights Acquisition Unit für den Zugriff auf Kundengeräte und -Services verwendet werden. Diese Anmeldeinformationen werden mit einer starken asymmetrischen Verschlüsselung verschlüsselt, und die privaten Schlüssel werden nur auf den Akquisitionseinheiten gespeichert und verlassen nie die Kundenumgebung. Selbst privilegierte Data Infrastructure Insights SRES können aufgrund dieses Designs nicht auf Kundengeheimnisse im Klartext zugreifen.
+
+* Funktionale Daten
++
+Diese Daten werden durch die Bereitstellung des Cloud Data Service durch NetApp generiert, der NetApp über die Entwicklung, Implementierung, den Betrieb, die Wartung und die Sicherung des Cloud Data Service informiert. Funktionale Daten enthalten weder Kundendaten noch personenbezogene Daten.
+
+* Benutzerdaten
++
+Authentifizierungs- und Zugriffsinformationen, die es NetApp BlueXP  ermöglichen, mit regionalen Dateninfrastrukturen Insights zu kommunizieren, einschließlich Daten zur Benutzerautorisierung.
+
+* Sicherheitsdaten Des Benutzerverzeichnisses Für Storage-Workloads
++
+In Fällen, in denen die Workload-Sicherheitsfunktion aktiviert ist UND der Kunde den Benutzer-Directory-Collector aktivieren möchte, speichert das System Anzeigenamen, Unternehmens-E-Mail-Adressen und andere Informationen, die aus Active Directory gesammelt wurden.
+
+
+
+
+NOTE: Benutzerverzeichnisdaten beziehen sich auf Benutzerverzeichnisinformationen, die vom Datensammler Workload Security User Directory erfasst werden, nicht auf Daten über die Benutzer von Data Infrastructure Insights/Workload Security selbst.
+
+*Es werden keine expliziten personenbezogenen Daten* aus Infrastruktur- und Dienstleistungsressourcen erhoben. Die erfassten Daten bestehen aus Performance-Kennzahlen, Konfigurationsdaten und Infrastrukturmetadaten, ähnlich wie viele Telefonanbieter mit NetApp Auto-Support und ActiveIQ. Abhängig von den Namenskonventionen des Kunden werden jedoch Daten für Shares, Volumes, VMs, qtrees, Anwendungen usw. können personenbezogene Informationen enthalten.
+
+Wenn Workload Security aktiviert ist, untersucht das System außerdem Datei- und Verzeichnisnamen auf SMB- oder anderen Freigaben, die personenbezogene Informationen enthalten können. Wenn Kunden den Workload Security User Directory Collector aktivieren (der Windows SIDs im Wesentlichen über Active Directory Benutzernamen zuordnet), werden der Anzeigename, die Unternehmens-E-Mail-Adresse und alle zusätzlich ausgewählten Attribute von Data Infrastructure Insights erfasst und gespeichert.
+
+Darüber hinaus werden Zugriffsprotokolle zu Data Infrastructure Insights verwaltet und enthalten die IP- und E-Mail-Adressen der Benutzer, die zur Anmeldung beim Service verwendet werden.
+
+
+
+== Wo werden meine Informationen gespeichert?
+
+Data Infrastructure Insights speichert Informationen entsprechend der Region, in der Ihre Umgebung erstellt wird.
+
+Folgende Informationen werden in der Host-Region gespeichert:
+
+* Telemetrie- und Asset-/Objektdaten, einschließlich Zähler und Performance-Kennzahlen
+* Informationen zu den Erfassungseinheiten
+* Funktionale Daten
+* Audit-Informationen zu Benutzeraktivitäten innerhalb von Data Infrastructure Insights
+* Active Directory-Informationen zu Workload-Sicherheit
+* Informationen zur Workload Security Audit
+
+
+Die folgenden Informationen verbleiben in den USA, unabhängig von der Region, in der Ihre Data Infrastructure Insights Umgebung gehostet wird:
+
+* Angaben zum Umgebungsstandort (manchmal auch „Mandant“ genannt), z. B. Standort-/Kontoinhaber.
+* Informationen, die es NetApp BlueXP  ermöglichen, mit regionalen Einsichten zu Dateninfrastrukturen zu kommunizieren, einschließlich aller Vorgänge, die mit der Benutzerautorisierung ausgeführt werden.
+* Informationen im Zusammenhang mit der Beziehung zwischen dem Benutzer Data Infrastructure Insights und dem Mandanten.
+
+
+
+
+=== Host-Regionen
+
+Host-Regionen sind:
+
+* USA: USA-Osten-1
+* EMEA: EU-Mitte-1
+* APAC: ap-Südost-2
+
+
+
+
+== Weitere Informationen
+
+Weitere Informationen zu Datenschutz und Sicherheit von NetApp finden Sie unter folgenden Links:
+
+* link:https://www.netapp.com/us/company/trust-center/index.aspx["Trust Center"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["Grenzüberschreitende Datenübertragungen"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/bcr-binding-corporate-rules.aspx["Binding Corporate Rules"]
+* link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["Reaktion auf Datenanfragen von Drittanbietern"]
+* link:https://www.netapp.com/us/company/trust-center/privacy/privacy-principles-security-safeguards.aspx["NetApp Datenschutzgrundsätze"]
+

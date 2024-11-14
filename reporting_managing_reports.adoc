@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: reporting_managing_reports.html 
+summary: 'Anpassen der Berichtausgabe und -Ausgabe, Kopieren von Berichten in die Zwischenablage, Öffnen von Berichten (XML).' 
+keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying 
+---
+= Verwalten Von Berichten
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Sie können das Ausgabeformat und die Ausgabe eines Berichts anpassen, Berichteigenschaften oder Zeitpläne festlegen und E-Mail-Berichte erstellen.
+
+
+NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+
+
+IMPORTANT: Bevor Sie Änderungen an den Berichtsberechtigungen oder der Sicherheit vornehmen, müssen Sie „My Content“-Berichte in den Ordner „Team Content“ kopieren, um sicherzustellen, dass die Berichte gespeichert werden.
+
+
+
+== Anpassen des Ausgabeformats und der Bereitstellung eines Berichts
+
+Sie können das Format und die Bereitstellungsmethode von Berichten anpassen.
+
+. Gehen Sie im Data Infrastructure Insights Reporting Portal zu *Menü > Inhalt > My Content/Team Content*. Bewegen Sie die Maus über den Bericht, den Sie anpassen möchten, und öffnen Sie das Menü „drei Punkte“.
+
+
+image:Reporting_Output_and_Delivery.png["Berichtsausgabe und -Ausgabe"]
+
+. Klicken Sie Auf *Eigenschaften > Zeitplan*
+
+
+. Sie können folgende Optionen festlegen:
++
+** *Zeitplan*, wenn Sie Berichte ausführen möchten.
+** Wählen Sie *Optionen* für Berichtformat und -Zustellung (Speichern, Drucken, E-Mail) und Sprachen für den Bericht.
+
+
+. Klicken Sie auf *Speichern*, um den Bericht anhand der von Ihnen getroffenen Auswahl zu erstellen.
+
+
+
+
+== Kopieren eines Berichts in die Zwischenablage
+
+Verwenden Sie diesen Vorgang, um einen Bericht in die Zwischenablage zu kopieren.
+
+. Wählen Sie einen zu kopierenden Bericht aus (*Menü > Inhalt > Mein Inhalt oder Teaminhalt*)
+. Wählen Sie im Dropdown-Menü des Berichts die Option _Report bearbeiten_
++
+image:Reporting_Edit_Report.png["Bearbeiten eines Berichts"]
+
+. Öffnen Sie oben rechts auf dem Bildschirm das Menü „drei Punkte“ neben „Eigenschaften“.
+. Wählen Sie *Bericht in Zwischenablage kopieren*.
++
+image:Reporting_Copy_To_Clipboard.png["Kopieren eines Berichts in die Zwischenablage"]
+
+
+
+
+
+== Öffnen von Berichten aus der Zwischenablage
+
+Sie können eine Berichtsspezifikation öffnen, die zuvor in die Zwischenablage kopiert wurde.
+
+Über diese Aufgabe Erstellen Sie zunächst einen neuen Bericht oder öffnen Sie einen vorhandenen Bericht, den Sie durch den kopierten Bericht ersetzen möchten. Die folgenden Schritte gelten für einen neuen Bericht.
+
+. Wählen Sie *Menü > +Neu > Bericht* und erstellen Sie einen leeren Bericht.
+. Öffnen Sie oben rechts auf dem Bildschirm das Menü „drei Punkte“ neben „Eigenschaften“.
+. Wählen Sie *Bericht aus Zwischenablage öffnen*.
+
+
+image:Reporting_Open_From_Clipboard.png["Öffnen eines Berichts aus der Zwischenablage"]
+
+. Fügen Sie den kopierten Code in das Fenster ein und wählen Sie *OK*.
+. Wählen Sie das Diskettensymbol, um den Bericht zu speichern.
+. Wählen Sie, wo der Bericht gespeichert werden soll (_My Content_, _Team Content_, oder erstellen Sie einen neuen Ordner).
+. Geben Sie dem neuen Bericht einen aussagekräftigen Namen und wählen Sie *Speichern*.
+
+
+
+
+== Bearbeiten eines vorhandenen Berichts
+
+Beachten Sie, dass die Bearbeitung von Dateien am Standardspeicherort das Risiko birgt, dass diese Berichte bei der nächsten Aktualisierung des Berichtkatalogs überschrieben werden. Es wird empfohlen, den bearbeiteten Bericht unter einem neuen Namen zu speichern oder an einem nicht standardmäßigen Speicherort zu speichern.
+
+
+
+== Fehlerbehebung
+
+Hier finden Sie Vorschläge zur Fehlerbehebung bei Problemen mit der Berichterstattung.
+
+|===
+
+
+| *Problem:* | *Teste das:* 
+
+
+| Bei der Planung eines Berichts, der per E-Mail versendet werden soll, wird der Name des angemeldeten Benutzers im Feld „an“ der E-Mail vorausgefüllt. Der Name ist jedoch in der Form von "Vorname Nachname" (Vorname, Leerzeichen, Nachname). Da es sich hierbei nicht um eine gültige E-Mail-Adresse handelt, wird die E-Mail nicht gesendet, wenn der geplante Bericht ausgeführt wird. | Löschen Sie bei der Planung des zu sendenden Berichts per E-Mail den vorausgefüllten Namen und geben Sie eine gültige, korrekt formatierte E-Mail-Adresse in das Feld „To“ ein. 
+|===

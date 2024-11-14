@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: reporting_overview.html 
+summary: Vordefinierte und individuelle Berichte zu Ihren Daten mit Data Infrastructure Insights 
+keywords: reporting, cognos, data warehouse, dwh 
+---
+= Data Infrastructure Insights Reporting – Übersicht
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Infrastructure Insights Reporting ist ein Business Intelligence-Tool, mit dem Sie vordefinierte Berichte anzeigen oder benutzerdefinierte Berichte erstellen können.
+
+
+NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+
+Die Berichterstellung zu Data Infrastructure Insights bietet Ihnen folgende Aufgaben:
+
+* Führen Sie einen vordefinierten Bericht aus
+* Erstellen Sie einen benutzerdefinierten Bericht
+* Passen Sie das Format und die Bereitstellungsmethode eines Berichts an
+* Planen Sie die automatische Ausführung von Berichten
+* E-Mail-Berichte
+* Verwenden Sie Farben, um Schwellenwerte für Daten darzustellen
+
+
+Data Infrastructure Insights Reporting kann individuelle Berichte für Bereiche wie Kostenverrechnung, Verbrauchsanalyse und Prognosen erstellen und hilft bei der Beantwortung von Fragen wie folgenden:
+
+* Welche Bestände habe ich?
+* Wo ist mein Inventar?
+* Wer nutzt unsere Ressourcen?
+* Wie sieht die Rückberechnung von zugewiesenem Storage für einen Geschäftsbereich aus?
+* Wie lange dauert es, bis ich zusätzliche Storage-Kapazität anschaffen muss?
+* Werden die Geschäftseinheiten auf die entsprechenden Storage Tiers abgestimmt?
+* Inwiefern ändert sich die Storage-Zuweisung über einen Monat, ein Quartal oder ein Jahr?
+
+
+
+
+== Zugriff Auf Data Infrastructure Insights Reporting
+
+Sie können auf Data Infrastructure Insights Reporting zugreifen, indem Sie im Menü auf den Link *Reports* klicken.
+
+Sie werden zur Berichtsschnittstelle geleitet. Data Infrastructure Insights verwendet IBM Cognos Analytics für seine Reporting Engine.
+
+
+
+== Was ist ETL?
+
+Bei der Arbeit mit Reporting hören Sie die Begriffe „Data Warehouse“ und „ETL“. ETL steht für „Extract, Transform, Load“. Der ETL-Prozess ruft die in Data Infrastructure Insights gesammelten Daten ab und wandelt die Daten in ein Format für die Verwendung in Reporting um. „Data Warehouse“ bezieht sich auf die gesammelten Daten, die für die Berichterstattung zur Verfügung stehen.
+
+Der ETL-Prozess umfasst folgende Einzelprozesse:
+
+* *Extract*: Daten aus Data Infrastructure Insights.
+* *Transform*: Wendet Regeln oder Funktionen der Geschäftslogik auf die Daten an, während diese aus Data Infrastructure Insights extrahiert werden.
+* *Load*: Speichert die umgewandelten Daten in das Data Warehouse zur Verwendung in Reporting.
+

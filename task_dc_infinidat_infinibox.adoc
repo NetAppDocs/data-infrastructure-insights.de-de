@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_infinidat_infinibox.html 
+keywords: data collector, infinidat, InfiniBox 
+summary: Konfigurieren von Infiniat InfiniBox Datensammler. 
+---
+= Infiniat InfiniBox Datensammler
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Der Datensammler Infinibei InfiniBox (HTTP) wird verwendet, um Inventarinformationen vom Infiniat InfiniBox-Speichersystem zu sammeln.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Infinidat Infinibox Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Storage-Pool | Storage-Pool 
+
+
+| Knoten | Controller 
+
+
+| Dateisystem | Internes Volumen 
+
+
+| Dateisystem | Dateifreigabe 
+
+
+| Dateisystem-Exporte | Share 
+|===
+
+
+== Anforderungen
+
+Die folgenden Anforderungen gelten für die Konfiguration dieses Datensammlers.
+
+* IP-Adresse oder FQDN des InfiniBox-Managementknoten
+* Admin-Benutzer-ID und Passwort
+* Port 443 über REST API
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| InfiniBox Host | IP-Adresse oder vollqualifizierter Domainname des InfiniBox Management Node 
+
+
+| Benutzername | Benutzername für InfiniBox Management Node 
+
+
+| Passwort | Passwort für den InfiniBox Management-Knoten 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| TCP-Anschluss | TCP-Port zur Verbindung mit InfiniBox-Server. Der Standardwert ist 443. 
+
+
+| Abfrageintervall Für Bestand | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

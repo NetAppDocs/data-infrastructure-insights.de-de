@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_kubernetes.html 
+keywords: telegraf 
+summary: Datensammler für Kubernetes 
+---
+= Data Collector: Kubernetes
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Infrastructure Insights nutzt diesen Datensammler, um Kennzahlen zu Kubernetes Pod, Node und Container zu sammeln.
+
+
+
+== Installation
+
+Anweisungen zur Installation von Kubernetes finden Sie auf der link:task_config_telegraf_agent_k8s.html["Kubernetes Monitoring Operator"] Seite.
+
+
+
+== Über Kube-State-Metrics
+
+Der Kubernetes Monitoring Operator installiert kube-State-Metriken automatisch. Es ist keine Benutzerinteraktion erforderlich.
+
+
+
+=== Kube-State-metrics-Zähler
+
+Der NetApp-Kubernetes-Überwachungsoperator extrahiert die unten aufgeführten Kennzahlen für den kube-Status. Weitere Informationen zu jedem Zähler finden Sie unter: https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[].
+
+. DemonSet Metrics
+. Implementierungsmetriken
+. Namespace-Kennzahlen
+. Node-Kennzahlen
+. Persistente Volume-Kennzahlen
+. Persistent Volume Claim Metrics
+. Pod-Metriken
+. Kennzahlen für ReplicaSet
+. Service-Kennzahlen
+. StatfulSet-Kennzahlen
+

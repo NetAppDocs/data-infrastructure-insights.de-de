@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ibm_cleversafe.html 
+keywords: data collector, IBM Cleversafe 
+summary: Konfigurieren des IBM Cleversafe Datensammlers. 
+---
+= IBM Cleversafe Datensammler
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights nutzt diesen Datensammler, um Bestands- und Leistungsdaten für IBM Cleversafe-Speichersysteme zu ermitteln.
+
+
+NOTE: IBM Cleversafe wird mit einer anderen Raw TB zu Managed Unit Rate gemessen. Jede 40 TB unformatierte IBM Cleversafe Kapazität wird als 1 berechnetlink:concept_subscribing_to_cloud_insights.html#pricing["Verwaltete Einheit (ME)"].
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem IBM Cleversafe Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Storage-Pool | Storage-Pool 
+
+
+| Container | Internes Volumen 
+
+
+| Container | Dateifreigabe 
+
+
+| NFS-Share | Share 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+* Die IP-Adresse für externe Datendienste für den Cluster
+* Administrator-Benutzername und -Passwort
+* Anschluss 9440
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Manager-IP oder Host-Name | IP-Adresse oder Hostname des Management-Node 
+
+
+| Benutzername | Benutzername für das Benutzerkonto mit Superuser- oder Systemadministrator-Rolle 
+
+
+| Passwort | Kennwort für das Benutzerkonto mit Superuser- oder Systemadministrator-Rolle 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen 
+
+
+| HTTP-Verbindungszeitlimit (Sek.) | HTTP-Zeitüberschreitung in Sekunden. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

@@ -1,0 +1,302 @@
+---
+sidebar: sidebar 
+permalink: task_add_collector_svm.html 
+keywords: data collector, ONTAP, NetApp, SVM, cloud ontap, firewall 
+summary: Hinzufügen von Datensammlern für Workload-Sicherheit 
+---
+= Konfiguration des ONTAP SVM Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen.
+
+
+
+== Bevor Sie beginnen
+
+* Dieser Datensammler wird unterstützt durch:
++
+** Data ONTAP 9.2 und höher. Verwenden Sie für die beste Performance eine Data ONTAP-Version über 9.13.1.
+** SMB-Protokollversion 3.1 und früher.
+** NFS-Versionen bis einschließlich NFS 4.1 mit ONTAP 9.15.1 oder höher
+** FlexGroup wird von ONTAP 9.4 und höheren Versionen unterstützt
+** ONTAP Select wird unterstützt
+
+
+* Es werden nur SVMs vom Datentyp unterstützt. SVMs mit Infinite Volumes werden nicht unterstützt.
+* SVM hat mehrere Untertypen. Davon werden nur _default_, _Sync_source_ und _Sync_Destination_ unterstützt.
+* Ein Agentlink:task_cs_add_agent.html["Muss konfiguriert sein"], bevor Sie Datensammler konfigurieren können.
+* Stellen Sie sicher, dass Sie über einen richtig konfigurierten User Directory Connector verfügen, sonst werden bei Ereignissen kodierte Benutzernamen und nicht der tatsächliche Name des Benutzers (wie in Active Directory gespeichert) auf der Seite „Activity Forensics“ angezeigt.
+* • ONTAP persistenter Speicher wird von 9.14.1 unterstützt.
+* Um eine optimale Performance zu erzielen, sollten Sie den FPolicy-Server so konfigurieren, dass er sich im gleichen Subnetz wie das Storage-System befindet.
+* Sie müssen eine SVM mit einer der folgenden beiden Methoden hinzufügen:
++
+** Mit Cluster-IP, SVM-Name und Cluster-Management-Benutzername und -Passwort. *_Dies ist die empfohlene Methode._*
++
+*** Der SVM-Name muss exakt wie in ONTAP angegeben sein und bei Groß-/Kleinschreibung beachtet werden.
+
+
+** Mit SVM Vserver Management IP, Benutzername und Passwort
+** Wenn Sie nicht in der Lage sind oder nicht bereit sind, den vollständigen Benutzernamen und das Kennwort für die Verwaltung des Administratorclusters/der SVM zu verwenden, können Sie einen benutzerdefinierten Benutzer mit einer geringeren Privileges erstellen, wie im folgenden Abschnitt erwähnt<<a-note-about-permissions,„Ein Hinweis über Berechtigungen“>>. Dieser benutzerdefinierte Benutzer kann für einen SVM- oder Cluster-Zugriff erstellt werden.
++
+*** o Sie können auch einen AD-Benutzer mit einer Rolle verwenden, die mindestens die Berechtigungen von csrolle hat, wie im Abschnitt „Hinweis auf Berechtigungen“ unten erwähnt. Siehe auch die link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["ONTAP-Dokumentation"].
+
+
+
+
+* Stellen Sie sicher, dass die korrekten Applikationen für die SVM festgelegt sind, indem Sie den folgenden Befehl ausführen:
++
+ clustershell::> security login show -vserver <vservername> -user-or-group-name <username>
+
+
+Beispielausgabe: image:cs_svm_sample_output.png["Beispiel für eine SVM-Befehlsausgabe"]
+
+* Stellen Sie sicher, dass für die SVM ein CIFS-Server konfiguriert ist: Clustershell:> `vserver cifs show`
++
+Das System gibt den Namen des Vservers, den CIFS-Servernamen und weitere Felder zurück.
+
+* Legen Sie ein Passwort für den SVM vsadmin Benutzer fest. Wenn Sie benutzerdefinierte Benutzer oder Cluster-Admin-Benutzer verwenden, überspringen sie diesen Schritt. Clustershell::> `security login password -username vsadmin -vserver svmname`
+* Der SVM vsadmin-Benutzer für externen Zugriff entsperren. Wenn Sie benutzerdefinierte Benutzer oder Cluster-Admin-Benutzer verwenden, überspringen sie diesen Schritt. Clustershell::> `security login unlock -username vsadmin -vserver svmname`
+* Stellen Sie sicher, dass die Firewall-Policy der Daten-LIF auf ‘mgmt’ (nicht ‘data’) eingestellt ist. Überspringen Sie diesen Schritt, wenn Sie eine dedizierte Management-LIF zum Hinzufügen der SVM verwenden. Clustershell::> `network interface modify -lif <SVM_data_LIF_name> -firewall-policy mgmt`
+* Wenn eine Firewall aktiviert ist, muss eine Ausnahme definiert sein, die TCP-Datenverkehr für den Port unter Verwendung des Data ONTAP Data Collectors zulässt.
++
+Informationen zur Konfiguration finden Sie unterlink:concept_cs_agent_requirements.html["Anforderungen an den Agenten"]. Dies gilt für lokale Agenten und Agenten, die in der Cloud installiert sind.
+
+* Wenn ein Agent in einer AWS EC2 Instanz zum Monitoring einer Cloud ONTAP SVM installiert wird, müssen sich der Agent und der Storage in derselben VPC befinden. Wenn sie in separaten VPCs sind, muss es eine gültige Route zwischen den VPC geben.
+
+
+
+
+== Voraussetzungen für die Sperrung des Benutzerzugriffs
+
+Beachten Sie Folgendes fürlink:cs_restrict_user_access.html["Sperrung Des Benutzerzugriffs"]:
+
+Für diese Funktion sind Anmeldedaten auf Cluster-Ebene erforderlich.
+
+Wenn Sie Anmeldedaten für die Cluster-Administration verwenden, sind keine neuen Berechtigungen erforderlich.
+
+Wenn Sie einen benutzerdefinierten Benutzer (z. B. _cscuser_) mit den dem Benutzer angegebenen Berechtigungen verwenden, führen Sie die folgenden Schritte aus, um Workload Security-Berechtigungen zum Blockieren des Benutzers zu erteilen.
+
+Führen Sie für CSuser mit Cluster-Anmeldedaten die folgenden Schritte in der ONTAP-Befehlszeile aus:
+
+....
+security login role create -role csrole -cmddirname "vserver export-policy rule" -access all
+security login role create -role csrole -cmddirname set -access all
+security login role create -role csrole -cmddirname "vserver cifs session" -access all
+security login role create -role csrole -cmddirname "vserver services access-check authentication translate" -access all
+security login role create -role csrole -cmddirname "vserver name-mapping" -access all
+....
+
+
+== Ein Hinweis zu Berechtigungen
+
+
+
+=== Berechtigungen beim Hinzufügen über *Cluster Management IP*:
+
+Wenn Sie den Cluster Management Administrator-Benutzer nicht verwenden können, um Workload Security den Zugriff auf den ONTAP SVM-Datensammler zu erlauben, können Sie einen neuen Benutzer namens „cscuser“ mit den Rollen erstellen, wie in den Befehlen unten gezeigt. Verwenden Sie den Benutzernamen „CSuser“ und das Passwort für „cscuser“, wenn Sie den Workload Security Data Collector für die Verwendung der Cluster Management IP konfigurieren.
+
+Um den neuen Benutzer zu erstellen, melden Sie sich mit dem Benutzernamen/Kennwort des Clustermanagements-Administrators bei ONTAP an, und führen Sie die folgenden Befehle auf dem ONTAP-Server aus:
+
+ security login role create -role csrole -cmddirname DEFAULT -access readonly
+....
+security login role create -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure_*"
+security login role create -role csrole -cmddirname "event catalog" -access all
+security login role create -role csrole -cmddirname "event filter" -access all
+security login role create -role csrole -cmddirname "event notification destination" -access all
+security login role create -role csrole -cmddirname "event notification" -access all
+security login role create -role csrole -cmddirname "security certificate" -access all
+....
+....
+security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole
+security login create -user-or-group-name csuser -application ssh -authmethod password -role csrole
+....
+
+
+=== Berechtigungen beim Hinzufügen über *Vserver Management IP*:
+
+Wenn Sie den Cluster Management Administrator-Benutzer nicht verwenden können, um Workload Security den Zugriff auf den ONTAP SVM-Datensammler zu erlauben, können Sie einen neuen Benutzer namens „cscuser“ mit den Rollen erstellen, wie in den Befehlen unten gezeigt. Verwenden Sie den Benutzernamen „CSuser“ und das Passwort für „cscuser“, wenn Sie den Workload Security Data Collector für die Verwendung von Vserver Management IP konfigurieren.
+
+Um den neuen Benutzer zu erstellen, melden Sie sich mit dem Benutzernamen/Kennwort des Clustermanagements-Administrators bei ONTAP an, und führen Sie die folgenden Befehle auf dem ONTAP-Server aus. Die folgenden Befehle sollten einfacher in einen Text Editor kopiert und vor der Ausführung der folgenden Befehle auf ONTAP den <vservername> mit Ihrem Vserver-Namen ersetzt werden:
+
+ security login role create -vserver <vservername> -role csrole -cmddirname DEFAULT -access none
+....
+security login role create -vserver <vservername> -role csrole -cmddirname "network interface" -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname version -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname volume -access readonly
+security login role create -vserver <vservername> -role csrole -cmddirname vserver -access readonly
+....
+....
+security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all
+....
+ security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
+
+
+=== Berechtigungen für autonomen ONTAP-Ransomware-Schutz und ONTAP-Zugriff verweigert
+
+Wenn Sie Anmeldedaten für die Cluster-Administration verwenden, sind keine neuen Berechtigungen erforderlich.
+
+Wenn Sie einen benutzerdefinierten Benutzer (z. B. _csuser_) mit den dem Benutzer angegebenen Berechtigungen verwenden, befolgen Sie die folgenden Schritte, um Workload Security-Berechtigungen zum Sammeln von ARP-bezogenen Informationen aus ONTAP zu erteilen.
+
+Weitere Informationen finden Sie unter link:concept_ws_integration_with_ontap_access_denied.html["Integration mit ONTAP-Zugriff verweigert"]
+
+Und link:concept_cs_integration_with_ontap_arp.html["Integration in ONTAP Autonomous Ransomware Protection"]
+
+
+
+== Konfigurieren Sie den Datensammler
+
+.Schritte zur Konfiguration
+. Melden Sie sich als Administrator oder Account Owner bei Ihrer Data Infrastructure Insights-Umgebung an.
+. Klicken Sie Auf *Workload Security > Collectors > +Data Collectors*
++
+Das System zeigt die verfügbaren Datensammler an.
+
+. Bewegen Sie den Mauszeiger über die Kachel *NetApp SVM und klicken Sie auf *+Monitor*.
++
+Das System zeigt die Konfigurationsseite der ONTAP SVM an. Geben Sie die erforderlichen Daten für die einzelnen Felder ein.
+
+
+
+[cols="2*"]
+|===
+
+
+| Feld | Beschreibung 
+
+
+| Name | Eindeutiger Name für den Data Collector 
+
+
+| Agent | Wählen Sie einen konfigurierten Agenten aus der Liste aus. 
+
+
+| Verbindung über Management-IP herstellen für: | Wählen Sie eine Cluster-IP oder eine SVM-Management-IP aus 
+
+
+| Management-IP-Adresse für Cluster/SVM | Je nach Ihrer obigen Auswahl die IP-Adresse für das Cluster oder die SVM. 
+
+
+| Name SVM | Name der SVM (dieses Feld ist erforderlich, wenn eine Verbindung über Cluster-IP hergestellt wird) 
+
+
+| Benutzername | Benutzername für den Zugriff auf die SVM/Cluster beim Hinzufügen über Cluster IP die Optionen sind: 1. Cluster-Admin 2. ‘Cuser’ 3. AD-User mit ähnlicher Rolle wie CSuser. Beim Hinzufügen über SVM IP stehen folgende Optionen zur Verfügung: 4. Vsadmin 5. ‘Cuser’ 6. AD-Benutzername mit ähnlicher Rolle wie CSuser. 
+
+
+| Passwort | Kennwort für den oben genannten Benutzernamen 
+
+
+| Freigaben/Volumes Filtern | Wählen Sie aus, ob Freigaben/Volumes aus der Ereignissammlung einbezogen oder ausgeschlossen werden sollen 
+
+
+| Geben Sie vollständige Freigabennamen ein, die ausgeschlossen/include werden sollen | Kommagetrennte Liste von Freigaben, die ausgeschlossen oder (je nach Bedarf) aus der Ereignissammlung aufgenommen werden sollen 
+
+
+| Geben Sie vollständige Volume-Namen ein, die ausgeschlossen/include werden sollen | Kommagetrennte Liste von Volumes zum Ausschließen oder Einschließen (je nach Bedarf) aus der Ereignissammlung 
+
+
+| Überwachen Sie Den Ordnerzugriff | Wenn diese Option aktiviert ist, werden Ereignisse für die Überwachung des Ordnerzugriffs aktiviert. Beachten Sie, dass Ordner erstellen/umbenennen und löschen auch ohne diese Option überwacht werden. Wenn Sie diese Option aktivieren, erhöht sich die Anzahl der überwachten Ereignisse. 
+
+
+| Festlegen der Puffergröße für ONTAP-Senden | Legt die Größe des ONTAP FPolicy-Sendepuffers fest. Wenn eine ONTAP-Version vor 9.8p7 verwendet wird und Performance-Problem auftritt, kann die Puffergröße des ONTAP send geändert werden, um die ONTAP-Leistung zu verbessern. Wenden Sie sich an den NetApp Support, wenn diese Option nicht angezeigt wird und Sie sie erkunden möchten. 
+|===
+.Nachdem Sie fertig sind
+* Auf der Seite installierte Datensammler können Sie den Datensammler über das Optionsmenü rechts neben jedem Collector bearbeiten. Sie können den Datensammler neu starten oder die Konfigurationsattribute des Datensammlers bearbeiten.
+
+
+
+
+== Empfohlene Konfiguration für MetroCluster
+
+Für MetroCluster wird Folgendes empfohlen:
+
+. Verbinden Sie zwei Data Collectors – eine mit der Quell-SVM und eine andere mit der Ziel-SVM.
+. Die Datensammler sollten durch _Cluster IP_ verbunden werden.
+. Zu jedem Zeitpunkt sollte ein Datensammler in Betrieb sein, ein anderer wird im Fehler sein.
++
+Der aktuelle ‘running’ SVM-Datensammler wird als _running_ angezeigt. Der Datensammler der aktuellen ‘stovered’ SVM wird als _Error_ angezeigt.
+
+. Bei jeder Umschaltung ändert sich der Zustand des Datensammlers von ‘running’ zu ‘error’ und umgekehrt.
+. Es dauert bis zu zwei Minuten, bis der Datensammler den Fehlerstatus in den Ausführungszustand wechselt.
+
+
+
+
+== Service-Richtlinie
+
+Wenn Sie die Service Policy mit ONTAP *Version 9.9.1 oder neuer* verwenden, um eine Verbindung zum Data Source Collector herzustellen, ist der _Data-fpolicy-Client_-Dienst zusammen mit dem Datendienst _Data-nfs_ und/oder _Data-cifs_ erforderlich.
+
+Beispiel:
+
+....
+Testcluster-1::*> net int service-policy create -policy only_data_fpolicy -allowed-addresses 0.0.0.0/0 -vserver aniket_svm
+-services data-cifs,data-nfs,data,-core,data-fpolicy-client
+(network interface service-policy create)
+....
+In Versionen von ONTAP vor 9.9 muss _Data-fpolicy-Client_ nicht gesetzt werden.
+
+
+
+== Data Collector Wiedergeben/Anhalten
+
+2 neue Operationen werden jetzt auf dem Kebab-Menü des Sammlers angezeigt (PAUSE und WIEDERAUFNAHME).
+
+Wenn sich der Data Collector im Status _Running_ befindet, können Sie die Erfassung anhalten. Öffnen Sie das Menü „drei Punkte“ für den Collector und wählen Sie PAUSE. Während der Collector angehalten wird, werden keine Daten von ONTAP erfasst und keine Daten vom Collector an ONTAP gesendet. Dies bedeutet, dass keine FPolicy-Ereignisse vom ONTAP zum Datensammler und von dort zu Dateninfrastruktureinblicken übertragen werden.
+
+Wenn neue Volumes usw. auf ONTAP erstellt werden, während der Collector angehalten ist, erfasst Workload Security die Daten nicht, und diese Volumes usw. werden nicht in Dashboards oder Tabellen angezeigt.
+
+Beachten Sie Folgendes:
+
+* Das Löschen von Snapshots geschieht nicht gemäß den Einstellungen, die auf einem angehaltenen Collector konfiguriert wurden.
+* EMS-Ereignisse (wie ONTAP ARP) werden nicht auf einem angehaltenen Collector verarbeitet. Das heißt, wenn ONTAP einen Ransomware-Angriff identifiziert, kann Data Infrastructure Insights Workload Security dieses Ereignis nicht erfassen.
+* Für einen angehaltenen Collector werden KEINE Integritätsbenachrichtigungen-E-Mails gesendet.
+* Manuelle oder automatische Aktionen (wie Snapshot oder Benutzerblockierung) werden auf einem angehaltenen Collector nicht unterstützt.
+* Bei Agent- oder Collector-Upgrades, Neustart/Neustart der Agent-VM oder Neustart des Agent-Dienstes bleibt ein angehaltener Collector im Status „_Paused_“.
+* Wenn sich der Datensammler im Status _Error_ befindet, kann der Collector nicht in den Status _Paused_ geändert werden. Die Schaltfläche Pause wird nur aktiviert, wenn der Status des Collectors _Running_ lautet.
+* Wenn die Verbindung zum Agenten unterbrochen wird, kann der Collector nicht in den Status _Paused_ geändert werden. Der Collector geht in den Status _stopped_ und die Schaltfläche Pause wird deaktiviert.
+
+
+
+
+== Persistenter Speicher
+
+Persistenter Speicher wird von ONTAP 9.14.1 und höher unterstützt. Beachten Sie, dass die Anweisungen für Volume-Namen von ONTAP 9.14 bis 9.15 variieren.
+
+Persistenter Speicher kann durch Aktivieren des Kontrollkästchens auf der Seite Collector Edit/Add aktiviert werden. Nach dem Aktivieren des Kontrollkästchens wird ein Textfeld für die Annahme des Volume-Namens angezeigt. Der Volume-Name ist ein obligatorisches Feld für die Aktivierung von Persistent Store.
+
+* Für ONTAP 9.14.1 müssen Sie das Volume erstellen, bevor Sie die Funktion aktivieren, und den gleichen Namen im Feld „_Volume Name_“ eingeben. Die empfohlene Volume-Größe beträgt 16 GB.
+* Für ONTAP 9.15.1 wird das Volume automatisch mit 16 GB Größe vom Collector erstellt. Dabei wird der Name verwendet, der im Feld _Volume Name_ angegeben ist.
+
+
+Für Persistent Store sind bestimmte Berechtigungen erforderlich (einige oder alle dieser Berechtigungen sind möglicherweise bereits vorhanden):
+
+Clustermodus:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster-name>
+security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access readonly -vserver <cluster-name>
+....
+VServer-Modus:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <vserver-name>
+security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access readonly -vserver <vserver-name>
+....
+
+
+== Fehlerbehebung
+
+Tipps zur Fehlerbehebung finden Sie auf der link:troubleshooting_collector_svm.html["Fehlerbehebung für den SVM Collector"] Seite.

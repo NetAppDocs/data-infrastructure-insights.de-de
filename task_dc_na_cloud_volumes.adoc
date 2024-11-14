@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_cloud_volumes.html 
+summary: Konfiguration von NetApp Cloud Volumes Services für AWS Data Collector 
+keywords: data collector, NetApp, Cloud, AWS 
+---
+= NetApp Cloud Volumes Services für AWS Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Dieser Datensammler unterstützt die Bestandserfassung von NetApp Cloud Volumes Services für AWS Konfigurationen.
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Region Von Cloud Volumes | Region der NetApp Cloud Volumes Services für AWS 
+
+
+| API-Schlüssel | API-Schlüssel für Cloud Volumes 
+
+
+| Geheimer Schlüssel | Geheimen Schlüssel von Cloud Volumes 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| Ich habe einen Fehler wie diesen erhalten: 'Anfrage konnte nicht ausgeführt werden: Verbindung zu <AWS Region Endpunkt>:8080 [<AWS Region Endpunkt>/AWS Region Endpunkt IP>] fehlgeschlagen: Verbindung abgelaufen: \https://<AWS Region Endpunkt FQDN ABRUFEN>:8080/v1/Speicher/IPRanges HTTP/1.1' | Daslink:task_configure_acquisition_unit.html#proxy-configuration-2["Proxy"], das von Data Infrastructure Insights zur Kommunikation mit der Acquisition Unit verwendet wird, kommuniziert nicht zwischen Data Infrastructure Insights und dem Data Collector selbst. Hier sind einige Dinge, die Sie versuchen können: Stellen Sie sicher, dass die Erfassungseinheit in der Lage ist, den fqdn aufzulösen und den erforderlichen Port zu erreichen. Vergewissern Sie sich, dass kein Proxy erforderlich ist, um den angegebenen Endpunkt in der Fehlermeldung zu erreichen. Curl kann verwendet werden, um die Kommunikation zwischen der Akquisitionseinheit und dem Endpunkt zu testen. Stellen Sie sicher, dass Sie für diesen Test *nicht* einen Proxy verwenden. Beispiel: Root@acquisitionunit# curl -s -H Accept:Application/json -H "Content-type: Application/json" -H API-key:<API-Schlüssel in den Daten-Collector-Anmeldeinformationen verwendet -H secret-key:<SECRET key used in the Data Collector credentials> -X GET \https://<AWS Regional Endpoint>:8080/v1/Storage/IPRanges Siehe dieses link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Cloud_Insights_fails_discovery_for_Cloud_Volumes_Service_for_AWS["NetApp KB-Artikel"]. 
+|===
+Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

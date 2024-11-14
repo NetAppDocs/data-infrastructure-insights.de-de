@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: task_dc_brocade_fc_switch.html 
+keywords: data collector, Brocade, FC switch, 
+summary: Konfigurieren des Datensammlers von Brocade FC Switches. 
+---
+= Datensammler Brocade FC Switch
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Dateninfrastruktur Insights verwendet die SSH-Datenquelle (Brocade FC Switch), um eine Bestandsaufnahme für Brocade- oder umbenannte Switch-Geräte zu erkennen, auf denen die Firmware des Factsored Operating System (FOS) 4.2 und höher ausgeführt wird. Geräte werden sowohl im FC-Switch- als auch im Access Gateway-Modus unterstützt.
+
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Brocade FC Switch-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+
+
+| Switch | Switch 
+
+
+| Port | Port 
+
+
+| Virtual Fabric, Physische Fabric | Fabric 
+
+
+| Zone | Zone 
+
+
+| Logischer Switch | Logischer Switch 
+
+
+| Virtual Volume | Datenmenge 
+
+
+| LSAN-Zone zu erreichen | IVR-Zone zu erreichen 
+|===
+Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+
+
+
+== Anforderungen
+
+* Die Data Infrastructure Insights Acquisition Unit (AU) initiiert Verbindungen zu TCP-Port 22 auf Brocade-Switches, um Bestandsdaten zu sammeln. Die AU wird auch Verbindungen zu UDP Port 161 für die Sammlung von Leistungsdaten initiieren.
+* Es muss eine IP-Verbindung zu allen Switches in der Fabric vorhanden sein. Wenn Sie das Kontrollkästchen Alle Switches in der Fabric ermitteln aktivieren, identifiziert Data Infrastructure Insights alle Switches in der Fabric, benötigt jedoch IP-Konnektivität zu diesen zusätzlichen Switches, um sie zu erkennen.
+* Weltweit ist dasselbe Konto über alle Switches in der Fabric erforderlich. Sie können PuTTY (Open Source Terminal Emulator) verwenden, um den Zugriff zu bestätigen.
+* Die Ports 161 und 162 müssen offen sein für alle Switches im Fabric für SNMP-Performance-Abfragen.
+* SNMP Read-Only Community String
+
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Switch-IP | IP-Adresse oder vollständig qualifizierter Domänenname des EFC-Servers 
+
+
+| Benutzername | Benutzername für den Switch 
+
+
+| Passwort | Passwort für den Switch 
+
+
+| SNMP | SNMP-Version 
+
+
+| SNMP-Community-Zeichenfolge | SNMP read-only Community String verwendet, um auf den Switch zugreifen 
+
+
+| SNMP-Benutzername | SNMP-Benutzername 
+
+
+| SNMP-Kennwort | SNMP-Passwort 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Fabric-Name | Der Fabric-Name wird vom Data Collector gemeldet. Lassen Sie das Feld leer, um den Fabric-Namen als WWN zu melden. 
+
+
+| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 15. 
+
+
+| Ausgeschlossene Geräte | Kommagetrennte Liste der Geräte-IDs, die von der Abfrage ausgeschlossen werden sollen 
+
+
+| Admin-Domänen Aktiv | Wählen Sie, wenn Sie Admin-Domains verwenden 
+
+
+| MPR-Daten abrufen | Wählen Sie diese Option aus, um Routing-Daten von Ihrem Multiprotokoll-Router zu erhalten. 
+
+
+| Trapping Aktivieren | Wählen Sie diese Option aus, um die Erfassung beim Empfang eines SNMP-Trap vom Gerät zu aktivieren. Wenn Sie Trapping aktivieren auswählen, müssen Sie auch SNMP aktivieren. 
+
+
+| Mindestzeit zwischen Traps (s) | Mindestzeit zwischen durch Traps ausgelösten Erfassungsversuchen. Der Standardwert ist 10. 
+
+
+| Erkennung aller Switches in der Fabric | Wählen Sie diese Option, um alle Switches in der Fabric zu erkennen 
+
+
+| Wählen Sie „HBA vs. Zone Aliases bevorzugen“ | Wählen Sie, ob HBA- oder Zonenaliasen bevorzugt werden sollen 
+
+
+| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Der Standardwert ist 300. 
+
+
+| SNMP-Auth-Protokoll | SNMP-Authentifizierungsprotokoll (nur SNMP v3) 
+
+
+| SNMP-Datenschutzkennwort | SNMP-Datenschutzkennwort (nur SNMP v3) 
+
+
+| SNMP wird erneut verwendet | Anzahl der SNMP-Wiederholungsversuche 
+|===
+
+
+== Fehlerbehebung
+
+Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+
+
+
+=== Inventar
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie dies: 
+
+
+| Die Bestandsaufnahme der Brocade Datenquelle schlägt mit dem Fehler fehl: <date> <time> ERROR [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] Fehler 2 von 2: <datasource Name> [Interner Fehler] - das Modell für das Gerät konnte nicht generiert werden <IP>. Fehler beim Erkennen der Eingabeaufforderung ([Gerätename <Name>]: Fehler beim Generieren des Modells für Gerät <IP> nicht möglich. Fehler beim Erkennen der Eingabeaufforderung) | Das Problem kann verursacht werden, wenn der Brocade Switch mit einer Eingabeaufforderung zu lange zurückgibt und damit die Standardzeitüberschreitung von 5 Sekunden überschreitet. Versuchen Sie in den Einstellungen für die erweiterte Konfiguration des Datensammlers in Data Infrastructure Insights, das _SSH Banner Wait Timeout (sec)_ auf einen höheren Wert zu erhöhen. 
+
+
+| Fehler: „Data Infrastructure Insights received invalid Chassis role“ | Vergewissern Sie sich, dass dem in dieser Datenquelle konfigurierten Benutzer die Berechtigung für die Gehäuserolle erteilt wurde. 
+
+
+| Fehler: „IP-Adresse des Gehäuses nicht stimmt überein“ | Ändern Sie die Konfiguration der Datenquelle, um die Gehäuse-IP-Adresse zu verwenden. 
+
+
+| Sie erhalten eine Meldung, dass mehr als 1 Knoten am Access Gateway-Port angemeldet ist | Überprüfen Sie, ob das NPV-Gerät ordnungsgemäß funktioniert und dass alle verbundenen WWNs erwartet werden. Erwerben Sie das NPV-Gerät nicht direkt. Stattdessen erfasst die Akquisition des Core Fabric Switch die NPV Geräte-Daten. 
+
+
+| Performance-Erfassung schlägt mit „Timeout beim Senden der SNMP-Anforderung“ fehl. | Je nach Abfragevariablen und Switch-Konfiguration können einige Abfragen das Standard-Timeout überschreiten. link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Insights/Cloud_Insight_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Weitere Informationen"]. 
+|===
+Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: kubernetes_change_analytics.html 
+keywords: changes, management, analysis 
+summary: Das Verfolgen von Kubernetes-Änderungen ist einfacher denn je. 
+---
+= Kubernetes Change Analytics
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Kubernetes Change Analytics bietet Ihnen einen All-in-One-Überblick über die letzten Änderungen an Ihrer K8s-Umgebung. Warnmeldungen und Bereitstellungsstatus stehen Ihnen jederzeit zur Verfügung. Mit Change Analytics lassen sich jede Implementierungs- und Konfigurationsänderung nachverfolgen und mit dem Zustand und der Performance von Kubernetes-Services, Infrastruktur und Clustern korrelieren.
+
+Wie hilft die Änderungsanalyse?
+
+* In mandantenfähigen Kubernetes-Umgebungen können Ausfälle aufgrund falsch konfigurierter Änderungen auftreten. Change Analytics unterstützt dies durch die Bereitstellung eines zentralen Fensters zur Ansicht und Korrelation des Systemzustands von Workloads und Konfigurationsänderungen. Dies kann bei der Fehlerbehebung in dynamischen Kubernetes-Umgebungen helfen.
+
+
+Um Kubernetes Change Analytics anzuzeigen, navigieren Sie zu *Kubernetes > Change Analysis*.
+
+image:ChangeAnalytitcs_Main_Screen.png["Kubernetes Change Analytics Hauptbildschirm mit Warnungen und kritischen Alarmen, erfolgreichen und fehlgeschlagenen Implementierungen und den 3 wichtigsten Workloads, die Warnungen auslösen"].
+
+Die Seite wird automatisch aktualisiert, basierend auf dem aktuell ausgewählten Zeitbereich von Data Infrastructure Insights. Kleinere Zeitbereiche bedeuten eine häufigere Bildschirmerneuerung.
+
+
+
+== Filtern
+
+Wie bei allen Funktionen von Data Infrastructure Insights ist auch das Filtern der Änderungsliste intuitiv: Ganz oben auf der Seite können Sie Werte für Ihren Kubernetes-Cluster, Namespace oder Workload eingeben oder auswählen oder mit der Schaltfläche {+] eigene Filter hinzufügen.
+
+Wenn Sie nach unten zu einem bestimmten Cluster, Namespace und Workload filtern (zusammen mit allen anderen Filtern, die Sie festlegen), wird Ihnen ein Zeitplan für die Implementierungen und Warnungen für diesen Workload in diesem Namespace auf dem Cluster angezeigt. Vergrößern Sie die Ansicht weiter, indem Sie auf das Diagramm klicken und es ziehen, um einen bestimmten Zeitraum zu fokussieren.
+
+image:ChangeAnalytitcs_Filtered_Timeline.png["Beispiel für die Workload-Zeitleiste"]
+
+
+
+== Schnellstatus
+
+Unterhalb des Filterbereichs befinden sich eine Reihe von High-Level-Indikatoren. Auf der linken Seite ist die Anzahl der Warnungen (Warnung und kritisch). Diese Nummer enthält sowohl _Active_ als auch _Resolved_ Warnungen. Um nur _Active_-Warnungen anzuzeigen, setzen Sie einen Filter für „Status“ und wählen Sie „aktiv“.
+
+image:ChangeAnalytitcs_Alerts.png["Ändern Von Analysewarnungen"]
+
+Hier wird auch der Bereitstellungsstatus angezeigt. Auch hier wird standardmäßig die Anzahl der Bereitstellungen _started_, _complete_ und _failed_ angezeigt. Um nur _failed_-Bereitstellungen anzuzeigen, setzen Sie einen Filter für „Status“ und wählen Sie „failed“ aus.
+
+image:ChangeAnalytitcs_Deploys.png["Analytics-DSepils ändern"]
+
+Als Nächstes kommen die 3 wichtigsten Workloads mit den meisten Warnmeldungen zum Einsatz. Die Zahl in rot neben jedem Workload gibt die Anzahl der Warnmeldungen in Bezug auf diesen Workload an. Klicken Sie auf den Workload-Link, um ihn in Ihre Infrastruktur (Kubernetes Explorer), Abhängigkeiten (Workload Map) oder Protokollanalyse (Event Logs) zu untersuchen.
+
+image:ChangeAnalytitcs_ExploreWorkloadAlerts.png["Ändern Sie Die Optionen Für Die Analyse-Workload-Exploration"]
+
+
+
+== Detailfenster
+
+Durch Auswahl einer Änderung in der Liste wird ein Fenster geöffnet, in dem die Änderung näher beschrieben wird. Wenn Sie beispielsweise eine fehlgeschlagene Bereitstellung auswählen, wird eine Zusammenfassung der Bereitstellung mit Start- und Endzeiten, Dauer und dem Auslösungsort der Bereitstellung sowie Links zur Untersuchung dieser Ressourcen angezeigt. Außerdem werden der Grund für den Fehler, alle zugehörigen Änderungen und alle zugehörigen Ereignisse angezeigt.
+
+image:ChangeAnalytitcs_DeployDetailPanel.png["Fenster „Details Zum Bereitstellen Von Fehlern“"]
+
+Durch die Auswahl einer Warnmeldung erhalten Sie ebenfalls Details zur Warnmeldung, einschließlich des Monitors, der die Warnmeldung ausgelöst hat, sowie ein Diagramm mit einer visuellen Zeitleiste für die Warnmeldung.
