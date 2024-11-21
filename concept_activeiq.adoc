@@ -21,9 +21,6 @@ summary: Dateninfrastruktur Insights erfasst Risikodaten von NetApp Active IQ
 [role="lead"]
 NetApp link:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Active IQ"]bietet NetApp Kunden eine Reihe von Visualisierungen, Analysen und anderen Support-bezogenen Services für ihre Hardware-/Softwaresysteme. Die von Active IQ gemeldeten Daten können die Fehlerbehebung bei Systemproblemen verbessern und auch Einblicke in Optimierungs- und vorausschauende Analysen für Ihre Geräte bieten.
 
-
-NOTE: ActiveIQ ist in Data Infrastructure Insights Federal Edition nicht verfügbar.
-
 Data Infrastructure Insights erfasst *Risiken* für jedes NetApp Clustered Data ONTAP Storage-System, das von Active IQ überwacht und gemeldet wird. Die für die Speichersysteme gemeldeten Risiken werden von Data Infrastructure Insights im Rahmen der Datenerfassung von diesen Geräten automatisch erfasst. Sie müssen den entsprechenden Datensammler zu Data Infrastructure Insights hinzufügen, um Active IQ-Risikoinformationen zu erfassen.
 
 Die Einblicke in die Dateninfrastruktur zeigen keine Risikodaten für ONTAP Systeme an, die nicht von Active IQ überwacht und gemeldet werden.

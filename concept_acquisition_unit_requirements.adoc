@@ -73,10 +73,3 @@ Vorteile:
 Für jede „Ja“ Antwort oben empfiehlt es sich, 8 GB Arbeitsspeicher und 50 GB Festplattenspeicher zur AU hinzuzufügen. Wenn Sie also beispielsweise beide Fragen mit „Ja“ beantwortet haben, sollten Sie ein 24-GB-Speichersystem mit 150 GB oder mehr Festplattenspeicher implementieren. Unter Linux wird der Speicherplatz, der dem Protokollverzeichnis hinzugefügt werden soll, hinzugefügt.
 
 Wenn Sie weitere Fragen zur Dimensionierung benötigen, wenden Sie sich an den NetApp Support.
-
-
-
-== Zusätzliche Federal Edition-Anforderung
-
-* Für Acquisition Unit-Installationen in Data Infrastructure Insights Federal Edition-Clustern muss das zugrunde liegende Betriebssystem über eine gute Entropiequelle verfügen. Auf Linux-Systemen erfolgt dies typischerweise durch die Installation von _rng-Tools_ oder durch die Hardware-Zufallszahlengenerierung (RNG). Es liegt in der Verantwortung des Kunden, sicherzustellen, dass diese Anforderung auf der Maschine der Erfassungseinheit erfüllt wird.
-

@@ -639,9 +639,6 @@ Wenn Sie auf den Link in einem Widget mit einem Wert oder einem Gauge-Widget kli
 
 Wie Widgets mit einem Wert und einer Anzeige können Sie bedingte Formatierungen in TabellenWidgets festlegen, sodass Sie Daten mit Farben und/oder speziellen Symbolen hervorheben können.
 
-
-NOTE: Bedingte Formatierung ist derzeit in Data Infrastructure Insights Federal Edition nicht verfügbar.
-
 Mit Conditional Formatting können Sie Schwellenwerte auf Warnebene und kritische Ebene in den TabellenWidgets festlegen und hervorheben. Dadurch erhalten Sie sofortige Sichtbarkeit für Ausreißer und außergewöhnliche Datenpunkte.
 
 image:ConditionalFormattingExample.png["Beispiel Für Bedingte Formatierung"]
