@@ -19,11 +19,11 @@ keywords: Assets, landing page, filtering, context, related
 
 
 [role="lead"]
-Wenn Sie ein Widget auf der Landing Page eines Assets konfigurieren, können Sie die Filter _in-Context_ so einstellen, dass nur Objekte angezeigt werden, die direkt mit dem aktuellen Asset verknüpft sind. Wenn Sie ein Widget hinzufügen, werden standardmäßig _alle_ Objekte des ausgewählten Typs in Ihrer Umgebung angezeigt. Mit in-Context-Filtern können Sie nur die Daten anzeigen, die für Ihre aktuelle Anlage relevant sind.
+Wenn Sie ein Widget auf der Landing Page eines Assets konfigurieren, können Sie die Filter _in-Context_ so einstellen, dass nur Objekte angezeigt werden, die direkt mit dem aktuellen Asset verknüpft sind. Wenn Sie ein Widget hinzufügen, werden standardmäßig _alle_ Objekte des ausgewählten Typs auf Ihrer Serviceeinheit angezeigt. Mit in-Context-Filtern können Sie nur die Daten anzeigen, die für Ihre aktuelle Anlage relevant sind.
 
 Auf den meisten Asset-Landing-Pages können Sie über Widgets nach Objekten filtern, die mit dem aktuellen Asset verknüpft sind. In Filter-Dropdown-Menüs können Objekttypen, die ein Verknüpfungssymbol anzeigen, im Kontext mit dem aktuellen Asset gefiltert werden.
 
-Beispielsweise können Sie auf einer Storage Asset-Seite ein Balkendiagramm-Widget hinzufügen, um die wichtigsten IOPS nur für interne Volumes auf diesem Storage anzuzeigen. Standardmäßig werden beim Hinzufügen eines Widgets _alle_ interne Volumes in Ihrer Umgebung angezeigt.
+Beispielsweise können Sie auf einer Storage Asset-Seite ein Balkendiagramm-Widget hinzufügen, um die wichtigsten IOPS nur für interne Volumes auf diesem Storage anzuzeigen. Wenn Sie ein Widget hinzufügen, werden standardmäßig _all_ interne Volumes auf Ihrem Mandanten angezeigt.
 
 So zeigen Sie nur interne Volumes der aktuellen Storage-Ressourcen an:
 
@@ -46,6 +46,6 @@ Das Balkendiagramm zeigt nur die internen Volumes an, die sich auf der aktuellen
 
 Das Widget wird auf den Asset-Seiten für alle Speicherobjekte angezeigt. Wenn der in-Context-Link im Widget aktiviert ist, zeigt das Balkendiagramm Daten für interne Volumes an, die sich nur auf die aktuell angezeigte Speicherressource beziehen.
 
-Um die Verknüpfung der Objektdaten aufzuheben, bearbeiten Sie das Widget und klicken Sie auf das Verknüpfungssymbol neben dem Objekttyp. Der Link wird deaktiviert, und das Diagramm zeigt Daten für _alle_ Objekte in Ihrer Umgebung an.
+Um die Verknüpfung der Objektdaten aufzuheben, bearbeiten Sie das Widget und klicken Sie auf das Verknüpfungssymbol neben dem Objekttyp. Der Link wird deaktiviert, und das Diagramm zeigt Daten für _alle_ Objekte auf Ihrem Mandanten an.
 
 Mit können Sie auch link:concept_dashboard_features.html#variables["*Sondervariablen in Widgets*"]Asset-bezogene Informationen auf Landing Pages anzeigen.

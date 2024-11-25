@@ -25,7 +25,7 @@ Der Abschnitt „Benutzerdaten“ einer Asset-Seite wird angezeigt und ermöglic
 
 == Verwenden des Abschnitts „Benutzerdaten“ zum Zuweisen oder Ändern von Anwendungen
 
-Sie können Applikationen, die in Ihrer Umgebung ausgeführt werden, bestimmten Assets (Host, Virtual Machines, Volumes, interne Volumes, qtrees, Und Hypervisoren). Im Abschnitt „Benutzerdaten“ können Sie die Anwendungen hinzufügen, ändern oder entfernen, die einem Asset zugewiesen sind. Für alle diese Asset-Typen außer für Volumes können Sie mehr als eine Anwendung zuweisen.
+Sie können Applikationen, die auf Ihrem Mandanten ausgeführt werden, bestimmten Assets (Host, Virtual Machines, Volumes, interne Volumes, qtrees und Hypervisoren) zuweisen. Im Abschnitt „Benutzerdaten“ können Sie die Anwendungen hinzufügen, ändern oder entfernen, die einem Asset zugewiesen sind. Für alle diese Asset-Typen außer für Volumes können Sie mehr als eine Anwendung zuweisen.
 
 .Schritte
 . Suchen Sie eine Asset-Seite, indem Sie einen der folgenden Schritte ausführen:

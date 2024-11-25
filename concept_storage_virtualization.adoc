@@ -29,7 +29,7 @@ Eine der einfachsten Möglichkeiten zur Betrachtung Ihrer Storage-Virtualisierun
 
 image:StorageVirtualization_TableWidgetSettings.png["Einfache Abfrage zur Anzeige von Storage-virtualisierten Typen"]
 
-Das resultierende Tabellen-Widget zeigt Ihnen die _Standard_, _Backend_ und _Virtual_ Speicher in Ihrer Umgebung.
+Das resultierende Tabellen-Widget zeigt Ihnen die _Standard_, _Backend_ und _Virtual_ Speicher auf Ihrem Mandanten.
 
 image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tabelle mit virtualisierten Typen"]
 
@@ -45,7 +45,7 @@ image:StorageVirtualization_StorageSummary.png["Storage-Landing Page, auf der In
 
 === Vorhandene Landing Pages und Dashboards
 
-Beachten Sie, dass wenn Sie derzeit benutzerdefinierte Landing Pages oder Dashboards in Ihrer Umgebung haben, diese nicht automatisch alle Virtualisierungsinformationen standardmäßig anzeigen. Sie können jedoch jedes benutzerdefinierte Dashboard oder jede Landing Page _revert to Default_ (Sie müssen Ihre Anpassungen neu implementieren) oder die relevanten Widgets so ändern, dass sie die gewünschten Virtualisierungsattribute oder Metriken enthalten.
+Beachten Sie, dass wenn Sie derzeit benutzerdefinierte Landing Pages oder Dashboards auf Ihrem Mandanten haben, diese nicht automatisch alle Virtualisierungsinformationen standardmäßig anzeigen. Sie können jedoch jedes benutzerdefinierte Dashboard oder jede Landing Page _revert to Default_ (Sie müssen Ihre Anpassungen neu implementieren) oder die relevanten Widgets so ändern, dass sie die gewünschten Virtualisierungsattribute oder Metriken enthalten.
 
 _Auf Standard zurücksetzen_ ist in der oberen rechten Ecke eines benutzerdefinierten Dashboard- oder Landing Page-Bildschirms verfügbar.
 

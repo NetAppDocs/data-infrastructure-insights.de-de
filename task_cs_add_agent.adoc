@@ -19,7 +19,7 @@ summary: Hinzufügen von Workload Security Agents
 
 
 [role="lead"]
-Workload Security (ehemals Cloud Secure) erfasst Daten zu Benutzeraktivitäten mithilfe eines oder mehrerer Agenten. Mitarbeiter stellen Verbindungen zu Geräten in Ihrer Umgebung her und erfassen Daten, die zur Analyse an die SaaS-Ebene für die Workload-Sicherheit gesendet werden. Informationen zum Konfigurieren einer Agent-VM finden Sie unterlink:concept_cs_agent_requirements.html["Anforderungen An Den Agenten"].
+Workload Security (ehemals Cloud Secure) erfasst Daten zu Benutzeraktivitäten mithilfe eines oder mehrerer Agenten. Agenten stellen eine Verbindung zu Geräten auf Ihrem Mandanten her und sammeln Daten, die zur Analyse an die Workload Security SaaS-Schicht gesendet werden. Informationen zum Konfigurieren einer Agent-VM finden Sie unterlink:concept_cs_agent_requirements.html["Anforderungen An Den Agenten"].
 
 
 

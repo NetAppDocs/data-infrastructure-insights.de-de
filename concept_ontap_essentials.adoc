@@ -38,7 +38,7 @@ Wählen Sie zum Erkunden der Informationen *ONTAP Essentials* aus dem Hauptmenü
 
 image:OE_Overview.png["Übersichtskonsole zu ONTAP Essentials"]
 
-Das Dashboard *Übersicht* zeigt nützliche Informationen wie die Anzahl der Cluster in Ihrer Umgebung mit ihrer Gesamtkapazität und ihren Prozentwerten an Performance an. Außerdem werden Prognosedaten zur Anzahl der erwarteten Tage angezeigt, bis ihnen die Storage-Kapazität oder Performance-Kapazität nicht mehr genügend Speicherplatz zur Verfügung steht. Außerdem, wenn Controller in Ihrer Infrastruktur mit einer CPU von mehr als 65 % laufen - wodurch Ihr Cluster möglicherweise im Falle eines Failovers gefährdet wird - zeigt ONTAP Essentials diese als „Hot“ Controller an.
+Das Dashboard *Übersicht* zeigt nützliche Informationen wie die Anzahl der Cluster auf Ihrem Mandanten mit ihrer Gesamtkapazität und ihren Performance-Prozentsätzen an. Außerdem werden Prognosedaten zur Anzahl der erwarteten Tage angezeigt, bis ihnen die Storage-Kapazität oder Performance-Kapazität nicht mehr genügend Speicherplatz zur Verfügung steht. Außerdem, wenn Controller in Ihrer Infrastruktur mit einer CPU von mehr als 65 % laufen - wodurch Ihr Cluster möglicherweise im Falle eines Failovers gefährdet wird - zeigt ONTAP Essentials diese als „Hot“ Controller an.
 
 Informative Diagramme geben Ihnen einen Überblick über die Performance über einen längeren Zeitraum und über Ausfälle der Kapazitätsauslastung. Jede dieser Diagramme oder Datenpunkte kann als Ausgangspunkt für Untersuchungen oder Untersuchungen verwendet werden.
 
@@ -158,7 +158,7 @@ Details zur Ransomware-Bekämpfung zeigen, ob eine Storage-VM durch den Schutz v
 
 == Meldungen
 
-Hier können Sie die Active Alerts in Ihrer Umgebung anzeigen und potenzielle Probleme schnell auf den Blick nehmen. Wählen Sie die Registerkarte _aufgelöst_ aus, um die Warnmeldungen anzuzeigen, die behoben wurden.
+Hier können Sie die aktiven Warnmeldungen für Ihren Mandanten anzeigen und sich schnell potenzielle Probleme anzeigen lassen. Wählen Sie die Registerkarte _aufgelöst_ aus, um die Warnmeldungen anzuzeigen, die behoben wurden.
 
 image:OE_Alerts.png["Liste der ONTAP Essentials-Warnungen"]
 
@@ -184,7 +184,7 @@ image:ONTAP_Essentials_Alerts_Menu.png["Netzwerkmenü von ONTAP Essentials"] ima
 
 == Workloads
 
-Workloads auf LUNs/Volumes, NFS- oder SMB-Freigaben oder qtrees in Ihrer Umgebung anzeigen und erkunden.
+Anzeigen und Anzeigen von Workloads auf LUNs/Volumes, NFS- oder SMB-Freigaben oder qtrees auf Ihrem Mandanten.
 
 image:ONTAP_Essentials_Workloads_Menu.png["Menü „Workloads“"]
 

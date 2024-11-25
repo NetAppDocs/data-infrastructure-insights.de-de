@@ -182,7 +182,7 @@ Wenn die Meldung „Fehler vom Server (notfound)“ angezeigt wird, muss Ihr Bed
 
 === Proxy-Unterstützung Wird Konfiguriert
 
-Es gibt zwei Stellen, an denen Sie einen Proxy in Ihrer Umgebung verwenden können, um den Kubernetes Monitoring Operator zu installieren. Es kann sich um dieselben oder separate Proxy-Systeme handelt:
+An zwei Stellen können Sie einen Proxy für Ihren Mandanten verwenden, um den Kubernetes Monitoring Operator zu installieren. Es kann sich um dieselben oder separate Proxy-Systeme handelt:
 
 * Proxy wird während der Ausführung des Installationscode-Snippets (mit „Curl“) benötigt, um das System zu verbinden, auf dem das Snippet ausgeführt wird, mit Ihrer Data Infrastructure Insights-Umgebung
 * Der vom Kubernetes Ziel-Cluster benötigte Proxy für die Kommunikation mit der Insights Umgebung Ihrer Dateninfrastruktur ist erforderlich

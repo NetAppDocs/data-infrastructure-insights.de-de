@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: insights_shared_resources_under_stress.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: Anhand der Einblicke erhalten Sie einen Einblick, wie sich Ressourcen auf andere Ressourcen in Ihrer Umgebung auswirken. 
+summary: Sie erfahren, wie sich Ressourcen auf andere Ressourcen Ihres Mandanten auswirken. 
 ---
 = Einblicke: Shared Ressourcen Unter Stress
 :toc: macro
@@ -19,7 +19,7 @@ summary: Anhand der Einblicke erhalten Sie einen Einblick, wie sich Ressourcen a
 
 
 [role="lead"]
-Durch Workloads mit hohen Auswirkungen kann die Performance anderer Workloads in einer gemeinsamen Ressource reduziert werden. Dadurch wird die gemeinsam genutzte Ressource unter Druck. Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und Beeinträchtigungen Ihrer Umgebung untersuchen können.
+Durch Workloads mit hohen Auswirkungen kann die Performance anderer Workloads in einer gemeinsamen Ressource reduziert werden. Dadurch wird die gemeinsam genutzte Ressource unter Druck. Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und Auswirkungen auf Ihre Mandanten untersuchen können.
 
 
 
@@ -63,7 +63,7 @@ Unter den einzelnen Tabellen finden Sie eine Liste mit Workloads und/oder Ressou
 
 == Was muss ich tun, um Sättigung zu lösen?
 
-Es gibt eine Reihe von Schritten, die Sie ergreifen können, um die Wahrscheinlichkeit einer Sättigung in Ihrer Umgebung zu verringern oder zu beseitigen. Diese werden durch erweitern des Links *+Empfehlungen anzeigen* auf der Seite angezeigt. Hier sind ein paar Dinge, die Sie versuchen können.
+Es gibt eine Reihe von Maßnahmen, die Sie ergreifen können, um die Wahrscheinlichkeit der Sättigung auf Ihrem Mieter zu verringern oder zu beseitigen. Diese werden durch erweitern des Links *+Empfehlungen anzeigen* auf der Seite angezeigt. Hier sind ein paar Dinge, die Sie versuchen können.
 
 * Kunden mit hohen IOPS-Werten bewegen
 +

@@ -19,11 +19,11 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 
 [role="lead"]
-Mit Abfragen können Sie Ihr Netzwerk überwachen und Fehler beheben, indem Sie die Assets und Metriken in Ihrer Umgebung auf granularer Ebene auf der Grundlage von vom Benutzer ausgewählten Kriterien (z. B. Anmerkungen) durchsuchen.
+Abfragen ermöglichen Ihnen die Überwachung und das Troubleshooting im Netzwerk, indem Sie die Assets und Kennzahlen Ihres Mandanten auf granularer Ebene durchsuchen, die auf vom Benutzer ausgewählten Kriterien (wie z. B. Anmerkungen) basiert.
 
 Beachten Sie, dass Anmerkungsregeln, die Assets automatisch Anmerkungen zuweisen, _eine Abfrage erfordern_.
 
-Sie können die physischen oder virtuellen Inventarressourcen (und die zugehörigen Metriken) in Ihrer Umgebung abfragen oder die Metriken, die bei der Integration wie Kubernetes oder ONTAP Advanced Data bereitgestellt werden.
+Sie können die physischen oder virtuellen Inventarressourcen (und die zugehörigen Kennzahlen) für Ihren Mandanten oder die Integrationsmetriken wie Kubernetes oder ONTAP Advanced Data abfragen.
 
 
 

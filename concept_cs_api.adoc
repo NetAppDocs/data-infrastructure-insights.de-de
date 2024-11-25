@@ -26,7 +26,7 @@ Anforderungen für API-Zugriff:
 
 == API-Dokumentation (Swagger)
 
-Die neuesten API-Informationen finden Sie, indem Sie sich bei Workload Security anmelden und zu *Admin > API Access* navigieren. Klicken Sie auf den Link *API Documentation*. Die API-Dokumentation ist Swagger-basiert, die eine kurze Beschreibung und Verwendungsinformationen für die API enthält und Sie können es in Ihrer Umgebung ausprobieren.
+Die neuesten API-Informationen finden Sie, indem Sie sich bei Workload Security anmelden und zu *Admin > API Access* navigieren. Klicken Sie auf den Link *API Documentation*. Die API-Dokumentation ist Swagger-basiert, die eine kurze Beschreibung und Nutzungsinformationen für die API bietet und es Ihnen ermöglicht, es auf Ihrem Mandanten auszuprobieren.
 
 
 NOTE: Wenn Sie die Forensics Activity API aufrufen, verwenden Sie die API cloudSecure_forensics.activities.*v2*. Wenn Sie mehrere Aufrufe zu dieser API ausführen, stellen Sie sicher, dass die Aufrufe nacheinander und nicht parallel erfolgen. Mehrere parallele Aufrufe können dazu führen, dass die API-Zeit abgeht.
@@ -50,7 +50,7 @@ NOTE: Ihr Token kann nur während des Erstellungsvorgangs in die Zwischenablage 
 
 Sie können Token deaktivieren, aktivieren und widerrufen. Deaktivierte Token können aktiviert werden.
 
-Tokens gewähren aus Kundensicht allgemeinen Zugang zu APIs und verwalten den Zugriff auf APIs im Umfang ihrer eigenen Umgebung.
+Token gewähren allgemeinen Zugriff auf APIs aus Kundensicht, indem sie den Zugriff auf APIs im Rahmen ihres eigenen Mandanten verwalten.
 
 Die Anwendung erhält ein Zugriffstoken, nachdem ein Benutzer den Zugriff erfolgreich authentifiziert und autorisiert hat, und übergibt das Access Token dann als Berechtigung, wenn es die Ziel-API anruft. Das übergebene Token informiert die API, dass der Inhaber des Tokens berechtigt ist, auf die API zuzugreifen und bestimmte Aktionen basierend auf dem Umfang auszuführen, den während der Autorisierung gewährt wurde.
 

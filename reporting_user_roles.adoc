@@ -16,7 +16,7 @@ keywords: reporting, cognos, data warehouse, dwh, users, roles, user roles
 
 
 [role="lead"]
-Wenn Sie über Data Infrastructure Insights Premium Edition mit Reporting verfügen, verfügt jeder Data Infrastructure Insights-Benutzer in Ihrer Umgebung über eine Single Sign-On (SSO)-Anmeldung bei der Reporting-Anwendung (z. B. Cognos). Klicken Sie einfach im Menü auf den Link *Berichte* und Sie werden automatisch bei Reporting angemeldet.
+Wenn Sie über Data Infrastructure Insights Premium Edition mit Reporting verfügen, verfügt jeder Benutzer von Data Infrastructure Insights in Ihrem Mandanten auch über eine Single Sign-On (SSO)-Anmeldung bei der Reporting-Anwendung (z. B. Cognos). Klicken Sie einfach im Menü auf den Link *Berichte* und Sie werden automatisch bei Reporting angemeldet.
 
 Ihre Benutzerrolle in Data Infrastructure Insights bestimmt Ihre Reporting-Benutzerrolle:
 
@@ -91,7 +91,7 @@ NOTE: Wenn Sie Ihre Benutzer-E-Mail-Einstellungen in Data Infrastructure Insight
 
 === Welche Schritte sollte ich Unternehmen, um meine vorhandene Umgebung auf die Aktivierung von SSO vorzubereiten?
 
-Um sicherzustellen, dass Ihre Berichte erhalten bleiben, migrieren Sie alle Berichte von _My Content_ zu _Team Content_. Gehen Sie dabei wie folgt vor. Vor der Aktivierung von SSO in Ihrer Umgebung sind folgende Schritte erforderlich:
+Um sicherzustellen, dass Ihre Berichte erhalten bleiben, migrieren Sie alle Berichte von _My Content_ zu _Team Content_. Gehen Sie dabei wie folgt vor. Sie müssen dies tun, bevor Sie SSO für Ihren Mandanten aktivieren:
 
 . Navigieren Sie zu *Menü > Inhalt*
 

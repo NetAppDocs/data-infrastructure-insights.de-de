@@ -39,7 +39,7 @@ Die neuesten API-Informationen finden Sie, indem Sie sich bei Data Infrastructur
 
 image:API_Swagger_Types.png["API-Typen"]
 
-Die API-Dokumentation ist Swagger-basiert, die eine kurze Beschreibung und Verwendungsinformationen für die API, und ermöglicht es Ihnen, es in Ihrer Umgebung zu testen. Abhängig von Ihrer Benutzerrolle und/oder Data Infrastructure Insights Edition können die für Sie verfügbaren API-Typen variieren.
+Die API-Dokumentation basiert auf Swagger und bietet eine kurze Beschreibung und Nutzungsinformationen für die API. Sie können sie in Ihrem Mandanten ausprobieren. Abhängig von Ihrer Benutzerrolle und/oder Data Infrastructure Insights Edition können die für Sie verfügbaren API-Typen variieren.
 
 image:API_Swagger_Example.png["Beispiel für API-Swagger"]
 
@@ -195,11 +195,9 @@ Leistungsübersichten stehen für diese Zählertypen zur Verfügung:
 
 == Kennzahlen Für Die Objekt-Performance
 
-Die API kann detaillierte Metriken für Objekte in Ihrer Umgebung zurückgeben, z. B.:
+Die API kann detaillierte Metriken für Objekte in Ihrem Mandanten zurückgeben, z. B.:
 
 * Storage-Performance-Kennzahlen wie IOPS (Anzahl der ein-/Ausgabe-Anfragen pro Sekunde), Latenz oder Durchsatz.
-
-
 * Kennzahlen zur Switch-Performance, z. B. Datenverkehrsnutzung, BB Credit Zero Daten oder Port-Fehler.
 
 

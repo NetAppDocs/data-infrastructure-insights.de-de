@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_cloud_insights_onboarding_1.html 
-summary: Melden Sie sich für Einblicke in die Dateninfrastruktur an und erstellen Sie Ihre Umgebung. 
+summary: Melden Sie sich für Data Infrastructure Insights an und erstellen Sie Ihren Mandanten. 
 keywords: onboarding, new user 
 ---
 = Einblicke Aus Die Dateninfrastruktur
@@ -49,11 +49,11 @@ image:BlueXP_CloudInsights.png["Dateninfrastruktur Insights kostenlos testen auf
 
 == Starten Sie Ihre Data Infrastructure Insights kostenlos
 
-Wenn Sie sich zum ersten Mal bei Data Infrastructure Insights anmelden, klicken Sie unter Data Infrastructure Insights auf *kostenlose Testversion starten*. Data Infrastructure Insights unterstützt Sie beim Aufbau Ihrer Unternehmensumgebung und zeigt Ihnen, welche Region Sie für die gewünschte Umgebung auswählen.
+Wenn Sie sich zum ersten Mal bei Data Infrastructure Insights anmelden, klicken Sie unter Data Infrastructure Insights auf *kostenlose Testversion starten*. Data Infrastructure Insights unterstützt Sie dabei, den Mandanten Ihres Unternehmens zu erstellen und auch die Region auszuwählen, in der sich Ihr Mandant befinden soll.
 
-image:trial_region_selector.png["Auswahl der Region, in der Sie Ihre Data Infrastructure Insights-Umgebung hosten sollen"]
+image:trial_region_selector.png["Auswahl der Region, in der der Mandant „Data Infrastructure Insights“ gehostet werden soll"]
 
-Nach Abschluss der Erstellung Ihrer Umgebung können Sie Ihre BlueXP  Zugangsdaten verwenden, um sich anzumelden und Ihre kostenlose 30-Tage-Testversion von Data Infrastructure Insights zu starten. Entdecken Sie bei diesem Testlauf die Features, die Data Infrastructure Insights zu bieten hat.
+Sobald die Erstellung Ihres Mandanten abgeschlossen ist, können Sie mit Ihren BlueXP  Zugangsdaten anmelden und die kostenlose 30-Tage-Testversion von Data Infrastructure Insights starten. Entdecken Sie bei diesem Testlauf die Features, die Data Infrastructure Insights zu bieten hat.
 
 Während der kostenlosen Testversion können Sie link:concept_subscribing_to_cloud_insights.html["Starten Sie Ihr Abonnement"]Data Infrastructure Insights jederzeit zur Verfügung stellen. Nach dem Abonnement können Sie die Funktionen von Data Infrastructure Insights basierend auf Ihrem aktuellen Abonnement nutzen.
 
@@ -61,17 +61,17 @@ Während der kostenlosen Testversion können Sie link:concept_subscribing_to_clo
 
 == Melden Sie sich an und gehen Sie
 
-Sobald Ihre Umgebung erstellt wurde, können Sie sich jederzeit einfach im NetApp BlueXP -Portal anmelden und auf *Gehe zu Dateninfrastrukturinformationen* klicken. Sie gelangen direkt zu Ihrer Data Infrastructure Insights Umgebung.
+Sobald Ihr Mandant erstellt wurde, können Sie sich jederzeit einfach im NetApp BlueXP -Portal anmelden und auf *Gehe zu Dateninfrastrukturinformationen* klicken. Sie werden direkt zu Ihrem Data Infrastructure Insights Mandanten weitergeleitet.
 
-Sie können einen Browser auch direkt öffnen, um die URL Ihrer Data Infrastructure Insights Umgebung aufzurufen, zum Beispiel:
+Sie können einen Browser auch direkt öffnen, um Ihre Mandanten-URL zu Data Infrastructure Insights aufzurufen, z. B.:
 
- \https://<environment-prefix>.c01.cloudinsights.netapp.com/
+ \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
 Die URL wird auch in die Einladungs-E-Mail jedes Benutzers für einfachen Zugriff und Lesezeichen enthalten. Wenn der Benutzer noch nicht bei BlueXP angemeldet ist, wird er zur Anmeldung aufgefordert.
 
 
-NOTE: Neue Benutzer müssen sich nach wie vor für den Zugriff auf BlueXP registrieren, bevor sie auf die URL ihrer Umgebung zugreifen können.
+NOTE: Neue Benutzer müssen sich nach wie vor für den Zugriff auf BlueXP  registrieren, bevor sie auf ihre Mandanten-URL zugreifen können.
 
-Wenn Sie sich zum ersten Mal in einer neuen Umgebung anmelden, werden Sie durch die Einrichtung von bis geführtlink:task_getting_started_with_cloud_insights.html["*Datensammlung beginnen*"].
+Wenn Sie sich zum ersten Mal bei einem neuen Mieter anmelden, werden Sie durch die Einrichtung von bis geführtlink:task_getting_started_with_cloud_insights.html["*Datensammlung beginnen*"].
 
 
 

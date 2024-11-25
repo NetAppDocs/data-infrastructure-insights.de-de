@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_install_manual_au.html 
 keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving, manual, AU, Patch 
-summary: Data Infrastructure Insights kann so konfiguriert werden, dass AU-Software manuell aktualisiert werden kann, sodass Sie mehr Kontrolle über die in Ihrer Umgebung installierte Software haben. 
+summary: Data Infrastructure Insights kann so konfiguriert werden, dass die AU-Software manuell aktualisiert werden kann, sodass die auf dem Mandanten installierte Software besser unter Kontrolle bleibt. 
 ---
 = Manuelle Installation Der Acquisition Unit-Software
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: Data Infrastructure Insights kann so konfiguriert werden, dass AU-Softw
 
 
 [role="lead"]
-Standardmäßig aktualisiert Data Infrastructure Insights die Acquisition Unit (AU)-Software automatisch, wenn Updates bereitgestellt werden. In sicheren kontrollierten Umgebungen ist eine automatische Aktualisierung jedoch möglicherweise nicht möglich oder nicht gewünscht. In diesen Fällen kann Data Infrastructure Insights so konfiguriert werden, dass AU-Software manuell aktualisiert werden kann, sodass Sie mehr Kontrolle über die in Ihrer Umgebung installierte Software haben.
+Standardmäßig aktualisiert Data Infrastructure Insights die Acquisition Unit (AU)-Software automatisch, wenn Updates bereitgestellt werden. In sicheren kontrollierten Umgebungen ist eine automatische Aktualisierung jedoch möglicherweise nicht möglich oder nicht gewünscht. In diesen Fällen kann Data Infrastructure Insights so konfiguriert werden, dass die AU-Software manuell aktualisiert werden kann, sodass Sie mehr Kontrolle über die auf Ihrem Mandanten installierte Software haben.
 
 Führen Sie die folgenden Schritte durch, um die AU-Software manuell herunterzuladen und zu installieren. Data Infrastructure Insights bietet eine hilfreiche Swagger-Dokumentationsseite, die Sie für viele dieser Schritte verwenden können, oder Sie können Ihr eigenes API-Skript/-Befehle verwenden. Gehen Sie zu Admin > API-Zugriff und klicken Sie auf den Link „API Documentation“.
 

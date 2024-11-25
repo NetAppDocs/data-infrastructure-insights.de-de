@@ -27,7 +27,7 @@ Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von Cons
 
 . Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie Konsul.
 +
-Wenn Sie keinen Agenten für die Sammlung konfiguriert haben, werden Sie in Ihrer Umgebung zu aufgefordertlink:task_config_telegraf_agent.html["Installieren Sie einen Agenten"].
+Wenn Sie keinen Agenten für die Sammlung konfiguriert haben, werden Sie auf Ihrem Mandanten zu aufgefordertlink:task_config_telegraf_agent.html["Installieren Sie einen Agenten"].
 
 +
 Wenn Sie bereits einen Agenten konfiguriert haben, wählen Sie das entsprechende Betriebssystem oder die entsprechende Plattform aus, und klicken Sie auf *Weiter*.

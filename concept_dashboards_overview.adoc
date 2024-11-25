@@ -104,8 +104,8 @@ Für detailliertere Erläuterungen zu diesen und anderen Dashboard-Funktionen, l
 
 == Einrichten eines Dashboards als Startseite
 
-Sie können wählen, welches Dashboard als *Startseite* Ihrer Umgebung eingestellt werden soll. Verwenden Sie dazu eine der folgenden Methoden:
+Sie können mit einer der folgenden Methoden wählen, welches Dashboard als *Startseite* Ihres Mandanten eingestellt werden soll:
 
-* Gehen Sie zu *Dashboards > Alle Dashboards anzeigen*, um die Liste der Dashboards in Ihrer Umgebung anzuzeigen. Klicken Sie auf das Optionsmenü rechts neben dem gewünschten Dashboard und wählen Sie *als Startseite festlegen*.
+* Gehen Sie zu *Dashboards > Alle Dashboards anzeigen*, um die Liste der Dashboards auf Ihrem Mandanten anzuzeigen. Klicken Sie auf das Optionsmenü rechts neben dem gewünschten Dashboard und wählen Sie *als Startseite festlegen*.
 * Klicken Sie in der Liste auf ein Dashboard, um das Dashboard zu öffnen. Klicken Sie in der oberen Ecke auf das Dropdown-Menü und wählen Sie *als Startseite festlegen*.
 

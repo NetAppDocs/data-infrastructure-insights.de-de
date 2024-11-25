@@ -64,7 +64,7 @@ Die Standardisierung, die Gemeinsamkeit und Terminologie bei Plattformen und Tec
 
 == Unterstützt Data Infrastructure Insights Fibre Channel Switches?
 
-Ja, zusätzlich zum Erfassen von Daten aus Storage-Ressourcen erfasst Data Infrastructure Insights auch Inventar- und Performance-Daten von Cisco-, Brocade- und QLogic-Switches in Ihrer Umgebung.
+Ja, neben der Erfassung von Daten aus Storage-Ressourcen erfasst Data Infrastructure Insights auch Inventar- und Performance-Daten von Cisco-, Brocade- und QLogic-Switches auf Ihrem Mandanten.
 
 
 

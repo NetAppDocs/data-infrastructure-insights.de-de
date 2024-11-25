@@ -21,7 +21,7 @@ summary: Auf der Kubernetes-Landing Page wird erläutert
 [role="lead"]
 Der Data Infrastructure Insights Kubernetes Explorer ist ein leistungsstarkes Tool zum Anzeigen des Gesamtzustands und der Auslastung Ihrer Kubernetes-Cluster. Hier können Sie ganz einfach detaillierte Untersuchungsbereiche aufschlüsseln.
 
-Durch Klicken auf *Dashboards > Kubernetes Explorer* wird die Listenseite für Kubernetes-Cluster geöffnet. Diese Übersichtsseite enthält Tabellen der Kubernetes Cluster in Ihrer Umgebung.
+Durch Klicken auf *Dashboards > Kubernetes Explorer* wird die Listenseite für Kubernetes-Cluster geöffnet. Diese Übersichtsseite enthält eine Tabelle der Kubernetes-Cluster auf Ihrem Mandanten.
 
 image:Kubernetes_List_Page_new.png["Listenseite für Kubernetes"]
 
@@ -29,7 +29,7 @@ image:Kubernetes_List_Page_new.png["Listenseite für Kubernetes"]
 
 === Cluster-Liste
 
-In der Cluster-Liste werden für jedes Cluster in Ihrer Umgebung die folgenden Informationen angezeigt:
+In der Cluster-Liste werden die folgenden Informationen zu jedem Cluster des Mandanten angezeigt:
 
 * Cluster *Name*. Wenn Sie auf einen Cluster-Namen klicken, wird das  für dieses Cluster geöffnetlink:kubernetes_cluster_detail.html["*Detailseite*"].
 * *Sättigung* Prozentsätze. „Gesamteinlagerung“ entspricht dem höchsten Wert für CPU, Speicher oder Speichersättigung.

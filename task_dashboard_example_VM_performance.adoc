@@ -19,7 +19,7 @@ keywords: dashboard, widget, custom, example, virtual machine, vm, performance
 
 
 [role="lead"]
-IT-Abteilungen stehen heute vor zahlreichen Herausforderungen. Von Administratoren muss mit weniger Aufwand mehr erreicht werden, und eine vollständige Übersicht über dynamische Datacenter ist daher ein muss. In diesem Beispiel zeigen wir Ihnen, wie Sie ein Dashboard mit Widgets erstellen, die Ihnen betriebliche Einblicke in die Performance der Virtual Machine (VM) in Ihrer Umgebung geben. Wenn Sie diesem Beispiel folgen und Widgets erstellen, um Ihre spezifischen Anforderungen zu erfüllen, können Sie beispielsweise die Performance von Back-End-Storage im Vergleich zur Frontend-Performance der Virtual Machines oder die Anzeige von VM-Latenz gegenüber I/O-Anforderungen visualisieren.
+IT-Abteilungen stehen heute vor zahlreichen Herausforderungen. Von Administratoren muss mit weniger Aufwand mehr erreicht werden, und eine vollständige Übersicht über dynamische Datacenter ist daher ein muss. In diesem Beispiel zeigen wir Ihnen, wie Sie ein Dashboard mit Widgets erstellen, die Ihnen betriebliche Einblicke in die Performance der virtuellen Maschine (VM) auf Ihrem Mandanten geben. Wenn Sie diesem Beispiel folgen und Widgets erstellen, um Ihre spezifischen Anforderungen zu erfüllen, können Sie beispielsweise die Performance von Back-End-Storage im Vergleich zur Frontend-Performance der Virtual Machines oder die Anzeige von VM-Latenz gegenüber I/O-Anforderungen visualisieren.
 
 .Über diese Aufgabe
 Hier werden wir ein Dashboard für die Performance von virtuellen Maschinen erstellen, das Folgendes enthält:
@@ -43,7 +43,7 @@ Die Seite *Neues Dashboard* wird geöffnet.
 . Beginnen wir mit dem Hinzufügen unserer Widgets. Klicken Sie bei Bedarf auf das Symbol *Bearbeiten*, um den Bearbeitungsmodus zu aktivieren.
 . Klicken Sie auf das Symbol * Widget hinzufügen* und wählen Sie *Tabelle*, um dem Dashboard ein neues TabellenWidget hinzuzufügen.
 +
-Das Dialogfeld Widget bearbeiten wird geöffnet. Die angezeigten Standarddaten sind für alle Speicher in Ihrer Umgebung.
+Das Dialogfeld Widget bearbeiten wird geöffnet. Die Standarddaten werden für alle Speicher auf Ihrem Mandanten angezeigt.
 
 
 
@@ -52,7 +52,7 @@ image:VMDashboard-TableWidget1.png["Widget „Tabelle bearbeiten“"]
 . Wir können dieses Widget anpassen. Löschen Sie im Feld Name oben „Widget 1“ und geben Sie „Virtual Machine Performance table“ ein.
 . Klicken Sie auf das Dropdown-Menü Asset type und ändern Sie _Storage_ zu _Virtual Machine_.
 +
-Die Änderungen an den Tabellendaten werden angezeigt, wenn alle Virtual Machines in Ihrer Umgebung angezeigt werden.
+Die Tabellendaten ändern sich, um alle virtuellen Maschinen auf dem Mandanten anzuzeigen.
 
 . Fügen wir der Tabelle einige Spalten hinzu. Klicken Sie rechts auf das Symbol „Gear“, und wählen Sie „_Hypervisor Name_, _IOPS - Total_, and _Latenz - Total_“ aus. Sie können auch versuchen, den Namen in die Suche einzugeben, um das gewünschte Feld schnell anzuzeigen.
 +

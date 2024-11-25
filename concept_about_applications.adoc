@@ -13,11 +13,11 @@ summary: Wenn Sie sich über die Applikationen in der Umgebung Ihres Unternehmen
 :revdate: Understanding the applications used in your company's environment helps you to keep track of asset usage and cost.
 
 
-Bevor Sie Daten zu den in Ihrer Umgebung ausgeführten Applikationen nachverfolgen können, müssen Sie zunächst diese Applikationen definieren und sie den entsprechenden Assets zuordnen. Applikationen können folgenden Assets zugewiesen werden: Hosts, virtuelle Maschinen, Volumes, interne Volumes, qtrees, Freigaben und Hypervisoren:
+Bevor Sie die Daten verfolgen können, die mit den auf Ihrem Mandanten ausgeführten Anwendungen verknüpft sind, müssen Sie zunächst diese Anwendungen definieren und sie den entsprechenden Anlagen zuordnen. Applikationen können folgenden Assets zugewiesen werden: Hosts, virtuelle Maschinen, Volumes, interne Volumes, qtrees, Freigaben und Hypervisoren:
 
 Dieses Thema enthält ein Beispiel für die Verfolgung der Verwendung virtueller Maschinen, die das Marketingteam für seine Exchange-E-Mail verwendet.
 
-Möglicherweise möchten Sie eine Tabelle ähnlich der folgenden erstellen, um die in Ihrer Umgebung verwendeten Applikationen zu identifizieren und die Gruppe oder Geschäftseinheit mit den jeweiligen Applikationen zu notieren.
+Möglicherweise möchten Sie eine Tabelle ähnlich der folgenden erstellen, um Applikationen zu identifizieren, die auf dem Mandanten verwendet werden, und um sich die Gruppe oder Geschäftseinheit, die die einzelnen Applikationen verwendet, notieren.
 
 [cols="5*"]
 |===

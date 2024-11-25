@@ -31,7 +31,7 @@ Eine Reihe von Einsichten stehen zur Verfügung. Navigieren Sie zu *Dashboards >
 
 === Unter Stress Abbauen
 
-Durch Workloads mit hohen Auswirkungen kann die Performance anderer Workloads in einer gemeinsamen Ressource reduziert werden. Dadurch wird die gemeinsam genutzte Ressource unter Druck. Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und Beeinträchtigungen Ihrer Umgebung untersuchen können. link:insights_shared_resources_under_stress.html["Weitere Informationen"]
+Durch Workloads mit hohen Auswirkungen kann die Performance anderer Workloads in einer gemeinsamen Ressource reduziert werden. Dadurch wird die gemeinsam genutzte Ressource unter Druck. Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und Auswirkungen auf Ihre Mandanten untersuchen können. link:insights_shared_resources_under_stress.html["Weitere Informationen"]
 
 
 

@@ -38,7 +38,7 @@ Wenn Sie beispielsweise den Gerätekennungsprozess nicht abschließen, sind die 
 Bevor Sie Ihre Berichte entwerfen, führen Sie die folgenden Aufgaben aus:
 
 * Alle  richtig konfigurierenlink:task_configure_data_collectors.html["Datensammler"].
-* Geben Sie Annotationen (z. B. Tiers, Datacenter und Geschäftsbereiche) auf Geräten und Ressourcen in Ihrer Umgebung ein. Vor der Berichterstellung ist es von Vorteil, dass die Annotationen stabil sind, da in Data Infrastructure Insights Reporting Verlaufsdaten erfasst werden.
+* Geben Sie Anmerkungen (wie Tiering, Datacenter und Geschäftseinheiten) zu Geräten und Ressourcen des Mandanten ein. Vor der Berichterstellung ist es von Vorteil, dass die Annotationen stabil sind, da in Data Infrastructure Insights Reporting Verlaufsdaten erfasst werden.
 
 
 
@@ -194,7 +194,7 @@ Die Kapazitäten im VM-Kapazitätsdatenmodell werden von virtuellen Festplatten 
 
 ==== Datenmodell für Volume-Kapazität
 
-Ermöglicht die Analyse sämtlicher Volumes in Ihrer Umgebung und die Organisation von Daten nach Anbieter, Modell, Tier, Service Level und Datacenter.
+Ermöglicht die Analyse aller Aspekte der Volumes des Mandanten und die Organisation der Daten nach Anbieter, Modell, Tier, Service Level und Datacenter.
 
 Sie können die Kapazität für verwaiste Volumes, ungenutzte Volumes und Datensicherungs-Volumes (zur Replizierung genutzt) anzeigen. Außerdem können Sie unterschiedliche Volume-Technologien (iSCSI oder FC) sehen und virtuelle Volumes mit nicht-virtuellen Volumes vergleichen, um Probleme bei der Array-Virtualisierung zu beheben.
 

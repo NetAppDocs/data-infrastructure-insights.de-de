@@ -19,7 +19,7 @@ summary: Anhand dieser Informationen können Sie vorhersagen, wann Kubernetes Sp
 
 
 [role="lead"]
-Speicherplatzbelegung in Ihrer Umgebung ist nie eine gute Situation. Mit Einblick in die Dateninfrastruktur können Sie die benötigte Zeit vorhersagen, bevor die persistenten Kubernetes-Volumes voll werden.
+Speicherplatzbedarf auf Ihrem Mieter ist nie eine gute Situation. Mit Einblick in die Dateninfrastruktur können Sie die benötigte Zeit vorhersagen, bevor die persistenten Kubernetes-Volumes voll werden.
 
 Die _Kubernetes Namesaces sind nicht mehr genügend Speicherplatz für Insight. Sie erhalten eine Übersicht über Workloads auf Ihren Kubernetes-Namespaces, die Gefahr laufen, dass der Speicherplatz zu knapp wird. Eine Schätzung für die verbleibende Anzahl an Tagen, bevor jedes persistente Volume voll wird.
 

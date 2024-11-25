@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_create_application.html 
-summary: Sie definieren Applikationen, die Sie dann nach Bedarf auf Assets in Ihrer Umgebung anwenden. 
+summary: Sie definieren Anwendungen, die Sie dann bei Bedarf auf Anlagen auf Ihrem Mandanten anwenden. 
 keywords: application, create application, 
 ---
 = Anwendungen Werden Erstellt
@@ -16,7 +16,7 @@ keywords: application, create application,
 
 
 [role="lead"]
-Zum Nachverfolgen von Daten, die mit bestimmten, in Ihrer Umgebung ausgeführten Applikationen verknüpft sind, können Sie die Applikationen in Data Infrastructure Insights definieren.
+Zum Nachverfolgen von Daten, die bestimmten auf dem Mandanten ausgeführten Applikationen zugeordnet sind, können Sie die Applikationen in Data Infrastructure Insights definieren.
 
 .Bevor Sie beginnen
 Wenn Sie die Anwendung einer Geschäftseinheit zuordnen möchten, müssen Sie die Geschäftseinheit erstellen, bevor Sie die Anwendung definieren.

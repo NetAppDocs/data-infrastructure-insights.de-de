@@ -19,7 +19,7 @@ keywords: query, queries
 
 
 [role="lead"]
-Mit Abfragen können Sie die Assets in Ihrer Umgebung auf granularer Ebene durchsuchen und so nach den gewünschten Daten filtern und die Ergebnisse nach Ihren Wünschen sortieren.
+Mithilfe von Abfragen können Sie die Assets Ihres Mandanten auf granularer Ebene durchsuchen, so dass Sie nach den gewünschten Daten filtern und die Ergebnisse nach Ihren Wünschen sortieren können.
 
 Sie können z. B. eine Abfrage für _Volumes_ erstellen, einen Filter hinzufügen, um bestimmte _Storage_ zu den ausgewählten Volumes zu finden, einen weiteren Filter hinzufügen, um eine bestimmte _Annotation_ zu finden, z. B. „Tier 1“ auf den ausgewählten Speichern, Und schließlich noch einen Filter hinzufügen, um alle Speicher mit _IOPS - Read (IO/s)_ größer als 25 zu finden. Wenn die Ergebnisse angezeigt werden, können Sie die mit der Abfrage verknüpften Datenspalten in aufsteigender oder absteigender Reihenfolge sortieren.
 

@@ -36,7 +36,7 @@ Dateninfrastruktur Insights bietet ebenfalls eine Vielzahl an Funktionenlink:tas
 
 == Best Practice Für Sicherheit
 
-Warnmeldungen zu Data Infrastructure Insights wurden entwickelt, um Datenpunkte und Trends in Ihrer Umgebung hervorzuheben. Mit Data Infrastructure Insights können Sie jede gültige E-Mail-Adresse als Empfänger für Warnmeldungen eingeben. Wenn Sie in einer sicheren Umgebung arbeiten, achten Sie besonders darauf, wer die Benachrichtigung erhält oder anderweitig Zugriff auf die Warnmeldung hat.
+Warnmeldungen zu Data Infrastructure Insights wurden entwickelt, um Datenpunkte und Trends für Ihren Mandanten hervorzuheben, und mit Data Infrastructure Insights können Sie jede gültige E-Mail-Adresse als Benachrichtigungsempfänger eingeben. Wenn Sie in einer sicheren Umgebung arbeiten, achten Sie besonders darauf, wer die Benachrichtigung erhält oder anderweitig Zugriff auf die Warnmeldung hat.
 
 
 
@@ -232,7 +232,7 @@ Wenn ein Monitor nicht mehr benötigt wird, können Sie ihn löschen, indem Sie 
 
 == Gruppen Überwachen
 
-Durch Gruppierung können Sie zugehörige Monitore anzeigen und verwalten. Sie können beispielsweise eine Monitorgruppe für den Speicher in Ihrer Umgebung einrichten oder überwachen, die für eine bestimmte Empfängerliste relevant ist.
+Durch Gruppierung können Sie zugehörige Monitore anzeigen und verwalten. Sie können beispielsweise eine Überwachungsgruppe für den Speicher Ihres Mandanten festlegen oder für eine bestimmte Empfängerliste relevante Überwachungsgruppen überwachen.
 
 image:Monitors_GroupList.png["Gruppierung Überwachen"]
 
@@ -297,7 +297,7 @@ image:Monitors_PauseGroup.png["Anhalten einer Gruppe"]
 
 == Systemdefinierte Monitore
 
-Data Infrastructure Insights umfasst eine Reihe von systemdefinierten Monitoring-Funktionen für Kennzahlen und Protokolle. Die verfügbaren Systemmonitore sind abhängig von den Datensammlern in Ihrer Umgebung. Aus diesem Grund können sich die in Data Infrastructure Insights verfügbaren Monitore ändern, wenn Datensammler hinzugefügt oder ihre Konfigurationen geändert werden.
+Data Infrastructure Insights umfasst eine Reihe von systemdefinierten Monitoring-Funktionen für Kennzahlen und Protokolle. Die verfügbaren Systemmonitore hängen von den Datensammlern ab, die auf Ihrem Mandanten vorhanden sind. Aus diesem Grund können sich die in Data Infrastructure Insights verfügbaren Monitore ändern, wenn Datensammler hinzugefügt oder ihre Konfigurationen geändert werden.
 
 Auf der link:task_system_monitors.html["Systemdefinierte Monitore"] Seite finden Sie Beschreibungen der in Data Infrastructure Insights enthaltenen Monitore.
 

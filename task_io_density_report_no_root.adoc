@@ -34,12 +34,12 @@ Die in diesem Leitfaden aufgeführten Schritte können auch auf Storage-Systeme 
 
 
 
-== Erstellen einer Abfrage, um NetApp Root-Aggregate in Ihrer Umgebung zu identifizieren
+== Erstellen einer Abfrage zur Identifizierung von NetApp-Root-Aggregaten
 
-Abfragen ermöglichen die Suche auf granularer Ebene, basierend auf vom Benutzer ausgewählten Kriterien. Mit einer Abfrage können Sie nach internen Volumes in Ihrer Umgebung suchen, die das NetApp Root-Aggregat enthalten.
+Abfragen ermöglichen die Suche auf granularer Ebene, basierend auf vom Benutzer ausgewählten Kriterien. Mithilfe einer Abfrage können Sie in Ihrem Mandanten nach internen Volumes suchen, die das Root-Aggregat von NetApp enthalten.
 
 .Schritte
-. Erstellen Sie eine Anfrage, um NetApp Root-Aggregate in Ihrer Umgebung zu identifizieren: Klicken Sie auf *Abfragen > Neue Abfrage > Ressourcentyp auswählen* (?)
+. Erstellen Sie eine Abfrage, um NetApp-Root-Aggregate auf Ihrem Mandanten zu identifizieren: Klicken Sie auf *Abfragen > Neue Abfrage > Ressourcentyp auswählen* (?)
 . Klicken Sie auf *Speicherpool*
 . Geben Sie den Namen für das Root-Aggregat ein
 +
@@ -48,7 +48,7 @@ Dieses Beispiel verwendet für den Namen „aggr0“. Beim Erstellen eines Aggre
 +
 .. Er muss entweder mit einem Buchstaben oder einem Unterstrich (_) beginnen.
 .. Er darf nur Buchstaben, Ziffern und Unterstriche enthalten.
-.. Sie kann maximal 250 Zeichen umfassen. In den meisten Fällen ist das Aggregat der Name aggr0, aggr_0, oder etwas ähnliches. Es könnte einen iterativen Prozess erfordern, um alle NetApp Root-Aggregate in Ihrer Umgebung zu identifizieren.
+.. Sie kann maximal 250 Zeichen umfassen. In den meisten Fällen ist das Aggregat der Name aggr0, aggr_0, oder etwas ähnliches. Es kann ein iterativer Prozess erforderlich sein, um alle NetApp-Root-Aggregate auf dem Mandanten zu identifizieren.
 
 
 . Klicken Sie auf *Speichern* und geben Sie einen Namen für die neue Abfrage ein.
@@ -61,7 +61,7 @@ Wie bereits erwähnt, könnte dies ein iterativer Prozess sein und mehrere Anfra
 
 == Erstellen Sie eine Anmerkung für die von Ihren Abfragen zurückgegebenen Root-Volumes
 
-Anmerkungen sind spezielle Notizen, die Sie Ihren Assets zuweisen, damit Sie Assets nach ihren Anmerkungen filtern können. Die von Ihnen erstellten Annotationen werden verwendet, um die NetApp Root-Aggregate in Ihrer Umgebung zu identifizieren und sicherzustellen, dass diese nicht in einem bestimmten Bericht enthalten sind.
+Anmerkungen sind spezielle Notizen, die Sie Ihren Assets zuweisen, damit Sie Assets nach ihren Anmerkungen filtern können. Die von Ihnen erstellte Annotation dient dazu, die NetApp-Root-Aggregate Ihres Mandanten zu identifizieren und sicherzustellen, dass diese nicht in einem bestimmten Bericht enthalten sind.
 
 .Bevor Sie beginnen
 Sie müssen alle Root-Aggregate identifiziert haben, die Sie aus dem Bericht „hohe I/O-Dichte“ ausschließen möchten.
@@ -85,7 +85,7 @@ Sie müssen alle Root-Aggregate identifiziert haben, die Sie aus dem Bericht „
 Alternativ zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden. Anmerkungsregeln basieren auf Abfragen, die Sie erstellen, und wenn sie auf dem System ausgeführt werden, fügen sie vorhandenen Assets neue Assets hinzu. Wenn diese Vermögenswerte von einem Bericht ausgeschlossen werden, werden auch die neuen Vermögenswerte automatisch ausgeschlossen.
 
 .Bevor Sie beginnen
-Sie müssen eine Abfrage erstellt und gespeichert haben, die die NetApp Root-Aggregate identifiziert, die Sie in Ihrer Umgebung identifiziert haben.
+Sie müssen eine Abfrage zur Identifikation der NetApp-Root-Aggregate erstellt und gespeichert haben, die Sie auf Ihrem Mandanten identifiziert haben.
 
 .Schritte
 . Klicken Sie in der Symbolleiste Data Infrastructure Insights auf *Verwalten > Anmerkungsregeln*.

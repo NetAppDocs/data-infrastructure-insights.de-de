@@ -16,7 +16,7 @@ summary: Cloud Insights verfolgt Infrastrukturänderungen auf einfache Weise und
 
 
 [role="lead"]
-Infrastructure Change Analysis bieten einen All-in-One-Überblick über aktuelle Infrastrukturänderungen (Storage, Switch usw.) in Ihrer Umgebung. Mit der Änderungsanalyse können Sie Konfigurationsänderungen verfolgen und sowohl erwartete als auch unerwartete Probleme untersuchen.
+Infrastructure Change Analysis bieten einen All-in-One-Überblick über aktuelle Infrastrukturänderungen (Storage, Switch usw.) des Mandanten. Mit der Änderungsanalyse können Sie Konfigurationsänderungen verfolgen und sowohl erwartete als auch unerwartete Probleme untersuchen.
 
 
 

@@ -19,7 +19,7 @@ keywords: asset, landing page, violations, Alerts,
 
 
 [role="lead"]
-Sie können den Abschnitt „Verwandte Warnungen“ einer Asset-Seite verwenden, um alle Warnmeldungen anzuzeigen, die in Ihrer Umgebung als Ergebnis eines Monitors auftreten, der einem Asset zugewiesen ist. Monitore generieren Warnungen auf der Grundlage von festgelegten Bedingungen. So können Sie Implikationen identifizieren und die Auswirkungen und Ursache des Problems auf eine schnelle und effektive Korrektur analysieren.
+Sie können den Abschnitt „Zugehörige Warnmeldungen“ einer Anlagenseite verwenden, um alle Warnmeldungen anzuzeigen, die auf Ihrem Mandanten als Ergebnis eines Monitors auftreten, der einem Asset zugewiesen wurde. Monitore generieren Warnungen auf der Grundlage von festgelegten Bedingungen. So können Sie Implikationen identifizieren und die Auswirkungen und Ursache des Problems auf eine schnelle und effektive Korrektur analysieren.
 
 Das folgende Beispiel zeigt einen typischen Abschnitt „Verwandte Warnungen“, der auf einer Asset-Seite angezeigt wird:
 

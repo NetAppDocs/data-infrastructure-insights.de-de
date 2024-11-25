@@ -407,7 +407,7 @@ image::SecondaryAxisExplained.png[Beispiel für die sekundäre Achse]
 
 == Ausdrücke in Widgets
 
-In einem Dashboard können Sie <<expressions-in-a-table-widget,Widget „Tabelle“>>mit einem Widget für Zeitreihen (Linie, Spline, Bereich, gestapelter Bereich), einem Balkendiagramm, einem Säulendiagramm, einem Kreisdiagramm oder einem Widget für Tabellen Ausdrücke aus den von Ihnen gewählten Metriken erstellen und das Ergebnis dieser Ausdrücke in einem einzigen Diagramm (oder einer Spalte im Fall des ) anzeigen. Die folgenden Beispiele verwenden Ausdrücke, um bestimmte Probleme zu lösen. Im ersten Beispiel möchten wir den IOPS-Wert für alle Storage Assets in unserer Umgebung als Prozentsatz von IOPS insgesamt darstellen. Das zweite Beispiel gibt Einblick in die in Ihrer Umgebung auftretenden IOPS des „Systems“ oder „Overhead“ - jene IOPS, die nicht direkt vom Lesen oder Schreiben von Daten stammen.
+In einem Dashboard können Sie <<expressions-in-a-table-widget,Widget „Tabelle“>>mit einem Widget für Zeitreihen (Linie, Spline, Bereich, gestapelter Bereich), einem Balkendiagramm, einem Säulendiagramm, einem Kreisdiagramm oder einem Widget für Tabellen Ausdrücke aus den von Ihnen gewählten Metriken erstellen und das Ergebnis dieser Ausdrücke in einem einzigen Diagramm (oder einer Spalte im Fall des ) anzeigen. Die folgenden Beispiele verwenden Ausdrücke, um bestimmte Probleme zu lösen. Im ersten Beispiel möchten wir Lese-IOPS als Prozentsatz der gesamten IOPS für alle Storage-Assets auf Ihrem Mandanten anzeigen. Das zweite Beispiel gibt einen Einblick in das „System“ oder den „Overhead“ der IOPS, die auf Ihrem Mandanten auftreten, nämlich die IOPS, die nicht direkt aus dem Lesen oder Schreiben von Daten stammen.
 
 Sie können Variablen in Ausdrücken verwenden (z. B. _ € Var1 * 100_)
 
@@ -537,7 +537,7 @@ Durch die Auswahl einer Attributtypvariable können Sie nach Widget-Daten filter
 
 image:Variables_Node_Example_Before_Variable_Applied.png["Agent-Knoten Vor Variablenfilter"]
 
-Wenn Sie jedoch vorübergehend nur Nodes in einzelnen Subnetzen in Ihrer Umgebung sehen möchten, können Sie die Variable in eine bestimmte Agent-Node-IP oder IPs einstellen oder ändern. Hier sehen wir nur die Knoten auf dem „123“ Subnetz:
+Wenn Sie jedoch vorübergehend nur Knoten in einzelnen Subnetzen auf Ihrem Mandanten sehen möchten, können Sie die Variable auf eine bestimmte Agent Node-IP oder IP-Adresse festlegen oder ändern. Hier sehen wir nur die Knoten auf dem „123“ Subnetz:
 
 image:Variables_Node_Example_After_Variable_Applied.png["Agent-Knoten Nach Variablenfilter"]
 
@@ -808,7 +808,7 @@ image:AutoRefreshPaused.png["Automatische Aktualisierung angehalten"]
 
 == Dashboard-Gruppen
 
-Durch Gruppierung können Sie zugehörige Dashboards anzeigen und verwalten. Sie können beispielsweise eine Dashboard-Gruppe einrichten, die dem Storage in Ihrer Umgebung zugewiesen ist. Dashboard-Gruppen werden auf der Seite *Dashboards > Alle Dashboards anzeigen* verwaltet.
+Durch Gruppierung können Sie zugehörige Dashboards anzeigen und verwalten. Beispielsweise kann eine Dashboard-Gruppe dem Speicher Ihres Mandanten zugewiesen sein. Dashboard-Gruppen werden auf der Seite *Dashboards > Alle Dashboards anzeigen* verwaltet.
 
 image:DashboardGroupNoPin.png["Dashboard-Gruppierung"]
 
@@ -822,7 +822,7 @@ Die Anzahl der Dashboards in jeder Gruppe wird neben dem Gruppennamen angezeigt.
 
 Um eine neue Gruppe zu erstellen, klicken Sie auf die Schaltfläche *"+" Neue Dashboard-Gruppe erstellen*. Geben Sie einen Namen für die Gruppe ein und klicken Sie auf *Gruppe erstellen*. Eine leere Gruppe mit diesem Namen wird erstellt.
 
-Um Dashboards zur Gruppe hinzuzufügen, klicken Sie auf die Gruppe _Alle Dashboards_, um alle Dashboards in Ihrer Umgebung anzuzeigen, klicken Sie auf _eigene Dashboards_, wenn Sie nur die Dashboards sehen möchten, die Sie besitzen, und führen Sie eine der folgenden Aktionen durch:
+Um Dashboards zur Gruppe hinzuzufügen, klicken Sie auf die Gruppe _Alle Dashboards_, um alle Dashboards auf Ihrem Mandanten anzuzeigen. Klicken Sie dann auf _Meine Dashboards_, wenn Sie nur die Dashboards sehen möchten, die Ihnen gehören, und führen Sie einen der folgenden Schritte aus:
 
 * Um ein einzelnes Dashboard hinzuzufügen, klicken Sie auf das Menü rechts neben dem Dashboard und wählen Sie _zu Gruppe hinzufügen_.
 * Um einer Gruppe mehrere Dashboards hinzuzufügen, wählen Sie diese aus, indem Sie auf das Kontrollkästchen neben jedem Dashboard klicken. Klicken Sie dann auf die Schaltfläche *Massenaktionen* und wählen Sie _zu Gruppe hinzufügen_.

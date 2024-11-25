@@ -17,7 +17,7 @@ summary: Seite mit forensischen Einheiten
 
 
 [role="lead"]
-Die Seite Forensics Entities enthält detaillierte Informationen über die Aktivität der Entität in Ihrer Umgebung.
+Auf der Seite Forensics Entities finden Sie detaillierte Informationen über die Entitätstätigkeit auf Ihrem Mandanten.
 
 
 
@@ -25,7 +25,7 @@ Die Seite Forensics Entities enthält detaillierte Informationen über die Aktiv
 
 Klicken Sie auf *Forensics > Vorgangsforensics*, und klicken Sie auf die Registerkarte _Entities_, um die Seite Entities aufzurufen.
 
-Auf dieser Seite erhalten Sie einen Überblick über die Aktivitäten der Einheit in Ihrer Umgebung, und Sie können die folgenden Informationen hervorheben: * Ein Diagramm mit_eindeutigen Entitäten_ Zugriffsberechtigung pro Minute * Ein Diagramm mit_Entity-Typen, auf die zugegriffen wurde_ * Eine Aufschlüsselung der_Common Paths_ * Eine Liste der _Top 50 Entities_ von der Gesamtanzahl der Entitäten
+Diese Seite bietet einen Überblick über die Entity-Aktivitäten auf Ihrem Mandanten, wobei folgende Informationen hervorgehoben werden: * Ein Diagramm mit _Unique Entities_ Zugriffe pro Minute * Ein Diagramm mit _Entity-Typen zugegriffen_ * Eine Aufschlüsselung der _Common Paths_ * Eine Liste der _Top 50 Entities_ aus der Gesamtzahl der Entities
 
 image:CS-Entities-Page.png["Seite „Entities“"]
 

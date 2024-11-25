@@ -23,7 +23,7 @@ Auf der Seite Alle Aktivitäten können Sie die Aktionen verstehen, die für Ein
 
 == Alle Aktivitätsdaten Werden Untersucht
 
-Klicken Sie auf *Forensics > Vorgangsforensics* und klicken Sie auf die Registerkarte *Alle Aktivitäten*, um die Seite Alle Aktivitäten aufzurufen. Diese Seite bietet einen Überblick über Aktivitäten in Ihrer Umgebung und hebt die folgenden Informationen hervor:
+Klicken Sie auf *Forensics > Vorgangsforensics* und klicken Sie auf die Registerkarte *Alle Aktivitäten*, um die Seite Alle Aktivitäten aufzurufen. Diese Seite bietet einen Überblick über die Aktivitäten Ihres Mandanten und hebt die folgenden Informationen hervor:
 
 * Ein Diagramm mit „_Aktivitätsverlauf_“ (Zugriff pro Minute/pro 5 Minuten/pro 10 Minuten basierend auf dem ausgewählten globalen Zeitbereich)
 +

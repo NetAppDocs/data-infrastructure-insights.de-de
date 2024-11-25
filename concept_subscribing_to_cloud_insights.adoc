@@ -135,7 +135,7 @@ Ihr Abonnement wird mit einer dieser Methoden gemessen, je nachdem, ob Sie berei
 
 ==== Kapazitätsmessung
 
-Dateninfrastruktur Insights Observability misst die Nutzung nach Speicherebene in Ihrer Umgebung. Sie können Speicher haben, die in eine oder mehrere dieser Kategorien fallen:
+Dateninfrastruktur Insights Observability misst die Nutzung nach der Storage-Tier des Mandanten. Sie können Speicher haben, die in eine oder mehrere dieser Kategorien fallen:
 
 * Primäre Rohkost
 * Objekt Raw

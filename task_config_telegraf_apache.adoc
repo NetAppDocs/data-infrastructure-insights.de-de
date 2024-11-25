@@ -19,7 +19,7 @@ summary: Konfiguration des Apache Data Collector
 
 
 [role="lead"]
-Dieser Datensammler ermöglicht die Erfassung von Daten von Apache-Servern in Ihrer Umgebung.
+Dieser Datensammler ermöglicht die Erfassung von Daten von Apache-Servern auf Ihrem Mandanten.
 
 .Voraussetzungen
 * Sie müssen Ihren Apache HTTP Server einrichten und ordnungsgemäß ausführen lassen

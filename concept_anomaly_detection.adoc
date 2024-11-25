@@ -19,7 +19,7 @@ summary: Kennzahlen auf Anomalien überwachen
 
 
 [role="lead"]
-Die Anomalieerkennung ermöglicht Einblicke in unerwartete Änderungen an Datenmustern in Ihrer Umgebung. Eine Anomalie tritt auf, wenn sich das Muster des Objektes in Ihrer Umgebung ändert, z. B. wenn ein Objekt mittwochs zu einer bestimmten Zeit eine bestimmte Latenz erfährt, aber die Latenzspitzen am folgenden Mittwoch über diesem Niveau liegen. diese Spitze würde als eine Anomalie betrachtet werden. Data Infrastructure Insights ermöglicht die Erstellung von Monitoren, die bei solchen Anomalien entsprechende Alarme ausgeben.
+Anomalieerkennung bietet Einblicke in unerwartete Änderungen in den Datenmustern auf Ihrem Mandanten. Eine Anomalie tritt auf, wenn sich das Muster des Objektes ändert, z. B. wenn ein Objekt mittwochs zu einer bestimmten Zeit eine bestimmte Latenz erfährt, jedoch am folgenden Mittwoch eine Latenzspitze über diesem Niveau liegt, die dann als Anomalie angesehen würde. Data Infrastructure Insights ermöglicht die Erstellung von Monitoren, die bei solchen Anomalien entsprechende Alarme ausgeben.
 
 Die Anomalieerkennung ist für Objektmetriken geeignet, die ein wiederkehrendes, vorhersehbares Muster aufweisen. Wenn diese Objektkennzahlen über oder unter dem erwarteten Niveau liegen, kann Data Infrastructure Insights eine Warnmeldung zur schnellen Untersuchung generieren.
 
@@ -53,7 +53,7 @@ Das Monitoring der Anomalieerkennung bietet in vielen Situationen hilfreiche War
 
 * Wenn die Definition von _normal_ unklar ist. Beispielsweise können SAN-Fehlerraten je nach Port unterschiedlich hoch sein. Die Alarmierung bei einem Fehler ist laut und unnötig, aber eine plötzliche oder signifikante Steigerung kann auf ein weit verbreitetes Problem hinweisen.
 * Wo es Veränderungen im Laufe der Zeit gibt. Workloads mit saisonalen Schwankungen (d. h. zu bestimmten Zeiten sind sie beschäftigt oder still). Dies kann unerwartete Ruhezeiten sein, die auf einen Batch-Stillstand hindeuten können.
-* Die Arbeit mit großen Datenmengen, bei denen die manuelle Festlegung und Anpassung von Schwellenwerten unpraktisch ist. Beispielsweise eine Umgebung mit einer großen Anzahl von Hosts und/oder Volumes mit unterschiedlichen Workloads. Für jeden kann es unterschiedliche SLAs geben. Daher ist es wichtig, diejenigen zu verstehen, die die Norm überschreiten.
+* Die Arbeit mit großen Datenmengen, bei denen die manuelle Festlegung und Anpassung von Schwellenwerten unpraktisch ist. Beispielsweise ein Mandant mit einer großen Anzahl von Hosts und/oder Volumes mit unterschiedlichen Workloads. Für jeden kann es unterschiedliche SLAs geben. Daher ist es wichtig, diejenigen zu verstehen, die die Norm überschreiten.
 
 
 
