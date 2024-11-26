@@ -149,6 +149,28 @@ security login create -user-or-group-name csuser -application http -authmethod p
 ....
 
 
+=== Protobuf-Modus
+
+Workload Security konfiguriert die FPolicy-Engine im Protobuf-Modus, wenn diese Option in den _Advanced Configuration_-Einstellungen des Collectors aktiviert ist. Der Protobuf-Modus wird in ONTAP Version 9.15 und höher unterstützt.
+
+Weitere Informationen zu dieser Funktion finden Sie in der link:https://docs.netapp.com/us-en/ontap/nas-audit/steps-setup-fpolicy-config-concept.html["ONTAP-Dokumentation"].
+
+Für Protobuf sind bestimmte Berechtigungen erforderlich (einige oder alle dieser Berechtigungen sind möglicherweise bereits vorhanden):
+
+Clustermodus:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
+....
+VServer-Modus:
+
+....
+security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
+security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
+....
+
+
 === Berechtigungen für autonomen ONTAP-Ransomware-Schutz und ONTAP-Zugriff verweigert
 
 Wenn Sie Anmeldedaten für die Cluster-Administration verwenden, sind keine neuen Berechtigungen erforderlich.
