@@ -25,19 +25,19 @@ Auf der Seite Alle Aktivitäten können Sie die Aktionen verstehen, die für Ein
 
 Klicken Sie auf *Forensics > Vorgangsforensics* und klicken Sie auf die Registerkarte *Alle Aktivitäten*, um die Seite Alle Aktivitäten aufzurufen. Diese Seite bietet einen Überblick über die Aktivitäten Ihres Mandanten und hebt die folgenden Informationen hervor:
 
-* Ein Diagramm mit „_Aktivitätsverlauf_“ (Zugriff pro Minute/pro 5 Minuten/pro 10 Minuten basierend auf dem ausgewählten globalen Zeitbereich)
+* Ein Diagramm mit _Aktivitätsverlauf_ (basierend auf dem ausgewählten globalen Zeitbereich)
 +
 Sie können das Diagramm vergrößern, indem Sie ein Rechteck im Diagramm herausziehen. Die gesamte Seite wird geladen, um den vergrößerten Zeitbereich anzuzeigen. Wenn der Zoom vergrößert wird, wird eine Schaltfläche angezeigt, mit der der Benutzer zoomen kann.
 
-* Ein Diagramm mit „_Aktivitätstypen_“. Um die Vorgangshistorie-Daten nach Aktivitätstyp zu erhalten, klicken Sie auf den entsprechenden x-Achse-Label-Link.
-* Ein Diagramm der Aktivität auf_Entity Types_. Um Vorgangsdaten nach Entitätstyp zu erhalten, klicken Sie auf den entsprechenden Link für die X-Achse-Bezeichnung.
-* Eine Liste der Daten „_Alle Aktivitäten_“
+* Eine Liste der _All Activity_-Daten.
+* In einer Dropdown-Liste „Gruppieren nach“ können Sie die Aktivität nach Benutzern, Pfad, Entitätstyp usw. gruppieren
+* Über der Tabelle steht eine Schaltfläche für gemeinsamen Pfad zur Verfügung, auf die Sie klicken können, um das Fenster mit Details zum Entity-Pfad zu öffnen.
 
 
 Die Tabelle _*Alle Aktivitäten*_ enthält die folgenden Informationen. Beachten Sie, dass standardmäßig nicht alle dieser Spalten angezeigt werden. Sie können Spalten auswählen, die angezeigt werden sollen, indem Sie auf das Zahnradsymbol klicken.
 
 * Die *Zeit*, auf die ein Unternehmen zugegriffen wurde, einschließlich Jahr, Monat, Tag und Uhrzeit des letzten Zugriffs.
-* Der *user*, der auf die Entität mit einem Link zum zugegriffen link:forensic_user_overview.html["Benutzerinformationen"]hat.
+* Der *user*, der auf die Entität mit einem Link zum als Slide-out Panel zugegriffen link:forensic_user_overview.html["Benutzerinformationen"]hat.
 
 
 * Die *Aktivität*, die der Benutzer durchgeführt hat. Folgende Typen werden unterstützt:
@@ -55,12 +55,26 @@ Die Tabelle _*Alle Aktivitäten*_ enthält die folgenden Informationen. Beachten
 ** *Andere Änderung* - jedes andere Ereignis, das oben nicht beschrieben wird. Alle nicht zugeordneten Ereignisse werden dem Aktivitätstyp „andere Änderung“ zugeordnet. Gilt für Dateien und Ordner.
 
 
-* Der *Pfad* zur Entität mit einem Link zum link:forensic_entity_detail.html["Entity Detail-Daten"]
-* *Entity Type*, einschließlich der Endung Entity (d. h. Datei) (.doc, .docx, .tmp usw.)
-* Das *Gerät*, in dem sich die Entitäten befinden
+* Der *Pfad* ist _entity_ Pfad.
+* Der * 1st Level Folder (Root)* ist das Stammverzeichnis des Entity-Pfades in Kleinbuchstaben.
+* Der *2nd Level Folder* ist das Verzeichnis der Entity PATH der zweiten Ebene im Kleinbuchstaben.
+* Der Ordner *3rd Level* ist das Verzeichnis 3rd Level des Entity PATH im Kleinbuchstaben.
+* Der Ordner *4th Level* ist das Verzeichnis der Entity PATH der vierten Ebene in Kleinbuchstaben.
+* Die Erweiterung *Entity Type*, einschließlich Entity (d. h. Datei) (.doc, .docx, .tmp usw.).
+* Das *Gerät*, in dem sich die Entitäten befinden.
 * Das *Protokoll* zum Abrufen von Ereignissen.
 * Der *Original-Pfad*, der bei der Umbenennung der Originaldatei verwendet wird. Diese Spalte ist in der Tabelle standardmäßig nicht sichtbar. Verwenden Sie die Spaltenauswahl, um diese Spalte zur Tabelle hinzuzufügen.
 * Das *Volumen*, in dem sich die Entitäten befinden. Diese Spalte ist in der Tabelle standardmäßig nicht sichtbar. Verwenden Sie die Spaltenauswahl, um diese Spalte zur Tabelle hinzuzufügen.
+
+
+Wenn Sie eine Tabellenzeile auswählen, wird ein Schiebefenster geöffnet, in dem das Benutzerprofil auf einer Registerkarte und die Vorgangs- und Entitätsübersicht auf einer anderen Registerkarte angezeigt werden.
+
+image:ws_forensics_slideout.png["forensics-Seite mit Slideout, das die Benutzeraktivität anzeigt"]
+
+Die standardmäßige _Group by_-Methode ist _Activity Forensics_. Wenn Sie eine andere _Group by_-Methode auswählen, z. B. Entity Type--die Entity_Group by_-Tabelle wird angezeigt. Wird keine Auswahl getroffen, wird _Group by_ *all* angezeigt.
+
+* Die Vorgangsanzahl wird als Hyperlink angezeigt. Wenn Sie diese Option auswählen, wird die ausgewählte Gruppierung als Filter hinzugefügt. Die Tabelle der Aktivität wird basierend auf diesem Filter aktualisiert.
+* Wenn Sie den Filter ändern, den Zeitraum ändern oder den Bildschirm aktualisieren, können Sie nicht zu den gefilterten Ergebnissen zurückkehren, ohne den Filter erneut einzustellen.
 
 
 
@@ -69,8 +83,8 @@ Die Tabelle _*Alle Aktivitäten*_ enthält die folgenden Informationen. Beachten
 
 Es gibt zwei Methoden, mit denen Sie Daten filtern können.
 
-. Bewegen Sie den Mauszeiger über das Feld in der Tabelle, und klicken Sie auf das angezeigte Filtersymbol. Der Wert wird den entsprechenden Filtern in der oberen Liste _Filter by_ hinzugefügt.
-. Filtern Sie die Daten, indem Sie das Feld _Filter by_ eingeben:
+* Der Filter kann über das Schiebefeld hinzugefügt werden. Der Wert wird den entsprechenden Filtern in der oberen Liste _Filter by_ hinzugefügt.
+* Filtern Sie die Daten, indem Sie das Feld _Filter by_ eingeben:
 +
 Wählen Sie den entsprechenden Filter aus dem oberen Widget ‘Filtern nach’ aus, indem Sie auf die Schaltfläche *[+]* klicken:
 
@@ -98,7 +112,12 @@ Sie können forensische Aktivitätsdaten nach folgenden Feldern filtern:
 Die folgenden Felder unterliegen speziellen Filterregeln:
 
 * *Entity Type*, mit Entity (File) Extension - es ist vorzuziehen, den genauen Entity-Typ in Anführungszeichen anzugeben. Beispiel: _ „Txt“_.
-* *Pfad* der Entity - Verzeichnispfad-Filter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Beispiel: _/Home/userX/nested1/nested2/_ ODER _“/Home/userX/nested1/nested2/“_. Weitere Informationen finden Sie in der folgenden Tabelle.
+* *Pfad* der Entity - Verzeichnispfad-Filter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Beispiel: _“/Home/userX/nested1/nested2/“_. Weitere Informationen finden Sie in der folgenden Tabelle.
+* 1st Level Folder (Root) - Stammverzeichnis des Entity Path als Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann Home ODER "Home" verwendet werden.
+* 2nd Level Folder - Verzeichnis 2nd Level der Entity Path Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann userX ODER "userX" verwendet werden.
+* Ordner der dritten Ebene – Verzeichnis der Pfadfilter der dritten Ebene.
+* Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann nested1 ODER „nested1“ verwendet werden.
+* Ordner der 4. Ebene – Verzeichnis der Filter für Entity Path auf vierter Ebene. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann nested2 ODER „nested2“ verwendet werden.
 * *User* die Aktivität durchführen - es ist vorzuziehen, den genauen Benutzer in Anführungszeichen anzugeben. Beispiel: _ „Administrator“_.
 * *Gerät* (SVM), in dem sich Entitäten befinden
 * *Volumen*, in dem sich Entitäten befinden
@@ -120,19 +139,16 @@ Die vorhergehenden Felder unterliegen beim Filtern folgenden Kriterien:
 | Vom Benutzer angewendeter Filterausdruck | Erwartetes Ergebnis | Performance-Assessment | Kommentar 
 
 
-| Pfad = /Home/userX/nested1/nested2/ oder /Home/userX/nested1/nested2/* oder "/Home/userX/nested1/nested2/" | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Schnell | Verzeichnissuchen bis zu 4 Verzeichnisse werden schnell sein. 
+| Pfad = „/Home/userX/nested1/nested2/“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Schnell | Verzeichnissuchen bis zu 4 Verzeichnisse werden schnell sein. 
 
 
-| Pfad = /Home/userX/nested1/ oder /Home/userX/nested1/* oder "/Home/userX/nested1/" | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Schnell | Verzeichnissuchen bis zu 4 Verzeichnisse werden schnell sein. 
+| Pfad = „/Home/userX/nested1/“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Schnell | Verzeichnissuchen bis zu 4 Verzeichnisse werden schnell sein. 
 
 
-| Pfad = /Home/userX/nested1/Test* oder /Home/userX/nested1/Test | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Pfad regex(Test* könnte Datei ODER Verzeichnis ODER beides bedeuten) | Langsamer | Die Suche nach Verzeichnis+Datei ist langsamer als bei Verzeichnissuchen. 
+| Pfad = „/Home/userX/nested1/Test“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Pfad regex(Test* könnte Datei ODER Verzeichnis ODER beides bedeuten) | Langsamer | Die Suche nach Verzeichnis+Datei ist langsamer als bei Verzeichnissuchen. 
 
 
-| Pfad = /Home/userX/nested1/nested2/nested3/ oder /Home/userX/nested1/nested2/nested3/* oder "/Home/userX/nested1/nested2/nested3/" | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Langsamer | Mehr als 4 Verzeichnissuchen sind langsamer zu suchen. 
-
-
-| Pfad=\*userX/nested1/Test* | Rekursive Abfrage aller Dateien und Ordner unter der angegebenen Platzhalterpfad-Zeichenfolge (Test* kann Datei ODER Verzeichnis ODER beides bedeuten) | Langsam | Führende Platzhaltersuche sind langsamste Suchvorgänge. 
+| Pfad = „/Home/userX/nested1/nested2/nested3/“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Langsamer | Mehr als 4 Verzeichnissuchen sind langsamer zu suchen. 
 
 
 | Alle anderen nicht pfadbasierten Filter. Benutzer- und Entitätstyp-Filter, die in Anführungszeichen empfohlen werden, z. B. Benutzer=„Administrator“ Entitätstyp=„txt“ |  | Schnell |  
@@ -140,14 +156,14 @@ Die vorhergehenden Felder unterliegen beim Filtern folgenden Kriterien:
 HINWEIS:
 
 . Die Anzahl der Aktivitäten, die neben dem Symbol „Alle Aktivitäten“ angezeigt wird, wird auf 30 Minuten gerundet, wenn der ausgewählte Zeitraum mehr als 3 Tage umfasst. In einem Zeitraum von _1. September 10:15 bis 7. September 10:15 werden die Aktivitätszahlen vom 1. September 10:00 bis 7. September 10:30 Uhr angezeigt.
-. Ebenso werden die Zählmetriken in Aktivitätstypen, Aktivität auf Entitätstypen und Aktivitätsverlauf auf 30 Minuten abgerundet, wenn der ausgewählte Zeitraum mehr als 3 Tage umfasst.
+. Ebenso werden die im Diagramm „Aktivitätsverlauf“ angezeigten Zählwerte auf 30 Minuten abgerundet, wenn der ausgewählte Zeitraum mehr als 3 Tage umfasst.
 
 
 
 
 == Forensische Vorgangshistorie-Daten Sortieren
 
-Sie können Daten aus dem Aktivitätsverlauf nach _Zeit, Benutzer, Quell-IP, Aktivität,_ und _Entitätstyp_ sortieren. Standardmäßig wird die Tabelle nach absteigender_Time_-Reihenfolge sortiert, was bedeutet, dass die neuesten Daten zuerst angezeigt werden. Die Sortierung ist für die Felder _Device_ und _Protocol_ deaktiviert.
+Sie können Daten aus dem Aktivitätsverlauf nach _Zeit, Benutzer, Quell-IP, Aktivität,_, _Entity Type_, 1st Level Folder (Root), 2nd Level Folder, 3rd Level Folder und 4th Level Folder sortieren. Standardmäßig wird die Tabelle nach absteigender_Time_-Reihenfolge sortiert, was bedeutet, dass die neuesten Daten zuerst angezeigt werden. Die Sortierung ist für die Felder _Device_ und _Protocol_ deaktiviert.
 
 
 
@@ -198,16 +214,16 @@ Der Aktivitätsverlauf wird 13 Monate lang in aktiven Workload-Sicherheitsumgebu
 | Filtern | Das macht es | Beispiel | Gilt für diese Filter | Gilt nicht für diese Filter | Ergebnis 
 
 
-| * (Sternchen) | Ermöglicht Ihnen die Suche nach allem | Auto*03172022 Wenn der Suchtext Bindestrich oder Unterstrich enthält, geben Sie den Ausdruck in Klammern an, z. B. (svm*) für die Suche nach svm-123 | Benutzer, PFAD, Einheitstyp, Gerät, Volume, ursprünglicher Pfad |  | Gibt alle Ressourcen zurück, die mit „Auto“ beginnen und mit „03172022“ enden 
+| * (Sternchen) | Ermöglicht Ihnen die Suche nach allem | Auto*03172022 Wenn der Suchtext Bindestrich oder Unterstrich enthält, geben Sie den Ausdruck in Klammern an, z. B. (svm*) für die Suche nach svm-123 | Benutzer, Einheitstyp, Gerät, Volume, ursprünglicher Pfad, Ordner 1 Stufe, Ordner 2 Ebenen, Ordner 3 Ebenen, Ordner 4 Ebenen |  | Gibt alle Ressourcen zurück, die mit „Auto“ beginnen und mit „03172022“ enden 
 
 
-| ? (Fragezeichen) | Ermöglicht die Suche nach einer bestimmten Anzahl von Zeichen | AutoSabotageUser1_03172022? | Benutzer, Einheitstyp, Gerät, Volume |  | Gibt AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225 usw. zurück 
+| ? (Fragezeichen) | Ermöglicht die Suche nach einer bestimmten Anzahl von Zeichen | AutoSabotageUser1_03172022? | Benutzer, Entitätstyp, Gerät, Volume, 1stLevel-Ordner, 2ndLevel-Ordner, 3rdLevel-Ordner, 4thLevel-Ordner |  | Gibt AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225 usw. zurück 
 
 
-| ODER | Ermöglicht Ihnen die Angabe mehrerer Elemente | AutoSabotageUser1_03172022 ODER AutoBefreiUser4_03162022 | Benutzer, Domäne, PFAD, Entitätstyp, ursprünglicher Pfad |  | Gibt eine beliebige von AutoSabotageUser1_03172022 ODER AutoBefreiUser4_03162022 zurück 
+| ODER | Ermöglicht Ihnen die Angabe mehrerer Elemente | AutoSabotageUser1_03172022 ODER AutoBefreiUser4_03162022 | Benutzer, Domäne, Einheitstyp, Ursprünglicher Pfad |  | Gibt eine beliebige von AutoSabotageUser1_03172022 ODER AutoBefreiUser4_03162022 zurück 
 
 
-| NICHT | Ermöglicht das Ausschließen von Text aus den Suchergebnissen | NICHT automatisch BefreiUser4_03162022 | Benutzer, Domäne, PFAD, Entitätstyp, ursprünglicher PFAD | Gerät | Gibt alles zurück, was nicht mit "AutoBefreiUser4_03162022" beginnt 
+| NICHT | Ermöglicht das Ausschließen von Text aus den Suchergebnissen | NICHT automatisch BefreiUser4_03162022 | Benutzer, Domäne, Entitätstyp, ursprünglicher Pfad, Ordner mit 1 Stufe, Ordner mit 2 Ebenen, Ordner mit 3 Ebenen, Ordner mit 4 Ebenen | Gerät | Gibt alles zurück, was nicht mit "AutoBefreiUser4_03162022" beginnt 
 
 
 | Keine | Sucht in allen Feldern nach Null-Werten | Keine | Domäne |  | Gibt Ergebnisse an, bei denen das Zielfeld leer ist 
@@ -221,37 +237,28 @@ Suchergebnisse mit und ohne / werden unterschiedlich sein
 |===
 
 
-| /AutoDir1/AutoFile | Funktioniert 
+| „/AutoDir1/AutoFile03242022“ | Nur die exakte Suche funktioniert; gibt alle Aktivitäten mit exaktem Pfad wie /AutoDir1/AutoFile03242022 zurück (Fall unsensibel) 
 
 
-| AutoDir1/AutoFile | Funktioniert nicht 
+| „/AutoDir1/“ | Funktioniert; gibt alle Aktivitäten mit Verzeichnis 1. Ebene zurück, die mit AutoDir1 übereinstimmen (unsensibel) 
 
 
-| /AutoDir1/AutoFile (Dir1) | Dir1 partielle Substring funktioniert nicht 
+| „/AutoDir1/AutoFile03242022/“ | Funktioniert; gibt alle Aktivitäten mit Verzeichnis 1. Ebene mit AutoDir1 und Verzeichnis 2. Ebene mit AutoFile03242022 zurück (Fall nicht sensibel) 
 
 
-| „/AutoDir1/AutoFile03242022“ | Genaue Suche funktioniert 
+| /AutoDir1/AutoFile03242022 ODER /AutoDir1/AutoFile03242022 | Funktioniert nicht 
 
 
-| Auto*03242022 | Funktioniert nicht 
+| NICHT /AutoDir1/AutoFile03242022 | Funktioniert nicht 
 
 
-| AutoSabotageUser1_03172022? | Funktioniert nicht 
-
-
-| /AutoDir1/AutoFile03242022 ODER /AutoDir1/AutoFile03242022 | Funktioniert 
-
-
-| NICHT /AutoDir1/AutoFile03242022 | Funktioniert 
-
-
-| NICHT /AutoDir1 | Funktioniert 
+| NICHT /AutoDir1 | Funktioniert nicht 
 
 
 | NICHT /AutoFile03242022 | Funktioniert nicht 
 
 
-| * | Zeigt alle Einträge an 
+| * | Funktioniert nicht 
 |===
 
 
@@ -283,11 +290,11 @@ Beispiel:
 | Einige NFS-Ereignisse werden in der UI nicht angezeigt. | Überprüfen Sie Folgendes: 1. Ein Benutzer-Verzeichnis-Collector für AD-Server mit POSIX-Attributen sollte mit dem unixid-Attribut ausgeführt werden, das über UI aktiviert ist. 2. Jeder Benutzer, der NFS-Zugriff ausführt, sollte auf der Benutzerseite von UI 3 aus gesehen werden. RAW-Ereignisse (Ereignisse, für die der Benutzer noch nicht erkannt wurde) werden für NFS 4 nicht unterstützt. Anonymer Zugriff auf den NFS-Export wird nicht überwacht. 5. Stellen Sie sicher, dass die NFS-Version in weniger als NFS4.1 verwendet wird. 
 
 
-| Nachdem Sie einige Buchstaben mit einem Platzhalterzeichen wie Sternchen (*) in die Filter auf den Seiten Forensics _All Activity_ oder _entities_ eingegeben haben, werden die Seiten sehr langsam geladen. | Ein Sternchen (\*) in der Suchzeichenfolge sucht nach allem. Führende Platzhalterzeichenfolgen wie _*<searchTerm>_ oder _*<searchTerm>*_ führen jedoch zu einer langsamen Abfrage. Um eine bessere Leistung zu erzielen, verwenden Sie stattdessen Präfix-Strings im Format _<searchTerm>*_ (mit anderen Worten: Fügen Sie das Sternchen (*) _nach_ einem Suchbegriff hinzu). Beispiel: Verwenden Sie den String _testvolume*_ anstatt _*testvolume_ oder _*Test*Volume_. Verwenden Sie eine Verzeichnissuche, um alle Aktivitäten unterhalb eines bestimmten Ordners rekursiv anzuzeigen (hierarchische Suche). Z.B. werden unter /path1/path2/path3/ oder „/path1/path2/path3/“ alle Vorgänge rekursiv unter /path1/path2/path3 aufgelistet. Alternativ können Sie die Option „zum Filter hinzufügen“ unter der Registerkarte „Alle Aktivitäten“ verwenden. 
+| Nachdem Sie einige Buchstaben mit einem Platzhalterzeichen wie Sternchen (*) in die Filter auf den Seiten Forensics _All Activity_ oder _entities_ eingegeben haben, werden die Seiten sehr langsam geladen. | Ein Sternchen (\*) in der Suchzeichenfolge sucht nach allem. Führende Platzhalterzeichenfolgen wie _*<searchTerm>_ oder _*<searchTerm>*_ führen jedoch zu einer langsamen Abfrage. Um eine bessere Leistung zu erzielen, verwenden Sie stattdessen Präfix-Strings im Format _<searchTerm>*_ (mit anderen Worten: Fügen Sie das Sternchen (*) _nach_ einem Suchbegriff hinzu). Beispiel: Verwenden Sie den String _testvolume*_ anstatt _*testvolume_ oder _*Test*Volume_. Verwenden Sie eine Verzeichnissuche, um alle Aktivitäten unterhalb eines bestimmten Ordners rekursiv zu sehen (hierarchische Suche). Beispiel: „/path1/path2/path3/“ listet alle Vorgänge rekursiv unter /path1/path2/path3 auf. Alternativ können Sie die Option „zum Filter hinzufügen“ unter der Registerkarte „Alle Aktivitäten“ verwenden. 
 
 
 | Bei der Verwendung eines Pfadfilters tritt ein Fehler „Anfrage fehlgeschlagen mit Statuscode 500/503“ auf. | Versuchen Sie, einen kleineren Datumsbereich zum Filtern von Datensätzen zu verwenden. 
 
 
-| Die forensische Benutzeroberfläche lädt Daten langsam, wenn der _PATH_-Filter verwendet wird. | Verzeichnispfad-Filter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Beispiel: Wenn der Verzeichnispfad /AAA/BBB/CCC/DDD ist, versuchen Sie, nach /AAA/BBB/CCC/DDD/ oder „/AAA/BBB/CCC/DDD/“ zu suchen, um Daten schneller zu laden. 
+| Die forensische Benutzeroberfläche lädt Daten langsam, wenn der _PATH_-Filter verwendet wird. | Verzeichnispfad-Filter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Z.B. wenn der Verzeichnispfad /AAA/BBB/CCC/DDD ist, versuchen Sie nach „/AAA/BBB/CCC/DDD/“ zu suchen, um Daten schneller zu laden. 
 |===

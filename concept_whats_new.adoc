@@ -20,7 +20,43 @@ NetApp verbessert seine Produkte und Services kontinuierlich. Im Folgenden finde
 
 
 
+== Dezember 2024
+
+
+
+=== Einführung von SAN Analyzer: Verbesserte Transparenz für Block-Workloads
+
+SAN spielt eine entscheidende Rolle bei der Handhabung wichtiger Workloads. Seine Komplexität kann jedoch zu erheblichen Ausfällen und Unterbrechungen der Kunden führen. Mit DII *SAN Analyzer* wird die Verwaltung von SAN einfacher und effizienter. Dieses leistungsstarke Tool bietet vollständige Transparenz und ordnet Abhängigkeiten von VM/Host zu Netzwerk und LUN und Storage zu. Durch die Bereitstellung einer interaktiven Topologieübersicht ermöglicht SAN Analyzer es Ihnen, Probleme zu lokalisieren, Änderungen zu verstehen und das Verständnis des Datenflusses zu verbessern. Optimieren Sie das SAN-Management in komplexen IT-Umgebungen mit SAN Analyzer und erhöhen Sie Ihre Transparenz in Block-Workloads.
+
+image:san_analyzer_example_with_panel.png["Topologiezuordnung eines Storage-Systems in SAN Analyzer"]
+
+
+
+=== Optimieren Sie die VM-Kosten mit intelligenter Host-Ausmusterung und VM-Rückgewinnung
+
+Data Infrastructure Insights unterstützt Sie bei der Verwaltung der Infrastruktur- und Lizenzierungskosten, indem das Verlaufsverhalten der Umgebung analysiert und kurz- und langfristige Prognosen aufgestellt werden. Außerdem werden detaillierte Empfehlungen für die Deaktivierung und Rückgewinnung von ausgeschalteten und inaktiven VMs ausgesprochen. Diese Empfehlungen unterstützen Sie dabei, die Performance-Stabilität zu gewährleisten, ungenutzte Kapazität freizugeben und die Arbeitsspeicher- und CPU-Zuweisung zu reduzieren.
+
+image:vm_optimization_summary.png["Bildschirm „VM Optimization Summary“"]
+
+
+
+=== Entdecken Sie Protokolleinblicke mit Hilfe von Zeitdiagrammen und Tabellen-Widget-Unterstützung
+
+Jetzt können Sie Zeitdiagramme (Balken, Linien, Bereiche) nutzen, um Trends und Muster in Protokolldaten zu erkennen, z. B. wiederkehrende Fehler oder Aktivitätsspitzen, und so wertvolle Einblicke in das Systemverhalten im Laufe der Zeit erhalten. Darüber hinaus können Sie bei Tabellen jetzt Protokollmeldungen direkt im Dashboard hinzufügen und so eine umfassendere Ansicht der Protokolldetails erhalten.
+
+image:log_insights_dashboard_example.png["Protokollieren Sie die Einblicke auf einem Dashboard"]
+
+
+
 == November 2024
+
+
+
+=== Neue API für Warnmeldungen zur Workload-Sicherheit
+
+Rufen Sie mit der neuen Workload Security Details zum forensischen Alarm link:concept_cs_api.html["*CloudSecure_forensics.Alerts* API"]ab.
+
+image:ws_forensics_alerts_api.png["API für forensische Warnmeldungen zur Workload-Sicherheit"]
 
 
 
