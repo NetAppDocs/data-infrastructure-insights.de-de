@@ -119,12 +119,6 @@ Bei AWS muss die Groß-/Kleinschreibung nicht beachtet werden, während bei Data
 
 
 
-== Zusätzliche Regionen Einschließen
-
-Im Abschnitt AWS Data Collector *Erweiterte Konfiguration* können Sie das Feld * zusätzliche Regionen* so einstellen, dass zusätzliche durch Komma oder Semikolon getrennte Bereiche einbezogen werden. Standardmäßig ist dieses Feld auf *_US-.*_* gesetzt, das auf allen US AWS Regionen sammelt. Um in _all_ Regionen zu sammeln, setzen Sie dieses Feld auf *_.*_*. Ist das Feld *zusätzliche Regionen* leer, sammelt der Datensammler die im Feld *AWS Region* angegebenen Werte, wie im Abschnitt *Konfiguration* angegeben.
-
-
-
 == Erfassung über AWS Child-Konten
 
 Data Infrastructure Insights unterstützt die Erfassung von untergeordneten Konten für AWS innerhalb eines einzigen AWS-Datensammlers. Die Konfiguration dieser Sammlung erfolgt in der AWS-Umgebung:

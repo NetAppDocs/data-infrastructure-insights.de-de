@@ -48,6 +48,15 @@ image:log_insights_dashboard_example.png["Protokollieren Sie die Einblicke auf e
 
 
 
+=== Proaktives Risikomanagement mit Forensics Grouping
+
+Wir stellen vor: Unsere neueste Funktion zur Verbesserung Ihrer Sicherheits- und Ressourcenverwaltungsfunktionen! Mit der erweiterten forensischen Gruppenkalzfunktion und der hierarchischen Unterstützung mehrerer Gruppen nach können Sie jetzt ganz einfach ermitteln, welche Benutzer auf bestimmte Ordner zugegriffen haben, die aktivsten Benutzer und Freigaben ermitteln und das Risiko proaktiv managen, indem Sie aktive Client-IP-Adressen verfolgen. Optimieren Sie Ihre Speicher- und Bandbreitennutzung, indem Sie die Dateien und Ordner erkennen, auf die am häufigsten zugegriffen wird, und erhalten Sie eine bessere Kontrolle über den Systemzugriff, indem Sie echte Benutzer identifizieren.
+
+image:forensics-group-by-example-screen.png["forensics-Beispielbildschirm, der die Gruppe nach zeigt"]
+
+'''
+
+
 == November 2024
 
 
