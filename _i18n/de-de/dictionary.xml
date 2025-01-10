@@ -8769,10 +8769,7 @@
   <block id="b5648f15565fb8185bfc83aaabee9577" category="paragraph">Wenn Ihr Betriebssystem keine systemd verwendet:</block>
   <block id="936ff88b3ce432ac2624f7f2bb4998a4" category="paragraph">Um den Agent auf Ubuntu/Debian zu deinstallieren, führen Sie in einem Bash-Terminal Folgendes aus:</block>
   <block id="7f3a9bda6122a676154f73d5edf02232" category="list-text"><block ref="760050cb55c606cd7ef0af21f798bf45" category="inline-link-macro-rx"></block>.</block>
-  <block id="99b7973dda927022b1a7232d7b78e926" category="section-title">Prüfsummen Werden Überprüft</block>
-  <block id="6a9aa39bb342c83778b90096fb82f44f" category="paragraph">Das Installationsprogramm von Data Infrastructure Insights Agent führt Integritätsprüfungen durch, einige Benutzer möchten jedoch möglicherweise ihre eigenen Überprüfungen durchführen, bevor heruntergeladene Artefakte installiert oder angewendet werden. Dazu können Sie das Installationsprogramm herunterladen und eine Prüfsumme für das heruntergeladene Paket erstellen. Anschließend wird die Prüfsumme mit dem in der Installationsanleitung angegebenen Wert verglichen.</block>
   <block id="1078df24543dad61e1b5b51f611f5b0f" category="section-title">Laden Sie das Installationspaket herunter, ohne es zu installieren</block>
-  <block id="48feb91430f93bd8ac9740e9cdc40c75" category="paragraph">Um einen ausschließlich herunterladbaren Vorgang durchzuführen (im Gegensatz zum Standard-Download-and-install), können Benutzer den Agent-Installationbefehl von der UI erhalten bearbeiten und die nachgestellte Option „install“ entfernen.</block>
   <block id="deadee5e2cfce7600cfd5def40a7d618" category="paragraph">Führen Sie hierzu folgende Schritte aus:</block>
   <block id="8c386e0a7a8cfc20ef9a26dacd925e69" category="list-text">Kopieren Sie das Agent Installer-Snippet wie angewiesen.</block>
   <block id="225b18b0098145b352b8fbf6c04e8098" category="list-text">Anstatt das Snippet in ein Befehlsfenster einzufügen, fügen Sie es in einen Texteditor ein.</block>
@@ -8786,14 +8783,8 @@
   <block id="37756806bad02e3e8fb3d5413278c336" category="paragraph">Mit dem Befehl „nur herunterladen“ werden alle erforderlichen Artefakte aus Data Infrastructure Insights in das Arbeitsverzeichnis heruntergeladen. Die Artefakte umfassen, dürfen aber nicht beschränkt sein auf:</block>
   <block id="8d4a361a3f25b78818c569d8f15cf4a6" category="list-text">Ein Installationsskript</block>
   <block id="b015398c226e1e3576258432ece31819" category="list-text">Einer Umgebungsdatei</block>
-  <block id="004cac3ce7d67014b5fadcffaf9b5b70" category="list-text">YAML-Dateien</block>
-  <block id="9f32134bbefffdc9df70a2d73c2df6a6" category="list-text">Eine Prüfsummendatei (endet mit sha256.signed oder sha256.ps1)</block>
-  <block id="4f1c754cd67cd57cebe0be2f5e8638a4" category="paragraph">Das Installationsskript, die Umgebungsdatei und die YAML-Dateien können mittels Sichtprüfung verifiziert werden.</block>
-  <block id="d8f6d626cfe2a4f97d97ff93d95db51b" category="section-title">Prüfsummenwert generieren</block>
   <block id="d1703bc5bb53c90ffbbae52dfe829603" category="paragraph">Um den Prüfsummenwert zu generieren, führen Sie für die entsprechende Plattform den folgenden Befehl aus:</block>
   <block id="9374ddadb9776b458a2963573b22f63d" category="list-text">RHEL/Ubuntu:</block>
-  <block id="aacd43790bd404cab1a350cb047a9a9d" category="section-title">Überprüfen Sie die Prüfsumme</block>
-  <block id="43e3c65a555911ad6d7235d9e9206e4c" category="paragraph">Extrahieren Sie die erwartete Prüfsumme aus der Prüfsummendatei</block>
   <block id="47a6cd89e04d0d805a75aa0fe5822c20" category="list-text">Nicht Windows:</block>
   <block id="b59ea01f26635c31c3c1df660848f6c8" category="section-title">Installieren Sie das heruntergeladene Paket</block>
   <block id="6c32334bfce9f857b0fdbdca68040a0b" category="paragraph">Sobald alle Artefakte zufriedenstellend überprüft wurden, kann die Agenteninstallation durch Ausführen von gestartet werden:</block>
@@ -11888,4 +11879,12 @@
   <block id="d932f771e537d16693bed2e69269a746" category="paragraph"><block ref="d932f771e537d16693bed2e69269a746" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ee0b2f1c8ad7945cf603e8d752a5e7b5" category="inline-link-macro">Data Infrastructure Insights Editionen</block>
   <block id="bbf9080a1bf1fb2f62558ce683d64be0" category="paragraph">Einen vollständigen Vergleich der in Data Infrastructure Insights Basic und Premium Edition verfügbaren Funktionen finden Sie auf der <block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block> Seite.</block>
+  <block id="3bbdd1e5a1fbf0d58680e594b8806722" category="section-title">Überprüfen Der Telegraf Package-Prüfsummen</block>
+  <block id="7ff5578ba477d9e2321cffdc188dd439" category="paragraph">Der Data Infrastructure Insights Agent Installer führt Integritätsprüfungen durch, aber einige Benutzer können ihre eigenen Überprüfungen vor der Installation der heruntergeladenen Telegraf-Binärdatei durchführen. Dazu können Sie das Installationsprogramm herunterladen und eine Prüfsumme für das heruntergeladene Paket erstellen. Anschließend wird die Prüfsumme mit dem in der Installationsanleitung angegebenen Wert verglichen.</block>
+  <block id="741ebc51b7127a27c632897c49b71ad3" category="paragraph">Um einen reinen Download-Vorgang durchzuführen (im Gegensatz zum Standard-Download-and-install), können Benutzer den von der Benutzeroberfläche erhaltenen Befehl für die Agenteninstallation bearbeiten und die Option „install“ entfernen.</block>
+  <block id="8b5391cb0617a6870147a0c34743013d" category="list-text">Eine Telegraf-Binärdatei</block>
+  <block id="6b15d8f349fa2e771a92e4131bcae2d2" category="list-text">Eine Signatur für die Telegraf-Binärdatei</block>
+  <block id="b7e85347cdffb5889c57e4b1ad785a2e" category="list-text">Ein öffentliches Zertifikat zur Überprüfung der Binärsignatur</block>
+  <block id="bfc63dcde995168de645c7c0b1b67357" category="paragraph">Das von DII heruntergeladene und kopierte Installationsskript überprüft automatisch das Installationsskript und die Signatur der telegraf-Binärdatei wird durch das Installationsskript überprüft.</block>
+  <block id="26f2872f4049fcba9927c1b41d6502d3" category="section-title">Überprüfen Sie den Prüfsummenwert</block>
 </blocks>

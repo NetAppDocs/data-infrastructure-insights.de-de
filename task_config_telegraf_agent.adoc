@@ -29,7 +29,7 @@ Informationen zur Installation auf Kubernetes finden Sie auf der link:task_confi
 NOTE: Für eine genaue Audit- und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Agent-Rechner mit *Network Time Protocol (NTP)* oder *Simple Network Time Protocol (SNTP)* zu synchronisieren.
 
 
-NOTE: Wenn Sie die Installationsdateien vor dem Instaling des Agenten überprüfen möchten, lesen Sie den Abschnitt unten auf <<Prüfsummen Werden Überprüft>>.
+NOTE: Wenn Sie die Installationsdateien vor dem Instaling des Agenten überprüfen möchten, lesen Sie den Abschnitt unten auf <<Verifying Checksums>>.
 
 
 
@@ -364,15 +364,15 @@ systemctl stop telegraf (If your operating system is using systemd)
 
 
 
-== Prüfsummen Werden Überprüft
+== Überprüfen Der Telegraf Package-Prüfsummen
 
-Das Installationsprogramm von Data Infrastructure Insights Agent führt Integritätsprüfungen durch, einige Benutzer möchten jedoch möglicherweise ihre eigenen Überprüfungen durchführen, bevor heruntergeladene Artefakte installiert oder angewendet werden. Dazu können Sie das Installationsprogramm herunterladen und eine Prüfsumme für das heruntergeladene Paket erstellen. Anschließend wird die Prüfsumme mit dem in der Installationsanleitung angegebenen Wert verglichen.
+Der Data Infrastructure Insights Agent Installer führt Integritätsprüfungen durch, aber einige Benutzer können ihre eigenen Überprüfungen vor der Installation der heruntergeladenen Telegraf-Binärdatei durchführen. Dazu können Sie das Installationsprogramm herunterladen und eine Prüfsumme für das heruntergeladene Paket erstellen. Anschließend wird die Prüfsumme mit dem in der Installationsanleitung angegebenen Wert verglichen.
 
 
 
 === Laden Sie das Installationspaket herunter, ohne es zu installieren
 
-Um einen ausschließlich herunterladbaren Vorgang durchzuführen (im Gegensatz zum Standard-Download-and-install), können Benutzer den Agent-Installationbefehl von der UI erhalten bearbeiten und die nachgestellte Option „install“ entfernen.
+Um einen reinen Download-Vorgang durchzuführen (im Gegensatz zum Standard-Download-and-install), können Benutzer den von der Benutzeroberfläche erhaltenen Befehl für die Agenteninstallation bearbeiten und die Option „install“ entfernen.
 
 Führen Sie hierzu folgende Schritte aus:
 
@@ -387,35 +387,36 @@ Nicht-Windows (diese Beispiele gelten für Kubernetes; die tatsächlichen Skript
 
 * Download und Installation (Standard):
 +
- installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download –-install
+ installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify && sudo -E -H ./$installerName --install
 * Nur Download:
 +
- installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download
+ installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify
 
 
 Windows:
 
 * Download und Installation (Standard):
 +
- !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download -install)
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify -install } else { Write-Host "Install script checksum does not match"})"
 * Nur Download:
 +
- !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download)
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify } else { Write-Host "Install script checksum does not match"})"
 
 
 Mit dem Befehl „nur herunterladen“ werden alle erforderlichen Artefakte aus Data Infrastructure Insights in das Arbeitsverzeichnis heruntergeladen. Die Artefakte umfassen, dürfen aber nicht beschränkt sein auf:
 
 * Ein Installationsskript
 * Einer Umgebungsdatei
-* YAML-Dateien
-* Eine Prüfsummendatei (endet mit sha256.signed oder sha256.ps1)
+* Eine Telegraf-Binärdatei
+* Eine Signatur für die Telegraf-Binärdatei
+* Ein öffentliches Zertifikat zur Überprüfung der Binärsignatur
 
 
-Das Installationsskript, die Umgebungsdatei und die YAML-Dateien können mittels Sichtprüfung verifiziert werden.
+Das von DII heruntergeladene und kopierte Installationsskript überprüft automatisch das Installationsskript und die Signatur der telegraf-Binärdatei wird durch das Installationsskript überprüft.
 
 
 
-=== Prüfsummenwert generieren
+=== Überprüfen Sie den Prüfsummenwert
 
 Um den Prüfsummenwert zu generieren, führen Sie für die entsprechende Plattform den folgenden Befehl aus:
 
@@ -425,20 +426,6 @@ Um den Prüfsummenwert zu generieren, führen Sie für die entsprechende Plattfo
 * Windows:
 +
  Get-FileHash telegraf.zip -Algorithm SHA256 | Format-List
-
-
-
-
-=== Überprüfen Sie die Prüfsumme
-
-Extrahieren Sie die erwartete Prüfsumme aus der Prüfsummendatei
-
-* Nicht Windows:
-+
- openssl smime -verify -in telegraf*.sha256.signed -CAfile netapp_cert.pem -purpose any -nosigs -noverify
-* Windows:
-+
- (Get-Content telegraf.zip.sha256.ps1 -First 1).toUpper()
 
 
 
