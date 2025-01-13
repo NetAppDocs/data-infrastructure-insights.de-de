@@ -245,8 +245,6 @@ sidebar:
       entries:
       - title: Vorgangsforensik - Alle Aktivitäten
         url: "/forensic_activity_history.html"
-      - title: Vorgangsforensik - Einheiten
-        url: "/forensic_entity_detail.html"
       - title: Benutzer
         url: "/forensic_user_overview.html"
     - title: Automatisierte Antwortrichtlinien

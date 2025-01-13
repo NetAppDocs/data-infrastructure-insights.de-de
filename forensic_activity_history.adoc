@@ -55,7 +55,7 @@ Die Tabelle _*Alle Aktivitäten*_ enthält die folgenden Informationen. Beachten
 ** *Andere Änderung* - jedes andere Ereignis, das oben nicht beschrieben wird. Alle nicht zugeordneten Ereignisse werden dem Aktivitätstyp „andere Änderung“ zugeordnet. Gilt für Dateien und Ordner.
 
 
-* Der *Pfad* ist _entity_ Pfad.
+* Der *Pfad* ist _entity_ Pfad. Dies sollte entweder der exakte Entity-Pfad (z.B. "_/Home/userX/nested1/nested2/abc.txt_") ODER DER Verzeichnisabschnitt des Pfads für rekursive Suche sein (z.B. "_/Home/userX/nested1/nested2/_"). HINWEIS: Regex-Pfadmuster (z.B. _userX_) sind hier NICHT erlaubt. Alternativ können auch einzelne Filter auf Pfadordnerebene, wie unten erwähnt, für die Pfadfilterung angegeben werden.
 * Der * 1st Level Folder (Root)* ist das Stammverzeichnis des Entity-Pfades in Kleinbuchstaben.
 * Der *2nd Level Folder* ist das Verzeichnis der Entity PATH der zweiten Ebene im Kleinbuchstaben.
 * Der Ordner *3rd Level* ist das Verzeichnis 3rd Level des Entity PATH im Kleinbuchstaben.
@@ -112,7 +112,7 @@ Sie können forensische Aktivitätsdaten nach folgenden Feldern filtern:
 Die folgenden Felder unterliegen speziellen Filterregeln:
 
 * *Entity Type*, mit Entity (File) Extension - es ist vorzuziehen, den genauen Entity-Typ in Anführungszeichen anzugeben. Beispiel: _ „Txt“_.
-* *Pfad* der Entity - Verzeichnispfad-Filter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Beispiel: _“/Home/userX/nested1/nested2/“_. Weitere Informationen finden Sie in der folgenden Tabelle.
+* *Pfad* der Entity - Dies sollte entweder der exakte Entity-Pfad (z.B. "_/Home/userX/nested1/nested2/abc.txt_") ODER DER Verzeichnisabschnitt des Pfads für rekursive Suche sein (z.B. "_/Home/userX/nested1/nested2/_"). HINWEIS: Regex-Pfadmuster (z.B. *userX*) sind hier NICHT erlaubt. Verzeichnispfadfilter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Beispiel: „_/Home/userX/nested1/nested2/_“. Weitere Informationen finden Sie in der folgenden Tabelle.
 * 1st Level Folder (Root) - Stammverzeichnis des Entity Path als Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann Home ODER "Home" verwendet werden.
 * 2nd Level Folder - Verzeichnis 2nd Level der Entity Path Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann userX ODER "userX" verwendet werden.
 * Ordner der dritten Ebene – Verzeichnis der Pfadfilter der dritten Ebene.
@@ -145,7 +145,7 @@ Die vorhergehenden Felder unterliegen beim Filtern folgenden Kriterien:
 | Pfad = „/Home/userX/nested1/“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Schnell | Verzeichnissuchen bis zu 4 Verzeichnisse werden schnell sein. 
 
 
-| Pfad = „/Home/userX/nested1/Test“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Pfad regex(Test* könnte Datei ODER Verzeichnis ODER beides bedeuten) | Langsamer | Die Suche nach Verzeichnis+Datei ist langsamer als bei Verzeichnissuchen. 
+| Pfad = „/Home/userX/nested1/Test“ | Exakte Übereinstimmung, wobei der Pfadwert mit /Home/userX/nested1/Test übereinstimmt | Langsamer | Die genaue Suche ist langsamer als die Suche nach Verzeichnissen. 
 
 
 | Pfad = „/Home/userX/nested1/nested2/nested3/“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Langsamer | Mehr als 4 Verzeichnissuchen sind langsamer zu suchen. 
@@ -230,7 +230,7 @@ Der Aktivitätsverlauf wird 13 Monate lang in aktiven Workload-Sicherheitsumgebu
 |===
 
 
-== Pfadsuche/Original-Pfadsuche
+== Pfadsuche
 
 Suchergebnisse mit und ohne / werden unterschiedlich sein
 
