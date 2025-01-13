@@ -87,6 +87,8 @@ sidebar:
         url: "/task_query_copy_table_values.html"
       - title: Abfragen Von Protokollen
         url: "/concept_log_explorer.html"
+      - title: Identifizieren Inaktiver Geräte
+        url: "/task_identify_inactive_devices.html"
     - title: Einblick
       entries:
       - title: Überblick

@@ -1,21 +1,18 @@
 ---
 sidebar: sidebar 
 permalink: task_identify_inactive_devices.html 
-keywords: inactive, device, 
-summary: Mit der Identifizierung inaktiver Geräte können Sie diese löschen oder einer aktiven Rolle zuweisen. 
+keywords: inactive, device, remove, removing, identify, identifying 
+summary: Wenn Sie inaktive Geräte identifizieren, können Sie sie löschen oder einer aktiven Rolle zuweisen. 
 ---
 = Identifizieren von inaktiven Geräten
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,10 +21,12 @@ Die Ermittlung der vorhandenen und von wem verwendeten Ressourcen ist entscheide
 Führen Sie die folgenden Schritte aus, um inaktive Assets zu identifizieren.
 
 .Schritte
-* Navigieren Sie zu *Explore -> +New Metric Query*.
+* Navigieren Sie zu *Observability > Explore -> +New Metric Query*.
 * Wählen Sie _Storage_ aus der Dropdown-Liste aus.
 * Klicken Sie auf das Zahnrad und fügen Sie _isActive_ als Spalte hinzu.
 +
 Zeilen, die eine Prüfung anzeigen, sind aktiv. „X“ zeigt inaktive Geräte an.
 
 
+
+Um inaktive Geräte zu entfernen, wählen Sie einfach die zu entfernenden Geräte aus, und wählen Sie im Dropdown-Menü *Massenaktionen* die Option _inaktive Geräte löschen_.
