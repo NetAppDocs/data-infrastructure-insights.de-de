@@ -484,5 +484,8 @@ Hinweis: Um diese Einstellungen über einen Node hinweg dauerhaft neu zu starten
  fs.inotify.max_user_instances=<something larger than current setting>
  fs.inotify.max_user_watches=<something larger than current setting>
 ----
+
+
+| Die telegraf DS-Pods melden Fehler, die das kubernetes-Input-Plug-in betreffen und keine HTTP-Anforderungen stellen, da das TLS-Zertifikat nicht validiert werden kann. Zum Beispiel: E! [Inputs.kubernetes] Fehler im Plugin: Fehler beim Erbringen der HTTP-Anforderung zum "https://<kubelet_IP>:10250/stats/summary":[] Abrufen von "https://<kubelet_IP>:10250/stats/summary":[] tls: Zertifikat konnte nicht überprüft werden: x509: Zertifikat für <kubelet_IP> kann nicht validiert werden, da es keine IP SANs enthält | Dies tritt auf, wenn das kubelet selbstsignierte Zertifikate verwendet und/oder das angegebene Zertifikat die <kubelet_IP> nicht in die Liste Zertifikate _Subject Alternative Name_ einbezieht. Um dies zu beheben, kann der Benutzer die link:telegraf_agent_k8s_config_options.html["Agentenkonfiguration"], ändern und _telegraf:inscureK8sSkipVerify_ auf _true_ setzen. Dadurch wird das telegraf Input Plugin konfiguriert, um die Überprüfung zu überspringen. Alternativ kann der Benutzer das kubelet for konfigurierenlink:https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/["ServerTLSBootstrap"], das eine Zertifikatanforderung von der API 'certificates.k8s.io' auslöst. 
 |===
 Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

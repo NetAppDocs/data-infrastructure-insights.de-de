@@ -1767,7 +1767,6 @@
   <block id="6b0d087c4bacdd4357f49c495293bdde" category="cell">SkipProcessorsAfterAggregatoren</block>
   <block id="412ea2434c00799606f268b4aa2b35dc" category="cell">Ungeschützt</block>
   <block id="9091b3fb9f4d43844af8dc0a973c67e0" category="inline-link-macro">Bekanntes Problem mit Telegraf</block>
-  <block id="d466d69e5a5f62e5d6773f7d399fe086" category="cell">Siehe hier <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>. Durch die Einstellung _Unprotected_ wird der Kubernetes Monitoring Operator angewiesen, Telegraf mit dem Flag auszuführen<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block>.</block>
   <block id="81beb48dd63a014bf8c446eeeb319a2e" category="cell">Konfigurationsoptionen, mit denen die installation von kube-Statusmetriken des Operators angepasst werden kann</block>
   <block id="8804d25db5f16b9db006116b6edf45bc" category="cell">CpuLimit</block>
   <block id="8b673d5f702e58efd947465ead5c9647" category="cell">CPU-Limit für die bereitstellung von kube-State-Metriken</block>
@@ -11911,4 +11910,11 @@
   <block id="ca351e1a429ee72dbdb2061c22743ef6" category="list-text">Navigieren Sie zu *Observability &gt; Explore -&gt; +New Metric Query*.</block>
   <block id="5e7f24385025eba3461014d3d964455b" category="paragraph">Um inaktive Geräte zu entfernen, wählen Sie einfach die zu entfernenden Geräte aus, und wählen Sie im Dropdown-Menü *Massenaktionen* die Option _inaktive Geräte löschen_.</block>
   <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">Identifizieren Inaktiver Geräte</block>
+  <block id="70d57a4cf0763cd6479ef380a0e3959d" category="cell">Die telegraf DS-Pods melden Fehler, die das kubernetes-Input-Plug-in betreffen und keine HTTP-Anforderungen stellen, da das TLS-Zertifikat nicht validiert werden kann. Zum Beispiel: E! [Inputs.kubernetes] Fehler im Plugin: Fehler beim Erbringen der HTTP-Anforderung zum <block ref="67e388e14afab5b44ba05645532bfd4c" category="inline-link-rx"></block> Abrufen von <block ref="67e388e14afab5b44ba05645532bfd4c" category="inline-link-rx"></block> tls: Zertifikat konnte nicht überprüft werden: x509: Zertifikat für &lt;kubelet_IP&gt; kann nicht validiert werden, da es keine IP SANs enthält</block>
+  <block id="006f752e44410388cadd8f8a37ce069f" category="inline-link-macro">Agentenkonfiguration</block>
+  <block id="e7367bd1ec175ef5c58d982c52bc4348" category="inline-link-macro">ServerTLSBootstrap</block>
+  <block id="eb693e07b3c7e38a77aa691eee254db7" category="cell">Dies tritt auf, wenn das kubelet selbstsignierte Zertifikate verwendet und/oder das angegebene Zertifikat die &lt;kubelet_IP&gt; nicht in die Liste Zertifikate _Subject Alternative Name_ einbezieht. Um dies zu beheben, kann der Benutzer die <block ref="1ff2a3d734af6ebdb77c417baa3479b1" category="inline-link-macro-rx"></block>, ändern und _telegraf:inscureK8sSkipVerify_ auf _true_ setzen. Dadurch wird das telegraf Input Plugin konfiguriert, um die Überprüfung zu überspringen. Alternativ kann der Benutzer das kubelet for konfigurieren<block ref="9ed8afe3c99331fa3d23c13414b98aba" category="inline-link-macro-rx"></block>, das eine Zertifikatanforderung von der API 'certificates.k8s.io' auslöst.</block>
+  <block id="2f461803a8b3a27284482a32459a1078" category="cell">ee dieses <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>. Durch die Einstellung _Unprotected_ wird der Kubernetes Monitoring Operator angewiesen, Telegraf mit dem Flag auszuführen<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block>.</block>
+  <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
+  <block id="3008cd3125cccc003fa13335717e556e" category="cell">Wenn telegraf das Zertifikat aufgrund fehlender IP-SANs nicht verifizieren kann, versuchen Sie, Verifizierungs-skip zu aktivieren</block>
 </blocks>
