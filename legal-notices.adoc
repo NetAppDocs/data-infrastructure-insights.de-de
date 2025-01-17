@@ -47,6 +47,6 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.
 
-link:media/Notice_Cloud_Insights-2023-04.pdf["Hinweise zu Dateninfrastruktureinblicken (ehemals Cloud Insights)"]
+link:media/Data_Infrastructure_InsightsOn-prem_ComponentsNOTICE-1.pdf["Hinweise zu Dateninfrastruktureinblicken (ehemals Cloud Insights)"]
 
-link:media/Notice_Cloud_Secure-2022-12-14.pdf["Hinweis zur Workload-Sicherheit (ehemals Cloud Secure)"]
+link:media/Data_Infrastructure_Insights_Workload_SecurityOn-prem_ComponentsNOTICE-1.pdf["Hinweis zur Workload-Sicherheit (ehemals Cloud Secure)"]
