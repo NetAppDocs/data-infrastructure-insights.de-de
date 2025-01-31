@@ -25,3 +25,11 @@ image:san_analyzer_example_with_panel.png["Topologiezuordnung eines Storage-Syst
 
 
 == Entdecken Sie Verbindungen zwischen Ihren Ressourcen
+
+Wählen Sie *Observability > Analyze > SAN Analyzer*, um den SAN Analyzer anzuzeigen. Legen Sie einen Filter für Anwendung, Host, Struktur und/oder Speicher fest. Die Karte für die Objekte wird angezeigt und zeigt verbundene Objekte an. Bewegen Sie den Mauszeiger über ein Objekt, um Verkehrsmetriken für diese Verbindungen anzuzeigen.
+
+image:san_analyzer_traffic_metrics.png[""]
+
+Wenn Sie auf ein Objekt oder eine Gruppe klicken, wird ein Schiebefenster mit zusätzlichen Details zum Objekt und seinen Verbindungen geöffnet. Das Slideout enthält Registerkarten mit einer Übersicht, Portdetails und Zoneninformationen, falls verfügbar.
+
+image:san_analyzer_slideout_example.png[""]
