@@ -11927,4 +11927,16 @@
   <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3cfbb427bd17b95ae08e5597561217ef" category="paragraph">Wenn Sie auf ein Objekt oder eine Gruppe klicken, wird ein Schiebefenster mit zusätzlichen Details zum Objekt und seinen Verbindungen geöffnet. Das Slideout enthält Registerkarten mit einer Übersicht, Portdetails und Zoneninformationen, falls verfügbar.</block>
   <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18082cdb9388e2686e081dd6012e47b8" category="summary">Sie bestimmen, ob ein von Ihnen erstelltes Dashboard öffentlich oder privat ist.</block>
+  <block id="cc5c681651d638257ae03658c963c7c6" category="doc">Dashboard-Zugriffsmanagement</block>
+  <block id="571ad98bb1054a211a5d3fa3a3240265" category="paragraph">Mit Data Infrastructure Insights haben Sie jetzt mehr Kontrolle über den Zugriff auf von Ihnen erstellte Dashboards. Sie können festlegen, wer Ihre Diagramme ändern kann. Sie steuern die Exposition gegenüber potenziell sensiblen Informationen. Wenn Sie ein Dashboard „Privat“ halten, können Sie Ihre Visualisierungen so lange abschließen, bis sie von anderen in Ihrem Unternehmen verwendet werden können.</block>
+  <block id="505e6238dfdc62d1b4bbdf930fa887b8" category="inline-image-macro">Optionen zur gemeinsamen Nutzung des Dashboards, Breite=300</block>
+  <block id="43b5d7a5affce9056fb3d7ec4b82fe17" category="paragraph"><block ref="43b5d7a5affce9056fb3d7ec4b82fe17" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="547a803d844f9925f62c57d49f10caf6" category="paragraph">Wenn Sie ein neues Dashboard erstellen, ist dieses Dashboard standardmäßig nur für Sie, den Ersteller, sichtbar. Kein anderer Benutzer kann das Dashboard sehen oder ändern.</block>
+  <block id="78d12ef818f574226b0780765511e2d5" category="paragraph">Wenn Sie Ihr Dashboard fertig gestellt haben, können Sie anderen Personen in Ihrem Unternehmen die Anzeige erlauben. Um ein Dashboard gemeinsam zu nutzen, wählen Sie in der Dashboard-Liste im rechten Menü die Option „_Share_“ aus.</block>
+  <block id="8e561a2090f27ed80a24e59dff11dcce" category="inline-image-macro">Dashboard-Zugriff auf Share über das Menü</block>
+  <block id="5fc6afe4cfc7bc7e58ad6e7119812663" category="paragraph"><block ref="5fc6afe4cfc7bc7e58ad6e7119812663" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">Sie können das Dashboard für alle Benutzer freigeben oder Benutzer auswählen, die über die Berechtigung Bearbeiten oder nur Lesen verfügen.</block>
+  <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">Dropdown-Listen zum Freigeben eines Dashboards mit der Berechtigung Bearbeiten oder Lesen</block>
+  <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
