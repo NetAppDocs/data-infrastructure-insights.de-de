@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: cvm_optimization_overview.html 
+summary: VM-Optimierung 
+keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
+---
+= VM-Optimierung
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:toclevels: 1
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights unterstützt Sie bei der Verwaltung der Infrastruktur- und Lizenzierungskosten, indem das Verlaufsverhalten der Umgebung analysiert und kurz- und langfristige Prognosen aufgestellt werden. Außerdem werden detaillierte Empfehlungen für die Deaktivierung und Rückgewinnung von ausgeschalteten und inaktiven VMs ausgesprochen. Diese Empfehlungen unterstützen Sie dabei, die Performance-Stabilität zu gewährleisten, ungenutzte Kapazität freizugeben und die Arbeitsspeicher- und CPU-Zuweisung zu reduzieren.
+
+image:vm_optimization_summary.png["Bildschirm „VM Optimization Summary“"]
+
+Navigieren Sie zu Observability > Analyze > VM Optimization. Ihnen wird eine Zusammenfassung der potenziellen Einsparungen nach Anzahl der Kerne und Storage-Einsparungen angezeigt. Sie können Filter nach Datacenter, Virtual Center IP oder Cluster fokussieren oder eigene Filter festlegen, um Ihre Fokussierung weiter einzuschränken.
+
+image:vm_optimization_overview.png["Übersicht über die vm-Optimierung"]
+
+Auf der Registerkarte Hypervisor Decommissioning werden Ihre potenziellen Kosteneinsparungen basierend auf der von Ihnen gewählten Optimierungsstrategie angezeigt. In jeder Strategie werden unterschiedliche Schwellenwerte zur Bestimmung potenzieller Einsparungen genutzt.
+
+Wählen Sie einen Cluster in der Liste aus, um einen Schiebebereich mit Details zur CPU- und Arbeitsspeicherauslastung für den Cluster zu öffnen.
+
+image:vm_optimization_hypervisor_decommissioning_tab.png["Registerkarte „Hypervisor-Optimierung“"]
+
+Die Registerkarte „VM Reclamation“ enthält Details zu VMs, die seit mehr als 30, 60 oder 90 Tagen inaktiv oder abgeschaltet sind, sowie mögliche Einsparungen bei Kapazität, Arbeitsspeicher und vCPU. Durch Auswahl einer VM aus der Liste wird die Detailseite für diese VM geöffnet.
+
+image:vm_optimization_reclamation_tab.png["Registerkarte „vm-Rückgewinnung“"]
