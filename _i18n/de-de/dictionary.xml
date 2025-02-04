@@ -6187,7 +6187,6 @@
   <block id="58ecb418298e803c7a0ae49007466440" category="paragraph">Auf der Seite Alle Aktivitäten können Sie die Aktionen verstehen, die für Einheiten in der Workload-Sicherheitsumgebung durchgeführt werden.</block>
   <block id="33a203d3623a54e6d264ebf5af5db210" category="section-title">Alle Aktivitätsdaten Werden Untersucht</block>
   <block id="dde100b78d6d436ad1c738fca1b98fc6" category="paragraph">Sie können das Diagramm vergrößern, indem Sie ein Rechteck im Diagramm herausziehen. Die gesamte Seite wird geladen, um den vergrößerten Zeitbereich anzuzeigen. Wenn der Zoom vergrößert wird, wird eine Schaltfläche angezeigt, mit der der Benutzer zoomen kann.</block>
-  <block id="be2a0bbd0e52bd10107615bcddc56fba" category="paragraph">Die Tabelle _*Alle Aktivitäten*_ enthält die folgenden Informationen. Beachten Sie, dass standardmäßig nicht alle dieser Spalten angezeigt werden. Sie können Spalten auswählen, die angezeigt werden sollen, indem Sie auf das Zahnradsymbol klicken.</block>
   <block id="10b85952c1ec4b6508b7012df066ef83" category="list-text">Die *Zeit*, auf die ein Unternehmen zugegriffen wurde, einschließlich Jahr, Monat, Tag und Uhrzeit des letzten Zugriffs.</block>
   <block id="38d1b0982212e47a2dd73e4c40793793" category="inline-link-macro">Benutzerinformationen</block>
   <block id="6bf51f11b7d2354b7c099ad162d81b7a" category="list-text">Die *Aktivität*, die der Benutzer durchgeführt hat. Folgende Typen werden unterstützt:</block>
@@ -6198,11 +6197,9 @@
   <block id="dc1663562fc43061ff1040783cb4e9d2" category="list-text">*Erstellen* - Erstellen Sie Datei oder Ordner.</block>
   <block id="6bcfc6d0ddd3e857bf7ff9d50a1aad07" category="list-text">*Löschen* - Datei oder Ordner löschen. Wenn ein Ordner gelöscht wird, werden _delete_ Ereignisse für alle Dateien in diesem Ordner und Unterordnern abgerufen.</block>
   <block id="865fb9ac996b45282ae7a37ddf907748" category="list-text">*Lesen* - Datei wird gelesen.</block>
-  <block id="63342c59c5eab274a4129fdce2de1067" category="list-text">*Metadaten lesen* - nur bei Option zur Ordnerüberwachung. Wird beim Öffnen eines Ordners unter Windows erzeugt oder „ls“ innerhalb eines Ordners unter Linux ausgeführt.</block>
   <block id="3ee2cb44fd1180239223a95847150e56" category="list-text">*Umbenennen* - Umbenennen Sie die Datei oder den Ordner.</block>
   <block id="ccf535ac132e169591e0c8835e83f80f" category="list-text">*Schreiben* - Daten werden in eine Datei geschrieben.</block>
   <block id="bc2e1628223bbd57334a725f0401d199" category="list-text">*Metadaten schreiben* - Dateimetadaten werden geschrieben, zum Beispiel, Berechtigung geändert.</block>
-  <block id="d05ab97003568ddbd1e124e280eff44d" category="list-text">*Andere Änderung* - jedes andere Ereignis, das oben nicht beschrieben wird. Alle nicht zugeordneten Ereignisse werden dem Aktivitätstyp „andere Änderung“ zugeordnet. Gilt für Dateien und Ordner.</block>
   <block id="d97c308acbc0f0d3e5a290abc82e12a0" category="inline-link-macro">Entity Detail-Daten</block>
   <block id="5d7a5f24f08d7baa937ba58212dc4cb3" category="list-text">Das *Protokoll* zum Abrufen von Ereignissen.</block>
   <block id="760b2221e00b39c02b810e7c86cb4944" category="list-text">Der *Original-Pfad*, der bei der Umbenennung der Originaldatei verwendet wird. Diese Spalte ist in der Tabelle standardmäßig nicht sichtbar. Verwenden Sie die Spaltenauswahl, um diese Spalte zur Tabelle hinzuzufügen.</block>
@@ -6210,28 +6207,22 @@
   <block id="119f264c2e26701f999cacca54ff6a5a" category="section-title">Filtern Forensischer Vorgangshistorie-Daten</block>
   <block id="e2dc5b88c4f53d2a648a9f81fdc77ecb" category="paragraph">Es gibt zwei Methoden, mit denen Sie Daten filtern können.</block>
   <block id="b44d27d7b6b6912f12597adc1f9fa486" category="list-text">Filtern Sie die Daten, indem Sie das Feld _Filter by_ eingeben:</block>
-  <block id="94d39d472f5515f9137731ff36ee8221" category="paragraph">Wählen Sie den entsprechenden Filter aus dem oberen Widget ‘Filtern nach’ aus, indem Sie auf die Schaltfläche *[+]* klicken:</block>
   <block id="9aca188b05e6e40de4b37c9a1ae88452" category="inline-image-macro">Entity Filer, width=500</block>
   <block id="7b4254d6ca4c36d3c1912bda6433d382" category="paragraph"><block ref="7b4254d6ca4c36d3c1912bda6433d382" category="inline-image-macro-rx" type="image"></block></block>
   <block id="37fccc39126a22f07b06f0552cde9c16" category="paragraph">Geben Sie den Suchtext ein</block>
   <block id="e35ab2c794348db93821f8e7eafc7960" category="paragraph">Drücken Sie die Eingabetaste, oder klicken Sie außerhalb des Filterfelds, um den Filter anzuwenden.</block>
   <block id="bf0bfb79a81a231f0f04666c3569da3f" category="paragraph">Sie können forensische Aktivitätsdaten nach folgenden Feldern filtern:</block>
   <block id="85e0179872301e1053d45f643b6899c5" category="list-text">Der Typ *Aktivität*.</block>
-  <block id="1dc677ce29033ce9855fe2699237c9a1" category="list-text">*Quell-IP*, auf die das Element zugegriffen wurde. Sie müssen eine gültige Quell-IP-Adresse in doppelten Anführungszeichen angeben, z. B. „10.1.1.1.“. Unvollständige IPs wie „10.1.1.*“, „10.1.*.*“ usw. funktionieren nicht.</block>
   <block id="993bee13d79883a291c5bf94757d27d8" category="list-text">*Protokoll* zum Abrufen protokollspezifischer Aktivitäten.</block>
-  <block id="c3d430182436845185c1ac182ba51c05" category="list-text">*Benutzername* des Benutzers, der die Aktivität ausführt. Sie müssen den genauen Benutzernamen angeben, um sie zu filtern. Die Suche mit teilweisen Nutzernamen oder teilweisen Nutzernamen, vorfixiert oder mit ‘*’ abgestickt, funktioniert nicht.</block>
   <block id="15ac0cdbe87a38b3f0c5588fd122123c" category="list-text">*Rauschunterdrückung* zum Filtern von Dateien, die in den letzten 2 Stunden vom Benutzer erstellt werden. Sie wird auch zum Filtern temporärer Dateien (z. B. .tmp-Dateien) verwendet, auf die der Benutzer Zugriff hat.</block>
   <block id="3a6aae5bc174d27a503441e1d24d0c68" category="list-text">*Domain* des Benutzers, der die Aktivität ausführt. Sie müssen die *genaue Domain* angeben, um zu filtern. Die Suche nach einer partiellen Domäne oder einer partiellen Domäne mit Präfix oder Suffix mit Platzhalter ('*') funktioniert nicht. _None_ kann angegeben werden, um nach fehlender Domain zu suchen.</block>
   <block id="5e5226f8443d6c79a977ffd6e71a8d9d" category="paragraph">Die folgenden Felder unterliegen speziellen Filterregeln:</block>
-  <block id="28894211649d8f9f99c54dc12f77784e" category="list-text">*Entity Type*, mit Entity (File) Extension - es ist vorzuziehen, den genauen Entity-Typ in Anführungszeichen anzugeben. Beispiel: _ „Txt“_.</block>
   <block id="0d97b222b080d69a549c4eb4a4bfe399" category="list-text">*User* die Aktivität durchführen - es ist vorzuziehen, den genauen Benutzer in Anführungszeichen anzugeben. Beispiel: _ „Administrator“_.</block>
   <block id="793b0425edef55b10657fd6cc2a5ab5a" category="list-text">*Gerät* (SVM), in dem sich Entitäten befinden</block>
   <block id="6bbd4f26d0615caf6a29b9c2d238dad2" category="list-text">*Volumen*, in dem sich Entitäten befinden</block>
   <block id="6edcb8abb66cf4a0700d1ea8dac389e5" category="list-text">Der *Original-Pfad*, der bei der Umbenennung der Originaldatei verwendet wird.</block>
   <block id="ac27cb91c44714292702bc3eb4cf63af" category="paragraph">Die vorhergehenden Felder unterliegen beim Filtern folgenden Kriterien:</block>
   <block id="9f5698d8ff9580fb0292b0180a70711f" category="list-text">Der genaue Wert sollte in Anführungszeichen liegen: Beispiel: "suchtext"</block>
-  <block id="ae908dd27651e4f543cd1488054f03ce" category="list-text">Platzhalter-Strings dürfen keine Anführungszeichen enthalten: Beispiel: suchtext, \*suchtext*, filtert nach Zeichenfolgen, die ‘seartext’ enthalten.</block>
-  <block id="6de2a99ab7d1b49c0d30165b7f923bde" category="list-text">String mit einem Präfix, Beispiel: suchtext* , sucht alle Strings, die mit ‘seartext’ beginnen.</block>
   <block id="98979e670bd293d9570a2b24562e08a2" category="section-title">Beispiele Für Forensik-Filter Für Aktivitäten:</block>
   <block id="0930b50f995b3a6af46dc5f205e5c2be" category="cell">Vom Benutzer angewendeter Filterausdruck</block>
   <block id="13876d45cb0b459833e4aebb72877939" category="cell">Erwartetes Ergebnis</block>
@@ -6253,8 +6244,6 @@
   <block id="5addbd908b76e38709a3256b2eba74c5" category="list-text">*Wait for Export to complete*: Die Verarbeitungszeit kann von ein paar Minuten bis zu einigen Stunden betragen. Unter Umständen müssen Sie die Seite „Forensik“ einige Male aktualisieren. Sobald der Exportauftrag abgeschlossen ist, wird die Schaltfläche "Letzten Export CSV-Datei herunterladen" aktiviert.</block>
   <block id="fb56822932e96a02d5b71841b0bb86a7" category="list-text">*Download*: Klicken Sie auf den Button "Download Last created Export file", um die exportierten Daten im .zip-Format zu erhalten. Diese Daten können heruntergeladen werden, bis der Benutzer einen anderen asynchronen Export initiiert oder 3 Tage vergangen sind, je nachdem, was zuerst eintritt. Die Schaltfläche bleibt aktiviert, bis ein anderer asynchroner Export gestartet wird.</block>
   <block id="8ab0a5a1cd44cd0d41ee8657d513b901" category="list-text">*Einschränkungen*:</block>
-  <block id="60ace3612e0acf6a0941aadafd7b24ab" category="list-text">Die Anzahl asynchroner Downloads ist derzeit auf 1 pro Benutzer und 3 pro Mandant begrenzt.</block>
-  <block id="db0adf696c53371ef4510888d244f184" category="list-text">Die exportierten Daten sind auf maximal 1 Million Datensätze begrenzt.</block>
   <block id="f61af81d2b9edda67ad225742bd8e959" category="paragraph">Ein Beispielskript zum Extrahieren forensischer Daten über API ist auf dem Agenten unter _/opt/NetApp/CloudSecure/Agent/Export-script/_ vorhanden. Weitere Informationen zum Skript finden Sie in der Infodatei an dieser Stelle.</block>
   <block id="db7f539a64befdbef8a36c1e95be3922" category="section-title">Spaltenauswahl für Alle Aktivitäten</block>
   <block id="2c196fb6f976fd067f518fa5198011f3" category="paragraph">In der Tabelle _Alle Aktivitäten_ werden standardmäßig ausgewählte Spalten angezeigt. Um die Spalten hinzuzufügen, zu entfernen oder zu ändern, klicken Sie auf das Zahnradsymbol rechts neben der Tabelle und wählen Sie aus der Liste der verfügbaren Spalten aus.</block>
@@ -6265,18 +6254,15 @@
   <block id="19d8a8363cc18927f8f792b40e752c60" category="section-title">Anwendbarkeit von Filtern in Forensics Seite</block>
   <block id="5ac805f98623b1f23909793e4ff3a262" category="cell">Gilt für diese Filter</block>
   <block id="b1b275726951e4adc620b69d947baf49" category="cell">Gilt nicht für diese Filter</block>
-  <block id="0a3087cfc2ea9ac71095f821d14ee027" category="cell">Auto*03172022 Wenn der Suchtext Bindestrich oder Unterstrich enthält, geben Sie den Ausdruck in Klammern an, z. B. (svm*) für die Suche nach svm-123</block>
   <block id="3518217f55c95e834c4ea7984f8aa0cd" category="cell">AutoSabotageUser1_03172022?</block>
   <block id="a28771ee6ad9a7771a86f5d6ceeed78e" category="cell">Gibt AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225 usw. zurück</block>
   <block id="3adefd54fc738f8196af6304ed8929ac" category="cell">AutoSabotageUser1_03172022 ODER AutoBefreiUser4_03162022</block>
   <block id="0a01700b4705c6c47c24699ad7d4a4cb" category="cell">Gibt eine beliebige von AutoSabotageUser1_03172022 ODER AutoBefreiUser4_03162022 zurück</block>
   <block id="0ca071eb91357e8d4685daee24bd3360" category="cell">NICHT automatisch BefreiUser4_03162022</block>
   <block id="e0ac20adce6ffee48c7151b070aa5737" category="cell">Gerät</block>
-  <block id="e0c965c954b5a9fdc33c5b0516799f7d" category="cell">Gibt alles zurück, was nicht mit "AutoBefreiUser4_03162022" beginnt</block>
   <block id="eae639a70006feff484a39363c977e24" category="cell">Domäne</block>
   <block id="3c16a1572c295ef2bbd770516679c559" category="cell">Gibt Ergebnisse an, bei denen das Zielfeld leer ist</block>
   <block id="64048c881c93933680d02730e9d9ce63" category="paragraph">Suchergebnisse mit und ohne / werden unterschiedlich sein</block>
-  <block id="53ca5edb3205aa3468395e1789114a60" category="cell">Funktioniert nicht</block>
   <block id="1d7531d059e4088a0878ea4eb94d32b6" category="cell">„/AutoDir1/AutoFile03242022“</block>
   <block id="888f8ecf6256a9875ff5de4f10099453" category="cell">/AutoDir1/AutoFile03242022 ODER /AutoDir1/AutoFile03242022</block>
   <block id="d87dd477d16107bb862f99dedbcacce4" category="cell">NICHT /AutoDir1/AutoFile03242022</block>
@@ -6289,7 +6275,6 @@
   <block id="189e8f8cb6dcbc5db679c602980ce869" category="list-text">Wenn SVM-1 von Workload Security überwacht wird und der Root-Benutzer dieser SVM die Freigabe auf einem Client mit der IP-Adresse 10.197.12.40 mountet, lautet der auf der Seite für forensische Aktivitäten angezeigte Benutzername _root@10.197.12.40_.</block>
   <block id="9a7b0be436e968c987b9d5f84ae815c4" category="list-text">Wenn dieselbe SVM-1 in einen anderen Client mit der IP-Adresse 10.197.12.41 eingebunden wird, lautet der auf der Seite für forensische Aktivitäten angezeigte Benutzername _root@10.197.12.41_.</block>
   <block id="8ef0cd5e57c1bad7b905d070f6b527a2" category="paragraph">*• Dies wird getan, um NFS-Root-Benutzeraktivität durch IP-Adresse zu trennen. Zuvor wurde die gesamte Aktivität als vom _root_-Benutzer durchgeführt betrachtet, ohne IP-Unterscheidung.</block>
-  <block id="92232e830756517d2e51d25331f14f25" category="cell">In der Tabelle „Alle Aktivitäten“ in der Spalte ‘Benutzer“ wird der Benutzername wie folgt angezeigt: „ldap:HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817” oder LDAP:default:80038003“</block>
   <block id="0c4a0e9a569be65e94908f9222457694" category="inline-link-macro">Fehlerbehebung für Benutzerverzeichnissammler</block>
   <block id="fa754fd7176d2dbf75086e702bb8e0ba" category="cell">Mögliche Gründe sind: 1. Es wurden noch keine User Directory Collectors konfiguriert. Um einen hinzuzufügen, gehen Sie zu *Workload Security &gt; Collectors &gt; User Directory Collectors* und klicken Sie auf *+User Directory Collector*. Wählen Sie _Active Directory_ oder _LDAP Directory Server_. 2. Ein User Directory Collector wurde konfiguriert, jedoch wurde er angehalten oder befindet sich im Fehlerzustand. Bitte gehen Sie zu *Collectors &gt; User Directory Collectors* und überprüfen Sie den Status. Tipps zur Fehlerbehebung finden Sie im <block ref="700dae282c67631ab7fef060d50fba0f" category="inline-link-macro-rx"></block> Abschnitt der Dokumentation. Nach der ordnungsgemäßen Konfiguration wird der Name innerhalb von 24 Stunden automatisch behoben. Wenn die Lösung immer noch nicht behoben wird, überprüfen Sie, ob Sie den korrekten Benutzer-Data Collector hinzugefügt haben. Stellen Sie sicher, dass der Benutzer tatsächlich Teil des hinzugefügten Active Directory/LDAP Directory Servers ist.</block>
   <block id="65524feb61d50c77bb7ba2638a763f8e" category="cell">Einige NFS-Ereignisse werden in der UI nicht angezeigt.</block>
@@ -11833,29 +11818,17 @@
   <block id="80662c9452da0395efcb752fc6efd791" category="list-text">Die Vorgangsanzahl wird als Hyperlink angezeigt. Wenn Sie diese Option auswählen, wird die ausgewählte Gruppierung als Filter hinzugefügt. Die Tabelle der Aktivität wird basierend auf diesem Filter aktualisiert.</block>
   <block id="f5048103eec701282d4bd47edb30c0dd" category="list-text">Wenn Sie den Filter ändern, den Zeitraum ändern oder den Bildschirm aktualisieren, können Sie nicht zu den gefilterten Ergebnissen zurückkehren, ohne den Filter erneut einzustellen.</block>
   <block id="a7b9ef6a74f521c07a42dfe2b3ba5984" category="list-text">Der Filter kann über das Schiebefeld hinzugefügt werden. Der Wert wird den entsprechenden Filtern in der oberen Liste _Filter by_ hinzugefügt.</block>
-  <block id="abc9548bbf938c1b00d7d7943eea69c6" category="list-text">1st Level Folder (Root) - Stammverzeichnis des Entity Path als Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann Home ODER "Home" verwendet werden.</block>
-  <block id="ef05d086fd7703f59da830094683f26b" category="list-text">2nd Level Folder - Verzeichnis 2nd Level der Entity Path Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann userX ODER "userX" verwendet werden.</block>
   <block id="d09c77be27888e5715284768b4b56a37" category="list-text">Ordner der dritten Ebene – Verzeichnis der Pfadfilter der dritten Ebene.</block>
-  <block id="af2e930a257c8313695f9a6d5e9c587c" category="list-text">Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann nested1 ODER „nested1“ verwendet werden.</block>
-  <block id="73563b05b63d5f6abf9aac631e04c7b1" category="list-text">Ordner der 4. Ebene – Verzeichnis der Filter für Entity Path auf vierter Ebene. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann nested2 ODER „nested2“ verwendet werden.</block>
   <block id="4f1f0488f8878a68e5eb50610b690092" category="cell">Pfad = „/Home/userX/nested1/nested2/“</block>
   <block id="bd12893dcbe3201853dc72f0c6467347" category="cell">Pfad = „/Home/userX/nested1/“</block>
-  <block id="1d0c26b23985cb45609efc05c13c3294" category="cell">Pfad = „/Home/userX/nested1/Test“</block>
   <block id="735bdb9fe63d4b5dcefb1fab563b1783" category="cell">Pfad = „/Home/userX/nested1/nested2/nested3/“</block>
   <block id="fa9485df6d085377bf71d0ebb0343af0" category="list-text">Ebenso werden die im Diagramm „Aktivitätsverlauf“ angezeigten Zählwerte auf 30 Minuten abgerundet, wenn der ausgewählte Zeitraum mehr als 3 Tage umfasst.</block>
   <block id="20b023807d41f295e71a0807936532d8" category="paragraph">Sie können Daten aus dem Aktivitätsverlauf nach _Zeit, Benutzer, Quell-IP, Aktivität,_, _Entity Type_, 1st Level Folder (Root), 2nd Level Folder, 3rd Level Folder und 4th Level Folder sortieren. Standardmäßig wird die Tabelle nach absteigender_Time_-Reihenfolge sortiert, was bedeutet, dass die neuesten Daten zuerst angezeigt werden. Die Sortierung ist für die Felder _Device_ und _Protocol_ deaktiviert.</block>
-  <block id="3ba465c35d8b2ac685818d0b9a9ba4f7" category="cell">Benutzer, Einheitstyp, Gerät, Volume, ursprünglicher Pfad, Ordner 1 Stufe, Ordner 2 Ebenen, Ordner 3 Ebenen, Ordner 4 Ebenen</block>
-  <block id="6273bbd8f9632e4d401abdeec82c9a39" category="cell">Gibt alle Ressourcen zurück, die mit „Auto“ beginnen und mit „03172022“ enden</block>
-  <block id="3917b61839732c75ca8202af25ad4257" category="cell">Benutzer, Entitätstyp, Gerät, Volume, 1stLevel-Ordner, 2ndLevel-Ordner, 3rdLevel-Ordner, 4thLevel-Ordner</block>
-  <block id="18575a59bc1468900953267afdfc5c81" category="cell">Benutzer, Domäne, Einheitstyp, Ursprünglicher Pfad</block>
-  <block id="7c76f178211d14484e376bc483bd1077" category="cell">Benutzer, Domäne, Entitätstyp, ursprünglicher Pfad, Ordner mit 1 Stufe, Ordner mit 2 Ebenen, Ordner mit 3 Ebenen, Ordner mit 4 Ebenen</block>
   <block id="44144cdf07fe03ca4c4d71ecf2ee830c" category="cell">Nur die exakte Suche funktioniert; gibt alle Aktivitäten mit exaktem Pfad wie /AutoDir1/AutoFile03242022 zurück (Fall unsensibel)</block>
   <block id="f7bf447e3a19a294d681133f069ea62c" category="cell">„/AutoDir1/“</block>
   <block id="8431be8aa2f333f025452fc93c584143" category="cell">Funktioniert; gibt alle Aktivitäten mit Verzeichnis 1. Ebene zurück, die mit AutoDir1 übereinstimmen (unsensibel)</block>
   <block id="dac09bc6942369c2d0f8d36f26d2e201" category="cell">„/AutoDir1/AutoFile03242022/“</block>
   <block id="17411e5191f440928552bd359518e697" category="cell">Funktioniert; gibt alle Aktivitäten mit Verzeichnis 1. Ebene mit AutoDir1 und Verzeichnis 2. Ebene mit AutoFile03242022 zurück (Fall nicht sensibel)</block>
-  <block id="a874dae9695be1c2a6ef02373776f7b7" category="cell">Ein Sternchen (\*) in der Suchzeichenfolge sucht nach allem. Führende Platzhalterzeichenfolgen wie _*&lt;searchTerm&gt;_ oder _*&lt;searchTerm&gt;*_ führen jedoch zu einer langsamen Abfrage. Um eine bessere Leistung zu erzielen, verwenden Sie stattdessen Präfix-Strings im Format _&lt;searchTerm&gt;*_ (mit anderen Worten: Fügen Sie das Sternchen (*) _nach_ einem Suchbegriff hinzu). Beispiel: Verwenden Sie den String _testvolume*_ anstatt _*testvolume_ oder _*Test*Volume_. Verwenden Sie eine Verzeichnissuche, um alle Aktivitäten unterhalb eines bestimmten Ordners rekursiv zu sehen (hierarchische Suche). Beispiel: „/path1/path2/path3/“ listet alle Vorgänge rekursiv unter /path1/path2/path3 auf. Alternativ können Sie die Option „zum Filter hinzufügen“ unter der Registerkarte „Alle Aktivitäten“ verwenden.</block>
-  <block id="980f8b6539b7c131f66cdde66f81a98f" category="cell">Verzeichnispfad-Filter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Z.B. wenn der Verzeichnispfad /AAA/BBB/CCC/DDD ist, versuchen Sie nach „/AAA/BBB/CCC/DDD/“ zu suchen, um Daten schneller zu laden.</block>
   <block id="ee0b2f1c8ad7945cf603e8d752a5e7b5" category="inline-link-macro">Data Infrastructure Insights Editionen</block>
   <block id="bbf9080a1bf1fb2f62558ce683d64be0" category="paragraph">Einen vollständigen Vergleich der in Data Infrastructure Insights Basic und Premium Edition verfügbaren Funktionen finden Sie auf der <block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block> Seite.</block>
   <block id="3bbdd1e5a1fbf0d58680e594b8806722" category="section-title">Überprüfen Der Telegraf Package-Prüfsummen</block>
@@ -11875,8 +11848,6 @@
   <block id="84229233ad61c44b8e53075992f6c8a5" category="paragraph">Mit Data Infrastructure Insights haben Sie jetzt mehr Kontrolle über den Zugriff auf von Ihnen erstellte Dashboards. Sie können festlegen, wer Ihre Diagramme ändern kann. Sie steuern die Exposition gegenüber potenziell sensiblen Informationen. Arbeiten Sie noch an einem Dashboard, das nicht für die allgemeine Sichtbarkeit bereit ist? Sie können es privat halten, bis Sie bereit sind, es zu teilen.</block>
   <block id="f916d734e48a8724b0f8c434b43a06a7" category="inline-image-macro">Optionen für die gemeinsame Nutzung von Dashboards</block>
   <block id="e2d1989486babbb3dc0993863f9f4ef8" category="paragraph"><block ref="e2d1989486babbb3dc0993863f9f4ef8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c278bdd917e4f32f7d8a13861d3c1a43" category="list-text">Der *Pfad* ist _entity_ Pfad. Dies sollte entweder der exakte Entity-Pfad (z.B. "_/Home/userX/nested1/nested2/abc.txt_") ODER DER Verzeichnisabschnitt des Pfads für rekursive Suche sein (z.B. "_/Home/userX/nested1/nested2/_"). HINWEIS: Regex-Pfadmuster (z.B. _userX_) sind hier NICHT erlaubt. Alternativ können auch einzelne Filter auf Pfadordnerebene, wie unten erwähnt, für die Pfadfilterung angegeben werden.</block>
-  <block id="09cde459dc94ebcdb7fb39e8a2b6e65f" category="list-text">*Pfad* der Entity - Dies sollte entweder der exakte Entity-Pfad (z.B. "_/Home/userX/nested1/nested2/abc.txt_") ODER DER Verzeichnisabschnitt des Pfads für rekursive Suche sein (z.B. "_/Home/userX/nested1/nested2/_"). HINWEIS: Regex-Pfadmuster (z.B. *userX*) sind hier NICHT erlaubt. Verzeichnispfadfilter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Beispiel: „_/Home/userX/nested1/nested2/_“. Weitere Informationen finden Sie in der folgenden Tabelle.</block>
   <block id="39dfb1596c6a6cd5efc77677cffa9f47" category="cell">Exakte Übereinstimmung, wobei der Pfadwert mit /Home/userX/nested1/Test übereinstimmt</block>
   <block id="67796eee76b434ba7f714f24fce77a4c" category="cell">Die genaue Suche ist langsamer als die Suche nach Verzeichnissen.</block>
   <block id="ee884ab6f8aeb5114dc04fcb169533de" category="section-title">Pfadsuche</block>
@@ -11950,4 +11921,57 @@
   <block id="0dc236d363c2d7f668f1ee1391ffab69" category="paragraph">Die Registerkarte „VM Reclamation“ enthält Details zu VMs, die seit mehr als 30, 60 oder 90 Tagen inaktiv oder abgeschaltet sind, sowie mögliche Einsparungen bei Kapazität, Arbeitsspeicher und vCPU. Durch Auswahl einer VM aus der Liste wird die Detailseite für diese VM geöffnet.</block>
   <block id="5edbd52aee44c2dfb6c01abc4128600a" category="inline-image-macro">Registerkarte „vm-Rückgewinnung“</block>
   <block id="e2e66b001cd3f2f1481c4b23049ca899" category="paragraph"><block ref="e2e66b001cd3f2f1481c4b23049ca899" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7c0e2b6958fb0cb284c1950d13dd92b7" category="paragraph">Die Tabelle *Alle Aktivitäten* zeigt die folgenden Informationen an. Beachten Sie, dass standardmäßig nicht alle dieser Spalten angezeigt werden. Sie können Spalten auswählen, die angezeigt werden sollen, indem Sie auf das Zahnradsymbol klicken.</block>
+  <block id="44263fc9b1d7463adb10ca9afc45060e" category="list-text">*Metadaten lesen* - nur bei Option zur Ordnerüberwachung. Wird beim Öffnen eines Ordners unter Windows oder beim Ausführen von „ls“ in einem Ordner unter Linux generiert.</block>
+  <block id="296d30798995d9503c7e56e6937dc7e1" category="list-text">*Andere Änderung* - jedes andere Ereignis, das oben nicht beschrieben wird. Alle nicht zugeordneten Ereignisse werden dem Aktivitätstyp „Sonstige Änderung“ zugeordnet. Gilt für Dateien und Ordner.</block>
+  <block id="18b2404a514ba0df8811a1ef18ce21c8" category="list-text">Der *Pfad* ist _entity_ Pfad. Dies sollte entweder der exakte Entity-Pfad (z.B. "_/Home/userX/nested1/nested2/abc.txt_") ODER DER Verzeichnisabschnitt des Pfads für rekursive Suche sein (z.B. "_/Home/userX/nested1/nested2/_"). HINWEIS: Regex-Pfadmuster (z.B. \*genested*) sind hier NICHT erlaubt. Alternativ können auch einzelne Filter auf Pfadordnerebene, wie unten erwähnt, für die Pfadfilterung angegeben werden.</block>
+  <block id="ff7a8d750ff46de2529a38c020e55d07" category="list-text">Der *Entity-Name* ist die letzte Komponente des Entity-Pfades; für den Entity-Typ als Datei ist es der Dateiname.</block>
+  <block id="4ec2ab8548d402ce5e2a202a8ea0a5dc" category="list-text">Beachten Sie bitte, dass bei Auswahl des Namens der Entität als Filter die Dropdown-Liste Gruppieren nach deaktiviert wird. Wenn der Benutzer bereits auf dem Bildschirm Gruppieren nach angezeigt wird, wird der Filter Entitätsname als deaktiviert.</block>
+  <block id="34c71ee0e2f7ee568a6fba85dbe3f12c" category="paragraph">Wählen Sie den entsprechenden Filter aus dem Widget „Filtern nach“ aus, indem Sie auf die Schaltfläche *[+]* klicken:</block>
+  <block id="593a62c8da056fafb6ac6651ffc0bf77" category="list-text">*Benutzername* des Benutzers, der die Aktivität ausführt. Sie müssen den genauen Benutzernamen angeben, um sie zu filtern. Die Suche mit einem teilweisen Benutzernamen oder einem teilweisen Benutzernamen mit Präfix oder Suffixed mit '*' funktioniert nicht.</block>
+  <block id="9db7dc70a2e0452d843a040725d27f0c" category="list-text">*Entity Type*, mit Entity (File) Extension - es ist vorzuziehen, den genauen Entity-Typ in Anführungszeichen anzugeben. Beispiel: _„txt“_.</block>
+  <block id="f1354a51722f5f69bac39634de675af5" category="list-text">*Pfad* der Entity - Dies sollte entweder der exakte Entity-Pfad (z.B. "_/Home/userX/nested1/nested2/abc.txt_") ODER DER Verzeichnisabschnitt des Pfads für rekursive Suche sein (z.B. "_/Home/userX/nested1/nested2/_"). HINWEIS: Regex-Pfadmuster (z.B. \*genested*) sind hier NICHT erlaubt. Verzeichnispfadfilter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Beispiel: „_/Home/userX/nested1/nested2/_“. Weitere Informationen finden Sie in der folgenden Tabelle.</block>
+  <block id="6911c153f3664c18429e8ec40b2a767b" category="list-text">1st Level Folder (Root) - Stammverzeichnis des Entity Path als Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann Home ODER "Home" verwendet werden.</block>
+  <block id="23e3dfc154773a88f3b9923c80ec7481" category="list-text">2nd Level Folder - Verzeichnis 2nd Level der Entity Path Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann userX ODER "userX" verwendet werden.</block>
+  <block id="857d0e5023171871c119ae87aeee53bc" category="list-text">Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann nested1 ODER "nested1" verwendet werden.</block>
+  <block id="3781ad6dba415c69a08c1285b1b7d3df" category="list-text">Ordner der 4. Ebene – Verzeichnis der Filter für Entity Path auf vierter Ebene. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann nested2 ODER "nested2" verwendet werden.</block>
+  <block id="84fe991275e24aba0f251415516a1e6c" category="list-text">*Quell-IP*, auf die das Element zugegriffen wurde.</block>
+  <block id="902172441eece016fa20a235ed73347b" category="list-text">Sie können Wildcards * und ? verwenden. Beispiel: 10.0.0.*, 10.0?.0.10, 10.10*</block>
+  <block id="86ef89dbeec61182083cf6530ee135bc" category="list-text">Wenn eine genaue Übereinstimmung erforderlich ist, müssen Sie eine gültige Quell-IP-Adresse in doppelten Anführungszeichen angeben, z. B. „10.1.1.1.“. Unvollständige IPs mit doppelten Anführungszeichen wie "10.1.1.", "10.1...*" usw. funktionieren nicht.</block>
+  <block id="905b0c69ef1c6841cf8c0b1791011328" category="list-text">Der *Entity Name* - der Dateiname des Entity Path als Filter. Wenn der Entity-Pfad beispielsweise /Home/userX/nested1/testfile.txt lautet, lautet der Entity-Name testfile.txt. Bitte beachten Sie, dass es empfohlen wird, den genauen Dateinamen in Anführungszeichen anzugeben; versuchen Sie, die Suche mit Platzhaltern zu vermeiden. Beispiel: „Testfile.txt“. Beachten Sie außerdem, dass dieser Filter für Entitätsnamen für kürzere Zeitbereiche (bis zu 3 Tage) empfohlen wird.</block>
+  <block id="7534d146e70223d1303533e0a14fe154" category="list-text">Platzhalterzeichenfolgen dürfen keine Anführungszeichen enthalten: Beispiel: searchtext, \*searchtext*, filtert nach Zeichenfolgen, die 'Searchtext' enthalten.</block>
+  <block id="b37486cde222fa7d4db54c7f9079af41" category="list-text">String mit einem Präfix, Beispiel: searchtext* , sucht alle Zeichenketten, die mit 'Schartext' beginnen.</block>
+  <block id="c1b9a95df28615d752861a653c912165" category="paragraph">Bitte beachten Sie, dass bei allen Filterfeldern die Groß-/Kleinschreibung berücksichtigt wird. Beispiel: Wenn der angewendete Filter Entity Type mit dem Wert 'Searchtext' ist, werden Ergebnisse mit Entity Type als 'Searchtext', 'Searchtext', 'Searchtext' zurückgegeben.</block>
+  <block id="96e29af4c73b1b900742b35d78410d0d" category="cell">Pfad = „/Home/userX/nested1/Test“</block>
+  <block id="8e14529189c6a9e30ee446b642210f06" category="cell">Entity Name = „Test.log“</block>
+  <block id="d291397dc1bcc71a7246b56b5ad13661" category="cell">Genaue Übereinstimmung mit Dateiname test.log</block>
+  <block id="aff71f671afca7db5dcb5abeb1e94258" category="cell">Da es genau Übereinstimmung ist</block>
+  <block id="fbff2043925d9da26087de5d55841c19" category="cell">Entity Name = *test.log</block>
+  <block id="b3b4c0809900611c37d77a422fd3b157" category="cell">Dateinamen enden mit test.log</block>
+  <block id="efa5397985b8609a5dbeb430a4bcadd3" category="cell">Langsam</block>
+  <block id="b17c9447397dcc3e6e0040513674b0eb" category="cell">Aufgrund der Wildcard kann es langsam sein.</block>
+  <block id="c24b132e995cb587464672369f22193b" category="cell">Entity Name = Test*.log</block>
+  <block id="b31f3dcbb2229f44061bd4d79f2d4c1d" category="cell">Dateinamen beginnen mit Test und enden mit .log</block>
+  <block id="8ef87bc62946324375ce0406cffecb74" category="cell">Entity Name = Test.lo</block>
+  <block id="18f0f6a0abceaaff775f56b818d4f9c5" category="cell">Dateinamen, die mit Test.lo beginnen, entsprechen z. B. Test.log, Test.log.1, Test.log1</block>
+  <block id="b832139a74c071bbfe5bd133e3c47185" category="cell">Aufgrund der Wildcard am Ende kann es langsam sein.</block>
+  <block id="f9648e2415808590c79ee96c5f4d0e66" category="cell">Entity Name = Test</block>
+  <block id="c71da0649fb7712d7e74ce581db70fb3" category="cell">Dateinamen beginnen mit Test</block>
+  <block id="53ad658aa3b68ee6f8ac34262f27efc5" category="cell">Langsam</block>
+  <block id="c4583cc10f343a12230f1e643aa9907a" category="cell">Aufgrund der Platzhalterkarte am Ende und des generischen Werts, der verwendet wird, kann es am langsamsten sein.</block>
+  <block id="88a78f0edb8b7d91fe9b9c8fb2e4bc6b" category="list-text">Die Anzahl asynchroner Downloads ist derzeit auf 1 pro Benutzer für jede Tabelle „Aktivitäten und Aktivitäten“ und 3 pro Mandant beschränkt.</block>
+  <block id="e4435ba88bd58079d0501884e2cdce27" category="list-text">Die exportierten Daten sind für die Tabelle „Vorgänge“ auf maximal 1 Million Datensätze beschränkt. Für „Gruppieren nach“ sind es nur halbe Millionen Datensätze.</block>
+  <block id="19f35db392e49cb7f3cff5327114daf2" category="cell">Auto*03172022 Wenn der Suchtext Bindestrich oder Unterstrich enthält, geben Sie den Ausdruck in Klammern an, z. B. (svm*) für die Suche nach svm-123</block>
+  <block id="8745a33435e7e88bd4e44ad19ea05b34" category="cell">Benutzer, Entitätstyp, Gerät, Volume, ursprünglicher Pfad, Ordner der 1. Stufe, Ordner der 2. Stufe, Ordner der 3. Stufe, Ordner der 4. Stufe, Name der Entität, Quell-IP</block>
+  <block id="470d04a7c99630dbe5d3f0c2b95291fd" category="cell">Gibt alle Ressourcen zurück, die mit „Auto“ beginnen und mit „03172022“ enden</block>
+  <block id="8f04371c9eb330d35f4fd429b3a6b70b" category="cell">Benutzer, Entitätstyp, Gerät, Volume, 1stLevel-Ordner, 2ndLevel-Ordner, 3rdLevel-Ordner, 4thLevel-Ordner, Entitätname, Quell-IP</block>
+  <block id="b12f964a7d4b88d6b12b49acaa4e8da5" category="cell">Benutzer, Domäne, Entitätstyp, ursprünglicher Pfad, Entitätname, Quell-IP</block>
+  <block id="46b8cf2bc3a5a3834c08eec497d3eaaa" category="cell">Benutzer, Domäne, Entitätstyp, ursprünglicher Pfad, Ordner mit 1 Stufe, Ordner mit 2 Ebenen, Ordner mit 3 Ebenen, Ordner mit 4 Ebenen, Name der Entität, Quell-IP</block>
+  <block id="71fdd823af8d6c227f786362616494a5" category="cell">Gibt alles zurück, was nicht mit"AutoRansomUser4_03162022" startet</block>
+  <block id="aaa6685e24d0d36fa7036ff4fe31a74e" category="cell">Funktioniert nicht</block>
+  <block id="f43bb0cf54d8d5e402232117f3654e92" category="cell">In der Tabelle "Alle Aktivitäten" unter der Spalte "Benutzer" wird der Benutzername wie folgt angezeigt: "ldap:HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817" oder "ldap:default:80038003"</block>
+  <block id="5ee73cc203856368d4c788cc5e4c2b86" category="cell">Ein Sternchen (\*) in der Suchzeichenfolge sucht nach allem. Führende Platzhalterzeichenfolgen wie _*&lt;searchTerm&gt;_ oder _*&lt;searchTerm&gt;*_ führen jedoch zu einer langsamen Abfrage. Um eine bessere Leistung zu erzielen, verwenden Sie stattdessen Präfix-Strings im Format _&lt;searchTerm&gt;*_ (mit anderen Worten: Fügen Sie das Sternchen (*) _nach_ einem Suchbegriff hinzu). Beispiel: Verwenden Sie den String _testvolume*_ anstatt _*testvolume_ oder _*Test*Volume_. Verwenden Sie eine Verzeichnissuche, um alle Aktivitäten unterhalb eines bestimmten Ordners rekursiv anzuzeigen (hierarchische Suche). Z.B. werden unter /path1/path2/path3/ alle Vorgänge rekursiv aufgelistet unter /path1/path2/path3. Alternativ können Sie die Option „zum Filter hinzufügen“ unter der Registerkarte „Alle Aktivitäten“ verwenden.</block>
+  <block id="43bfa97b37a997b631be2c5c6423c5fc" category="cell">Verzeichnispfad-Filter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Z.B. wenn der Verzeichnispfad /AAA/BBB/CCC/DDD ist, versuchen Sie nach "/AAA/BBB/CCC/DDD/" zu suchen, um Daten schneller zu laden.</block>
+  <block id="76b6bb11709d612b89ea4e85c1289694" category="cell">Forensics UI lädt Daten langsam und weist auf Fehler hin, wenn der Entity-Name-Filter verwendet wird.</block>
+  <block id="9047530966d5f017f54aa4479b25a938" category="cell">Bitte versuchen Sie es mit kleineren Zeitbereichen und mit exakter Wertsuche mit doppelten Anführungszeichen. Z.B. wenn der entityPath "/Home/userX/nested1/nested2/nested3/testfile.txt" ist, dann versuchen Sie es mit "testfile.txt" als Entity Name Filter.</block>
 </blocks>
