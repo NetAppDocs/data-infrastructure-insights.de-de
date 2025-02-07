@@ -8655,7 +8655,6 @@
   <block id="da7e75e5407636a24c1c7cce20e7d225" category="paragraph">Die aktuelle Telegraf Version für Data Infrastructure Insights ist *1.24.0*.</block>
   <block id="2041337c363c1ecaeb2a1aa9c8999494" category="paragraph">Informationen zur Installation auf Kubernetes finden Sie auf der <block ref="f0d3e43e41da35ba651820db811551cd" category="inline-link-macro-rx"></block> Seite.</block>
   <block id="ae2f2b5e87a12f1cd650f0e46b92e4ec" category="admonition">Für eine genaue Audit- und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Agent-Rechner mit *Network Time Protocol (NTP)* oder *Simple Network Time Protocol (SNTP)* zu synchronisieren.</block>
-  <block id="f97f94f0ff0c35a96686e2fd00940ac8" category="admonition">Wenn Sie die Installationsdateien vor dem Instaling des Agenten überprüfen möchten, lesen Sie den Abschnitt unten auf <block ref="1d9f3d6343939e76574c60762a7f2fae" category="inline-xref-macro-rx"></block>.</block>
   <block id="137bac1c26ca6d0b61bc783c9a2fcbbd" category="section-title">Installieren eines Agenten</block>
   <block id="a4c0f3c4bd8931418c028fb88c45e72f" category="paragraph">Wenn Sie einen Service Data Collector installieren und noch keinen Agent konfiguriert haben, werden Sie aufgefordert, zuerst einen Agent für das entsprechende Betriebssystem zu installieren. Dieses Thema enthält Anweisungen zur Installation des Telegraf-Agenten auf folgenden Betriebssystemen:</block>
   <block id="8d6f7baf6fd8e47d9316fcc507ab0f85" category="list-text"><block ref="85415f26af88eac138de6f713927df0c" category="inline-xref-macro-rx"></block></block>
@@ -11974,4 +11973,5 @@
   <block id="43bfa97b37a997b631be2c5c6423c5fc" category="cell">Verzeichnispfad-Filter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Z.B. wenn der Verzeichnispfad /AAA/BBB/CCC/DDD ist, versuchen Sie nach "/AAA/BBB/CCC/DDD/" zu suchen, um Daten schneller zu laden.</block>
   <block id="76b6bb11709d612b89ea4e85c1289694" category="cell">Forensics UI lädt Daten langsam und weist auf Fehler hin, wenn der Entity-Name-Filter verwendet wird.</block>
   <block id="9047530966d5f017f54aa4479b25a938" category="cell">Bitte versuchen Sie es mit kleineren Zeitbereichen und mit exakter Wertsuche mit doppelten Anführungszeichen. Z.B. wenn der entityPath "/Home/userX/nested1/nested2/nested3/testfile.txt" ist, dann versuchen Sie es mit "testfile.txt" als Entity Name Filter.</block>
+  <block id="af8cb62c8a34ba6726d4859a2c8c7e95" category="admonition">Wenn Sie die Installationsdateien vor der Installation des Agenten überprüfen möchten, lesen Sie den folgenden Abschnitt auf <block ref="bf4e2f55c3503e0739d2135298b462c7" category="inline-xref-macro-rx"></block>.</block>
 </blocks>

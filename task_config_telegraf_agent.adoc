@@ -29,7 +29,7 @@ Informationen zur Installation auf Kubernetes finden Sie auf der link:task_confi
 NOTE: Für eine genaue Audit- und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Agent-Rechner mit *Network Time Protocol (NTP)* oder *Simple Network Time Protocol (SNTP)* zu synchronisieren.
 
 
-NOTE: Wenn Sie die Installationsdateien vor dem Instaling des Agenten überprüfen möchten, lesen Sie den Abschnitt unten auf <<Verifying Checksums>>.
+NOTE: Wenn Sie die Installationsdateien vor der Installation des Agenten überprüfen möchten, lesen Sie den folgenden Abschnitt auf <<Überprüfen Der Telegraf Package-Prüfsummen>>.
 
 
 
