@@ -40,7 +40,7 @@ Wenn Sie das Reporting Portal öffnen, können Sie anhand des Ordners _Team Cont
 . Wählen Sie *Reports*, um auf die vordefinierten Berichte zuzugreifen.
 
 
-image:Reporting_Menu.png["Menü „Reporting“"] image:Reporting_Team_Content.png["Teaminhalt mit hervorgehobenen Berichten"]
+image:Reporting_Menu.png["Menü „Reporting“"] image:Reporting_Team_Content.png["Gruppeninhalte mit hervorgehobenen Berichten, Breite=800"]
 
 
 

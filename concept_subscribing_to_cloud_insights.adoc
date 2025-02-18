@@ -70,17 +70,6 @@ Wenn Ihre kostenlose Testversion abgelaufen ist und Sie Data Infrastructure Insi
 
 
 
-== Was passiert, wenn mein Abonnement abgelaufen ist?
-
-Wenn Sie ein Abonnement von Data Infrastructure Insights haben, dieses Abonnement jedoch abgelaufen ist, haben Sie eine Frist von fünf Tagen, um Ihr Abonnement zu verlängern. Während dieser Gnadenfrist bleiben alle Funktionen Data Infrastructure Insights aktiv.
-
-Nach Ablauf der Gnadenfrist wird die Funktion Data Infrastructure Insights bis zur Erneuerung unterbrochen. Informationen zur Verlängerung finden Sie auf der Seite *Admin > Abonnement*, oder wenden Sie sich an den NetApp-Vertrieb.
-
-
-NOTE: Ihre Dateninfrastruktur Insights Daten, die Sie nach Ende der Gnadenfrist sammeln, bleiben nach der Gnadenfrist 30 Tage lang intakt. Wenn Sie Ihr Abonnement innerhalb dieser Zeit verlängern, stehen Ihnen alle Ihre Daten bis zu der verstrichenen Kulanzzeit zur Verfügung.
-
-
-
 == Was ist, wenn mein *Abonnement* abgelaufen ist?
 
 Wenn Sie ein Abonnement von Data Infrastructure Insights haben, dieses Abonnement jedoch abgelaufen ist, haben Sie eine Frist von fünf Tagen, um Ihr Abonnement zu verlängern. Während dieser Gnadenfrist bleiben alle Funktionen Data Infrastructure Insights aktiv.
