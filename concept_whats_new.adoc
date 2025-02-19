@@ -36,7 +36,7 @@ image:ontap_essentials_asa_views.png["Dropdown-Menü „ONTAP Essentials“ zeig
 
 Erhöhen Sie die Sicherheit und optimieren Sie das Ressourcenmanagement mit dem verbesserten REST-API-Nutzungsnachverfolgung, das für Admin-Benutzer verfügbar ist. Mit der API-Nutzungsverfolgung können Sie sehen, welche API-Token verwendet werden, von welchen IP-Adressen und von welchem Volumen sie Datenverkehr generieren. Durch die Verknüpfung von Token mit bestimmten IP-Adressen und Nutzungsebenen erhalten Sie einen umfassenden Einblick in den Systemzugriff und die Trends bei der Nutzung. So haben Sie die erforderliche Kontrolle, um eine sichere, effiziente Umgebung zu erhalten und den Betrieb reibungslos zu halten.
 
-Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability > Admin > API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security oder Reporting APIs.
+Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability > Admin > API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security.
 
 image:api_usage_analytics_screenshot.png["Beispiel für eine API-Nutzungsanalyse"]
 

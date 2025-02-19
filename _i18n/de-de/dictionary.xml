@@ -11987,7 +11987,6 @@
   <block id="5fe97e7e7c561aa4a8199e55d380aadb" category="paragraph"><block ref="5fe97e7e7c561aa4a8199e55d380aadb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bd255743216cfae20f87e84a9cd8e7e1" category="section-title">DII API Usage Tracking: Erhöhen Sie Sicherheit und Effizienz</block>
   <block id="0be262a01ffd53cb1827d924de37e376" category="paragraph">Erhöhen Sie die Sicherheit und optimieren Sie das Ressourcenmanagement mit dem verbesserten REST-API-Nutzungsnachverfolgung, das für Admin-Benutzer verfügbar ist. Mit der API-Nutzungsverfolgung können Sie sehen, welche API-Token verwendet werden, von welchen IP-Adressen und von welchem Volumen sie Datenverkehr generieren. Durch die Verknüpfung von Token mit bestimmten IP-Adressen und Nutzungsebenen erhalten Sie einen umfassenden Einblick in den Systemzugriff und die Trends bei der Nutzung. So haben Sie die erforderliche Kontrolle, um eine sichere, effiziente Umgebung zu erhalten und den Betrieb reibungslos zu halten.</block>
-  <block id="864d5cf863bc1474afd3f84717104d24" category="paragraph">Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability &gt; Admin &gt; API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security oder Reporting APIs.</block>
   <block id="320be4cb0a9128705d37286f8afff816" category="inline-image-macro">Beispiel für eine API-Nutzungsanalyse</block>
   <block id="d7f696b40402f5f6c5dc60d881af09a0" category="paragraph"><block ref="d7f696b40402f5f6c5dc60d881af09a0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="811a069713a14c7b8c3b0333afcedfff" category="section-title">Workload-Sicherheits-API zur Einschränkung von Benutzern</block>
@@ -12011,4 +12010,5 @@
   <block id="8429b607073457ee8f7513c9b33f2b47" category="inline-link-macro">ONTAP REST</block>
   <block id="9813cb21933d9e535322d83efc9b8d25" category="paragraph">Für alle ASA-Systeme der vorherigen Generation verwenden Sie bitte den <block ref="75bdda54644cc13465ab7acc10710396" category="inline-link-macro-rx"></block> Collector.</block>
   <block id="6cc5c9e930ea3d3b8bff4367c60ceea4" category="section-title">Februar 2025</block>
+  <block id="8261d0e1521d30da1b36761d508cb245" category="paragraph">Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability &gt; Admin &gt; API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security.</block>
 </blocks>
