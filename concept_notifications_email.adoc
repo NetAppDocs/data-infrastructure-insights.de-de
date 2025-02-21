@@ -56,6 +56,15 @@ Im Folgenden finden Sie Beispiele für die Art von Benachrichtigungen, die gesen
 
 | Testversion oder Abonnement abgelaufen Konto wird das Sammeln von Daten in 48 Stunden beendet Konto wird nach 48 Stunden gelöscht | Kontaktieren Sie, link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertrieb"] um ein Abonnement zu erwerben 
 |===
+[NOTE]
+====
+Um sicherzustellen, dass Ihre Empfänger Benachrichtigungen von Data Infrastructure Insights erhalten, fügen Sie die folgenden E-Mail-Adressen zu beliebigen „Zulassen“-Listen hinzu:
+
+* \accounts@service.cloudinsights.netapp.com
+* \DoNotReply@cloudinsights.netapp.com
+
+
+====
 
 
 == Globale Empfängerliste für Warnungen
