@@ -273,7 +273,7 @@ Hinweis: Wenn Sie die neueste Installation von NetApp Kubernetes Monitoring Oper
 
 * Bearbeiten Sie den NetApp Kubernetes Monitoring Operator.
 +
- kubectl -n netapp-monitoring edit agent agent-monitoring-netapp
+ kubectl -n netapp-monitoring edit agent netapp-ci-agent-monitoring-netapp
 * Ändern Sie den Wert _spec.output-sink.API-key_ und ersetzen Sie das alte API-Token durch das neue API-Token.
 +
 ....
