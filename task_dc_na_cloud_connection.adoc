@@ -22,4 +22,4 @@ keywords: data collector, NetApp, Cloud agent, ONTAP
 Dieser Datensammler erstellt eine Cloud-Verbindung, um Daten aus ONTAP 9.9+ CVO, AFF und FAS zu erfassen.
 
 
-NOTE: Der Datensammler kann ab 4. April 2023 nicht mehr in Data Infrastructure Insights installiert werden und wird ab Juli 2023 aus allen Installationen von Data Infrastructure Insights entfernt. Informationen zum Übergang zur AU-basierten Datenerfassung finden Sie unter link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/How_to_transition_from_NetApp_Cloud_Connection_to_AU_based_data_collector["Knowledgebase"^].
+NOTE: Der Datensammler kann ab 4. April 2023 nicht mehr in Data Infrastructure Insights installiert werden und wird ab Juli 2023 aus allen Installationen von Data Infrastructure Insights entfernt.

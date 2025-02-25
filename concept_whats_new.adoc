@@ -1037,7 +1037,7 @@ API Metering wurde von der Seite Abonnement auf die Seite *Admin > API Access* v
 
 Die Cloud-Verbindung für den ONTAP 9.9+-Datensammler wird veraltet. Ab dem 4. April 2023 werden die Datensammler von Cloud Connection in Ihrer Umgebung keine Daten mehr sammeln, sondern beim Abrufen einen Fehler anzeigen. Der Datensammler der Cloud-Verbindung wird in einem späteren Update komplett aus Cloud Insights entfernt.
 
-Vor dem 4. April 2023 ist die Konfiguration eines neuen Datensammlers für die NetApp ONTAP Datenmanagement-Software für alle ONTAP Systeme, die derzeit über Cloud Connection erfasst werden, erforderlich. link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/How_to_transition_from_NetApp_Cloud_Connection_to_AU_based_data_collector["Weitere Informationen"].
+Vor dem 4. April 2023 ist die Konfiguration eines neuen Datensammlers für die NetApp ONTAP Datenmanagement-Software für alle ONTAP Systeme, die derzeit über Cloud Connection erfasst werden, erforderlich.
 
 '''
 

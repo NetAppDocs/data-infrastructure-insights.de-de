@@ -70,7 +70,7 @@ Siehe auch link:task_troubleshooting_linux_acquisition_unit_problems.html["Fehle
 
 == Ressourcen
 
-Weitere Tipps zur Fehlerbehebung finden Sie im link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
+Weitere Tipps zur Fehlerbehebung finden Sie im link:https://kb.netapp.com/Cloud/BlueXP/DII["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
 
 Weitere Support-Informationen finden Sie auf der Seite Data Infrastructure Insightslink:concept_requesting_support.html["Support"].
 
