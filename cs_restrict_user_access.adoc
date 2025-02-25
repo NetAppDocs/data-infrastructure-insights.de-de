@@ -10,7 +10,7 @@ summary: Mit Workload Security können Sie den Benutzerzugriff auch nach vermute
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

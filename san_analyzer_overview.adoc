@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: san_anayzer_overview.html 
+permalink: san_analyzer_overview.html 
 summary: SAN Analyzer bietet Topologie für Ressourcen auf Ihrem Mandanten 
 keywords: topology, analyze, analysis, map 
 ---
@@ -28,16 +28,16 @@ image:san_analyzer_example_with_panel.png["Topologiezuordnung eines Storage-Syst
 
 Wählen Sie *Observability > Analyze > SAN Analyzer*, um den SAN Analyzer anzuzeigen. Legen Sie einen Filter für Anwendung, Host, Struktur und/oder Speicher fest. Die Karte für die Objekte wird angezeigt und zeigt verbundene Objekte an. Bewegen Sie den Mauszeiger über ein Objekt, um Verkehrsmetriken für diese Verbindungen anzuzeigen.
 
+image:san_analyzer_traffic_metrics.png["Beispiel für die Verkehrsmetriken von SAN Analyzer"]
+
 
 NOTE: Die meisten SAN Analyzer-Filter (einschließlich der Filter, die Sie hinzufügen können) sind kontextbezogen. Wenn Sie ein Objekt in einem dieser Filter auswählen, werden die in den anderen Filter-Dropdown-Listen angezeigten Optionen im Kontext mit dem ausgewählten Objekt oder den ausgewählten Objekten aktualisiert. Die einzigen Ausnahmen hiervon sind Anwendung, Port und Switch. Diese Filter sind nicht kontextabhängig.
-
-image:san_analyzer_traffic_metrics.png[""]
 
 Wenn Sie auf ein Objekt oder eine Gruppe klicken, wird ein Schiebefenster mit zusätzlichen Details zum Objekt und seinen Verbindungen geöffnet. Im Schiebefenster wird eine Zusammenfassung angezeigt, die Details zum ausgewählten Objekt enthält (z. B. IP, Hypervisor, verbundene Fabrics usw., je nach Objekttyp), und Diagramme mit Kennzahlen für das Objekt wie Latenz oder IOPS sowie Änderungen und Warnmeldungen, falls relevant. Bei Bedarf können Sie auch Kennzahlen für Objekte mit der höchsten Korrelation in den Diagrammen anzeigen.
 
 Zusätzlich zur Registerkarte „Zusammenfassung“ werden im Schiebebereich Registerkarten für Elemente wie Portdetails oder Zoneninformationen angezeigt, die für das ausgewählte Objekt gelten.
 
-image:san_analyzer_slideout_example.png[""]
+image:san_analyzer_slideout_example.png["SAN Analyzer-Schiebefenster"]
 
 Wenn Ihre Umgebung iSCSI-Geräte enthält, werden mit der Maus über das Objekt „_iSCSI_“ die Verbindungen zu diesen relevanten iSCSI-Geräten hervorgehoben.
 

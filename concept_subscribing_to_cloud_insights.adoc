@@ -27,7 +27,7 @@ Der Einstieg in Data Infrastructure Insights ist mit drei einfachen Schritten ga
 ** Vereinbaren Sie einen Termin oder warten Sie, bis ein Mitarbeiter Sie zu Ihrer Testversion kontaktiert.
 
 
-* *Abonnieren* Data Infrastructure Insights für den kontinuierlichen, unterbrechungsfreien Zugriff auf Ihre Daten über link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertrieb"] direkt oder link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["AWS Marketplace"].
+* *Abonnieren* Data Infrastructure Insights für den kontinuierlichen, unterbrechungsfreien Zugriff auf Ihre Daten über link:https://bluexp.netapp.com/contact-cds["NetApp Vertrieb"] direkt oder link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["AWS Marketplace"].
 
 
 Während des Registrierungsprozesses können Sie die globale Region auswählen, um Ihre Data Infrastructure Insights Umgebung zu hosten. Weitere Informationen finden Sie unter Dateninfrastruktureinblicke link:security_information_and_region.html["Informationen und Region"].
@@ -185,7 +185,7 @@ Wenn Ihre Managed Unit weniger als 1,000 beträgt, können Sie sie über den Net
 
 === Abonnieren Sie NetApp Sales Direct
 
-Wenn die erwartete Anzahl der verwalteten Einheiten 1,000 oder höher ist, klicken Sie auf die link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["*Vertrieb Kontaktieren*"] Schaltfläche, um das NetApp-Vertriebsteam zu abonnieren.
+Wenn die erwartete Anzahl der verwalteten Einheiten 1,000 oder höher ist, klicken Sie auf die link:https://bluexp.netapp.com/contact-cds["*Vertrieb Kontaktieren*"] Schaltfläche, um das NetApp-Vertriebsteam zu abonnieren.
 
 Sie müssen Ihrem NetApp Vertriebsmitarbeiter Ihre Data Infrastructure Insights *Seriennummer* zur Verfügung stellen, damit Ihr bezahltes Abonnement auf Ihre Data Infrastructure Insights-Umgebung angewendet werden kann. Die Seriennummer identifiziert eindeutig Ihre Data Infrastructure Insights-Testumgebung und ist auf der Seite *Admin > Abonnement* zu finden.
 

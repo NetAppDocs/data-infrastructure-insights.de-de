@@ -5,13 +5,16 @@ keywords: applications, asset, cost
 summary: Wenn Sie sich über die Applikationen in der Umgebung Ihres Unternehmens informieren, können Sie die Nutzung und die Kosten Ihrer Ressourcen nachverfolgen. 
 ---
 = Nachverfolgung der Asset-Nutzung nach Applikation
+:hardbreaks:
 :allow-uri-read: 
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
-:revdate: Understanding the applications used in your company's environment helps you to keep track of asset usage and cost.
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
+
+[role="lead"]
+Wenn Sie sich über die Applikationen in der Umgebung Ihres Unternehmens informieren, können Sie die Nutzung und die Kosten Ihrer Ressourcen nachverfolgen.
 
 Bevor Sie die Daten verfolgen können, die mit den auf Ihrem Mandanten ausgeführten Anwendungen verknüpft sind, müssen Sie zunächst diese Anwendungen definieren und sie den entsprechenden Anlagen zuordnen. Applikationen können folgenden Assets zugewiesen werden: Hosts, virtuelle Maschinen, Volumes, interne Volumes, qtrees, Freigaben und Hypervisoren:
 

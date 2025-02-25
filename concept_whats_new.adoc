@@ -568,7 +568,7 @@ image:StorageNodeSupportData.png["Support-Informationen Zum Storage-Node"]
 
 === Zuordnen von VMware-Tags zu Cloud Insights-Annotationen
 
-Der link:task_dc_vmware.html#mapping-vmware-tags-to-cloud-insights-annotations["VMware"] Datensammler ermöglicht das Befüllen von Cloud Insights Textanmerkungen mit Tags mit demselben Namen, die auf VMware konfiguriert sind.
+Der link:task_dc_vmware.html["VMware"] Datensammler ermöglicht das Befüllen von Cloud Insights Textanmerkungen mit Tags mit demselben Namen, die auf VMware konfiguriert sind.
 
 
 
@@ -1387,7 +1387,7 @@ Der Agent für die Aufnahme von telegraf-Integrationsdaten wurde auf Version *1.
 
 === Vorschaufunktionen
 
-Cloud Insights weist regelmäßig eine Reihe von interessanten neuen Vorschaufunktionen auf. Wenn Sie eine oder mehrere dieser Funktionen in der Vorschau anzeigen möchten, wenden Sie sich an Ihrenlink:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertriebsteam"], um weitere Informationen zu erhalten.
+Cloud Insights weist regelmäßig eine Reihe von interessanten neuen Vorschaufunktionen auf. Wenn Sie eine oder mehrere dieser Funktionen in der Vorschau anzeigen möchten, wenden Sie sich an Ihrenlink:https://bluexp.netapp.com/contact-cds["NetApp Vertriebsteam"], um weitere Informationen zu erhalten.
 
 |===
 
@@ -1452,7 +1452,7 @@ Sie können Cloud Insights jetzt so konfigurieren, dass eine Warnmeldung ausgege
 
 === Vorschaufunktionen
 
-Cloud Insights weist regelmäßig eine Reihe von interessanten neuen Vorschaufunktionen auf. Wenn Sie eine oder mehrere dieser Funktionen in der Vorschau anzeigen möchten, wenden Sie sich an Ihrenlink:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertriebsteam"], um weitere Informationen zu erhalten.
+Cloud Insights weist regelmäßig eine Reihe von interessanten neuen Vorschaufunktionen auf. Wenn Sie eine oder mehrere dieser Funktionen in der Vorschau anzeigen möchten, wenden Sie sich an Ihrenlink:https://bluexp.netapp.com/contact-cds["NetApp Vertriebsteam"], um weitere Informationen zu erhalten.
 
 |===
 
@@ -1511,7 +1511,7 @@ Cloud Insights behält Sie auf Änderungen in Ihrer Kubernetes-Umgebung bei, ind
 
 === Vorschaufunktionen
 
-Cloud Insights weist regelmäßig eine Reihe von interessanten neuen Vorschaufunktionen auf. Wenn Sie eine oder mehrere dieser Funktionen in der Vorschau anzeigen möchten, wenden Sie sich an Ihrenlink:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertriebsteam"], um weitere Informationen zu erhalten.
+Cloud Insights weist regelmäßig eine Reihe von interessanten neuen Vorschaufunktionen auf. Wenn Sie eine oder mehrere dieser Funktionen in der Vorschau anzeigen möchten, wenden Sie sich an Ihrenlink:https://bluexp.netapp.com/contact-cds["NetApp Vertriebsteam"], um weitere Informationen zu erhalten.
 
 |===
 
@@ -2386,7 +2386,7 @@ Ihre Benutzerrolle in Cloud Insights bestimmt ihrelink:reporting_user_roles.html
 NOTE: Cloud Insights-Berichte sind für Umgebungen mit mindestens 500 MUs verfügbar.
 
 
-IMPORTANT: Wenn Sie ein aktueller Premium Edition-Kunde sind und Ihre Berichte behalten möchten, lesen Sie dies link:reporting_user_roles.html#important-note-for-existing-customers["Wichtiger Hinweis für Bestandskunden"].
+IMPORTANT: Wenn Sie ein aktueller Premium Edition-Kunde sind und Ihre Berichte behalten möchten, lesen Sie dies link:reporting_user_roles.html["Wichtiger Hinweis für Bestandskunden"].
 
 
 
@@ -2992,7 +2992,7 @@ Das link:task_config_telegraf_kubernetes.html["Kubernetes Data Collector"] NOW s
 
 === Cloud Insights Editionen
 
-Cloud Insights ist in verschiedenen Editionen erhältlich, um Ihr Budget und Ihre Geschäftsanforderungen zu erfüllen. Bestehende NetApp Kunden mit einem aktiven NetApp Support Account erhalten mit der kostenlosen *Basic Edition* 7 Tage Datenaufbewahrung und Zugriff auf NetApp Datensammler. Sie erhalten aber auch mehr Datenhaltung, Zugang zu allen unterstützten Datensammlern, technischen Support durch Experten und mehr mit *Standard Edition*. Weitere Informationen zu verfügbaren Funktionen finden Sie auf der  Website vonNetApplink:https://cloud.netapp.com/cloud-insights["Einblicke in die Cloud"].
+Cloud Insights ist in verschiedenen Editionen erhältlich, um Ihr Budget und Ihre Geschäftsanforderungen zu erfüllen. Bestehende NetApp Kunden mit einem aktiven NetApp Support Account erhalten mit der kostenlosen *Basic Edition* 7 Tage Datenaufbewahrung und Zugriff auf NetApp Datensammler. Sie erhalten aber auch mehr Datenhaltung, Zugang zu allen unterstützten Datensammlern, technischen Support durch Experten und mehr mit *Standard Edition*. Weitere Informationen zu verfügbaren Funktionen finden Sie auf der  Website vonNetApplink:https://www.netapp.com/cloud-services/cloud-insights/["Einblicke in die Cloud"].
 
 
 

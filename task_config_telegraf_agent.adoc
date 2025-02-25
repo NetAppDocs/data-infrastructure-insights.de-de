@@ -21,8 +21,6 @@ summary: Data Infrastructure Insights unterstützt Telegraf als Agent für die E
 [role="lead"]
 Data Infrastructure Insights verwendet link:https://docs.influxdata.com/telegraf["Telegraf"] als Agent für die Erfassung von Integrationsdaten. Telegraf ist ein Plug-in-gestützter Server-Agent, mit dem Kennzahlen, Ereignisse und Protokolle erfasst und protokolliert werden können. Input-Plugins werden verwendet, um die gewünschten Informationen in den Agenten zu sammeln, indem Sie direkt auf das System/Betriebssystem zugreifen, indem Sie APIs von Drittanbietern aufrufen oder konfigurierte Streams (d. h. anhören Kafka, StatsD usw.). Output-Plug-ins werden verwendet, um die vom Agenten gesammelten Kennzahlen, Ereignisse und Protokolle an Data Infrastructure Insights zu senden.
 
-Die aktuelle Telegraf Version für Data Infrastructure Insights ist *1.24.0*.
-
 Informationen zur Installation auf Kubernetes finden Sie auf der link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"] Seite.
 
 

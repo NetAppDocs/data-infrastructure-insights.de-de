@@ -10,7 +10,7 @@ summary: 'Sie können automatische Antwortrichtlinien für potenzielle Angriffe 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

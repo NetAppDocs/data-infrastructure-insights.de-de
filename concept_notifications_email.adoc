@@ -48,13 +48,13 @@ Im Folgenden finden Sie Beispiele für die Art von Benachrichtigungen, die gesen
 | Testversion oder Abonnement wurde aktualisiert | Lesen Sie die Abonnementdetails auf der link:concept_subscribing_to_cloud_insights.html["Abonnement"] Seite 
 
 
-| Das Abonnement läuft in 90 Tagen ab das Abonnement läuft in 30 Tagen ab | Wenn „Auto Renewal“ aktiviert ist, ist keine Aktion erforderlich. Wenden Sie sich an die link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertrieb"]Verlängerung des Abonnements 
+| Das Abonnement läuft in 90 Tagen ab das Abonnement läuft in 30 Tagen ab | Bei Aktivierung von „Automatische Verlängerung“ sind keine Maßnahmen erforderlich. Wenden Sie sich an den NetApp Vertrieb, um das Abonnement zu verlängern 
 
 
-| Die Testversion endet in 2 Tagen | Testversion von der  Seite erneuernlink:concept_subscribing_to_cloud_insights.html["Abonnement"]. Sie können eine einmalige Testversion erneuern. Kontaktieren Sie, link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertrieb"] um ein Abonnement zu erwerben 
+| Die Testversion endet in 2 Tagen | Testversion von der  Seite erneuernlink:concept_subscribing_to_cloud_insights.html["Abonnement"]. Sie können eine einmalige Testversion erneuern. Wenden Sie sich an den NetApp Vertrieb, um ein Abonnement zu erwerben 
 
 
-| Testversion oder Abonnement abgelaufen Konto wird das Sammeln von Daten in 48 Stunden beendet Konto wird nach 48 Stunden gelöscht | Kontaktieren Sie, link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["NetApp Vertrieb"] um ein Abonnement zu erwerben 
+| Testversion oder Abonnement abgelaufen Konto wird das Sammeln von Daten in 48 Stunden beendet Konto wird nach 48 Stunden gelöscht | Wenden Sie sich an den NetApp Vertrieb, um ein Abonnement zu erwerben 
 |===
 [NOTE]
 ====

@@ -10,7 +10,7 @@ summary: Workload Security erzeugt Warnmeldungen bei abnormalen Benutzeraktivit√
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]
