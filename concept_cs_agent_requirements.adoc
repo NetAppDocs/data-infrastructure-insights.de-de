@@ -26,7 +26,7 @@ Sie müssen link:task_cs_add_agent.html["Installieren Sie einen Agenten"]Informa
 | Komponente | Linux-Anforderungen Erfüllt 
 
 
-| Betriebssystem | Ein Computer mit einer lizenzierten Version von einer der folgenden Versionen: * CentOS 8 24,04 11 9,4 Stream (64 64 64-Bit), CentOS 9 9.3 Stream, SELinux * openSUSE Leap 64 bis 20.04 (64-Bit) * Oracle Linux 64 - 15, 15 bis 8.8 (9.2-Bit) * Red hat Enterprise Linux 9.4 bis 9.4, 9.1 bis 9.4 (8.6-Bit), SELinux * Rocky 64 - 8.6 (15.3-Bit), SELinux * 8.8-Bit * (LTS * 9.1-22.04-Bit) und 64-15.5-Bit) (LmaTS * 64-10-Bit) Es wird ein dedizierter Server empfohlen. 
+| Betriebssystem | Ein Computer mit einer lizenzierten Version von einer der folgenden Versionen: * CentOS 64 64 64 Stream (64 9.4-Bit) * openSUSE Leap 15.3 9.5 bis 15.5 (64-Bit) * Oracle Linux 11 (15-Bit), 15 bis 64 (9.4-Bit), SELinux * Red hat Enterprise Linux 9.5 (64-Bit), 9.1 bis 9.5 (64-Bit), SELinux * Rocky 64 - 8.10 (64-Bit), SELinux * 64-9.1-Bit und Linux * (LSE4-9.4), Linux * und LSE4-20.04-22.04), Linux-8.10-Bit * und LSETS *, Linux-24.04-9-10 (LMA6) Es wird ein dedizierter Server empfohlen. 
 
 
 | Befehle | Für die Installation ist „entpacken“ erforderlich. Darüber hinaus ist für die Installation, das Ausführen von Skripten und die Deinstallation der Befehl 'udo su –' erforderlich. 
