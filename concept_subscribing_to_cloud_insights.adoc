@@ -58,8 +58,6 @@ NOTE: Wenn Sie zusätzliche Zeit benötigen, um Data Infrastructure Insights zu 
 
 Sie können sich zudem über den AWS Marketplace für eine kostenlose Testversion anmelden. Mit der kostenlosen Testversion von AWS Marketplace haben Sie 33 Tage lang Zugriff auf Data Infrastructure Insights und können bis zu 499 <<observability-metering,Verwaltete Einheiten>> (Mus) testen.
 
-Hinweis: Wenn Sie mehr als 499 MUs konfigurieren, geben Sie den Status „missachtet“ ein. Während der Testphase verlieren Sie den Zugriff auf einige Data Infrastructure Insights-Funktionen, bis die Sicherheitsverletzung behoben ist, indem Sie entweder die Anzahl der konfigurierten Mus reduzieren oder Data Infrastructure Insights abonnieren.
-
 Die kostenlose Testversion von AWS Marketplace kann nicht erweitert werden. Sie können jederzeit während der Testversion auf ein Data Infrastructure Insights Basic Edition-Abonnement herunterstufen oder auf ein kostenpflichtiges Data Infrastructure Insights-Abonnement wechseln, indem Sie die Seite *Admin -> Abonnement* aufrufen.
 
 
@@ -142,7 +140,7 @@ Für jede Stufe wird eine andere Geschwindigkeit gemessen. Das gesamte Tier wird
 
  Effective usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
 
-NOTE: Die Summe der verwalteten Einheiten kann sich leicht von der Datensammler-Anzahl im Zusammenfassungsbereich unterscheiden. Dies liegt daran, dass die Anzahl der verwalteten Einheiten auf die nächste verwaltete Einheit aufgerundet wird. Die Summe dieser Zahlen in der Datensammler-Liste kann etwas höher sein als die Summe der verwalteten Einheiten im Statusbereich. Im Übersichtsbereich finden Sie die tatsächliche Anzahl der verwalteten Einheiten für Ihr Abonnement. Um dies zu erleichtern, berechnet DII eine einzelne *effektive Berechtigungsnummer* auf Basis von _abonnierten_ Mengen; sie berechnet dann dieselbe Zahl basierend auf _Discovered_ Speicher und erklärt nur dann den Verstoß, wenn die effektive erkannte Kapazität größer als die effektive Berechtigung ist. So können Sie flexibel die Mengen überwachen, die von den abonnierten Beträgen für jeden Tier abweichen, was DII zulässt, solange sich der gesamte erkannte Speicher innerhalb der abonnierten effektiven Berechtigung befindet.
+NOTE: Die Summe der verwalteten Einheiten kann sich leicht von der Datensammler-Anzahl im Zusammenfassungsbereich unterscheiden. Dies liegt daran, dass die Anzahl der verwalteten Einheiten auf die nächste verwaltete Einheit aufgerundet wird. Die Summe dieser Zahlen in der Datensammler-Liste kann etwas höher sein als die Summe der verwalteten Einheiten im Statusbereich. Im Übersichtsbereich finden Sie die tatsächliche Anzahl der verwalteten Einheiten für Ihr Abonnement. Um dies zu erleichtern, berechnet DII eine einzelne *effektive Berechtigungsnummer* basierend auf _abonnierten_ Mengen; sie berechnet dann die gleiche Zahl basierend auf _Discovered_ Speicher. So können Sie flexibel die Mengen überwachen, die von den abonnierten Beträgen für jeden Tier abweichen, was DII zulässt, solange sich der gesamte erkannte Speicher innerhalb der abonnierten effektiven Berechtigung befindet.
 
 
 
