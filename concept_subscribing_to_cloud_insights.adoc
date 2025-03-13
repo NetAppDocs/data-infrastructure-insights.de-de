@@ -158,8 +158,6 @@ Dateninfrastruktureinblicke Infrastrukturbeobachtbarkeit und Kubernetes Observab
 
 
 
-Wenn in Ihrer Umgebung 1,000 oder mehr Managed Units enthalten sind oder erwartet werden, haben Sie Anspruch auf *Volumenrabatte* und werden dazu aufgefordert, sich an den NetApp Vertrieb zu wenden. Weitere Informationen finden Sie unter<<how-do-i-subscribe,Unten>>.
-
 
 
 === Messung Der Workload-Sicherheit
@@ -183,7 +181,7 @@ Wenn Ihre Managed Unit weniger als 1,000 beträgt, können Sie sie über den Net
 
 === Abonnieren Sie NetApp Sales Direct
 
-Wenn die erwartete Anzahl der verwalteten Einheiten 1,000 oder höher ist, klicken Sie auf die link:https://bluexp.netapp.com/contact-cds["*Vertrieb Kontaktieren*"] Schaltfläche, um das NetApp-Vertriebsteam zu abonnieren.
+Wenn die erwartete Anzahl der verwalteten Einheiten 1,000 oder höher ist, klicken Sie auf die link:https://www.netapp.com/forms/cloud-insights-contact-us["*Vertrieb Kontaktieren*"] Schaltfläche, um das NetApp-Vertriebsteam zu abonnieren.
 
 Sie müssen Ihrem NetApp Vertriebsmitarbeiter Ihre Data Infrastructure Insights *Seriennummer* zur Verfügung stellen, damit Ihr bezahltes Abonnement auf Ihre Data Infrastructure Insights-Umgebung angewendet werden kann. Die Seriennummer identifiziert eindeutig Ihre Data Infrastructure Insights-Testumgebung und ist auf der Seite *Admin > Abonnement* zu finden.
 
