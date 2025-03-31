@@ -20,6 +20,67 @@ NetApp verbessert seine Produkte und Services kontinuierlich. Im Folgenden finde
 
 
 
+== März 2025
+
+
+
+=== Verbesserte kontextbezogene Navigation für effizientes Infrastrukturmanagement
+
+Sparen Sie Zeit, indem Sie Dateninfrastruktur Insights für optimale Betriebsabläufe nutzen. Wir fügen nun Kontextmenülinks hinzu, mit denen Sie direkt von einem beliebigen Objekt zur Startseite der Assets wechseln können, um Informationen zur Geräteleistung zu erhalten, SAN Analyzer zur Visualisierung der Netzwerktopologie, Protokolle zur Erkennung von Betriebsabläufen oder Change Analyzer zur Konfigurationsverwaltung.
+
+Durch den sofortigen Zugriff auf wichtige Daten über mehrere Ansichten hinweg erhalten Sie ein besseres Verständnis der Objektbeziehungen. Dieser optimierte Workflow beschleunigt die Entscheidungsfindung und Problemlösung und spart Ihnen dadurch Zeit und verbessert Ihre allgemeinen Analysefunktionen.
+
+image:contextual_menu_example.png["Beispiel für ein Kontextmenü, width=500"]
+
+
+
+=== Den Verlauf entfernter Assets beibehalten
+
+Mit unserer erweiterten Funktion „Infra Change“ wird jetzt der Verlauf entfernter Assets wie qtrees und Volumes beibehalten, die verschoben wurden und nicht mehr verfügbar sind.
+
+Fehlt etwas in Ihrem Puzzle zur Fehlerbehebung? Nicht mehr! Sie sehen alles – einschließlich gelöschter Objekte, die mit einem Durchschlag markiert sind – und erhalten so auch nach dem Entfernen von Assets einen vollständigen Kontext. So verpassen Sie keine kritischen Elemente aus früheren Änderungen oder Warnungen über den gesamten End-to-End-Pfad hinweg.
+
+Das Ergebnis? Schnellere Lösungszeiten und fundiertere Infrastrukturentscheidungen, auch wenn die fraglichen Assets nicht mehr vorhanden sind.
+
+image:infra_change_removed_assets.png["Entfernte Assets in Infrastuktur, die mit einem Durchgestrichen angezeigt werden, Breite=300"]
+
+
+
+=== Kubernetes Operator: Push-Button-Upgrade
+
+Möchten Sie sicher sein, dass Sie über den neuesten Kubernetes Operator verfügen? Aktualisieren Sie den Bediener nach Bedarf über das DII Kubernetes Collectors-Cluster-Menü. Wählen Sie einfach Upgrade aus dem Menü aus, und der Bediener überprüft die Bildsignaturen, erfasst einen Snapshot Ihrer aktuellen Installation und führt das Upgrade durch.
+
+Das Push-Button-Upgrade ist eine optionale Funktion, deren Aktivierung auf Cluster-Basis verwaltet werden kann.
+
+image:dii_push_button_upgrade.png["Bedienerupgrade per Tastendruck vom Cluster-Menü, Breite=600"]
+
+
+
+=== Testen Sie die Konnektivität für Datensammler zur Sicherheit von Speicherarbeitslasten
+
+Die Testverbindungsfunktion soll Endbenutzern dabei helfen, die spezifischen Ursachen von Fehlern zu identifizieren, wenn Datensammler in Data Infrastructure Insights (DII) Workload Security eingerichtet werden. Dadurch können die Benutzer Probleme im Zusammenhang mit der Netzwerkkommunikation oder fehlenden Rollen selbst beheben.
+
+image:ws_test_connection_button.png["workload security test connection button"] image:ws_test_connection_success_example.png["Workload Security 'Test Connection' success message"]
+
+
+
+=== Betriebssystemunterstützung
+
+Zusätzlich zu den folgenden Betriebssystemen werden jetzt auch Data Infrastructure Insights Acquisition Units unterstütztlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["Unterstützung bereits vorhanden"]:
+
+* AlmaLinux 9.5
+* Debian (64-bit) 11
+* OpenSUSE Leap 15.6
+* Oracle Enterprise Linux (64 Bit) 8.9, 8.10, 9.5
+* Red hat (64 Bit) 8.9, 8.10, 9.5
+* Rocky 9.5
+* SUSE Linux Enterprise Server 15 SP6
+* Ubuntu Server 24.04 LTS
+
+
+'''
+
+
 == Februar 2025
 
 
@@ -34,15 +95,11 @@ image:ontap_essentials_asa_views.png["Dropdown-Menü „ONTAP Essentials“ zeig
 
 === DII API Usage Tracking: Erhöhen Sie Sicherheit und Effizienz
 
-Erhöhen Sie die Sicherheit und optimieren Sie das Ressourcenmanagement mit dem verbesserten REST-API-Nutzungsnachverfolgung, das für Admin-Benutzer verfügbar ist. Mit der API-Nutzungsverfolgung können Sie sehen, welche API-Token verwendet werden, von welchen IP-Adressen und von welchem Volumen sie Datenverkehr generieren. Durch die Verknüpfung von Token mit bestimmten IP-Adressen und Nutzungsebenen erhalten Sie einen umfassenden Einblick in den Systemzugriff und die Trends bei der Nutzung. So haben Sie die erforderliche Kontrolle, um eine sichere, effiziente Umgebung zu erhalten und den Betrieb reibungslos zu halten. Erhöhen Sie die Sicherheit und optimieren Sie das Ressourcenmanagement mit dem verbesserten REST-API-Nutzungsnachverfolgung, das für Admin-Benutzer verfügbar ist. Mit der API-Nutzungsverfolgung können Sie sehen, welche API-Token verwendet werden, von welchen IP-Adressen und von welchem Volumen sie Datenverkehr generieren. Durch die Verknüpfung von Token mit bestimmten IP-Adressen und Nutzungsebenen erhalten Sie einen umfassenden Einblick in den Systemzugriff und die Trends bei der Nutzung. So haben Sie die erforderliche Kontrolle, um eine sichere, effiziente Umgebung zu erhalten und den Betrieb reibungslos zu halten.
+Erhöhen Sie die Sicherheit und optimieren Sie das Ressourcenmanagement mit dem verbesserten REST-API-Nutzungsnachverfolgung, das für Admin-Benutzer verfügbar ist. Mit der API-Nutzungsverfolgung können Sie sehen, welche API-Token verwendet werden, von welchen IP-Adressen und von welchem Volumen sie Datenverkehr generieren. Durch die Verknüpfung von Token mit bestimmten IP-Adressen und Nutzungsebenen erhalten Sie einen umfassenden Einblick in den Systemzugriff und die Trends bei der Nutzung. So haben Sie die erforderliche Kontrolle, um eine sichere, effiziente Umgebung zu erhalten und den Betrieb reibungslos zu halten.
 
-Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability > Admin > API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security. Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability > Admin > API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security.
+Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability > Admin > API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security.
 
 image:api_usage_analytics_screenshot.png["Beispiel für eine API-Nutzungsanalyse"]
-
-
-
-=== Workload-Sicherheits-API zur Einschränkung von Benutzern
 
 
 

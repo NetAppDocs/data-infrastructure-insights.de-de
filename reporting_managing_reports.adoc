@@ -19,7 +19,7 @@ keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying
 
 
 [role="lead"]
-Sie können das Ausgabeformat und die Ausgabe eines Berichts anpassen, Berichteigenschaften oder Zeitpläne festlegen und E-Mail-Berichte erstellen.
+Sie können das Ausgabeformat und die Zustellung eines Berichts anpassen, Berichtseigenschaften oder Zeitpläne festlegen und E-Mail-Berichte versenden.
 
 
 NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:concept_subscribing_to_cloud_insights.html["Premium Edition"].
@@ -39,8 +39,6 @@ Sie können das Format und die Bereitstellungsmethode von Berichten anpassen.
 image:Reporting_Output_and_Delivery.png["Berichtsausgabe und -Ausgabe"]
 
 . Klicken Sie Auf *Eigenschaften > Zeitplan*
-
-
 . Sie können folgende Optionen festlegen:
 +
 ** *Zeitplan*, wenn Sie Berichte ausführen möchten.
