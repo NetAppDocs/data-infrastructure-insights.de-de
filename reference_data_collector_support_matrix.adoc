@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference_data_collector_support_matrix.html 
 summary: Die Data Collector Support Matrix enthält detaillierte Informationen zu unterstützten Datensammlern. 
-keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei, OpenStack 
+keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei 
 ---
 = Data Infrastructure Insights Data Collector Support Matrix
 :hardbreaks:
@@ -26,7 +26,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| HPE ALLETRA 9080 8450 7200 8400 HPE_3PAR 20450 7400 8440 HPE_3PAR 20800 8200 HPE_3PAR 20850 HPE_3PAR 7200 HPE_3PAR 7200C HPE_3PAR 7400 HPE_3PAR 7400C HPE_7400C HPE_7440C HPE_3PAR 7450C HPE_3PAR 8400 HPE_3PAR 20800 3PAR INSERV 8200 HPE_3PAR 9450 HPE 3PAR IN400 3PAR INSERV 8440 3PAR INX400 | 3.1.1 9.5.15 (MU1) 3.1.2 4.5.18 4.5.7 9.5.8 (MU3) 3.1.3 4.5.21 4.6.1 (MU1) 4.5.15 (MU2) 3.2.2 (MU3) 3.3.1 (MU5) 3.3.1 (MU4) 3.2.2 (MU6) 3.3.1 3.3.1 (MU1) 3.3.1 (MU3) 3.2.1 (MU3) 3.2.1 (MU1) 3.2.1 (MU1) 4.3.1 4.3.3 4.4.1 Freigabetyp: Erweiterter Support Release 3.1.3 Typ: Erweiterter Support Release 3.3.2 Typ: Erweiterter Support Release 4.5.24 
+| HPE ALLETRA 9080 8450 7200 8400 HPE_3PAR 20450 7400 8440 HPE_3PAR 20800 8200 HPE_3PAR 20850 HPE_3PAR 7200 HPE_3PAR 7200C HPE_3PAR 7400 HPE_3PAR 7400C HPE_7400C HPE_7440C HPE_3PAR 7450C HPE_3PAR 8400 HPE_3PAR 20800 3PAR INSERV 8200 HPE_3PAR 9450 HPE 3PAR IN400 3PAR INSERV 8440 3PAR INX400 | 3.1.1 4.5.24 9.5.15 (MU1) 3.1.2 4.5.18 4.5.7 9.5.8 (MU3) 3.1.3 4.6.1 9.6.1 (MU1) 3.3.1 (MU2) 3.2.2 (MU3) 4.3.1 4.3.3 4.4.1 (MU5) 3.3.1 3.3.1 (MU4) 3.3.1 (MU6) 3.2.1 (MU1) 3.3.1 (MU3) 3.2.2 (MU3) 3.1.3 (MU1) 3.2.1 Freigabetyp: Erweiterter Support Release 3.2.1 Typ: Erweiterter Support Release 4.5.15 Typ: Erweiterter Support Release 3.3.2 Typ: Erweiterter Support Release 4.5.21 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -34,7 +34,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.118+| grundlage .3+| Gerätegruppe | Name | Implementiert | SSH |  
+.119+| grundlage .3+| Gerätegruppe | Name | Implementiert | SSH |  
 
 
 | Storage-Management-Id | Implementiert | SSH |  
@@ -154,7 +154,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Ersteller-ID | Implementiert | SSH |  
 
 
-.12+| Storage | IP anzeigen | Implementiert | SSH |  
+.13+| Storage | IP anzeigen | Implementiert | SSH |  
 
 
 | Fehlerhafte Bruttokapazität | Implementiert | SSH | Rohkapazität ausgefallener Festplatten (Summe aller ausgefallenen Festplatten) 
@@ -164,6 +164,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | IP | Implementiert | SSH |  
+
+
+| URL managen | Implementiert | SSH |  
 
 
 | Hersteller | Implementiert | SSH |  
@@ -388,7 +391,7 @@ Von diesem Datensammler unterstützte Produkte:
 | WWN | Implementiert | SSH |  
 
 
-.118+| Performance .6+| Festplatte | IOPS Lesen | Implementiert | SMI-S | Anzahl der Lese-IOPS auf der Festplatte 
+.120+| Performance .6+| Festplatte | IOPS Lesen | Implementiert | SMI-S | Anzahl der Lese-IOPS auf der Festplatte 
 
 
 | IOPS insgesamt | Implementiert | SMI-S |  
@@ -520,7 +523,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Auslastung Insgesamt | Implementiert | SMI-S |  
 
 
-.13+| Storage-Pool | Bereitgestellte Kapazität | Implementiert | SMI-S |  
+.15+| Storage-Pool | Bereitgestellte Kapazität | Implementiert | SMI-S |  
 
 
 | Bruttokapazität | Implementiert | SMI-S |  
@@ -538,6 +541,9 @@ Von diesem Datensammler unterstützte Produkte:
 | Verhältnis Der Verwendeten Kapazität | Implementiert | SMI-S |  
 
 
+| Gesamtkapazität Daten | Implementiert | SMI-S |  
+
+
 | Genutzte Kapazität Von Daten | Implementiert | SMI-S |  
 
 
@@ -551,6 +557,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Server-ID | Implementiert | SMI-S |  
+
+
+| Reservierte Snapshot-Kapazität | Implementiert | SMI-S |  
 
 
 | Verwendete Snapshot-Kapazität | Implementiert | SMI-S |  
@@ -756,9 +765,7 @@ Von diesem Datensammler verwendete Management-APIs:
 
 == Amazon AWS EC2
 
-Von diesem Datensammler unterstützte Modelle und Versionen:
-
-API-Versionen:
+Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
 
 * 1 2014-10-01
 
@@ -1209,7 +1216,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.72+| grundlage .5+| Dateifreigabe | Ist InternalVolume | Implementiert | HTTPS | Ob die Dateifreigabe ein internes Volume (netapp Volume) oder ein qtree/Ordner innerhalb des internen Volumes darstellt 
+.76+| grundlage .5+| Dateifreigabe | Ist InternalVolume | Implementiert | HTTPS | Ob die Dateifreigabe ein internes Volume (netapp Volume) oder ein qtree/Ordner innerhalb des internen Volumes darstellt 
 
 
 | Ist Freigegeben | Implementiert | HTTPS | Ob diese FileShare irgendwelche Shares mit ihr verknüpft hat 
@@ -1236,7 +1243,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Ersteller-ID | Implementiert | HTTPS |  
 
 
-.18+| Internes Volumen | Zugewiesener Speicherplatz | Lücke | HTTPS | Zugewiesene Kapazität für Daten 
+.21+| Internes Volumen | Zugewiesener Speicherplatz | Lücke | HTTPS | Zugewiesene Kapazität für Daten 
 
 
 | Genutzte Kapazität Von Daten | Implementiert | HTTPS |  
@@ -1288,6 +1295,15 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | UUID | Implementiert | HTTPS |  
+
+
+| Kommentar | Lücke | HTTPS | Status: Kostenloser Kommentar zur svm 
+
+
+|  | Implementiert | HTTPS |  
+
+
+| QoS: Richtlinie | Implementiert | HTTPS |  
 
 
 .3+| Storage-Synchronisierung | Internes Quell-Volume | Implementiert | HTTPS |  
@@ -1383,7 +1399,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Einheitliche | Implementiert | HTTPS | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
 
 
-.14+| Storage-Pool | Zugewiesener Speicherplatz | Lücke | HTTPS | Zugewiesene Kapazität für Daten 
+.15+| Storage-Pool | Zugewiesener Speicherplatz | Lücke | HTTPS | Zugewiesene Kapazität für Daten 
 
 
 | Genutzte Kapazität Von Daten | Implementiert | HTTPS |  
@@ -1423,6 +1439,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Einheitliche | Implementiert | HTTPS | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
+
+
+| Kommentar | Lücke | HTTPS | Status: Kostenloser Kommentar zur svm 
 
 
 .23+| Performance .17+| Internes Volumen | Gesamtkapazität | Implementiert |  |  
@@ -1511,7 +1530,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 200E Brocade 300E Brocade Embedded Brocade Brocade Embedded Brocade Brocade 6510 Brocade Brocade Brocade 6547 Embedded Brocade Brocade Brocade 7800 Brocade Extension Switch Brocade 7840 Brocade DCX Brocade DCX-4S Backbone Brocade DCX8510-4 Brocade DCX8510-Brocade G610 Brocade G620 Brocade G630 Brocade G730 Brocade M5424 Embedded Brocade VA-8 Brocade X6-4 Brocade X6-4 Brocade X6-8-6558 Brocade-8 Brocade-7810-6546 Brocade-6548-6505-5300-6520-5100 Brocade-5480-4024-5000-175.53 176.51 183.0-Brocade | V6.4.2b v6.2.2f v6.2.2f9 v6.2.2g v6.4.1a v6.4.1b v6.4.2a v6.4 3.2c v6.4.2 22c v7.4.2f3 v7.4.2v7.4 v7.4.22c v7.4.2v7.4 v7.4.1D v7.4.27.4 v7.4 v7.4 v7.4.1D v7.4 v7.4.27.4 v7.4 v7.4 v7.4.27.4 v7.4 v7.4 v7.4 v7.4.22222g v7.4 v7.4 v7.4 v7.4 v7.4 v7.4 v7.4 v7.4 v7.4.1D v7.4 v7.4.1D v7.4.27.4 v7.4 2 824494 01 3 855776 01 861742 01 857687 01 
+| 200E Brocade 300E Brocade Embedded Brocade Brocade Embedded Brocade Brocade 6510 Brocade Brocade Brocade 6547 Embedded Brocade Brocade Brocade 7800 Brocade Extension Switch Brocade 7840 Brocade DCX Brocade DCX-4S Backbone Brocade DCX8510-4 Brocade DCX8510-Brocade G610 Brocade G620 Brocade G630 Brocade G730 Brocade M5424 Embedded Brocade VA-8 Brocade X6-4 Brocade X6-4 Brocade X6-8-6558 Brocade-8 Brocade-7810-6546 Brocade-6548-6505-5300-6520-5100 Brocade-5480-4024-5000-176.51 183.0-Brocade | V6.4.2f v6.4.2f v7.4.2f v7.4.1D v7.4.2v7.4 3.2v7.4.2v7.4 v7.4.2v7.4.2v7.4 v7.4.2v7.4 2 v7.4.2v7.4 v7.4.2v7.4 v7.4.2v7.4 v7.4.2v7.4 v7.4.2v7.4 v7.4 v7.4 2 824494 01 3 855776 01 2 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -2197,7 +2216,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 183.0 184.0 190.0 191.0 Brocade 6505 Brocade 6510 Brocade 6520 Brocade 7810 Erweiterungsschalter Brocade 7840 Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G720 Brocade G730 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v8.2.2a v8.2.2d v8.2.2d4 v8.2 3.3a v8.2.3b v8.2.3c v8.2.3c1 v8.2.3c1 v8.2.3d v8.2.3e v8.2.3e1 v9.0.0.00.0b v9.0.1a v9.11a v9.1111.857687 01 v9.11a v9.1111 v9.1.01 2.v9.1111a v9.1 v9.1 v9.1 v9.11a v9.1.861742 v9.1a v9.1111.1 v9.1 v9.1 
+| 183.0 184.0 190.0 Brocade 6505 Brocade 6510 Brocade 6520 Brocade 7810 Erweiterungsschalter Brocade 7840 Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G720 Brocade G730 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v8.2.2a v8.2.2d v8.2.2d4 v8.2 3.3a v8.2.3b v8.2.3c v8.2.3c1 v8.2.3c1 v8.2.3d v8.2.3e v8.2.3e1 v9.0.0.00.0b v9.0.861742 1a v9.111 01 857687 01 2 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -2615,7 +2634,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| DS-C9124-2 6332 64108-K9 DS-C9148-32P-K9 DS-C9148-6959 DS-C97148-16P-K9 DS-C9148-32P-K9 DS-C9148-48P-K9 DS-C9148S-K9 DS-9148S-169148T-K9 DS-9509 UCS-6332 6454 DS-69509 DS-69509 UCS-K9 | 5.2 5.2 6.2 13 15 6.2 21 6.2 27 6.2 33 7 6.2(5.2 6.2 6.2 6.2 6.2 19 6.2 25 6.2 31 6.2 6.2 6.2)(1c) 5.2(3a) 5.2 11 6.2 6.2 17 6.2 23 6.2 29 6.2 6.2 9(1a) 5.2(1a) 8(5.2)N2(3.11e) 5.2(8)N2(4.01d) 5.2(5.0)N2(4.13i) 5.0(5.2)3(3) 3(5.0) 5.0(5.0) 3(3) 3(5.0) 5.0) 5.0(3) 3) 3(5.0) 5.0) 5.0(3) 5.0) 4.1(4.2) 3.3 7.0 3 7.0 3 7.0 3 7.3 7.3 13 7.3 8 8.1 8.1 8.2 8.2 2 8.3 8.3 2 8.4 8.4 8.4 2 8.4 8.4 8.4 8.4 8.4 8.4 8.4 5 8.5 9.2 9.2 2 9.3 9.3 2 9.3 9.3 5 9.3 5 9.3 5 9.3 5 9.3 5 9.3 5 9.4 9.4 9.4 2 9.4) 
+| DS-C9124-2-K9 DS-C9148-32P-K9 DS-C9148-697K-C997K DS-C9148-697P-K9 DS-C9148-48P-K9 DS-C9148S-K9 DS-9559 DS-C91488 DS-6922209 DS-K9 DS-69509 DS-K9 DS-69559 DS-69559 DS-C99559 DS-696969696K9 DS-C9 DS-6332 6332 64108 6454 | 5.2 5.2 6.2 13 15 6.2 21 6.2 27 6.2 33 7 6.2(5.2 6.2 6.2 6.2 6.2 19 6.2 25 6.2 31 6.2 6.2 6.2)(1c) 5.2(3a) 5.2 11 6.2 6.2 17 6.2 23 6.2 29 6.2 6.2 9(1a) 5.2(1a) 8(5.2)N2(3.11e) 5.2(8)N2(4.01d) 5.2(5.0)N2(4.13i) 5.0(5.2)3(3) 3(5.0) 5.0(5.0) 3(3) 3(5.0) 5.0) 5.0(3) 3) 3(5.0) 5.0) 5.0(3) 5.0) 4.1(4.2) 3.3 7.0 3 7.0 3 7.0 3 7.3 7.3 7.3 13 7.3 8 8.1 8.1 8.2 8.2 2 8.3 8.3 2 8.4 8.4 8.4 2 8.4 8.4 8.4 8.4 8.4 8.4 8.5 9.2 9.2 2 9.3 9.3 2 9.3 9.3 5 9.3 5 9.3 5 9.3 5 9.3 5 9.3 5 9.4 9.4 9.4 2 9.4 9.4 3) 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -3009,7 +3028,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| C4000 COMPUTE NODE C4600 C5036 C5066 C6025 C6035 C6055 PXG1 UCS-C240M5H10 VIRTUELLE ROBO | 6.8.1_u1_Release-20221022_6f58ed2a 6.8.1_u7_Release-20240925_41094bba 6.8.2_Release-20240317_97f56d9a 6.8.2_u1_Release-20240509_a5da4644 7.1.2_u2_Release-20231213_66722648 7.1.2_u3_Release-20241231_b47fe77 
+| C4000 COMPUTE NODE C4600 C5036 C5066 C6025 C6035 C6055 CX8405 PXG1 UCS-C240M5H10 VIRTUELLE ROBO | 6.8.1_u1_Release-20221022_6f58ed2a 6.8.2_u1_Release-20240509_a5da4644 7.1.2_u2_Release-20240925_66722648 7.1.2_u3_Release-20241231_bb47fe77 7.2.1_Release-20241114_794eae46 7.2.2_Release-20250228_63e93ccf 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -3288,7 +3307,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.84+| grundlage .6+| Dateifreigabe | Ist InternalVolume | Implementiert | SSH | Ob die Dateifreigabe ein internes Volume (netapp Volume) oder ein qtree/Ordner innerhalb des internen Volumes darstellt 
+.85+| grundlage .6+| Dateifreigabe | Ist InternalVolume | Implementiert | SSH | Ob die Dateifreigabe ein internes Volume (netapp Volume) oder ein qtree/Ordner innerhalb des internen Volumes darstellt 
 
 
 | Ist Freigegeben | Implementiert | SSH | Ob diese FileShare irgendwelche Shares mit ihr verknüpft hat 
@@ -3495,7 +3514,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Einheitliche | Implementiert | SSH | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
 
 
-.15+| Storage-Pool | Zugewiesener Speicherplatz | Lücke | SSH | Zugewiesene Kapazität für Daten 
+.16+| Storage-Pool | Zugewiesener Speicherplatz | Lücke | SSH | Zugewiesene Kapazität für Daten 
 
 
 | Genutzte Kapazität Von Daten | Implementiert | SSH |  
@@ -3508,6 +3527,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Name | Implementiert | SSH |  
+
+
+| Kapazität der physischen Festplatte (MB) | Implementiert | SSH | Wird als Rohkapazität für den Storage-Pool verwendet 
 
 
 | Raid-Gruppe | Implementiert | SSH | Zeigt an, ob es sich bei diesem StoragePool um eine RAID-Gruppe handelt 
@@ -3557,7 +3579,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| 6.26 6.28 7.32 7.33 | CX3-40F CX4-480 VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX5700 VNX5800 VNX7600 | 04.28.000.5.710 05.32.000.5.206 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.32.000.5.249 05.33.000.5.074 05.33.008.5.119 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.231 05.33.021.5.256 05.33.021.5.266 05.33.021.5.322 3.26.40.5.029 
+| 6.26 6.28 7.32 7.33 | CX3-40F CX4-480 VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX5700 VNX5800 VNX7600 | 04.28.000.5.710 05.32.000.5.206 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.32.000.5.249 05.33.000.5.074 05.33.008.5.119 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.231 05.33.009.5.238 05.33.021.5.256 05.33.021.5.266 05.33.021.5.322 3.26.40.5.029 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -4131,7 +4153,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| DD VE DD2500 DD3300 DD4200 DD6300 DD6400 DD6800 DD6900 DD7200 DD9300 DD9400 DD9500 DD9800 DD9900 DD9910 | ...1.30-663869 6.2.1.40-671977 6.2.1.60-686365 7.10.0.6.1.0-1042928 7.10.1.2.20-606786 6.2.4.0-1017976 7.7.0.70-686759 7.2.0.90-692270 7.7.0.60-682124 7.2.20-1082704 7.2.0.20-658029 7.2.0-1035502 7.13.0.40-1126469 7.10.1.50-1146826 7.11.0.30-1105324 7.10.1.15-1078832 7.10.1.20-1090468 7.10.1.10-1068159 7.10.1.5.1-1040473 7.7.1-1049892 7.10.1.20-1023227 7.10.1.5.30-1091295 8.0.0.10-1097914 8.1.0.10-1127744.2.051-633576 6.1.5.11-1046187 7.7.5.25-1078970 7.7 
+| DD VE DD2500 DD3300 DD4200 DD6300 DD6400 DD6800 DD6900 DD7200 DD9300 DD9400 DD9410 DD9500 DD9800 DD990 DD9900 DD9910 | ...2.20-606786 6.2.1.30-663869 6.2.1.40-671977 6.2.6.0.2.30-606339 6.1.2.051-633576 6.1.0.90-692270 7.7.4.0-1017976 7.7.0.70-686759 7.2.0.20-658029 7.2.0.60-682124 7.2.20-1082704 7.2.50-1146826 7.11.0.0-1035502 7.13.0.40-1126469 7.10.1.20-1090468 7.10.1.30-1105324 7.10.1.15-1078832 7.10.1.1-1049892 7.10.1.10-1068159 7.10.1.0-1042928 7.10.1.1.60-686365 7.10.0.20-1023227 7.10.1.5.30-1091295 8.0.0.10-1097914 8.1.0.10-1127744.5.1-1040473 7.7.5.11-1046187 7.7.5.25-1078970 7.7 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -4139,7 +4161,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.92+| grundlage .14+| Festplatte | Kapazität (GB) | Implementiert | SSH | Genutzte Kapazität 
+.93+| grundlage .14+| Festplatte | Kapazität (GB) | Implementiert | SSH | Genutzte Kapazität 
 
 
 | Festplatten-Id | Implementiert | SSH | Identifiziert diese Festplatte im Array eindeutig 
@@ -4304,7 +4326,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Berechtigung | Implementiert | SSH | Berechtigungen für diese bestimmte Freigabe 
 
 
-.13+| Storage | Cpu-Anzahl | Implementiert | SSH | Anzahl der CPU-Ressourcen im Storage 
+.14+| Storage | Cpu-Anzahl | Implementiert | SSH | Anzahl der CPU-Ressourcen im Storage 
 
 
 | IP anzeigen | Implementiert | SSH |  
@@ -4317,6 +4339,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | IP | Implementiert | SSH |  
+
+
+| URL managen | Implementiert | SSH |  
 
 
 | Hersteller | Implementiert | SSH |  
@@ -4432,7 +4457,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| ECS | 3.6.1.3 3.6.2.1 3.7.0.0 3.7.0.3 3.7.0.4 3.7.0.6 3.8.0.1 3.8.0.2 3.8.0.3 3.8.0.4 3.8.0.5 3.8.0.6 3.8.1.1 3.8.1.3 
+| ECS | 3.6.1.3 3.6.2.1 3.7.0.0 3.7.0.3 3.7.0.4 3.7.0.6 3.8.0.1 3.8.0.2 3.8.0.3 3.8.0.4 3.8.0.5 3.8.0.6 3.8.1.1 3.8.1.2 3.8.1.3 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -4626,7 +4651,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Einheitliche | Implementiert | HTTPS | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
 
 
-.46+| Performance .4+| Internes Volumen | Gesamtkapazität | Implementiert | HTTPS |  
+.40+| Performance .4+| Internes Volumen | Gesamtkapazität | Implementiert | HTTPS |  
 
 
 | Genutzte Kapazität | Implementiert | HTTPS |  
@@ -4656,31 +4681,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Server-ID | Implementiert | HTTPS |  
 
 
-| Qtree.8+ | Storage | Fehlerhafte Bruttokapazität | Implementiert | HTTPS 
-
-
-|  | Bruttokapazität | Implementiert | HTTPS |  
-
-
-| Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) | Storage Pools: Kapazität 
-
-
-| Implementiert | HTTPS |  | IOPS insgesamt | Implementiert 
-
-
-| HTTPS |  | Durchsatz Beim Lesen | Implementiert | HTTPS 
-
-
-|  | Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
-
-
-| Durchsatz Schreiben | Implementiert | HTTPS |  .6+| Storage 
-
-
-| Taste | Implementiert | HTTPS |  
-
-
-| Server-ID | Implementiert | HTTPS |  
+.8+| Storage | Fehlerhafte Bruttokapazität | Implementiert | HTTPS |  
 
 
 | Bruttokapazität | Implementiert | HTTPS |  
@@ -4689,13 +4690,22 @@ Von diesem Datensammler unterstützte Produkte:
 | Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) 
 
 
-| Fehlerhafte Bruttokapazität | Implementiert | HTTPS |  
-
-
-| Storage Pools: Kapazität | Implementiert | HTTPS |  .7+| Storage-Node 
+| Storage Pools: Kapazität | Implementiert | HTTPS |  
 
 
 | IOPS insgesamt | Implementiert | HTTPS |  
+
+
+| Durchsatz Beim Lesen | Implementiert | HTTPS |  
+
+
+| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
+
+
+| Durchsatz Schreiben | Implementiert | HTTPS |  
+
+
+.7+| Storage-Node | IOPS insgesamt | Implementiert | HTTPS |  
 
 
 | Kapazitätsauslastung Des Nodes Insgesamt | Implementiert | HTTPS |  
@@ -4713,10 +4723,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
 
 
-| Durchsatz Schreiben | Implementiert | HTTPS |  .9+| Storage-Node-Daten 
+| Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-| IOPS insgesamt | Implementiert | HTTPS |  
+.9+| Storage-Node-Daten | IOPS insgesamt | Implementiert | HTTPS |  
 
 
 | Taste | Implementiert | HTTPS |  
@@ -4740,10 +4750,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
 
 
-| Durchsatz Schreiben | Implementiert | HTTPS |  .6+| Storage Pool Festplatte 
+| Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-| Bereitgestellte Kapazität | Implementiert | HTTPS |  
+.6+| Storage Pool Festplatte | Bereitgestellte Kapazität | Implementiert | HTTPS |  
 
 
 | Bruttokapazität | Implementiert | HTTPS |  
@@ -4756,6 +4766,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Kapazitätsverhältnis Zu Hoch Festsetzen | Implementiert | HTTPS | Als Zeitreihe gemeldet 
+
+
+| Verhältnis Der Verwendeten Kapazität | Implementiert | HTTPS |  
 |===
 Von diesem Datensammler verwendete Management-APIs:
 
@@ -4775,7 +4788,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| A100 A200 A2000 A300 A3000 F200 F600 F800 F900 H400 H500 H5600 H600 H700 NL410 S210 X210 X410 | 9.1.0.10 9.1.0.6 9.1.0.9 9.2.1.10 9.2.1.11 9.2.1.12 9.2.1.13 9.2.1.19 9.2.1.4 9.2.1.6 9.2.1.9 9.4.0.11 9.4.0.13 9.4.0.14 9.4.0.15 9.4.0.16 9.4.0.17 9.4.0.18 9.5.0.3 9.5.0.6 9.5.0.7 9.5.0.8 9.5.1.0 9.5.1.1 9.5.1.2 9.7.1.0 9.7.1.2 9.7.1.3 9.7.1.4 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.1.0.4 v8.1.2.0 v9.0.0.0 
+| A100 A200 A2000 A300 A3000 F200 F600 F800 F900 H400 H500 H5600 H600 H700 NL410 S210 X210 X410 | 9.1.0.10 9.1.0.6 9.1.0.9 9.2.1.10 9.2.1.11 9.2.1.12 9.2.1.13 9.2.1.19 9.2.1.4 9.2.1.9 9.4.0.11 9.4.0.13 9.4.0.14 9.4.0.15 9.4.0.16 9.4.0.17 9.4.0.18 9.5.0.3 9.5.0.5 9.5.0.6 9.5.0.7 9.5.0.8 9.5.1.0 9.5.1.1 9.5.1.2 9.7.1.0 9.7.1.2 9.7.1.3 9.7.1.4 9.7.1.5 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.1.0.4 v8.1.2.0 v9.0.0.0 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -5239,10 +5252,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-.14+| Storage | Taste | Implementiert | HTTPS |  
-
-
-| Server-ID | Implementiert | HTTPS |  
+.14+| Storage | Fehlerhafte Bruttokapazität | Implementiert | HTTPS |  
 
 
 | Bruttokapazität | Implementiert | HTTPS |  
@@ -5251,34 +5261,37 @@ Von diesem Datensammler unterstützte Produkte:
 | Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) 
 
 
-| Fehlerhafte Bruttokapazität | Implementiert | HTTPS |  
-
-
 | Storage Pools: Kapazität | Implementiert | HTTPS |  
 
 
-| Latenz Insgesamt | Implementiert | HTTPS |  
-
-
-| Durchsatz Beim Lesen | Implementiert | HTTPS |  
-
-
-| Durchsatz Schreiben | Implementiert | HTTPS |  
-
-
-| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
+| Fehlerhafte Festplatten | Implementiert | HTTPS |  
 
 
 | IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
-| IOPS Schreiben | Implementiert | HTTPS |  
-
-
 | IOPS insgesamt | Implementiert | HTTPS |  
 
 
-| Fehlerhafte Festplatten | Implementiert | HTTPS |  
+| IOPS Schreiben | Implementiert | HTTPS |  
+
+
+| Taste | Implementiert | HTTPS |  
+
+
+| Latenz Insgesamt | Implementiert | HTTPS |  
+
+
+| Server-ID | Implementiert | HTTPS |  
+
+
+| Durchsatz Beim Lesen | Implementiert | HTTPS |  
+
+
+| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
+
+
+| Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
 .13+| Storage-Node | Fehlerhafte Festplatten | Implementiert | HTTPS |  
@@ -5439,7 +5452,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| A100 A200 H400 H500 NL400 NL410 S210 Traceback (letzter Anruf zuletzt): X200 X400 X410 Sudo Python | 9.1.0.18 9.1.0.19 9.2.1.12 9.2.1.13 9.2.1.15 9.4.0.17 9.5.0.3 9.5.0.6 9.5.0.8 9.7.1.2 9.8.0.2 v7.2.0.5 v7.2.1.3 v7.2.1.6 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.0.1.1 v8.1.2.0 
+| A200 H400 H500 NL400 NL410 S210 Rückverfolgung (letzter Anruf zuletzt): X200 X400 X410 | 9.1.0.18 9.1.0.19 9.2.1.12 9.2.1.13 9.2.1.15 9.4.0.17 9.5.0.3 9.5.0.6 9.5.0.8 9.7.1.2 9.8.0.2 v7.2.0.5 v7.2.1.3 v7.2.1.6 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.0.1.1 v8.1.2.0 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -5974,7 +5987,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 5200T PowerStore 9000T PowerStore 9200T | 2.1.0.1 2.1.1.0 3.2.0.1 3.2.1.0 3.2.1.1 3.5.0.1 3.5.0.2 3.6.0.0 3.6.1.0 3.6.1.1 3.6.1.2 3.6.1.3 3.6.1.4 4.0.0.1 4.0.0.2 
+| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 5200T PowerStore 9000T PowerStore 9200T | 2.1.0.1 2.1.1.0 3.2.0.1 3.2.1.0 3.2.1.1 3.5.0.1 3.5.0.2 3.6.0.0 3.6.1.0 3.6.1.1 3.6.1.2 3.6.1.3 3.6.1.4 4.0.0.1 4.0.0.2 4.0.1.0 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -6315,7 +6328,7 @@ Von diesem Datensammler unterstützte Produkte:
 | WWN | Implementiert |  |  
 
 
-.66+| Performance .14+| Storage | Fehlerhafte Bruttokapazität | Implementiert |  |  
+.83+| Performance .14+| Storage | Fehlerhafte Bruttokapazität | Implementiert |  |  
 
 
 | Bruttokapazität | Implementiert |  |  
@@ -6435,6 +6448,12 @@ Von diesem Datensammler unterstützte Produkte:
 | Auslastung Insgesamt | Implementiert |  |  
 
 
+.2+| Storage-Pool | Taste | Implementiert |  |  
+
+
+| Server-ID | Implementiert |  |  
+
+
 .13+| Storage Pool Festplatte | Bereitgestellte Kapazität | Implementiert |  |  
 
 
@@ -6511,6 +6530,51 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Durchsatz Schreiben | Implementiert |  |  
+
+
+.15+| Datenmenge | Bruttokapazität | Implementiert |  |  
+
+
+| Gesamtkapazität | Implementiert |  |  
+
+
+| Genutzte Kapazität | Implementiert |  |  
+
+
+| Verhältnis Der Verwendeten Kapazität | Implementiert |  |  
+
+
+| IOPS Lesen | Implementiert |  | Anzahl der Lese-IOPS auf der Festplatte 
+
+
+| IOPS insgesamt | Implementiert |  |  
+
+
+| IOPS Schreiben | Implementiert |  |  
+
+
+| Taste | Implementiert |  |  
+
+
+| Latenzleseszeit | Implementiert |  |  
+
+
+| Latenz Insgesamt | Implementiert |  |  
+
+
+| Latenz – Schreiben | Implementiert |  |  
+
+
+| Server-ID | Implementiert |  |  
+
+
+| Durchsatz Beim Lesen | Implementiert |  |  
+
+
+| Gesamtdurchsatz | Implementiert |  | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
+
+
+| Durchsatz Schreiben | Implementiert |  |  
 |===
 Von diesem Datensammler verwendete Management-APIs:
 
@@ -6530,7 +6594,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| RecoverPoint | 5.1.SP4.P1(h.89) 5.1.SP4.P2(h.101) 5.1.SP4.P3(h.109) 5.1.SP4.P4(h.97) 
+| RecoverPoint | 5.1.SP4.P1(h.89) 5.1.SP4.P2(h.101) 5.1.SP4.P3(h.109) 5.1.SP4.P4(h.97) 5.1.SP4.P5(h.138) 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -6657,7 +6721,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| ScaleIO | R3_5.1201.101 R3_6.1000.134 R3_6.400.107 
+| ScaleIO | R3_5.1201.101 R3_6.1000.134 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -6871,7 +6935,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| V10.0.0.0 4.6 V10.0.1.1 4.7 V10.1.0.0 4.3 V10.1.0.1 V10.1.0.3 V10.1.0.5 V10.2.1.0 V8.3.2.0 V8.4.0.6 V8.4.0.9 V9.1.0.5 V9.1.0.7 V9.2.0.0 V9.2.0.6 V9.2.3.0 V9.2.3.1 V9.2.3.4 V9.2.3.6.4.1 V9.2.V9.2.4.2.V9.2 | PMAX8000 POWERMAX_2000 POWERMAX_8000 VMAX-1 VMAX100K VMAX10K VMAX200K VMAX250F VMAX400K VMAX40K VMAX450F VMAX850F VMAX950F | 5876.286.194 484 5978.711.711 5978.714.714 117 5978.714.714 34 5978.714.714 79 (16F40000) Build 115 5876.309.196 438 5978.711.711 542 5978.711.711 101 5978.714.714 137 5978.714.714 49 5978.714.714 (16F40000) Build 153 5876.309.196 581 5978.714.714 108 5978.714.714 145 5978.714.714 53 5978.714.714 (16F40000) Build 335 5978.711.711 (16F40000) Build 9 5978.711.711 (17590000) Build 17590000 (17590000) Build 320 5978.711.711 (175A0000) Build 60 5977.1151.1151 (175A0000) Build 45 5977.1151.1151 (1750000) A17500 365 5978.711.711 A17500 416 5978.711.711 162 5876.309.196 A0050000) A17500 448 5978.711.711 A17500 436 5978.711.711 A17500 94 5977.1151.1151 A17500) A17500 
+| V10.0.0.0 4.6 V10.0.1.1 4.7 V10.1.0.0 4.8 V10.1.0.1 V10.1.0.3 V10.1.0.5 V10.2.1.0 V8.3.2.0 V8.4.3.0 V8.4.0.9 V9.1.0.5 V9.1.0.6 V9.2.0.0 V9.2.0.6 V9.2.0.7 V9.2.3.1 V9.2.3.4 V9.2.3.6.4.1 V9.2.V9.2.V9.2.4.3.4.2 V9.2 | PMAX8000 POWERMAX_2000 POWERMAX_8000 VMAX-1 VMAX100K VMAX10K VMAX200K VMAX250F VMAX400K VMAX40K VMAX450F VMAX850F VMAX950F | 5876.286.194 484 5978.711.711 5978.714.714 117 5978.714.714 34 5978.714.714 79 (16F40000) Build 115 5876.309.196 438 5978.711.711 542 5978.711.711 101 5978.714.714 137 5978.714.714 49 5978.714.714 (16F40000) Build 153 5876.309.196 581 5978.714.714 108 5978.714.714 145 5978.714.714 53 5978.714.714 (16F40000) Build 335 5978.711.711 (16F40000) Build 9 5978.711.711 (17590000) Build 17590000 (17590000) Build 320 5978.711.711 (175A0000) Build 60 5977.1151.1151 (175A0000) Build 45 5977.1151.1151 (1750000) A17500 365 5978.711.711 A17500 416 5978.711.711 162 5876.309.196 A0050000) A17500 448 5978.711.711 A17500 436 5978.711.711 A17500 94 5977.1151.1151 A17500) A17500 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -7332,7 +7396,7 @@ Von diesem Datensammler unterstützte Produkte:
 | WWN | Implementiert |  |  
 
 
-.105+| Performance .6+| Festplatte | IOPS Lesen | Implementiert |  | Anzahl der Lese-IOPS auf der Festplatte 
+.104+| Performance .6+| Festplatte | IOPS Lesen | Implementiert |  | Anzahl der Lese-IOPS auf der Festplatte 
 
 
 | IOPS insgesamt | Implementiert |  |  
@@ -7398,7 +7462,7 @@ Von diesem Datensammler unterstützte Produkte:
 | „Ausstehend“ | Implementiert |  | Insgesamt ausstehend 
 
 
-.18+| Storage | Cache-Trefferverhältnis Lesen | Implementiert |  |  
+.17+| Storage | Cache-Trefferverhältnis Lesen | Implementiert |  |  
 
 
 | Cache-Trefferverhältnis Insgesamt | Implementiert |  |  
@@ -7420,9 +7484,6 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Storage Pools: Kapazität | Implementiert |  |  
-
-
-| IOPS Sonstiges | Implementiert |  |  
 
 
 | IOPS Lesen | Implementiert |  | Anzahl der Lese-IOPS auf der Festplatte 
@@ -7667,7 +7728,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| V10.0.V10.0.1.5 V10.1.0.1 V10.1.0.5 V10.1.4.11 V10.1.0.8 V10.2.0.1 V10.2.0.2 V9.2.4.1 V9.2.4.10 V9.2.3.4 V9.2.3.15 V9.2.3.22 V9.2.0.6 V9.2.4.12 V9.2.4.3 V9.2.4.6 V9.2.4.7 V9.2.4.9 V9.2.0.5 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX200K VMAX250F VMAX400K VMAX450F VMAX950F | 5977.1131.1131 49 5978.714.714 79 6079.175.0 259 127 6079.225.0 216 218 6079.225.0 86 Build 615 5977.1151.1151 79 5978.714.714 161 259 6079.225.0 146 216 6079.225.0 291 86 Build 149 5978.714.714 49 79 161 6079.175.0 127 146 6079.225.0 218 291 6079.225.0 Build 145 5978.714.714 Build 149 Build 137 5978.714.714 Build 137 5978.714.714 Build 137 Build 131 5978.714.714 Build 117 5978.714.714 Build 131 Build 117 Build 108 5978.714.714 Build 117 5978.714.714 Build 101 5978.714.714 Build 5978.714.714 Build 101 Build 49 5978.714.714 Build 8 Build 8 5978.714.711 Build 75 5978.711.711 Build 542 5978.711.711 Build 581 5978.711.711 Build 542 Build 484 5978.711.711 Build 542 5978.711.711 Build 484 Build 471 5978.711.711 Build 484 5978.711.711 Build 436 5978.711.711 Build 438 5978.711.711 Build 448 5978.711.711 Build 335 5978.711.711 Build 365 5978.711.711 Build 436 Build 60 5978.711.711 Build 205 5978.711.711 Build 335 Build 34 5978.714.714 Build 49 5978.714.714 Build 60 
+| V10.0.V10.0.V10.1.0.1 V10.1.0.5 V10.1.0.6 V10.1.0.8 V10.2.4.12 V10.2.4.3 V9.2.3.4 V9.2.3.20 V9.2.3.22 V9.2.3.15 V9.2.4.1 V9.2.4.10 V9.2.4.11 V9.2.0.1 V9.2.0.2 V9.2.4.6 V9.2.4.7 V9.2.4.9.0.5 V9.2.1.5 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX200K VMAX250F VMAX400K VMAX450F VMAX950F | 5977.1131.1131 49 79 161 6079.175.0 127 216 6079.225.0 291 331 6079.225.0 221 Build 615 5977.1151.1151 49 5978.714.714 79 6079.175.0 259 127 6079.225.0 218 291 6079.225.0 86 221 Build 149 49 5978.714.714 79 5978.714.714 161 259 6079.225.0 216 218 6079.225.0 331 86 6079.275.0 Build 137 5978.714.714 Build 145 5978.714.714 Build 137 Build 131 5978.714.714 Build 137 5978.714.714 Build 131 Build 117 Build 117 5978.714.714 Build 117 5978.714.714 Build 101 5978.714.714 Build 108 5978.714.714 Build 101 Build 49 5978.714.714 Build 5978.714.714 Build 8 5978.714.711 Build 75 5978.711.711 Build 8 Build 581 5978.711.711 Build 542 Build 542 5978.711.711 Build 542 5978.711.711 Build 484 Build 484 5978.711.711 Build 484 5978.711.711 Build 448 5978.711.711 Build 471 5978.711.711 Build 436 Build 436 5978.711.711 Build 438 5978.711.711 Build 335 5978.711.711 Build 365 5978.711.711 Build 416 5978.711.711 Build 60 5978.711.711 Build 205 5978.711.711 Build 335 Build 149 5978.714.714 Build 34 5978.714.714 Build 60 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -7675,7 +7736,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.84+| grundlage .9+| Festplatte | Kapazität (GB) | Implementiert | HTTPS | Genutzte Kapazität 
+.86+| grundlage .9+| Festplatte | Kapazität (GB) | Implementiert | HTTPS | Genutzte Kapazität 
 
 
 | Festplatten-Id | Implementiert | HTTPS | Identifiziert diese Festplatte im Array eindeutig 
@@ -7732,7 +7793,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Erstellschlüssel | Implementiert | HTTPS |  
 
 
-.12+| Storage | IP anzeigen | Implementiert | HTTPS |  
+.13+| Storage | IP anzeigen | Implementiert | HTTPS |  
 
 
 | Fehlerhafte Bruttokapazität | Implementiert | HTTPS | Rohkapazität ausgefallener Festplatten (Summe aller ausgefallenen Festplatten) 
@@ -7742,6 +7803,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | IP | Implementiert | HTTPS |  
+
+
+| URL managen | Implementiert | HTTPS |  
 
 
 | Hersteller | Implementiert | HTTPS |  
@@ -7840,7 +7904,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Technologie | Implementiert | HTTPS | Technologie, die Storage-Effizienz verändert 
 
 
-.17+| Datenmenge | Richtlinienbezeichner der automatischen Ebene | Implementiert | HTTPS | Dynamische Tier-Richtlinienkennung 
+.18+| Datenmenge | Richtlinienbezeichner der automatischen Ebene | Implementiert | HTTPS | Dynamische Tier-Richtlinienkennung 
 
 
 | Automatisiertes Tiering | Implementiert | HTTPS | Gibt an, ob dieser storagepool an Auto-Tiering mit anderen Pools beteiligt ist 
@@ -7850,6 +7914,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Festplattentyp | Nicht Verfügbar | HTTPS |  
+
+
+| Verbindungspfad | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
@@ -8080,10 +8147,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Auslastung Insgesamt | Implementiert | HTTPS |  
 
 
-.21+| Storage-Pool | Taste | Implementiert | HTTPS |  
+.21+| Storage-Pool | Bereitgestellte Kapazität | Implementiert | HTTPS |  
 
 
-| Server-ID | Implementiert | HTTPS |  
+| Bruttokapazität | Implementiert | HTTPS |  
 
 
 | Gesamtkapazität | Implementiert | HTTPS |  
@@ -8092,55 +8159,55 @@ Von diesem Datensammler unterstützte Produkte:
 | Genutzte Kapazität | Implementiert | HTTPS |  
 
 
-| Bruttokapazität | Implementiert | HTTPS |  
+| Kapazitätsverhältnis Zu Hoch Festsetzen | Implementiert | HTTPS | Als Zeitreihe gemeldet 
 
 
 | Verhältnis Der Verwendeten Kapazität | Implementiert | HTTPS |  
 
 
-| Bereitgestellte Kapazität | Implementiert | HTTPS |  
-
-
-| Kapazitätsverhältnis Zu Hoch Festsetzen | Implementiert | HTTPS | Als Zeitreihe gemeldet 
-
-
-| Auslastung Insgesamt | Implementiert | HTTPS |  
-
-
-| Durchsatz Beim Lesen | Implementiert | HTTPS |  
-
-
-| Durchsatz Schreiben | Implementiert | HTTPS |  
-
-
-| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
-
-
-| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
-
-
-| IOPS Schreiben | Implementiert | HTTPS |  
-
-
-| IOPS insgesamt | Implementiert | HTTPS |  
+| Gesamteinsparungen Durch Komprimierung | Implementiert | HTTPS |  
 
 
 | Speicherersparnis Durch Komprimierung | Implementiert | HTTPS |  
 
 
-| Gesamteinsparungen Durch Komprimierung | Implementiert | HTTPS |  
+| Gesamtkapazität Daten | Implementiert | HTTPS |  
 
 
 | Genutzte Kapazität Von Daten | Implementiert | HTTPS |  
 
 
-| Gesamtkapazität Daten | Implementiert | HTTPS |  
+| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
+
+
+| IOPS insgesamt | Implementiert | HTTPS |  
+
+
+| IOPS Schreiben | Implementiert | HTTPS |  
+
+
+| Taste | Implementiert | HTTPS |  
+
+
+| Server-ID | Implementiert | HTTPS |  
 
 
 | Reservierte Snapshot-Kapazität | Implementiert | HTTPS |  
 
 
 | Kapazitätsverhältnis Der Verwendeten Snapshot-Technologie | Implementiert | HTTPS | Als Zeitreihe gemeldet 
+
+
+| Durchsatz Beim Lesen | Implementiert | HTTPS |  
+
+
+| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
+
+
+| Durchsatz Schreiben | Implementiert | HTTPS |  
+
+
+| Auslastung Insgesamt | Implementiert | HTTPS |  
 
 
 .19+| Storage Pool Festplatte | Bereitgestellte Kapazität | Implementiert | HTTPS |  
@@ -9438,97 +9505,100 @@ Von diesem Datensammler unterstützte Produkte:
 | Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-| Qtree.4+ | Storage | Fehlerhafte Bruttokapazität | Implementiert | HTTPS 
+.4+| Storage | Fehlerhafte Bruttokapazität | Implementiert | HTTPS |  
 
 
-|  | Bruttokapazität | Implementiert | HTTPS |  
+| Bruttokapazität | Implementiert | HTTPS |  
 
 
-| Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) | Storage Pools: Kapazität 
+| Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) 
 
 
-| Implementiert | HTTPS |  .4+| Storage-Node | IOPS Lesen 
+| Storage Pools: Kapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte | IOPS insgesamt 
+.4+| Storage-Node | IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
-| Implementiert | HTTPS |  | IOPS Schreiben 
+| IOPS insgesamt | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Auslastung Insgesamt 
+| IOPS Schreiben | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  .13+| Storage Pool Festplatte | Bereitgestellte Kapazität 
+| Auslastung Insgesamt | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Bruttokapazität 
+.13+| Storage Pool Festplatte | Bereitgestellte Kapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Kapazitätsgrenze 
+| Bruttokapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Gesamtkapazität 
+| Kapazitätsgrenze | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Genutzte Kapazität 
+| Gesamtkapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Kapazitätsverhältnis Zu Hoch Festsetzen 
+| Genutzte Kapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS | Als Zeitreihe gemeldet | Verhältnis Der Verwendeten Kapazität 
+| Kapazitätsverhältnis Zu Hoch Festsetzen | Implementiert | HTTPS | Als Zeitreihe gemeldet 
 
 
-| Implementiert | HTTPS |  | IOPS Lesen 
+| Verhältnis Der Verwendeten Kapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte | IOPS insgesamt 
+| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
-| Implementiert | HTTPS |  | IOPS Schreiben 
+| IOPS insgesamt | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Durchsatz Beim Lesen 
+| IOPS Schreiben | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Gesamtdurchsatz 
+| Durchsatz Beim Lesen | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s | Durchsatz Schreiben 
+| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
 
 
-| Implementiert | HTTPS |  .11+| Datenmenge | Bruttokapazität 
+| Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Gesamtkapazität 
+.11+| Datenmenge | Bruttokapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Genutzte Kapazität 
+| Gesamtkapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Verhältnis Der Verwendeten Kapazität 
+| Genutzte Kapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | IOPS Lesen 
+| Verhältnis Der Verwendeten Kapazität | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte | IOPS insgesamt 
+| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
-| Implementiert | HTTPS |  | IOPS Schreiben 
+| IOPS insgesamt | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Latenz Insgesamt 
+| IOPS Schreiben | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Durchsatz Beim Lesen 
+| Latenz Insgesamt | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Gesamtdurchsatz 
+| Durchsatz Beim Lesen | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s | Durchsatz Schreiben 
+| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
+
+
+| Durchsatz Schreiben | Implementiert | HTTPS |  
 |===
 Von diesem Datensammler verwendete Management-APIs:
 
@@ -9906,7 +9976,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| 6.2.1 6.3.2 6.3.3 6.4.0 6.4.1 6.4.2 | 1 Bricks & 125 TB 1 Bricks & 24 TB 1 Bricks & 31 TB 1 Bricks & 8 TB 1 x 10 TB 1 x 20 TB 1 x 40 TB 2 Bricks & 188 TB 2 Bricks & 83 TB 3 Bricks & 146 TB 3 Bricks & 251 TB 4 Bricks & 628 TB 4 Bricks & 754 TB 4 x 20 TB 6 x 40 TB | 4.0.27-1 4.0.31-11 6.3.3-8_X2 6.4.0-36_Hotfix_2_X2 
+| 6.2.1 6.3.2 6.3.3 6.4.0 6.4.1 6.4.2 | 1 Bricks & 125 TB 1 Bricks & 24 TB 1 Bricks & 31 TB 1 Bricks & 8 TB 1 x 10 TB 1 x 20 TB 1 x 40 TB 2 Bricks & 83 TB 3 Bricks & 146 TB 3 Bricks & 251 TB 3 Bricks & 283 TB 4 Bricks & 628 TB 4 Bricks & 754 TB 4 x 20 TB 6 x 40 TB | 4.0.27-1 4.0.31-11 6.3.3-8_X2 6.4.0-36_Hotfix_2_X2 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -10432,7 +10502,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 2660 2680 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5504 5564 5600 5700 5700B 6000 | 08.40.60.01 08.80.00.00 8.20.16.0 8.20.27.0 8.20.30.0 8.20.8.0 8.25.14.0 8.25.6.0 8.30.20.0 8.40.0.1 8.40.10.1 8.40.20.0 8.40.30.3 8.40.30.4 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.40.60.3 8.42.30.5 8.50.0.4 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.1 8.53.0.4 8.62.0.0 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.73.0.0 8.74.0.0 8.74.1.0 8.74.2.0 8.74.3.0 8.75.0.0 8.75.0.1 8.75.1.0 8.80.0.0 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.90.0.0 
+| 2660 2680 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5504 5564 5600 5700 5700B 6000 7999 | 08.40.60.01 08.80.00.00 7.84.46.0 8.20.16.0 8.20.27.0 8.20.30.0 8.20.8.0 8.25.14.0 8.25.6.0 8.40.0.1 8.40.20.0 8.40.30.4 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.40.60.3 8.42.30.5 8.50.0.4 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.1 8.53.0.4 8.62.0.0 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.73.0.0 8.74.0.0 8.74.1.0 8.74.2.0 8.74.3.0 8.75.0.0 8.75.0.1 8.75.1.0 8.80.0.0 8.80.1.0 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.90.0.0 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -11009,7 +11079,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| FlashBlade FlashBlade//S200 | Reinheit//FB 4.1.5 Reinheit//FB 4.3.0 Reinheit//FB 4.3.6 Reinheit//FB 4.4.3 
+| FlashBlade FlashBlade//S200 | Reinheit//FB 4.1.5 Reinheit//FB 4.3.0 Reinheit//FB 4.3.11 Reinheit//FB 4.3.6 Reinheit//FB 4.4.3 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -11376,9 +11446,7 @@ Von diesem Datensammler verwendete Management-APIs:
 
 == Google Cloud Computing
 
-Von diesem Datensammler unterstützte Modelle und Versionen:
-
-API-Versionen:
+Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
 
 * v1
 
@@ -11533,7 +11601,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Erstellschlüssel | Implementiert | HTTPS |  
 
 
-.21+| Performance .18+| vm | Gesamtkapazität | Implementiert | HTTPS |  
+.22+| Performance .18+| vm | Gesamtkapazität | Implementiert | HTTPS |  
 
 
 | Verhältnis Der Verwendeten Kapazität | Implementiert | HTTPS |  
@@ -11587,7 +11655,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Legen Sie die Wartezeit fest | Implementiert | HTTPS | Warten auf geplante Zeit in Prozent 
 
 
-.3+| VM | Gesamtkapazität | Implementiert | HTTPS |  
+.4+| VM | Gesamtkapazität | Implementiert | HTTPS |  
+
+
+| Verhältnis Der Verwendeten Kapazität | Implementiert | HTTPS |  
 
 
 | Taste | Implementiert | HTTPS |  
@@ -11613,7 +11684,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| Hitachi Content Platform | 9.6.2.37 9.6.3.33 9.7.2.27 
+| Hitachi Content Platform | 9.6.2.37 9.6.3.33 9.7.2.27 9.7.3.14 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -11744,7 +11815,25 @@ Von diesem Datensammler unterstützte Produkte:
 | Einheitliche | Implementiert | HTTPS | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
 
 
-.6+| Performance .6+| Storage-Node-Daten | Taste | Implementiert |  |  
+.12+| Performance .6+| Storage | Fehlerhafte Bruttokapazität | Implementiert |  |  
+
+
+| Bruttokapazität | Implementiert |  |  
+
+
+| Freie Rohkapazität | Implementiert |  | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) 
+
+
+| Storage Pools: Kapazität | Implementiert |  |  
+
+
+| Taste | Implementiert |  |  
+
+
+| Server-ID | Implementiert |  |  
+
+
+.6+| Storage-Node-Daten | Taste | Implementiert |  |  
 
 
 | Server-ID | Implementiert |  |  
@@ -11779,7 +11868,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| 7.6.1 8.0 8.7.1 8.7.3 8.7.6 8.8.3 | DF850MH DF850S HM800 HM850 P9500 RAID800 VSP5000 XP24000 XP8 | 0983 90 00/00 21 09 90 00/00 24 09-25 21/00 54/00 30/00 76/02 86/00 91/00 50/A-H 60/00 13 08 90 00/00 23 09 90 00/01 60 60 70 80 80 80 83 60/00/B-H 88 60/01 81 09 90 00/00 24 09 90 08 08 06 06 06 06 05 83/B-S 13/A-H 88/H-S DKC:08-60/00 DKC:08-12 DKC:88-10 DKC:60/00-08-60/00-88-08 DKC:60/00-88-08-83 SVP:05-46-50-05 DKC:00/00-60/00-96 SVP:80-06-83-00/00 DKC:06-80-80-91-06-06-43-00/02-80-SVP:70-60-08-65-DKC:08-22-0988-0986-0984-60-0985-08 05 54 60/00 88 08 10 60/00 88 08 12 60/00 88 08 14 60/00 88 08 15 60/00 90 08 81/00 90 09 21/00 90 09 23/00 90 09 24/00 90 09 25/00 
+| 7.6.1 8.0 8.7.1 8.7.3 8.7.6 8.8.3 | DF850MH DF850S HM800 HM850 P9500 RAID800 VSP5000 XP24000 XP8 | 0983 81 09 90 00/00 24 09 90 08 08 06 06 06 06/A-H 08 90 00/00 21 09 90 00/00 24 09-25 21/00 54/00 30/00 76/02 86/00 91/00/B-H 60/00 13 08 90 00/00 23 09 90 00/01 60 60 70 80 80 80 83/B-S 88/A-H 13/H-S DKC:88-08 DKC:60/00-08 DKC:12-88 DKC:10-60/00-08 DKC:60/00-88-08-88 SVP:08-60/00-05-53 DKC:50-60/00-83-60/00 SVP:83-05-83-05 DKC:46-06-96-00/00-91 SVP:00/00-80-06-00/02-80-80-80-06 DKC:06-43-08-65-70-08-22-60-60 SVP:0986-0988-60/01-0984-0985 05 50 60/00 83 05 54 60/00 83 05 57 60/00 88 08 10 60/00 88 08 12 60/00 88 08 14 60/00 88 08 15 60/00 90 08 81/00 90 09 21/00 90 09 23/00 90 09 24/00 90 09 25/00 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -12389,7 +12478,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| VSP 5100 VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E590 VSP E790 VSP E790H VSP F1500 VSP F400 VSP F900 VSP G1000 VSP G1500 VSP G600 VSP G800 VSP G900 XP8 | 80 03/02 83 40 70 51 01 05 00 03/03 88 60 65 08 01 08 00 03/05 88 60 70 13 01 08 01 03/05 88-65 49 01 05 00 03/04 83 40 71 51 01 08 00 03/05 88 60 70 11 01 08 00 03/04 88 60 65 13 01-69 51 01 05 00 03/02 83 40 76 08 01 08 00 03/04 88 60 65 11 01 08 00 03/05 88 60 65-05-60-60-01-03/02 83-03/05 83-49-01-01-69-05-05-40-01-01-03/03 83-96-49-00-71-76-06-00-00-01-03/04 80-03/02 80-96-00-00-70-06-06-00-01-01-03/05 80-95-96-00-70-65-06-00-00-01-03/02 80-03/04 80-94-00-71-00-06-01-00-01-06-91 08 13 60 01 01 70 03/04 88 08 13 60 01 01 76 03/03 90 08 82 00 00 01 65 03/05 90 08 82 01.72.00 90 09 01 00 01 01 65 03/05 90 09 22 00 00 01 65 03/05 90 09 22 00 00 01 70 03/04 90 09 22 00 00 01 71 03/02 90 09 23 00 00 01 65 03/05 90 09 24 00 01 01 65 03/05 90 09 24 00 01 01 71 03/02 90 09 24 00 01 01 76 03/03 90 09 25 00 00 01 70 03/04 90 09 25 00 00 01 76 03/03 90 09 25 01.72.00 90 09 26 00 00 01 65 03/05 90 09 26 00 00 01 71 03/02 93 07 01 80 00 01 70 03/04 93 07 22 40 00 01 65 03/05 93 07 22 40 00 01 69 03/02 93 07 22 80 00 01 70 03/04 93 07 22 80 00 01 71 03/02 93 07 23 80 01 01 71 03/02 93 07 24 40 00 01 76 03/03 93 07 24 80 00 01 70 03/04 
+| VSP 5100 VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E590 VSP E790 VSP E790H VSP F1500 VSP F400 VSP F900 VSP G1000 VSP G1500 VSP G600 VSP G800 VSP G900 XP8 | 80 03/02 83 40 76 08 01 08 00 03/04 88 60 65 11 01 08 00 03/05 88 60 65 13 01 08 01 03/02 88-70 51 01 05 00 03/03 88 60 65 08 01 08 00 03/05 88 60 70 13 01 08 01 03/05 88 60 70 13 01-71 51 01 08 00 03/05 88 60 70 11 01 08 00 03/04 88 60 65 13 01 08 01 03/04 88 60 71-05-40-40-01-03/02 83-03/04 83-51-01-00-69-05-05-60-01-01-03/05 83-49-49-01-69-65-05-40-60-01-03/03 83-03/02 83-49-00-01-76-06-05-00-01-01-03/02 80-96-96-00-70-71-06-00-00-01-03/02 80-03/04 80-94-00-71-00-06-01-00-00-06-91 08 13 60 01 01 76 03/03 90 08 82 00 00 01 65 03/05 90 08 82 01.70.04 90 09 01 00 01 01 65 03/05 90 09 22 00 00 01 65 03/05 90 09 22 00 00 01 70 03/04 90 09 22 00 00 01 71 03/02 90 09 24 00 01 01 65 03/05 90 09 24 00 01 01 71 03/02 90 09 24 00 01 01 76 03/03 90 09 24 01.65.05 90 09 25 00 00 01 76 03/03 90 09 25 01.70.04 90 09 26 00 00 01 65 03/05 90 09 26 00 00 01 71 03/02 90 09 26 00 00 01 76 03/03 93 07 01 80 00 01 70 03/04 93 07 22 40 00 01 65 03/05 93 07 22 40 00 01 69 03/02 93 07 22 80 00 01 70 03/04 93 07 22 80 00 01 71 03/02 93 07 23 80 00 01 71 03/02 93 07 23 80 01 01 71 03/02 93 07 24 40 00 01 76 03/03 93 07 24 80 00 01 70 03/04 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -13297,7 +13386,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| v1 | 5050 AF1000 AF20Q AF40 AF60 AF80 CS1000 CS300 CS3000 CS500 HF20 HF20C HF20H HF40 HF40C HF60 | 5.0 6.1.8.0 2.600-677726 1064273-opt 6.1.2.500-1053701-opt 6.1.2.400-1048557-opt 6.1.2.300-1042680-opt 6.1.1.300-1028597-opt 6.1.1.200-1020304-opt 6.1.1.100-1013503-opt 6.0.0.500-1005932-opt 6.0.0.400-991061-opt 5.2.1.800-930936-opt 5.2.1.1100-1027043-opt 6.1.2.502-1057650-opt 
+| v1 | 5050 6070 AF1000 AF20Q AF40 AF60 AF80 CS1000 CS300 CS3000 CS500 HF20 HF20C HF20H HF40 HF60 | 5.0 6.1.8.0 2.600-677726 1064273-opt 6.1.2.500-1053701-opt 6.1.2.400-1048557-opt 6.1.2.300-1042680-opt 6.1.1.300-1028597-opt 6.1.1.200-1020304-opt 6.0.0.500-1005932-opt 6.0.0.400-991061-opt 5.2.1.800-930936-opt 5.2.1.700-882343-opt 5.2.1.400-796142-opt 5.2.1.1100-1027043-opt 6.1.2.502-1057650-opt 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -14573,9 +14662,6 @@ Von diesem Datensammler unterstützte Produkte:
 | Deduplizierung Aktiviert | Implementiert | HTTPS | Wird die Deduplizierung im Storage Pool aktiviert 
 
 
-| Status | Implementiert | HTTPS |  
-
-
 | Schutzart | Implementiert | HTTPS |  
 
 
@@ -14592,6 +14678,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Kommentar | Lücke | HTTPS | Status: Kostenloser Kommentar zur svm 
+
+
+| Status | Implementiert | HTTPS |  
 
 
 .3+| Qtree | Qtree-Id | Implementiert | HTTPS | Eindeutige id des qtree 
@@ -14701,7 +14790,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | - 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.95 7.9.40.251 7.9.41.65 
+| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | - 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.132 7.9.33.95 7.9.40.251 7.9.41.65 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -15381,7 +15470,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 2078 2078 2078 4662 4666 4680 9843 9848-12F 2078-224 2078 2078-324 2078-424 2078 4657 4662 4680 4983 9846 9848-12G 2078 4657-924 4662 4666 4680 9843 9848 9848-24C 2077-24E 2077-424 2077-24F 2078-24G 2076-524 2076-624 2076-724 2076-824 2076-2N4 2076-3H4 2078-3N2 2076-124 2076-3N4 2076-224 2076-92F 2077-92G 2072-12F 2072-24F 2076-24F 2072-24G 2072-AF6 2072-324 2072-AFF 2072-24F 2072-24G 2072-2072-24H 2072-224 2072-2072-2072 | 1.5.2.7 1.6.1.2 1.6.1.4 1.6.1.5 7.7.1.8 7.8.1.11 7.8.1.12 7.8.1.13 7.8.1.14 7.8.1.16 7.8.1.5 7.8.1.6 7.8.1.7 7.8.1.8 8.2.1.10 8.2.1.11 8.2.1.8 8.2.1.9 8.3.1.10 8.3.1.2 8.3.1.5 8.3.1.6 8.3.1.7 8.3.1.8 8.3.1.9 8.4.0.10 8.4.0.11 8.4.0.13 8.4.0.15 8.4.0.3 8.4.0.5 8.4.0.6 8.4.0.9 8.4.2.0 8.5.0.10 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.5 8.5.0.6 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.0 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.7.0.0 8.7.0.1 8.7.0.2 8.7.2.1 
+| 2072 2078 4662 4666 4680 9843 9848 9848-12F 2077-424 2077 2078-224 2078 2078-324 2078-424 2078 4657 4662 4680 4680 9843 9848-12G 2078 4657-924 4662 4666 4680 4983 9846 9848-24C 2078-24E 2076-24F 2078-24G 2077-2N4 2076-224 2076-3H4 2078-3N2 2076-524 2076-624 2076-724 2076-824 2076-3N4 2072-92F 2077-92G 2076-124 2076-12F 2072-324 2072-24F 2076-24G 2072-24G 2072-AF6 2072-AFF 2072-24F 2072-24G 2072-2072-2072-24H 2072-224 2072-2078 | 1.5.2.7 1.6.1.2 1.6.1.4 1.6.1.5 7.7.1.8 7.8.1.11 7.8.1.12 7.8.1.13 7.8.1.14 7.8.1.16 7.8.1.5 7.8.1.6 7.8.1.7 7.8.1.8 8.2.1.10 8.2.1.8 8.2.1.9 8.3.1.10 8.3.1.2 8.3.1.5 8.3.1.6 8.3.1.7 8.3.1.8 8.3.1.9 8.4.0.10 8.4.0.11 8.4.0.13 8.4.0.15 8.4.0.2 8.4.0.5 8.4.0.6 8.4.0.9 8.4.2.0 8.5.0.10 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.14 8.5.0.5 8.5.0.6 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.0 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.7.0.0 8.7.0.1 8.7.0.2 8.7.0.3 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -16244,7 +16333,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| F4303 F6240 | 6.0.20.40 6.0.31.0 7.1.14.0 7.3.20.90 
+| F4303 F6230 F6240 | 6.0.20.40 6.0.31.0 7.1.14.0 7.1.15.0 7.3.20.90 8.1.0.280 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -16285,19 +16374,19 @@ Von diesem Datensammler unterstützte Produkte:
 | Anbieter | Implementiert | HTTPS |  
 
 
-.5+| Dateifreigabe | Name | Implementiert | HTTPS |  
+.5+| Dateifreigabe | Ist InternalVolume | Implementiert | HTTPS | Ob die Dateifreigabe ein internes Volume (netapp Volume) oder ein qtree/Ordner innerhalb des internen Volumes darstellt 
+
+
+| Ist Freigegeben | Implementiert | HTTPS | Ob diese FileShare irgendwelche Shares mit ihr verknüpft hat 
+
+
+| Name | Implementiert | HTTPS |  
 
 
 | Pfad | Implementiert | HTTPS | Pfad der Dateifreigabe 
 
 
 | Qtree-Id | Implementiert | HTTPS | Eindeutige id des qtree 
-
-
-| Ist InternalVolume | Implementiert | HTTPS | Ob die Dateifreigabe ein internes Volume (netapp Volume) oder ein qtree/Ordner innerhalb des internen Volumes darstellt 
-
-
-| Ist Freigegeben | Implementiert | HTTPS | Ob diese FileShare irgendwelche Shares mit ihr verknüpft hat 
 
 
 .4+| Info | Name der Datenquelle | Implementiert | HTTPS | Info 
@@ -16312,31 +16401,13 @@ Von diesem Datensammler unterstützte Produkte:
 | Erstellschlüssel | Implementiert | HTTPS |  
 
 
-.11+| Internes Volumen | Interne Volume-Id | Implementiert | HTTPS |  
+.11+| Internes Volumen | Deduplizierung Aktiviert | Implementiert | HTTPS | Wird die Deduplizierung im Storage Pool aktiviert 
+
+
+| Interne Volume-Id | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
-
-
-| Speicherpool-Id | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-| Thin Provisioning | Implementiert | HTTPS |  
-
-
-| Thin Provisioning Wird Unterstützt | Implementiert | HTTPS | Ob dieses interne Volume Thin Provisioning für die Volume-Ebene zusätzlich unterstützt 
-
-
-| Deduplizierung Aktiviert | Implementiert | HTTPS | Wird die Deduplizierung im Storage Pool aktiviert 
-
-
-| Insgesamt Genutzte Kapazität | Implementiert | HTTPS | Gesamtkapazität in MB 
-
-
-| Insgesamt Zugewiesene Kapazität | Implementiert | HTTPS |  
 
 
 | Anderen Zugewiesenen Kapazitäten | Lücke | HTTPS | Andere Kapazität (nicht Daten und kein Snapshot) zugewiesen 
@@ -16345,22 +16416,40 @@ Von diesem Datensammler unterstützte Produkte:
 | Verhältnis „Rohkapazität“ zu „nutzbar“ | Implementiert | HTTPS | Verhältnis zur Konvertierung von nutzbarer Kapazität zur Rohkapazität 
 
 
-.3+| Qtree | Qtree-Id | Implementiert | HTTPS | Eindeutige id des qtree 
+| Speicherpool-Id | Implementiert | HTTPS |  
 
 
-| Name | Implementiert | HTTPS |  
+| Thin Provisioning | Implementiert | HTTPS |  
+
+
+| Thin Provisioning Wird Unterstützt | Implementiert | HTTPS | Ob dieses interne Volume Thin Provisioning für die Volume-Ebene zusätzlich unterstützt 
+
+
+| Insgesamt Zugewiesene Kapazität | Implementiert | HTTPS |  
+
+
+| Insgesamt Genutzte Kapazität | Implementiert | HTTPS | Gesamtkapazität in MB 
 
 
 | Typ | Lücke | HTTPS |  
 
 
-.3+| Share | Name | Implementiert | HTTPS |  
+.3+| Qtree | Name | Implementiert | HTTPS |  
+
+
+| Qtree-Id | Implementiert | HTTPS | Eindeutige id des qtree 
+
+
+| Typ | Lücke | HTTPS |  
+
+
+.3+| Share | IP-Schnittstellen | Implementiert | HTTPS | Kommagetrennte Liste von IP-Adressen, auf die diese Freigabe angezeigt wird 
+
+
+| Name | Implementiert | HTTPS |  
 
 
 | Protokoll | Implementiert | HTTPS | Enum für das Share-Protokoll 
-
-
-| IP-Schnittstellen | Implementiert | HTTPS | Kommagetrennte Liste von IP-Adressen, auf die diese Freigabe angezeigt wird 
 
 
 .2+| Initiator Freigeben | Initiator | Implementiert | HTTPS |  
@@ -16474,16 +16563,16 @@ Von diesem Datensammler unterstützte Produkte:
 | Einheitliche | Implementiert | HTTPS | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
 
 
-.9+| Storage-Synchronisierung | Quell-Volume | Implementiert | HTTPS |  
-
-
-| Ziel-Volume | Implementiert | HTTPS |  
-
-
-| Modus | Implementiert | HTTPS |  
+.9+| Storage-Synchronisierung | Modus | Implementiert | HTTPS |  
 
 
 | Modus Enum | Implementiert | HTTPS |  
+
+
+| Quell-Storage | Implementiert | HTTPS |  
+
+
+| Quell-Volume | Implementiert | HTTPS |  
 
 
 | Status | Implementiert | HTTPS | Kostenloser Text, der den Gerätestatus beschreibt 
@@ -16492,10 +16581,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Staatsummen | Implementiert | HTTPS |  
 
 
-| Quell-Storage | Implementiert | HTTPS |  
-
-
 | Ziel-Storage | Implementiert | HTTPS |  
+
+
+| Ziel-Volume | Implementiert | HTTPS |  
 
 
 | Technologie | Implementiert | HTTPS | Technologie, die Storage-Effizienz verändert 
@@ -16587,9 +16676,7 @@ Von diesem Datensammler verwendete Management-APIs:
 
 == Microsoft Azure Computing
 
-Von diesem Datensammler unterstützte Modelle und Versionen:
-
-API-Versionen:
+Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
 
 * 1 2018-06-01
 
@@ -17332,7 +17419,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| 1.12 1.17 1.19 1.20 1.21 | FAS2040 FAS2220 FAS2240-4 FAS2520 FAS2554 FAS3140 FAS3160 FAS3250 FAS3270 FAS6240 FAS6250 FAS8020 FAS8040 FAS8060 N6070 N6240 N6270 | 8.1.1 7-Mode 8.1.4P9D18 7 Data ONTAP 8.2.5 7-Mode 8.2.2 7-Mode 8.2.3 7-Mode 7.3P2 8.2-Mode 7.3P3 8.2-Mode 7-Mode 8.2.4P4 8.2-Mode 7.4P5 8.2.5 7-Mode 7 Data ONTAP.4P6 8.2-Mode 7-Mode 7.5P3 8.2.4 7-Mode 8.2.5P4 7-Mode 7.5P4 8.2-Mode 8.2P3 8.2-Mode 8.2P1 Version 7-Mode 7.3.3.Data ONTAP 8.2.5P4-Mode 7 
+| 1.12 1.17 1.19 1.20 1.21 | FAS2040 FAS2220 FAS2240-4 FAS2520 FAS2552 FAS2554 FAS3140 FAS3160 FAS3250 FAS3270 FAS6240 FAS6250 FAS8020 FAS8040 FAS8060 N6070 N6240 N6270 | 8.1.1 7-Mode 8.1.4P9D18 7 Data ONTAP 8.2.5 7-Mode 8.2.2 7-Mode 8.2.3 7-Mode 7.3P2 8.2-Mode 7.3P3 8.2-Mode 7-Mode 8.2.4P4 8.2-Mode 7.4P5 8.2.5 7-Mode 7 Data ONTAP.4P6 8.2-Mode 7-Mode 7.5P3 8.2.4 7-Mode 8.2.5P4 7-Mode 7.5P4 8.2-Mode 8.2P3 8.2-Mode 8.2P1 Version 7-Mode 7.3.3.Data ONTAP 8.2.5P4-Mode 7 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -17877,7 +17964,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Typ | Lücke |  |  
 
 
-.129+| Performance .9+| Festplatte | IOPS Lesen | Implementiert |  | Anzahl der Lese-IOPS auf der Festplatte 
+.140+| Performance .9+| Festplatte | IOPS Lesen | Implementiert |  | Anzahl der Lese-IOPS auf der Festplatte 
 
 
 | IOPS insgesamt | Implementiert |  |  
@@ -17902,6 +17989,39 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Auslastung Schreiben | Implementiert |  |  
+
+
+.11+| Festplatte | Taste | Implementiert |  |  
+
+
+| Server-ID | Implementiert |  |  
+
+
+| Durchsatz Beim Lesen | Implementiert |  |  
+
+
+| Durchsatz Schreiben | Implementiert |  |  
+
+
+| Gesamtdurchsatz | Implementiert |  | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
+
+
+| IOPS Lesen | Implementiert |  | Anzahl der Lese-IOPS auf der Festplatte 
+
+
+| IOPS Schreiben | Implementiert |  |  
+
+
+| IOPS insgesamt | Implementiert |  |  
+
+
+| Leseauslastung | Implementiert |  |  
+
+
+| Auslastung Schreiben | Implementiert |  |  
+
+
+| Auslastung Insgesamt | Implementiert |  |  
 
 
 .21+| Internes Volumen | Gesamtkapazität | Implementiert |  |  
@@ -18281,7 +18401,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 2800B 2806 5700 6000 | 08.62.00.02 08.71.03.00 08.73.00.00 08.74.01.00 08.74.02.00 08.75.00.00 08.75.00.01 08.80.00.00 08.81.00.03 08.81.02.00 08.81.03.00 08.90.00.00 68.80.49.74 
+| 2800B 2806 5700 | 08.71.03.00 08.73.00.00 08.74.02.00 08.75.00.00 08.75.00.01 08.80.00.00 08.81.00.03 08.81.02.00 08.81.03.00 08.90.00.00 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -18659,7 +18779,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.221+| grundlage .4+| Dar | Aktiv | Implementiert | HTTPS |  
+.220+| grundlage .4+| Dar | Aktiv | Implementiert | HTTPS |  
 
 
 | Lizenziert | Implementiert | HTTPS |  
@@ -19121,7 +19241,7 @@ Von diesem Datensammler unterstützte Produkte:
 | ManagementIp-Adressen | Implementiert | HTTPS |  
 
 
-.30+| Storage-Pool | Komprimierung Aktiviert | Implementiert | HTTPS | Ist die Komprimierung für den Speicherpool aktiviert 
+.29+| Storage-Pool | Komprimierung Aktiviert | Implementiert | HTTPS | Ist die Komprimierung für den Speicherpool aktiviert 
 
 
 | Einsparungen Durch Komprimierung | Implementiert | HTTPS | Verhältnis der Komprimierungseinsparungen in Prozent 
@@ -19188,9 +19308,6 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Einheitliche | Implementiert | HTTPS | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
-
-
-|  | Implementiert | HTTPS |  
 
 
 |  | Implementiert | HTTPS |  
@@ -19322,7 +19439,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Typ | Lücke | HTTPS |  
 
 
-.100+| Performance .33+| Internes Volumen | Gesamtkapazität | Implementiert | HTTPS |  
+.80+| Performance .33+| Internes Volumen | Gesamtkapazität | Implementiert | HTTPS |  
 
 
 | Genutzte Kapazität | Implementiert | HTTPS |  
@@ -19442,9 +19559,6 @@ Von diesem Datensammler unterstützte Produkte:
 | Server-ID | Implementiert | HTTPS |  
 
 
-| Fehlerhafte Festplatten | Implementiert | HTTPS |  
-
-
 | Bruttokapazität | Implementiert | HTTPS |  
 
 
@@ -19455,6 +19569,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Storage Pools: Kapazität | Implementiert | HTTPS |  
+
+
+| Fehlerhafte Festplatten | Implementiert | HTTPS |  
 
 
 .13+| Storage-Node | Cache-Trefferverhältnis Insgesamt | Implementiert | HTTPS |  
@@ -19494,66 +19611,6 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Auslastung Insgesamt | Implementiert | HTTPS |  
-
-
-.20+| Storage-Pool | Taste | Implementiert | HTTPS |  
-
-
-| Server-ID | Implementiert | HTTPS |  
-
-
-| Durchsatz Beim Lesen | Implementiert | HTTPS |  
-
-
-| Durchsatz Schreiben | Implementiert | HTTPS |  
-
-
-| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
-
-
-| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
-
-
-| IOPS Schreiben | Implementiert | HTTPS |  
-
-
-| IOPS insgesamt | Implementiert | HTTPS |  
-
-
-| Reservierte Kapazität | Implementiert | HTTPS | Reserviert (in Daten zugewiesen Kapazität) 
-
-
-| Gesamtkapazität | Implementiert | HTTPS |  
-
-
-| Genutzte Kapazität | Implementiert | HTTPS |  
-
-
-| Genutzte Kapazität Von Daten | Implementiert | HTTPS |  
-
-
-| Gesamtkapazität Daten | Implementiert | HTTPS |  
-
-
-| Bruttokapazität | Implementiert | HTTPS |  
-
-
-| Verhältnis Der Verwendeten Kapazität | Implementiert | HTTPS |  
-
-
-| Verwendete Snapshot-Kapazität | Implementiert | HTTPS |  
-
-
-| Reservierte Snapshot-Kapazität | Implementiert | HTTPS |  
-
-
-| Kapazitätsverhältnis Der Verwendeten Snapshot-Technologie | Implementiert | HTTPS | Als Zeitreihe gemeldet 
-
-
-| Bereitgestellte Kapazität | Implementiert | HTTPS |  
-
-
-| Kapazitätsverhältnis Zu Hoch Festsetzen | Implementiert | HTTPS | Als Zeitreihe gemeldet 
 
 
 .18+| Storage Pool Festplatte | Gesamtkapazität | Implementiert | HTTPS |  
@@ -19639,7 +19696,243 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| AFF ASA 2 FAS500f-A150 AFF ASA FAS8200 FAS8300 FAS8700-A1K AFF FAS9000 FAS9500-A200 AFF-A220 ASA-A250 ASA-A300 AFF-A320 AFF-A400 ASA-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C60 AFF-C800 AFF8020 AFF8040 AFF8060 AFF-A250 AFF-A250 FAS2620 FAS2650 FAS2720 FAS2750 FAS2820-M900 ASA AFF ASA | 8.2 9.1 9.1 9.11.1.P3P4 8.2 9.1 9.1.3P5 8.3 9.1 9.1 9.1 9.10.0 9.10.1.1P2 8.3.2 8.3.2P12 8.3.2P5 11.0P1 9.1.0P11 9.1.0P15 9.0.0 9.1.0 9.1.0P17 9.1.0P19 9.1.0P2 9.12.1 9.13.0 9.13.1 9.14.0 9.14.1 9.15.1 9.16.1 9.17.1 9.18.0 9.2 9.2 9.3 9.3 9.3 9.3 9.3 9.3 9.3 9.3 9.4.0 9.4 9.4 9.5.0 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.5 9.6.0 9.6 9.6 9.6 9.6 9.6 9.7.0 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.7 9.8.0 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.8 9.9.0 9.9.1 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 9.9 
+| AFF ASA ASA ASA 2 FAS8200 FAS8300 FAS8700-A150 AFF ASA ASA FAS2620 FAS2650 FAS2720 FAS2750 FAS2820 FAS9000 FAS9500-A1K AFF FAS500f-A20 AFF-A200 AFF-A220 ASA-A250 AFF-A300 AFF-A320 AFF-A400 AFF-A70 AFF-A700 AFF-A700s AFF-A90 AFF-A900 AFF-A250 AFF-C250 AFF-C400 AFF-C400 AFF-C80 AFF-C800 ASA AFF8020 AFF-C800 AFF  a| 
+* 8.2.3P4
+* 8.2.3P5
+* 8.3.1P2
+* 8.3.2
+* 8.3.2P12
+* 8.3.2P5
+* 9.0.0
+* 9.1.0
+* 9.1.0P1
+* 9.1.0P11
+* 9.1.0P15
+* 9.1.0P17
+* 9.1.0P19
+* 9.1.0P2
+* 9.1.0P20
+* 9.1.0P3
+* 9.1.0P6
+* 9.1.0P7
+* 9.1.0P8
+* 9.1.0P9
+* 9.10.0
+* 9.10.1
+* 9.10.1P1
+* 9.10.1P10
+* 9.10.1P11
+* 9.10.1P12
+* 9.10.1P13
+* 9.10.1P14
+* 9.10.1P15
+* 9.10.1P16
+* 9.10.1P17
+* 9.10.1P18
+* 9.10.1P19
+* 9.10.1P2
+* 9.10.1P20
+* 9.10.1P3
+* 9.10.1P4
+* 9.10.1P5
+* 9.10.1P6
+* 9.10.1P7
+* 9.10.1P8
+* 9.10.1P9
+* 9.11.0P1
+* 9.11.1
+* 9.11.1P1
+* 9.11.1P10
+* 9.11.1P11
+* 9.11.1P12
+* 9.11.1P13
+* 9.11.1P14
+* 9.11.1P15
+* 9.11.1P16
+* 9.11.1P17
+* 9.11.1P18
+* 9.11.1P2
+* 9.11.1P3
+* 9.11.1P4
+* 9.11.1P5
+* 9.11.1P6
+* 9.11.1P7
+* 9.11.1P8
+* 9.11.1P9
+* 9.11.1X12
+* 9.12.1
+* 9.12.1P1
+* 9.12.1P10
+* 9.12.1P11
+* 9.12.1P12
+* 9.12.1P13
+* 9.12.1P14
+* 9.12.1P15
+* 9.12.1P16
+* 9.12.1P17
+* 9.12.1P2
+* 9.12.1P3
+* 9.12.1P4
+* 9.12.1P5
+* 9.12.1P6
+* 9.12.1P7
+* 9.12.1P8
+* 9.12.1P9
+* 9.13.0
+* 9.13.0P1
+* 9.13.0P3
+* 9.13.1
+* 9.13.1D1
+* 9.13.1P1
+* 9.13.1P10
+* 9.13.1P11
+* 9.13.1P12
+* 9.13.1P13
+* 9.13.1P14
+* 9.13.1P2
+* 9.13.1P3
+* 9.13.1P4
+* 9.13.1P5
+* 9.13.1P6
+* 9.13.1P7
+* 9.13.1P8
+* 9.13.1P9
+* 9.14.0
+* 9.14.0P1
+* 9.14.0P2
+* 9.14.1
+* 9.14.1P1
+* 9.14.1P10
+* 9.14.1P11
+* 9.14.1P2
+* 9.14.1P4
+* 9.14.1P5
+* 9.14.1P6
+* 9.14.1P7
+* 9.14.1P8
+* 9.14.1P8D5
+* 9.14.1P9
+* 9.14.1X14
+* 9.14.1X20
+* 9.14.1X24
+* 9.15.0P1
+* 9.15.0P2
+* 9.15.1
+* 9.15.1P1
+* 9.15.1P2
+* 9.15.1P2D2
+* 9.15.1P3
+* 9.15.1P4
+* 9.15.1P5
+* 9.15.1P6
+* 9.15.1P7
+* 9.15.1P7D4
+* 9.15.1P8
+* 9.15.1X19
+* 9.15.1X27
+* 9.16.1
+* 9.16.1P1
+* 9.16.1X16
+* 9.16.1X26
+* 9.16.1X29
+* 9.17.1
+* 9.17.1X7
+* 9.2.0P3
+* 9.2.0P4
+* 9.3.0P15
+* 9.3.0P18
+* 9.3.0P20
+* 9.3.0P21
+* 9.3.0P6
+* 9.3.0P7
+* 9.3.0P8
+* 9.4.0
+* 9.4.0P2
+* 9.4.0P5
+* 9.5.0
+* 9.5.0P1
+* 9.5.0P10
+* 9.5.0P14
+* 9.5.0P16
+* 9.5.0P17
+* 9.5.0P18
+* 9.5.0P19
+* 9.5.0P2
+* 9.5.0P3
+* 9.5.0P6
+* 9.5.0P7
+* 9.5.0P9
+* 9.6.0
+* 9.6.0P11
+* 9.6.0P18
+* 9.6.0P2
+* 9.6.0P3
+* 9.6.0P5
+* 9.7.0
+* 9.7.0P10
+* 9.7.0P11
+* 9.7.0P12
+* 9.7.0P13
+* 9.7.0P14
+* 9.7.0P15
+* 9.7.0P16
+* 9.7.0P17
+* 9.7.0P18
+* 9.7.0P19
+* 9.7.0P20
+* 9.7.0P21
+* 9.7.0P22
+* 9.7.0P23
+* 9.7.0P4
+* 9.7.0P5
+* 9.7.0P6
+* 9.7.0P7
+* 9.7.0P8
+* 9.7.0P9
+* 9.7.0X17
+* 9.8.0
+* 9.8.0P1
+* 9.8.0P10
+* 9.8.0P11
+* 9.8.0P12
+* 9.8.0P13
+* 9.8.0P14
+* 9.8.0P14X5
+* 9.8.0P15
+* 9.8.0P16
+* 9.8.0P17
+* 9.8.0P18
+* 9.8.0P19
+* 9.8.0P2
+* 9.8.0P20
+* 9.8.0P21
+* 9.8.0P3
+* 9.8.0P4
+* 9.8.0P6
+* 9.8.0P7
+* 9.8.0P8
+* 9.8.0P9
+* 9.9.0
+* 9.9.1
+* 9.9.1P10
+* 9.9.1P11
+* 9.9.1P12
+* 9.9.1P13
+* 9.9.1P14
+* 9.9.1P15
+* 9.9.1P16
+* 9.9.1P17
+* 9.9.1P18
+* 9.9.1P19
+* 9.9.1P2
+* 9.9.1P20
+* 9.9.1P3
+* 9.9.1P5X2
+* 9.9.1P6
+* 9.9.1P7
+* 9.9.1P9
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -20424,7 +20717,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Typ | Lücke | HTTPS |  
 
 
-.234+| Performance .9+| Festplatte | IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
+.222+| Performance .9+| Festplatte | IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
 | IOPS insgesamt | Implementiert | HTTPS |  
@@ -21027,52 +21320,16 @@ Von diesem Datensammler unterstützte Produkte:
 | Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-.16+| Virtual Machine | Gesamtkapazität | Implementiert | HTTPS |  
+.4+| Virtual Machine | Gesamtkapazität | Implementiert | HTTPS |  
 
 
 | Genutzte Kapazität | Implementiert | HTTPS |  
 
 
-| I/O-Dichte für Lesevorgänge | Implementiert | HTTPS |  
-
-
-| I/O-Dichte insgesamt | Implementiert | HTTPS |  
-
-
-| Schreib-I/O-Dichte | Implementiert | HTTPS |  
-
-
-| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
-
-
-| IOPS insgesamt | Implementiert | HTTPS |  
-
-
-| IOPS Schreiben | Implementiert | HTTPS |  
-
-
 | Taste | Implementiert | HTTPS |  
 
 
-| Latenzleseszeit | Implementiert | HTTPS |  
-
-
-| Latenz Insgesamt | Implementiert | HTTPS |  
-
-
-| Latenz – Schreiben | Implementiert | HTTPS |  
-
-
 | Server-ID | Implementiert | HTTPS |  
-
-
-| Durchsatz Beim Lesen | Implementiert | HTTPS |  
-
-
-| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
-
-
-| Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
 .17+| Datenmenge | Bruttokapazität | Implementiert | HTTPS |  
@@ -21143,7 +21400,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| ASA-A1K | NetApp Release 9.16.1: SA Jan 18 19:31:15 UTC 2025 NetApp Release 9.16.1RC1: Mo Nov 04 10:39:46 UTC 2024 
+| ASA-A1K ASA-A20 ASA-A90 | NetApp Release 9.16.1: SA Jan 18 19:31:15 UTC 2025 NetApp Release 9.16.1RC1: Mo Nov 04 10:39:46 UTC 2024 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -21151,7 +21408,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.131+| grundlage .4+| Dar | Aktiv | Implementiert | HTTPS |  
+.190+| grundlage .4+| Dar | Aktiv | Implementiert | HTTPS |  
 
 
 | Lizenziert | Implementiert | HTTPS |  
@@ -21208,16 +21465,40 @@ Von diesem Datensammler unterstützte Produkte:
 | Anbieter | Implementiert | HTTPS |  
 
 
-.4+| ISCSI-Netzwerkportal | OID | Implementiert | HTTPS |  
+.8+| Dateifreigabe | Name | Implementiert | HTTPS |  
 
 
-| IP | Implementiert | HTTPS |  
+| Pfad | Implementiert | HTTPS | Pfad der Dateifreigabe 
+
+
+| Qtree-Id | Implementiert | HTTPS | Eindeutige id des qtree 
+
+
+| Ist InternalVolume | Implementiert | HTTPS | Ob die Dateifreigabe ein internes Volume (netapp Volume) oder ein qtree/Ordner innerhalb des internen Volumes darstellt 
+
+
+| Ist Freigegeben | Implementiert | HTTPS | Ob diese FileShare irgendwelche Shares mit ihr verknüpft hat 
+
+
+| Status | Implementiert | HTTPS |  
+
+
+| Sicherheitstyp | Implementiert | HTTPS |  
+
+
+| Ist Oplocks Aktiviert | Implementiert | HTTPS | Ob opportunistische Sperren auf der FileShare aktiviert sind 
+
+
+.4+| ISCSI-Netzwerkportal | IP | Implementiert | HTTPS |  
+
+
+| Listenanschluss | Implementiert | HTTPS |  
 
 
 | Nic | Implementiert | HTTPS |  
 
 
-| Listenanschluss | Implementiert | HTTPS |  
+| OID | Implementiert | HTTPS |  
 
 
 .3+| ISCSI Network Portal Group | OID | Implementiert | HTTPS |  
@@ -21265,31 +21546,31 @@ Von diesem Datensammler unterstützte Produkte:
 | Name Des Ziel-Knotens | Implementiert | HTTPS |  
 
 
-.9+| ISCSI-Sitzung | OID | Implementiert | HTTPS |  
+.9+| ISCSI-Sitzung | Initiator-Ips | Implementiert | HTTPS |  
 
 
 | Initiator-OID | Implementiert | HTTPS |  
 
 
-| OID der Portalgruppe | Implementiert | HTTPS |  
-
-
-| Id Der Zielsitzung | Implementiert | HTTPS |  
-
-
 | Initiator-Session-Id | Implementiert | HTTPS |  
-
-
-| Anzahl Der Verbindungen | Implementiert | HTTPS |  
 
 
 | Max. Verbindungen | Implementiert | HTTPS |  
 
 
-| Initiator-Ips | Implementiert | HTTPS |  
+| Anzahl Der Verbindungen | Implementiert | HTTPS |  
+
+
+| OID | Implementiert | HTTPS |  
+
+
+| OID der Portalgruppe | Implementiert | HTTPS |  
 
 
 | Sicherheit | Implementiert | HTTPS |  
+
+
+| Id Der Zielsitzung | Implementiert | HTTPS |  
 
 
 .6+| Info | Api-Name | Implementiert | HTTPS |  
@@ -21310,6 +21591,90 @@ Von diesem Datensammler unterstützte Produkte:
 | Erstellschlüssel | Implementiert | HTTPS |  
 
 
+.28+| Internes Volumen | Interne Volume-Id | Implementiert | HTTPS |  
+
+
+| Name | Implementiert | HTTPS |  
+
+
+| Speicherpool-Id | Implementiert | HTTPS |  
+
+
+| Typ | Lücke | HTTPS |  
+
+
+| Speicherplatzgarantie | Implementiert | HTTPS | Richtlinie für Speicherplatzrichtlinie (Datei, Volume oder keine) 
+
+
+| Thin Provisioning | Implementiert | HTTPS |  
+
+
+| Thin Provisioning Wird Unterstützt | Implementiert | HTTPS | Ob dieses interne Volume Thin Provisioning für die Volume-Ebene zusätzlich unterstützt 
+
+
+| Deduplizierung Aktiviert | Implementiert | HTTPS | Wird die Deduplizierung im Storage Pool aktiviert 
+
+
+| Komprimierung Aktiviert | Implementiert | HTTPS | Ist die Komprimierung für den Speicherpool aktiviert 
+
+
+| Einsparungen Durch Deduplizierung | Implementiert | HTTPS | Verhältnis der prozentualen Einsparungen durch Deduplizierung 
+
+
+| Einsparungen Durch Komprimierung | Implementiert | HTTPS | Verhältnis der Komprimierungseinsparungen in Prozent 
+
+
+| Anzahl Snapshots | Implementiert | HTTPS | Anzahl der Snapshots auf den internen Volumes 
+
+
+| Status | Implementiert | HTTPS |  
+
+
+| Virtueller Storage | Implementiert | HTTPS | Eigentümer von virtuellem Storage (vfiler) 
+
+
+| Schutzart | Implementiert | HTTPS |  
+
+
+| UUID | Implementiert | HTTPS |  
+
+
+| Verwendete Snapshot-Kapazität | Implementiert | HTTPS |  
+
+
+| Zugewiesene Kapazität Am Snapshot | Lücke | HTTPS | Zugewiesene Kapazität von Snapshots in MB 
+
+
+| Genutzte Kapazität Von Daten | Implementiert | HTTPS |  
+
+
+| Zugewiesener Speicherplatz | Lücke | HTTPS | Zugewiesene Kapazität für Daten 
+
+
+| Insgesamt Genutzte Kapazität | Implementiert | HTTPS | Gesamtkapazität in MB 
+
+
+| Genutzte Kapazität insgesamt (MB) | Implementiert | HTTPS | Platzieren Sie den Halter für die verbrauchte Kapazität wie vom Gerät gelesen 
+
+
+| Insgesamt Zugewiesene Kapazität | Implementiert | HTTPS |  
+
+
+| Anderen Zugewiesenen Kapazitäten | Lücke | HTTPS | Andere Kapazität (nicht Daten und kein Snapshot) zugewiesen 
+
+
+| Verhältnis „Rohkapazität“ zu „nutzbar“ | Implementiert | HTTPS | Verhältnis zur Konvertierung von nutzbarer Kapazität zur Rohkapazität 
+
+
+|  | Implementiert | HTTPS |  
+
+
+|  | Implementiert | HTTPS |  
+
+
+| Verschlüsselt | Implementiert | HTTPS |  
+
+
 .3+| Storage-Synchronisierung | Internes Quell-Volume | Implementiert | HTTPS |  
 
 
@@ -21317,6 +21682,24 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Technologie | Implementiert | HTTPS | Technologie, die Storage-Effizienz verändert 
+
+
+.6+| Qtree | Qtree-Id | Implementiert | HTTPS | Eindeutige id des qtree 
+
+
+| Name | Implementiert | HTTPS |  
+
+
+| Sicherheitsstil | Implementiert | HTTPS | Sicherheitsstil des Verzeichnisses: unix, ntfs oder gemischt 
+
+
+| Typ | Lücke | HTTPS |  
+
+
+| Status | Implementiert | HTTPS |  
+
+
+| Oplocks | Implementiert | HTTPS | Zeigt an, ob opportunistische Sperren auf dem Qtree aktiviert sind 
 
 
 .18+| Storage | Cluster | Nicht Verfügbar | HTTPS | Gibt an, ob dieser Storage ein Cluster ist 
@@ -21409,7 +21792,25 @@ Von diesem Datensammler unterstützte Produkte:
 | ManagementIp-Adressen | Implementiert | HTTPS |  
 
 
-.13+| Storage-Pool | In Dwh-Kapazität Einbeziehen | Implementiert | HTTPS | Ein Weg von ACQ zu steuern, welche Speicherpools in der DWH-Kapazität interessant sind 
+.25+| Storage-Pool | Komprimierung Aktiviert | Implementiert | HTTPS | Ist die Komprimierung für den Speicherpool aktiviert 
+
+
+| Einsparungen Durch Komprimierung | Implementiert | HTTPS | Verhältnis der Komprimierungseinsparungen in Prozent 
+
+
+| Zugewiesener Speicherplatz | Lücke | HTTPS | Zugewiesene Kapazität für Daten 
+
+
+| Genutzte Kapazität Von Daten | Implementiert | HTTPS |  
+
+
+| Deduplizierung Aktiviert | Implementiert | HTTPS | Wird die Deduplizierung im Storage Pool aktiviert 
+
+
+| Einsparungen Durch Deduplizierung | Implementiert | HTTPS | Verhältnis der prozentualen Einsparungen durch Deduplizierung 
+
+
+| In Dwh-Kapazität Einbeziehen | Implementiert | HTTPS | Ein Weg von ACQ zu steuern, welche Speicherpools in der DWH-Kapazität interessant sind 
 
 
 | Name | Implementiert | HTTPS |  
@@ -21422,6 +21823,15 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Verhältnis „Rohkapazität“ zu „nutzbar“ | Implementiert | HTTPS | Verhältnis zur Konvertierung von nutzbarer Kapazität zur Rohkapazität 
+
+
+| Redundanz | Implementiert | HTTPS | Redundanzebene 
+
+
+| Zugewiesene Kapazität Am Snapshot | Lücke | HTTPS | Zugewiesene Kapazität von Snapshots in MB 
+
+
+| Verwendete Snapshot-Kapazität | Implementiert | HTTPS |  
 
 
 | Status | Implementiert | HTTPS |  
@@ -21442,13 +21852,28 @@ Von diesem Datensammler unterstützte Produkte:
 | Typ | Lücke | HTTPS |  
 
 
+| Verwendet FlashPools | Implementiert | HTTPS | Geben Sie an, ob dieser storage pool Flash Pools nutzt (NetApp spezifisch). 
+
+
 | Einheitliche | Implementiert | HTTPS | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
+
+
+| CompactionSavings aktiviert | Implementiert | HTTPS |  
+
+
+| Verschlüsselt | Implementiert | HTTPS |  
 
 
 | UUID | Implementiert | HTTPS |  
 
 
-.9+| Storage Virtual Machine | Zugewiesene Kapazität (MB) | Implementiert | HTTPS | Zugewiesene Kapazität von Snapshots 
+.11+| Storage Virtual Machine | Zugewiesene Kapazität (MB) | Implementiert | HTTPS | Zugewiesene Kapazität von Snapshots 
+
+
+| Einsparungen Durch Komprimierung | Implementiert | HTTPS | Verhältnis der Komprimierungseinsparungen in Prozent 
+
+
+| Einsparungen Durch Deduplizierung | Implementiert | HTTPS | Verhältnis der prozentualen Einsparungen durch Deduplizierung 
 
 
 | Guid-Schlüssel | Implementiert | HTTPS | Globaler eindeutiger Schlüssel der Storage Virtual Machine 
@@ -21475,46 +21900,55 @@ Von diesem Datensammler unterstützte Produkte:
 | Genutzte Kapazität | Implementiert | HTTPS |  
 
 
+| Virtuelle Maschine Internes Volumen Ref | Interne Volume-Id | Implementiert | HTTPS |  
+
+
+| Virtual Machine Storage Pool lRef | Speicherpool-Id | Implementiert | HTTPS |  
+
+
 | VirtualMachine Volume Ref | Volume-Name | Implementiert | HTTPS |  
 
 
-.14+| Datenmenge | Name | Implementiert | HTTPS |  
-
-
-| Verbindungspfad | Implementiert | HTTPS |  
-
-
-| Speicherpool-Id | Implementiert | HTTPS |  
-
-
-| UUID | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-| Thin Provisioning | Implementiert | HTTPS |  
-
-
-| Kapazität | Implementiert | HTTPS | Verwendete Kapazität des Snapshot in MB 
-
-
-| Gesamtbruttokapazität | Implementiert | HTTPS | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
-
-
-| Genutzte Kapazität | Implementiert | HTTPS |  
-
-
-| Festplattentyp | Nicht Verfügbar | HTTPS |  
+.15+| Datenmenge | Kapazität | Implementiert | HTTPS | Verwendete Kapazität des Snapshot in MB 
 
 
 | DiskGroup | Implementiert | HTTPS | Typ Der Festplattengruppe 
 
 
+| Festplattengröße | Implementiert | HTTPS | Kommagetrennte Liste der Festplattengrößen (GB) 
+
+
 | Festplattengeschwindigkeit | Implementiert | HTTPS | Kommagetrennte Liste von Festplattengeschwindigkeiten (rpm) 
 
 
-| Festplattengröße | Implementiert | HTTPS | Kommagetrennte Liste der Festplattengrößen (GB) 
+| Festplattentyp | Nicht Verfügbar | HTTPS |  
+
+
+| Verbindungspfad | Implementiert | HTTPS |  
+
+
+| Name | Implementiert | HTTPS |  
+
+
+| Qtree-Id | Implementiert | HTTPS | Eindeutige id des qtree 
+
+
+| Gesamtbruttokapazität | Implementiert | HTTPS | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
+
+
+| Speicherpool-Id | Implementiert | HTTPS |  
+
+
+| Thin Provisioning | Implementiert | HTTPS |  
+
+
+| Typ | Lücke | HTTPS |  
+
+
+| UUID | Implementiert | HTTPS |  
+
+
+| Genutzte Kapazität | Implementiert | HTTPS |  
 
 
 | Verschlüsselt | Implementiert | HTTPS |  
@@ -21523,28 +21957,28 @@ Von diesem Datensammler unterstützte Produkte:
 .4+| Volume-Zuordnung | LUN | Implementiert | HTTPS | Der Name der Backend-lun 
 
 
+| Protokoll-Controller | Implementiert | HTTPS |  
+
+
 | Storage-Port | Implementiert | HTTPS |  
 
 
-| Protokoll-Controller | Implementiert | HTTPS |  
-
-
 | Typ | Lücke | HTTPS |  
 
 
-.4+| Volume-Maske | Storage-Port | Implementiert | HTTPS |  
-
-
-| Initiator | Implementiert | HTTPS |  
+.4+| Volume-Maske | Initiator | Implementiert | HTTPS |  
 
 
 | Protokoll-Controller | Implementiert | HTTPS |  
 
 
+| Storage-Port | Implementiert | HTTPS |  
+
+
 | Typ | Lücke | HTTPS |  
 
 
-.47+| Performance .11+| Festplatte | IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
+.11+| Performance .11+| Festplatte | IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
 | IOPS insgesamt | Implementiert | HTTPS |  
@@ -21575,114 +22009,6 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Auslastung Schreiben | Implementiert | HTTPS |  
-
-
-.20+| Storage | Fehlerhafte Bruttokapazität | Implementiert | HTTPS |  
-
-
-| Bruttokapazität | Implementiert | HTTPS |  
-
-
-| Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) 
-
-
-| Storage Pools: Kapazität | Implementiert | HTTPS |  
-
-
-| Fehlerhafte Festplatten | Implementiert | HTTPS |  
-
-
-| I/O-Dichte für Lesevorgänge | Implementiert | HTTPS |  
-
-
-| I/O-Dichte insgesamt | Implementiert | HTTPS |  
-
-
-| Schreib-I/O-Dichte | Implementiert | HTTPS |  
-
-
-| IOPS Sonstiges | Implementiert | HTTPS |  
-
-
-| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
-
-
-| IOPS insgesamt | Implementiert | HTTPS |  
-
-
-| IOPS Schreiben | Implementiert | HTTPS |  
-
-
-| Taste | Implementiert | HTTPS |  
-
-
-| Latenzleseszeit | Implementiert | HTTPS |  
-
-
-| Latenz Insgesamt | Implementiert | HTTPS |  
-
-
-| Latenz – Schreiben | Implementiert | HTTPS |  
-
-
-| Server-ID | Implementiert | HTTPS |  
-
-
-| Durchsatz Beim Lesen | Implementiert | HTTPS |  
-
-
-| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
-
-
-| Durchsatz Schreiben | Implementiert | HTTPS |  
-
-
-.9+| Storage-Pool | Gesamtkapazität | Implementiert | HTTPS |  
-
-
-| Genutzte Kapazität | Implementiert | HTTPS |  
-
-
-| Verhältnis Der Verwendeten Kapazität | Implementiert | HTTPS |  
-
-
-| VergleichenSavingsPercent.total | Implementiert | HTTPS |  
-
-
-| Gesamteinsparungen Durch Komprimierung | Implementiert | HTTPS |  
-
-
-| DeduplikationSavingsPercent.total | Implementiert | HTTPS |  
-
-
-| Fehlerhafte Festplatten | Implementiert | HTTPS |  
-
-
-| Taste | Implementiert | HTTPS |  
-
-
-| Server-ID | Implementiert | HTTPS |  
-
-
-.7+| Virtual Machine | Taste | Implementiert | HTTPS |  
-
-
-| Server-ID | Implementiert | HTTPS |  
-
-
-| Latenzleseszeit | Implementiert | HTTPS |  
-
-
-| Latenz – Schreiben | Implementiert | HTTPS |  
-
-
-| Latenz Insgesamt | Implementiert | HTTPS |  
-
-
-| Gesamtkapazität | Implementiert | HTTPS |  
-
-
-| Genutzte Kapazität | Implementiert | HTTPS |  
 |===
 Von diesem Datensammler verwendete Management-APIs:
 
@@ -21702,7 +22028,51 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| AFF-A150 AFF-A220 AFF-A250 AFF-A300 AFF-A400 AFF-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C250 AFF-C400 AFF-C800 ASA-A250 ASA-A400 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX | NetApp NetApp NetApp NetApp NetApp NetApp Release 2024 2024 2024 2024 2024 2024 2024 2024 21:07 15:49 35:16 33:44 15:53 31:37 42:39 34:02 49:55: Di Jan 18 19 18 16 01 03 13 07 21 18 9.15.1 2024 2024 2024 2024 2024 2024 2024 2025 2024:59:10 42:16 11:44 07:44 12:27 04:05 04 12 30 05 27 16 25 22 27 20 24 16 04 01 18 21 24 04 UTC Release 2024 NetApp NetApp NetApp NetApp NetApp NetApp Release 9.14.1P10: Do Nov 18 15:32:16 UTC NetApp NetApp NetApp NetApp NetApp Release 9.14.1P1: Do Feb 15 00:45:21 UTC NetApp Release 9.14.1P4: Do Apr 28 12:48:01 UTC Release 9.14.1:23 21 NetApp 9.16.1 18 19 31:15 2025 NetApp 04 10 39:46 2024 NetApp 09 10 27:42 2024 NetApp 12 11 18:25 2025 NetApp 9.15.1 24 05 03:10 2024 NetApp 9.15.1 18 11 39:42 2025 NetApp 9.15.1 14 04 56:38 2024 
+| AFF-A150 AFF-A220 AFF-A250 AFF-A300 AFF-A400 ASA-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C800 ASA-A250 ASA-A400 AFF-A800 ASA-C250 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX  a| 
+* NetappRelease 9.14.1P10: Do Nov 28 12:32:16 UTC 2024
+* NetappRelease 9.14.1P11: Mi Jan 22 11:55:28 UTC 2025
+* NetappRelease 9.14.1P1: Do Feb 15 00:45:21 UTC 2024
+* NetappRelease 9.14.1P4: Do Apr 18 15:59:10 UTC 2024
+* NetappRelease 9.14.1P5: SA Mai 18 19:42:16 UTC 2024
+* NetappRelease 9.14.1P6: Di Jun 18 16:11:44 UTC 2024
+* NetappRelease 9.14.1P7: Do Aug 01 03:07:44 UTC 2024
+* NetappRelease 9.14.1P8: FR Sep 13 07:12:27 UTC 2024
+* NetappRelease 9.14.1P9: Mo., 21 18. Okt. 04:05 UTC 2024
+* NetappRelease 9.15.1: Do, 04 12. Juli 21:07 UTC 2024
+* NetappRelease 9.15.1P1: Dienstag, 30 05. Juli:15:49 UTC 2024
+* NetappRelease 9.15.1P2: Di Aug 27 16:35:16 UTC 2024
+* NetappRelease 9.15.1P3: Mi, 25 22. September 33:44 UTC 2024
+* NetappRelease 9.15.1P4: Sun Okt. 27 20:15:53 UTC 2024
+* NetappRelease 9.15.1P5: Sun Nov 24 16:31:37 UTC 2024
+* NetappRelease 9.15.1P6: Mi, 04 01. Dez. 42:39 UTC 2024
+* NetappRelease 9.15.1P7: SA Jan 18 21:34:02 UTC 2025
+* NetappRelease 9.15.1RC2: Mo, 24 04. Juni, 49:55 Uhr UTC 2024
+* NetappRelease 9.16.1: Sa. 18 19:31:15 UTC 2025
+* NetappRelease 9.16.1P1: FR Feb 14 03:53:50 UTC 2025
+* NetappRelease 9.16.1RC1: Mo Nov 04 10:39:46 UTC 2024
+* NetappRelease 9.16.1X26: Mo Dez 09 10:27:42 UTC 2024
+* NetappRelease 9.16.1X29: Sun Jan 12 11:18:25 UTC 2025
+* NetappRelease 9.17.1X7: FR Feb 14 11:21:52 UTC 2025
+* NetappRelease Clawhammer__9.14.1: SA 18 09. Mai 23:49 UTC 2024
+* NetappRelease Cloudstream__9.16.1: Mo Nov 04 05:51:46 UTC 2024
+* NetappRelease Cloudstream__9.16.1: Do Mar 13 20:55:54 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Mo Mar 03 05:57:49 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Sun Mar 09 05:56:14 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Sun Mar 16 04:54:53 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Di Jan 28 11:48:14 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Di Mar 18 04:59:54 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Mi Mar 12 04:42:03 UTC 2025
+* NetappRelease Mightysquirrel__9.15.1: FR 24 05. Mai:03:10 UTC 2024
+* NetappRelease Mightysquirrel__9.15.1: SA Jan 18 11:39:42 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: FR Feb 21 14:02:58 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Mo Feb 17 08:18:14 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Do Feb 20 08:11:55 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Do Feb 27 04:15:40 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Di Feb 18 14:00:54 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Mi Feb 26 08:19:21 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Mi Jan 29 08:34:06 UTC 2025
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -22486,7 +22856,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| H410S-2 H610S-2 H610S-4 SF19210 SF2405 SF4805 SF9608 H300S H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9605 SF9608 | 11.1.0.72 11.7.0.76 11.8.0.23 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380 
+| H410S-2 H610S-2 H610S-4 SF19210 SF2405 SF4805 SF9605 SF9608 H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9605 SF9608 | 11.1.0.72 11.7.0.76 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -23204,7 +23574,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| 3,2 3,3 3,4 3,5 4,0 4,1 | Webscale | 11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.5 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0 11.7.0.11 11.7.0.12 11.7.0.13 11.7.0.3 11.7.0.4 11.7.0.5 11.7.0.6 11.7.0.8 11.7.0.9 11.8.0 11.8.0.1 11.8.0.2 11.8.0.3 11.8.0.5 11.8.0.6 11.8.0.7 11.8.0.8 11.9.0 11.9.0.1 11.9.0.2 
+| 3,2 3,3 3,4 3,5 4,0 4,1 | Webscale | 11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.5 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0 11.7.0.11 11.7.0.12 11.7.0.13 11.7.0.3 11.7.0.4 11.7.0.5 11.7.0.6 11.7.0.8 11.7.0.9 11.8.0 11.8.0.1 11.8.0.2 11.8.0.3 11.8.0.5 11.8.0.6 11.8.0.7 11.8.0.8 11.8.0.9 11.9.0 11.9.0.1 11.9.0.2 11.9.0.3 11.9.0.4 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -23413,103 +23783,106 @@ Von diesem Datensammler unterstützte Produkte:
 | Objekte Gesamt | Implementiert |  |  
 
 
-| Qtree.4+ | Storage | Fehlerhafte Bruttokapazität | Implementiert |  
+.4+| Storage | Fehlerhafte Bruttokapazität | Implementiert |  |  
 
 
-|  | Bruttokapazität | Implementiert |  |  
+| Bruttokapazität | Implementiert |  |  
 
 
-| Freie Rohkapazität | Implementiert |  | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) | Storage Pools: Kapazität 
+| Freie Rohkapazität | Implementiert |  | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) 
 
 
-| Implementiert |  |  .6+| Storage | Fehlerhafte Bruttokapazität 
+| Storage Pools: Kapazität | Implementiert |  |  
 
 
-| Implementiert |  |  | Bruttokapazität 
+.6+| Storage | Fehlerhafte Bruttokapazität | Implementiert |  |  
 
 
-| Implementiert |  |  | Freie Rohkapazität 
+| Bruttokapazität | Implementiert |  |  
 
 
-| Implementiert |  | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) | Storage Pools: Kapazität 
+| Freie Rohkapazität | Implementiert |  | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) 
 
 
-| Implementiert |  |  | Taste 
+| Storage Pools: Kapazität | Implementiert |  |  
 
 
-| Implementiert |  |  | Server-ID 
+| Taste | Implementiert |  |  
 
 
-| Implementiert |  |  .8+| Storage-Node | Kapazitätsauslastung Des Node Erlaubte Metadaten 
+| Server-ID | Implementiert |  |  
 
 
-| Implementiert |  |  | Kapazitätsauslastung Des Nodes Insgesamt 
+.8+| Storage-Node | Kapazitätsauslastung Des Node Erlaubte Metadaten | Implementiert |  |  
 
 
-| Implementiert |  |  | Nutzbare Node-Kapazitätsauslastung 
+| Kapazitätsauslastung Des Nodes Insgesamt | Implementiert |  |  
 
 
-| Implementiert |  |  | Verwendete Node-Kapazitätsauslastung 
+| Nutzbare Node-Kapazitätsauslastung | Implementiert |  |  
 
 
-| Implementiert |  |  | Node-Kapazitätsauslastung Verwendete Metadaten 
+| Verwendete Node-Kapazitätsauslastung | Implementiert |  |  
 
 
-| Implementiert |  |  | Durchsatz Beim Lesen 
+| Node-Kapazitätsauslastung Verwendete Metadaten | Implementiert |  |  
 
 
-| Implementiert |  |  | Gesamtdurchsatz 
+| Durchsatz Beim Lesen | Implementiert |  |  
 
 
-| Implementiert |  | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s | Durchsatz Schreiben 
+| Gesamtdurchsatz | Implementiert |  | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
 
 
-| Implementiert |  |  .10+| Storage-Node-Daten | Taste 
+| Durchsatz Schreiben | Implementiert |  |  
 
 
-| Implementiert |  |  | Kapazitätsauslastung Des Node Erlaubte Metadaten 
+.10+| Storage-Node-Daten | Taste | Implementiert |  |  
 
 
-| Implementiert |  |  | Kapazitätsauslastung Des Nodes Insgesamt 
+| Kapazitätsauslastung Des Node Erlaubte Metadaten | Implementiert |  |  
 
 
-| Implementiert |  |  | Nutzbare Node-Kapazitätsauslastung 
+| Kapazitätsauslastung Des Nodes Insgesamt | Implementiert |  |  
 
 
-| Implementiert |  |  | Verwendete Node-Kapazitätsauslastung 
+| Nutzbare Node-Kapazitätsauslastung | Implementiert |  |  
 
 
-| Implementiert |  |  | Node-Kapazitätsauslastung Verwendete Metadaten 
+| Verwendete Node-Kapazitätsauslastung | Implementiert |  |  
 
 
-| Implementiert |  |  | Server-ID 
+| Node-Kapazitätsauslastung Verwendete Metadaten | Implementiert |  |  
 
 
-| Implementiert |  |  | Durchsatz Beim Lesen 
+| Server-ID | Implementiert |  |  
 
 
-| Implementiert |  |  | Gesamtdurchsatz 
+| Durchsatz Beim Lesen | Implementiert |  |  
 
 
-| Implementiert |  | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s | Durchsatz Schreiben 
+| Gesamtdurchsatz | Implementiert |  | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
 
 
-| Implementiert |  |  .6+| Storage Pool Festplatte | Bereitgestellte Kapazität 
+| Durchsatz Schreiben | Implementiert |  |  
 
 
-| Implementiert |  |  | Bruttokapazität 
+.6+| Storage Pool Festplatte | Bereitgestellte Kapazität | Implementiert |  |  
 
 
-| Implementiert |  |  | Gesamtkapazität 
+| Bruttokapazität | Implementiert |  |  
 
 
-| Implementiert |  |  | Genutzte Kapazität 
+| Gesamtkapazität | Implementiert |  |  
 
 
-| Implementiert |  |  | Kapazitätsverhältnis Zu Hoch Festsetzen 
+| Genutzte Kapazität | Implementiert |  |  
 
 
-| Implementiert |  | Als Zeitreihe gemeldet | Verhältnis Der Verwendeten Kapazität 
+| Kapazitätsverhältnis Zu Hoch Festsetzen | Implementiert |  | Als Zeitreihe gemeldet 
+
+
+| Verhältnis Der Verwendeten Kapazität | Implementiert |  |  
 |===
 Von diesem Datensammler verwendete Management-APIs:
 
@@ -23529,7 +23902,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| NX-3170 8155-G7 NX-8155 8170-G7 HPE DX360-10 G10 HPE DX380 12LFF G11 HPE DX385-12 GEN10 PLUS NX-3060-G6 NX-3060-G7 NX-3060-G8 NX-3155G-G7 NX-3155G-G8 NX-8150-G6 NX-8150-G7 NX-8035-G8 NX-3170-8035-G8 | 5.20.1.1 6.10 6.5.3.7 6.5.4 6.5.5.1 6.5.5.7 6.5.6 6.5.6.5 6.5.6.6 6.7.1.6 6.8.1.5 7.0 
+| NX-3170-G7 NX-8155-G7 HPE DX380 12LFF G11 HPE DX380-24 G10 HPE DX355-12 GEN10 PLUS NX-3060-G6 NX-3060-G7 NX-3060-G8 NX-3155G-G7 NX-3155G-G8 NX-8150-G6 NX-8155-G8 NX-8150-G7 NX-3170-8035-G8 XF3070-KERN | 5.20.1.1 6.10 6.10.1 6.5.3.7 6.5.4 6.5.5.1 6.5.5.7 6.5.6 6.5.6.5 6.5.6.6 6.5.6.7 6.7.1.6 7.0 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -23900,121 +24273,127 @@ Von diesem Datensammler unterstützte Produkte:
 | Typ | Lücke | HTTPS |  
 
 
-.41+| Performance | Qtree.10+ | Storage | Latenz Insgesamt | Implementiert | HTTPS 
+.41+| Performance .10+| Storage | Latenz Insgesamt | Implementiert | HTTPS |  
 
 
-|  | IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
+| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
-| Latenzleseszeit | Implementiert | HTTPS |  | IOPS Sonstiges 
+| Latenzleseszeit | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | IOPS Schreiben | Implementiert 
+| IOPS Sonstiges | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Durchsatz Beim Lesen | Implementiert | HTTPS 
+| IOPS Schreiben | Implementiert | HTTPS |  
 
 
-|  | Durchsatz Schreiben | Implementiert | HTTPS |  
+| Durchsatz Beim Lesen | Implementiert | HTTPS |  
 
 
-| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s | IOPS insgesamt 
+| Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-| Implementiert | HTTPS |  | Latenz – Schreiben | Implementiert 
+| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
 
 
-| HTTPS |  .16+| Storage | Fehlerhafte Bruttokapazität | Implementiert 
+| IOPS insgesamt | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Bruttokapazität | Implementiert 
+| Latenz – Schreiben | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Freie Rohkapazität | Implementiert 
+.16+| Storage | Fehlerhafte Bruttokapazität | Implementiert | HTTPS |  
 
 
-| HTTPS | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) | Storage Pools: Kapazität | Implementiert 
+| Bruttokapazität | Implementiert | HTTPS |  
 
 
-| HTTPS |  | IOPS Sonstiges | Implementiert 
+| Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität von Spare-Festplatten (Summe aller freien Festplatten) 
 
 
-| HTTPS |  | IOPS Lesen | Implementiert 
+| Storage Pools: Kapazität | Implementiert | HTTPS |  
 
 
-| HTTPS | Anzahl der Lese-IOPS auf der Festplatte | IOPS insgesamt | Implementiert 
+| IOPS Sonstiges | Implementiert | HTTPS |  
 
 
-| HTTPS |  | IOPS Schreiben | Implementiert 
+| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
-| HTTPS |  | Taste | Implementiert 
+| IOPS insgesamt | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Latenzleseszeit | Implementiert 
+| IOPS Schreiben | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Latenz Insgesamt | Implementiert 
+| Taste | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Latenz – Schreiben | Implementiert 
+| Latenzleseszeit | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Server-ID | Implementiert 
+| Latenz Insgesamt | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Durchsatz Beim Lesen | Implementiert 
+| Latenz – Schreiben | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Gesamtdurchsatz | Implementiert 
+| Server-ID | Implementiert | HTTPS |  
 
 
-| HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s | Durchsatz Schreiben | Implementiert 
+| Durchsatz Beim Lesen | Implementiert | HTTPS |  
 
 
-| HTTPS |  .6+| Storage Pool Festplatte | IOPS Lesen | Implementiert 
+| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
 
 
-| HTTPS | Anzahl der Lese-IOPS auf der Festplatte | IOPS insgesamt | Implementiert 
+| Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-| HTTPS |  | IOPS Schreiben | Implementiert 
+.6+| Storage Pool Festplatte | IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
-| HTTPS |  | Durchsatz Beim Lesen | Implementiert 
+| IOPS insgesamt | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Gesamtdurchsatz | Implementiert 
+| IOPS Schreiben | Implementiert | HTTPS |  
 
 
-| HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s | Durchsatz Schreiben | Implementiert 
+| Durchsatz Beim Lesen | Implementiert | HTTPS |  
 
 
-| HTTPS |  .9+| Datenmenge | Latenz Insgesamt | Implementiert 
+| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
 
 
-| HTTPS |  | IOPS Lesen | Implementiert 
+| Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-| HTTPS | Anzahl der Lese-IOPS auf der Festplatte | Latenzleseszeit | Implementiert 
+.9+| Datenmenge | Latenz Insgesamt | Implementiert | HTTPS |  
 
 
-| HTTPS |  | IOPS Schreiben | Implementiert 
+| IOPS Lesen | Implementiert | HTTPS | Anzahl der Lese-IOPS auf der Festplatte 
 
 
-| HTTPS |  | Durchsatz Beim Lesen | Implementiert 
+| Latenzleseszeit | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Durchsatz Schreiben | Implementiert 
+| IOPS Schreiben | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Gesamtdurchsatz | Implementiert 
+| Durchsatz Beim Lesen | Implementiert | HTTPS |  
 
 
-| HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s | IOPS insgesamt | Implementiert 
+| Durchsatz Schreiben | Implementiert | HTTPS |  
 
 
-| HTTPS |  | Latenz – Schreiben | Implementiert 
+| Gesamtdurchsatz | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lese- und Schreibvorgänge auf allen Festplatten) in MB/s 
+
+
+| IOPS insgesamt | Implementiert | HTTPS |  
+
+
+| Latenz – Schreiben | Implementiert | HTTPS |  
 |===
 Von diesem Datensammler verwendete Management-APIs:
 
@@ -24026,268 +24405,6 @@ Von diesem Datensammler verwendete Management-APIs:
 |===
 
 
-== OPENSTACK (REST-API/SSH)
-
-|===
-|===
-Von diesem Datensammler unterstützte Produkte:
-
-|===
-| Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
-
-
-.76+| grundlage .7+| Datastore | Kapazität | Implementiert | HTTPS | Verwendete Kapazität des Snapshot in MB 
-
-
-| MOID | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Bereitgestellte Kapazität | Implementiert | HTTPS |  
-
-
-| Genutzte Kapazität | Implementiert | HTTPS |  
-
-
-| Virtual Center-Ip | Implementiert | HTTPS |  
-
-
-.3+| NasShare-Datenspeicher | Datenspeicher-OID | Implementiert | HTTPS |  
-
-
-| NAS-Share-OID | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-.4+| NasShare-Host | NAS-Share-OID | Implementiert | HTTPS |  
-
-
-| Host-OID | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Schreibgeschützt | Implementiert | HTTPS |  
-
-
-.6+| LUN | OID | Implementiert | HTTPS |  
-
-
-| Nummer | Implementiert | HTTPS |  
-
-
-| Datenspeicher-OID | Implementiert | HTTPS |  
-
-
-| Host-OID | Implementiert | HTTPS |  
-
-
-| Festplattenname | Implementiert | HTTPS |  
-
-
-| TID | Implementiert | HTTPS |  
-
-
-.6+| NAS-Share | Kapazität | Implementiert | HTTPS | Zugewiesene Kapazität in MB 
-
-
-| Filer Ip | Implementiert | HTTPS |  
-
-
-| Filer-Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Freigabspfad | Implementiert | HTTPS | Damit ein HvNasShare einem Share zugeordnet werden kann 
-
-
-| Typ | Lücke | HTTPS |  
-
-
-.6+| Pfad | OID | Implementiert | HTTPS |  
-
-
-| LUN-OID | Implementiert | HTTPS |  
-
-
-| Host Port WWPN | Implementiert | HTTPS |  
-
-
-| Storage Port WWPN | Implementiert | HTTPS |  
-
-
-| Aktiv | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-.6+| Server | Cluster | Implementiert | HTTPS | Cluster-Name 
-
-
-| Rechenzentrums/Standortname | Implementiert | HTTPS |  
-
-
-| Host-OID | Implementiert | HTTPS |  
-
-
-| MOID | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Virtual Center-Ip | Implementiert | HTTPS |  
-
-
-.7+| Virtuelles Laufwerk | Kapazität | Implementiert | HTTPS | Verwendete Kapazität des Snapshot in MB 
-
-
-| Datenspeicher-OID | Implementiert | HTTPS |  
-
-
-| LUN-OID | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-| Genutzte Kapazität | Implementiert | HTTPS |  
-
-
-.13+| Virtual Machine | Gaststaat | Implementiert | HTTPS |  
-
-
-| Datenspeicher-OID | Implementiert | HTTPS |  
-
-
-| Host-OID | Implementiert | HTTPS |  
-
-
-| IPS | Implementiert | HTTPS |  
-
-
-| MOID | Implementiert | HTTPS |  
-
-
-| Speicher | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Stromzustand | Implementiert | HTTPS |  
-
-
-| Zeit Für Statusänderungen | Implementiert | HTTPS |  
-
-
-| Prozessoren | Implementiert | HTTPS |  
-
-
-| Bereitgestellte Kapazität | Implementiert | HTTPS |  
-
-
-| Genutzte Kapazität | Implementiert | HTTPS |  
-
-
-.3+| VirtualMachine Disk | OID | Implementiert | HTTPS |  
-
-
-| VirtualisierungsDisk OID | Implementiert | HTTPS |  
-
-
-| OID der Virtual Machine | Implementiert | HTTPS |  
-
-
-.7+| Host | Host-Cpu-Anzahl | Implementiert | HTTPS |  
-
-
-| Host Domain | Implementiert | HTTPS |  
-
-
-| Host-Installierter Speicher | Implementiert | HTTPS |  
-
-
-| Host-Betriebssystem | Implementiert | HTTPS |  
-
-
-| IPS | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-.4+| ISCSI-Knoten | Host-Aliase | Implementiert | HTTPS |  
-
-
-| Node-Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-.4+| Info | Name der Datenquelle | Implementiert | HTTPS | Info 
-
-
-| Datum | Implementiert | HTTPS |  
-
-
-| Ersteller-ID | Implementiert | HTTPS |  
-
-
-| Erstellschlüssel | Implementiert | HTTPS |  
-
-
-.4+| Performance .4+| Host | Gesamtzahl der CPU-Auslastung | Implementiert |  |  
-
-
-| Taste | Implementiert |  |  
-
-
-| Gesamte Speicherauslastung | Implementiert |  |  
-
-
-| Server-ID | Implementiert |  |  
-|===
-Von diesem Datensammler verwendete Management-APIs:
-
-|===
-| API | Verwendetes Protokoll | Verwendetes Transportschicht-Protokoll | Eingehende Ports verwendet | Verwendete ausgehende Ports | Unterstützt Authentifizierung | Erfordert nur die „Schreibgeschützt“-Anmeldedaten | Unterstützung Von Verschlüsselung | Firewall-freundlich (statische Ports) 
-
-
-| OpenStack REST API | HTTPS | HTTPS | 443 |  | Richtig | Falsch | Richtig | Richtig 
-
-
-| OpenStack SSH | SSH | SSH | 22 |  | Richtig | Falsch | Richtig | Richtig 
-|===
-
-
 == Oracle ZFS (HTTPS)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -24296,7 +24413,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| Sun ZFS Storage 7120 Sun ZFS Storage 7330 Sun ZFS Storage 7335 Sun ZFS Storage 7350 Sun ZFS Storage 7370 Sun ZFS Storage 7390 Sun ZFS Storage 7420 | 1-1.1 1-1.2 1-1.3 1-1.34 1-1.4 2013.06.05.6.12 2013.06.05.6.15 2013.06.05.7.21 2013.06.05.7.24 2013.06.05.7.25 2013.06.05.7.26 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.26 2013.06.05.8.29 2013.06.05.8.37 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.53 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.61 2013.06.05.8.65 2013.06.05.8.7 2013.06.05.8.72 2013.06.05.8.76 
+| Sun ZFS Storage 7120 Sun ZFS Storage 7320 Sun ZFS Storage 7330 Sun ZFS Storage 7335 Sun ZFS Storage 7350 Sun ZFS Storage 7370 Sun ZFS Storage 7390 Sun ZFS Storage 7420 | 1-1.1 1-1.2 1-1.3 1-1.34 1-1.4 2013.06.05.6.12 2013.06.05.6.15 2013.06.05.7.21 2013.06.05.7.24 2013.06.05.7.25 2013.06.05.7.26 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.26 2013.06.05.8.29 2013.06.05.8.37 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.53 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.61 2013.06.05.8.65 2013.06.05.8.7 2013.06.05.8.72 2013.06.05.8.74 2013.06.05.8.76 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -24574,55 +24691,52 @@ Von diesem Datensammler unterstützte Produkte:
 | Einheitliche | Implementiert | HTTP/S | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
 
 
-.15+| Datenmenge | Name | Implementiert | HTTP/S |  
-
-
-| Verbindungspfad | Implementiert | HTTP/S |  
-
-
-| Speicherpool-Id | Implementiert | HTTP/S |  
-
-
-| Automatisiertes Tiering | Implementiert | HTTP/S | Gibt an, ob dieser storagepool an Auto-Tiering mit anderen Pools beteiligt ist 
-
-
-| UUID | Implementiert | HTTP/S |  
-
-
-| Typ | Lücke | HTTP/S |  
-
-
-| Festplattentyp | Nicht Verfügbar | HTTP/S |  
-
-
-| Einheitliche | Implementiert | HTTP/S | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
-
-
-| Thin Provisioning | Implementiert | HTTP/S |  
-
-
-| Festplattengeschwindigkeit | Implementiert | HTTP/S | Kommagetrennte Liste von Festplattengeschwindigkeiten (rpm) 
-
-
-| Festplattengröße | Implementiert | HTTP/S | Kommagetrennte Liste der Festplattengrößen (GB) 
+.15+| Datenmenge | Automatisiertes Tiering | Implementiert | HTTP/S | Gibt an, ob dieser storagepool an Auto-Tiering mit anderen Pools beteiligt ist 
 
 
 | Kapazität | Implementiert | HTTP/S | Verwendete Kapazität des Snapshot in MB 
 
 
+| Festplattengröße | Implementiert | HTTP/S | Kommagetrennte Liste der Festplattengrößen (GB) 
+
+
+| Festplattengeschwindigkeit | Implementiert | HTTP/S | Kommagetrennte Liste von Festplattengeschwindigkeiten (rpm) 
+
+
+| Festplattentyp | Nicht Verfügbar | HTTP/S |  
+
+
+| Verbindungspfad | Implementiert | HTTP/S |  
+
+
+| Name | Implementiert | HTTP/S |  
+
+
 | Gesamtbruttokapazität | Implementiert | HTTP/S | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
-
-
-| Genutzte Kapazität | Implementiert | HTTP/S |  
 
 
 | Redundanz | Implementiert | HTTP/S | Redundanzebene 
 
 
+| Speicherpool-Id | Implementiert | HTTP/S |  
+
+
+| Thin Provisioning | Implementiert | HTTP/S |  
+
+
+| Typ | Lücke | HTTP/S |  
+
+
+| UUID | Implementiert | HTTP/S |  
+
+
+| Genutzte Kapazität | Implementiert | HTTP/S |  
+
+
+| Einheitliche | Implementiert | HTTP/S | Handelt es sich um ein Gerät zur Storage-Virtualisierung? 
+
+
 .5+| Volume-Zuordnung | LUN | Implementiert | HTTP/S | Der Name der Backend-lun 
-
-
-| Storage-Port | Implementiert | HTTP/S |  
 
 
 | Maskierung Erforderlich | Implementiert | HTTP/S |  
@@ -24631,16 +24745,19 @@ Von diesem Datensammler unterstützte Produkte:
 | Protokoll-Controller | Implementiert | HTTP/S |  
 
 
+| Storage-Port | Implementiert | HTTP/S |  
+
+
 | Typ | Lücke | HTTP/S |  
 
 
-.4+| Volume-Maske | Storage-Port | Implementiert | HTTP/S |  
-
-
-| Initiator | Implementiert | HTTP/S |  
+.4+| Volume-Maske | Initiator | Implementiert | HTTP/S |  
 
 
 | Protokoll-Controller | Implementiert | HTTP/S |  
+
+
+| Storage-Port | Implementiert | HTTP/S |  
 
 
 | Typ | Lücke | HTTP/S |  
@@ -24807,7 +24924,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| DFSC1 FA-450 FA-C40R3 FA-C50R4 FA-C60 FA-C60R3 FA-C70R4 FA-C90R4 FA-X10R2 FA-X10R3 FA-X20R2 FA-X20R3 FA-X20R4 FA-X20R4 FA-X50R3 FA-X50R4 FA-X50R4 FA-X70R2 | 5.3.14 5.3.20 6.1.10 6.1.14 6.1.18 6.1.19 6.1.21 6.1.22 6.1.23 6.2.10 6.3.10 6.3.11 6.3.12 6.3.13 6.3.14 6.3.15 6.3.16 6.3.17 6.3.18 6.3.3 6.3.6 6.3.7 6.3.9 6.4.10 6.4.2 6.4.3 6.4.7 6.4.9 6.5.0 6.5.1 6.5.2 6.5.3 6.5.4 6.5.5 6.5.6 6.5.7 6.5.8 6.5.9 6.6.10 6.6.11 6.6.5 6.6.6 6.6.7 6.7.0 6.7.1 6.8.2 6.8.3 
+| DFSC1 FA-450 FA-C40R3 FA-C50R4 FA-C60 FA-C60R3 FA-C70R4 FA-C90R4 FA-X10R2 FA-X10R3 FA-X20R2 FA-X20R3 FA-X20R4 FA-X20R4 FA-X50R3 FA-X50R4 FA-X50R4 FA-X70R2 | 5.3.14 5.3.20 6.1.10 6.1.14 6.1.18 6.1.19 6.1.21 6.1.22 6.1.23 6.2.10 6.3.10 6.3.11 6.3.12 6.3.13 6.3.14 6.3.15 6.3.16 6.3.17 6.3.18 6.3.3 6.3.6 6.3.7 6.3.9 6.4.10 6.4.2 6.4.3 6.4.7 6.4.8 6.4.9 6.5.0 6.5.1 6.5.2 6.5.3 6.5.4 6.5.5 6.5.6 6.5.7 6.5.8 6.5.9 6.6.10 6.6.11 6.6.5 6.6.6 6.6.7 6.7.0 6.7.1 6.8.1 6.8.2 6.8.3 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -25335,25 +25452,25 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.73+| grundlage .7+| Datastore | OID | Implementiert | HTTP/S |  
+.75+| grundlage .7+| Datastore | Kapazität | Implementiert | HTTP/S | Verwendete Kapazität des Snapshot in MB 
+
+
+| MOID | Implementiert | HTTP/S |  
 
 
 | Name | Implementiert | HTTP/S |  
 
 
-| Kapazität | Implementiert | HTTP/S | Verwendete Kapazität des Snapshot in MB 
-
-
-| Genutzte Kapazität | Implementiert | HTTP/S |  
+| OID | Implementiert | HTTP/S |  
 
 
 | Bereitgestellte Kapazität | Implementiert | HTTP/S |  
 
 
+| Genutzte Kapazität | Implementiert | HTTP/S |  
+
+
 | Virtual Center-Ip | Implementiert | HTTP/S |  
-
-
-| MOID | Implementiert | HTTP/S |  
 
 
 .3+| NasShare-Datenspeicher | Datenspeicher-OID | Implementiert | HTTP/S |  
@@ -25377,16 +25494,16 @@ Von diesem Datensammler unterstützte Produkte:
 | OID | Implementiert | HTTP/S |  
 
 
-.4+| LUN | OID | Implementiert | HTTP/S |  
+.4+| LUN | Datenspeicher-OID | Implementiert | HTTP/S |  
+
+
+| Host-OID | Implementiert | HTTP/S |  
 
 
 | Nummer | Implementiert | HTTP/S |  
 
 
-| Datenspeicher-OID | Implementiert | HTTP/S |  
-
-
-| Host-OID | Implementiert | HTTP/S |  
+| OID | Implementiert | HTTP/S |  
 
 
 .6+| NAS-Share | Filer-Name | Implementiert | HTTP/S |  
@@ -25407,25 +25524,25 @@ Von diesem Datensammler unterstützte Produkte:
 | OID | Implementiert | HTTP/S |  
 
 
-.4+| Pfad | OID | Implementiert | HTTP/S |  
+.6+| Pfad | Aktiv | Implementiert | HTTP/S |  
 
 
 | LUN-OID | Implementiert | HTTP/S |  
 
 
-| Aktiv | Implementiert | HTTP/S |  
+| Host Port WWPN | Implementiert | HTTP/S |  
+
+
+| OID | Implementiert | HTTP/S |  
+
+
+| Storage Port WWPN | Implementiert | HTTP/S |  
 
 
 | Typ | Lücke | HTTP/S |  
 
 
-.6+| Server | OID | Implementiert | HTTP/S |  
-
-
-| Virtual Center-Ip | Implementiert | HTTP/S |  
-
-
-| Cluster | Implementiert | HTTP/S | Cluster-Name 
+.6+| Server | Cluster | Implementiert | HTTP/S | Cluster-Name 
 
 
 | Rechenzentrums/Standortname | Implementiert | HTTP/S |  
@@ -25437,7 +25554,13 @@ Von diesem Datensammler unterstützte Produkte:
 | MOID | Implementiert | HTTP/S |  
 
 
-.6+| Virtuelles Laufwerk | OID | Implementiert | HTTP/S |  
+| OID | Implementiert | HTTP/S |  
+
+
+| Virtual Center-Ip | Implementiert | HTTP/S |  
+
+
+.6+| Virtuelles Laufwerk | Kapazität | Implementiert | HTTP/S | Verwendete Kapazität des Snapshot in MB 
 
 
 | Datenspeicher-OID | Implementiert | HTTP/S |  
@@ -25446,31 +25569,37 @@ Von diesem Datensammler unterstützte Produkte:
 | Name | Implementiert | HTTP/S |  
 
 
-| Kapazität | Implementiert | HTTP/S | Verwendete Kapazität des Snapshot in MB 
-
-
-| Genutzte Kapazität | Implementiert | HTTP/S |  
+| OID | Implementiert | HTTP/S |  
 
 
 | Typ | Lücke | HTTP/S |  
 
 
-.13+| Virtual Machine | OID | Implementiert | HTTP/S |  
+| Genutzte Kapazität | Implementiert | HTTP/S |  
 
 
-| Name | Implementiert | HTTP/S |  
+.13+| Virtual Machine | Gaststaat | Implementiert | HTTP/S |  
 
 
-| BETRIEBSSYSTEM | Implementiert | HTTP/S |  
+| Datenspeicher-OID | Implementiert | HTTP/S |  
 
 
-| Prozessoren | Implementiert | HTTP/S |  
+| Host-OID | Implementiert | HTTP/S |  
+
+
+| MOID | Implementiert | HTTP/S |  
 
 
 | Speicher | Implementiert | HTTP/S |  
 
 
-| Datenspeicher-OID | Implementiert | HTTP/S |  
+| Name | Implementiert | HTTP/S |  
+
+
+| OID | Implementiert | HTTP/S |  
+
+
+| BETRIEBSSYSTEM | Implementiert | HTTP/S |  
 
 
 | Stromzustand | Implementiert | HTTP/S |  
@@ -25479,55 +25608,34 @@ Von diesem Datensammler unterstützte Produkte:
 | Zeit Für Statusänderungen | Implementiert | HTTP/S |  
 
 
-| Host-OID | Implementiert | HTTP/S |  
-
-
-| Gaststaat | Implementiert | HTTP/S |  
-
-
-| Genutzte Kapazität | Implementiert | HTTP/S |  
+| Prozessoren | Implementiert | HTTP/S |  
 
 
 | Bereitgestellte Kapazität | Implementiert | HTTP/S |  
 
 
-| MOID | Implementiert | HTTP/S |  
+| Genutzte Kapazität | Implementiert | HTTP/S |  
 
 
 .3+| VirtualMachine Disk | OID | Implementiert | HTTP/S |  
 
 
-| OID der Virtual Machine | Implementiert | HTTP/S |  
-
-
 | VirtualisierungsDisk OID | Implementiert | HTTP/S |  
 
 
-.11+| Host | OID | Implementiert | HTTP/S |  
+| OID der Virtual Machine | Implementiert | HTTP/S |  
 
 
-| Name | Implementiert | HTTP/S |  
+.11+| Host | Host-Cpu-Anzahl | Implementiert | HTTP/S |  
 
 
-| IPS | Implementiert | HTTP/S |  
-
-
-| Plattformtyp | Implementiert | HTTP/S |  
+| Host-Cpu-Geschwindigkeit | Implementiert | HTTP/S |  
 
 
 | Host-Installierter Speicher | Implementiert | HTTP/S |  
 
 
-| Hersteller | Implementiert | HTTP/S |  
-
-
 | Host-Modell | Implementiert | HTTP/S |  
-
-
-| Host-Cpu-Anzahl | Implementiert | HTTP/S |  
-
-
-| Host-Cpu-Geschwindigkeit | Implementiert | HTTP/S |  
 
 
 | Anzahl der NIC | Implementiert | HTTP/S |  
@@ -25536,10 +25644,25 @@ Von diesem Datensammler unterstützte Produkte:
 | NIC-Geschwindigkeit | Implementiert | HTTP/S |  
 
 
-.3+| ISCSI-Knoten | OID | Implementiert | HTTP/S |  
+| IPS | Implementiert | HTTP/S |  
 
 
-| Node-Name | Implementiert | HTTP/S |  
+| Hersteller | Implementiert | HTTP/S |  
+
+
+| Name | Implementiert | HTTP/S |  
+
+
+| OID | Implementiert | HTTP/S |  
+
+
+| Plattformtyp | Implementiert | HTTP/S |  
+
+
+.3+| ISCSI-Knoten | Node-Name | Implementiert | HTTP/S |  
+
+
+| OID | Implementiert | HTTP/S |  
 
 
 | Typ | Lücke | HTTP/S |  
@@ -25548,10 +25671,10 @@ Von diesem Datensammler unterstützte Produkte:
 .3+| Info | Name der Datenquelle | Implementiert | HTTP/S | Info 
 
 
-| Ersteller-ID | Implementiert | HTTP/S |  
-
-
 | Datum | Implementiert | HTTP/S |  
+
+
+| Ersteller-ID | Implementiert | HTTP/S |  
 |===
 Von diesem Datensammler verwendete Management-APIs:
 
@@ -25565,9 +25688,7 @@ Von diesem Datensammler verwendete Management-APIs:
 
 == Rubrik Storage
 
-Von diesem Datensammler unterstützte Modelle und Versionen:
-
-Firmware-Versionen:
+Von diesem Datensammler unterstützte Modelle und Versionen: Firmware-Versionen:
 
 * 8.1.3-p12-25506
 * 8.1.3-p13-25544
@@ -25580,8 +25701,10 @@ Firmware-Versionen:
 * 9.1.2-p1-27870
 * 9.1.2-p1-27870_HP1473894
 * 9.1.3-p1-28075
+* 9.1.3-p8-28434
 * 9.2.2-p1-29213
 * 9.2.3-29313
+* 9.2.3-p1-29368
 
 
 Von diesem Datensammler unterstützte Produkte:
@@ -25913,7 +26036,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| VA2437096 VAST-Daten | Build-Version :Release-5.0.0-sp24-1389206 Build-Version: Release-5.0.0-sp24-1389206 Build-Version: Release-5.0.0-sp70-1532643 Build-Version: Release-5.1.0-sp50-1578267 Systemversion :5.0.0.94 Systemversion: 5.0.0.133 Systemversion: 5.0.0.94 Systemversion: 5.1.0.210 
+| VA2437096 VAST-Daten | Build-Version :Release-5.0 1700467 5.0.0.94.0-sp24-1389206 5.1.0.210 Build-Version: Release-5.0 5.0.0.133 5.1.0.231.0-sp24-1389206 Build-Version: Release-1682647.0-sp70-1630237 Build-Version: Release-5.1.0-sp50-1578267 Build-Version: Release-5.1.0-sp51-hf3-1643358 Build-Version: Release-5.1.0-sp56-1532643 Build-Version: Release-5.1-System Version: 5.0-5.1-5.0.0.94 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -25921,7 +26044,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.108+| grundlage .14+| Festplatte | Kapazität (GB) | Implementiert | HTTPS | Genutzte Kapazität 
+.110+| grundlage .14+| Festplatte | Kapazität (GB) | Implementiert | HTTPS | Genutzte Kapazität 
 
 
 | Festplatten-Id | Implementiert | HTTPS | Identifiziert diese Festplatte im Array eindeutig 
@@ -26053,7 +26176,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Typ | Lücke | HTTPS |  
 
 
-.7+| Kontingente | Limit für harte Kapazität (MB) | Implementiert | HTTPS | maximale Menge an Festplattenspeicher, zulässig für das Quota-Ziel (Hard-Limit) 
+.9+| Kontingente | Limit für harte Kapazität (MB) | Implementiert | HTTPS | maximale Menge an Festplattenspeicher, zulässig für das Quota-Ziel (Hard-Limit) 
 
 
 | Interne Volume-Id | Implementiert | HTTPS |  
@@ -26065,6 +26188,9 @@ Von diesem Datensammler unterstützte Produkte:
 | Limit für weiche Kapazität (MB) | Implementiert | HTTPS | Maximale Menge an Festplattenspeicher, zulässig für das Kontingentnutzer 
 
 
+| Limit Für Weiche Dateien | Implementiert | HTTPS | Maximale Anzahl von Dateien, die für das Kontingentnutzer zulässig sind 
+
+
 | Typ | Lücke | HTTPS |  
 
 
@@ -26072,6 +26198,9 @@ Von diesem Datensammler unterstützte Produkte:
 
 
 | Verwendete Dateien | Implementiert | HTTPS | Anzahl der derzeit verwendeten Dateien 
+
+
+| Benutzer-/Gruppenziel | Implementiert | HTTPS | Benutzer-/Gruppenziel auf dieses Kontingent bezieht sich 
 
 
 .3+| Share | IP-Schnittstellen | Implementiert | HTTPS | Kommagetrennte Liste von IP-Adressen, auf die diese Freigabe angezeigt wird 
@@ -26221,10 +26350,13 @@ Von diesem Datensammler unterstützte Produkte:
 | Verschlüsselt | Implementiert | HTTPS |  
 
 
-.7+| Storage Virtual Machine | Guid-Schlüssel | Implementiert | HTTPS | Globaler eindeutiger Schlüssel der Storage Virtual Machine 
+.7+| Storage Virtual Machine | Zugewiesene Kapazität (MB) | Implementiert | HTTPS | Zugewiesene Kapazität von Snapshots 
 
 
-| UUID | Implementiert | HTTPS |  
+| Kommentar | Implementiert | HTTPS |  
+
+
+| Guid-Schlüssel | Implementiert | HTTPS | Globaler eindeutiger Schlüssel der Storage Virtual Machine 
 
 
 | Name | Implementiert | HTTPS |  
@@ -26233,10 +26365,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Typ | Lücke | HTTPS |  
 
 
-| Kommentar | Implementiert | HTTPS |  
-
-
-| Zugewiesene Kapazität (MB) | Implementiert | HTTPS | Zugewiesene Kapazität von Snapshots 
+| UUID | Implementiert | HTTPS |  
 
 
 | Genutzte Kapazität | Implementiert | HTTPS |  
@@ -26313,9 +26442,7 @@ Von diesem Datensammler verwendete Management-APIs:
 
 == NetApp HCI Virtual Center
 
-Von diesem Datensammler unterstützte Modelle und Versionen:
-
-API-Versionen:
+Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
 
 * VMware vCenter Server 6.7.0 Build-10244857
 * VMware vCenter Server 7.0.3 Build-20395099
@@ -26863,15 +26990,14 @@ Von diesem Datensammler verwendete Management-APIs:
 
 == VMware Cloud auf AWS
 
-Von diesem Datensammler unterstützte Modelle und Versionen:
-
-API-Versionen:
+Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
 
 * VMware vCenter Server 7.0.3 Build-21477706
 * VMware vCenter Server 7.0.3 Build-24322018
 * VMware vCenter Server 8.0.0 Build-22877852
 * VMware vCenter Server 8.0.1 Build-22161730
 * VMware vCenter Server 8.0.1 Build-23525738
+* VMware vCenter Server 8.0.3 Build-24322831
 
 
 Von diesem Datensammler unterstützte Produkte:
@@ -27206,15 +27332,21 @@ Von diesem Datensammler verwendete Management-APIs:
 
 == VMware vSphere (Web Services)
 
-Von diesem Datensammler unterstützte Modelle und Versionen:
+Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
 
-API-Versionen:
-
+* VMware ESXi 6.0.0 Build-10474991
+* VMware ESXi 6.0.0 Build-10719132
+* VMware ESXi 6.0.0 Build-13635687
 * VMware ESXi 6.0.0 Build-2494585
-* VMware ESXi 6.7.0 Build-20497097
+* VMware ESXi 6.0.0 Build-3620759
+* VMware ESXi 6.0.0 Build-5050593
+* VMware ESXi 6.0.0 Build-5224934
+* VMware ESXi 6.0.0 Build-9239799
+* VMware ESXi 6.5.0 Build-5310538
 * VMware ESXi 7.0.3 Build-20036589
 * VMware ESXi 7.0.3 Build-20328353
 * VMware ESXi 8.0.0 Build-21203435
+* VMware ESXi 8.0.1 Build-21495797
 * VMware vCenter Server 5.0.0 Build-623373
 * VMware vCenter Server 5.5.0 Build-1750787
 * VMware vCenter Server 5.5.0 Build-2442329
@@ -27280,6 +27412,7 @@ API-Versionen:
 * VMware vCenter Server 8.0.0 Build-20519528
 * VMware vCenter Server 8.0.0 Build-20920323
 * VMware vCenter Server 8.0.0 Build-21216066
+* VMware vCenter Server 8.0.0 Build-21457384
 * VMware vCenter Server 8.0.1 Build-21560480
 * VMware vCenter Server 8.0.1 Build-21815093
 * VMware vCenter Server 8.0.1 Build-21860503

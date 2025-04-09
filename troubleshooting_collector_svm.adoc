@@ -78,5 +78,8 @@ image:CS_Data_Collector_Error.png["Workload Security Collector Error Mehr Detail
 
 
 | Der Data Collector wird beim Auswählen des SVM-Modus fehlgesetzt. | Wenn beim Herstellen einer Verbindung im SVM-Modus die Cluster-Management-IP verwendet wird, um eine Verbindung anstelle der SVM-Management-IP herzustellen, wird die Verbindung getrennt. Stellen Sie sicher, dass die richtige SVM-IP verwendet wird. 
+
+
+| Data Collector zeigt eine Fehlermeldung an, wenn Access Denied Feature aktiviert ist: "Connector befindet sich im Fehlerzustand. Dienstname: Audit. Grund für den Fehler: Konfiguration von fpolicy auf SVM Test_svm fehlgeschlagen. Grund: Benutzer ist nicht autorisiert.“ | Dem Benutzer fehlen möglicherweise die für die Funktion „Zugriff verweigert“ erforderlichen REST-Berechtigungen. Befolgen Sie die Anweisungen auflink:concept_ws_integration_with_ontap_access_denied.html["Auf dieser Seite"], um die Berechtigungen festzulegen. Starten Sie den Collector neu, sobald die Berechtigungen festgelegt wurden. 
 |===
 Wenn Sie immer noch Probleme haben, wenden Sie sich an die auf der Seite * Hilfe > Support* genannten Support-Links.
