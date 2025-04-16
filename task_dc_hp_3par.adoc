@@ -5,17 +5,8 @@ keywords: data collector, 3PAR, HP, HP 3PAR, HPE,
 summary: 'Konfiguration des Datensammlers HP Enterprise Alletra 9000 / Primera (ehemals 3PAR).' 
 ---
 = HP Enterprise Alletra 9000 / Primera Storage Datensammler
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

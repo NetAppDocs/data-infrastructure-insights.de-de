@@ -5,24 +5,16 @@ summary: Dashboard-Funktionen und -Konzepte.
 keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
 ---
 = Dashboard-Funktionen
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
 Dashboards und Widgets ermöglichen eine große Flexibilität bei der Anzeige von Daten. Nachfolgend finden Sie einige Konzepte, mit denen Sie Ihre individuellen Dashboards optimal nutzen können.
 
+inhaltsverzeichnis:[]
 
-toc::[]
 
 
 == Widget-Naming
@@ -66,13 +58,17 @@ Wenn Legenden angezeigt werden, wird die Legende als Link zu dieser Asset-Seite 
 
 Data Infrastructure Insights bietet verschiedene *transform*-Optionen für bestimmte Kennzahlen in Widgets (insbesondere die Kennzahlen, die als „Benutzerdefinierte“ oder „Integrationsmetriken“ bezeichnet werden, wie z. B. von Kubernetes, ONTAP Advanced Data, Telegraf-Plug-ins usw.), so dass Sie die Daten auf verschiedene Arten anzeigen können. Beim Hinzufügen transformbarer Metriken zu einem Widget werden Sie mit einem Dropdown-Menü mit den folgenden Optionen zur Transformation angezeigt:
 
-Keine:: Die Daten werden ohne Manipulation als IS angezeigt.
-Preis:: Aktueller Wert geteilt durch den Zeitbereich seit der vorherigen Beobachtung.
-Kumulativ:: Die Akkumulation der Summe der vorherigen Werte und des aktuellen Werts.
-Delta:: Die Differenz zwischen dem vorhergehenden Beobachtungswert und dem aktuellen Wert.
-Delta-Preis:: Delta-Wert geteilt durch den Zeitraum seit der vorherigen Beobachtung.
-Kumulierter Betrag:: Kumulativer Wert geteilt durch den Zeitraum seit der vorherigen Beobachtung.
+Keine: Die Daten werden ohne Bearbeitung angezeigt.
 
+Rate: Aktueller Wert geteilt durch den Zeitbereich seit der vorherigen Beobachtung.
+
+Kumulativ: Die Akkumulation der Summe der vorherigen Werte und des aktuellen Wertes.
+
+Delta: Die Differenz zwischen dem vorherigen Beobachtungswert und dem aktuellen Wert.
+
+Delta-Rate: Delta-Wert geteilt durch den Zeitbereich seit der vorherigen Beobachtung.
+
+Kumulative Rate: Kumulativer Wert geteilt durch den Zeitbereich seit der vorherigen Beobachtung.
 
 Beachten Sie, dass bei der Transformation von Metriken nicht die zugrunde liegenden Daten selbst, sondern nur die Art und Weise geändert werden, wie Daten angezeigt werden.
 
@@ -401,7 +397,7 @@ Die Latenzlinie wird jetzt auf eigene Skala gezeichnet, die rechts im Diagramm a
 
 
 
-image::SecondaryAxisExplained.png[Beispiel für die sekundäre Achse]
+image:SecondaryAxisExplained.png["Beispiel für die sekundäre Achse"]
 
 
 

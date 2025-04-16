@@ -5,17 +5,8 @@ summary: Beim Abfragen für eine hohe I/O-Dichte möchten Sie Root-Volumes aussc
 keywords: NetApp, root volume, high I/O, 
 ---
 = Berichte zur I/O-Dichte beschreiben nur interne Daten-Volumes
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

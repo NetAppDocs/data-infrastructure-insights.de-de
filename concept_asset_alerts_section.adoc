@@ -5,17 +5,8 @@ summary: Überblick über den Abschnitt „Zugehörige Warnmeldungen“ der Best
 keywords: asset, landing page, violations, Alerts, 
 ---
 = Abschnitt „Hinweise auf der Seite „Ressourcen“
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

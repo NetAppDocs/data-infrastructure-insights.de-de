@@ -5,17 +5,8 @@ summary: Verwenden Sie eine Abfrage, um mehreren Anwendungen oder Anmerkungen zu
 keywords: query, queries, application, annotation, multiple 
 ---
 = Zuweisen mehrerer Anwendungen zu oder Entfernen mehrerer Anwendungen aus Assets
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

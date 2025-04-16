@@ -5,17 +5,8 @@ summary: Tipps zur Fehlerbehebung bei Problemen mit der Erfassungseinheit unter 
 keywords: AU, acquisition unit, trioubleshooting 
 ---
 = Fehlerbehebung bei Problemen mit der Erfassungseinheit unter Windows
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

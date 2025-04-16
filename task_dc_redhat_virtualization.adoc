@@ -5,17 +5,8 @@ keywords: data collector, Red Hat Virtualization
 summary: Konfiguration von Red hat Virtualization Data Collector 
 ---
 = Datensammler Red hat Virtualization
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: Abfragen ermöglichen die schnelle und einfache Identifikation von Ress
 keywords: query, queries 
 ---
 = Abfragen Werden Erstellt
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -6,13 +6,7 @@ keywords: dashboard, widget, custom, view, data
 ---
 = Übersicht Über Dashboards
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
@@ -21,8 +15,8 @@ Data Infrastructure Insights bietet den Benutzern die Flexibilität, Betriebsans
 
 IMPORTANT: Die Beispiele in diesen Abschnitten dienen nur zu erklärenden Zwecken und decken nicht alle möglichen Szenarien ab. Die hierin enthaltenen Konzepte und Schritte können dazu verwendet werden, eigene Dashboards zu erstellen, um die Daten auf Ihre speziellen Bedürfnisse hin hervorzuheben.
 
+inhaltsverzeichnis:[]
 
-toc::[]
 
 
 == Erstellen eines Dashboards

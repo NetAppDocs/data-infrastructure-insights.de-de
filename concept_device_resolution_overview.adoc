@@ -6,13 +6,7 @@ summary: Mit der automatischen Geräteauflösung können Sie die Leistung und de
 ---
 = Überblick Über Die Automatische Geräteauflösung
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

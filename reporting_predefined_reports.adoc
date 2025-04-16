@@ -5,17 +5,8 @@ summary: Übersicht über vordefinierte Berichte
 keywords: reporting, cognos, data warehouse, dwh, pre-defined 
 ---
 = Vordefinierte Berichte Leicht Gemacht
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

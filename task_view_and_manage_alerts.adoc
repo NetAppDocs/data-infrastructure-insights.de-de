@@ -5,17 +5,8 @@ summary: Anzeigen von Warnungen, die von Monitoren ausgelöst wurden
 keywords: monitor, alert, viewing 
 ---
 = Anzeigen und Verwalten von Warnmeldungen von Monitoren
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

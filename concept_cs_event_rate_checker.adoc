@@ -5,17 +5,8 @@ summary: Dieses Skript kann ausgeführt werden, um die Ereignisrate in der SVM z
 keywords: event, checker, rate, sizing, cloud secure 
 ---
 = SVM Event Rate Checker (Agent Sizing Guide)
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

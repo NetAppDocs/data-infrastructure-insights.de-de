@@ -5,7 +5,12 @@ summary: Symbolreferenz für das Objekt Data Infrastructure Insights
 keywords: icons, assets, objects, reference, map 
 ---
 = Objekt Symbol Referenz
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

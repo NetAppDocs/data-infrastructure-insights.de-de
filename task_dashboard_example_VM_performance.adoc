@@ -5,17 +5,8 @@ summary: Dashboard-Beispiel mit Schwerpunkt auf der Performance virtueller Masch
 keywords: dashboard, widget, custom, example, virtual machine, vm, performance 
 ---
 = Dashboard-Beispiel: Virtual Machine Performance
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

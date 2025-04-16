@@ -5,17 +5,8 @@ keywords: API, customer API, premium, JSON, Swagger, Access Token, token, rotate
 summary: Die Data Infrastructure Insights API ermöglicht die Integration in andere Applikationen, beispielsweise Systeme für Monitoring und Berichterstellung. 
 ---
 = Data Infrastructure Insights API
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -230,8 +221,7 @@ Objekte mit Kapazitätsattributen verwenden grundlegende Datentypen und das kapa
 
 KapazitätItem ist eine einzige logische Einheit der Kapazität. Er hat „Wert“ und „highThreshold“ in Einheiten, die durch sein übergeordnetes Objekt definiert sind. Zudem unterstützt es eine optionale Übersichtskarte, in der die Konstruktion des Kapazitätswerts erläutert wird. So wäre beispielsweise die Gesamtkapazität eines 100 TB StoragePool ein KapazitätItem mit einem Wert von 100. Die Aufschlüsselung kann 60 TB für „Daten“ und 40 TB für „Snapshots“ zugewiesen zeigen.
 
-Hinweis:: „HighThreshold“ stellt systemdefinierte Schwellenwerte für die entsprechenden Metriken dar, mit denen ein Kunde Alarme oder visuelle Hinweise auf Werte generieren kann, die außerhalb des zulässigen konfigurierten Messebereiches liegen.
-
+Hinweis: „HighThreshold“ stellt systemdefinierte Schwellenwerte für die entsprechenden Metriken dar, mit denen ein Client Warnungen oder visuelle Hinweise für Werte generieren kann, die außerhalb der akzeptablen konfigurierten Bereiche liegen.
 
 Die folgende Anzeige zeigt die Kapazität von StoragePools mit mehreren Kapazitätszählern:
 

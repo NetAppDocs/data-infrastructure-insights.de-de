@@ -5,17 +5,8 @@ summary: Sie können nach Objekten filtern, die direkt mit dem aktuellen Asset v
 keywords: Assets, landing page, filtering, context, related 
 ---
 = Filtern nach Objekten im Kontext
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

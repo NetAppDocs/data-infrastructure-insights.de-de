@@ -5,17 +5,8 @@ keywords: telegraf, agent, telegraf agent
 summary: Data Infrastructure Insights unterstützt Telegraf als Agent für die Erfassung von Integrationsdaten und kann unter Windows oder Linux konfiguriert werden. 
 ---
 = Konfigurieren eines Agenten zur Datenerfassung (Windows/Linux)
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -93,7 +84,7 @@ NOTE: In den folgenden Schritten werden die Aktionen beschrieben, die zum Festle
 
 Führen Sie für Systeme, die sich hinter einem Proxy befinden, folgende Schritte aus, um die Umgebungsvariable _https_Proxy_ und/oder _http_Proxy_ vor der Installation des Telegraf-Agenten festzulegen:
 
- [System.Environment]::SetEnvironmentVariable(“https_proxy”, “<proxy_server>:<proxy_port>”, [System.EnvironmentVariableTarget]::Machine)
+ [System.Environment]:SetEnvironmentVariable(“https_proxy”, “<proxy_server>:<proxy_port>”, [System.EnvironmentVariableTarget]:Machine)
 
 
 ==== Installieren des Agenten

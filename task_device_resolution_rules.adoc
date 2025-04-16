@@ -5,17 +5,8 @@ keywords: Automatic, AR, AHR, Host, automatic device resolution
 summary: Mithilfe der Geräteauflösung können Sie die Leistung und den Bestand in Ihrer Umgebung genau verfolgen. 
 ---
 = Regeln zur Geräterauflösung
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

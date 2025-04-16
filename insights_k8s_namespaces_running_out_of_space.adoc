@@ -5,17 +5,8 @@ keywords: insight, pv, persistent volume, backend
 summary: Anhand dieser Informationen können Sie vorhersagen, wann Kubernetes Spaces voraussichtlich voll werden. 
 ---
 = Kubernetes-Namesaces: Der Speicherplatz wird nicht mehr durch den Platzbedarf bestimmt
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

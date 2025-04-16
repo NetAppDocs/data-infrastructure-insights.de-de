@@ -5,17 +5,8 @@ summary: Die Vorschaufunktionen stehen nur mit begrenzter Kapazität zur Verfüg
 keywords: coming soon, preview, 
 ---
 = Funktionen und Funktionen der Vorschau
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

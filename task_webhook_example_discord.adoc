@@ -5,17 +5,8 @@ keywords: webhook, notification, Discord, integration
 summary: Erstellen Sie einen Webhook, um über die Grenzwerte für Leistung oder Bestand für die Ableitung zu informieren 
 ---
 = Beispiel für den Webhook für die Kabeltrennleitung
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: audit, users, activities
 summary: Audit bietet eine Übersicht über die System- und Benutzeraktivitäten im Data Infrastructure Insights-System. 
 ---
 = Prüfung
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -267,6 +267,8 @@ sidebar:
       url: "/cs_notifications_email.html"
     - title: Workload-Sicherheits-API
       url: "/concept_cs_api.html"
+    - title: Fehlerbehebung für den SVM Collector
+      url: "/troubleshooting_collector_svm.html"
   - title: Fehlerbehebung
     entries:
     - title: Allgemeine Fehlerbehebung

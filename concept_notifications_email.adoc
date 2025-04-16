@@ -5,17 +5,8 @@ summary: E-Mail-Adressen für Benachrichtigungen werden hinzugefügt.
 keywords: email, notifications, signature, recipient, list, subscription 
 ---
 = E-Mail-Benachrichtigungen Werden Konfiguriert
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: data collector, EC2,
 summary: Amazon EC2 Data Collector wird konfiguriert. 
 ---
 = Amazon EC2 Data Collector konfigurieren
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

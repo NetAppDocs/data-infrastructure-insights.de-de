@@ -5,17 +5,8 @@ summary: Sie erstellen Anmerkungsregeln, um Anmerkungen automatisch auf mehrere 
 keywords: annotate, annotation, rules 
 ---
 = Anmerkungsregeln werden erstellt
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

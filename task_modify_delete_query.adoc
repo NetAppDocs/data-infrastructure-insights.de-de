@@ -5,17 +5,8 @@ summary: Ändern oder Löschen einer Abfrage
 keywords: query, queries, modify, edit, delete, remove 
 ---
 = Eine Abfrage ändern oder löschen
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

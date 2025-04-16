@@ -5,17 +5,8 @@ summary: Exportieren der Ergebnisse einer Abfrage in eine CSV-Datei
 keywords: query, queries, export, csv 
 ---
 = Abfrageergebnisse werden in eine CSV-Datei exportiert
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

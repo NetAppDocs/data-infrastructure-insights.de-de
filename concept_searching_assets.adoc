@@ -5,17 +5,8 @@ summary: Erweiterte Suche techniquest hilft Ihnen bei der Suche nach den gewüns
 keywords: asset page, objects, search, advanced, alerts 
 ---
 = Tipps und Tricks für die Suche nach Ressourcen und Warnungen
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

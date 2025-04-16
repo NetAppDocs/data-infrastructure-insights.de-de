@@ -6,18 +6,55 @@ keywords: features
 ---
 = Neuerungen bei Dateninfrastruktur Insights
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
 NetApp verbessert seine Produkte und Services kontinuierlich. Im Folgenden finden Sie einige der neuesten Funktionen, die in Data Infrastructure Insights (ehemals Cloud Insights) verfügbar sind.
 
+
+
+== April 2025
+
+
+
+=== ML-Powered Anomaly Bounds in Line Widgets für proaktive Problemlösung
+
+Zur Behebung von Leistungsproblemen mit Linien- oder Spline-Diagramm-Widgets können Sie nun neben den tatsächlichen Kennzahlen auch erwartete Verhaltensgrenzen anzeigen, sodass Sie zwischen normalen und abnormalen metrischen Trends unterscheiden können.
+
+BEI DII Machine Learning mit saisonaler Datenanalyse werden intelligente Schwellenwerte festgelegt, die auf historischen Mustern basieren. Wenn Kennzahlen von den erwarteten Bereichen abweichen, weist das System diese als Anomalien auf, was eine schnelle Problemerkennung ermöglicht, die mittlere Zeit bis zur Lösung verkürzt und Probleme beseitigt, bevor sie den Betrieb beeinträchtigen.
+
+image:expected_bounds_example_showing_spike.png["Erwartete Grenzen, die einen Spitzenwert über, Breite = 400 anzeigen"]
+
+
+
+=== Optimierung der VMware-Kosten mit VSAN Storage Support
+
+Unsere Funktion zur VM-Optimierung umfasst jetzt auch Unterstützung für VMware Umgebungen mit VSAN Storage. Neben der CPU- und Arbeitsspeicherauslastung wird in der Analyse jetzt lokaler VSAN-Storage für Empfehlungen zur Rückgewinnung berücksichtigt, wodurch Sie die Lizenzkosten weiter senken können.
+
+image:vm_optimization_with_vsan.png["Beispiel für die VM-Optimierung mit VSAN"]
+
+
+
+=== Alarmdetails auf Knopfdruck
+
+Mit dem neuen Schiebefeld ist die Untersuchung von Warnmeldungen einfacher denn je. Wählen Sie eine Warnmeldung aus, um Details für diese Warnung anzuzeigen, und wechseln Sie einfach zwischen Warnmeldungen, ohne Ihren Platz bei der Untersuchung von Problemen zu verlieren.
+
+image:alert_slideout_example.png["Warnhinweis für leichtere Navigation"]
+
+
+
+=== Workload-Sicherheit – Asynchroner Export Für Forensik
+
+Der Export von forensischen Daten kann je nach Datenmenge zwischen einigen Sekunden und mehreren Stunden dauern. Workload Security exportiert diese Daten asynchron, sodass Sie weiterarbeiten können, während die .CSV-Datei kompiliert wird.
+
+
+
+=== Data Collector-Benachrichtigungen in Regeln gruppiert
+
+Wenn Sie Benachrichtigungen für Datensammler konfiguriert haben, werden diese Benachrichtigungen ab April 15 in Benachrichtigungsregeln behandelt, mit einer einzigen Regel für Datensammler mit identischen Empfängern. Sammler mit unterschiedlichen Empfängern haben separate Regeln. Vorhandene Collector-Benachrichtigungen werden zu Benachrichtigungsregeln migriert.
+
+'''
 
 
 == März 2025
@@ -64,6 +101,14 @@ image:ws_test_connection_button.png["workload security test connection button"] 
 
 
 
+=== Testen Sie die Konnektivität für Datensammler zur Sicherheit von Speicherarbeitslasten
+
+Die Testverbindungsfunktion soll Endbenutzern dabei helfen, die spezifischen Ursachen von Fehlern zu identifizieren, wenn Datensammler in Data Infrastructure Insights (DII) Workload Security eingerichtet werden. Dadurch können die Benutzer Probleme im Zusammenhang mit der Netzwerkkommunikation oder fehlenden Rollen selbst beheben.
+
+image:ws_test_connection_button.png["workload security test connection button"] image:ws_test_connection_success_example.png["Workload Security 'Test Connection' success message"]
+
+
+
 === Betriebssystemunterstützung
 
 Zusätzlich zu den folgenden Betriebssystemen werden jetzt auch Data Infrastructure Insights Acquisition Units unterstütztlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["Unterstützung bereits vorhanden"]:
@@ -93,13 +138,25 @@ image:ontap_essentials_asa_views.png["Dropdown-Menü „ONTAP Essentials“ zeig
 
 
 
+=== ONTAP Essentials für die neueste Generation von ASA Systemen
+
+ONTAP Essentials umfasst jetzt die sofort einsetzbare Verwaltbarkeit für die neueste Gerätegeneration.link:task_dc_na_ontap_all_san_array.html["ASA"] Dies umfasst SAN Analyzer für VM-zu-LUN-Topologien von Workloads, die auf ONTAP ausgeführt werden, jetzt auch mit NetApp-Unterstützung als Teil der Data Infrastructure Insights Basic Edition verfügbar.
+
+image:ontap_essentials_asa_views.png["Dropdown-Menü „ONTAP Essentials“ zeigt die Unterschied zwischen ASA und Unified"]
+
+
+
 === DII API Usage Tracking: Erhöhen Sie Sicherheit und Effizienz
 
-Erhöhen Sie die Sicherheit und optimieren Sie das Ressourcenmanagement mit dem verbesserten REST-API-Nutzungsnachverfolgung, das für Admin-Benutzer verfügbar ist. Mit der API-Nutzungsverfolgung können Sie sehen, welche API-Token verwendet werden, von welchen IP-Adressen und von welchem Volumen sie Datenverkehr generieren. Durch die Verknüpfung von Token mit bestimmten IP-Adressen und Nutzungsebenen erhalten Sie einen umfassenden Einblick in den Systemzugriff und die Trends bei der Nutzung. So haben Sie die erforderliche Kontrolle, um eine sichere, effiziente Umgebung zu erhalten und den Betrieb reibungslos zu halten.
+Erhöhen Sie die Sicherheit und optimieren Sie das Ressourcenmanagement mit dem verbesserten REST-API-Nutzungsnachverfolgung, das für Admin-Benutzer verfügbar ist. Mit der API-Nutzungsverfolgung können Sie sehen, welche API-Token verwendet werden, von welchen IP-Adressen und von welchem Volumen sie Datenverkehr generieren. Durch die Verknüpfung von Token mit bestimmten IP-Adressen und Nutzungsebenen erhalten Sie einen umfassenden Einblick in den Systemzugriff und die Trends bei der Nutzung. So haben Sie die erforderliche Kontrolle, um eine sichere, effiziente Umgebung zu erhalten und den Betrieb reibungslos zu halten. Erhöhen Sie die Sicherheit und optimieren Sie das Ressourcenmanagement mit dem verbesserten REST-API-Nutzungsnachverfolgung, das für Admin-Benutzer verfügbar ist. Mit der API-Nutzungsverfolgung können Sie sehen, welche API-Token verwendet werden, von welchen IP-Adressen und von welchem Volumen sie Datenverkehr generieren. Durch die Verknüpfung von Token mit bestimmten IP-Adressen und Nutzungsebenen erhalten Sie einen umfassenden Einblick in den Systemzugriff und die Trends bei der Nutzung. So haben Sie die erforderliche Kontrolle, um eine sichere, effiziente Umgebung zu erhalten und den Betrieb reibungslos zu halten.
 
-Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability > Admin > API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security.
+Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability > Admin > API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security. Um die API-Nutzung anzuzeigen, navigieren Sie zu *Observability > Admin > API Access* und wählen Sie _View API Usage_. Beachten Sie, dass diese API nur für DII Observability APIs verfügbar ist; sie gilt nicht für Workload Security.
 
 image:api_usage_analytics_screenshot.png["Beispiel für eine API-Nutzungsanalyse"]
+
+
+
+=== Workload-Sicherheits-API zur Einschränkung von Benutzern
 
 
 

@@ -5,17 +5,8 @@ summary: Hinzufügen von E-Mail-Adressen für Benachrichtigungen zu Workload-Sic
 keywords: email, notifications, alerts, warnings, attacks 
 ---
 = Konfigurieren von E-Mail-Benachrichtigungen für Warnungen, Warnungen und den Zustand des Agent/Data Source Collectors
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

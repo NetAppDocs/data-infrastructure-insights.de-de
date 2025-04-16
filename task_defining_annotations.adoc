@@ -5,17 +5,8 @@ keywords: annotations, monitor, notes, tags
 summary: Verfolgen von Daten mithilfe von Anmerkungen 
 ---
 = Anmerkungen definieren
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -109,25 +100,15 @@ Sie können in diese Felder bis zu 255 Zeichen eingeben.
 
 
 .Anmerkungstypen
-Boolesch:: Erstellt eine Dropdown-Liste mit den Auswahlmöglichkeiten „Ja“ und „Nein“. Die Anmerkung „direkt angehängt“ ist z. B. Boolesch.
-Datum:: Dadurch wird ein Feld erstellt, das ein Datum enthält. Wenn es sich bei der Anmerkung um ein Datum handelt, wählen Sie diese Option aus.
-Liste:: Erstellt eine der folgenden Optionen:
-+
---
-* Eine feste Dropdown-Liste
-+
-Wenn andere diesem Anmerkungstyp auf einem Gerät zuweisen, können sie der Liste keine weiteren Werte hinzufügen.
+Boolesch: Erstellt eine Dropdown-Liste mit den Auswahlmöglichkeiten „Ja“ und „Nein“. Die Anmerkung „direkt angehängt“ ist z. B. Boolesch. Datum: Dadurch wird ein Feld erstellt, das ein Datum enthält. Wenn es sich bei der Anmerkung um ein Datum handelt, wählen Sie diese Option aus. Liste: Erstellt Eine der folgenden Optionen: * Eine Dropdown-Liste mit festen Elementen
 
-* Eine Liste mit flexiblen Dropdown-Menüs
-+
-Wenn Sie beim Erstellen dieser Liste die Option Neue Werte hinzufügen auswählen, wenn andere diesen Anmerkungstyp auf einem Gerät zuweisen, können sie der Liste weitere Werte hinzufügen.
++ Wenn andere diesen Anmerkungstyp auf einem Gerät zuweisen, können sie der Liste keine weiteren Werte hinzufügen. * Eine flexible Dropdown-Liste
 
++ Wenn Sie beim Erstellen dieser Liste die Option Neue Werte hinzufügen auswählen und andere diesen Anmerkungstyp auf einem Gerät zuweisen, können sie der Liste weitere Werte hinzufügen.
 
+Nummer: Erstellt ein Feld, in dem der Benutzer, der die Anmerkung zuweist, eine Zahl eingeben kann. Wenn der Anmerkungstyp beispielsweise „Stockwerk“ lautet, kann der Benutzer den Wert „number“ auswählen und die Bodennummer eingeben.
 
---
-Nummer:: Erstellt ein Feld, in dem der Benutzer, der die Anmerkung zuweist, eine Zahl eingeben kann. Wenn der Anmerkungstyp beispielsweise „Stockwerk“ lautet, kann der Benutzer den Wert „number“ auswählen und die Bodennummer eingeben.
-Text:: Erstellt ein Feld, das Freiformtext zulässt. Sie können z. B. „Sprache“ als Anmerkungstyp eingeben, „Text“ als Wertetyp auswählen und eine Sprache als Wert eingeben.
-
+Text: Erstellt ein Feld, das Freiformtext ermöglicht. Sie können z. B. „Sprache“ als Anmerkungstyp eingeben, „Text“ als Wertetyp auswählen und eine Sprache als Wert eingeben.
 
 
 NOTE: Nachdem Sie den Typ festgelegt und Ihre Änderungen gespeichert haben, können Sie den Typ der Anmerkung nicht ändern. Wenn Sie den Typ ändern müssen, müssen Sie die Anmerkung löschen und eine neue erstellen.

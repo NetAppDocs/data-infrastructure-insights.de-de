@@ -5,17 +5,8 @@ keywords: annotations, business entity
 summary: Anmerkungen zur Unternehmenseinheit können zur Überwachung und Berichterstellung von Assets in Ihrer Unternehmenshierarchie verwendet werden 
 ---
 = Anmerkungen Zur Geschäftseinheit
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

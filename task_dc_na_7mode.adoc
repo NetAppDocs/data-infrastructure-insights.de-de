@@ -5,17 +5,8 @@ keywords: data collector, 7-mode, NetApp
 summary: NetApp 7-Mode Datensammler konfigurieren. 
 ---
 = NetApp Data ONTAP mit 7-Mode Datensammler
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: Sie können Werte aus einer Tabelle in die Zwischenablage kopieren, um 
 keywords: query, queries, copy, values, clipboard 
 ---
 = Tabellenwerte werden kopiert
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

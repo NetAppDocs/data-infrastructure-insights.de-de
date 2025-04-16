@@ -5,17 +5,8 @@ summary: NetApp Cloud Volumes ONTAP Data Collector konfigurieren
 keywords: data collector, NetApp, Cloud, ONTAP 
 ---
 = NetApp Cloud Volumes ONTAP Datensammler
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

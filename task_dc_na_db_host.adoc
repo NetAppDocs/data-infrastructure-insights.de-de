@@ -6,13 +6,7 @@ summary: Generischer Datenbank-Host-Resolver-Collector
 ---
 = NetApp-Hostauflösung für allgemeine DB
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

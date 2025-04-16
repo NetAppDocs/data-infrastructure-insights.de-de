@@ -5,17 +5,8 @@ keywords: monitors, alerts, log, metric
 summary: Erstellen von Monitoren, damit bei Performance- oder Bestandsschwellenwerten sowie bei metrischen oder Protokollbedingungen eine Warnmeldung ausgegeben wird 
 ---
 = Systemmonitore
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,8 +15,8 @@ Data Infrastructure Insights umfasst eine Reihe von systemdefinierten Monitoring
 
 NOTE: Viele Systemmonitore befinden sich standardmäßig im Status „_Paused_“. Sie können einen Systemmonitor aktivieren, indem Sie die Option „_Fortsetzen_“ für den Monitor auswählen. Stellen Sie sicher, dass _Advanced Counter Data Collection_ und _enable ONTAP EMS Log Collection_ im Data Collector aktiviert sind. Diese Optionen finden Sie im ONTAP Data Collector unter _Erweiterte Konfiguration_: image:Enable_Log_Monitor_Collection.png["Aktivieren der Advanced Counter- und EMS Log-Sammlung für ONTAP"]
 
+inhaltsverzeichnis:[]
 
-toc::[]
 
 
 == Monitorbeschreibungen

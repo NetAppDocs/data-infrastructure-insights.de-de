@@ -5,17 +5,8 @@ keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstal
 summary: Acquisition Unit installiert, deinstalliert, Proxy-Support konfiguriert und vieles mehr unter Windows und Linux. 
 ---
 = Konfigurieren Von Akquisitionseinheiten
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -120,7 +111,8 @@ Das Dialogfeld „_Erfassungseinheit installieren “ wird angezeigt. Wählen Si
 
 
 
-image::NewWindowsAUInstall.png[Windows AU Installation]
+[role="thumb"]
+image:NewWindowsAUInstall.png["Windows AU Installation"]
 
 . Vergewissern Sie sich, dass der Server oder die VM, auf dem die Erfassungseinheit gehostet wird, die empfohlenen Systemanforderungen erfüllt.
 . Überprüfen Sie, ob auf dem Server eine unterstützte Windows-Version ausgeführt wird. Klicken Sie auf _OS-Versionen supported (i)_, um eine Liste der unterstützten Versionen anzuzeigen.

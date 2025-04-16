@@ -5,17 +5,8 @@ summary: Workload-Sicherheit lässt sich in ONTAP Autonomous Ransomware Protecti
 keywords: ransomware, ARP, Protection, Security 
 ---
 = Integration in ONTAP Autonomous Ransomware Protection
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

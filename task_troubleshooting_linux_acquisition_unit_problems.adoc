@@ -5,17 +5,8 @@ summary: Tipps zur Fehlerbehebung bei Problemen mit der Erfassungseinheit.
 keywords: AU, acquisition unit, trioubleshooting 
 ---
 = Fehlerbehebung bei Problemen mit der Erfassungseinheit unter Linux
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

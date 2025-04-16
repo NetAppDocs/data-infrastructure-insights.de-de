@@ -5,17 +5,8 @@ summary: Im Abschnitt „Benutzerdaten“ einer Asset-Seite können Sie dem aktu
 keywords: asset page, user data, applications, annotations 
 ---
 = Abschnitt „Benutzerdaten“
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

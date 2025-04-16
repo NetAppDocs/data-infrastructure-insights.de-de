@@ -5,17 +5,8 @@ summary: Data Infrastructure Insights befolgt während des gesamten Release-Lebe
 keywords: security, risk, protection 
 ---
 = Sicherheitstool
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
