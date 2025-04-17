@@ -8,6 +8,9 @@ keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -359,6 +362,12 @@ Im benutzerdefinierten Zeitbereich können Sie bis zu 31 aufeinander folgende Ta
 
 
 
+=== Vergrößern eines Zeitbereichs
+
+Beim Anzeigen eines Zeitreihen-Widgets (Linie, Spline, Bereich, gestapelter Bereich) oder eines Diagramms auf einer Landing Page können Sie mit der Maus über das Diagramm ziehen, um es zu vergrößern. Oben rechts auf dem Bildschirm können Sie dann diesen Zeitraum sperren, sodass Diagramme auf anderen Seiten Daten für diesen gesperrten Zeitraum widerspiegeln. Um die Sperre aufzuheben, wählen Sie einen anderen Zeitraum aus der Liste aus.
+
+
+
 == Dashboard-Zeit in einzelnen Widgets außer Kraft setzen
 
 Sie können die Einstellung für den Hauptzeitbereich des Dashboards in den einzelnen Widgets überschreiben. Diese Widgets zeigen Daten basierend auf dem eingestellten Zeitrahmen an, nicht auf dem Zeitrahmen des Dashboards.
@@ -506,8 +515,6 @@ image:ExpressionExample.png["Ausdruck in einem TabellenWidget"]
 == Variablen
 
 Variablen ermöglichen es Ihnen, die in einigen oder allen Widgets auf einem Dashboard angezeigten Daten gleichzeitig zu ändern. Durch Festlegen eines oder mehrerer Widgets für die Verwendung einer allgemeinen Variable führen Änderungen an einem Ort dazu, dass die in jedem Widget angezeigten Daten automatisch aktualisiert werden.
-
-Dashboard-Variablen enthalten verschiedene Typen, können in verschiedenen Feldern verwendet werden und müssen Regeln für die Benennung befolgen. Diese Konzepte werden hier erläutert.
 
 
 
@@ -886,3 +893,25 @@ image:Interpolation_Stair.png["Einfache gerade Linie, die die Interpolation der 
 
 
 image:Interpolation_Linear.png["Einfache gerade Linie zeigt lineare Interpolation mit zusätzlichen Datenpunkten zwischen jedem Ausgangspunkt"]
+
+
+
+=== Anomaliegrenzen in Line Widgets
+
+Wenn Sie ein Linien- oder Spline-Diagramm-Widget auf einem Dashboard oder einer Landing Page einfügen, können Sie das Diagramm im Kontext der *erwarteten Grenzen* für die Daten anzeigen. Sie können sich das vorstellen, wenn Sie nach Anomalien in den Mustern Ihrer Daten suchen.
+
+DII verwendet saisonale Daten (stündlich oder täglich), um Ober- und Untergrenzen festzulegen, wo sie _erwartet_ die Daten zu einem bestimmten Zeitpunkt fallen. Wenn die Daten die erwarteten Grenzen überschreiten oder unterschreiten, wird dies im Diagramm als Anomalie hervorgehoben.
+
+image:expected_bounds_example_showing_spike.png["Beispiel für Anomaliegrenzen: Zeigt einen Spitzenwert an, bei dem die tatsächlichen Daten über die erwartete Grenze hinausschießen, Breite=600"]
+
+Bearbeiten Sie das Widget und wählen Sie _Anomaly Bounds anzeigen_, um Anomaly Bounds anzuzeigen. Sie können zwischen zwei Erkennungsalgorithmen wählen:
+
+* *Adaptive Detector* passt sich schnell an Veränderungen an und ist somit für detaillierte Untersuchungen hilfreich.
+* * Smooth Detector* minimiert Rauschen und Fehlalarme, filtert kurzfristige Schwankungen heraus, während gleichzeitig signifikante Verschiebungen erkannt werden.
+
+
+Zusätzlich können Sie entweder _hourly_ oder _Daily_ Saisonalität anzeigen sowie die Empfindlichkeit der Erkennung einstellen. _High_ Sensitivity erkennt mehr Grenzübergänge, _Low_ Sensitivity erkennt weniger.
+
+image:expected_bounds_settings.png["Einstellungen für Anomaly-Grenzen, einschließlich des Erkennungsalgorithmus, Saisonalität und Empfindlichkeit"]
+
+Beachten Sie, dass Sie nur erwartete Grenzen anzeigen können, wenn das Diagramm auf eine einzelne Zeile eingestellt ist. Wenn Ihre Einstellungen oder Filter „Gruppieren nach“ mehrere Zeilen anzeigen oder wenn Sie mehrere Abfragen für das Widget festgelegt haben, wird die Option „erwartete Grenzen anzeigen“ deaktiviert.
