@@ -48,13 +48,13 @@ Um ein lokales Konto für Dateninfrastrukturanalysen auf Cluster-Ebene zu erstel
 security login rest-role create -role {role name} -api /api -access readonly
 security login rest-role create -role {role name} -api /api/cluster/agents -access all
 vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
-security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
 ....
+
+
 . Erstellen Sie den schreibgeschützten Benutzer mit dem folgenden Befehl. Sobald Sie den Befehl create ausgeführt haben, werden Sie aufgefordert, ein Passwort für diesen Benutzer einzugeben.
-+
- security login create -username ci_user -application http -authentication-method password -role ci_readonly
 
 
+ security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
 Wenn AD/LDAP-Konto verwendet wird, sollte der Befehl sein
 
  security login create -user-or-group-name DOMAIN\aduser/adgroup -application http -authentication-method domain -role ci_readonly

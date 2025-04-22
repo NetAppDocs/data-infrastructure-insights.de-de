@@ -131,6 +131,13 @@ ZFS-Benutzerkonto und -Passwort validieren
 
 
  a| 
+„Anfrage mit Status 404 \https://.....:215/api/access/v1" fehlgeschlagen
+ a| 
+Ihr ZFS-Array ist möglicherweise zu alt, um REST-API-Unterstützung zu erhalten. AK 2013.1.3.0 war die erste REST API-fähige ZFS OS-Version, und nicht alle ZFS-Appliances können darauf aktualisiert werden.
+
+
+
+ a| 
 „Konfigurationsfehler“ mit Fehlermeldung „REST Service ist deaktiviert“
  a| 
 Vergewissern Sie sich, dass DER REST-Dienst auf diesem Gerät aktiviert ist.

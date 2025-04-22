@@ -22,6 +22,8 @@ Dadurch wird ein User „NetAppCIUser“ mit einem Passwort von „Qwerty!“ ei
 
 Standardmäßig versucht dieser Collector, alle FOS-Geräte zu ermitteln, die Teil aller Fabrics sind, zu denen der Switch gehört.
 
+Bitte beachten Sie: FOS' Standard-schreibgeschützter Benutzer "user" hat KEINE Ansichtsberechtigungen auf allen virtuellen Fabrics, noch hat er "Chassis Role" Berechtigungen. Dies bedeutet, dass Sie mit „Benutzer“ mit Data Infrastructure Insights eine geringe Erfolgswahrscheinlichkeit haben, da diese sowohl die physische als auch die logische Konfiguration des FOS-Geräts verstehen müssen.
+
 
 
 == Terminologie
