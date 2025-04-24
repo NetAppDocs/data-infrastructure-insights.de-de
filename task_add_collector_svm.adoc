@@ -348,6 +348,43 @@ security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access
 ....
 
 
+== Collectors Migrieren
+
+Sie können einen Workload Security Collector problemlos von einem Agenten zum anderen migrieren, um einen effizienten Lastenausgleich von Sammlern über mehrere Agenten hinweg zu ermöglichen.
+
+
+
+=== Voraussetzungen
+
+* Der Quell-Agent muss sich im Status _Connected_ befinden.
+* Der zu migrierende Collector muss sich im Status _Running_ befinden.
+
+
+Hinweis:
+
+* Migration wird sowohl für Daten- als auch für Benutzerverzeichnissammler unterstützt.
+* Die Migration eines Collectors wird für manuell verwaltete Mandanten nicht unterstützt.
+
+
+
+
+=== Collector migrieren
+
+Gehen Sie wie folgt vor, um einen Collector zu migrieren:
+
+. Rufen Sie die Seite „Collector bearbeiten“ auf.
+. Wählen Sie einen Zielagenten aus der Dropdown-Liste „Agent“ aus.
+. Klicken Sie auf die Schaltfläche „Collector speichern“.
+
+
+Workload Security verarbeitet die Anforderung. Bei erfolgreicher Migration wird der Benutzer zur Seite Collectors List weitergeleitet. Im Fehlerfall wird auf der Seite Bearbeiten eine entsprechende Meldung angezeigt.
+
+Hinweis: Alle Konfigurationsänderungen, die zuvor auf der Seite „Collector bearbeiten“ vorgenommen wurden, bleiben weiterhin gültig, wenn der Collector erfolgreich zum Ziel-Agent migriert wurde.
+
+image:ws_migrate_collector_to_another_agent.png["Migrieren Sie einen Collector, indem Sie einen anderen Agent auswählen"]
+
+
+
 == Fehlerbehebung
 
 Tipps zur Fehlerbehebung finden Sie auf der link:troubleshooting_collector_svm.html["Fehlerbehebung für den SVM Collector"] Seite.

@@ -52,8 +52,7 @@ Starten Sie den Collector nach der Größenänderung von der Benutzeroberfläche
 Sie können auch versuchen, sich mithilfe von ssh unter Verwendung der Cluster-Management-IP beim Cluster anzumelden und die Agent-IP zu pingen. Stellen Sie sicher, dass die Agent-IP pingfähig ist:
 
 +
-_Network ping -vserver <vserver name> -Destination <Agent IP> -lif <Lif Name> -show-Detail_
-
+ network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail
 +
 Wenn nicht pingfähig, stellen Sie sicher, dass die Netzwerkeinstellungen in ONTAP korrekt sind, so dass der Agent-Rechner pingfähig ist.
 
@@ -67,7 +66,7 @@ Wenn nicht pingfähig, stellen Sie sicher, dass die Netzwerkeinstellungen in ONT
 .. Warten Sie, bis der Fehler angezeigt wird. Stoppen Sie die Paketverfolgung in ONTAP.
 .. Öffnen Sie die Paketverfolgung von ONTAP. Sie ist an diesem Standort verfügbar
 +
- \https://<cluster_mgmt_ip>/spi/<clustername>/etc/log/packet_traces/
+ https://<cluster_mgmt_ip>/spi/<clustername>/etc/log/packet_traces/
 .. Stellen Sie sicher, dass ein SYN von ONTAP zum Feld „Agent“ vorhanden ist.
 .. Wenn es kein SYN von ONTAP gibt, dann ist es ein Problem mit Firewall in ONTAP.
 .. Öffnen Sie die Firewall in ONTAP, sodass ONTAP die Agent Box verbinden kann.
@@ -92,7 +91,7 @@ Wenn nicht pingfähig, stellen Sie sicher, dass die Netzwerkeinstellungen in ONT
 . Es ist sehr wahrscheinlich, dass eine Firewall die erforderlichen Ports im Agent-Rechner blockiert. Überprüfen Sie, ob der Port-Bereich 35000-55000/tcp geöffnet ist, damit der Agent-Rechner eine Verbindung von der SVM herstellen kann. Stellen Sie außerdem sicher, dass keine Firewalls von der ONTAP-Seite aus aktiviert sind, die die Kommunikation mit dem Agenten-Rechner blockieren.
 . Geben Sie den folgenden Befehl in das Feld Agent ein, und stellen Sie sicher, dass der Portbereich geöffnet ist.
 +
- sudo iptables-save \| grep 3500*
+ sudo iptables-save | grep 3500*
 +
 Die Beispielausgabe sollte wie folgt aussehen:
 
@@ -109,7 +108,7 @@ link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nm
 
 . SSH zum SVM/Cluster, den Sie überwachen möchten. Pingen Sie die Agent-Box über die SVM-Daten-LIF (mit CIFS, Unterstützung von NFS-Protokollen) und stellen Sie sicher, dass Ping funktioniert:
 +
- _network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail_
+ network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail
 +
 Wenn nicht pingfähig, stellen Sie sicher, dass die Netzwerkeinstellungen in ONTAP korrekt sind, so dass der Agent-Rechner pingfähig ist.
 
@@ -126,7 +125,12 @@ Im Prinzip sollte in einem Mandanten nur eine SVM über 1 Datensammler hinzugef�
 *Problem:* Keine Ereignisse auf der Aktivitäts-Seite gesehen. *Teste das:*
 
 . Überprüfen Sie, ob sich der ONTAP-Collector im Status „LÄUFT“ befindet. Wenn ja, stellen Sie sicher, dass einige cifs-Ereignisse auf den cifs-Client-VMs durch das Öffnen einiger Dateien generiert werden.
-. Wenn keine Aktivitäten angezeigt werden, melden Sie sich bei der SVM an, und geben Sie den folgenden Befehl ein. _<SVM>Ereignisprotokoll show -source fpolicy_ Stellen Sie sicher, dass fpolicy keine Fehler enthält.
+. Wenn keine Aktivitäten angezeigt werden, melden Sie sich bei der SVM an, und geben Sie den folgenden Befehl ein.
++
+ <SVM>event log show -source fpolicy
++
+Stellen Sie sicher, dass keine Fehler im Zusammenhang mit fpolicy vorliegen.
+
 . Wenn keine Aktivitäten angezeigt werden, melden Sie sich bei der SVM an. Geben Sie den folgenden Befehl ein:
 +
  <SVM>fpolicy show
@@ -161,7 +165,7 @@ link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nm
 
 ****
 ****
-*Problem:* der Datensammler wechselt in den Fehlerzustand und geht dann nach einiger Zeit in den LAUFENDEN Zustand zurück, dann wieder zurück zu Fehler. Dieser Zyklus wiederholt sich. *Probieren Sie dies aus:* *Dies geschieht typischerweise im folgenden Szenario:
+*Problem:* der Datensammler wechselt in den Fehlerzustand und geht dann nach einiger Zeit in den LAUFENDEN Zustand zurück, dann wieder zurück zu Fehler. Dieser Zyklus wiederholt sich. *Probieren Sie dies aus:* Dies geschieht typischerweise im folgenden Szenario:
 
 . Es werden mehrere Datensammler hinzugefügt.
 . Die Datensammler, die diese Art von Verhalten zeigen, haben 1 SVM zu diesen Datensammlern hinzugefügt. Das bedeutet, dass 2 oder mehr Datensammler mit 1 SVM verbunden sind.
@@ -206,7 +210,7 @@ Durch Aktivierung der Workload-Sicherheit wird die ONTAP-Performance beeinträch
 
 ****
 ****
-*Problem:* Data Collector zeigt die Fehlermeldung: "Fehler: Konnte den Zustand des Collectors innerhalb von 2 Wiederholungen nicht ermitteln, versuchen Sie den Collector erneut zu starten (Fehlercode: AGENT008)". * Versuchen Sie, thi:*
+*Problem:* Data Collector zeigt die Fehlermeldung: "Fehler: Konnte den Zustand des Collectors innerhalb von 2 Wiederholungen nicht ermitteln, versuchen Sie den Collector erneut zu starten (Fehlercode: AGENT008)". *Teste das:*
 
 . Scrollen Sie auf der Seite Data Collectors rechts neben dem Datensammler, der den Fehler zeigt, und klicken Sie auf das Menü mit 3 Punkten. Wählen Sie _Bearbeiten_. Geben Sie das Passwort des Datensammlers erneut ein. Speichern Sie den Datensammler, indem Sie auf die Schaltfläche _Save_ drücken. Der Data Collector wird neu gestartet, und der Fehler sollte behoben werden.
 . Der Agent-Rechner kann möglicherweise nicht genug CPU- oder RAM-Reserve haben, weshalb die DSCs ausfallen. Überprüfen Sie die Anzahl der Datensammler, die dem Agenten auf dem Computer hinzugefügt werden. Wenn es mehr als 20 ist, erhöhen Sie die CPU- und RAM-Kapazität des Agent-Rechners. Sobald die CPU und der RAM erhöht sind, werden die DSCs in die Initialisierung und dann automatisch in den laufenden Zustand versetzt. Schauen Sie sich den Größenberater auf anlink:concept_cs_event_rate_checker.html["Auf dieser Seite"].
