@@ -8483,7 +8483,6 @@
   <block id="12deeaac5f633c54b730f8c247dbf7e0" category="paragraph">Neuere Versionen des Überwachungsoperators können mit den folgenden Befehlen deinstalliert werden:</block>
   <block id="aee5f180cc531b30ec6cf8dcf509d9b8" category="paragraph">Wenn der Überwachungsoperator in seinem eigenen dedizierten Namespace bereitgestellt wurde, löschen Sie den Namespace:</block>
   <block id="97e76f0c81cc1c26b3d8ffe0d972c5af" category="paragraph">Wenn der erste Befehl „Keine Ressourcen gefunden“ zurückgibt, verwenden Sie die folgenden Anweisungen, um ältere Versionen des Überwachungsoperators zu deinstallieren.</block>
-  <block id="0b14d0fbc4256c7ec7c3bb39b2c28854" category="paragraph">Führen Sie jeden der folgenden Befehle in der Reihenfolge aus. Abhängig von Ihrer aktuellen Installation können einige dieser Befehle Nachrichten ‘object not found’ zurückgeben. Diese Meldungen können sicher ignoriert werden.</block>
   <block id="82a8cca794947463478c2f08445a8ff4" category="paragraph">Wenn zuvor eine Sicherheitskontextbeschränkung erstellt wurde:</block>
   <block id="a945216a5c61e628c867b8948c797454" category="section-title">Über Kube-State-Metrics</block>
   <block id="951a50d1b55837ddb5ff4cb5af4ebc8a" category="paragraph">Der NetApp Kubernetes Monitoring Operator installiert seine eigenen kube-State-Metriken, um Konflikte mit anderen Instanzen zu vermeiden.</block>
@@ -9360,7 +9359,6 @@
   <block id="9931bdf1120e743a2d938e061f7df898" category="paragraph">Es wird eine Bestätigungsmeldung angezeigt, in der Sie gefragt werden, ob Sie die Regel löschen möchten.</block>
   <block id="b101d3b5c8c4309f4cffa3adfd387b6b" category="list-text">Klicken Sie auf *OK*</block>
   <block id="e42dae64f8e80d611352315992a2460d" category="doc">Anwendungen Werden Erstellt</block>
-  <block id="598c4639acaf0f3c5a419f9cf865ef56" category="paragraph">Wenn Sie die Anwendung einer Geschäftseinheit zuordnen möchten, müssen Sie die Geschäftseinheit erstellen, bevor Sie die Anwendung definieren.</block>
   <block id="ba52eab802a385ced7d6e9782614bf0b" category="paragraph">Anhand von Einblicke in die Dateninfrastruktur lassen sich Daten von Applikationen-Assets nachverfolgen, beispielsweise zur Nutzung oder zur Kostenberichterstellung.</block>
   <block id="91ee28fc3faa982ecdc71598fe7ce8b9" category="list-text">Klicken Sie im Menü Data Infrastructure Insights auf *Observability &gt; Enrich &gt; Applications*. Wählen Sie</block>
   <block id="8358341ae527ee11b5b1dc8e8f22edea" category="paragraph">Das Dialogfeld Anwendung hinzufügen wird angezeigt.</block>
@@ -12379,4 +12377,5 @@
   <block id="839fd302fc2dc5dee66803e94e9f95dc" category="paragraph">Stellen Sie sicher, dass keine Fehler im Zusammenhang mit fpolicy vorliegen.</block>
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">*Problem:* der Datensammler wechselt in den Fehlerzustand und geht dann nach einiger Zeit in den LAUFENDEN Zustand zurück, dann wieder zurück zu Fehler. Dieser Zyklus wiederholt sich. *Probieren Sie dies aus:* Dies geschieht typischerweise im folgenden Szenario:</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*Problem:* Data Collector zeigt die Fehlermeldung: "Fehler: Konnte den Zustand des Collectors innerhalb von 2 Wiederholungen nicht ermitteln, versuchen Sie den Collector erneut zu starten (Fehlercode: AGENT008)". *Teste das:*</block>
+  <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">Führen Sie jeden der folgenden Befehle in der Reihenfolge aus. Abhängig von Ihrer aktuellen Installation geben einige dieser Befehle möglicherweise Meldungen „Object not found“ zurück. Diese Meldungen können sicher ignoriert werden.</block>
 </blocks>

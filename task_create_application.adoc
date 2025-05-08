@@ -12,9 +12,6 @@ keywords: application, create application,
 [role="lead"]
 Zum Nachverfolgen von Daten, die bestimmten auf dem Mandanten ausgeführten Applikationen zugeordnet sind, können Sie die Applikationen in Data Infrastructure Insights definieren.
 
-.Bevor Sie beginnen
-Wenn Sie die Anwendung einer Geschäftseinheit zuordnen möchten, müssen Sie die Geschäftseinheit erstellen, bevor Sie die Anwendung definieren.
-
 .Über diese Aufgabe
 Anhand von Einblicke in die Dateninfrastruktur lassen sich Daten von Applikationen-Assets nachverfolgen, beispielsweise zur Nutzung oder zur Kostenberichterstellung.
 
