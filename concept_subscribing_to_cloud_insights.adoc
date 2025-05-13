@@ -159,7 +159,7 @@ Die Workload-Sicherheit wird nach Cluster gemessen und verwendet denselben Ansat
 
 Sie können Ihre Workload Security-Nutzung auf der Seite *Admin > Abonnement* auf der Registerkarte *Workload Security* anzeigen.
 
-image:ws_metering_example_page.png["„Admin > Subscription > Workload Security“-Registerkarte mit High-End-, Midrange- und Entry-Level-Node-Anzahl“"]
+image:ws_metering_example_page.png["Admin > Subscription > Registerkarte Workload Security zeigt die Anzahl der Nodes der High-End-, Midrange- und Einstiegsklasse"]
 
 
 NOTE: Bei bestehenden Workload Security-Abonnements wird die MU-Nutzung angepasst, sodass die Node-Nutzung keine verwalteten Einheiten verbraucht. Data Infrastructure Insights misst die Nutzung von Messgeräten, um die Compliance mit der lizenzierten Nutzung sicherzustellen.

@@ -4084,8 +4084,6 @@
   <block id="f057d707b9d5c17f0fad56f8204f6bff" category="section-title">Messung Der Workload-Sicherheit</block>
   <block id="c3ef097c271469a3ca9718d35396087c" category="paragraph">Die Workload-Sicherheit wird nach Cluster gemessen und verwendet denselben Ansatz wie die Observability-Messung.</block>
   <block id="3943920606f23b23925f15408e26cae2" category="paragraph">Sie können Ihre Workload Security-Nutzung auf der Seite *Admin &gt; Abonnement* auf der Registerkarte *Workload Security* anzeigen.</block>
-  <block id="36e75837cd661882faf4ce93d35cafea" category="inline-image-macro">„Admin &amp;gt; Subscription &amp;gt; Workload Security“-Registerkarte mit High-End-, Midrange- und Entry-Level-Node-Anzahl“</block>
-  <block id="78770d4128ce656a56bd8e8ecd580a0e" category="paragraph"><block ref="9d3e296bb7e7c4cf7ec09d1ec6e96740" category="inline-image-macro-rx" type="image"></block></block>
   <block id="daba1c6ff8590913bcb10d43d3bfcf13" category="admonition">Bei bestehenden Workload Security-Abonnements wird die MU-Nutzung angepasst, sodass die Node-Nutzung keine verwalteten Einheiten verbraucht. Data Infrastructure Insights misst die Nutzung von Messgeräten, um die Compliance mit der lizenzierten Nutzung sicherzustellen.</block>
   <block id="c015ba02347af3d8c00ede570637622a" category="section-title">Wie kann ich mich anmelden?</block>
   <block id="99d34ca2583ae7363bd4e07f9b2d98cc" category="inline-xref">Self-Subscribe</block>
@@ -12378,4 +12376,6 @@
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">*Problem:* der Datensammler wechselt in den Fehlerzustand und geht dann nach einiger Zeit in den LAUFENDEN Zustand zurück, dann wieder zurück zu Fehler. Dieser Zyklus wiederholt sich. *Probieren Sie dies aus:* Dies geschieht typischerweise im folgenden Szenario:</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*Problem:* Data Collector zeigt die Fehlermeldung: "Fehler: Konnte den Zustand des Collectors innerhalb von 2 Wiederholungen nicht ermitteln, versuchen Sie den Collector erneut zu starten (Fehlercode: AGENT008)". *Teste das:*</block>
   <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">Führen Sie jeden der folgenden Befehle in der Reihenfolge aus. Abhängig von Ihrer aktuellen Installation geben einige dieser Befehle möglicherweise Meldungen „Object not found“ zurück. Diese Meldungen können sicher ignoriert werden.</block>
+  <block id="d873c97dd6dca1c7bd30ed50b82bee0f" category="inline-image-macro">Admin &amp;gt; Subscription &amp;gt; Registerkarte Workload Security zeigt die Anzahl der Nodes der High-End-, Midrange- und Einstiegsklasse</block>
+  <block id="a2efde4371837d491f7f2d093cb687a2" category="paragraph"><block ref="6239b49ee0db956af965dd1ce0c92bfa" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
