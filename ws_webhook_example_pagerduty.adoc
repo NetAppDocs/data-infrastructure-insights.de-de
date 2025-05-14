@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: ws_webhook_example_pagerduty.html 
+keywords: webhook, notification, PagerDuty, integration 
+summary: Erstellen Sie einen Workload Security Webhook für PagerDuty, um eine Sicherheitswarnung zu erhalten 
+---
+= Workload Security Webhook Beispiel für PagerDuty
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Webhooks können Benutzer über einen benutzerdefinierten Webhook-Kanal Benachrichtigungen an verschiedene Anwendungen senden. Diese Seite enthält ein Beispiel zum Einrichten von Webhooks für PagerDuty.
+
+
+NOTE: Diese Seite bezieht sich auf Anweisungen von Dritten, die Änderungen unterliegen. Die aktuellsten Informationen finden Sie imlink:https://support.pagerduty.com/docs/services-and-integrations["PagerDuty-Dokumentation"].
+
+
+
+== PagerDuty Setup:
+
+. Navigieren Sie in PagerDuty zu *Dienste > Dienstverzeichnis* und klicken Sie auf die Schaltfläche *+Neuer Dienst*.
+. Geben Sie einen _Name_ ein und wählen Sie _Use our API directly_. Wählen Sie _Service Hinzufügen_.
++
+image:Webhooks_PagerDutyScreen1.png["Bildschirm PagerDuty"]
+
+. Wählen Sie die Registerkarte _Integrationen_, um den *Integrationsschlüssel* anzuzeigen. Sie benötigen diesen Schlüssel, wenn Sie den Data Infrastructure Insights Webhook unten erstellen.
+
+
+. Gehen Sie zu *Incidents* oder *Services*, um Benachrichtigungen anzuzeigen.
++
+image:ws_pagerduty_incidents_list.png["pagerduty-Liste Beispiel für Vorfälle, width=700"]
+
+
+
+
+
+== Workload Security PagerDuty Webhook erstellen:
+
+* Navigieren Sie zu Admin > Benachrichtigungen, und wählen Sie die Registerkarte „_Workload Security Webhooks_“ aus. Wählen Sie „+ Webhook“, um einen neuen Webhook zu erstellen.
+* Geben Sie dem Webhook einen aussagekräftigen Namen.
+* Wählen Sie im Dropdown _Template Type_ die Option _PagerDuty Trigger_ aus.
+* Erstellen Sie einen benutzerdefinierten Parameterschlüssel mit dem Namen _routingKey_ und setzen Sie den Wert auf den oben erstellten PagerDuty _Integration Key_.
+
+
+image:Webhooks_Custom_Secret_Routing_Key.png["Festlegen des Routing-Schlüssels, width=300"]
+
+image:ws_webhook_pagerduty_example.png["Workload Security PagerDuty Webhook Beispiel, width=400"]
+
+
+
+== Benachrichtigungen über Webhook
+
+* Um Ereignisse über Webhook zu benachrichtigen, navigieren Sie zu _Workload Security > Policies_. Wählen Sie _+Angriffsrichtlinie_ oder _+Warnrichtlinie_.
+* Geben Sie einen aussagekräftigen Richtliniennamen ein.
+* Wählen Sie erforderliche Angriffstypen, Geräte, an die die Richtlinie angehängt werden soll, und die erforderlichen Aktionen aus.
+* Wählen Sie unter _Webhooks Notifications_ die gewünschten PagerDuty Webhooks aus. Speichern Sie die Richtlinie.
+
+
+Hinweis: Webhooks können auch vorhandenen Richtlinien zugeordnet werden, indem sie bearbeitet werden.
+
+image:ws_add_attack_policy.png["Dialogfeld „Angriffsrichtlinie hinzufügen“ mit Webhook, width=400"]
