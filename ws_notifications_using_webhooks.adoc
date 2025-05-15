@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: ws_notifications_using_webhooks.html 
+keywords: alert, webhook, notification 
+summary: Erstellen Sie einen Webhook für Warnmeldungen zur Workload-Sicherheit. 
+---
+= Benachrichtigungen zur Workload-Sicherheit über Webhooks
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Webhooks ermöglichen es Benutzern, kritische oder Warnbenachrichtigungen über einen angepassten Webhook-Kanal an verschiedene Anwendungen zu senden.
+
+Viele kommerzielle Anwendungen unterstützen Webhooks als Standard-Eingabeschnittstelle, zum Beispiel: Slack, PagerDuty, Teams und Discord. Durch die Unterstützung eines generischen, anpassbaren Webhook-Kanals kann Workload Security viele dieser Bereitstellungskanäle unterstützen. Informationen zur Konfiguration der Webhooks finden Sie auf den Webseiten der jeweiligen Anwendung. Slack bietet zum Beispiel link:https://api.slack.com/messaging/webhooks["Dieser Leitfaden ist hilfreich"].
+
+Sie können mehrere Webhook-Kanäle erstellen, jeder Kanal ist für einen anderen Zweck, separate Anwendungen, verschiedene Empfänger usw. bestimmt
+
+Die Instanz des Webhook-Kanals besteht aus den folgenden Elementen
+
+|===
+| Name | Beschreibung 
+
+
+| URL | Webhook-Ziel-URL, einschließlich des Präfixes http:// oder https:// zusammen mit den url-Params 
+
+
+| Methode | GET/POST - Standard ist POST 
+
+
+| Benutzerdefinierte Kopfzeile | Geben Sie hier benutzerdefinierte Kopfzeilen an 
+
+
+| Nachrichtentext | Setzen Sie den Text Ihrer Nachricht hier ein 
+
+
+| Standardwarnparameter | Listet die Standardparameter für den Webhook auf 
+
+
+| Benutzerdefinierte Parameter und Geheimnisse | Mit benutzerdefinierten Parametern und Geheimnissen können Sie eindeutige Parameter und sichere Elemente wie Passwörter hinzufügen 
+|===
+
+
+== Erstellen eines Webhooks
+
+Um einen Workload Security Webhook zu erstellen, gehen Sie zu Admin > Benachrichtigungen und wählen Sie die Registerkarte „Workload Security Webhooks“. Das folgende Bild zeigt einen Beispielbildschirm für die Erstellung von Slack-Webhook.
+
+Hinweis: Benutzer muss ein Workload Security _Admin_ sein, um Workload Security Webhooks erstellen und verwalten zu können.
+
+image:ws_webhook_slack_example.png["Webhook-Slack-Beispiel für Workload Security, width=500"]
+
+* Geben Sie die entsprechenden Informationen für jedes der Felder ein, und klicken Sie auf „Speichern“.
+* Sie können auch auf die Schaltfläche "Webhook testen" klicken, um die Verbindung zu testen. Beachten Sie, dass der Nachrichtentext (ohne Ersatz) entsprechend der ausgewählten Methode an die definierte URL gesendet wird.
+* SWS-Webhooks umfassen eine Reihe von Standardparametern. Außerdem können Sie eigene benutzerdefinierte Parameter oder Geheimnisse erstellen.
+
+
+
+
+== Parameter: Was sind sie und wie man sie benutzt?
+
+Bei den Alarmparametern handelt es sich um dynamische Werte, die pro Meldung ausgefüllt werden. Beispiel: Der Parameter _%%severity%%_ wird durch den Schweregrad-Typ der Meldung ersetzt.
+
+Beachten Sie, dass beim Klicken auf die Schaltfläche „Webhook testen“ keine Ersetzungen durchgeführt werden; der Test sendet eine Nutzlast, die die Platzhalter des Parameters (_%%<param-name>%_) anzeigt, sie jedoch nicht durch Daten ersetzt.
+
+
+
+=== Benutzerdefinierte Parameter und Geheimnisse
+
+In diesem Abschnitt können Sie benutzerdefinierte Parameter und/oder Geheimnisse hinzufügen, die Sie wünschen. Ein benutzerdefinierter Parameter oder Secret kann sich im URL- oder Nachrichtenkörper befinden. Secrets ermöglichen es dem Benutzer, einen sicheren benutzerdefinierten Parameter wie Passwort, apiKey usw. zu konfigurieren
+
+Das folgende Beispielbild zeigt, wie benutzerdefinierte Parameter bei der Webhook-Erstellung verwendet werden.
+
+image:ws_webhook_parameters_example.png["Workload Security Webhook mit Parametern, width=800"]
+
+
+
+== Workload Security Webhooks List Page
+
+Auf der Listenseite Webhooks werden der Name, erstellt von, erstellt am, Status, sicher, und zuletzt gemeldete Felder. Hinweis: Der Wert der Spalte 'status' ändert sich aufgrund des Ergebnisses des letzten Webhook-Triggers weiter. Im Folgenden finden Sie Beispiele für Statusergebnisse.
+
+|===
+
+
+| Status | Beschreibung 
+
+
+| OK | Benachrichtigung erfolgreich gesendet. 
+
+
+| 403 | Verboten. 
+
+
+| 404 | Die URL wurde nicht gefunden. 
+
+
+| 400  a| 
+Ungültige Anfrage. Dieser Status wird möglicherweise angezeigt, wenn im Nachrichtentext ein Fehler auftritt, z. B.:
+
+* Schlecht formatierter Json.
+* Ungültiger Wert für reservierte Schlüssel. PagerDuty akzeptiert beispielsweise nur „kritisch/Warnung/Fehler/Info“ für „Schweregrad“. Jedes andere Ergebnis kann einen 400-Status ergeben.
+* Anwendungsspezifische Validierungsfehler. Slack erlaubt beispielsweise maximal 10 Felder innerhalb eines Abschnitts. Wenn mehr als 10 enthalten sind, kann dies zu einem 400-Status führen.
+
+
+
+
+| 410 | Ressource ist nicht mehr verfügbar 
+|===
+Spalte „Letzte Meldung“ zeigt die Zeit an, zu der der Webhook zuletzt ausgelöst wurde.
+
+Auf der Webhooks-Listingseite können Benutzer auch Webhooks bearbeiten/duplizieren/löschen.
+
+
+
+== Konfigurieren der Webhook-Benachrichtigung in der Warnungsrichtlinie
+
+Um einer Warnungsrichtlinie eine Webhook-Benachrichtigung hinzuzufügen, gehen Sie zu -Workload-Sicherheit > Richtlinien-, und wählen Sie eine vorhandene Richtlinie aus, oder fügen Sie eine neue Richtlinie hinzu. Wählen Sie im Bereich _Actions_ > _Webhook Notifications_ die gewünschten Webhooks aus.
+
+image:ws_edit_attack_policy.png["Dialogfeld „Angriffsrichtlinie bearbeiten“ mit der Dropdown-Liste „Webhook“, Breite=500"]
+
+Webhook-Benachrichtigungen sind an Richtlinien gebunden. Wenn der Angriff (RW/DD/WARN) stattfindet, wird die konfigurierte Aktion (Snapshot erstellen/Benutzerblockierung durchführen) ausgeführt und die zugehörige Webhook-Benachrichtigung ausgelöst.
+
+Hinweis: E-Mail-Benachrichtigungen sind unabhängig von Richtlinien. Sie werden wie gewohnt ausgelöst.
+
+* Wenn eine Richtlinie angehalten wird, werden Webhook-Benachrichtigungen nicht ausgelöst.
+* Mehrere Webhooks können an eine einzelne Richtlinie angehängt werden. Es wird jedoch empfohlen, maximal 5 Webhooks an eine Richtlinie anzuhängen.
+
+
+
+
+=== Webhook-Beispiele Für Workload-Sicherheit
+
+Webhooks für link:ws_webhook_example_slack.html["Slack"] Webhooks link:ws_webhook_example_pagerduty.html["PagerDuty"]für Webhooks link:ws_webhook_example_teams.html["Teams Aus"]link:ws_webhook_example_discord.html["Abschnur"]

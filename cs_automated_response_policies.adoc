@@ -18,7 +18,7 @@ Antwortrichtlinien lösen Aktionen aus, wie z. B. das Erstellen eines Snapshots 
 
 Sie können Richtlinien für bestimmte Geräte oder alle Geräte festlegen. Um eine Antwortrichtlinie festzulegen, wählen Sie *Admin > Automatische Antwortrichtlinien* aus und klicken Sie auf die entsprechende Schaltfläche *+Policy*. Sie können Richtlinien für Angriffe oder Warnungen erstellen.
 
-image:Automated_Response_Screenshot.png["Angriffsrichtlinie Erstellen"]
+image:ws_add_attack_policy.png["Fügen Sie ein Dialogfeld „Angriffsrichtlinie“ hinzu, in dem das Dropdown-Menü „Webhook"]
 
 Sie müssen die Richtlinie mit einem eindeutigen Namen speichern.
 
@@ -27,6 +27,8 @@ Um eine automatische Antwortzeit zu deaktivieren (z. B. Snapshot erstellen), üb
 Wenn eine Warnung für die angegebenen Geräte (oder alle Geräte, falls ausgewählt) ausgelöst wird, erstellt die Richtlinie zur automatischen Reaktion einen Snapshot Ihrer Daten. Sie können den Snapshot-Status auf der link:cs_alert_data.html#the-alert-details-page["Details zu Warnmeldungen"]anzeigen.
 
 Weitere Informationen zur Einschränkung des Benutzerzugriffs über IP finden link:cs_restrict_user_access.html["Einschränken Des Benutzerzugriffs"]Sie auf der Seite.
+
+Sie können eine oder mehrere Webhooks an eine Richtlinie anhängen, um benachrichtigt zu werden, wenn eine Warnung erstellt und Maßnahmen ergriffen werden. Es wird empfohlen, nicht mehr als 10 Webhooks zu einer Richtlinie hinzuzufügen.Denken Sie daran, dass Webhook-Benachrichtigungen nicht ausgelöst werden, wenn eine Richtlinie angehalten wird.
 
 Sie können eine Richtlinie für automatische Reaktionen ändern oder anhalten, indem Sie die Option im Dropdown-Menü der Richtlinie auswählen.
 

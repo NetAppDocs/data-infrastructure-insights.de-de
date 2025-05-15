@@ -57,49 +57,6 @@ Wenn Sie Benachrichtigungen für Datensammler konfiguriert haben, werden diese B
 '''
 
 
-== April 2025
-
-
-
-=== ML-Powered Anomaly Bounds in Line Widgets für proaktive Problemlösung
-
-Zur Behebung von Leistungsproblemen mit Linien- oder Spline-Diagramm-Widgets können Sie nun neben den tatsächlichen Kennzahlen auch erwartete Verhaltensgrenzen anzeigen, sodass Sie zwischen normalen und abnormalen metrischen Trends unterscheiden können.
-
-BEI DII Machine Learning mit saisonaler Datenanalyse werden intelligente Schwellenwerte festgelegt, die auf historischen Mustern basieren. Wenn Kennzahlen von den erwarteten Bereichen abweichen, weist das System diese als Anomalien auf, was eine schnelle Problemerkennung ermöglicht, die mittlere Zeit bis zur Lösung verkürzt und Probleme beseitigt, bevor sie den Betrieb beeinträchtigen.
-
-image:expected_bounds_example_showing_spike.png["Erwartete Grenzen, die einen Spitzenwert über, Breite = 300 anzeigen"]
-
-
-
-=== Optimierung der VMware-Kosten mit VSAN Storage Support
-
-Unsere Funktion zur VM-Optimierung umfasst jetzt auch Unterstützung für VMware Umgebungen mit VSAN Storage. Neben der CPU- und Arbeitsspeicherauslastung wird in der Analyse jetzt lokaler VSAN-Storage für Empfehlungen zur Rückgewinnung berücksichtigt, wodurch Sie die Lizenzkosten weiter senken können.
-
-image:vm_optimization_with_vsan.png["Beispiel für die VM-Optimierung mit VSAN"]
-
-
-
-=== Alarmdetails auf Knopfdruck
-
-Mit dem neuen Schiebefeld ist die Untersuchung von Warnmeldungen einfacher denn je. Wählen Sie eine Warnmeldung aus, um Details für diese Warnung anzuzeigen, und wechseln Sie einfach zwischen Warnmeldungen, ohne Ihren Platz bei der Untersuchung von Problemen zu verlieren.
-
-image:alert_slideout_example.png["Warnhinweis für leichtere Navigation"]
-
-
-
-=== Workload-Sicherheit – Asynchroner Export Für Forensik
-
-Der Export von forensischen Daten kann je nach Datenmenge zwischen einigen Sekunden und mehreren Stunden dauern. Workload Security exportiert diese Daten asynchron, sodass Sie weiterarbeiten können, während die .CSV-Datei kompiliert wird.
-
-
-
-=== Data Collector-Benachrichtigungen in Regeln gruppiert
-
-Wenn Sie Benachrichtigungen für Datensammler konfiguriert haben, werden diese Benachrichtigungen ab April 15 in Benachrichtigungsregeln behandelt, mit einer einzigen Regel für Datensammler mit identischen Empfängern. Sammler mit unterschiedlichen Empfängern haben separate Regeln. Vorhandene Collector-Benachrichtigungen werden zu Benachrichtigungsregeln migriert.
-
-'''
-
-
 == März 2025
 
 

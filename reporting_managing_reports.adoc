@@ -97,4 +97,10 @@ Hier finden Sie Vorschläge zur Fehlerbehebung bei Problemen mit der Berichterst
 
 
 | Bei der Planung eines Berichts, der per E-Mail versendet werden soll, wird der Name des angemeldeten Benutzers im Feld „an“ der E-Mail vorausgefüllt. Der Name ist jedoch in der Form von "Vorname Nachname" (Vorname, Leerzeichen, Nachname). Da es sich hierbei nicht um eine gültige E-Mail-Adresse handelt, wird die E-Mail nicht gesendet, wenn der geplante Bericht ausgeführt wird. | Löschen Sie bei der Planung des zu sendenden Berichts per E-Mail den vorausgefüllten Namen und geben Sie eine gültige, korrekt formatierte E-Mail-Adresse in das Feld „To“ ein. 
+
+
+| Mein geplanter Bericht wird per E-Mail gesendet, aber der Bericht kann nicht abgerufen werden, wenn der Ursprung aus dem Ordner „My Content“ stammt. | Um dies zu vermeiden, muss der Bericht oder die Berichtsansicht im Ordner „Team Content > Custom Reports - xxxxxx“ gespeichert und der Zeitplan aus dieser gespeicherten Version erstellt werden. Der Ordner „Custom Reports - xxxxxx“ ist für alle Benutzer auf dem Mandanten sichtbar. 
+
+
+| Beim Speichern eines Jobs wird im Ordner möglicherweise „Team Content“ mit der Inhaltsliste aus „Custom Reports - xxxxxx“ angezeigt. Sie können den Job hier jedoch nicht speichern, da Cognos der Meinung ist, dass dies der Ordner „Team Content“ ist, in dem Sie keinen Schreibzugriff haben. | Die Umgehung besteht darin, einen neuen Ordner mit einem eindeutigen Namen (d. h. „NewFolder“) zu erstellen und dort zu speichern, oder in „My Content“ zu speichern und dann in „Custom Reports - xxxxxx“ zu kopieren/zu verschieben. 
 |===

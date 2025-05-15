@@ -28,7 +28,7 @@ NOTE: Diese Seite bezieht sich auf Anweisungen von Dritten, die Änderungen unte
 +
 image:Webhooks_PagerDutyScreen1.png["Bildschirm PagerDuty"]
 
-. Wählen Sie die Registerkarte _Integrationen_, um den *Integrationsschlüssel* anzuzeigen. Sie benötigen diesen Schlüssel, wenn Sie den Data Infrastructure Insights Webhook unten erstellen.
+. Wählen Sie die Registerkarte _Integrationen_, um den *Integrationsschlüssel* anzuzeigen. Sie benötigen diesen Schlüssel, wenn Sie den Webhook Workload Security unten erstellen.
 
 
 . Gehen Sie zu *Incidents* oder *Services*, um Benachrichtigungen anzuzeigen.

@@ -49,9 +49,7 @@ security login rest-role create -role {role name} -api /api -access readonly
 security login rest-role create -role {role name} -api /api/cluster/agents -access all
 vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
 ....
-
-
-. Erstellen Sie den schreibgeschützten Benutzer mit dem folgenden Befehl. Sobald Sie den Befehl create ausgeführt haben, werden Sie aufgefordert, ein Passwort für diesen Benutzer einzugeben.
+. Erstellen Sie den schreibgeschützten Benutzer mit dem folgenden Befehl. Sobald Sie den Befehl create ausgeführt haben, werden Sie aufgefordert, ein Passwort für diesen Benutzer einzugeben. Beachten Sie, dass im folgenden Befehl die Rolle auf _CI_readonly_ gesetzt wird. Wenn Sie in Schritt 3 oben eine Rolle mit einem anderen Namen erstellen, verwenden Sie stattdessen diesen benutzerdefinierten Rollennamen.
 
 
  security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}

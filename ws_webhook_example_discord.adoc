@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: ws_webhook_example_discord.html 
+keywords: webhook, notification, Discord, integration 
+summary: Erstellen Sie einen Workload Security Webhook für Discord, um eine Sicherheitswarnung zu erhalten 
+---
+= Workload Security Webhook Beispiel für Discord
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Webhooks können Benutzer über einen benutzerdefinierten Webhook-Kanal Benachrichtigungen an verschiedene Anwendungen senden. Diese Seite enthält ein Beispiel zum Einrichten von Webhooks für Discord.
+
+
+NOTE: Diese Seite bezieht sich auf Anweisungen von Dritten, die Änderungen vorbehalten sind. Die aktuellsten Informationen finden Sie imlink:https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks["Dokumentation zum Auflösen von Kabel"].
+
+
+
+== Kabelabschalt Einrichten:
+
+* Wählen Sie in Discord den Server unter Textkanäle die Option Kanal bearbeiten (Zahnradsymbol) aus.
+* Wählen Sie *Integrationen > Webhooks anzeigen* und klicken Sie auf *Neuer Webhook*
+* Kopieren Sie die Webhook-URL. Sie müssen diese in die Workload Security Webhook-Konfiguration einfügen.
+
+
+
+
+== Webhook Für Workload-Sicherheit Erstellen:
+
+. Navigieren Sie zu Admin > Benachrichtigungen, und wählen Sie die Registerkarte „_Workload Security Webhooks_“ aus. Klicken Sie auf „+ Webhook“, um einen neuen Webhook zu erstellen.
+. Geben Sie dem Webhook einen aussagekräftigen Namen.
+. Wählen Sie in der Dropdown-Liste _Template Type_ die Option *Discord* aus.
+. Fügen Sie die Discord-URL von oben in das Feld _URL_ ein.
+
+
+image:ws_webhook_discord_example.png["Beispiel für die Trennung von Workload-Sicherheit mit Webhook"]
+
+Um den Webhook zu testen, ersetzen Sie vorübergehend den URL-Wert im Nachrichtentext durch eine beliebige gültige URL (wie _https://netapp.com_)) und klicken Sie dann auf den _Webhook_Button. Discord erfordert, dass eine gültige URL angegeben wird, damit die Funktion „Webhook testen“ funktioniert.
+
+Stellen Sie den Nachrichtentext nach Abschluss des Tests wieder ein.
+
+
+
+== Benachrichtigungen über Webhook
+
+Um Ereignisse über Webhook zu benachrichtigen, navigieren Sie zu _Workload Security > Policies_. Klicken Sie auf _+Angriffsrichtlinie_ oder _+Warnrichtlinie_.
+
+* Geben Sie einen aussagekräftigen Richtliniennamen ein.
+* Wählen Sie die erforderlichen Angriffstypen, Geräte, denen die Richtlinie zugeordnet werden soll, und erforderliche Aktionen aus.
+* Wählen Sie im Dropdown _Webhooks Notifications_ die erforderlichen Discord-Webhooks aus, und speichern Sie sie.
+
+
+Hinweis: Webhooks können auch vorhandenen Richtlinien zugeordnet werden, indem sie bearbeitet werden.
+
+image:ws_add_attack_policy.png["Dialogfeld „Angriffsrichtlinie“ mit der Dropdown-Liste „Webhook“"]

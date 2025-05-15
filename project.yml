@@ -105,12 +105,22 @@ sidebar:
         url: "/task_create_monitor.html"
       - title: Anzeigen und Verwalten von Warnungen
         url: "/task_view_and_manage_alerts.html"
-      - title: Benachrichtigungsempfänger Werden Konfiguriert
-        url: "/concept_notifications_email.html"
       - title: Systemdefinierte Monitore
         url: "/task_system_monitors.html"
-      - title: Webhook-Benachrichtigung
-        url: "/task_create_webhook.html"
+      - title: Benachrichtigungsempfänger Werden Konfiguriert
+        url: "/concept_notifications_email.html"
+      - title: Webhook-Benachrichtigungen
+        entries:
+        - title: Webhooks Werden Konfiguriert
+          url: "/task_create_webhook.html"
+        - title: Webhook Beispiel - Discord
+          url: "/task_webhook_example_discord.html"
+        - title: Webhook Beispiel - PagerDuty
+          url: "/task_webhook_example_pagerduty.html"
+        - title: Webhook Beispiel - Slack
+          url: "/task_webhook_example_slack.html"
+        - title: Webhook Beispiel - Teams
+          url: "/task_webhook_example_teams.html"
     - title: Arbeiten mit Anmerkungen
       entries:
       - title: Anmerkungen Definieren
@@ -263,8 +273,20 @@ sidebar:
       url: "/cs_restrict_user_access.html"
     - title: Simulation eines Angriffs gegen Ransomware
       url: "/concept_cs_attack_simulator.html"
-    - title: Benachrichtigungen
+    - title: E-Mail-Benachrichtigungen
       url: "/cs_notifications_email.html"
+    - title: Webhook-Benachrichtigungen
+      entries:
+      - title: Webhooks Werden Erstellt
+        url: "/ws_notifications_using_webhooks.html"
+      - title: Webhook-Beispiel Auflösen
+        url: "/ws_webhook_example_discord.html"
+      - title: PagerDuty Webhook Beispiel
+        url: "/ws_webhook_example_pagerduty.html"
+      - title: Beispiel Für Slack Webhook
+        url: "/ws_webhook_example_slack.html"
+      - title: Beispiel Für Team Webhook
+        url: "/ws_webhook_example_teams.html"
     - title: Workload-Sicherheits-API
       url: "/concept_cs_api.html"
     - title: Fehlerbehebung für den SVM Collector

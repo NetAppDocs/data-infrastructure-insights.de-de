@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: ws_webhook_example_teams.html 
+keywords: webhook, notification, Microsoft, Teams, integration 
+summary: Erstellen Sie einen Workload Security Webhook für Microsoft-Teams, um über die Sicherheit zu informieren 
+---
+= Webhook-Beispiel für Workload-Sicherheit für Microsoft-Teams
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Webhooks können Benutzer über einen benutzerdefinierten Webhook-Kanal Benachrichtigungen an verschiedene Anwendungen senden. Diese Seite enthält ein Beispiel für das Einrichten von Webhooks für Teams.
+
+
+NOTE: Diese Seite bezieht sich auf Anweisungen von Dritten, die Änderungen unterliegen. Die aktuellsten Informationen finden Sie imlink:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["Die Dokumentation des Teams"].
+
+
+
+== Teameinstellungen:
+
+. Wählen Sie in Teams den Kebab aus, und suchen Sie nach eingehender Webhook.
++
+image:Webhooks_Teams_Create_Webhook.png["Eingehender Webhook in Teams"]
+
+. Wählen Sie *zu einem Team hinzufügen > Team auswählen > Connector einrichten*.
+. Kopieren Sie die Webhook-URL. Sie müssen diese in die Workload Security Webhook-Konfiguration einfügen.
+
+
+
+
+== Erstellen Von Workload Security Teams Webhook:
+
+. Navigieren Sie zu Admin > Benachrichtigungen, und wählen Sie die Registerkarte _„Workload Security Webhooks_ aus. Wählen Sie _+ Webhook_, um einen neuen Webhook zu erstellen.
+. Geben Sie dem Webhook einen aussagekräftigen Namen.
+. Wählen Sie in der Dropdown-Liste _Template Type_ die Option *Teams* aus.
++
+image:ws_webhook_teams_example.png["Webhook-Beispiel für Workload Security Teams"]
+
+. Fügen Sie die URL von oben in das Feld _URL_ ein.
+
+
+
+
+== Benachrichtigungen über Webhook
+
+Um Ereignisse über Webhook zu benachrichtigen, navigieren Sie zu _Workload Security > Policies_. Wählen Sie _+Angriffsrichtlinie_ oder _+Warnrichtlinie_.
+
+* Geben Sie einen aussagekräftigen Richtliniennamen ein.
+* Wählen Sie erforderliche Angriffstypen, Geräte, denen die Richtlinie zugeordnet werden soll, und erforderliche Aktionen aus.
+* Wählen Sie im Dropdown _Webhooks Notifications_ die erforderlichen Team-Webhooks aus. Speichern Sie die Richtlinie.
+
+
+Hinweis: Webhooks können auch vorhandenen Richtlinien zugeordnet werden, indem sie bearbeitet werden.
+
+image:ws_add_attack_policy.png["Dialogfeld „Angriffsrichtlinie hinzufügen“ mit Webhook"]
