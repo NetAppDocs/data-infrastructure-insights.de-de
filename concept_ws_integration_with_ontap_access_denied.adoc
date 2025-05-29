@@ -7,6 +7,10 @@ keywords: ransomware, ARP, Protection, Security, access
 = Integration mit ONTAP-Zugriff verweigert
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -14,7 +18,9 @@ Die ONTAP-Zugriffsverweigerung verwendet Workload-Analysen in NAS-Umgebungen (NF
 
 Einblicke in die Dateninfrastruktur Workload Security lässt sich in ONTAP integrieren, um Ereignisse mit Zugriffsverweigerung zu empfangen und eine zusätzliche Analyse- und automatische Antwortebene bereitzustellen.
 
-Voraussetzungen
+
+
+== Voraussetzungen
 
 * Minimale ONTAP-Version: 9.13.0.
 * Ein Workload Security-Administrator muss die Funktion Zugriff verweigert aktivieren, während er einen neuen Collector hinzufügt oder vorhandene Collector bearbeitet, indem er das Kontrollkästchen _Zugriff verweigert überwachen_ unter Erweiterte Konfiguration aktiviert.
@@ -30,20 +36,12 @@ Wenn der Data Collector mithilfe der Anmeldeinformationen für die Clusteradmini
 
 Wenn der Collector mithilfe eines benutzerdefinierten Benutzers (z. B. _csuser_) mit den Berechtigungen für den Benutzer hinzugefügt wird, führen Sie die folgenden Schritte aus, um Workload Security die erforderliche Berechtigung zur Registrierung für Ereignisse mit Zugangsverweigerung bei ONTAP zu erteilen.
 
-Führen Sie für csuser mit _Cluster_-Anmeldeinformationen die folgenden Befehle über die ONTAP-Befehlszeile aus. Beachten Sie, dass _csrestrole_ eine benutzerdefinierte Rolle ist und _csuser_ ein benutzerdefinierter ONTAP-Benutzer ist.
+Führen Sie für csuser mit _Cluster_-Anmeldeinformationen die folgenden Befehle über die ONTAP-Befehlszeile aus. Beachten Sie, dass diese Berechtigung möglicherweise bereits vorhanden ist.
 
-[listing]
-----
- security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
- security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
-----
-Führen Sie für csuser mit _SVM_-Anmeldeinformationen die folgenden Befehle über die ONTAP-Befehlszeile aus:
+ security login role create -role csrole -cmddirname "vserver fpolicy" -access all
+Führen Sie für csuser mit _SVM_-Anmeldeinformationen die folgenden Befehle über die ONTAP-Befehlszeile aus. Beachten Sie, dass diese Berechtigung möglicherweise bereits vorhanden ist.
 
-[listing]
-----
- security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
- security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
-----
+ security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
 Lesen Sie mehr über die Konfiguration anderer link:task_add_collector_svm.html["ONTAP-Berechtigungen"].
 
 

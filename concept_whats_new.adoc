@@ -14,6 +14,47 @@ NetApp verbessert seine Produkte und Services kontinuierlich. Im Folgenden finde
 
 
 
+== Mai 2025
+
+
+
+=== Neue Landing Pages halten Sie im Fluss
+
+Die neu gestalteten Landing Pages bieten alles, was Sie brauchen - Zusammenfassungsdaten, Leistungsdiagramme, Korrelationen, Warnungen und Änderungen sowie wichtige Ressourcen - in einer Ansicht.
+
+Jetzt können Sie Probleme schneller beheben und im Fluss bleiben, ohne zwischen Tabs zu springen oder den Kontext zu verlieren.
+
+image:lp_new_design.png["Neues Landing Page-Design mit Platzierung der Zusammenfassung und Leistung sowie zusätzlichen Ressourcen-Abschnitten"]
+
+
+
+=== Verbesserungen Bei Der Workload-Sicherheit
+
+*Webhooks jetzt für Workload Security Alerts* verfügbar
+
+Workload Security unterstützt jetzt sofort einsatzbereite Webhook-Benachrichtigungen für Tools wie Slack, PagerDuty, Teams und mehr. Darüber hinaus bieten wir anpassbare Vorlagen, mit denen Sie die Nachricht anpassen oder in jede andere SIEM- oder Drittanbieteranwendung integrieren können. Leiten Sie kritische Warnmeldungen direkt an Ihre vorhandenen Sicherheits-Workflows weiter, damit Ihr Team die Untersuchung und Reaktion beschleunigen kann.
+
+image:ws_webhook_slack_example.png["Webhook Slack Beispiel für Workload Security, width=400"]
+
+*Migration von Workload Security Collectors über Agenten hinweg*
+
+Sie können einen Workload Security Collector problemlos von einem Agenten zum anderen migrieren, um einen effizienten Lastenausgleich von Sammlern über mehrere Agenten hinweg zu ermöglichen. Die Migration ist so einfach wie das Bearbeiten des Collectors und das Auswählen des Ziel-Agenten aus der Liste.
+
+image:ws_migrate_collector_to_another_agent.png["Collector migrieren, width=500"]
+
+
+
+=== .CSV asynchroner Export
+
+Der Export von Daten in .CSV kann je nach zu exportierender Datenmenge zwischen wenigen Sekunden und mehreren Stunden dauern. Data Infrastructure Insights exportiert diese Daten nun asynchron, sodass Sie während der .CSV-Erstellung weiterarbeiten können.
+
+Zeigen Sie Ihre .CSV-Exporte an, indem Sie oben rechts auf der Symbolleiste auf das Bell-Symbol klicken.
+
+image:csv_export_async.png["Bell-Symbol mit Liste der .csv-Exporte zum Download bereit, width=400"]
+
+'''
+
+
 == April 2025
 
 

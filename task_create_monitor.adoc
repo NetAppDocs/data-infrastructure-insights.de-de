@@ -7,6 +7,10 @@ summary: Erstellen von Monitoren, damit bei Performance- oder Bestandsschwellenw
 = Warnfunktionen mit Monitoren
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -14,8 +18,6 @@ Sie erstellen Monitore zum Festlegen von Schwellenwerten, die Alarme auslösen, 
 
 
 TIP: Monitore und Alarmfunktionen sind in allen Data Infrastructure Insights Editionen verfügbar, die Basic Edition unterliegt jedoch folgenden Bedingungen: * Sie können jeweils nur bis zu fünf benutzerdefinierte Monitore aktiv haben. Alle Monitore jenseits von fünf werden im Status _Paused_ erstellt oder in den Status verschoben. * Die metrischen Monitore VMDK, Virtual Machine, Host und Datenspeicher werden nicht unterstützt. Wenn für diese Metriken Monitore erstellt wurden, werden sie angehalten und können nicht wieder aufgenommen werden, wenn Sie auf Basic Edition heruntergestuft werden.
-
-inhaltsverzeichnis:[]
 
 Über Monitore können Sie Schwellenwerte auf Metriken festlegen, die von „Infrastruktur“-Objekten wie Storage, VM, EC2 und Ports generiert werden. Außerdem können Sie Daten zur „Integration“ verwenden, beispielsweise die für Kubernetes gesammelt wurden, erweiterte ONTAP Metriken und Telegraf Plug-ins. Diese _metrische_ Überwachung warnt Sie, wenn Warnmeldungen oder kritische Schwellenwerte überschritten werden.
 
@@ -187,6 +189,8 @@ NOTE: ONTAP Data Collector-Benachrichtigungen haben Vorrang vor allen spezifisch
 Sie können eine optionale Beschreibung sowie zusätzliche Erkenntnisse und/oder Korrekturmaßnahmen hinzufügen, indem Sie den Abschnitt *Alarm hinzufügen Beschreibung* ausfüllen. Die Beschreibung kann bis zu 1024 Zeichen lang sein und wird mit der Warnmeldung gesendet. Das Feld „Insights/Korrekturmaßnahmen“ kann bis zu 67,000 Zeichen lang sein und wird im Übersichtsbereich der Landing Page für die Warnmeldung angezeigt.
 
 In diesen Feldern können Sie Hinweise, Links oder Schritte angeben, die Sie zur Korrektur oder anderweitigen Adresse der Warnmeldung ergreifen können.
+
+Sie können ein beliebiges Objektattribut (z. B. Speichername) als Parameter zu einer Warnmeldungsbeschreibung hinzufügen. Beispielsweise können Sie Parameter für den Volume-Namen und den Speichernamen in einer Beschreibung wie „hohe Latenz für Volume: _%%relatedObject.volume.name%%_, Storage: _%%relatedObject.storage.name%%_"“ festlegen.
 
 image:Monitors_Alert_Description.png["Warnungen Korrekturmaßnahmen und Beschreibung"]
 

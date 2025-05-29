@@ -7,6 +7,10 @@ summary: Erstellen von Monitoren, damit bei Performance- oder Bestandsschwellenw
 = Benachrichtigung über Webhooks
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -64,6 +68,8 @@ image:Webhook_Default_Parameters.png["Data Infrastructure Insights Standard-Webh
 === Parameter: Was sind sie und wie benutze ich sie?
 
 Bei den Alarmparametern handelt es sich um dynamische Werte, die pro Meldung ausgefüllt werden. Beispielsweise wird der Parameter _%%TriggeredOn%%_ durch das Objekt ersetzt, auf dem die Warnung ausgelöst wurde.
+
+Sie können ein beliebiges Objektattribut (z. B. Speichername) als Parameter zu einem Webhook hinzufügen. Sie können beispielsweise Parameter für den Volume-Namen und den Speichernamen in einer Webhook-Beschreibung wie: „Hohe Latenz für Volume: _%%relatedObject.volume.name%%_, Speicher: _%%relatedObject.storage.name%%_".
 
 Beachten Sie, dass in diesem Abschnitt beim Klicken auf die Schaltfläche „Webhook testen“ Substitutionen _Not_ durchgeführt werden. Die Schaltfläche sendet eine Nutzlast, die die _%_ Substitutionen anzeigt, sie jedoch nicht durch Daten ersetzt.
 

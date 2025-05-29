@@ -133,4 +133,6 @@ Hinweis: E-Mail-Benachrichtigungen sind unabhängig von Richtlinien. Sie werden 
 
 === Webhook-Beispiele Für Workload-Sicherheit
 
-Webhooks für link:ws_webhook_example_slack.html["Slack"] Webhooks link:ws_webhook_example_pagerduty.html["PagerDuty"]für Webhooks link:ws_webhook_example_teams.html["Teams Aus"]link:ws_webhook_example_discord.html["Abschnur"]
+Webhooks für link:ws_webhook_example_slack.html["Slack"]
+
+Webhooks für link:ws_webhook_example_pagerduty.html["PagerDuty"] Webhooks link:ws_webhook_example_teams.html["Teams Aus"]für Webhooks link:ws_webhook_example_discord.html["Abschnur"]
