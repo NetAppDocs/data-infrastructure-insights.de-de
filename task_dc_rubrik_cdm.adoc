@@ -59,10 +59,13 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 | IP | IP-Adresse des Clusters Rubrik 
 
 
-| Benutzername | Benutzername für das Cluster 
+| Benutzername / Dienstkonto | Benutzername für das Cluster 
 
 
-| Passwort | Passwort für das Cluster 
+| Passwort / Geheimnis | Passwort für das Cluster 
+
+
+| Organisations-ID für das Service-Konto | Dies muss die vollständige Zeichenfolge sein, etwa „Organization:::nnnnnn-nnnn....“ 
 |===
 
 
@@ -93,6 +96,6 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 | Ich erhielt die Nachricht, dass mehr als ein Speicher erstellt wird. | Überprüfen Sie, ob das Cluster ordnungsgemäß konfiguriert ist und der Collector auf ein einzelnes Cluster verweist. 
 
 
-| Ich erhielt eine Warnung, dass die Disk API mehr Daten zurückgegeben hat | Wenden Sie sich an den Support, um zusätzliche Daten zu erhalten. 
+| Umfrage schlägt mit 400 [Ungültige Anfrage] fehl. Ungültige ManagedId.... | Sie haben das Feld „Organisations-ID“ mit einem Wert ausgefüllt, aber der Rubrik-Cluster glaubt NICHT, dass es sich um eine gültige Organisations-ID handelt, obwohl die Fehlermeldung von Rubrik darauf verweist, dass es sich um eine „ManagedId“ handelt. 
 |===
 Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

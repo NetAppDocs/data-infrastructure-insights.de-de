@@ -106,6 +106,9 @@ Für * APAC-basierte * -Arbeitsumgebungen:
 | TCP | 35000 - 55000 | SVM-Daten-LIF-IP-Adressen | Workload Security Agent | Kommunikation von ONTAP zum Workload Security Agent für FPolicy-Ereignisse. Diese Ports müssen gegenüber dem Workload Security Agent geöffnet werden, damit ONTAP Ereignisse an ihn senden kann, einschließlich jeglicher Firewall auf dem Workload Security Agent selbst (falls vorhanden). BEACHTEN SIE, dass Sie nicht *all* dieser Ports reservieren müssen, aber die Ports, die Sie dafür reservieren, müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, mit der Reservierung von ~100 Ports zu beginnen, und bei Bedarf zu erhöhen. 
 
 
+| TCP | 35000-55000 | Cluster-Management-IP | Workload Security Agent | Kommunikation von der ONTAP Cluster Management IP zum Workload Security Agent für *EMS-Ereignisse*. Diese Ports müssen für den Workload Security Agent geöffnet sein, damit ONTAP *EMS-Ereignisse* an ihn senden kann, einschließlich einer Firewall auf dem Workload Security Agent selbst (falls vorhanden). BEACHTEN SIE, dass Sie nicht *all* dieser Ports reservieren müssen, aber die Ports, die Sie dafür reservieren, müssen innerhalb dieses Bereichs liegen. Es wird empfohlen, mit der Reservierung von ~100 Ports zu beginnen, und bei Bedarf zu erhöhen. 
+
+
 | SSH | 22 | Workload Security Agent | Cluster-Management | Erforderlich für das Blockieren von CIFS/SMB-Benutzern. 
 |===
 

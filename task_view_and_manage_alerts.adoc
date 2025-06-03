@@ -52,11 +52,11 @@ Wenn Sie auf eine Alarm-ID klicken, wird die Seite mit den Alarmdetails geöffne
 
 
 
-== Seite Mit Den Alarmdetails
+== Alarmdetailbereich
 
-Die Seite mit den Details für Warnmeldungen enthält weitere Details zu der Warnmeldung, darunter eine _Zusammenfassung_, eine _Expert View_ mit Diagrammen zu den Objektdaten, beliebige _zugehörige Assets_ und _Kommentare_, die von den Alarmforschern eingegeben wurden.
+Wählen Sie eine beliebige Alarmzeile aus, um das Detailfenster des Alarms zu öffnen. Das Detailfenster bietet zusätzliche Informationen zum Alarm, darunter eine Zusammenfassung, eine Expertenansicht mit Diagrammen zu den Objektdaten, alle zugehörigen Assets und Kommentare der Alarmermittler.
 
-image:alert_detail_page.png["Seite Mit Den Alarmdetails"]
+image:metric_alert_detail_pane.png["Detailbereich für Metrikwarnungen"]
 
 
 
