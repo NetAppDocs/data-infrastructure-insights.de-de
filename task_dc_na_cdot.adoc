@@ -187,7 +187,10 @@ Data Infrastructure Insights bietet die Möglichkeit, ONTAP-Cluster-Switch-Daten
 
 == ONTAP-Leistungskennzahlen
 
-Mehrere ONTAP Modelle bieten Stromkennzahlen für Einblicke in die Dateninfrastruktur, die für Monitoring oder Warnmeldungen genutzt werden können. Die unten aufgeführten Listen unterstützter und nicht unterstützter Modelle sind nicht umfassend, sollten jedoch einige Hinweise enthalten. Wenn ein Modell in der gleichen Familie wie ein Modell auf der Liste ist, sollte der Support identisch sein.
+Mehrere ONTAP Modelle bieten Stromkennzahlen für Einblicke in die Dateninfrastruktur, die für Monitoring oder Warnmeldungen genutzt werden können.
+
+
+NOTE: Diese Listen sind nicht vollständig und können sich ändern. Wenn ein Modell zur gleichen Familie gehört wie ein in der Liste aufgeführtes, sollte die Unterstützung grundsätzlich gleich sein, dies kann jedoch nicht garantiert werden. Wenn Sie sich nicht sicher sind, ob Ihr Modell Leistungsmetriken unterstützt, wenden Sie sich an den ONTAP-Support.
 
 Unterstützte Modelle:
 

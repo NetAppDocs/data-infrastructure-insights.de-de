@@ -4,9 +4,13 @@ permalink: san_analyzer_overview.html
 summary: SAN Analyzer bietet Topologie für Ressourcen auf Ihrem Mandanten 
 keywords: topology, analyze, analysis, map 
 ---
-= San Analyzer – Übersicht
+= SAN Analyzer Übersicht
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -32,6 +36,10 @@ Wenn Sie auf ein Objekt oder eine Gruppe klicken, wird ein Schiebefenster mit zu
 Zusätzlich zur Registerkarte „Zusammenfassung“ werden im Schiebebereich Registerkarten für Elemente wie Portdetails oder Zoneninformationen angezeigt, die für das ausgewählte Objekt gelten.
 
 image:san_analyzer_slideout_example.png["SAN Analyzer-Schiebefenster"]
+
+Wenn Ihre Umgebung über unterschiedliche Protokolle verfügt, können Sie nach iSCSI oder FC filtern:
+
+image:san_analyzer_protocols.png["SAN Analyzer-Protokolle"]
 
 Wenn Ihre Umgebung iSCSI-Geräte enthält, werden mit der Maus über das Objekt „_iSCSI_“ die Verbindungen zu diesen relevanten iSCSI-Geräten hervorgehoben.
 
