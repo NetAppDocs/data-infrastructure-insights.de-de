@@ -12581,4 +12581,13 @@
   <block id="f551ca729032aed761417786181395c8" category="paragraph">Data Infrastructure Insights verwendet den Brocade FOS REST Collector, um Bestand und Performance für Brocade-Switch-Geräte mit FabricOS (FOS) Firmware 8.2 und höher zu ermitteln. Bitte beachten Sie, dass frühe 8.2-FOS-Versionen möglicherweise REST-API-Fehler aufweisen. Es wird dringend empfohlen, die neuste FOS-Version auszuführen, die Ihre Plattform unterstützt.</block>
   <block id="882ec11eef2cffbd43db944e6046b98d" category="cell">Fehler: Inventarisierung schlägt mit 401 Nicht autorisiert fehl... Ungültiger Sitzungsschlüssel...</block>
   <block id="fcad57aa5101382922e3f8fe687cf7b0" category="cell">Dies ist ein eindeutiger Fehler in einigen sehr frühen 8.2 FOS-Versionen wie 8.2.1c, die die HTTP-Basisauthentifizierung NICHT ordnungsgemäß unterstützen. Aktualisieren Sie auf eine spätere Version 8.2 oder 9.*</block>
+  <block id="94d267f658e04734eb2e098127293a89" category="section-title">Juni 2025</block>
+  <block id="b792c127dc9f478a7930f4bc0161feba" category="section-title">VM Analyzer: Ganzheitliche VM-to-Storage-Transparenz und Fehlerbehebung</block>
+  <block id="2d1fb0b32df39d06f41d0fd035211a2a" category="paragraph">Die VM Analyzer-Funktion von DII bietet eine umfassende End-to-End-Ansicht Ihrer virtualisierten Umgebungen. Der VM Analyzer vereinfacht die Fehlerbehebung, indem er den gesamten Pfad von virtuellen Maschinen bis zum Speicher abbildet. So können Benutzer Leistungsprobleme auf virtuellen Festplatten, VMs, Hosts, Datenspeichern, Volumes und im Speicher schnell erkennen. Dank einer intuitiven Topologieansicht, Filterfunktionen und detaillierten Leistungsmetriken können Administratoren Engpässe leicht identifizieren, Verkehrsungleichgewichte analysieren und die Gesamtspeicherleistung optimieren.</block>
+  <block id="8c044a5eedd54f1f8fba795eed42e6a6" category="inline-image-macro">Topologiezuordnung eines Storage-Systems in VM Analyzer</block>
+  <block id="a3c3da49bc8b32e34a738f7438c8a53d" category="paragraph"><block ref="a3c3da49bc8b32e34a738f7438c8a53d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d7633d5867fc4c2291155ab5b8e0b0f0" category="paragraph">Zusätzlich zu den folgenden Betriebssystemen werden jetzt auch Data Infrastructure Insights Acquisition Units unterstützt<block ref="6afa3e3eb626ea3ea6592dfd126d0ce7" category="inline-link-macro-rx"></block>:</block>
+  <block id="b25b84328544405f6b0ef29d21ec179a" category="list-text">Debian (64-bit) 12</block>
+  <block id="fc4f76c3c67141253726c8c6550bc344" category="list-text">Oracle Enterprise Linux (64 Bit) 9.6</block>
+  <block id="3f9083673db59761ee75134079acb794" category="list-text">Red Hat (64-Bit) 9.6</block>
 </blocks>
