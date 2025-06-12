@@ -10,7 +10,7 @@ summary: Konfigurieren des Brocade FOS REST-Datensammlers
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Brocade FOS REST Collector, um Bestand und Performance für Brocade-Switch-Geräte mit FabricOS (FOS) Firmware 8.2 und höher zu ermitteln.
+Data Infrastructure Insights verwendet den Brocade FOS REST Collector, um Bestand und Performance für Brocade-Switch-Geräte mit FabricOS (FOS) Firmware 8.2 und höher zu ermitteln. Bitte beachten Sie, dass frühe 8.2-FOS-Versionen möglicherweise REST-API-Fehler aufweisen. Es wird dringend empfohlen, die neuste FOS-Version auszuführen, die Ihre Plattform unterstützt.
 
 Bitte beachten Sie: FOS' Standard "user"-Ebene ist nicht ausreichend leistungsfähig, damit Data Infrastructure Insights alle logischen Aspekte eines Geräts anzeigen kann - wir benötigen ein Benutzerkonto mit aktivierter "Chassis Role" sowie Berechtigungen für alle auf einem Switch konfigurierten virtuellen Fabrics.
 
@@ -124,6 +124,9 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 
 | Die Testfunktion warnt mich, dass ein Protokoll nicht zugänglich ist | Ein bestimmtes Brocade FOS 8.2+ Gerät will nur über HTTP oder HTTPS sprechen - wenn ein Switch ein digitales Zertifikat installiert hat, wirft der Switch HTTP-Fehler auf, wenn man versucht, mit unverschlüsseltem HTTP gegen HTTPS zu kommunizieren. Die Testfunktion versucht die Kommunikation mit HTTP und HTTPS - wenn der Test Ihnen mitteilt, dass ein Protokoll erfolgreich ist, können Sie den Collector sicher speichern und sich keine Sorgen machen, dass das andere Protokoll nicht erfolgreich war - der Collector versucht beide Protokolle während der Sammlung und schlägt nur fehl, wenn keines funktioniert. 
+
+
+| Fehler: Inventarisierung schlägt mit 401 Nicht autorisiert fehl... Ungültiger Sitzungsschlüssel... | Dies ist ein eindeutiger Fehler in einigen sehr frühen 8.2 FOS-Versionen wie 8.2.1c, die die HTTP-Basisauthentifizierung NICHT ordnungsgemäß unterstützen. Aktualisieren Sie auf eine spätere Version 8.2 oder 9.* 
 
 
 | Fehler: „Data Infrastructure Insights received invalid Chassis role“ | Vergewissern Sie sich, dass dem in dieser Datenquelle konfigurierten Benutzer die Berechtigung für die Gehäuserolle erteilt wurde. 
