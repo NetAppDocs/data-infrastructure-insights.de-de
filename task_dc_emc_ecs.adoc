@@ -87,7 +87,7 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 
 
-==== Inventar
+=== Inventar
 
 [cols="2*"]
 |===
@@ -98,14 +98,14 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 |===
 
 
-==== Performance
+=== Performance
 
 [cols="2*"]
 |===
 | Problem: | Versuchen Sie dies: 
 
 
-| Fehler: Es wurden nicht genügend Daten erfasst. | • Prüfen Sie den Zeitstempel der Sammlung in der Protokolldatei und ändern Sie das Abfrageintervall entsprechend • Warten Sie länger 
+| Fehler: Es wurden nicht genügend Daten erfasst. | * Überprüfen Sie den Erfassungszeitstempel in der Protokolldatei und ändern Sie das Abfrageintervall entsprechend. * Warten Sie länger 
 
 
 | Fehler: Das Abfrageintervall für die Performance ist zu groß. | Überprüfen Sie den Sammlungs-Zeitstempel in der Protokolldatei €{logfile} und ändern Sie das Abfrageintervall entsprechend 

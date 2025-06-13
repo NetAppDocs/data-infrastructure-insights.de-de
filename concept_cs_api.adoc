@@ -58,8 +58,8 @@ Der HTTP-Header, in dem das Access Token übergeben wird, ist *X-CloudInsights-A
 
 Verwenden Sie zum Abrufen von Lagerbeständen beispielsweise Folgendes:
 
- curl https://<tenant_host_name>/rest/v1/cloudsecure/activities -H 'X-CloudInsights-ApiKey: <API_Access_Token>'
-Wobei _<API_Access_Token>_ das Token ist, das Sie bei der Erstellung des API-Zugriffsschlüssels gespeichert haben.
+ curl https://<Workload Security tenant>/rest/v1/cloudsecure/activities -H 'X-CloudInsights-ApiKey: <API_Access_Token>'
+Dabei ist _<API_Access_Token>_ das Token, das Sie während der Erstellung des API-Zugriffsschlüssels gespeichert haben, und _<Workload Security Tenant>_ die Tenant-URL Ihrer Workload Security-Umgebung.
 
 Detaillierte Informationen finden Sie im Link _API Documentation_ unter *Admin > API Access*.
 
@@ -75,6 +75,6 @@ Hier ist ein Beispielbefehl zum Aufrufen des Skripts:
 
 [source]
 ----
-python3 data-export.py --tenant_url <tenant id>.cs01.cloudinsights.netapp.com --access_key %ACCESS_KEY% --path_filter "<dir path>" --user_name "<user>" --from_time "01-08-2024 00:00:00" --to_time "31-08-2024 23:59:59" --iteration_interval 12 --num_workers 3
+python3 data-export.py --tenant_url <Workload Security tenant> --access_key %ACCESS_KEY% --path_filter "<dir path>" --user_name "<user>" --from_time "01-08-2024 00:00:00" --to_time "31-08-2024 23:59:59" --iteration_interval 12 --num_workers 3
 ----
 Key Parameters: - `--iteration_interval 12`: Teilt den gewünschten Zeitbereich in Intervalle von 12 Stunden auf. - `--num_workers 3`: Holt diese Intervalle parallel mit 3 Threads.

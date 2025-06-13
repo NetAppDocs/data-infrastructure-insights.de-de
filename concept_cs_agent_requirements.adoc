@@ -62,7 +62,7 @@ Für * US-basierte * -Arbeitsumgebungen:
 | TCP | 443 | Workload Security Agent | <site_Name>.cs01.cloudinsights.netapp.com <site_Name>.c01.cloudinsights.netapp.com <site_Name>.c02.cloudinsights.netapp.com | Einblick in die Dateninfrastruktur 
 
 
-| TCP | 443 | Workload Security Agent | gateway.c01.cloudinsights.netapp.com agentlogin.cs01.cloudinsights.netapp.com | Zugriff auf Authentifizierungsservices 
+| TCP | 443 | Workload Security Agent | agentlogin.cs01.cloudinsights.netapp.com | Zugriff auf Authentifizierungsservices 
 |===
 Für *Europa-basierte* Arbeitslastsicherheitsumgebungen:
 
@@ -74,7 +74,7 @@ Für *Europa-basierte* Arbeitslastsicherheitsumgebungen:
 | TCP | 443 | Workload Security Agent | <site_Name>.cs01-eu-1.cloudinsights.netapp.com <site_Name>.c01-eu-1.cloudinsights.netapp.com <site_Name>.c02-eu-1.cloudinsights.netapp.com | Einblick in die Dateninfrastruktur 
 
 
-| TCP | 443 | Workload Security Agent | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-eu-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsservices 
+| TCP | 443 | Workload Security Agent | agentlogin.cs01-eu-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsservices 
 |===
 Für * APAC-basierte * -Arbeitsumgebungen:
 
@@ -86,7 +86,7 @@ Für * APAC-basierte * -Arbeitsumgebungen:
 | TCP | 443 | Workload Security Agent | <site_Name>.cs01-ap-1.cloudinsights.netapp.com <site_Name>.c01-ap-1.cloudinsights.netapp.com <site_Name>.c02-ap-1.cloudinsights.netapp.com | Einblick in die Dateninfrastruktur 
 
 
-| TCP | 443 | Workload Security Agent | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsservices 
+| TCP | 443 | Workload Security Agent | agentlogin.cs01-ap-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsservices 
 |===
 
 
