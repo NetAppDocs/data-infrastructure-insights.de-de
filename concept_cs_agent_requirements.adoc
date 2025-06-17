@@ -17,7 +17,7 @@ Sie müssen link:task_cs_add_agent.html["Installieren Sie einen Agenten"]Informa
 | Komponente | Linux-Anforderungen Erfüllt 
 
 
-| Betriebssystem | Ein Computer mit einer lizenzierten Version von einer der folgenden Versionen: * CentOS 64 64 64 Stream (64 9.4-Bit) * openSUSE Leap 15.3 9.5 bis 15.5 (64-Bit) * Oracle Linux 11 (15-Bit), 15 bis 64 (9.4-Bit), SELinux * Red hat Enterprise Linux 9.5 (64-Bit), 9.1 bis 9.5 (64-Bit), SELinux * Rocky 64 - 8.10 (64-Bit), SELinux * 64-9.1-Bit und Linux * (LSE4-9.4), Linux * und LSE4-20.04-22.04), Linux-8.10-Bit * und LSETS *, Linux-24.04-9-10 (LMA6) Es wird ein dedizierter Server empfohlen. 
+| Betriebssystem | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Betriebssysteme ausgeführt wird: * AlmaLinux 9.4 und 9.5 (64-Bit), einschließlich SELinux * CentOS 9 Stream (64-Bit) * Debian 11 (64-Bit) und 12 (64-Bit), einschließlich SELinux * OpenSUSE Leap 15.3 (64-Bit) bis 15.6 (64-Bit) * Oracle Linux 8.10 (64-Bit) und 9.1 (64-Bit) bis 9.6 (64-Bit), einschließlich SELinux * Red Hat Enterprise Linux 8.10 (64-Bit) und 9.1 (64-Bit) bis 9.6 (64-Bit), einschließlich SELinux * Rocky 9.4 (64-Bit) und 9.5 (64-Bit), einschließlich SELinux * SUSE Linux Enterprise Server 15 SP4 (64-Bit) bis 15 SP6 (64-Bit), einschließlich SELinux * Ubuntu 20.04 LTS (64-Bit), 22.04 LTS (64-Bit) und 24.04 LTS (64-Bit) Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Es wird ein dedizierter Server empfohlen. 
 
 
 | Befehle | Für die Installation ist „entpacken“ erforderlich. Darüber hinaus ist für die Installation, das Ausführen von Skripten und die Deinstallation der Befehl 'udo su –' erforderlich. 
