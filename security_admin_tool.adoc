@@ -39,7 +39,7 @@ Mit dem SecurityAdmin-Tool können Sie die Sicherheitsoptionen für Data Infrast
 Nach der AU-Installation befindet sich das SecurityAdmin-Tool auf dem Erfassungseinheitssystem an einem der folgenden Standorte:
 
 ....
-Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat
+Windows - <install_path>\Cloud Insights\Acquisition Unit\acq\securityadmin\bin\securityadmin.bat
 Linux - /bin/oci-securityadmin.sh
 ....
 
@@ -61,7 +61,7 @@ Erstellt eine Sicherungszip-Datei des Tresors, die alle Passwörter und Schlüss
 
 +
 ....
-Windows - C:\Program Files\SANscreen\backup\vault
+Windows - <install_path>\Cloud Insights\Acquisition Unit\acq\securityadmin\backup\vault
 Linux - /var/log/netapp/oci/backup/vault
 ....
 +
