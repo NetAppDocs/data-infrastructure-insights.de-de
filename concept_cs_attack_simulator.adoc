@@ -20,7 +20,7 @@ Mithilfe der Anweisungen auf dieser Seite können Sie einen Angriff für das Tes
 
 == Dinge zu beachten, bevor Sie beginnen
 
-* Das Ransomware-Simulationsskript funktioniert nur auf Linux. Das Simulationsskript sollte auch dann Warnmeldungen mit hoher Zuverlässigkeit generieren, wenn der Benutzer ONTAP ARP mit Workload Security integriert hat.
+* Das Ransomware-Simulationsskript funktioniert nur auf Linux. Das Simulationsskript sollte auch Warnmeldungen mit hoher Zuverlässigkeit generieren, falls der Benutzer ONTAP ARP mit Workload Security integriert hat.
 * Workload Security erkennt mit NFS 4.1 generierte Ereignisse und Warnungen nur, wenn die ONTAP-Version 9.15 oder höher ist.
 * Das Skript wird mit den Installationsdateien des Workload Security Agent bereitgestellt. Sie ist auf jedem Computer verfügbar, auf dem ein Workload Security Agent installiert ist.
 * Sie können das Skript auf dem Workload Security Agent-Rechner selbst ausführen; es ist nicht erforderlich, einen anderen Linux-Rechner vorzubereiten. Wenn Sie jedoch das Skript lieber auf einem anderen System ausführen möchten, kopieren Sie einfach das Skript und führen es dort aus.
@@ -154,7 +154,9 @@ Wenn Sie den Collector vor dem Ausführen dieser Schritte angehalten haben, denk
 
 
 
-== Führen Sie das Skript Ransomware Simulator aus
+== Generieren Sie die Beispieldateien programmgesteuert:
+
+Bevor Sie die Dateien erstellen, müssen Sie zuerst stoppen oder link:task_add_collector_svm.html#play-pause-data-collector["den Datensammler anhalten"] Verarbeitung.
 
 Um eine Ransomware-Warnung zu generieren, können Sie das enthaltene Skript ausführen, das eine Ransomware-Warnung in Workload Security simuliert.
 
