@@ -12,8 +12,8 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 [role="lead"]
 Der Einstieg in Data Infrastructure Insights ist mit drei einfachen Schritten ganz einfach:
 
-* Melden Sie sich für ein Konto bei anlink:https://bluexp.netapp.com//["*NetApp BlueXP*"], um auf alle Cloud-Angebote von NetApp zuzugreifen.
-* Registrieren Sie sich für eine kostenlose Testversion von Data Infrastructure Insights, um mehr über die verfügbaren Funktionen zu erfahren. So melden Sie sich für eine kostenlose Testversion an:
+. Melden Sie sich für ein Konto bei anlink:https://bluexp.netapp.com//["*NetApp BlueXP*"], um auf alle Cloud-Angebote von NetApp zuzugreifen.
+. Registrieren Sie sich für eine kostenlose Testversion von Data Infrastructure Insights, um mehr über die verfügbaren Funktionen zu erfahren. So melden Sie sich für eine kostenlose Testversion an:
 +
 ** Gehen Sie zu https://netapp.com[]
 ** Wählen Sie oben auf der Seite *wie kaufe ich* aus.
@@ -21,7 +21,19 @@ Der Einstieg in Data Infrastructure Insights ist mit drei einfachen Schritten ga
 ** Vereinbaren Sie einen Termin oder warten Sie, bis ein Mitarbeiter Sie zu Ihrer Testversion kontaktiert.
 
 
-* *Abonnieren* Data Infrastructure Insights für den kontinuierlichen, unterbrechungsfreien Zugriff auf Ihre Daten über link:https://bluexp.netapp.com/contact-cds["NetApp Vertrieb"] direkt oder link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["AWS Marketplace"].
+. *Abonnieren* Sie Data Infrastructure Insights für fortlaufenden, unterbrechungsfreien Zugriff auf Ihre Daten über eine Vielzahl flexibler Abonnementoptionen:
++
+** link:https://bluexp.netapp.com/contact-cds["NetApp Vertrieb direkt"]
+** AWS Marketplace:
++
+*** link:https://aws.amazon.com/marketplace/pp/prodview-axhuy7muvzfx2["Abonnement mit fester Laufzeit"]
+*** link:https://aws.amazon.com/marketplace/pp/prodview-rn4qwencpjpge["Pay-as-you-go-Abonnement"]
+*** link:https://aws.amazon.com/marketplace/pp/prodview-nku57vjsqdwzu["Feste Basis + Pay-as-you-go-Abonnement für Überschreitungen"]
+
+
+** link:https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.dii_premium["Azure Marketplace"] (alle Abonnementoptionen)
+
+
 
 
 Während des Registrierungsprozesses können Sie die globale Region auswählen, um Ihre Data Infrastructure Insights Umgebung zu hosten. Weitere Informationen finden Sie unter Dateninfrastruktureinblicke link:security_information_and_region.html["Informationen und Region"].
@@ -50,7 +62,7 @@ NOTE: Wenn Sie zusätzliche Zeit benötigen, um Data Infrastructure Insights zu 
 
 === Testversion über AWS Marketplace
 
-Sie können sich zudem über den AWS Marketplace für eine kostenlose Testversion anmelden. Mit der kostenlosen Testversion von AWS Marketplace haben Sie 33 Tage lang Zugriff auf Data Infrastructure Insights und können bis zu 499 <<observability-metering,Verwaltete Einheiten>> (Mus) testen.
+Sie können sich zudem über den AWS Marketplace für eine kostenlose Testversion anmelden. Mit der kostenlosen Testversion von AWS Marketplace erhalten Sie 33 Tage lang Zugriff auf Data Infrastructure Insights.
 
 Die kostenlose Testversion von AWS Marketplace kann nicht erweitert werden. Sie können jederzeit während der Testversion auf ein Data Infrastructure Insights Basic Edition-Abonnement herunterstufen oder auf ein kostenpflichtiges Data Infrastructure Insights-Abonnement wechseln, indem Sie die Seite *Admin -> Abonnement* aufrufen.
 

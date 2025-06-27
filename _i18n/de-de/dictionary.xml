@@ -3946,10 +3946,8 @@
   <block id="f887dd4c6ffb2d6fd67813bccd44e611" category="paragraph">Der Einstieg in Data Infrastructure Insights ist mit drei einfachen Schritten ganz einfach:</block>
   <block id="21a763771df4e64b083a2b050ce81f09" category="inline-link-macro">*NetApp BlueXP*</block>
   <block id="6341e61d6dc641d29b3f2e7300137ea9" category="list-text">Melden Sie sich für ein Konto bei an<block ref="e0b3e45a049f223d3b91d005d1e31db5" category="inline-link-macro-rx"></block>, um auf alle Cloud-Angebote von NetApp zuzugreifen.</block>
-  <block id="2ef085adce795622c057ad2ea6c13059" category="inline-link-macro">NetApp Vertrieb</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link-macro">AWS Marketplace</block>
   <block id="7bc1d8b07dfc0e98950abc0c7f3979a5" category="inline-link-macro">Informationen und Region</block>
-  <block id="6c36c3c54c4f691f7ed13a16d49bbde7" category="paragraph">Während des Registrierungsprozesses können Sie die globale Region auswählen, um Ihre Data Infrastructure Insights Umgebung zu hosten. Weitere Informationen finden Sie unter Dateninfrastruktureinblicke <block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>.</block>
   <block id="ef66b5abbe1e0b79e23deb05dd2d11a9" category="admonition">Inaktive Data Infrastructure Insights Basic Edition-Umgebungen werden gelöscht und ihre Ressourcen zurückgewonnen. Eine Umgebung gilt als inaktiv, wenn 30 aufeinander folgende Tage keine Benutzeraktivität zur Verfügung steht, wenn 7 aufeinanderfolgende Tage keine Daten aufgenommen wurden. Data Infrastructure Insights sendet eine Benachrichtigung und gewährt eine Kulanzzeit von vier Tagen, bevor eine Umgebung gelöscht wird.</block>
   <block id="d618d9be50e37adf260935938e49af96" category="inline-image-macro">Vorhängeschloss</block>
   <block id="12ddfc86083937d7a126f2fd8615aa6b" category="inline-xref">Modulbewertung</block>
@@ -3961,8 +3959,6 @@
   <block id="dcfc2d1a305cec73fa5f84fa3a0ed89c" category="paragraph">Data Infrastructure Insights zeigt ein Banner an, wenn sich Ihre kostenlose Testversion dem Ende nähert Innerhalb dieses Banners befindet sich ein _View Subscription_ Link, der die Seite *Admin -&gt; Abonnement* öffnet. Nicht-Admin-Benutzer sehen das Banner, können aber nicht zur Abonnementseite gehen.</block>
   <block id="14e0941a34fd8121073e220481ffa66f" category="admonition">Wenn Sie zusätzliche Zeit benötigen, um Data Infrastructure Insights zu testen, und Ihre Testversion in 4 Tagen oder weniger abläuft, können Sie Ihre Testversion um weitere 30 Tage verlängern. Sie können die Testversion nur einmal verlängern. Sie können nicht verlängern, wenn Ihre Testversion abgelaufen ist.</block>
   <block id="de41af8028b5287cc6d65bb0e73cae11" category="section-title">Testversion über AWS Marketplace</block>
-  <block id="bc8745f374e91204332a0cd070e3c20c" category="inline-xref">Verwaltete Einheiten</block>
-  <block id="a1aea5576cb96c98e98a9642fc30f4b0" category="paragraph">Sie können sich zudem über den AWS Marketplace für eine kostenlose Testversion anmelden. Mit der kostenlosen Testversion von AWS Marketplace haben Sie 33 Tage lang Zugriff auf Data Infrastructure Insights und können bis zu 499 <block ref="74100db5c6c154a5b13e17b29feeccc3" category="inline-xref-macro-rx"></block> (Mus) testen.</block>
   <block id="c66bd552dea63071ad19e124c869ab2e" category="paragraph">Die kostenlose Testversion von AWS Marketplace kann nicht erweitert werden. Sie können jederzeit während der Testversion auf ein Data Infrastructure Insights Basic Edition-Abonnement herunterstufen oder auf ein kostenpflichtiges Data Infrastructure Insights-Abonnement wechseln, indem Sie die Seite *Admin -&gt; Abonnement* aufrufen.</block>
   <block id="03742c91392961db83c5540550a3500a" category="section-title">Was ist, wenn meine Testversion abgelaufen ist?</block>
   <block id="55b44e6cb866667b35e33325e5f2b246" category="paragraph">Wenn Ihre kostenlose Testversion abgelaufen ist und Sie Data Infrastructure Insights noch nicht abonniert haben, haben Sie eingeschränkte Funktionen, bis Sie sich anmelden. Die Datenaufnahme kann eingestellt werden, und nach einigen Wochen werden Ihre Daten gemäß unserer Datenaufbewahrungsrichtlinie gelöscht.</block>
@@ -11475,7 +11471,6 @@
   <block id="a25c3f0a67375ee45e02e2a95818cfb5" category="cell">Wenden Sie sich an den NetApp Vertrieb, um ein Abonnement zu erwerben</block>
   <block id="670521a1846ad94b7cc140e2678df21c" category="paragraph">Wenn Sie eine oder mehrere dieser Funktionen in der Vorschau anzeigen möchten, wenden Sie sich an Ihren<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>, um weitere Informationen zu erhalten.</block>
   <block id="16630d72023cbbf23b8ab69cac2b3ff7" category="paragraph">Sie können auch Vertriebsunterstützung anfordern, indem Sie auf den  Link klicken<block ref="6193a07b36740b6aedc4527702e204e2" category="inline-link-macro-rx"></block>.</block>
-  <block id="3fcd9845b26dde701c891681edc7b769" category="list-text">*Abonnieren* Data Infrastructure Insights für den kontinuierlichen, unterbrechungsfreien Zugriff auf Ihre Daten über <block ref="326364f658f4dbd53be7e9aa308d8ef9" category="inline-link-macro-rx"></block> direkt oder <block ref="e91d3f98f4b43abdea3c839a7777954c" category="inline-link-macro-rx"></block>.</block>
   <block id="a42decca1d15ec644d4c66c06689344e" category="paragraph">Der <block ref="a4e343c69e2eae514016d98dfce8b36b" category="inline-link-macro-rx"></block> Datensammler ermöglicht das Befüllen von Cloud Insights Textanmerkungen mit Tags mit demselben Namen, die auf VMware konfiguriert sind.</block>
   <block id="0d0549b05d1645d38baa1a6cedaa7190" category="paragraph">Cloud Insights weist regelmäßig eine Reihe von interessanten neuen Vorschaufunktionen auf. Wenn Sie eine oder mehrere dieser Funktionen in der Vorschau anzeigen möchten, wenden Sie sich an Ihren<block ref="02af545fedbe237243dabe2f44648f4d" category="inline-link-macro-rx"></block>, um weitere Informationen zu erhalten.</block>
   <block id="6230fc6d3836bf964eb587a1b21b5c48" category="admonition">Wenn Sie ein aktueller Premium Edition-Kunde sind und Ihre Berichte behalten möchten, lesen Sie dies <block ref="85f8206314043d7dd91d050def6a5cd1" category="inline-link-macro-rx"></block>.</block>
@@ -12645,4 +12640,18 @@
   <block id="f463cb1a5df7d729d273f46c1e5cb861" category="sidebar">Daten analysieren</block>
   <block id="c917a46858bc7b65af2e1c90ee0a1453" category="sidebar">SAN-Analysator</block>
   <block id="2e2565dd8910383ad2b3626e2b5d37b2" category="sidebar">VM-Analysator</block>
+  <block id="35c091b25f788bb392ac1dd40614c3e3" category="list-text">*Abonnieren* Sie Data Infrastructure Insights für fortlaufenden, unterbrechungsfreien Zugriff auf Ihre Daten über eine Vielzahl flexibler Abonnementoptionen:</block>
+  <block id="a2282c5ca88a344b1bf947a11cb57bc8" category="inline-link-macro">NetApp Vertrieb direkt</block>
+  <block id="dbed590bd111eb57145cd0aa78c71ccb" category="list-text"><block ref="dbed590bd111eb57145cd0aa78c71ccb" category="inline-link-macro-rx"></block></block>
+  <block id="fbb9a72326df00d6f836e5eea8110335" category="list-text">AWS Marketplace:</block>
+  <block id="ec298b41c1e3f240e9fc796c682f69de" category="inline-link-macro">Abonnement mit fester Laufzeit</block>
+  <block id="f56e44396701dcd46539ca0e7b1b3320" category="list-text"><block ref="f56e44396701dcd46539ca0e7b1b3320" category="inline-link-macro-rx"></block></block>
+  <block id="d1517db071086971f3453ded8278c7a1" category="inline-link-macro">Pay-as-you-go-Abonnement</block>
+  <block id="beb65c517e5736532dac13881b116755" category="list-text"><block ref="beb65c517e5736532dac13881b116755" category="inline-link-macro-rx"></block></block>
+  <block id="746580535bc19093643356f95bde7a34" category="inline-link-macro">Feste Basis + Pay-as-you-go-Abonnement für Überschreitungen</block>
+  <block id="1c1852e9d80a834e93713a1f977f8284" category="list-text"><block ref="1c1852e9d80a834e93713a1f977f8284" category="inline-link-macro-rx"></block></block>
+  <block id="21e74b3c28d006317f38a2bc8eb1da3b" category="inline-link-macro">Azure Marketplace</block>
+  <block id="eaf0150fe02dfa14aeba907403d82430" category="list-text"><block ref="fbbacee6d384df67d0c4b258087bb5d8" category="inline-link-macro-rx"></block> (alle Abonnementoptionen)</block>
+  <block id="fbcb8e05bba1155469592f550e005cf6" category="paragraph">Während des Registrierungsprozesses können Sie die globale Region auswählen, um Ihre Data Infrastructure Insights Umgebung zu hosten. Weitere Informationen finden Sie unter Dateninfrastruktureinblicke <block ref="286a302a1ee50fd59eb368d3d9779037" category="inline-link-macro-rx"></block>.</block>
+  <block id="48a6157894b0b86c589decc577da9409" category="paragraph">Sie können sich zudem über den AWS Marketplace für eine kostenlose Testversion anmelden. Mit der kostenlosen Testversion von AWS Marketplace erhalten Sie 33 Tage lang Zugriff auf Data Infrastructure Insights.</block>
 </blocks>
