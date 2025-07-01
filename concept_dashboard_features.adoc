@@ -915,3 +915,6 @@ Zusätzlich können Sie entweder _hourly_ oder _Daily_ Saisonalität anzeigen so
 image:expected_bounds_settings.png["Einstellungen für Anomaly-Grenzen, einschließlich des Erkennungsalgorithmus, Saisonalität und Empfindlichkeit"]
 
 Beachten Sie, dass Sie nur erwartete Grenzen anzeigen können, wenn das Diagramm auf eine einzelne Zeile eingestellt ist. Wenn Ihre Einstellungen oder Filter „Gruppieren nach“ mehrere Zeilen anzeigen oder wenn Sie mehrere Abfragen für das Widget festgelegt haben, wird die Option „erwartete Grenzen anzeigen“ deaktiviert.
+
+
+NOTE: DII prüft alle vorhandenen Daten der Woche vor der Monitorerstellung und erkennt signifikante Datenspitzen oder -einbrüche, die länger als 30 Minuten andauern – diese gelten als Anomalien. In der zweiten Woche (der Lernphase), in der mehr Datenpunkte erfasst und analysiert werden, kann es zu verstärktem „Rauschen“ in den Warnmeldungen kommen. Dieses „Rauschen“ nimmt in der Regel ab, wenn in den folgenden Wochen mehr Daten analysiert werden.
