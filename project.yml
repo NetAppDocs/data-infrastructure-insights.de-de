@@ -105,6 +105,10 @@ sidebar:
         url: "/task_create_monitor.html"
       - title: Anzeigen und Verwalten von Warnungen
         url: "/task_view_and_manage_alerts.html"
+      - title: Benachrichtigungsempfänger Werden Konfiguriert
+        url: "/concept_notifications_email.html"
+      - title: Überwachung Der Anomalieerkennung
+        url: "/concept_anomaly_detection.html"
       - title: Systemdefinierte Monitore
         url: "/task_system_monitors.html"
       - title: Benachrichtigungsempfänger Werden Konfiguriert

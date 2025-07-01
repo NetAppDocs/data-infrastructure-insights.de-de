@@ -75,6 +75,9 @@ Speichern Sie den Monitor mit einem aussagekräftigen Namen, und schon ist alles
 Nach der Erstellung analysiert der Monitor die Daten der Vorwoche, um eine erste Baseline zu erstellen. Die Anomalieerkennung wird genauer, wenn die Zeit vergeht und mehr Geschichte auftritt.
 
 
+NOTE: Bei der Erstellung eines Monitors prüft DII alle vorhandenen Daten der Vorwoche auf signifikante Datenspitzen oder -einbrüche; diese gelten als Anomalien. In der ersten Woche nach der Monitorerstellung (der Lernphase) kann es zu verstärktem Rauschen in den Warnmeldungen kommen. Um dieses Rauschen zu minimieren, werden nur Spitzen oder Einbrüche, die länger als 30 Minuten dauern, als Anomalien gewertet und lösen Warnmeldungen aus. Wenn in der darauffolgenden Woche weitere Daten analysiert werden, nimmt das Rauschen normalerweise ab und ein signifikanter Anstieg oder Abfall, der länger anhält, wird als Anomalie betrachtet.
+
+
 
 == Anzeigen der Anomalien
 
