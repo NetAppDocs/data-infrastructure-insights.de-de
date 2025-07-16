@@ -2,16 +2,19 @@
 sidebar: sidebar 
 permalink: telegraf_agent_k8s_config_options.html 
 keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s, options, configuration 
-summary: Der NetApp Kubernetes Monitoring Operator verfügt über eine Reihe konfigurierbarer Optionen. 
+summary: Konfigurieren Sie den NetApp Kubernetes Monitoring Operator mithilfe der AgentConfiguration-Optionen. 
 ---
 = Konfigurationsoptionen Für Kubernetes Monitoring Operator
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Die link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes Monitoring Operator"] Konfiguration kann angepasst werden.
+Der link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes Monitoring Operator"] Bietet umfangreiche Anpassungsmöglichkeiten über die AgentConfiguration-Datei. Konfigurieren Sie Ressourcenlimits, Erfassungsintervalle, Proxy-Einstellungen, Toleranzen und komponentenspezifische Einstellungen für Telegraf, Kube-State-Metrics, Protokollerfassung, Workload-Mapping, Änderungsmanagement und mehr, um die Überwachung Ihrer Kubernetes-Umgebung zu optimieren.
 
 In der folgenden Tabelle sind die möglichen Optionen für die _AgentConfiguration_-Datei aufgeführt:
 
@@ -131,7 +134,7 @@ In der folgenden Tabelle sind die möglichen Optionen für die _AgentConfigurati
 |  | Toleranzen | zusätzliche Toleranzen für kube-State-Metriken. 
 
 
-|  | Etiketten | Eine durch Kommas getrennte Liste von Ressourcen, die kube-State-metrics erfassen sollte +++ Beispiel: Cronjobs=[*],demonsets=[*],Deployments=[*],ingresses=[*],Jobs=[*],namepaces=[*],Nodes=[*], persistent volumeclaims=[*]=[*][*][[+ 
+|  | Etiketten | eine durch Kommas getrennte Liste von Ressourcen, für die kube-state-metrics Labels erfassen soll +++ Beispiel: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++ 
 
 
 | Protokolle |  | Konfigurationsoptionen, mit denen die Protokollsammlung und die Installation des Bedieners angepasst werden können 
@@ -200,7 +203,7 @@ In der folgenden Tabelle sind die möglichen Optionen für die _AgentConfigurati
 |  | MemRequest | MEM-Anforderung für Change-Observer-Watch-rs 
 
 
-|  | AusfallerklärungIntervalMins | Intervall in Minuten, nach dem eine nicht erfolgreiche Bereitstellung eines Workloads als fehlgeschlagen markiert wird 
+|  | ArbeitslastFehlerdeklarationsintervallSekunden | Intervall in Sekunden, nach dem eine nicht erfolgreiche Bereitstellung einer Arbeitslast als fehlgeschlagen markiert wird 
 
 
 |  | EinsatzAggrIntervalSekunden | Häufigkeit, mit der Ereignisse zur laufenden Workload-Bereitstellung gesendet werden 
@@ -454,8 +457,8 @@ spec:
     # cpuRequest: '500m'
     # memRequest: '500Mi'
 
-    # # Interval in minutes after which a non-successful deployment of a workload will be marked as failed
-    # failureDeclarationIntervalMins: '30'
+    # # Interval after which a non-successful deployment of a workload will be marked as failed, in seconds
+    # workloadFailureDeclarationIntervalSeconds: '30'
 
     # # Frequency at which workload deployment in-progress events are sent
     # deployAggrIntervalSeconds: '300'

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_google_cloud_netapp_volumes.html 
-summary: Konfigurieren Sie den Datensammler für Google Cloud NetApp Volumes 
+summary: Konfigurieren Sie den Google Cloud NetApp Volumes Datensammler. 
 keywords: data collector, queries, create, google, cloud, volumes, 
 ---
-= Datensammler für NetApp Google Cloud NetApp-Volumes
+= Google Cloud NetApp Volumes Datensammler
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 
 [role="lead"]
-Dieser Datensammler unterstützt die Bestandsaufnahme und Performance-Sammlung aus Konfigurationen der Google NetApp Cloud Volumes Cloud-Plattform. Dieser Collector wird versuchen, alle Rechenressourcen innerhalb aller Projekte innerhalb einer Google-Organisation zu entdecken. Wenn Sie über mehrere Google-Unternehmen verfügen, die Sie mit Data Infrastructure Insights ermitteln möchten, möchten Sie pro Unternehmen einen Data Infrastructure Insights Collector implementieren.
+Dieser Datensammler unterstützt die Inventarisierung und Leistungserfassung von Google Cloud NetApp Volumes -Konfigurationen. Der Sammler erkennt NetApp Volumes und Speicherressourcen in allen Projekten einer Google-Organisation. Wenn Sie mehrere Google-Organisationen mit Data Infrastructure Insights überwachen möchten, stellen Sie pro Organisation einen Sammler bereit.
 
 
 
 == Anforderungen Für Servicekonten
 
-* Sie müssen ein Service-Konto erstellen, indem Sie die Anweisungen in befolgenlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Erstellen/Verwalten Von Servicekonten"]. Ein solches Dienstkonto wird durch eine eindeutige ID identifiziert, die als _ClientID_ bezeichnet wird und als Benutzername verwendet wird.
+* Sie müssen ein Service-Konto erstellen, indem Sie die Anweisungen in befolgenlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Erstellen/Verwalten Von Servicekonten"]. Dieses Dienstkonto wird durch eine eindeutige ID identifiziert, die als _clientId_ bezeichnet wird und als Benutzername verwendet wird.
 * Erstellen Sie außerdem einen Servicekontoschlüssel, indem Sie die Anweisungen in befolgenlink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Erstellen/Verwalten Von Servicekontoschlüsseln"]. Dieser Schlüssel kann als json-Datei heruntergeladen werden, deren Inhalt als Passwort verwendet wird.
 * Das Servicekonto muss für _Compute.Readonly_, _Monitoring.read_ und _Cloud-Platform_ berücksichtigt werden.
 
@@ -29,7 +29,7 @@ Dieser Datensammler unterstützt die Bestandsaufnahme und Performance-Sammlung a
 
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -40,7 +40,7 @@ Dieser Datensammler unterstützt die Bestandsaufnahme und Performance-Sammlung a
 | Wählen Sie „Ausschließen“ oder „Einschließen“, um GCNV-Assets nach Standort zu filtern | Dies wird standardmäßig ausgeschlossen, da dieser Collector standardmäßig beabsichtigt, alle GCNV-Volumes weltweit in Ihrem Unternehmen zu ermitteln. 
 
 
-| GCNV Exclude/Include Locations | Diese ist standardmäßig leer und wird in Verbindung mit der Option „Ausschließen auswählen“ oder „Einschließen“ verwendet. Wenn man nur Vermögenswerte in bestimmten Regionen der Welt entdecken will, können diese 2 Optionen manipuliert werden, um den Umfang dieses Sammlers zu begrenzen 
+| GCNV Exclude/Include Locations | Dies ist standardmäßig leer und wird in Verbindung mit der Option „Wählen Sie ‚Ausschließen‘ oder ‚Einschließen‘“ verwendet. Wenn Sie Assets nur in bestimmten Regionen ermitteln möchten, verwenden Sie diese beiden Optionen, um den Umfang dieses Collectors einzuschränken. 
 
 
 | Projekt-IDs | Die Liste der Projekt-IDs, die Sie in oder aus der Erkennung filtern möchten, hängt vom Wert des Werts "Ausschließen"... ab. Die Standardliste ist leer 
@@ -55,7 +55,7 @@ Dieser Datensammler unterstützt die Bestandsaufnahme und Performance-Sammlung a
 
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -63,7 +63,7 @@ Dieser Datensammler unterstützt die Bestandsaufnahme und Performance-Sammlung a
 | Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten 
 
 
-| Verwenden Sie AU-Proxy für REST-API-Aufrufe | Dieses Kontrollkästchen führt dazu, dass der Collector denselben Proxy verwendet wie der AU, auf dem der Collector lebt. Dies ist standardmäßig nicht aktiviert - das bedeutet, dass der Collector versucht, HTTPS-API-Aufrufe direkt an Google zu senden. 
+| Verwenden Sie AU-Proxy für REST-API-Aufrufe | Wählen Sie diese Option, damit der Collector denselben Proxy verwendet wie die Acquisition Unit, auf der er sich befindet. Standardmäßig ist diese Option deaktiviert. Der Collector versucht daher, HTTPS-API-Aufrufe direkt an Google zu senden. 
 
 
 | Bezeichnungsschlüssel und Werte, auf denen VMs gefiltert werden sollen | Klicken Sie auf *+ Filter Label*, um die VMs (und zugehörigen Festplatten) auszuwählen, die durch Filtern nach Schlüsseln und Werten, die Schlüssel und Werte der Labels auf der VM entsprechen, einzuschließen bzw. auszuschließen. Etikettenschlüssel ist erforderlich, Etikettenwert ist optional. Wenn der Etikettenwert leer ist, wird die VM solange gefiltert, wie sie dem Etikettenschlüssel entspricht. 
