@@ -12667,4 +12667,6 @@
   <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">eine durch Kommas getrennte Liste von Ressourcen, für die kube-state-metrics Labels erfassen soll +++ Beispiel: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
   <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">ArbeitslastFehlerdeklarationsintervallSekunden</block>
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">Intervall in Sekunden, nach dem eine nicht erfolgreiche Bereitstellung einer Arbeitslast als fehlgeschlagen markiert wird</block>
+  <block id="8edfed76354af11279c58c2d91948eda" category="cell">Fluent-Bit-ContainerLogPath</block>
+  <block id="3150c73f1d1522f3b831f0d591077194" category="cell">Standardmäßig mountet das Fluentbit-DaemonSet die Hostpfade /var/log und /var/lib/docker/containers, um auf die Kubernetes-Containerprotokolle zuzugreifen und diese zu lesen. Wenn Kubernetes so konfiguriert wurde, dass Containerprotokolle an einem anderen Speicherort abgelegt werden, verwenden Sie diese Option, um das Fluentbit-DaemonSet so zu ändern, dass der andere Pfad mountet.</block>
 </blocks>
