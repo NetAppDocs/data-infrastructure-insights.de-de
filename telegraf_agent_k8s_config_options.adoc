@@ -14,7 +14,7 @@ summary: Konfigurieren Sie den NetApp Kubernetes Monitoring Operator mithilfe de
 
 
 [role="lead"]
-Der link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes Monitoring Operator"] Bietet umfangreiche Anpassungsmöglichkeiten über die AgentConfiguration-Datei. Konfigurieren Sie Ressourcenlimits, Erfassungsintervalle, Proxy-Einstellungen, Toleranzen und komponentenspezifische Einstellungen für Telegraf, Kube-State-Metrics, Protokollerfassung, Workload-Mapping, Änderungsmanagement und mehr, um die Überwachung Ihrer Kubernetes-Umgebung zu optimieren.
+Der link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Kubernetes Monitoring Operator"] bietet umfangreiche Anpassungsmöglichkeiten über die AgentConfiguration-Datei. Sie können Ressourcenlimits, Erfassungsintervalle, Proxy-Einstellungen, Toleranzen und komponentenspezifische Einstellungen konfigurieren, um die Überwachung Ihrer Kubernetes-Umgebung zu optimieren. Nutzen Sie diese Optionen, um Telegraf, Kube-State-Metrics, die Protokollerfassung, die Workload-Zuordnung, das Änderungsmanagement und andere Überwachungskomponenten anzupassen.
 
 In der folgenden Tabelle sind die möglichen Optionen für die _AgentConfiguration_-Datei aufgeführt:
 
@@ -26,13 +26,13 @@ In der folgenden Tabelle sind die möglichen Optionen für die _AgentConfigurati
 | Agent |  | Konfigurationsoptionen, die allen Komponenten gemeinsam sind, die der Bediener installieren kann. Diese können als "globale" Optionen betrachtet werden. 
 
 
-|  | DockerRepo | Ein ockerRepo-Überschreiben, um Bilder von privaten Docker-Repos des Kunden im Vergleich zu Data Infrastructure Insights Docker Repo zu beziehen. Der Standardwert ist Data Infrastructure Insights Docker Repo 
+|  | DockerRepo | Eine DockerRepo-Überschreibung, um Bilder aus den privaten Docker-Repositorys des Kunden statt aus dem Docker-Repository von Data Infrastructure Insights abzurufen. Standardmäßig wird das Docker-Repository von Data Infrastructure Insights verwendet. 
 
 
-|  | DockerImagePullSecret | Optional: Ein Geheimnis für den Kunden private repo 
+|  | DockerImagePullSecret | Optional: Ein Geheimnis für das private Repository des Kunden. 
 
 
-|  | ClusterName | Freitextfeld, das einen Cluster über alle Kundencluster eindeutig identifiziert. Diese sollte bei einem Mandanten von Dateninfrastruktur Insights eindeutig sein. Der Standardwert ist das, was der Kunde in die Benutzeroberfläche für das Feld „Cluster Name“ eingibt 
+|  | ClusterName | Freitextfeld, das einen Cluster über alle Kundencluster hinweg eindeutig identifiziert. Dies sollte innerhalb eines Data Infrastructure Insights Mandanten eindeutig sein. Standardmäßig wird der vom Kunden in der Benutzeroberfläche im Feld „Clustername“ eingegebene Wert verwendet. 
 
 
 |  | Proxy Format: Proxy: Server: Port: Benutzername: Passwort: Noproxy: IsTelegrafProxyEnabled: IsAuProxyEnabled: IsFluentbitProxyEnabled: IsCollectorProxyEnabled: | Optional zum Festlegen des Proxys. Dies ist in der Regel der Unternehmensvertreter des Kunden. 
@@ -107,7 +107,7 @@ In der folgenden Tabelle sind die möglichen Optionen für die _AgentConfigurati
 |  | SkipProcessorsAfterAggregatoren | Siehe link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Telegraf-Konfigurationsdokumentation"] 
 
 
-|  | Ungeschützt | ee dieses link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["Bekanntes Problem mit Telegraf"]. Durch die Einstellung _Unprotected_ wird der Kubernetes Monitoring Operator angewiesen, Telegraf mit dem Flag auszuführen `--unprotected`. 
+|  | Ungeschützt | Sehen Sie dies link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["Bekanntes Problem mit Telegraf"] . Die Einstellung _unprotected_ weist den Kubernetes Monitoring Operator an, Telegraf mit dem  `--unprotected` Flagge. 
 
 
 |  | insecureK8sSkipVerify | Wenn telegraf das Zertifikat aufgrund fehlender IP-SANs nicht verifizieren kann, versuchen Sie, Verifizierungs-skip zu aktivieren 
@@ -209,10 +209,10 @@ In der folgenden Tabelle sind die möglichen Optionen für die _AgentConfigurati
 |  | ArbeitslastFehlerdeklarationsintervallSekunden | Intervall in Sekunden, nach dem eine nicht erfolgreiche Bereitstellung einer Arbeitslast als fehlgeschlagen markiert wird 
 
 
-|  | EinsatzAggrIntervalSekunden | Häufigkeit, mit der Ereignisse zur laufenden Workload-Bereitstellung gesendet werden 
+|  | ArbeitslastDeployAggrIntervalSeconds | Häufigkeit, mit der Workloadbereitstellungen kombiniert und gesendet werden (in Sekunden) 
 
 
-|  | Nicht-WorkloadAggrIntervalSekunden | Häufigkeit der Kombination und des Sendeens von nicht-Workload-Implementierungen 
+|  | nonWorkloadDeployAggrIntervalSeconds | Häufigkeit, mit der Nicht-Workload-Bereitstellungen kombiniert und gesendet werden (in Sekunden) 
 
 
 |  | TermsToAkt | Ein Satz von regulären Ausdrücken, die in Env-Namen und Datenkarten verwendet werden, deren Wert bearbeitet wird Beispielbegriffe:"pwd", "password", "Token", "apikey", "API-key", "jwt" 
@@ -468,11 +468,11 @@ spec:
     # # Interval after which a non-successful deployment of a workload will be marked as failed, in seconds
     # workloadFailureDeclarationIntervalSeconds: '30'
 
-    # # Frequency at which workload deployment in-progress events are sent
-    # deployAggrIntervalSeconds: '300'
+    # # Frequency at which workload deployments are combined and sent, in seconds
+    # workloadDeployAggrIntervalSeconds: '300'
 
-    # # Frequency at which non-workload deployments are combined and sent
-    # nonWorkloadAggrIntervalSeconds: '15'
+    # # Frequency at which non-workload deployments are combined and sent, in seconds
+    # nonWorkloadDeployAggrIntervalSeconds: '15'
 
     # # A set of regular expressions used in env names and data maps whose value will be redacted
     # termsToRedact: '"pwd", "password", "token", "apikey", "api-key", "api_key", "jwt", "accesskey", "access_key", "access-key", "ca-file", "key-file", "cert", "cafile", "keyfile", "tls", "crt", "salt", ".dockerconfigjson", "auth", "secret"'

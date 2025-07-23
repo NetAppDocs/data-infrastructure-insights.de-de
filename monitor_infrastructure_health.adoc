@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: monitor_infrastructure_health.html 
+keywords: health, infra, infrastructure, monitoring 
+summary: Überwachung der Infrastrukturintegrität 
+---
+= Überwachen des Infrastrukturzustands
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Überwachen des Infrastrukturzustands
