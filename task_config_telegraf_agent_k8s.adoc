@@ -8,6 +8,9 @@ summary: Der Kubernetes Monitoring Operator erfasst Kubernetes-Daten zur Verwend
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -92,7 +95,7 @@ Wenn Sie das Upgrade mithilfe der Funktion „Upgrades per Knopfdruck“ durchge
 
 Ermitteln Sie, ob eine AgentConfiguration bei dem vorhandenen Operator vorhanden ist (wenn Ihr Namespace nicht der Standardwert _netapp-Monitoring_ ist, ersetzen Sie den entsprechenden Namespace):
 
- kubectl -n netapp-monitoring get agentconfiguration netapp-monitoring-configuration
+ kubectl -n netapp-monitoring get agentconfiguration netapp-ci-monitoring-configuration
 Wenn eine AgentConfiguration vorhanden ist:
 
 * <<installing-the-kubernetes-monitoring-operator,Installieren>> Der letzte Operator über den vorhandenen Operator.
@@ -325,8 +328,8 @@ Um die Berechtigung für den Kubernetes Monitoring Operator zum Anzeigen der geh
 
 [listing]
 ----
- ClusterRole/netapp-ci-<namespace>-agent-secret-clusterrole
- ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
+ ClusterRole/netapp-ci<namespace>-agent-secret
+ ClusterRoleBinding/netapp-ci<namespace>-agent-secret
 ----
 Wenn es sich um ein Upgrade handelt, löschen Sie auch die Ressourcen aus Ihrem Cluster:
 
@@ -334,11 +337,12 @@ Wenn es sich um ein Upgrade handelt, löschen Sie auch die Ressourcen aus Ihrem 
 ----
  kubectl delete ClusterRole/netapp-ci-<namespace>-agent-secret-clusterrole
  kubectl delete ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
+
 ----
 Wenn die Änderungsanalyse aktiviert ist, ändern Sie die Optionen _AgentConfiguration_ oder _Operator-config.yaml_, um den Änderungsmanagementabschnitt zu entkommentieren und _kindsToIgnoreFromWatch: '"Secrets"_ im Bereich Change-Management aufzunehmen. Notieren Sie sich das Vorhandensein und die Position von einfachen und doppelten Anführungszeichen in dieser Zeile.
 
 ....
-# change-management:
+change-management:
   ...
   # # A comma separated list of kinds to ignore from watching from the default set of kinds watched by the collector
   # # Each kind will have to be prefixed by its apigroup

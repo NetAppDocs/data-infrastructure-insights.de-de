@@ -64,7 +64,7 @@ NOTE: Wenn Sie zusätzliche Zeit benötigen, um Data Infrastructure Insights zu 
 
 Sie können sich zudem über den AWS Marketplace für eine kostenlose Testversion anmelden. Mit der kostenlosen Testversion von AWS Marketplace erhalten Sie 33 Tage lang Zugriff auf Data Infrastructure Insights.
 
-Die kostenlose Testversion von AWS Marketplace kann nicht erweitert werden. Sie können jederzeit während der Testversion auf ein Data Infrastructure Insights Basic Edition-Abonnement herunterstufen oder auf ein kostenpflichtiges Data Infrastructure Insights-Abonnement wechseln, indem Sie die Seite *Admin -> Abonnement* aufrufen.
+Die kostenlose Testversion von AWS Marketplace kann nicht verlängert werden.
 
 
 
