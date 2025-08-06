@@ -278,12 +278,12 @@ Für MetroCluster wird Folgendes empfohlen:
 
 . Verbinden Sie zwei Data Collectors – eine mit der Quell-SVM und eine andere mit der Ziel-SVM.
 . Die Datensammler sollten durch _Cluster IP_ verbunden werden.
-. Zu jedem Zeitpunkt sollte ein Datensammler in Betrieb sein, ein anderer wird im Fehler sein.
+. Zu jedem Zeitpunkt sollte ein Datensammler ausgeführt werden, ein anderer wird als _Gestoppt_ angezeigt.
 +
-Der Datensammler der aktuellen „laufenden“ SVM wird als _Running_ angezeigt. Der Datensammler der aktuellen 'stoppten' SVM wird als _Error_ angezeigt.
+Der aktuell „laufende“ Datensammler des SVM wird als _Running_ angezeigt.  Der aktuell „gestoppte“ Datensammler des SVM wird als _Gestoppt_ angezeigt.
 
-. Wenn eine Umschaltung erfolgt, ändert sich der Status des Datensammlers von „wird ausgeführt“ zu „Fehler“ und umgekehrt.
-. Es dauert bis zu zwei Minuten, bis der Datensammler den Fehlerstatus in den Ausführungszustand wechselt.
+. Bei jeder Umschaltung ändert sich der Status des Datensammlers von „läuft“ zu „gestoppt“ und umgekehrt.
+. Es dauert bis zu zwei Minuten, bis der Datensammler vom Status „Gestoppt“ in den Status „Läuft“ wechselt.
 
 
 

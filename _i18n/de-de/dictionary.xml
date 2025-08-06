@@ -8020,8 +8020,6 @@
   <block id="eff16f7e2ed55dec2fc30b6481ebf593" category="paragraph">Für MetroCluster wird Folgendes empfohlen:</block>
   <block id="65b46bd8eed280f6feefa47f4a74d302" category="list-text">Verbinden Sie zwei Data Collectors – eine mit der Quell-SVM und eine andere mit der Ziel-SVM.</block>
   <block id="d5d55b52a220ca4d14feac2aa8b83d23" category="list-text">Die Datensammler sollten durch _Cluster IP_ verbunden werden.</block>
-  <block id="c2e2e688fedcc6b98883e05a15afc9b8" category="list-text">Zu jedem Zeitpunkt sollte ein Datensammler in Betrieb sein, ein anderer wird im Fehler sein.</block>
-  <block id="34d88af94446d0d86575e402898fc1b0" category="list-text">Es dauert bis zu zwei Minuten, bis der Datensammler den Fehlerstatus in den Ausführungszustand wechselt.</block>
   <block id="f0240b95ecfe16d637a84130b5ed57d9" category="section-title">Service-Richtlinie</block>
   <block id="4cb8e0d8b1d299b402fd5ddce7d39cd5" category="paragraph">Wenn Sie die Service Policy mit ONTAP *Version 9.9.1 oder neuer* verwenden, um eine Verbindung zum Data Source Collector herzustellen, ist der _Data-fpolicy-Client_-Dienst zusammen mit dem Datendienst _Data-nfs_ und/oder _Data-cifs_ erforderlich.</block>
   <block id="ee22588534e4e3b699a85e968f56f4a7" category="paragraph">In Versionen von ONTAP vor 9.9 muss _Data-fpolicy-Client_ nicht gesetzt werden.</block>
@@ -12344,8 +12342,6 @@
   <block id="1b0825e538a70e8323fac1cbfe230ee5" category="paragraph">Hinweis: Sie können eine einzelne Rolle erstellen, die für alle Feature-Berechtigungen eines benutzerdefinierten Benutzers verwendet werden soll. Wenn bereits ein Benutzer vorhanden ist, löschen Sie zunächst den vorhandenen Benutzer und die vorhandene Rolle mit den folgenden Befehlen:</block>
   <block id="91f83541442d1c49aaf40212bccffad1" category="paragraph">Hinweis: Sie können eine einzelne Rolle erstellen, die für alle Feature-Berechtigungen eines benutzerdefinierten Benutzers verwendet werden soll. Wenn bereits ein Benutzer vorhanden ist, löschen Sie zunächst den vorhandenen Benutzer und die vorhandene Rolle mit den folgenden Befehlen:</block>
   <block id="858faeb682f19ff16f83d24c86cb97f7" category="cell">Benutzername für den Zugriff auf die SVM/Cluster beim Hinzufügen über Cluster IP die Optionen sind: 1. Cluster-Admin 2. 'Csuser' 3. AD-User mit ähnlicher Rolle wie CSuser. Beim Hinzufügen über SVM IP stehen folgende Optionen zur Verfügung: 4. Vsadmin 5. 'Csuser' 6. AD-Benutzername mit ähnlicher Rolle wie CSuser.</block>
-  <block id="0851edbfbb1a0406acbc79df15296b3f" category="paragraph">Der Datensammler der aktuellen „laufenden“ SVM wird als _Running_ angezeigt. Der Datensammler der aktuellen 'stoppten' SVM wird als _Error_ angezeigt.</block>
-  <block id="046c8e391630ab49d75409e270a4f4b6" category="list-text">Wenn eine Umschaltung erfolgt, ändert sich der Status des Datensammlers von „wird ausgeführt“ zu „Fehler“ und umgekehrt.</block>
   <block id="7a69a2fce9a9acb9c8a84936863c1330" category="paragraph">Wenn neue Volumes usw. auf ONTAP erstellt werden, während der Collector angehalten ist, erfasst Workload Security die Daten nicht, und diese Volumes usw. werden nicht in Dashboards oder Tabellen wiedergegeben.</block>
   <block id="0d55775dbf06cf5596fe0f5c3363f19a" category="list-text">Das Löschen von Snapshots geschieht nicht gemäß den Einstellungen, die auf einem angehaltenen Collector konfiguriert wurden.</block>
   <block id="f8b4c5607366d38cf806b0860c9cc5e4" category="list-text">EMS-Ereignisse (wie ONTAP ARP) werden nicht auf einem angehaltenen Collector verarbeitet. Das heißt, wenn ONTAP einen Ransomware-Angriff identifiziert, kann Workload Security zu Dateninfrastruktur Insights dieses Ereignis nicht erfassen.</block>
@@ -12671,4 +12667,8 @@
   <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">Häufigkeit, mit der Nicht-Workload-Bereitstellungen kombiniert und gesendet werden (in Sekunden)</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">Die kostenlose Testversion von AWS Marketplace kann nicht verlängert werden.</block>
+  <block id="f9140e559462604832a886e4eb558360" category="list-text">Zu jedem Zeitpunkt sollte ein Datensammler ausgeführt werden, ein anderer wird als _Gestoppt_ angezeigt.</block>
+  <block id="a2c39bece4ce05e23c13d7dc078d390f" category="paragraph">Der aktuell „laufende“ Datensammler des SVM wird als _Running_ angezeigt.  Der aktuell „gestoppte“ Datensammler des SVM wird als _Gestoppt_ angezeigt.</block>
+  <block id="e02fc5a08fc17a2cc71f90cc044645af" category="list-text">Bei jeder Umschaltung ändert sich der Status des Datensammlers von „läuft“ zu „gestoppt“ und umgekehrt.</block>
+  <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">Es dauert bis zu zwei Minuten, bis der Datensammler vom Status „Gestoppt“ in den Status „Läuft“ wechselt.</block>
 </blocks>
