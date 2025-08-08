@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: monitor_infrastructure_health.html 
-keywords: health, infra, infrastructure, monitoring 
-summary: Überwachung der Infrastrukturintegrität 
+keywords: health, monitor, infrastructure 
+summary: Überwachen des Infrastrukturzustands 
 ---
 = Überwachen des Infrastrukturzustands
 :hardbreaks:

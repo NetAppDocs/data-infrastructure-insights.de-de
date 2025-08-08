@@ -12655,8 +12655,6 @@
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">Intervall in Sekunden, nach dem eine nicht erfolgreiche Bereitstellung einer Arbeitslast als fehlgeschlagen markiert wird</block>
   <block id="8edfed76354af11279c58c2d91948eda" category="cell">Fluent-Bit-ContainerLogPath</block>
   <block id="3150c73f1d1522f3b831f0d591077194" category="cell">Standardmäßig mountet das Fluentbit-DaemonSet die Hostpfade /var/log und /var/lib/docker/containers, um auf die Kubernetes-Containerprotokolle zuzugreifen und diese zu lesen. Wenn Kubernetes so konfiguriert wurde, dass Containerprotokolle an einem anderen Speicherort abgelegt werden, verwenden Sie diese Option, um das Fluentbit-DaemonSet so zu ändern, dass der andere Pfad mountet.</block>
-  <block id="7e5bd63d855501c5e08449ea5b593ee7" category="summary">Überwachung der Infrastrukturintegrität</block>
-  <block id="48f51aa9a5737857bbd298bfb874281e" category="doc">Überwachen des Infrastrukturzustands</block>
   <block id="a2c6fd0b23854404c386430346919db8" category="paragraph">Der <block ref="025a80672f7feae526479c9984c435c7" category="inline-link-macro-rx"></block> bietet umfangreiche Anpassungsmöglichkeiten über die AgentConfiguration-Datei. Sie können Ressourcenlimits, Erfassungsintervalle, Proxy-Einstellungen, Toleranzen und komponentenspezifische Einstellungen konfigurieren, um die Überwachung Ihrer Kubernetes-Umgebung zu optimieren. Nutzen Sie diese Optionen, um Telegraf, Kube-State-Metrics, die Protokollerfassung, die Workload-Zuordnung, das Änderungsmanagement und andere Überwachungskomponenten anzupassen.</block>
   <block id="ea55ba51f0b69383ec5bb89cabada638" category="cell">Eine DockerRepo-Überschreibung, um Bilder aus den privaten Docker-Repositorys des Kunden statt aus dem Docker-Repository von Data Infrastructure Insights abzurufen. Standardmäßig wird das Docker-Repository von Data Infrastructure Insights verwendet.</block>
   <block id="8e8bb119221ff93e3f93bea9ae89444f" category="cell">Optional: Ein Geheimnis für das private Repository des Kunden.</block>
@@ -12667,8 +12665,9 @@
   <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">Häufigkeit, mit der Nicht-Workload-Bereitstellungen kombiniert und gesendet werden (in Sekunden)</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">Die kostenlose Testversion von AWS Marketplace kann nicht verlängert werden.</block>
-  <block id="f9140e559462604832a886e4eb558360" category="list-text">Zu jedem Zeitpunkt sollte ein Datensammler ausgeführt werden, ein anderer wird als _Gestoppt_ angezeigt.</block>
-  <block id="a2c39bece4ce05e23c13d7dc078d390f" category="paragraph">Der aktuell „laufende“ Datensammler des SVM wird als _Running_ angezeigt.  Der aktuell „gestoppte“ Datensammler des SVM wird als _Gestoppt_ angezeigt.</block>
-  <block id="e02fc5a08fc17a2cc71f90cc044645af" category="list-text">Bei jeder Umschaltung ändert sich der Status des Datensammlers von „läuft“ zu „gestoppt“ und umgekehrt.</block>
   <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">Es dauert bis zu zwei Minuten, bis der Datensammler vom Status „Gestoppt“ in den Status „Läuft“ wechselt.</block>
+  <block id="da3fe25b9ad7a2bbb8f75a52d2d39828" category="summary">Überwachen des Infrastrukturzustands</block>
+  <block id="0513a990ff8b7eb9d4d9e530e812b450" category="paragraph">Der ONTAP SVM Data Collector ermöglicht Workload Security die Überwachung von Datei- und Benutzerzugriffsaktivitäten auf NetApp ONTAP Storage Virtual Machines (SVMs).  Dieses Handbuch führt Sie durch die Voraussetzungen, Konfiguration und Verwaltung des SVM-Datensammlers, um eine umfassende Sicherheitsüberwachung Ihrer ONTAP Umgebung zu gewährleisten.</block>
+  <block id="57da797adb74a055edb3de9c7e734b65" category="list-text">Der Datensammler des aktuell „laufenden“ SVM wird jederzeit als „_Läuft_“ angezeigt. Der aktuell „gestoppte“ Datensammler des SVM wird als _Gestoppt_ angezeigt.</block>
+  <block id="61dcd000a72340c1c72d4c7a96c2ec90" category="list-text">Bei jeder Umschaltung ändert sich der Status des Datensammlers von _Läuft_ zu _Gestoppt_ und umgekehrt.</block>
 </blocks>

@@ -14,7 +14,7 @@ summary: Hinzufügen von Datensammlern für Workload-Sicherheit
 
 
 [role="lead"]
-Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen.
+Der ONTAP SVM Data Collector ermöglicht Workload Security die Überwachung von Datei- und Benutzerzugriffsaktivitäten auf NetApp ONTAP Storage Virtual Machines (SVMs).  Dieses Handbuch führt Sie durch die Voraussetzungen, Konfiguration und Verwaltung des SVM-Datensammlers, um eine umfassende Sicherheitsüberwachung Ihrer ONTAP Umgebung zu gewährleisten.
 
 
 
@@ -278,11 +278,8 @@ Für MetroCluster wird Folgendes empfohlen:
 
 . Verbinden Sie zwei Data Collectors – eine mit der Quell-SVM und eine andere mit der Ziel-SVM.
 . Die Datensammler sollten durch _Cluster IP_ verbunden werden.
-. Zu jedem Zeitpunkt sollte ein Datensammler ausgeführt werden, ein anderer wird als _Gestoppt_ angezeigt.
-+
-Der aktuell „laufende“ Datensammler des SVM wird als _Running_ angezeigt.  Der aktuell „gestoppte“ Datensammler des SVM wird als _Gestoppt_ angezeigt.
-
-. Bei jeder Umschaltung ändert sich der Status des Datensammlers von „läuft“ zu „gestoppt“ und umgekehrt.
+. Der Datensammler des aktuell „laufenden“ SVM wird jederzeit als „_Läuft_“ angezeigt. Der aktuell „gestoppte“ Datensammler des SVM wird als _Gestoppt_ angezeigt.
+. Bei jeder Umschaltung ändert sich der Status des Datensammlers von _Läuft_ zu _Gestoppt_ und umgekehrt.
 . Es dauert bis zu zwei Minuten, bis der Datensammler vom Status „Gestoppt“ in den Status „Läuft“ wechselt.
 
 

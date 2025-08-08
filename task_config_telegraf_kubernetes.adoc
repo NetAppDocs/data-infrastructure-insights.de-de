@@ -7,6 +7,10 @@ summary: Datensammler für Kubernetes
 = Data Collector: Kubernetes
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
