@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: monitor_infrastructure_health.html 
-keywords: health, monitor, infrastructure 
-summary: Überwachen des Infrastrukturzustands 
+keywords: infra, infrastructure, health, monitor 
+summary: Überwachen Sie den Zustand Ihrer Infrastruktur mit einer einheitlichen Bewertung basierend auf Leistung, Kapazität, Konfiguration und Komponentenwarnungen zur proaktiven Problemlösung. 
 ---
 = Überwachen des Infrastrukturzustands
 :hardbreaks:
@@ -14,4 +14,55 @@ summary: Überwachen des Infrastrukturzustands
 
 
 [role="lead"]
-Überwachen des Infrastrukturzustands
+Data Infrastructure Insights bietet eine umfassende Überwachung der Infrastrukturintegrität, die Leistung, Kapazität, Konfiguration und Komponentenstatus Ihrer Speicherumgebung verfolgt.  Die Integritätswerte werden auf Grundlage von Monitorwarnungen in diesen Kategorien berechnet. So erhalten Sie einen einheitlichen Überblick über die Systemintegrität und können Probleme proaktiv lösen.
+
+
+
+== Das Dashboard „Infrastructure Health“
+
+
+NOTE: Die Überwachung des Infrastrukturzustands ist einlink:concept_preview_features.html["Vorschau"] Funktion und kann sich ändern.
+
+Navigieren Sie zu *Beobachtbarkeit > Analysieren* und wählen Sie *Infrastrukturzustand* aus.  Das Dashboard bietet einen Überblick über den Zustand Ihres Systems, basierend auf den unten erläuterten Alarmkategorien und Bewertungen des Monitors.  Legen Sie oben Filter fest, um den Fokus Ihrer Untersuchung einzugrenzen.
+
+image:infra_health_main_screen.png["Übersicht über den Zustand der Infrastruktur"]
+
+Standardmäßig werden Integritätswerte nach Rechenzentrum gruppiert. Sie können die Gruppierung auswählen, die für Ihre Sitzung am besten geeignet ist.
+
+
+
+== Konfigurieren Sie Monitore zur Überwachung der Infrastrukturintegrität
+
+Die Integritätswerte werden durch Warnungen bestimmt, die für die Einbeziehung in die Berechnung der Systemintegrität konfiguriert sind.
+
+Beim Erstellen eines Monitors für ein Infrastrukturobjekt können Sie auswählen, ob Warnungen vom Monitor in die Berechnungen einbezogen werden sollen.  Erweitern Sie unten auf dem Bildschirm die erweiterte Konfiguration und wählen Sie „In Infrastrukturzustandsberechnung einbeziehen“ aus.  Wählen Sie eine Kategorie aus, auf die die Berechnung für den Monitor angewendet werden soll:
+
+* *Komponentenzustand* – Lüfterausfall, Serviceprozessor offline usw.
+* *Leistungszustand* – hohe Speicherknotenauslastung, anormale Spitze der Knotenlatenz usw.
+* *Kapazitätszustand* – Speicherpoolkapazität fast voll, nicht genügend Speicherplatz für LUN-Snapshot usw.
+* *Konfigurationsintegrität* – Cloud-Ebene nicht erreichbar, SnapMirror -Beziehung nicht synchron usw.
+
+
+image:infra_health_monitor_advanced_config.png["Erweiterte Monitorkonfiguration zum Hinzufügen zu Gesundheitsberechnungen, Breite = 400"]
+
+
+
+== Gesundheitswerte erklärt
+
+Die Punktzahlen werden auf einer Skala von 0 bis 100 angegeben, wobei 100 für volle Gesundheit steht.  Überwachte Infrastrukturobjekte, bei denen derzeit oder in letzter Zeit Probleme aufgetreten sind, senken diesen Wert entsprechend den folgenden gewichteten Durchschnittswerten:
+
+* Komponenten, Leistung oder Kapazität: jeweils 30 %
+* Konfiguration: 10 %
+
+
+Die Integritätswerte werden durch Warnungen beeinflusst, die von den Monitoren generiert werden, die Sie für die Berücksichtigung in der Berechnung der Infrastrukturintegrität konfiguriert haben. Dies geschieht auf folgende Weise:
+
+* Kritische Warnungen senken den Gesundheitswert um das _volle_ Kategoriegewicht
+* Warnmeldungen senken die Punktzahl um die _Hälfte_ des Kategoriegewichts.
+
+
+Wenn für bestimmte Kategorien keine Meldungen vorliegen, wird der gewichtete Durchschnitt entsprechend angepasst.
+
+Beispiel: 1 kritischer Alarm bei Komponenten (-30) und 1 Warnalarm bei Leistung (50 % von 30 = -15) ergeben einen Integritätswert von 55 (100 minus 45).
+
+Wenn die Warnungen behoben werden, verschwinden diese Gesundheitsbewertungsminderungen allmählich und die Bewertung erholt sich innerhalb von zwei Stunden vollständig.
