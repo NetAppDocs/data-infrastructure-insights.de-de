@@ -11206,7 +11206,6 @@
   <block id="3208596ca58c1fef6b7222123babb2fc" category="paragraph"><block ref="3208596ca58c1fef6b7222123babb2fc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9c55b8bf6c1b8aab646e91366d10f4c2" category="list-text">Ein Diagramm mit _Aktivitätsverlauf_ (basierend auf dem ausgewählten globalen Zeitbereich)</block>
   <block id="977eedf5743a236d4137f46ddfcd8dea" category="list-text">Eine Liste der _All Activity_-Daten.</block>
-  <block id="ce0a4ef9bdcf713141ba5af92b5449a2" category="list-text">In einer Dropdown-Liste „Gruppieren nach“ können Sie die Aktivität nach Benutzern, Pfad, Entitätstyp usw. gruppieren</block>
   <block id="2f67a7ee2834facb4c2289f3f9f8a7b0" category="list-text">Über der Tabelle steht eine Schaltfläche für gemeinsamen Pfad zur Verfügung, auf die Sie klicken können, um das Fenster mit Details zum Entity-Pfad zu öffnen.</block>
   <block id="2b9b3cac1b8e073b6533f3389ac6ad5f" category="list-text">Der *user*, der auf die Entität mit einem Link zum als Slide-out Panel zugegriffen <block ref="62cf04ad66abc0c5964885d5ae0624ca" category="inline-link-macro-rx"></block>hat.</block>
   <block id="2c20ae8e4eac25c0be12e73a9aea15f8" category="list-text">Der * 1st Level Folder (Root)* ist das Stammverzeichnis des Entity-Pfades in Kleinbuchstaben.</block>
@@ -12697,4 +12696,5 @@
   <block id="9a1645f81973ce35a5b8a3cb57dafb2e" category="paragraph">Wenn die Warnungen behoben werden, verschwinden diese Gesundheitsbewertungsminderungen allmählich und die Bewertung erholt sich innerhalb von zwei Stunden vollständig.</block>
   <block id="3ad17df8e0c21cd3fba4fa89d748a88e" category="paragraph">Dieser Datensammler erfasst mithilfe von REST-API-Aufrufen Inventar-, EMS-Protokoll- und Leistungsdaten von Speichersystemen mit ONTAP 9.14.1 und höher.  Verwenden Sie für ONTAP -Systeme früherer Versionen den ZAPI-basierten Collectortyp „NetApp ONTAP Data Management Software“.</block>
   <block id="93c13f56f33b4026f411d3de7b0577a5" category="paragraph">Sie können bei Bedarf den SPI-Zugriff überprüfen:</block>
+  <block id="1895704ffbc6e56720172ab7d145f8ae" category="list-text">Ein Dropdown-Menü „Gruppieren nach“ bietet die Möglichkeit, die Aktivität nach Benutzern, Entitätstyp usw. zu gruppieren.</block>
 </blocks>
