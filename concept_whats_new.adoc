@@ -18,6 +18,49 @@ NetApp verbessert seine Produkte und Services kontinuierlich. Im Folgenden finde
 
 
 
+== August 2025
+
+
+
+=== Fokussierte Widget-Daten immer zur Hand
+
+Mit der neuen *Analysieren*-Funktion in den meisten Widgets können Sie die Daten in jeweils einem Widget genauer betrachten.  Klicken Sie einfach auf die Schaltfläche „Analysieren“ in einem Widget, um eine Detailansicht zu öffnen, in der Sie die zugrunde liegenden Daten interaktiv erkunden und für tiefere Einblicke hineinzoomen können – ohne den Kontext Ihres Dashboards zu verlassen.
+
+image:widget_analyze_panel.png["Analysebereich für ein Linien-Widget, Breite=900"]
+
+
+
+=== Dashboards exportieren und importieren
+
+Wenn Sie mehrere Mandanten verwalten und ein nützliches Dashboard entwickelt haben, können Sie das Dashboard exportieren und in einen anderen Mandanten importieren.
+
+image:dashboard_import_from_file.png["Bild zeigt Import"] image:dashboard_export_from_menu.png["Bild zeigt den Export"]
+
+
+
+=== Verbesserte Cloud-Integration: Unterstützung für Google Cloud NetApp Volumes (GCNV)
+
+* Google Cloud NetApp Volumes* (GCNV) wird jetzt als Datensammler in DII vollständig unterstützt und vervollständigt unser Ökosystem für die Hybrid-Cloud-Überwachung.  Erhalten Sie Einblick in kritische Speicherobjekte wie Organisationen, Pools und Volumes in der gesamten Infrastruktur.  Jetzt können Sie alle Ihre Speicherumgebungen – vor Ort oder in der Cloud – von einer einzigen Plattform aus verfolgen.
+
+
+
+=== Verbesserte StorageGRID -Überwachung
+
+Die StorageGRID Protokollsammlung ist jetzt standardmäßig aktiviert und stellt DII Ereignisverfolgungsdaten bereit. Außerdem haben wir die StorageGrid-Überwachung um über 50 Standardwarnungen, Echtzeit-Ereignisverfolgung und neue Dashboards erweitert, um komplexe Speichernetzvorgänge zu vereinfachen.  Bleiben Sie Problemen immer einen Schritt voraus, indem Sie tiefere Einblicke in Verkehrsrichtlinien und Bucket-Leistung erhalten.
+
+
+
+=== Betriebssystemunterstützung
+
+Zusätzlich zu den folgenden Betriebssystemen werden jetzt auch Data Infrastructure Insights Acquisition Units unterstütztlink:concept_acquisition_unit_requirements.html["Unterstützung bereits vorhanden"]:
+
+* AlmaLinux (64-Bit) 10
+* Red Hat (64-Bit) 10
+* Rocky (64-Bit) 9.6
+
+
+
+
 == Juni 2025
 
 

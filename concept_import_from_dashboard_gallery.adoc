@@ -1,27 +1,47 @@
 ---
 sidebar: sidebar 
 permalink: concept_import_from_dashboard_gallery.html 
-summary: Sie können empfohlene Dashboards importieren, um bei der Beantwortung von Fragen zu Business Insight behilflich zu sein. 
-keywords: dashboard, gallery, import 
+summary: Sie können empfohlene Dashboards importieren, die Ihnen bei der Beantwortung von Fragen zu Geschäftseinblicken helfen.  Sie können auch benutzerdefinierte Dashboards importieren, die Sie zuvor exportiert haben. 
+keywords: dashboard, gallery, import, export 
 ---
-= Import aus der Dashboard-Galerie
+= Dashboards importieren
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights bietet eine Reihe empfohlener Dashboards, die Ihnen Einblick in Ihre Daten geben. Jedes Dashboard enthält Widgets, mit denen Sie eine bestimmte Frage beantworten oder ein bestimmtes Problem lösen können, das für die Daten relevant ist, die derzeit auf Ihrem Mandanten gesammelt werden.
+Data Infrastructure Insights bietet eine Reihe empfohlener Dashboards, um geschäftliche Einblicke in Ihre Daten zu gewähren.  Jedes Dashboard enthält Widgets, die Ihnen dabei helfen sollen, eine bestimmte Frage zu beantworten oder ein bestimmtes Problem zu lösen, das für die Daten relevant ist, die derzeit über Ihren Mandanten erfasst werden.  Mit DII können Sie auch ein nützliches Dashboard exportieren und in einen anderen Mandanten importieren.
+
+
+
+== Import aus der Dashboard-Galerie
 
 So importieren Sie ein Dashboard aus der Galerie:
 
-. Wählen Sie *Dashboards > Dashboards*
-. Klicken Sie auf *+aus Galerie*
+. Wählen Sie *Observability > Explore > All Dashboards*
+. Klicken Sie auf *+Dashboard importieren* und wählen Sie _Aus Galerie importieren_.
 +
-Es wird eine Liste von *Empfohlene Dashboards* angezeigt. Jedes Dashboard enthält eine bestimmte Frage, die Sie mithilfe des Dashboards lösen können. Dashboards bieten Unterstützung bei der Beantwortung von Fragen zu verschiedenen Objekttypen, wie AWS, NetApp, Storage, VMware, Und anderen
+Basierend auf den Datensammlern in Ihrer Umgebung wird eine Liste mit *empfohlenen Dashboards* angezeigt.  Zur Beantwortung von Fragen zu verschiedenen Objekttypen, darunter AWS, NetApp, Storage, VMware und andere, stehen Dashboards zur Verfügung.
 
-. Wählen Sie ein oder mehrere Dashboards aus der Liste aus und klicken Sie auf *Dashboards hinzufügen*. Diese Dashboards werden jetzt in Ihrer Dashboard-Liste angezeigt.
+. Wählen Sie ein oder mehrere Dashboards aus der Liste aus und klicken Sie auf *Dashboards hinzufügen*.  Diese Dashboards werden in Ihrer Dashboard-Liste angezeigt.
 
 
 Zusätzlich zu den empfohlenen Dashboards können Sie auch *zusätzliche Dashboards* importieren, die für Ihre aktuellen Daten nicht relevant sind. Wenn Sie beispielsweise derzeit keine Speicherdatensammler installiert haben, aber zukünftig einige konfigurieren möchten, können Sie die speicherrelevanten Dashboards trotzdem importieren. Diese Dashboards sind zwar für die Anzeige verfügbar, zeigen jedoch möglicherweise keine relevanten Daten an, bis mindestens ein Speicherdatensammler konfiguriert ist.
 
 Der Import von der Dashboard-Galerie ist für Benutzer mit Administrator- oder Kontoinhaber-Rolle verfügbar.
+
+
+
+== Importieren eines exportierten Dashboards
+
+Um ein Dashboard zu *exportieren*, klicken Sie auf der Seite *Observability > Explore > All Dashboards* auf das Menü rechts neben dem Dashboard und wählen Sie _Export_.  Sie können auch mehrere Dashboards auswählen und im Dropdown-Menü „Massenaktionen“ die Option „Exportieren“ wählen.  Die Dashboards werden in einer ZIP-Datei auf Ihrem lokalen System gespeichert.
+
+Um das Dashboard zu *importieren*, navigieren Sie zum gewünschten Mandanten und gehen Sie wie folgt vor:
+
+. Wählen Sie *Observability > Explore > All Dashboards*
+. Klicken Sie auf *+Dashboard importieren* und wählen Sie _Aus Datei importieren_.  Wählen Sie die ZIP-Datei der zuvor exportierten Datei aus.  Die Dashboards werden importiert und in Ihrer Dashboard-Liste angezeigt.  Beachten Sie, dass beim Importieren eines Dashboards mit demselben Namen wie ein vorhandenes Dashboard eine „(2)“ an den Dashboard-Namen angehängt wird.
+

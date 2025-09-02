@@ -41,7 +41,11 @@ Der NetApp-Kubernetes-Überwachungsoperator extrahiert die unten aufgeführten K
 . Persistente Volume-Kennzahlen
 . Persistent Volume Claim Metrics
 . Pod-Metriken
-. Kennzahlen für ReplicaSet
-. Service-Kennzahlen
-. StatfulSet-Kennzahlen
+. ReplicaSet-Metriken
+. Servicemetriken
+. StatefulSet-Metriken
+. Horizontal Pod AutoScaler-Metriken
+. Cronjob-Metriken
+. Jobmetriken
+. Ressourcenkontingentmetriken
 
