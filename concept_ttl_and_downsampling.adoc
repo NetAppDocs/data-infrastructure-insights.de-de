@@ -10,24 +10,24 @@ keywords: time-to-live, TTL, downsampling, downsample, retention
 
 
 [role="lead"]
-Da Daten von Data Infrastructure Insights für einen festgelegten Zeitraum (pro Edition) aufbewahrt werden, besteht die Möglichkeit, Tausende von Datenpunkten zu verarbeiten. Daten können daher vor der Anzeige in Diagrammen und Tabellen in einem Downsampling erfasst werden.
+Data Infrastructure Insights speichert Daten je nach Abonnement für Zeiträume von 7 Tagen bis 13 Monaten.  Bei der Anzeige großer Datensätze kann eine Herunterskalierung der Daten erfolgen, um sicherzustellen, dass Diagramme und Grafiken effizient geladen werden und gleichzeitig die statistische Genauigkeit erhalten bleibt.
 
 
 
 == Datenhaltung
 
-Data Infrastructure Insights speichert Daten für einen Zeitraum, der von der aktiven abonnierten Edition festgelegt wird.
+Data Infrastructure Insights speichert Daten für einen Zeitraum, der von Ihrem Abonnementtyp abhängt.
 
 |===
-| Ausgabe | Datenhaltung 
+| Abonnementtyp | Datenhaltung 
 
 
-| Basic | 7 Tage 
+| Versuch | 7 Tage 
 
 
-| Premium | 13 Monaten 
+| Gezeichnet | 13 Monaten 
 |===
-Eine vollständige Liste der in jeder Edition verfügbaren Funktionen finden Sie auf der link:https://bluexp.netapp.com/cloud-insights-pricing["Editionen und Preise"]Seite Data Infrastructure Insights.
+Ausführliche Informationen zu den Funktionen und Preisoptionen von Data Infrastructure Insights finden Sie imlink:https://bluexp.netapp.com/cloud-insights-pricing["Data Infrastructure Insights – Preise"] Seite.
 
 
 

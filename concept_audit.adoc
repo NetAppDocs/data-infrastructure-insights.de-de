@@ -7,6 +7,10 @@ summary: Audit bietet eine Übersicht über die System- und Benutzeraktivitäten
 = Prüfung
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -135,11 +139,13 @@ Die angezeigten Audit-Ereignisse werden in eine .CSV-Datei mit maximal 10,000 Ze
 
 == Aufbewahrung von Audit-Daten
 
-Der Zeitraum, den Data Infrastructure Insights Audit-Daten aufbewahrt, basiert auf Ihrer Edition:
+Die Dauer der Aufbewahrung von Audit-Daten Data Infrastructure Insights hängt von Ihrem Abonnement ab:
 
-* Basic Edition: Audit-Daten werden 30 Tage lang aufbewahrt
-* Standard- und Premium-Editionen: Audit-Daten werden für 1 Jahr plus 1 Tag aufbewahrt
+* Testumgebungen: Auditdaten werden 30 Tage lang aufbewahrt
+* Abonnierte Umgebungen: Auditdaten werden 1 Jahr plus 1 Tag aufbewahrt
 
+
+Überwachungseinträge, die älter als die Aufbewahrungszeit sind, werden automatisch gelöscht. Es ist keine Benutzerinteraktion erforderlich.
 
 Überwachungseinträge, die älter als die Aufbewahrungszeit sind, werden automatisch gelöscht. Es ist keine Benutzerinteraktion erforderlich.
 
