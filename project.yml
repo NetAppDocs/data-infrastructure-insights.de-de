@@ -27,8 +27,6 @@ sidebar:
       url: "/security_admin_tool.html"
   - title: Erste Schritte
     entries:
-    - title: Lernprogramme Zu Funktionen
-      url: "/concept_feature_tutorials.html"
     - title: Daten Werden Erfasst
       entries:
       - title: Überblick

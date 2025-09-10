@@ -7,6 +7,10 @@ summary: Anmerkungen zur Unternehmenseinheit können zur Überwachung und Berich
 = Anmerkungen Zur Geschäftseinheit
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

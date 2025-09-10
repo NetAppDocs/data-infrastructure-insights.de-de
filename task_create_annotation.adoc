@@ -7,6 +7,10 @@ summary: So erstellen Sie eine Anmerkung.
 = Mit Anmerkungen
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

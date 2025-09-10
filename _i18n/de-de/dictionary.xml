@@ -12557,8 +12557,6 @@
   <block id="09562317f0e4300c8d530df45c626200" category="paragraph"><block ref="09562317f0e4300c8d530df45c626200" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fdbcd622aeb7794a55d5a3c57f4ed433" category="admonition">Die meisten VM Analyzer-Filter (einschließlich der Filter, die Sie hinzufügen können) sind kontextbezogen. Wenn Sie ein Objekt in einem dieser Filter auswählen, werden die in den anderen Filter-Dropdown-Listen angezeigten Optionen im Kontext mit dem ausgewählten Objekt oder den ausgewählten Objekten aktualisiert.</block>
   <block id="86975522d809db49e0c205d536440123" category="paragraph">Wenn Sie auf ein Objekt oder eine Gruppe klicken, wird ein Schiebefenster mit zusätzlichen Details zum Objekt und seinen Verbindungen geöffnet. Das Slideout-Panel zeigt eine Zusammenfassung mit Details zum ausgewählten Objekt (z. B. Durchsatz oder Auslastung, je nach Objekttyp) sowie Diagramme mit Messdaten zum Objekt, z. B. Latenz oder IOPS. Zusätzliche Registerkarten ermöglichen die Untersuchung zugehöriger Ressourcen, Änderungen und Warnungen. Auf Wunsch können Sie in den Diagrammen auch Messdaten für die am stärksten korrelierten oder konkurrierenden Objekte anzeigen.</block>
-  <block id="d2471c4bc746eeea68ab17452321a403" category="inline-link-macro">Vereinfachte Fehlerbehebung mit VM Analyzer (Video)</block>
-  <block id="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="paragraph"><block ref="6e27a8c95ed5ddbd5bf8c70b3cdcde35" category="inline-link-macro-rx"></block></block>
   <block id="f463cb1a5df7d729d273f46c1e5cb861" category="sidebar">Daten analysieren</block>
   <block id="c917a46858bc7b65af2e1c90ee0a1453" category="sidebar">SAN-Analysator</block>
   <block id="2e2565dd8910383ad2b3626e2b5d37b2" category="sidebar">VM-Analysator</block>
@@ -12749,4 +12747,10 @@
   <block id="babe60c38b9af7eae2a65400f72c52c7" category="paragraph">Der ONTAP SVM Data Collector ermöglicht Workload Security die Überwachung von Datei- und Benutzerzugriffsaktivitäten auf NetApp ONTAP Storage Virtual Machines (SVMs). Dieses Handbuch führt Sie durch die Konfiguration und Verwaltung des SVM-Datensammlers, um eine umfassende Sicherheitsüberwachung Ihrer ONTAP Umgebung zu gewährleisten.</block>
   <block id="097b5088c2a3d7584f939f2bcd00152f" category="admonition">Globale Änderungen können sich möglicherweise auf Ihre ONTAP Systeme auswirken.  Es wird dringend empfohlen, Änderungen, die eine große Anzahl von Datensammlern betreffen, außerhalb der Spitzenzeiten vorzunehmen.</block>
   <block id="3c86c080f12d925b5a5ec1ad14563f65" category="paragraph">Konfigurieren Sie Monitore, um Leistungsschwellenwerte, Protokollereignisse und Anomalien in Ihren Infrastrukturressourcen zu verfolgen.  Erstellen Sie benutzerdefinierte Warnungen für Kennzahlen wie Schreiblatenz des Knotens, Speicherkapazität oder Anwendungsleistung und erhalten Sie Benachrichtigungen, wenn diese Bedingungen erfüllt sind.</block>
+  <block id="7c2fe93d0a150c1ccb110c7be9ba4de5" category="inline-link-macro">Erstellen Sie leistungsstarke Dashboards mit NetApp (Video), Fenster=Später lesen</block>
+  <block id="87844637813d306b7e217695fa07af30" category="paragraph"><block ref="87844637813d306b7e217695fa07af30" category="inline-link-macro-rx"></block></block>
+  <block id="0fa83ca72fc86aac9bf3cb98f8457548" category="inline-link-macro">Anmerkungen und Anmerkungsregeln (Video), Fenster=Später lesen</block>
+  <block id="7353b790cd233bfb4d223636cde644bc" category="paragraph"><block ref="7353b790cd233bfb4d223636cde644bc" category="inline-link-macro-rx"></block></block>
+  <block id="1fdb67257568169e128ab9cf001f8475" category="inline-link-macro">Vereinfachte Fehlerbehebung mit VM Analyzer (Video), Fenster=Später lesen</block>
+  <block id="b1cd067329cb001e27800ecd33c25fac" category="paragraph"><block ref="b1cd067329cb001e27800ecd33c25fac" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -7,6 +7,10 @@ summary: Mithilfe der Data Infrastructure Insights API können Sie Annotationen 
 = Anmerkungen Werden Importiert
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

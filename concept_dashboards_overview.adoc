@@ -31,6 +31,12 @@ Sie erstellen ein neues Dashboard an einem von zwei Stellen:
 
 
 
+== Sehen Sie es in Aktion
+
+link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8["Erstellen Sie leistungsstarke Dashboards mit NetApp (Video), Fenster=Später lesen"]
+
+
+
 == Dashboard-Steuerelemente
 
 Der Dashboard-Bildschirm verfügt über mehrere Bedienelemente:

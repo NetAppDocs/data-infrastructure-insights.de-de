@@ -7,6 +7,10 @@ keywords: annotate, annotation, rules
 = Anmerkungsregeln werden erstellt
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

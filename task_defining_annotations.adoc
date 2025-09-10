@@ -7,6 +7,10 @@ summary: Verfolgen von Daten mithilfe von Anmerkungen
 = Anmerkungen definieren
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -24,6 +28,12 @@ Wenn z. B. ein Asset geleast wird und der Mietvertrag innerhalb von zwei Monaten
 * Erstellen von Regeln, um Anmerkungen automatisch auf mehrere Assets desselben Typs anzuwenden.
 * Filtern Sie Assets nach ihren Anmerkungen.
 
+
+
+
+== Sehen Sie es in Aktion
+
+link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da["Anmerkungen und Anmerkungsregeln (Video), Fenster=Später lesen"]
 
 
 
