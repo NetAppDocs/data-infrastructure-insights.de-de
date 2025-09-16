@@ -247,7 +247,7 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Data Col
 | link:task_dc_na_ontap_rest.html["NetApp ONTAP-REST-Kollektor"] | Infrastruktur 
 
 
-| link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP All-SAN-Array (ASA)-Collector"] | Infrastruktur 
+| link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP ASA r2 (All-SAN Array)-Kollektor"] | Infrastruktur 
 
 
 | link:task_dc_na_cdot.html["NetApp ONTAP Select"] | Infrastruktur 
