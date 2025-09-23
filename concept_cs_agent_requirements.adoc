@@ -7,17 +7,21 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 = Anforderungen An Security Agent Für Workloads
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Sie müssen link:task_cs_add_agent.html["Installieren Sie einen Agenten"]Informationen von Ihren Datensammlern erhalten. Bevor Sie den Agent installieren, sollten Sie sicherstellen, dass Ihre Umgebung den Anforderungen an Betriebssystem, CPU, Arbeitsspeicher und Speicherplatz entspricht.
+Sie müssenlink:task_cs_add_agent.html["Installieren Sie einen Workload Security Agent"] um Informationen von Ihren Datensammlern zu erhalten.  Stellen Sie vor der Installation des Agenten sicher, dass Ihre Umgebung die Anforderungen an Betriebssystem, CPU, Arbeitsspeicher und Festplattenspeicher erfüllt.
 
 [cols="36,60"]
 |===
 | Komponente | Linux-Anforderungen Erfüllt 
 
 
-| Betriebssystem | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Betriebssysteme ausgeführt wird: * AlmaLinux 9.4 und 9.5 (64-Bit), einschließlich SELinux * CentOS 9 Stream (64-Bit) * Debian 11 (64-Bit) und 12 (64-Bit), einschließlich SELinux * OpenSUSE Leap 15.3 (64-Bit) bis 15.6 (64-Bit) * Oracle Linux 8.10 (64-Bit) und 9.1 (64-Bit) bis 9.6 (64-Bit), einschließlich SELinux * Red Hat Enterprise Linux 8.10 (64-Bit) und 9.1 (64-Bit) bis 9.6 (64-Bit), einschließlich SELinux * Rocky 9.4 (64-Bit) und 9.5 (64-Bit), einschließlich SELinux * SUSE Linux Enterprise Server 15 SP4 (64-Bit) bis 15 SP6 (64-Bit), einschließlich SELinux * Ubuntu 20.04 LTS (64-Bit), 22.04 LTS (64-Bit) und 24.04 LTS (64-Bit) Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Es wird ein dedizierter Server empfohlen. 
+| Betriebssystem | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Betriebssysteme ausgeführt wird: * AlmaLinux 9.4 (64 Bit) bis 9.5 (64 Bit), 10 (64 Bit), einschließlich SELinux * CentOS Stream 9 (64 Bit) * Debian 11 (64 Bit), 12 (64 Bit), einschließlich SELinux * OpenSUSE Leap 15.3 (64 Bit) bis 15.6 (64 Bit) * Oracle Linux 8.10 (64 Bit), 9.1 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux * Red Hat Enterprise Linux 8.10 (64 Bit), 9.1 (64 Bit) bis 9.6 (64 Bit), 10 (64 Bit), einschließlich SELinux * Rocky 9.4 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux * SUSE Linux Enterprise Server 15 SP4 (64-Bit) bis 15 SP6 (64-Bit), einschließlich SELinux * Ubuntu 20.04 LTS (64-Bit), 22.04 LTS (64-Bit), 24.04 LTS (64-Bit) Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden.  Ein dedizierter Server wird empfohlen. 
 
 
 | Befehle | Für die Installation ist „entpacken“ erforderlich. Darüber hinaus ist für die Installation, das Ausführen von Skripten und die Deinstallation der Befehl 'udo su –' erforderlich. 

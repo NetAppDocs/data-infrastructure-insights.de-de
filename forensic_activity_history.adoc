@@ -27,7 +27,7 @@ Klicken Sie auf *Forensics > Vorgangsforensics* und klicken Sie auf die Register
 Sie können das Diagramm vergrößern, indem Sie ein Rechteck im Diagramm herausziehen. Die gesamte Seite wird geladen, um den vergrößerten Zeitbereich anzuzeigen. Wenn der Zoom vergrößert wird, wird eine Schaltfläche angezeigt, mit der der Benutzer zoomen kann.
 
 * Eine Liste der _All Activity_-Daten.
-* Ein Dropdown-Menü „Gruppieren nach“ bietet die Möglichkeit, die Aktivität nach Benutzern, Entitätstyp usw. zu gruppieren.
+* Ein Dropdown-Menü „Gruppieren nach“ bietet die Möglichkeit, die Aktivität nach Benutzern, Ordnern, Entitätstyp usw. zu gruppieren.
 * Über der Tabelle steht eine Schaltfläche für gemeinsamen Pfad zur Verfügung, auf die Sie klicken können, um das Fenster mit Details zum Entity-Pfad zu öffnen.
 
 
