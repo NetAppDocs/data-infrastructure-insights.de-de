@@ -145,7 +145,7 @@ Dateninfrastruktur Insights Observability misst die Nutzung nach der Storage-Tie
 
 Für jede Ebene wird eine andere Geschwindigkeit gemessen, wobei das gesamte Tier berechnet wird, sodass Ihnen eine gewichtete Berechtigung entsteht. Die Formel für die Berechnung der gewichteten Nutzung ist wie folgt:
 
- Weighted usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
+ Weighted Capacity = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioned TiB)
 Um dies zu erleichtern, berechnet DII eine einzelne *gewichtete Berechtigungsnummer* auf Basis von _abonnierten_ Mengen; sie berechnet dann dieselbe Zahl basierend auf _Discovered_ Speicher und erklärt nur den Verstoß, wenn die erkannte Kapazität größer als die gewichtete Berechtigung ist. So können Sie flexibel die Mengen überwachen, die von den abonnierten Beträgen für jeden Tier abweichen, was DII zulässt, solange der gesamte erkannte Speicher innerhalb der abonnierten gewichteten Berechtigung liegt.
 
 
