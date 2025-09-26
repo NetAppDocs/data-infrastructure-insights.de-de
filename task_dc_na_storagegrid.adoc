@@ -12,9 +12,15 @@ keywords: data collector, queries, create, storagegrid
 [role="lead"]
 Der NetApp StorageGRID Datensammler unterstützt Inventar- und Performance-Sammlung aus StorageGRID Konfigurationen.
 
+[NOTE]
+====
+Um eine konsistente Messung der DII-Berechtigungen über alle StorageGRID -Systeme hinweg unabhängig von der zugrunde liegenden Hardwaretopologie und -konfiguration zu gewährleisten, verwendet Data Infrastructure Insights die gesamte verfügbare Kapazität (storagegrid_storage_utilization_total_space_bytes) anstelle der RAW-Kapazität basierend auf dem physischen Festplattenlayout.
 
-NOTE: StorageGRID wird mit einem eigenen Raw TB für die gemanagte Einheit gemessen. Jede 40 TB unformatierte StorageGRID-Kapazität wird als 1 berechnetlink:concept_subscribing_to_cloud_insights.html#pricing["Verwaltete Einheit (ME)"].
+Für Kunden, die das kapazitätsbasierte Lizenzmodell verwenden, wird StorageGRID als „Objekt“-Speicher gemessen.
 
+Für Kunden, die das alte (MU) Lizenzmodell verwenden, wird StorageGRID als Sekundärspeicher mit einem Satz von 40 TiB zu 1 MU gemessen.
+
+====
 
 
 == Terminologie
