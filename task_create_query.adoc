@@ -142,6 +142,18 @@ Wenn Sie einen Filter in doppelte Anführungszeichen einschließen, behandelt In
 
 
 
+=== Filtern nach Booleschen Werten
+
+Beim Filtern nach einem Booleschen Wert werden Ihnen möglicherweise die folgenden Filteroptionen angezeigt:
+
+* *Beliebig*: Dies gibt _alle_ Ergebnisse zurück, einschließlich der Ergebnisse, die auf „Ja“, „Nein“ oder gar nicht festgelegt sind.
+* *Ja*: Gibt nur „Ja“-Ergebnisse zurück.  Beachten Sie, dass DII in den meisten Tabellen „Ja“ als Häkchen anzeigt.  Die Werte können auf „True“, „On“ usw. gesetzt werden; DII behandelt alle diese Werte als „Yes“.
+* *Nein*: Gibt nur „Nein“-Ergebnisse zurück.  Beachten Sie, dass DII in den meisten Tabellen „Nein“ als „X“ anzeigt.  Die Werte können auf „Falsch“, „Aus“ usw. gesetzt werden; DII behandelt alle diese Werte als „Nein“.
+* *Keine*: Gibt nur Ergebnisse zurück, bei denen der Wert überhaupt nicht festgelegt wurde.  Auch als „Null“-Werte bezeichnet.
+
+
+
+
 == Was mache ich jetzt, wenn ich Abfrageergebnisse habe?
 
 Durch Abfragen können Sie einfach Anmerkungen hinzufügen oder Anwendungen zu Assets zuweisen. Beachten Sie, dass Sie Ihren Bestandsbeständen (Festplatte, Speicher usw.) nur Anwendungen oder Anmerkungen zuweisen können. Integrationsmetriken können keine Anmerkungen oder Anwendungszuweisungen übernehmen.

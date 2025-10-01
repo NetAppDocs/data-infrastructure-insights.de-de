@@ -31,12 +31,6 @@ Wenn z. B. ein Asset geleast wird und der Mietvertrag innerhalb von zwei Monaten
 
 
 
-== Sehen Sie es in Aktion
-
-link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da["Anmerkungen und Anmerkungsregeln (Video), Fenster=Später lesen"]
-
-
-
 == Standard-Anmerkungstypen
 
 Data Infrastructure Insights bietet einige standardmäßige Anmerkungstypen. Mit diesen Annotationen lassen sich Daten filtern oder gruppieren.
@@ -88,7 +82,7 @@ In der folgenden Tabelle sind die von Data Infrastructure Insights bereitgestell
 | Schweregrad Der Verletzung | Rangfolge (z. B. Major) eines Verstoßes (z. B. fehlende Host-Ports oder fehlende Redundanz) in einer Hierarchie von höchster bis niedrigster Bedeutung. | Liste 
 |===
 
-NOTE: Alias, Datacenter, Heiß, Service-Level, Sonnenuntergang, Switch-Ebene, Stufe und Verstoß Schweregrad sind Anmerkungen auf Systemebene, die Sie nicht löschen oder umbenennen können. Sie können nur deren zugewiesenen Werte ändern.
+NOTE: Alias, Data Center, Hot, Service Level, Sunset, Switch Level, Tier und Violation Severity sind Anmerkungen auf Systemebene, die Sie nicht löschen oder umbenennen können. Sie können nur die ihnen zugewiesenen Werte ändern.
 
 
 
@@ -110,15 +104,23 @@ Sie können in diese Felder bis zu 255 Zeichen eingeben.
 
 
 .Anmerkungstypen
-Boolesch: Erstellt eine Dropdown-Liste mit den Auswahlmöglichkeiten „Ja“ und „Nein“. Die Anmerkung „direkt angehängt“ ist z. B. Boolesch. Datum: Dadurch wird ein Feld erstellt, das ein Datum enthält. Wenn es sich bei der Anmerkung um ein Datum handelt, wählen Sie diese Option aus. Liste: Erstellt Eine der folgenden Optionen: * Eine Dropdown-Liste mit festen Elementen
+* Boolesch: Erstellt eine Dropdownliste mit den Auswahlmöglichkeiten „Ja“ und „Nein“. Beispielsweise ist die Anmerkung „Direkt verbunden“ boolesch.
+* Datum: Dadurch wird ein Feld erstellt, das ein Datum enthält.  Wenn die Anmerkung beispielsweise ein Datum sein soll, wählen Sie dies aus.
+* Liste: Erstellt eines der folgenden Elemente:
++
+** Eine Dropdown-Liste mit festen
++
+Wenn andere diesen Anmerkungstyp einem Gerät zuweisen, können sie der Liste keine weiteren Werte hinzufügen.
 
-+ Wenn andere diesen Anmerkungstyp auf einem Gerät zuweisen, können sie der Liste keine weiteren Werte hinzufügen. * Eine flexible Dropdown-Liste
+** Eine flexible Dropdown-Liste
++
+Wenn Sie beim Erstellen dieser Liste die Option „Neue Werte spontan hinzufügen“ auswählen, können andere Personen, die diesen Anmerkungstyp einem Gerät zuweisen, der Liste weitere Werte hinzufügen.
 
-+ Wenn Sie beim Erstellen dieser Liste die Option Neue Werte hinzufügen auswählen und andere diesen Anmerkungstyp auf einem Gerät zuweisen, können sie der Liste weitere Werte hinzufügen.
 
-Nummer: Erstellt ein Feld, in dem der Benutzer, der die Anmerkung zuweist, eine Zahl eingeben kann. Wenn der Anmerkungstyp beispielsweise „Stockwerk“ lautet, kann der Benutzer den Wert „number“ auswählen und die Bodennummer eingeben.
 
-Text: Erstellt ein Feld, das Freiformtext ermöglicht. Sie können z. B. „Sprache“ als Anmerkungstyp eingeben, „Text“ als Wertetyp auswählen und eine Sprache als Wert eingeben.
+* Nummer: Erstellt ein Feld, in dem der Benutzer, der die Anmerkung zuweist, eine Zahl eingeben kann. Wenn der Anmerkungstyp beispielsweise „Stockwerk“ lautet, kann der Benutzer den Wert „number“ auswählen und die Bodennummer eingeben.
+* Text: Erstellt ein Feld, das Freiformtext ermöglicht. Sie können z. B. „Sprache“ als Anmerkungstyp eingeben, „Text“ als Wertetyp auswählen und eine Sprache als Wert eingeben.
+
 
 
 NOTE: Nachdem Sie den Typ festgelegt und Ihre Änderungen gespeichert haben, können Sie den Typ der Anmerkung nicht ändern. Wenn Sie den Typ ändern müssen, müssen Sie die Anmerkung löschen und eine neue erstellen.
@@ -138,6 +140,15 @@ Angenommen, Sie befinden sich auf einer Asset-Seite und das Asset hat die City-A
 +
 Ihre Anmerkungen werden in der Liste auf der Seite Anmerkungen angezeigt.
 
+
+
+.Ein Hinweis zu Booleschen Anmerkungen
+Beim Filtern nach einer Booleschen Anmerkung werden Ihnen möglicherweise die folgenden Werte zum Filtern angezeigt:
+
+* *Beliebig*: Dies gibt _alle_ Ergebnisse zurück, einschließlich der Ergebnisse, die auf „Ja“, „Nein“ oder gar nicht festgelegt sind.
+* *Ja*: Gibt nur „Ja“-Ergebnisse zurück.  Beachten Sie, dass DII in den meisten Tabellen „Ja“ als Häkchen anzeigt.  Die Werte können auf „True“, „On“ usw. gesetzt werden; DII behandelt alle diese Werte als „Yes“.
+* *Nein*: Gibt nur „Nein“-Ergebnisse zurück.  Beachten Sie, dass DII in den meisten Tabellen „Nein“ als „X“ anzeigt.  Die Werte können auf „Falsch“, „Aus“ usw. gesetzt werden; DII behandelt alle diese Werte als „Nein“.
+* *Keine*: Gibt nur Ergebnisse zurück, bei denen die Anmerkung überhaupt nicht festgelegt wurde.  Auch als „Null“-Werte bezeichnet.
 
 
 .Nachdem Sie fertig sind
