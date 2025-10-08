@@ -14,9 +14,7 @@ keywords: topology, analyze, analysis, map
 
 
 [role="lead"]
-SAN spielt eine entscheidende Rolle bei der Handhabung wichtiger Workloads. Seine Komplexität kann jedoch zu erheblichen Ausfällen und Unterbrechungen der Kunden führen. Mit DII *SAN Analyzer* wird die Verwaltung von SAN einfacher und effizienter. Dieses leistungsstarke Tool bietet vollständige Transparenz und ordnet Abhängigkeiten von VM/Host zu Netzwerk und LUN und Storage zu.
-
-Durch die Bereitstellung einer interaktiven Topologieübersicht ermöglicht SAN Analyzer es Ihnen, Probleme zu lokalisieren, Änderungen zu verstehen und das Verständnis des Datenflusses zu verbessern. Optimieren Sie das SAN-Management in komplexen IT-Umgebungen mit SAN Analyzer und erhöhen Sie Ihre Transparenz in Block-Workloads.
+SAN spielt eine entscheidende Rolle bei der Bewältigung wichtiger Arbeitslasten, seine Komplexität kann jedoch zu erheblichen Ausfällen und Störungen für die Kunden führen.  Mit dem *SAN Analyzer* von DII wird die SAN-Verwaltung einfacher und effizienter.  Dieses leistungsstarke Tool bietet End-to-End-Sichtbarkeit und bildet Abhängigkeiten von VM/Host über Netzwerk bis hin zu LUN und Speicher ab.  Durch die Bereitstellung einer interaktiven Topologiekarte ermöglicht Ihnen SAN Analyzer, Probleme zu lokalisieren, Änderungen zu verstehen und das Verständnis des Datenflusses zu verbessern.  Optimieren Sie die SAN-Verwaltung in komplexen IT-Umgebungen mit SAN Analyzer und erhöhen Sie Ihre Transparenz bei Block-Workloads.
 
 image:san_analyzer_example_with_panel.png["Topologiezuordnung eines Storage-Systems in SAN Analyzer"]
 
@@ -44,3 +42,17 @@ image:san_analyzer_protocols.png["SAN Analyzer-Protokolle"]
 Wenn Ihre Umgebung iSCSI-Geräte enthält, werden mit der Maus über das Objekt „_iSCSI_“ die Verbindungen zu diesen relevanten iSCSI-Geräten hervorgehoben.
 
 image:san_analyzer_iscsi_traffic.png["ISCSI-Datenverkehr hervorgehoben"]
+
+
+
+== Tipps zur Fehlerbehebung
+
+Wenn Probleme auftreten, können Sie Folgendes versuchen:
+
+[cols="2*"]
+|===
+| *Problem:* | *Teste das:* 
+
+
+| Ich sehe <0, =0 oder >0 in der Legende für Metriken wie _trafficUtilization_ oder _trafficRate_. | Dies kann in sehr seltenen Fällen passieren, wenn die Metrikwerte weniger als zwei Dezimalstellen aufweisen, beispielsweise 0,000123.  Eine Erweiterung des Zeitfensters kann dabei helfen, die Metrik effektiver zu analysieren. 
+|===
