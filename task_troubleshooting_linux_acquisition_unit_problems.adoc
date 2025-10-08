@@ -21,7 +21,7 @@ Hier finden Sie Vorschläge zur Fehlerbehebung bei Problemen mit Akquisitionsein
 | AU-Status auf der Seite *Observability > Collectors* auf der Registerkarte *Acquisition Units* zeigt "Certificate Expired" oder "Certificate Recanned" an. | Klicken Sie auf das Menü rechts neben der AU und wählen Sie *Verbindung wiederherstellen*. Befolgen Sie die Anweisungen, um Ihre Erfassungseinheit wiederherzustellen: 1. Beenden Sie den AU-Dienst (Acquisition Unit). Klicken Sie auf die Schaltfläche _Stop-Befehl kopieren_, um den Befehl schnell in die Zwischenablage zu kopieren, und fügen Sie diesen Befehl anschließend in eine Eingabeaufforderung auf dem Erfassungsgerät ein. 2. Erstellen Sie eine Datei mit dem Namen „Token“ im Ordner _/var/lib/NetApp/Cloudinsights/acq/conf_ auf der AU. 3. Klicken Sie auf die Schaltfläche _Token kopieren_, und fügen Sie dieses Token in die erstellte Datei ein. 4. Starten Sie den AU-Dienst neu. Klicken Sie auf die Schaltfläche _Copy Restart Command_, und fügen Sie den Befehl in eine Eingabeaufforderung auf der AU ein. 
 
 
-| Berechtigung beim Starten des Serverdienstes für die Erfassungseinheit verweigert | Wenn die AU auf SELINUX installiert ist, sollte SE auf den Modus _Permissive_ eingestellt werden. _Forcieren_-Modus wird nicht unterstützt. Starten Sie den AU-Dienst erneut, nachdem SELINUX den Modus „Permissiv“ eingestellt hat. link:https://kb.netapp.com/Cloud/BlueXP/DII/Permission_denied_when_starting_the_Cloud_Insight_Acquisition_Unit_Server_Service["Weitere Informationen ."]. 
+| Berechtigung beim Starten des Serverdienstes für die Erfassungseinheit verweigert | Wenn die AU auf SELINUX installiert ist, sollte SE auf den _permissiven_ Modus eingestellt werden.  Der _Enforcing_-Modus wird nicht unterstützt.  Nachdem Sie SELINUX in den permissiven Modus versetzt haben, starten Sie den AU-Dienst neu. 
 
 
 | Serveranforderungen nicht erfüllt | Stellen Sie sicher, dass der Acquisition Unit-Server oder die VM die Anforderungen erfüllen link:concept_acquisition_unit_requirements.html["Anforderungen"] 
@@ -90,6 +90,6 @@ image:ProxyEndpoints_NewTable.png["Tabelle Mit Proxy-Endpunkten"]
 
 == Ressourcen
 
-Weitere Tipps zur Fehlerbehebung finden Sie im link:https://kb.netapp.com/Cloud/BlueXP/DII["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
+Weitere Tipps zur Fehlerbehebung finden Sie imlink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
 
 Weitere Support-Informationen finden Sie auf der Seite Data Infrastructure Insightslink:concept_requesting_support.html["Support"].

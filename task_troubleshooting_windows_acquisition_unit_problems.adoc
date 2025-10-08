@@ -74,6 +74,6 @@ image:ProxyEndpoints_NewTable.png["Tabelle Mit Proxy-Endpunkten"]
 
 == Ressourcen
 
-Weitere Tipps zur Fehlerbehebung finden Sie im link:https://kb.netapp.com/Cloud/BlueXP/DII["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
+Weitere Tipps zur Fehlerbehebung finden Sie imlink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
 
 Weitere Support-Informationen finden Sie auf der Seite Data Infrastructure Insightslink:concept_requesting_support.html["Support"].

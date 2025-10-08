@@ -7,6 +7,10 @@ keywords: data collector, NetApp, Cloud, AWS
 = NetApp Cloud Volumes Services für AWS Data Collector
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -51,6 +55,6 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 | Problem: | Versuchen Sie dies: 
 
 
-| Ich habe einen Fehler wie diesen erhalten: 'Anfrage konnte nicht ausgeführt werden: Verbindung zu <AWS Region Endpunkt>:8080 [<AWS Region Endpunkt>/AWS Region Endpunkt IP>] fehlgeschlagen: Verbindung abgelaufen: \https://<AWS Region Endpunkt FQDN ABRUFEN>:8080/v1/Speicher/IPRanges HTTP/1.1' | Daslink:task_configure_acquisition_unit.html#proxy-configuration-2["Proxy"], das von Data Infrastructure Insights zur Kommunikation mit der Acquisition Unit verwendet wird, kommuniziert nicht zwischen Data Infrastructure Insights und dem Data Collector selbst. Hier sind einige Dinge, die Sie versuchen können: Stellen Sie sicher, dass die Erfassungseinheit in der Lage ist, den fqdn aufzulösen und den erforderlichen Port zu erreichen. Vergewissern Sie sich, dass kein Proxy erforderlich ist, um den angegebenen Endpunkt in der Fehlermeldung zu erreichen. Curl kann verwendet werden, um die Kommunikation zwischen der Akquisitionseinheit und dem Endpunkt zu testen. Stellen Sie sicher, dass Sie für diesen Test *nicht* einen Proxy verwenden. Beispiel: Root@acquisitionunit# curl -s -H Accept:Application/json -H "Content-type: Application/json" -H API-key:<API-Schlüssel in den Daten-Collector-Anmeldeinformationen verwendet -H secret-key:<SECRET key used in the Data Collector credentials> -X GET \https://<AWS Regional Endpoint>:8080/v1/Storage/IPRanges Siehe dieses link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_fails_discovery_for_Cloud_Volumes_Service_for_AWS["NetApp KB-Artikel"]. 
+| Ich habe einen Fehler wie diesen erhalten: 'Anfrage konnte nicht ausgeführt werden: Verbindung zu <AWS Region Endpunkt>:8080 [<AWS Region Endpunkt>/AWS Region Endpunkt IP>] fehlgeschlagen: Verbindung abgelaufen: \https://<AWS Region Endpunkt FQDN ABRUFEN>:8080/v1/Speicher/IPRanges HTTP/1.1' | Derlink:task_configure_acquisition_unit.html#proxy-configuration-2["Proxy"] Wird von Data Infrastructure Insights zur Kommunikation mit der Erfassungseinheit verwendet, erfolgt keine Kommunikation zwischen Data Infrastructure Insights und dem Datensammler selbst.  Hier sind einige Dinge, die Sie versuchen können: Stellen Sie sicher, dass die Erfassungseinheit den FQDN auflösen und den erforderlichen Port erreichen kann.  Bestätigen Sie, dass kein Proxy erforderlich ist, um den in der Fehlermeldung angegebenen Endpunkt zu erreichen.  Mit Curl kann die Kommunikation zwischen der Erfassungseinheit und dem Endpunkt getestet werden.  Stellen Sie sicher, dass Sie für diesen Test *keinen* Proxy verwenden.  Beispiel: root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:<in den Anmeldeinformationen des Datensammlers verwendeter API-Schlüssel -H secret-key:<in den Anmeldeinformationen des Datensammlers verwendeter geheimer Schlüssel> -X GET \https://<Regionaler AWS-Endpunkt>:8080/v1/Storage/IPRanges 
 |===
 Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].

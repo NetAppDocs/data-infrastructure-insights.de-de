@@ -89,9 +89,6 @@ Wenn Sie einen Filter in doppelte Anführungszeichen einschließen, behandelt In
 Die von Data Infrastructure Insights geprüften Ereignisse und Aktionen lassen sich in die folgenden allgemeinen Bereiche einteilen:
 
 * *Benutzerkonto*: Anmelden, Abmelden, Rollenänderung, etc
-+
-Beispiel: _User *Tony Lavoie* angemeldet von *10.1.120.15*, User Agent *Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, wie Gecko) Chrome/85.0.4183.121 Safari/537.36*, Login-Methode(en) *BlueXP Portal Login_*
-
 * *Erfassungseinheit*: Erstellen, löschen usw.
 +
 Beispiel: _Acquisition Unit *AU-Boston-1* entfernt_.

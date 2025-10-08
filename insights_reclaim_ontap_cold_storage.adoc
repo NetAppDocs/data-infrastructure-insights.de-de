@@ -7,6 +7,10 @@ summary: Sie erfahren, wie sich Ressourcen auf andere Ressourcen Ihres Mandanten
 = Einblick: Rückgewinnung von ONTAP Cold Storage
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

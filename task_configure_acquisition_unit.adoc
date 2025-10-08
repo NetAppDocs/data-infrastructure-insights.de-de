@@ -86,7 +86,7 @@ Am einfachsten ist es, in Ihrem Proxy/Ihrer Firewall eine Platzhalterkonfigurati
 
 NOTE: Die Verwendung eines Sternchen (*) für Platzhalter ist üblich, aber Ihre Proxy-/Firewall-Konfiguration kann ein anderes Format verwenden. Fragen Sie in Ihrer Proxy-Dokumentation nach, um die korrekte Platzhalterspezifikation in Ihrer Umgebung sicherzustellen.
 
-Weitere Informationen zur Proxy-Konfiguration finden Sie im NetApp link:https://kb.netapp.com/Cloud/BlueXP/DII/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Wissensdatenbank"].
+Weitere Informationen zur Proxy-Konfiguration finden Sie in der NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Wissensdatenbank"] .
 
 
 
@@ -143,7 +143,7 @@ Am einfachsten ist es, in Ihrem Proxy/Ihrer Firewall eine Platzhalterkonfigurati
 
 NOTE: Die Verwendung eines Sternchen (*) für Platzhalter ist üblich, aber Ihre Proxy-/Firewall-Konfiguration kann ein anderes Format verwenden. Fragen Sie in Ihrer Proxy-Dokumentation nach, um die korrekte Platzhalterspezifikation in Ihrer Umgebung sicherzustellen.
 
-Weitere Informationen zur Proxy-Konfiguration finden Sie im NetApp link:https://kb.netapp.com/Cloud/BlueXP/DII/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Wissensdatenbank"].
+Weitere Informationen zur Proxy-Konfiguration finden Sie in der NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Wissensdatenbank"] .
 
 
 

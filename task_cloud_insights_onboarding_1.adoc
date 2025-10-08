@@ -14,32 +14,30 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Bevor Sie mit der Arbeit mit Data Infrastructure Insights beginnen können, müssen Sie sich im *NetApp BlueXP *-Portal anmelden. Wenn Sie bereits über ein NetApp BlueXP  Login verfügen, können Sie mit ein paar schnellen Schritten eine kostenlose Testversion von Data Infrastructure Insights starten.
+Bevor Sie mit Data Infrastructure Insights arbeiten können, müssen Sie sich beim * NetApp Console*-Portal anmelden.  Wenn Sie bereits über einen NetApp Console-Login verfügen, können Sie in wenigen Schritten eine kostenlose Testversion von Data Infrastructure Insights starten.
 
 
 
-== Sie erstellen Ihr NetApp BlueXP Konto
+== Erstellen Ihres NetApp Konsolenkontos
 
-Um mit den Cloud-Services von NetApp zu beginnen, gehen Sie zu link:https://bluexp.netapp.com/["*NetApp BlueXP*"^] und klicken Sie auf *erste Schritte*.
+Um mit den Cloud-Services von NetApp zu beginnen, gehen Sie zulink:https://console.netapp.com/["* NetApp Konsole*"^] und klicken Sie auf *Erste Schritte*.
 
 * Wenn Sie sich noch nicht angemeldet haben, wählen Sie *Anmelden*
 * Geben Sie eine gültige geschäftliche E-Mail-Adresse ein und wählen Sie ein Passwort.
 * Geben Sie Ihren Firmennamen und Ihren vollständigen Namen ein.
 * Akzeptieren Sie die Geschäftsbedingungen und wählen Sie *Weiter*.
-* BlueXP zeigt Ihnen die ersten Schritte auf.
+* Die Konsole führt Sie durch die ersten Schritte.
 
 
 
 
-=== Was ist, wenn ich bereits über einen NetApp BlueXP Login spreche?
+=== Was ist, wenn ich bereits über eine NetApp Konsolenanmeldung verfüge?
 
-Sobald Sie ein NetApp BlueXP -Konto haben, wählen Sie einfach *Anmelden* auf der link:https://bluexp.netapp.com/["*NetApp BlueXP*"^] Portalseite.
+Sobald Sie ein NetApp Console-Konto haben, wählen Sie einfach *Anmelden* auf derlink:https://console.netapp.com/["* NetApp Konsole*"^] Portalseite.
 
 Geben Sie Ihre E-Mail-Adresse und Ihr Kennwort ein. Anschließend gelangen Sie zu den Cloud-Angeboten von NetApp.
 
-Wählen Sie Dateninfrastruktur Insights.
-
-image:BlueXP_CloudInsights.png["Dateninfrastruktur Insights kostenlos testen auf BlueXP"]
+Navigieren Sie zu *Analyse und Kontrolle > Beobachtbarkeit*, um mehr über Data Infrastructure Insights zu erfahren und/oder eine Demo anzufordern.
 
 
 
@@ -49,7 +47,7 @@ Wenn Sie sich zum ersten Mal bei Data Infrastructure Insights anmelden, klicken 
 
 image:trial_region_selector.png["Auswahl der Region, in der der Mandant „Data Infrastructure Insights“ gehostet werden soll"]
 
-Sobald die Erstellung Ihres Mandanten abgeschlossen ist, können Sie mit Ihren BlueXP  Zugangsdaten anmelden und die kostenlose 30-Tage-Testversion von Data Infrastructure Insights starten. Entdecken Sie bei diesem Testlauf die Features, die Data Infrastructure Insights zu bieten hat.
+Sobald die Erstellung Ihres Mandanten abgeschlossen ist, melden Sie sich mit Ihren Konsolenanmeldeinformationen an und starten Sie Ihre kostenlose 30-Tage-Testversion von Data Infrastructure Insights.  Während dieser Testphase können Sie die Funktionen erkunden, die Data Infrastructure Insights zu bieten hat.
 
 Während der kostenlosen Testversion können Sie link:concept_subscribing_to_cloud_insights.html["Starten Sie Ihr Abonnement"]Data Infrastructure Insights jederzeit zur Verfügung stellen. Nach dem Abonnement können Sie die Funktionen von Data Infrastructure Insights basierend auf Ihrem aktuellen Abonnement nutzen.
 
@@ -57,15 +55,15 @@ Während der kostenlosen Testversion können Sie link:concept_subscribing_to_clo
 
 == Melden Sie sich an und gehen Sie
 
-Sobald Ihr Mandant erstellt wurde, können Sie sich jederzeit einfach im NetApp BlueXP -Portal anmelden und auf *Gehe zu Dateninfrastrukturinformationen* klicken. Sie werden direkt zu Ihrem Data Infrastructure Insights Mandanten weitergeleitet.
+Sobald Ihr Mandant erstellt wurde, können Sie sich jederzeit einfach beim NetApp Console Portal anmelden und zumlink:https://services.cloud.netapp.com["Cloud-Dienste"] und wählen Sie *Zu Data Infrastructure Insights gehen*.
 
 Sie können einen Browser auch direkt öffnen, um Ihre Mandanten-URL zu Data Infrastructure Insights aufzurufen, z. B.:
 
  \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
-Die URL wird auch in die Einladungs-E-Mail jedes Benutzers für einfachen Zugriff und Lesezeichen enthalten. Wenn der Benutzer noch nicht bei BlueXP angemeldet ist, wird er zur Anmeldung aufgefordert.
+Die URL wird außerdem in die Einladungs-E-Mail jedes Benutzers aufgenommen, um einen einfachen Zugriff und die Speicherung als Lesezeichen zu ermöglichen.  Wenn der Benutzer noch nicht bei der Konsole angemeldet ist, wird er aufgefordert, sich anzumelden.
 
 
-NOTE: Neue Benutzer müssen sich nach wie vor für den Zugriff auf BlueXP  registrieren, bevor sie auf ihre Mandanten-URL zugreifen können.
+NOTE: Neue Benutzer müssen sich noch für den Zugriff auf die Konsole anmelden, bevor sie auf ihre Mandanten-URL zugreifen können.
 
 Wenn Sie sich zum ersten Mal bei einem neuen Mieter anmelden, werden Sie durch die Einrichtung von bis geführtlink:task_getting_started_with_cloud_insights.html["*Datensammlung beginnen*"].
 
@@ -73,13 +71,13 @@ Wenn Sie sich zum ersten Mal bei einem neuen Mieter anmelden, werden Sie durch d
 
 == Abmelden
 
-Um sich bei Data Infrastructure Insights abzumelden, klicken Sie auf Ihren *Benutzernamen* und wählen *Abmelden*. Sie werden zurück zum Anmeldefenster von BlueXP angezeigt.
+Um sich von Data Infrastructure Insights abzumelden, klicken Sie auf Ihren *Benutzernamen* und wählen Sie *Abmelden*.  Sie werden zum Anmeldebildschirm der Konsole zurückgeleitet.
 
 
-NOTE: Wenn Sie von Dateninfrastruktur Insights abmelden, werden Sie von BlueXP  abgebloggt. Sie werden außerdem von anderen NetApp-Cloud-Services, die die BlueXP-Anmeldung verwenden, abgemeldet.
+NOTE: Wenn Sie sich von Data Infrastructure Insights abmelden, werden Sie auch von der Konsole abgemeldet.  Sie werden auch von anderen NetApp Cloud-Diensten abgemeldet, die die Konsolenanmeldung verwenden.
 
 
 
 === Zeitüberschreitung Bei Inaktivität
 
-BlueXP meldet einen Benutzer standardmäßig ab, wenn sechs Stunden (360 Minuten) keine Aktivitäten bestehen. Unabhängig von der Aktivität werden Benutzer nach sieben Tagen abgemeldet.
+Standardmäßig meldet die Konsole einen Benutzer ab, wenn sechs Stunden (360 Minuten) lang keine Aktivität stattfindet.  Unabhängig von der Aktivität werden Benutzer nach sieben Tagen abgemeldet.

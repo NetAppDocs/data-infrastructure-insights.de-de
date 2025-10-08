@@ -40,7 +40,7 @@ Diese Daten werden durch die Bereitstellung des Cloud Data Service durch NetApp 
 
 * Benutzerdaten
 +
-Authentifizierungs- und Zugriffsinformationen, die es NetApp BlueXP  ermöglichen, mit regionalen Dateninfrastrukturen Insights zu kommunizieren, einschließlich Daten zur Benutzerautorisierung.
+Authentifizierungs- und Zugriffsinformationen, die es der NetApp Konsole ermöglichen, mit regionalen Data Infrastructure Insights -Sites zu kommunizieren, einschließlich Daten zur Benutzerautorisierung.
 
 * Sicherheitsdaten Des Benutzerverzeichnisses Für Storage-Workloads
 +
@@ -76,7 +76,7 @@ Folgende Informationen werden in der Host-Region gespeichert:
 Die folgenden Informationen verbleiben in den USA, unabhängig von der Region, in der Ihre Data Infrastructure Insights Umgebung gehostet wird:
 
 * Angaben zum Umgebungsstandort (manchmal auch „Mandant“ genannt), z. B. Standort-/Kontoinhaber.
-* Informationen, die es NetApp BlueXP  ermöglichen, mit regionalen Einsichten zu Dateninfrastrukturen zu kommunizieren, einschließlich aller Vorgänge, die mit der Benutzerautorisierung ausgeführt werden.
+* Informationen, die es der NetApp Konsole ermöglichen, mit regionalen Data Infrastructure Insights -Sites zu kommunizieren, einschließlich aller Informationen, die mit der Benutzerautorisierung zu tun haben.
 * Informationen im Zusammenhang mit der Beziehung zwischen dem Benutzer Data Infrastructure Insights und dem Mandanten.
 
 

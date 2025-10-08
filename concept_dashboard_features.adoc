@@ -797,7 +797,7 @@ Die automatische Aktualisierung ist für den benutzerdefinierten Zeitbereich des
 In Kombination mit *TV-Modus* ermöglicht die automatische Aktualisierung die Anzeige von Daten auf einem Dashboard oder einer Asset-Seite nahezu in Echtzeit. Der TV-Modus bietet ein übersichtliches Display. Das Navigationsmenü ist ausgeblendet und bietet so mehr Platz für Ihre Datenanzeige, wie die Schaltfläche Bearbeiten. Im TV-Modus werden typische Daten-Infrastruktur-Insights-Timeouts ignoriert. Die Anzeige bleibt so lange aktiv, bis sie manuell oder automatisch über Sicherheitsprotokolle der Autorisierung abgemeldet wird.
 
 
-NOTE: Da NetApp BlueXP  eine eigene Zeitüberschreitung für die Benutzeranmeldung von 7 Tagen hat, muss sich Dateninfrastruktur Insights auch bei diesem Ereignis abmelden. Sie können sich einfach erneut anmelden und Ihr Dashboard wird weiterhin angezeigt.
+NOTE: Da die NetApp Konsole über ein eigenes Zeitlimit für die Benutzeranmeldung von 7 Tagen verfügt, muss sich Data Infrastructure Insights bei diesem Ereignis ebenfalls abmelden.  Sie können sich einfach erneut anmelden und Ihr Dashboard wird weiterhin angezeigt.
 
 * Um den TV-Modus zu aktivieren, klicken Sie auf die Schaltfläche TV-Modus.
 * Um den TV-Modus zu deaktivieren, klicken Sie oben links auf dem Bildschirm auf die Schaltfläche *Beenden*.

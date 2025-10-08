@@ -170,7 +170,7 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 | Problem: | Versuchen Sie dies: 
 
 
-| Performance-Erfassung schlägt mit „Timeout beim Senden der SNMP-Anforderung“ fehl. | Je nach Abfragevariablen und Switch-Konfiguration können einige Abfragen das Standard-Timeout überschreiten. link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Weitere Informationen"]. 
+| Performance-Erfassung schlägt mit „Timeout beim Senden der SNMP-Anforderung“ fehl. | Abhängig von Abfragevariablen und Switch-Konfiguration können einige Abfragen das Standard-Timeout überschreiten. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Weitere Informationen"] . 
 
 
 | Die Leistungserfassung schlägt fehl mit ...Zeilenduplikate in SNMP-Tabelle gefunden... | DII hat fehlerhafte SNMP-Antworten erkannt. Sie verwenden wahrscheinlich FOS 8.2.3e. Aktualisieren Sie auf 8.2.3e2 oder höher. 

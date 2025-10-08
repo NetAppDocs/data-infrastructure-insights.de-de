@@ -25,19 +25,19 @@ Siehe auch link:task_troubleshooting_linux_acquisition_unit_problems.html["Fehle
 | Data Infrastructure Insights meldet sich automatisch alle 6 Stunden ab | Dies ist auf deaktivierte Browser-Cookies von Drittanbietern zurückzuführen. Benutzer können ihren Browser so konfigurieren, dass alle Drittanbieter-Cookies aktiviert werden, oder eine engere Ausnahmeliste verwenden, um nur diejenigen für Data Infrastructure Insights zu aktivieren. Beispiel: Browser-Einstellungen öffnen Wählen Sie die Option "Alle Cookies zulassen". *ODER* Wählen Sie „Cookies von Drittanbietern blockieren“ und fügen Sie Ausnahmen für _[\*.]auth0.com_ und _[*.]NetApp.com_ hinzu. Microsoft Edge follows das gleiche Format für Ausnahmen wie Chrome. In Firefox werden Cookie-Ausnahmen einfach als _auth0.com_ und _netapp.com_ bezeichnet. 
 
 
-| Ich habe ein BlueXP Konto, kann mich aber nicht bei BlueXP anmelden. | Öffnen Sie ein Ticket von https://mysupport.netapp.com/site/help[]. Wählen Sie die Kategorie „blueXP.netapp.com > Probleme mit Account/Login“ oder „bluexp.netapp.com > Probleme mit der Federation“ aus. Diese betreffen speziell Probleme oder Fragen zu BlueXP. Für alle anderen Fragen zum technischen Support von Data Infrastructure Insights wenden Sie sich an link:concept_requesting_support.html["NetApp Support"]. 
+| Ich habe ein Konsolenkonto, kann mich aber nicht anmelden. | Öffnen Sie ein Ticket von https://mysupport.netapp.com/site/help[] .  Wählen Sie die Kategorie „console.netapp.com > Konto-/Anmeldeprobleme“ oder „console.netapp.com > Föderationsprobleme“.  Diese sind speziell für Probleme oder Fragen zur Konsole gedacht.  Bei allen anderen technischen Supportfragen zu Data Infrastructure Insights wenden Sie sich anlink:concept_requesting_support.html["NetApp Support"] . 
 
 
-| Ich wurde zu Data Infrastructure Insights eingeladen, aber ich erhalte eine Nachricht „nicht autorisiert“. | Überprüfen Sie, ob Sie sich für ein BlueXP Konto registriert haben oder ob Ihr Unternehmen SSO-Anmeldedaten mit BlueXP verwendet. Überprüfen Sie, ob Ihre E-Mail-Adresse für Ihr BlueXP -Profil mit der E-Mail-Adresse übereinstimmt, die in Ihrer Begrüßungs-E-Mail zu Einblicke von Dateninfrastruktur Stimmt die E-Mail nicht überein, fordern Sie eine neue Einladung mit der richtigen E-Mail-Adresse an. 
+| Ich wurde zu Data Infrastructure Insights eingeladen, aber ich erhalte eine Nachricht „nicht autorisiert“. | Stellen Sie sicher, dass Sie sich für ein Konsolenkonto angemeldet haben oder dass Ihre Organisation die SSO-Anmeldung mit der Konsole verwendet.  Überprüfen Sie, ob die E-Mail-Adresse Ihres Konsolenprofils mit der E-Mail-Adresse übereinstimmt, die in Ihrer Data Infrastructure Insights -Begrüßungs-E-Mail angezeigt wird.  Wenn die E-Mail nicht übereinstimmt, fordern Sie eine neue Einladung mit der richtigen E-Mail-Adresse an. 
 
 
-| Ich habe mich bei BlueXP  abgemeldet und wurde automatisch bei „Data Infrastructure Insights“ abgemeldet. | Bei Single Sign On (SSO) über NetApp-Cloud-Services werden alle Sitzungen zu Dateninfrastruktur-Einblicken abgehört. Wenn Sie Zugriff auf mehrere Konten für Data Infrastructure Insights haben, werden alle aktiven Sitzungen bei einer beliebigen Abmeldung abmeldet. Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
+| Ich habe mich von der Konsole abgemeldet und wurde automatisch von Data Infrastructure Insights abgemeldet. | Bei Single Sign On (SSO) über NetApp-Cloud-Services werden alle Sitzungen zu Dateninfrastruktur-Einblicken abgehört. Wenn Sie Zugriff auf mehrere Konten für Data Infrastructure Insights haben, werden alle aktiven Sitzungen bei einer beliebigen Abmeldung abmeldet. Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
 
 
-| Ich wurde nach einigen Tagen automatisch abgemeldet. | Für NetApp Cloud-Konten muss alle paar Tage eine erneute Authentifizierung durchgeführt werden (die aktuelle BlueXP Einstellung beträgt 7 Tage). Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
+| Ich wurde nach einigen Tagen automatisch abgemeldet. | NetApp Cloud-Konten erfordern alle paar Tage eine erneute Authentifizierung (die aktuelle Konsoleneinstellung ist 7 Tage).  Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
 
 
-| Ich erhalte eine Fehlermeldung „Anmeldung nicht mehr zulässig“. | Wenden Sie sich an Ihren Account-Administrator, um den Zugriff auf Data Infrastructure Insights zu überprüfen. Überprüfen Sie, ob Ihre E-Mail-Adresse für Ihr BlueXP -Profil mit der E-Mail-Adresse übereinstimmt, die in Ihrer Begrüßungs-E-Mail zu Einblicke von Dateninfrastruktur 
+| Ich erhalte eine Fehlermeldung „Anmeldung nicht mehr zulässig“. | Wenden Sie sich an Ihren Kontoadministrator, um den Zugriff auf Data Infrastructure Insights zu überprüfen.  Überprüfen Sie, ob die E-Mail-Adresse Ihres Konsolenprofils mit der E-Mail-Adresse übereinstimmt, die in Ihrer Data Infrastructure Insights -Begrüßungs-E-Mail angezeigt wird. 
 
 
 | Andere Anmeldefehler | Testen Sie den Inkognito-Modus in Chrome, oder löschen Sie den Browserverlauf, Cookies und Cache. Versuchen Sie es mit einem anderen Browserprofil (d.h. Chrome - Person hinzufügen). 
@@ -64,7 +64,7 @@ Siehe auch link:task_troubleshooting_linux_acquisition_unit_problems.html["Fehle
 
 == Ressourcen
 
-Weitere Tipps zur Fehlerbehebung finden Sie im link:https://kb.netapp.com/Cloud/BlueXP/DII["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
+Weitere Tipps zur Fehlerbehebung finden Sie imlink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
 
 Weitere Support-Informationen finden Sie auf der Seite Data Infrastructure Insightslink:concept_requesting_support.html["Support"].
 
