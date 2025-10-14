@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: task_dc_emc_xio.html 
 keywords: data collector, XtremeIO, EMC 
-summary: Konfigurieren des XtremeIO-Datensammlers. 
+summary: Konfigurieren des XtremeIO-Datenkollektors. 
 ---
-= Dell EMC XtremeIO-Datensammler
+= Dell EMC XtremeIO-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der EMC XtremIO Data Collector erwirbt Bestands- und Performance-Daten vom EMC XtremIO Storage-System.
+Der EMC XtremIO-Datenkollektor erfasst Bestands- und Leistungsdaten vom EMC XtremIO-Speichersystem.
 
 
 
 == Anforderungen
 
-Zum Konfigurieren des EMC XtremIO (HTTP) Datensammlers sind folgende Funktionen erforderlich:
+Zum Konfigurieren des EMC XtremIO (HTTP)-Datenkollektors benötigen Sie:
 
-* Die Host-Adresse des XtremIO Management Servers (XMS)
+* Die Hostadresse des XtremIO Management Servers (XMS)
 * Ein Konto mit Administratorrechten
 * Zugriff auf Port 443 (HTTPS)
 
@@ -27,38 +27,38 @@ Zum Konfigurieren des EMC XtremIO (HTTP) Datensammlers sind folgende Funktionen 
 
 == Terminologie
 
-Data Infrastructure Insights bezieht die folgenden Inventarinformationen aus dem EMC XtremIO Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieser Datenquelle die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom EMC XtremIO-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieser Datenquelle die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte (SSD) | Festplatte 
+| Festplatte (SSD) | Scheibe 
 
 
 | Cluster | Storage 
 
 
-| Controller | Storage-Node 
+| Regler | Speicherknoten 
 
 
-| Datenmenge | Datenmenge 
+| Volumen | Volumen 
 
 
-| LUN-Zuordnung | Volume-Zuordnung 
+| LUN-Karte | Volumenkarte 
 
 
-| Ziel-FC-Initiator | Volume-Maske 
+| Ziel-FC-Initiator | Volumenmaske 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In dieser Datenquelle fallen möglicherweise nicht alle Fälle an.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diese Datenquelle darstellen.
 
 
 
 == Anforderungen
 
-* Die XMS-Host-IP-Adresse des XtremIO Management Servers (XMS)
-* Administratorbenutzername und -Passwort für den XtremIO
+* Die Host-IP-Adresse des XtremIO Management Server (XMS)
+* Administratorbenutzername und -kennwort für XtremIO
 
 
 
@@ -70,13 +70,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In d
 | Feld | Beschreibung 
 
 
-| XMS Host | IP-Adresse oder vollqualifizierter Domain-Name des XtremIO Management Servers 
+| XMS-Host | IP-Adresse oder vollqualifizierter Domänenname des XtremIO-Managementservers 
 
 
-| Benutzername | Benutzername für den XtremIO Management Server 
+| Benutzername | Benutzername für den XtremIO-Managementserver 
 
 
-| Passwort | Passwort für den XtremIO Management Server 
+| Passwort | Kennwort für den XtremIO-Managementserver 
 |===
 
 
@@ -87,16 +87,16 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In d
 | Feld | Beschreibung 
 
 
-| TCP-Port | TCP-Port für die Verbindung mit dem XtremIO Management Server. Der Standardwert ist 443. 
+| TCP-Port | TCP-Port, der für die Verbindung mit dem XTremIO-Verwaltungsserver verwendet wird.  Der Standardwert ist 443. 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 300 Sekunden. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

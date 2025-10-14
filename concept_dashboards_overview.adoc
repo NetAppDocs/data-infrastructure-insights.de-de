@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboards_overview.html 
-summary: Überblick über Dashboards in Data Infrastructure Insights 
+summary: Übersicht über Dashboards in Data Infrastructure Insights. 
 keywords: dashboard, widget, custom, view, data 
 ---
-= Übersicht Über Dashboards
+= Dashboards – Übersicht
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ keywords: dashboard, widget, custom, view, data
 
 
 [role="lead"]
-Data Infrastructure Insights bietet den Benutzern die Flexibilität, Betriebsansichten von Infrastrukturdaten zu erstellen, indem Sie benutzerdefinierte Dashboards mit einer Vielzahl von Widgets erstellen können, von denen jede ein hohes Maß an Flexibilität bei der Anzeige und Dokumentation Ihrer Daten bietet.
+Data Infrastructure Insights bietet Benutzern die Flexibilität, Betriebsansichten von Infrastrukturdaten zu erstellen, indem Sie benutzerdefinierte Dashboards mit einer Vielzahl von Widgets erstellen können, von denen jedes umfassende Flexibilität bei der Anzeige und Diagrammerstellung Ihrer Daten bietet.
 
 
-IMPORTANT: Die Beispiele in diesen Abschnitten dienen nur zu erklärenden Zwecken und decken nicht alle möglichen Szenarien ab. Die hierin enthaltenen Konzepte und Schritte können dazu verwendet werden, eigene Dashboards zu erstellen, um die Daten auf Ihre speziellen Bedürfnisse hin hervorzuheben.
+IMPORTANT: Die Beispiele in diesen Abschnitten dienen nur zu Erklärungszwecken und decken nicht jedes mögliche Szenario ab.  Mit den hierin enthaltenen Konzepten und Schritten können Sie Ihre eigenen Dashboards erstellen, um die Daten hervorzuheben, die für Ihre speziellen Anforderungen spezifisch sind.
 
 
 
 == Erstellen eines Dashboards
 
-Sie erstellen ein neues Dashboard an einem von zwei Stellen:
+Sie erstellen ein neues Dashboard an einem von zwei Orten:
 
 * *Dashboards > [+Neues Dashboard]*
 * *Dashboards > Alle Dashboards anzeigen >* Klicken Sie auf die Schaltfläche *[+Dashboard]*
@@ -39,78 +39,78 @@ link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8[
 
 == Dashboard-Steuerelemente
 
-Der Dashboard-Bildschirm verfügt über mehrere Bedienelemente:
+Der Dashboard-Bildschirm verfügt über mehrere Steuerelemente:
 
-* *Zeitauswahl*: Ermöglicht die Anzeige von Dashboard-Daten für einen Zeitraum von 15 Minuten bis zu den letzten 30 Tagen oder einen benutzerdefinierten Zeitbereich von bis zu 31 Tagen. Sie können diesen globalen Zeitbereich in einzelnen Widgets überschreiben.
-* *Speichern*-Taste: Ermöglicht das Speichern oder Löschen des Dashboards.
+* *Zeitauswahl*: Ermöglicht Ihnen die Anzeige von Dashboard-Daten für einen Zeitraum von den letzten 15 Minuten bis zu den letzten 30 Tagen oder einen benutzerdefinierten Zeitraum von bis zu 31 Tagen.  Sie können diesen globalen Zeitbereich in einzelnen Widgets überschreiben.
+* Schaltfläche *Speichern*: Ermöglicht Ihnen, das Dashboard zu speichern oder zu löschen.
 +
-Sie können das aktuelle Dashboard umbenennen, indem Sie im Menü Speichern auf *Umbenennen* klicken.
+Sie können das aktuelle Dashboard umbenennen, indem Sie im Menü „Speichern“ auf „Umbenennen“ klicken.
 
-* *+ Add Widget* Button, mit dem Sie beliebig viele Tabellen, Diagramme oder andere Widgets zum Dashboard hinzufügen können.
+* Schaltfläche *+ Widget hinzufügen*, mit der Sie dem Dashboard eine beliebige Anzahl von Tabellen, Diagrammen oder anderen Widgets hinzufügen können.
 +
-Widgets können geändert und an verschiedene Positionen im Dashboard verschoben werden, um Ihnen die beste Ansicht Ihrer Daten entsprechend Ihren aktuellen Anforderungen zu geben.
+Die Größe von Widgets kann geändert und sie können an verschiedene Positionen innerhalb des Dashboards verschoben werden, um Ihnen entsprechend Ihren aktuellen Anforderungen die beste Ansicht Ihrer Daten zu bieten.
 
-* *+ Add Variable* Button, mit dem Sie Variablen nutzen können, um die Dashboard-Daten aktiv zu filtern.
+* Schaltfläche *+ Variable hinzufügen*, mit der Sie Variablen verwenden können, um die Dashboard-Daten aktiv zu filtern.
 
 
 
 
 == Widget-Typen
 
-Sie können aus den folgenden Widgets wählen:
+Sie können aus den folgenden Widget-Typen wählen:
 
-* *Tabelle Widget*: Eine Tabelle, die Daten nach den gewählten Filtern und Spalten anzeigt. Tabellendaten können in Gruppen zusammengefasst werden, die ausgeblendet und erweitert werden können.
+* *Tabellen-Widget*: Eine Tabelle, die Daten entsprechend den von Ihnen ausgewählten Filtern und Spalten anzeigt.  Tabellendaten können in Gruppen zusammengefasst werden, die ein- und ausgeblendet werden können.
 +
-image:TableWidgetPerformanceData.png["Tabellenwidget"]
+image:TableWidgetPerformanceData.png["Tabellen-Widget"]
 
-* *Linie, Spline, Bereich, gestapelte Flächendiagramme*: Dies sind Zeitreihenkarten-Widgets, auf denen Sie Leistung und andere Daten über die Zeit anzeigen können.
+* *Linien-, Spline-, Flächen- und gestapelte Flächendiagramme*: Dies sind Zeitreihendiagramm-Widgets, auf denen Sie die Leistung und andere Daten im Zeitverlauf anzeigen können.
 +
-image:Time-SeriesCharts.png["Bereich, Gestapelte Fläche, Linie, Spline-Diagramme"]
+image:Time-SeriesCharts.png["Flächen-, gestapelte Flächen-, Linien- und Spline-Diagramme"]
 
-* *Single Value Widget*: Ein Widget, mit dem Sie einen einzelnen Wert anzeigen können, der entweder direkt von einem Zähler abgeleitet oder mithilfe einer Abfrage oder eines Ausdrucks berechnet werden kann. Sie können Schwellenwerte für die Farbformatierung definieren, um anzuzeigen, ob der Wert in „erwartet“, „Warnung“ oder „kritischer Bereich“ liegt.
+* *Einzelwert-Widget*: Ein Widget, mit dem Sie einen einzelnen Wert anzeigen können, der entweder direkt von einem Zähler abgeleitet oder mithilfe einer Abfrage oder eines Ausdrucks berechnet werden kann.  Sie können Schwellenwerte für die Farbformatierung definieren, um anzuzeigen, ob der Wert im erwarteten, Warn- oder kritischen Bereich liegt.
 +
-image:Single-ValueWidgets.png["Single-Value Widgets mit und ohne Formatierung"]
+image:Single-ValueWidgets.png["Einzelwert-Widgets mit und ohne Formatierung"]
 
-* *Gauge-Widget*: Zeigt Einzelwertdaten in einem traditionellen (festen) Messgerät oder Aufzählungsmesser an, wobei Farben auf "Warnung" oder "kritische" Werte basierenlink:concept_dashboard_features.html#formatting-gauge-widgets["Anpassen"].
+* *Messgerät-Widget*: Zeigt Einzelwertdaten in einem herkömmlichen (durchgezogenen) Messgerät oder Bullet-Messgerät an, mit Farben basierend auf den von Ihnen gewählten "Warn-" oder "Kritischen" Wertenlink:concept_dashboard_features.html#formatting-gauge-widgets["anpassen"] .
 +
-image:GaugeWidgets.png["Einzelwert mit Formatierung, traditionelle Messanzeige, Leuchtanzeige"]
+image:GaugeWidgets.png["Einzelwert mit Formatierung, traditionelle Anzeige, Bullet-Anzeige"]
 
-* *Balken, Spaltendiagramme*: Zeigt die oberen oder unteren N-Werte an, z. B. die Top 10-Storage nach Kapazität oder die unteren 5-Volumes nach IOPS.
+* *Balken-, Säulendiagramme*: Zeigt die höchsten oder niedrigsten N-Werte an, z. B. die zehn größten Speicher nach Kapazität oder die fünf untersten Volumes nach IOPS.
 +
-image:BarandColumnCharts.png["Balken- und Spaltendiagramme"]
+image:BarandColumnCharts.png["Balken- und Säulendiagramme"]
 
-* *Box Plot Chart*: Eine Darstellung des min., max., Median und des Bereichs zwischen dem unteren und dem oberen Quartil der Daten in einem einzigen Diagramm.
+* *Boxplot-Diagramm*: Eine Darstellung des Minimums, Maximums, Medians und des Bereichs zwischen dem unteren und oberen Quartil der Daten in einem einzigen Diagramm.
 +
-image:BoxPlot.png["Box-Darstellung"]
+image:BoxPlot.png["Boxplot"]
 
-* *Scatter Plot Chart*: Zeichnet verwandte Daten als Punkte, zum Beispiel IOPS und Latenz. In diesem Beispiel sind Assets mit hohem Durchsatz und niedrigen IOPS schnell zu finden.
+* *Streudiagramm*: Stellt verwandte Daten als Punkte dar, beispielsweise IOPS und Latenz.  In diesem Beispiel können Sie schnell Assets mit hohem Durchsatz und niedrigem IOPS finden.
 +
 image:ScatterPlot.png["Streudiagramm"]
 
-* *Pie Chart*: Ein traditionelles Kreisdiagramm, um Daten als Teil der Gesamtmenge anzuzeigen.
+* *Kreisdiagramm*: ein traditionelles Kreisdiagramm zur Anzeige von Daten als Teil des Gesamtwerts.
 +
 image:PieChart.png["Kreisdiagramm"]
 
-* *Widgets Anmerkung*: Bis zu 1000 Zeichen Freitext.
+* *Notiz-Widget*: Bis zu 1000 Zeichen Freitext.
 +
-image:NoteWidget.png["Notizwidget"]
+image:NoteWidget.png["Notiz-Widget"]
 
-* *Zeitbalkendiagramm*: Zeigt Protokoll- oder Metrikdaten im Zeitverlauf an.
-
-
-image:time_bar_chart.png["Beispiel für ein Zeitbalkentabelle mit Protokolldaten, Breite=200"]
-
-* *Warnungstabelle*: Zeigt bis zu den letzten 1,000 Warnungen an.
+* *Zeitbalkendiagramm*: Zeigt Protokoll- oder Messdaten im Zeitverlauf an.
 
 
-Für detailliertere Erläuterungen zu diesen und anderen Dashboard-Funktionen, link:concept_dashboard_features.html["Klicken Sie hier"].
+image:time_bar_chart.png["Beispiel eines Zeitbalkendiagramms mit Protokolldaten, Breite=200"]
+
+* *Warnungstabelle*: Zeigt bis zu den letzten 1.000 Warnungen an.
+
+
+Ausführlichere Erklärungen zu diesen und anderen Dashboard-Funktionen finden Sie unterlink:concept_dashboard_features.html["klicken Sie hier,"] .
 
 
 
-== Einrichten eines Dashboards als Startseite
+== Ein Dashboard als Startseite festlegen
 
-Sie können mit einer der folgenden Methoden wählen, welches Dashboard als *Startseite* Ihres Mandanten eingestellt werden soll:
+Sie können mit einer der folgenden Methoden auswählen, welches Dashboard als *Startseite* Ihres Mandanten festgelegt werden soll:
 
-* Gehen Sie zu *Dashboards > Alle Dashboards anzeigen*, um die Liste der Dashboards auf Ihrem Mandanten anzuzeigen. Klicken Sie auf das Optionsmenü rechts neben dem gewünschten Dashboard und wählen Sie *als Startseite festlegen*.
-* Klicken Sie in der Liste auf ein Dashboard, um das Dashboard zu öffnen. Klicken Sie in der oberen Ecke auf das Dropdown-Menü und wählen Sie *als Startseite festlegen*.
+* Gehen Sie zu *Dashboards > Alle Dashboards anzeigen*, um die Liste der Dashboards auf Ihrem Mandanten anzuzeigen.  Klicken Sie auf das Optionsmenü rechts neben dem gewünschten Dashboard und wählen Sie *Als Startseite festlegen*.
+* Klicken Sie auf ein Dashboard in der Liste, um das Dashboard zu öffnen.  Klicken Sie auf das Dropdown-Menü in der oberen Ecke und wählen Sie *Als Startseite festlegen*.
 

@@ -1,107 +1,107 @@
 ---
 sidebar: sidebar 
 permalink: security_overview.html 
-summary: Data Infrastructure Insights befolgt während des gesamten Release-Lebenszyklus sicherheitstechnikrelevante Best Practices. 
+summary: Data Infrastructure Insights befolgt während des gesamten Release-Lebenszyklus bewährte Sicherheitspraktiken. 
 keywords: security, risk, protection 
 ---
-= Einblicke In Die Dateninfrastruktur, Sicherheit
+= Data Infrastructure Insights Sicherheit
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Die Datensicherheit bei Produkten und Kunden ist bei NetApp von größter Bedeutung. Data Infrastructure Insights befolgt während des gesamten Release-Lebenszyklus sicherheitstechnisch bewährte Verfahren, damit Kundeninformationen und -Daten bestmöglich geschützt werden.
+Die Sicherheit von Produkt- und Kundendaten hat bei NetApp höchste Bedeutung.  Data Infrastructure Insights befolgt während des gesamten Release-Lebenszyklus bewährte Sicherheitspraktiken, um sicherzustellen, dass Kundeninformationen und -daten bestmöglich geschützt sind.
 
 
 
-== Sicherheit – Überblick
+== Sicherheitsübersicht
 
 
 
 === Physische Sicherheit
 
-Die Produktionsinfrastruktur von Data Infrastructure Insights wird auf Amazon Web Services (AWS) gehostet. Physische und umgebungsbezogene Sicherheitskontrollen für Data Infrastructure Insights Produktions-Server, einschließlich Gebäude sowie Schlösser oder Schlüssel, die an Türen verwendet werden, werden von AWS gemanagt. Gemäß AWS: „Der physische Zugang wird sowohl am Perimeter als auch an Einbruchstellen durch professionelles Sicherheitspersonal mithilfe von Videoüberwachung, Intrusion Detection Systemen und anderen elektronischen Mitteln gesteuert. Autorisierte Mitarbeiter nutzen Multi-Faktor-Authentifizierungsmechanismen für den Zugriff auf Datacenter-Stockwerke.“
+Die Produktionsinfrastruktur von Data Infrastructure Insights wird in Amazon Web Services (AWS) gehostet.  Physische und umweltbezogene sicherheitsrelevante Kontrollen für Data Infrastructure Insights Produktionsserver, zu denen Gebäude sowie an Türen verwendete Schlösser oder Schlüssel gehören, werden von AWS verwaltet.  Laut AWS: „Der physische Zugang wird sowohl am Perimeter als auch an den Gebäudeeingängen von professionellem Sicherheitspersonal mithilfe von Videoüberwachung, Einbruchmeldeanlagen und anderen elektronischen Mitteln kontrolliert.  Autorisierte Mitarbeiter nutzen Multi-Faktor-Authentifizierungsmechanismen, um auf die Etagen des Rechenzentrums zuzugreifen.“
 
-Data Infrastructure Insights folgt den Best Practiceslink:https://aws.amazon.com/compliance/shared-responsibility-model/["Modell der gemeinsamen Verantwortung"], die von AWS beschrieben werden.
+Data Infrastructure Insights folgt den Best Practices derlink:https://aws.amazon.com/compliance/shared-responsibility-model/["Modell der geteilten Verantwortung"] von AWS beschrieben.
 
 
 
 === Produktsicherheit
 
-Data Infrastructure Insights folgt einem Entwicklungslebenszyklus nach den Prinzipien von Agile. So können wir sicherheitsbezogene Softwarefehler im Vergleich zu Methoden zur Entwicklung eines längeren Release-Zyklus schneller beheben. Mithilfe von Methoden zur kontinuierlichen Integration sind wir in der Lage, schnell sowohl auf funktionale als auch auf Sicherheitsänderungen zu reagieren. Die Änderungsmanagementverfahren und -Richtlinien legen fest, wann und wie Änderungen vorgenommen werden, und tragen dazu bei, die Stabilität der Produktionsumgebung zu erhalten. Alle wirkungsvollen Änderungen werden formal kommuniziert, koordiniert, richtig überprüft und vor ihrer Veröffentlichung in der Produktionsumgebung genehmigt.
+Data Infrastructure Insights folgt einem Entwicklungslebenszyklus im Einklang mit Agile-Prinzipien und ermöglicht uns so, sicherheitsrelevante Softwarefehler schneller zu beheben als bei Entwicklungsmethoden mit längeren Release-Zyklen.  Durch den Einsatz kontinuierlicher Integrationsmethoden sind wir in der Lage, schnell auf funktionale und sicherheitsrelevante Änderungen zu reagieren.  Die Verfahren und Richtlinien zum Änderungsmanagement definieren, wann und wie Änderungen erfolgen, und tragen dazu bei, die Stabilität der Produktionsumgebung aufrechtzuerhalten.  Alle Änderungen mit Auswirkungen werden vor ihrer Veröffentlichung in der Produktionsumgebung formell kommuniziert, koordiniert, ordnungsgemäß überprüft und genehmigt.
 
 
 
 === Netzwerksicherheit
 
-Der Netzwerkzugriff auf Ressourcen in der Data Infrastructure Insights Umgebung wird über Host-basierte Firewalls gesteuert. Jede Ressource (wie z. B. ein Load Balancer oder eine virtuelle Maschineninstanz) verfügt über eine hostbasierte Firewall, die den eingehenden Datenverkehr auf nur die Ports beschränkt, die für die Ausführung ihrer Funktion benötigt werden.
+Der Netzwerkzugriff auf Ressourcen in der Data Infrastructure Insights Umgebung wird durch hostbasierte Firewalls gesteuert.  Jede Ressource (z. B. ein Load Balancer oder eine Instanz einer virtuellen Maschine) verfügt über eine hostbasierte Firewall, die den eingehenden Datenverkehr auf die Ports beschränkt, die die Ressource zur Ausführung ihrer Funktion benötigt.
 
-Data Infrastructure Insights nutzt verschiedene Mechanismen wie Intrusion Detection Services, um die Produktionsumgebung auf Sicherheitsanomalien zu überwachen.
-
-
-
-=== Risikoeinschätzung
-
-Das Data Infrastructure Insights-Team folgt einem formalisierten Risikobewertungsprozess, um eine systematische, wiederholbare Methode zur Identifizierung und Bewertung der Risiken bereitzustellen, damit diese durch einen Risikobehandlungsplan angemessen gemanagt werden können.
+Data Infrastructure Insights verwendet verschiedene Mechanismen, darunter Intrusion Detection-Dienste, um die Produktionsumgebung auf Sicherheitsanomalien zu überwachen.
 
 
 
-=== Datensicherung
+=== Risikobewertung
 
-Die Produktionsumgebung von Data Infrastructure Insights wird in einer hochredundanten Infrastruktur eingerichtet, in der für alle Services und Komponenten mehrere Verfügbarkeitszonen genutzt werden. Neben einer hochverfügbaren und redundanten Computing-Infrastruktur werden wichtige Daten in regelmäßigen Abständen gesichert und Restores regelmäßig getestet. Formelle Backup-Richtlinien und -Verfahren minimieren die Auswirkungen von Unterbrechungen von Geschäftsaktivitäten und schützen Unternehmensprozesse gegen die Auswirkungen von Fehlern in Informationssystemen oder -Ausfällen und stellen einen zeitnahen und adäquaten Wiederaufnahme sicher.
+Das Data Infrastructure Insights -Team folgt einem formalisierten Risikobewertungsprozess, um eine systematische, wiederholbare Möglichkeit zur Identifizierung und Bewertung der Risiken bereitzustellen, sodass diese mithilfe eines Risikobehandlungsplans angemessen gemanagt werden können.
 
 
 
-=== Authentifizierung und Zugriffsmanagement
+=== Datenschutz
 
-Der gesamte Zugriff von Kunden auf Data Infrastructure Insights erfolgt über Interaktionen auf der Browser-Benutzeroberfläche über HTTPS. Die Authentifizierung erfolgt über den Dienst Auth0 eines Drittanbieters. NetApp hat hier als Authentifizierungsebene für alle Cloud-Datenservices zentralisiert.
+Die Produktionsumgebung von Data Infrastructure Insights ist in einer hochredundanten Infrastruktur eingerichtet, die mehrere Verfügbarkeitszonen für alle Dienste und Komponenten nutzt.  Neben der Nutzung einer hochverfügbaren und redundanten Computerinfrastruktur werden kritische Daten in regelmäßigen Abständen gesichert und Wiederherstellungen regelmäßig getestet.  Formale Backup-Richtlinien und -Verfahren minimieren die Auswirkungen von Unterbrechungen der Geschäftstätigkeit, schützen Geschäftsprozesse vor den Auswirkungen von Ausfällen von Informationssystemen oder Katastrophen und gewährleisten ihre rechtzeitige und angemessene Wiederaufnahme.
 
-Data Infrastructure Insights befolgt branchenübliche Best Practices, einschließlich „Least Privilege“ und „rollenbasierte Zugriffssteuerung“ beim logischen Zugriff auf die Produktionsumgebung von Data Infrastructure Insights. Der Zugriff wird streng nach Anforderungen kontrolliert und nur ausgewählten autorisierten Mitarbeitern mit Multi-Faktor-Authentifizierungsmechanismen gewährt.
+
+
+=== Authentifizierung und Zugriffsverwaltung
+
+Der gesamte Kundenzugriff auf Data Infrastructure Insights erfolgt über Browser-UI-Interaktionen über https.  Die Authentifizierung erfolgt über den Drittanbieterdienst Auth0.  NetApp hat dies als Authentifizierungsebene für alle Cloud-Datendienste zentralisiert.
+
+Data Infrastructure Insights befolgt branchenübliche Best Practices, darunter „Least Privilege“ und „rollenbasierte Zugriffskontrolle“ für den logischen Zugriff auf die Data Infrastructure Insights -Produktionsumgebung.  Der Zugriff wird streng nach Bedarf kontrolliert und nur ausgewählten autorisierten Mitarbeitern mithilfe von Multi-Faktor-Authentifizierungsmechanismen gewährt.
 
 
 
 === Erhebung und Schutz von Kundendaten
 
-Alle Kundendaten werden während der Übertragung über öffentliche Netzwerke verschlüsselt und im Ruhezustand verschlüsselt. Data Infrastructure Insights nutzt Verschlüsselung an verschiedenen Stellen im System zum Schutz von Kundendaten. Dazu kommen Technologien wie Transport Layer Security (TLS) und der branchenübliche AES-256-Algorithmus.
+Alle Kundendaten werden während der Übertragung über öffentliche Netzwerke und im Ruhezustand verschlüsselt.  Data Infrastructure Insights nutzt an verschiedenen Stellen im System Verschlüsselung, um Kundendaten mithilfe von Technologien wie Transport Layer Security (TLS) und dem Industriestandard-Algorithmus AES-256 zu schützen.
 
 
 
-=== Kundendeprovisionierung
+=== Kunden-Deprovisionierung
 
-E-Mail-Benachrichtigungen werden in verschiedenen Abständen versendet, um dem Kunden mitzuteilen, dass das Abonnement abläuft. Nach Ablauf des Abonnements wird die UI eingeschränkt und eine Kulanzzeit beginnt für die Datenerfassung. Der Kunde wird dann per E-Mail benachrichtigt. Bei Testabonnements besteht eine Frist von 14 Tagen. Im Rahmen der bezahlten Abonnements haben Sie eine Frist von 28 Tagen. Nach Ablauf der Kulanzzeit wird der Kunde per E-Mail darüber informiert, dass das Konto innerhalb von 2 Tagen gelöscht wird. Ein zahlter Kunde kann auch direkt beantragen, dass er nicht im Service ist.
+In unterschiedlichen Abständen werden E-Mail-Benachrichtigungen versendet, um den Kunden über den Ablauf seines Abonnements zu informieren.  Nach Ablauf des Abonnements wird die Benutzeroberfläche eingeschränkt und es beginnt eine Schonfrist für die Datenerfassung.  Der Kunde wird anschließend per E-Mail benachrichtigt.  Für Testabonnements gilt eine Nachfrist von 14 Tagen und für kostenpflichtige Abonnementkonten eine Nachfrist von 28 Tagen.  Nach Ablauf der Nachfrist wird der Kunde per E-Mail darüber informiert, dass das Konto in 2 Tagen gelöscht wird.  Ein zahlender Kunde kann auch direkt die Abmeldung vom Dienst beantragen.
 
-Abgelaufene Mandanten und alle zugehörigen Kundendaten werden vom Data Infrastructure Insights Operations (SRE) Team am Ende der Gnadenfrist oder nach Bestätigung der Kontoersatzanfrage eines Kunden gelöscht. In beiden Fällen führt das SRE-Team einen API-Aufruf aus, um das Konto zu löschen. Der API-Aufruf löscht die Mandanteninstanz und alle Kundendaten. Die Löschung durch den Kunden wird durch den Aufruf derselben API überprüft und überprüft, ob der Kunde den Status „GELÖSCHT“ hat.
+Abgelaufene Mandanten und alle zugehörigen Kundendaten werden vom Data Infrastructure Insights Operations (SRE)-Team am Ende der Nachfrist oder nach Bestätigung der Anfrage eines Kunden zur Kündigung seines Kontos gelöscht.  In beiden Fällen führt das SRE-Team einen API-Aufruf aus, um das Konto zu löschen.  Der API-Aufruf löscht die Mandanteninstanz und alle Kundendaten.  Die Löschung des Kunden wird durch Aufrufen derselben API und Überprüfen, ob der Mandantenstatus des Kunden „GELÖSCHT“ lautet, überprüft.
 
 
 
-=== Management von Sicherheitsproblemen
+=== Sicherheitsvorfallmanagement
 
-Dateninfrastruktur Insights ist in den PSIRT-Prozess (Product Security Incident Response Team) von NetApp integriert, um bekannte Schwachstellen zu finden, zu bewerten und zu beheben. PSIRT nutzt Informationen zu Schwachstellen über mehrere Kanäle, darunter Kundenberichte, interne technische Informationen und allgemein anerkannte Quellen wie die CVE-Datenbank.
+Data Infrastructure Insights ist in den PSIRT-Prozess (Product Security Incident Response Team) von NetApp integriert, um bekannte Schwachstellen zu finden, zu bewerten und zu beheben.  PSIRT bezieht Informationen zu Sicherheitslücken aus mehreren Kanälen, darunter Kundenberichte, interne Entwicklungsabteilungen und allgemein anerkannte Quellen wie die CVE-Datenbank.
 
-Wenn ein Problem vom Data Infrastructure Insights Engineering-Team erkannt wird, leitet das Team den PSIRT-Prozess ein, bewertet und Behebung des Problems.
+Wenn das Data Infrastructure Insights Engineering-Team ein Problem erkennt, leitet das Team den PSIRT-Prozess ein, bewertet das Problem und behebt es möglicherweise.
 
-Es ist auch möglich, dass ein Kunde oder Wissenschaftler bei Data Infrastructure Insights ein Sicherheitsproblem beim Data Infrastructure Insights Produkt identifiziert und das Problem dem technischen Support oder direkt dem NetApp Incident Response-Team meldet. In diesen Fällen leitet das Team von Data Infrastructure Insights den PSIRT-Prozess ein, bewertet und beseitigt das Problem möglicherweise.
+Es ist auch möglich, dass ein Kunde oder Forscher von Data Infrastructure Insights ein Sicherheitsproblem mit dem Data Infrastructure Insights -Produkt erkennt und das Problem dem technischen Support oder direkt dem Incident Response Team von NetApp meldet.  In diesen Fällen leitet das Data Infrastructure Insights -Team den PSIRT-Prozess ein, bewertet das Problem und behebt es möglicherweise.
 
 
 
 === Schwachstellen- und Penetrationstests
 
-Data Infrastructure Insights befolgt branchenübliche Best Practices und führt regelmäßig Schwachstellen- und Penetrationstests durch, bei denen sowohl interne als auch externe Sicherheitsexperten und Unternehmen zum Einsatz kommen.
+Data Infrastructure Insights befolgt die Best Practices der Branche und führt regelmäßig Schwachstellen- und Penetrationstests mithilfe interner und externer Sicherheitsexperten und -unternehmen durch.
 
 
 
-=== Schulung zur Sensibilisierung für die Sicherheit
+=== Schulung zum Sicherheitsbewusstsein
 
-Alle Mitarbeiter von Data Infrastructure Insights werden gemäß dem Sicherheitstraining für individuelle Rollen entwickelt, um sicherzustellen, dass jeder Mitarbeiter in der Lage ist, mit den spezifischen sicherheitsorientierten Herausforderungen seiner Rolle umzugehen.
-
-
-
-=== Compliance
-
-Data Infrastructure Insights führt unabhängige Audits und Validierungen der Sicherheitsmaßnahmen, Prozesse und Services durch anerkannte externe Prüfer durch. Zu den Prüfungen zählen auch SOC 2-Audits.
+Alle Mitarbeiter von Data Infrastructure Insights absolvieren ein Sicherheitstraining, das auf die jeweilige Rolle zugeschnitten ist, um sicherzustellen, dass jeder Mitarbeiter für die spezifischen sicherheitsbezogenen Herausforderungen seiner Rolle gerüstet ist.
 
 
 
-=== NetApp-Sicherheitsempfehlungen
+=== Einhaltung
 
-Sie können die verfügbaren Sicherheitsempfehlungen von NetApp anzeigenlink:https://security.netapp.com/advisory/["Hier"].
+Data Infrastructure Insights führt unabhängige Audits und Validierungen seiner Sicherheit, Prozesse und Dienste durch externe lizenzierte CPA-Unternehmen durch, einschließlich der Durchführung des SOC 2-Audits.
+
+
+
+=== NetApp Sicherheitshinweise
+
+Sie können die verfügbaren Sicherheitshinweise von NetApp einsehenlink:https://security.netapp.com/advisory/["hier,"] .

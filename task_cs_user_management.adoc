@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_cs_user_management.html 
 keywords: Workload Security, User, Login, account, cloud secure 
-summary: Benutzerkonten für Workload-Sicherheit werden über Data Infrastructure Insights User Management gemanagt 
+summary: Workload Security-Benutzerkonten werden über die Data Infrastructure Insights -Benutzerverwaltung verwaltet 
 ---
 = Benutzerverwaltung
 :hardbreaks:
@@ -10,33 +10,33 @@ summary: Benutzerkonten für Workload-Sicherheit werden über Data Infrastructur
 
 
 [role="lead"]
-Benutzerkonten für Workload-Sicherheit werden über Data Infrastructure Insights gemanagt.
+Workload Security-Benutzerkonten werden über Data Infrastructure Insights verwaltet.
 
-Data Infrastructure Insights bietet vier Benutzerkontoebenen: Kontoinhaber, Administrator, Benutzer und Gast. Jedem Konto werden bestimmte Berechtigungsebenen zugewiesen. Ein Benutzerkonto mit Administratorrechten kann Benutzer erstellen oder ändern und jedem Benutzer eine der folgenden Workload-Sicherheitsrollen zuweisen:
+Data Infrastructure Insights bietet vier Benutzerkontoebenen: Kontoinhaber, Administrator, Benutzer und Gast.  Jedem Konto sind bestimmte Berechtigungsstufen zugewiesen.  Ein Benutzerkonto mit Administratorrechten kann Benutzer erstellen oder ändern und jedem Benutzer eine der folgenden Workload-Sicherheitsrollen zuweisen:
 
 |===
 
 
-| Rolle | Zugriff Auf Die Workload-Sicherheit 
+| Rolle | Workload-Sicherheitszugriff 
 
 
-| Verwalter | Alle Workload-Sicherheitsfunktionen, einschließlich derer für Warnmeldungen, Forensik, Datensammler, automatisierte Antwortrichtlinien und APIs für Workload-Sicherheit, sind möglich. Ein Administrator kann auch andere Benutzer einladen, kann aber nur Workload-Sicherheitsrollen zuweisen. 
+| Administrator | Kann alle Workload-Sicherheitsfunktionen ausführen, einschließlich der Funktionen für Warnungen, Forensik, Datensammler, Richtlinien für automatisierte Reaktionen und APIs für Workload-Sicherheit.  Ein Administrator kann auch andere Benutzer einladen, aber nur Workload-Sicherheitsrollen zuweisen. 
 
 
-| Benutzer | Kann Warnungen anzeigen und verwalten und Forensik anzeigen. Benutzer können den Alarmstatus ändern, eine Notiz hinzufügen, Snapshots manuell erstellen und den Benutzerzugriff einschränken. 
+| Benutzer | Kann Warnungen anzeigen und verwalten sowie forensische Daten anzeigen.  Die Benutzerrolle kann den Alarmstatus ändern, eine Notiz hinzufügen, manuell Schnappschüsse machen und den Benutzerzugriff einschränken. 
 
 
-| Gast | Kann Warnungen und Forensik anzeigen. Gastrolle kann den Alarmstatus nicht ändern, Notizen hinzufügen, Snapshots manuell erstellen oder den Benutzerzugriff einschränken. 
+| Gast | Kann Warnungen und Forensik anzeigen.  Mit der Gastrolle können Sie den Alarmstatus nicht ändern, keine Notiz hinzufügen, manuell Schnappschüsse erstellen oder den Benutzerzugriff einschränken. 
 |===
 .Schritte
 . Melden Sie sich bei Workload Security an
 . Klicken Sie im Menü auf *Admin > Benutzerverwaltung*
 +
-Sie werden auf die Seite User Management von Data Infrastructure Insights weitergeleitet.
+Sie werden zur Benutzerverwaltungsseite von Data Infrastructure Insights weitergeleitet.
 
-. Wählen Sie die gewünschte Rolle für jeden Benutzer aus.
+. Wählen Sie für jeden Benutzer die gewünschte Rolle aus.
 
 
 Wählen Sie beim Hinzufügen eines neuen Benutzers einfach die gewünschte Rolle aus (normalerweise Benutzer oder Gast).
 
-Weitere Informationen zu Benutzerkonten und Rollen finden Sie in der Dokumentation zu Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["Benutzerrolle"].
+Weitere Informationen zu Benutzerkonten und Rollen finden Sie in den Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["Benutzerrolle"] Dokumentation.

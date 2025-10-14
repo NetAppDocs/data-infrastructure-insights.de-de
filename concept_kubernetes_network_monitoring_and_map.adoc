@@ -2,44 +2,44 @@
 sidebar: sidebar 
 permalink: concept_kubernetes_network_monitoring_and_map.html 
 keywords: service map, workloads, 
-summary: Präsentiert Abhängigkeiten und Datenflüsse von Kubernetes-Workloads und hebt Netzwerk- und Performance-Probleme hervor 
+summary: Präsentiert Kubernetes-Workload-Abhängigkeiten und -Flows und hebt Netzwerk- und Leistungsprobleme hervor 
 ---
-= Performance-Monitoring und -Zuordnung des Kubernetes-Netzwerks
+= Überwachung und Zuordnung der Kubernetes-Netzwerkleistung
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Die Kubernetes Network Performance Monitoring and Map Funktion vereinfacht die Fehlerbehebung durch die Zuordnung von Abhängigkeiten zwischen Services (auch Workloads genannt). Sie bietet Echtzeiteinblick in Latenzen und Anomalien bei der Netzwerk-Performance. So können Performance-Probleme erkannt werden, bevor sie sich auf die Benutzer auswirken. Diese Funktion hilft Unternehmen, durch Analyse und Prüfung des Kubernetes-Traffic-Flows die Gesamtkosten zu senken.
+Die Funktion „Netzwerkleistungsüberwachung und -zuordnung“ von Kubernetes vereinfacht die Fehlerbehebung durch die Zuordnung von Abhängigkeiten zwischen Diensten (auch Workloads genannt) und bietet Echtzeit-Einblicke in Latenzen und Anomalien der Netzwerkleistung, um Leistungsprobleme zu erkennen, bevor sie sich auf Benutzer auswirken.  Diese Funktion hilft Unternehmen, die Gesamtkosten durch die Analyse und Prüfung von Kubernetes-Verkehrsflüssen zu senken.
 
-Die wichtigsten Funktionen • die Workload-Map präsentiert Kubernetes-Workload-Abhängigkeiten und -Abläufe und hebt Netzwerk- und Performance-Probleme hervor. • Monitoring des Netzwerkverkehrs zwischen Kubernetes-Pods, Workloads und Nodes; Ermittlung der Quelle von Traffic- und Latenzproblemen • Senkung der Gesamtkosten durch Analyse des Ingress-, Egress-, Regions- und zonenübergreifenden Netzwerk-Traffics.
+Hauptfunktionen: • Die Workload Map stellt Kubernetes-Workload-Abhängigkeiten und -Flows dar und hebt Netzwerk- und Leistungsprobleme hervor.  • Überwachen Sie den Netzwerkverkehr zwischen Kubernetes-Pods, Workloads und Knoten; identifizieren Sie die Quelle von Verkehrs- und Latenzproblemen.  • Reduzieren Sie die Gesamtkosten, indem Sie den eingehenden, ausgehenden, regions- und zonenübergreifenden Netzwerkverkehr analysieren.
 
-image:workload-map-animated.gif["Beispiel Für Eine Workload-Zuordnung"]
+image:workload-map-animated.gif["Beispiel für eine Workload-Karte"]
 
 
 
 == Voraussetzungen
 
-Bevor Sie die Kubernetes-Netzwerk-Performance-Überwachung und -Zuordnung verwenden können, müssen Sie das  für die Aktivierung dieser Option konfiguriert habenlink:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"]. Aktivieren Sie während der Bereitstellung des Operators das Kontrollkästchen „Netzwerkleistung und Zuordnung“, um es zu aktivieren. Sie können diese Option auch aktivieren, indem Sie zu einer Kubernetes-Landing Page navigieren und „Implementierung ändern“ auswählen.
+Bevor Sie die Kubernetes-Netzwerkleistungsüberwachung und -karte verwenden können, müssen Sie Folgendes konfiguriert haben:link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"] um diese Option zu aktivieren.  Aktivieren Sie während der Bereitstellung des Operators das Kontrollkästchen „Netzwerkleistung und Karte“, um die Funktion zu aktivieren.  Sie können diese Option auch aktivieren, indem Sie zu einer Kubernetes-Landingpage navigieren und „Bereitstellung ändern“ auswählen.
 
-image:ServiceMap_NKMO_Deployment_Options.png["Auswahl der Option Karte beim NKMO-Stup"]
+image:ServiceMap_NKMO_Deployment_Options.png["Auswählen der Kartenoption während des NKMO-Stups"]
 
 
 
 == Monitore
 
-Die Workload Map verwendetlink:task_create_monitor.html["Monitore"], um Informationen abzuleiten. Data Infrastructure Insights bietet eine Reihe von Kubernetes-Standardmonitoren (beachten Sie, dass diese standardmäßig „_Paused_“ sein können. Sie können die gewünschten Monitore _Resume_ (d. h. aktivieren) oder benutzerdefinierte Monitore für kubernetes-Objekte erstellen, die auch von der Workload Map verwendet werden.
+Die Workload Map verwendetlink:task_create_monitor.html["Monitore"] um Informationen abzuleiten.  Data Infrastructure Insights bietet eine Reihe von standardmäßigen Kubernetes-Monitoren (beachten Sie, dass diese standardmäßig _angehalten_ sein können).  Sie können die gewünschten Monitore _fortsetzen_ (d. h. aktivieren) oder benutzerdefinierte Monitore für Kubernetes-Objekte erstellen, die auch von der Workload Map verwendet werden.
 
-Sie können für jeden der unten aufgeführten Objekttypen metrische Warnmeldungen zu Data Infrastructure Insights erstellen. Stellen Sie sicher, dass die Daten nach dem Standardobjekttyp gruppiert sind.
+Sie können Data Infrastructure Insights -Metrikwarnungen für alle der folgenden Objekttypen erstellen.  Stellen Sie sicher, dass die Daten nach dem Standardobjekttyp gruppiert sind.
 
-* kubernetes.Workload
-* kubernetes.demonset
+* kubernetes.workload
+* kubernetes.daemonset
 * kubernetes.deployment
 * kubernetes.cronjob
-* kubernetes.Job
-* kubernetes.Replicaset
+* kubernetes.job
+* kubernetes.replicaset
 * kubernetes.statefulset
-* kubernetes.POD
+* kubernetes.pod
 * kubernetes.network_traffic_l4
 
 
@@ -47,69 +47,69 @@ Sie können für jeden der unten aufgeführten Objekttypen metrische Warnmeldung
 
 == Die Karte
 
-Die Karte zeigt Services/Workloads und deren Beziehungen zueinander an. Pfeile zeigen die Verkehrsrichtung. Wenn Sie den Mauszeiger über einen Workload halten, werden zusammenfassende Informationen zu diesem Workload angezeigt, wie im folgenden Beispiel zu sehen ist:
+Die Karte zeigt Dienste/Workloads und ihre Beziehungen zueinander.  Pfeile zeigen die Verkehrsrichtung an.  Wenn Sie mit der Maus über eine Arbeitslast fahren, werden zusammenfassende Informationen zu dieser Arbeitslast angezeigt, wie Sie in diesem Beispiel sehen können:
 
-image:ServiceMap_Simple_Example.png["Beispiel eines Workload-Zuordnungs-Workloads"]
+image:ServiceMap_Simple_Example.png["Beispiel für eine Workload-Map-Arbeitslast"]
 
-Symbole innerhalb der Kreise stellen verschiedene Diensttypen dar. Beachten Sie, dass Symbole nur sichtbar sind, wenn die zugrunde liegenden Objekte haben <<workload-labels,Etiketten>>.
+Die Symbole in den Kreisen stellen unterschiedliche Servicetypen dar.  Beachten Sie, dass Symbole nur sichtbar sind, wenn die darunter liegenden Objekte<<workload-labels,Etiketten>> .
 
-image:ServiceMap_Icons.png["Erläuterung Der Servicesymbole"]
+image:ServiceMap_Icons.png["Servicesymbole erklärt"]
 
-Die Größe jedes Kreises gibt die Knotengröße an. Beachten Sie, dass diese Größen relativ sind. Ihr Browser-Zoom-Level oder die Bildschirmgröße kann sich auf die tatsächlichen Kreisgrößen auswirken. Auf die gleiche Weise gibt Ihnen der Linienstil einen schnellen Überblick über die Verbindungsgröße; fett leuchtete Linien sind stark frequentlicht, während die gestrichelten Linien weniger Verkehr aufweisen.
+Die Größe jedes Kreises gibt die Knotengröße an.  Beachten Sie, dass diese Größen relativ sind. Die Zoomstufe Ihres Browsers oder die Bildschirmgröße können die tatsächliche Kreisgröße beeinflussen.  Auf die gleiche Weise bietet Ihnen der Verkehrslinienstil einen Überblick über die Verbindungsgröße. Fette durchgezogene Linien stehen für hohen Verkehr, während hell gepunktete Linien für geringeren Verkehr stehen.
 
-Zahlen innerhalb der Kreise sind die Anzahl der externen Verbindungen, die derzeit vom Dienst verarbeitet werden.
+Die Zahlen in den Kreisen geben die Anzahl der externen Verbindungen an, die derzeit vom Dienst verarbeitet werden.
 
-image:ServiceMap_Node_and_Connection_Legend.png["Legende mit relativem Kreis (Knoten) und Verbindungsgrößen"]
+image:ServiceMap_Node_and_Connection_Legend.png["Legende mit den relativen Kreis- (Knoten-) und Verbindungsgrößen"]
 
 
 
-== Workload-Details und -Alarme
+== Arbeitslastdetails und Warnungen
 
-Farbige Kreise weisen auf eine Warnung auf Warn- oder kritische Ebene für die Arbeitslast hin. Bewegen Sie den Mauszeiger über den Kreis, um eine Zusammenfassung des Problems zu erhalten, oder klicken Sie auf den Kreis, um ein Slideout-Fenster mit mehr Details zu öffnen.
+Farbig angezeigte Kreise weisen auf eine Warnung oder einen Alarm der kritischen Stufe für die Arbeitslast hin.  Bewegen Sie den Mauszeiger über den Kreis, um eine Zusammenfassung des Problems anzuzeigen, oder klicken Sie auf den Kreis, um ein Slideout-Fenster mit weiteren Details zu öffnen.
 
-image:Workload_Map_Slideout_with_Alert.png["Details Zum Workload-Slideout Mit Warnungen"]
+image:Workload_Map_Slideout_with_Alert.png["Workload-Slideout-Details mit Warnungen"]
 
 
 
 == Suchen und Filtern
 
-Wie andere Funktionen von Data Infrastructure Insights können Sie auch hier ganz einfach Filter festlegen, die sich ganz auf die gewünschten Objekte oder Workload-Attribute konzentrieren.
+Wie bei anderen Data Infrastructure Insights Funktionen können Sie ganz einfach Filter festlegen, um sich auf die gewünschten spezifischen Objekte oder Workload-Attribute zu konzentrieren.
 
-image:Workload_Map_Filtering.png["Workload Map-Filterung"]
+image:Workload_Map_Filtering.png["Filtern der Workload-Karte"]
 
-Ebenso wird durch Eingabe einer Zeichenfolge im Feld _Find_ die übereinstimmenden Workloads hervorgehoben.
+Ebenso werden durch die Eingabe einer Zeichenfolge in das Feld _Suchen_ passende Workloads hervorgehoben.
 
-image:Workload_Map_Find_Highlighting.png["Durch Eingabe des Find-Felds werden die Workloads hervorgehoben"]
+image:Workload_Map_Find_Highlighting.png["Durch Eingabe in das Suchfeld werden Arbeitslasten hervorgehoben"]
 
 
 
-== Workload-Etiketten
+== Arbeitslastbezeichnungen
 
-Workload-Bezeichnungen sind erforderlich, wenn die Zuordnung die angezeigten Workload-Typen (d. h. die Kreissymbole) identifizieren soll. Die Bezeichnungen werden wie folgt abgeleitet:
+Arbeitslastbeschriftungen sind erforderlich, wenn die Karte die angezeigten Arbeitslasttypen identifizieren soll (d. h. die Kreissymbole).  Die Bezeichnungen werden wie folgt abgeleitet:
 
-* Name des Dienstes/der Anwendung, der allgemein ausgeführt wird
-* Wenn es sich bei der Quelle um einen Pod handelt:
+* Name des ausgeführten Dienstes/der ausgeführten Anwendung in allgemeinen Begriffen
+* Wenn die Quelle ein Pod ist:
 +
-** Die Bezeichnung leitet sich vom Workload-Etikett des Pods ab
-** Erwartetes Label für den Workload: App.kubernetes.io/component
-** Bezeichnung Name Referenz: https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/[]
+** Das Label wird vom Workload-Label des Pods abgeleitet
+** Erwartete Bezeichnung für die Arbeitslast: app.kubernetes.io/component
+** Referenz des Etikettennamens: https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/[]
 ** Empfohlene Etiketten:
 +
 *** Frontend
-*** Back-End
+*** Backend
 *** Datenbank
 *** Cache
 *** Warteschlange
-*** kafka
+*** Kafka
 
 
 
 
-* Wenn sich die Quelle außerhalb des kubernetes-Clusters befindet:
+* Wenn die Quelle außerhalb des Kubernetes-Clusters liegt:
 +
 ** Data Infrastructure Insights versucht, den DNS-aufgelösten Namen zu analysieren, um den Diensttyp zu extrahieren.
 +
-Beispiel: Mit einem DNS-aufgelösten Namen von _s3.eu-north-1.amazonaws.com_ wird der aufgelöste Name analysiert, um _s3_ als Diensttyp zu erhalten.
+Beispielsweise wird bei einem DNS-aufgelösten Namen von _s3.eu-north-1.amazonaws.com_ der aufgelöste Name analysiert, um _s3_ als Diensttyp zu erhalten.
 
 
 
@@ -117,16 +117,16 @@ Beispiel: Mit einem DNS-aufgelösten Namen von _s3.eu-north-1.amazonaws.com_ wir
 
 
 
-== So Geht Es Richtig
+== Tauchen Sie tief ein
 
-Mit einem Rechtsklick auf einen Workload erhalten Sie zusätzliche Optionen, um weitere Informationen zu erhalten. Von hier aus können Sie beispielsweise die Ansicht vergrößern, um die Verbindungen für diesen Workload anzuzeigen.
+Wenn Sie mit der rechten Maustaste auf eine Arbeitslast klicken, werden Ihnen zusätzliche Optionen zur weiteren Erkundung angezeigt.  Von hier aus können Sie beispielsweise hineinzoomen, um die Verbindungen für diese Arbeitslast anzuzeigen.
 
-image:Workload_Map_Zoom_Into_Connections.png["Workload Map Klicken Sie mit der rechten Maustaste auf Zoom, um die Verbindungen des Workloads anzuzeigen"]
+image:Workload_Map_Zoom_Into_Connections.png["Workload-Karte: Rechtsklick-Zoom, um die Verbindungen der Workload anzuzeigen"]
 
-Alternativ können Sie das Detailslideout-Panel öffnen, um die Registerkarte _Summary_, _Network_ oder _Pod & Storage_ direkt anzuzeigen.
+Oder Sie können das Detail-Slideout-Panel öffnen, um die Registerkarten „Zusammenfassung“, „Netzwerk“ oder „Pod & Speicher“ direkt anzuzeigen.
 
-image:Workload_Map_Detail_Network_Slideout.png["Beispiel Für Die Registerkarte „Detail Slide Out Network“"]
+image:Workload_Map_Detail_Network_Slideout.png["Beispiel für die Registerkarte „Netzwerk“ im Detail-Slideout"]
 
-Durch Auswahl von _Gehe zu Anlagenseite_ wird die detaillierte Zielseite für die Anlage für den Workload geöffnet.
+Wenn Sie abschließend „Zur Asset-Seite gehen“ auswählen, wird die detaillierte Asset-Landingpage für die Arbeitslast geöffnet.
 
-image:Workload_Map_Asset_Page.png["Workload-Asset-Seite"]
+image:Workload_Map_Asset_Page.png["Seite „Workload-Asset“"]

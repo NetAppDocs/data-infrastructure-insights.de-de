@@ -4,7 +4,7 @@ permalink: task_create_annotation.html
 keywords: annotations, annotation rules, manual annotations, 
 summary: So erstellen Sie eine Anmerkung. 
 ---
-= Mit Anmerkungen
+= Verwenden von Anmerkungen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,36 +14,36 @@ summary: So erstellen Sie eine Anmerkung.
 
 
 [role="lead"]
-Sie erstellen Anmerkungen und weisen diese den zu überwachten Assets zu. Anmerkungen sind Notizen, die Informationen zu einer Ressource wie zum Beispiel physischen Standort, Ende der Nutzungsdauer, Storage-Tier oder Volume Service Level enthalten.
+Sie erstellen Anmerkungen und weisen sie den von Ihnen überwachten Assets zu.  Anmerkungen sind Hinweise, die Informationen zu einem Asset liefern, beispielsweise den physischen Standort, das Ende der Lebensdauer, die Speicherebene oder die Volumen-Servicelevel.
 
 
 
 == Anmerkungen definieren
 
-Mithilfe von Annotationen können Sie benutzerdefinierte geschäftsspezifische Daten hinzufügen, die auf die Anforderungen Ihres Unternehmens an Assets abgestimmt sind. Während Data Infrastructure Insights standardmäßig mit Annotationen ausgestattet ist, beispielsweise Lebenszyklus von Assets (Geburtstag oder Ende der Nutzungsdauer), Aufbau oder Standort des Datacenters sowie Tiering, können Daten möglicherweise auf andere Weise angezeigt werden.
+Mithilfe von Anmerkungen können Sie den Assets benutzerdefinierte, geschäftsspezifische Daten hinzufügen, die Ihren Geschäftsanforderungen entsprechen.  Obwohl Data Infrastructure Insights eine Reihe von Standardanmerkungen bereitstellt, wie etwa den Lebenszyklus der Anlage (Geburtstag oder Ende der Lebensdauer), den Standort des Gebäudes oder Rechenzentrums und die Ebene, möchten Sie die Daten möglicherweise auf andere Weise anzeigen.
 
-Die Daten in benutzerdefinierten Annotationen ergänzen die bereits erfassten Gerätedaten wie Switch-Hersteller, Anzahl Ports und Leistungsstatistiken. Die mit Annotationen hinzugefügten Daten werden von Data Infrastructure Insights nicht erkannt.
+Die Daten in benutzerdefinierten Anmerkungen ergänzen bereits erfasste Gerätedaten, wie etwa Switch-Hersteller, Anzahl der Ports und Leistungsstatistiken.  Die Daten, die Sie mithilfe von Anmerkungen hinzufügen, werden von Data Infrastructure Insights nicht erkannt.
 
 .Bevor Sie beginnen
-* Geben Sie die Terminologie an, der die Umgebungsdaten zugeordnet werden müssen.
-* Geben Sie die Terminologie des Unternehmens an, der die Umgebungsdaten zugeordnet werden müssen.
-* Geben Sie alle standardmäßigen Anmerkungstypen an, die Sie verwenden können.
-* Ermitteln Sie, welche benutzerdefinierten Anmerkungen Sie erstellen müssen. Sie müssen die Anmerkung erstellen, bevor sie einem Asset zugewiesen werden kann.
+* Listen Sie alle Branchenterminologien auf, mit denen Umgebungsdaten verknüpft werden müssen.
+* Listen Sie die Unternehmensterminologie auf, mit der Umgebungsdaten verknüpft werden müssen.
+* Identifizieren Sie alle Standardanmerkungstypen, die Sie möglicherweise verwenden können.
+* Ermitteln Sie, welche benutzerdefinierten Anmerkungen Sie erstellen müssen.  Sie müssen die Anmerkung erstellen, bevor sie einem Asset zugewiesen werden kann.
 
 
 Führen Sie die folgenden Schritte aus, um eine Anmerkung zu erstellen.
 
 .Schritte
-. Klicken Sie im Menü Data Infrastructure Insights auf *Observability > Enrich > Annotationen*
+. Klicken Sie im Menü „Data Infrastructure Insights“ auf *Observability > Enrich > Annotations*
 . Klicken Sie auf *+ Anmerkung*, um eine neue Anmerkung zu erstellen.
 . Geben Sie einen Namen, eine Beschreibung und einen Typ für die neue Anmerkung ein.
 +
-Geben Sie beispielsweise Folgendes ein, um eine Textbeschriftung zu erstellen, die den physischen Speicherort eines Assets in Data Center 4 definiert:
+Geben Sie beispielsweise Folgendes ein, um eine Textanmerkung zu erstellen, die den physischen Standort eines Assets im Rechenzentrum 4 definiert:
 
 +
-** Geben Sie einen Namen für die Anmerkung ein, z. B. „Standort“.
-** Geben Sie eine Beschreibung der Beschreibung der Anmerkung ein, z. B. „physischer Standort ist Datacenter 4“.
-** Geben Sie den 'Typ' der Anmerkung ein, wie z. B. „Text“.
+** Geben Sie einen Namen für die Anmerkung ein, beispielsweise „Standort“.
+** Geben Sie eine Beschreibung der Anmerkung ein, z. B. „Physischer Standort ist Rechenzentrum 4“.
+** Geben Sie den „Typ“ der Anmerkung ein, beispielsweise „Text“.
 
 
 
@@ -52,71 +52,71 @@ Geben Sie beispielsweise Folgendes ein, um eine Textbeschriftung zu erstellen, d
 
 == Manuelles Zuweisen von Anmerkungen zu Assets
 
-Durch das Zuweisen von Annotationen zu Assets können Sie Assets auf eine für Ihr Unternehmen relevante Weise sortieren, gruppieren und protokollieren. Sie können Assets eines bestimmten Typs automatisch mithilfe von Anmerkungsregeln Anmerkungen zuweisen. Sie können jedoch einem einzelnen Asset über die entsprechende Asset-Seite Anmerkungen zuweisen.
+Durch die Zuweisung von Anmerkungen zu Anlagen können Sie Anlagen auf für Ihr Unternehmen relevante Weise sortieren, gruppieren und darüber berichten.  Obwohl Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen zu Assets eines bestimmten Typs zuweisen können, können Sie Anmerkungen zu einem einzelnen Asset über die Asset-Seite zuweisen.
 
 .Bevor Sie beginnen
-* Sie müssen die Anmerkung erstellt haben, die Sie zuweisen möchten.
+* Sie müssen die Anmerkung, die Sie zuweisen möchten, erstellt haben.
 
 
 .Schritte
 . Melden Sie sich bei Ihrer Data Infrastructure Insights Umgebung an.
-. Suchen Sie das Element, auf das Sie die Anmerkung anwenden möchten.
+. Suchen Sie das Asset, auf das Sie die Anmerkung anwenden möchten.
 +
-** Sie können Assets suchen, indem Sie eine Abfrage durchführen, aus einem Dassoard-Widget auswählen oder suchen. Wenn Sie die gewünschte Ressource gefunden haben, klicken Sie auf den Link, um die Landing Page der Ressource zu öffnen.
+** Sie können Assets durch Abfragen, Auswählen aus einem Dashboard-Widget oder Suchen finden.  Wenn Sie das gewünschte Asset gefunden haben, klicken Sie auf den Link, um die Zielseite des Assets zu öffnen.
 
 
-. Klicken Sie auf der Seite Asset im Abschnitt Benutzerdaten auf *+ Anmerkung*.
-. Das Dialogfeld Anmerkung hinzufügen wird angezeigt.
+. Klicken Sie auf der Asset-Seite im Abschnitt „Benutzerdaten“ auf *+ Anmerkung*.
+. Das Dialogfeld „Anmerkung hinzufügen“ wird angezeigt.
 . Wählen Sie eine Anmerkung aus der Liste aus.
-. Klicken Sie auf „Wert“ und führen Sie eine der folgenden Aktionen aus, je nachdem, welche Anmerkungstypen Sie ausgewählt haben:
+. Klicken Sie auf „Wert“ und führen Sie je nach ausgewähltem Anmerkungstyp einen der folgenden Schritte aus:
 +
-** Wenn der Anmerkungstyp Liste, Datum oder Boolean ist, wählen Sie einen Wert aus der Liste aus.
-** Wenn es sich bei dem Anmerkungstyp um Text handelt, geben Sie einen Wert ein.
+** Wenn der Anmerkungstyp „Liste“, „Datum“ oder „Boolesch“ ist, wählen Sie einen Wert aus der Liste aus.
+** Wenn der Anmerkungstyp Text ist, geben Sie einen Wert ein.
 
 
-. Klicken Sie Auf *Speichern*.
+. Klicken Sie auf *Speichern*.
 
 
-Wenn Sie den Wert der Anmerkung nach der Zuweisung ändern möchten, klicken Sie auf das Anmerkungsfeld, und wählen Sie einen anderen Wert aus. Wenn die Anmerkung vom Listentyp ist, für den die Option _neue Werte hinzufügen auf der Fly_ ausgewählt ist, können Sie zusätzlich zur Auswahl eines vorhandenen Werts einen neuen Wert eingeben.
-
-
-
-== Anmerkungen mit Anmerkungsregeln zuweisen
-
-Um Assets anhand von Kriterien, die Sie definieren, automatisch Anmerkungen zuzuweisen, konfigurieren Sie Anmerkungsregeln. Data Infrastructure Insights weist Assets anhand dieser Regeln die Annotationen zu. Data Infrastructure Insights bietet außerdem zwei standardmäßige Anmerkungsregeln, die Sie an Ihre Anforderungen anpassen oder entfernen können, wenn Sie sie nicht verwenden möchten.
+Wenn Sie den Wert der Anmerkung nach der Zuweisung ändern möchten, klicken Sie auf das Anmerkungsfeld und wählen Sie einen anderen Wert aus.  Wenn die Anmerkung vom Typ Liste ist und die Option „Neue Werte spontan hinzufügen“ ausgewählt ist, können Sie zusätzlich zur Auswahl eines vorhandenen Werts einen neuen Wert eingeben.
 
 
 
-=== Anmerkungsregeln werden erstellt
+== Zuweisen von Anmerkungen mithilfe von Anmerkungsregeln
 
-Alternativ zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden. Wenn Insight die Anmerkungsregeln auswertet, haben Annotationen, die manuell auf den Seiten einzelner Assets festgelegt wurden, Vorrang vor regelbasierten Annotationen.
+Um Assets basierend auf von Ihnen definierten Kriterien automatisch Anmerkungen zuzuweisen, konfigurieren Sie Anmerkungsregeln.  Data Infrastructure Insights weist die Anmerkungen den Assets basierend auf diesen Regeln zu.  Data Infrastructure Insights bietet außerdem zwei Standardanmerkungsregeln, die Sie Ihren Anforderungen entsprechend ändern oder entfernen können, wenn Sie sie nicht verwenden möchten.
+
+
+
+=== Erstellen von Anmerkungsregeln
+
+Als Alternative zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden.  Manuell auf einzelnen Asset-Seiten festgelegte Anmerkungen haben Vorrang vor regelbasierten Anmerkungen, wenn Insight die Anmerkungsregeln auswertet.
 
 .Bevor Sie beginnen
 Sie müssen eine Abfrage für die Anmerkungsregel erstellt haben.
 
-.Über diese Aufgabe
-Sie können zwar die Anmerkungstypen bearbeiten, während Sie die Regeln erstellen, aber Sie sollten die Typen bereits im Voraus definiert haben.
+.Informationen zu diesem Vorgang
+Obwohl Sie die Anmerkungstypen beim Erstellen der Regeln bearbeiten können, sollten Sie die Typen vorher definiert haben.
 
 .Schritte
 . Klicken Sie auf *Verwalten > Anmerkungsregeln*
 +
-Auf der Seite Anmerkungsregeln wird die Liste der vorhandenen Anmerkungsregeln angezeigt.
+Auf der Seite „Annotationsregeln“ wird die Liste der vorhandenen Annotationsregeln angezeigt.
 
-. Klicken Sie Auf *+ Hinzufügen*.
-. Gehen Sie wie folgt vor:
+. Klicken Sie auf *+ Hinzufügen*.
+. Gehen Sie folgendermaßen vor:
 +
 .. Geben Sie im Feld *Name* einen eindeutigen Namen ein, der die Regel beschreibt.
 +
-Dieser Name wird auf der Seite Anmerkungsregeln angezeigt.
+Dieser Name wird auf der Seite „Annotationsregeln“ angezeigt.
 
-.. Klicken Sie auf *Query* und wählen Sie die Abfrage aus, mit der die Anmerkung auf Assets angewendet wird.
-.. Klicken Sie auf *Anmerkung* und wählen Sie die Beschriftung aus, die Sie anwenden möchten.
+.. Klicken Sie auf *Abfrage* und wählen Sie die Abfrage aus, die zum Anwenden der Anmerkung auf Assets verwendet wird.
+.. Klicken Sie auf *Anmerkung* und wählen Sie die Anmerkung aus, die Sie anwenden möchten.
 .. Klicken Sie auf *Wert* und wählen Sie einen Wert für die Anmerkung aus.
 +
-Wenn Sie beispielsweise als Anmerkung Geburtstag auswählen, geben Sie ein Datum für den Wert an.
+Wenn Sie beispielsweise „Geburtstag“ als Anmerkung wählen, geben Sie ein Datum für den Wert an.
 
-.. Klicken Sie Auf *Speichern*
-.. Klicken Sie auf *Alle Regeln*, wenn Sie alle Regeln sofort ausführen möchten; andernfalls werden die Regeln in einem regelmäßigen geplanten Intervall ausgeführt.
+.. Klicken Sie auf *Speichern*
+.. Klicken Sie auf *Alle Regeln ausführen*, wenn Sie alle Regeln sofort ausführen möchten. Andernfalls werden die Regeln in regelmäßigen Abständen ausgeführt.
 
 
 

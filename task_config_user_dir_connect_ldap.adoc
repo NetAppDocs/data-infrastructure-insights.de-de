@@ -2,26 +2,26 @@
 sidebar: sidebar 
 permalink: task_config_user_dir_connect_ldap.html 
 keywords: collector, configure, LDAP, Active Directory, cloud secure 
-summary: Konfigurieren des LDAP-Benutzerverzeichnissammler für die Workload-Sicherheit 
+summary: Konfigurieren des Workload Security LDAP User Directory Collector 
 ---
-= Konfigurieren eines LDAP Directory Server Collectors
+= Konfigurieren eines LDAP-Verzeichnisserver-Collectors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie konfigurieren die Workload Security so, dass Benutzerattribute von LDAP Directory-Servern erfasst werden.
+Sie konfigurieren Workload Security, um Benutzerattribute von LDAP-Verzeichnisservern zu erfassen.
 
 .Bevor Sie beginnen
-* Sie müssen ein Data Infrastructure Insights Administrator oder Account Owner sein, um diese Aufgabe ausführen zu können.
-* Sie müssen über die IP-Adresse des Servers verfügen, der den LDAP-Directory-Server hostet.
-* Ein Agent muss konfiguriert werden, bevor Sie einen LDAP-Directory-Konnektor konfigurieren.
+* Sie müssen ein Data Infrastructure Insights Administrator oder Kontoinhaber sein, um diese Aufgabe auszuführen.
+* Sie müssen über die IP-Adresse des Servers verfügen, auf dem der LDAP-Verzeichnisserver gehostet wird.
+* Bevor Sie einen LDAP-Verzeichnis-Connector konfigurieren, muss ein Agent konfiguriert werden.
 
 
-.Schritte zum Konfigurieren eines Benutzerverzeichnissammler
-. Klicken Sie im Menü Workload-Sicherheit auf: *Collectors > User Directory Collectors > + User Directory Collector* und wählen Sie *LDAP Directory Server*
+.Schritte zum Konfigurieren eines Benutzerverzeichnis-Collectors
+. Klicken Sie im Menü „Workload Security“ auf: *Collectors > User Directory Collectors > + User Directory Collector* und wählen Sie *LDAP Directory Server* aus.
 +
-Das System zeigt den Bildschirm Benutzerverzeichnis hinzufügen an.
+Das System zeigt den Bildschirm „Benutzerverzeichnis hinzufügen“ an.
 
 
 
@@ -34,100 +34,100 @@ Konfigurieren Sie den User Directory Collector, indem Sie die erforderlichen Dat
 | Name | Beschreibung 
 
 
-| Name | Eindeutiger Name für das Benutzerverzeichnis. Beispiel: _GlobalLDAPCollector_ 
+| Name | Eindeutiger Name für das Benutzerverzeichnis.  Zum Beispiel _GlobalLDAPCollector_ 
 
 
 | Agent | Wählen Sie einen konfigurierten Agenten aus der Liste aus 
 
 
-| Server-IP/Domain-Name | IP-Adresse oder vollqualifizierter Domain-Name (FQDN) des Servers, der den LDAP-Verzeichnisserver hostet 
+| Server-IP/Domänenname | IP-Adresse oder vollqualifizierter Domänenname (FQDN) des Servers, auf dem der LDAP-Verzeichnisserver gehostet wird 
 
 
-| Suchbasis | Search Base des LDAP-Servers Search Base ermöglicht die beiden folgenden Formate: _X. y.y.z_ => Direkter Domänenname, wie Sie ihn auf Ihrer SVM haben. [Beispiel: hq.companyname.com] _DC=x,DC=y,DC=z_ => relative Distinguished Names [Beispiel: DC=hq,DC= commeryname,DC=com] oder Sie können wie folgt angeben: _OU=Engineering,DC=hq,DC= commeryname,DC=com_ [nach spezifischer OU-Technik filtern] _CN=username,OU=Engineering,DC=comcompyname, DC=netapp, DC=com_ [um nur bestimmte Benutzer mit <username> von OU <Engineering> zu bekommen] _CN=Acrobat Nutzer,CN=Benutzer,DC=hq,DC=commeryname,DC=alle Benutzer innerhalb der Organisation zu bekommen, die innerhalb von Boston, C=S=e, 
+| Suchbasis | Suchbasis des LDAP-Servers. Suchbasis erlaubt die beiden folgenden Formate: _x.y.z_ => direkter Domänenname, wie Sie ihn auf Ihrem SVM haben.  [Beispiel: hq.firmenname.com] _DC=x,DC=y,DC=z_ => Relative Distinguished Names [Beispiel: DC=hq,DC= Firmenname,DC=com] Oder Sie können Folgendes angeben: _OU=Engineering,DC=hq,DC= Firmenname,DC=com_ [um nach einer bestimmten OU Engineering zu filtern] _CN=Benutzername,OU=Engineering,DC=Firmenname, DC=NetApp, DC=com_ [um nur bestimmte Benutzer mit <Benutzername> aus der OU <Engineering> abzurufen] _CN=Acrobat-Benutzer,CN=Benutzer,DC=hq,DC=Firmenname,DC=com,O= Firmenname,L=Boston,S=MA,C=US_ [um alle Acrobat-Benutzer innerhalb der Benutzer in dieser Organisation abzurufen] 
 
 
-| DN binden | Benutzer erlaubt, das Verzeichnis zu durchsuchen. Beispiel: uid=ldapuser,cn=users,cn=Accounts,dc=Domain,dc=companyname,dc=com uid=john,cn=users,cn=Accounts,dc=dorp,dc=company,dc=com for a user john@dorp.company.com. dorp.company.com 
+| Bind-DN | Der Benutzer darf das Verzeichnis durchsuchen.  Beispiel: uid=ldapuser,cn=users,cn=accounts,dc=domain,dc=companyname,dc=com uid=john,cn=users,cn=accounts,dc=dorp,dc=company,dc=com für einen Benutzer john@dorp.company.com. dorp.company.com 
 
 
-| --Konten | --user 
+| --accounts | --users 
 
 
-| --john | --anna 
+| --John | --anna 
 
 
-| Kennwort BINDEN | Kennwort des Verzeichnisservers (d. h. Kennwort für in Bind DN verwendeten Benutzernamen) 
+| BIND-Passwort | Kennwort für den Verzeichnisserver (d. h. Kennwort für den im Bind-DN verwendeten Benutzernamen) 
 
 
-| Protokoll | ldap, ldaps, ldap-Start-tls 
+| Protokoll | ldap, ldaps, ldap-start-tls 
 
 
-| Ports | Wählen Sie Port 
+| Häfen | Port auswählen 
 |===
-Geben Sie die folgenden Directory Server-erforderlichen Attribute ein, wenn die Standardattributnamen im LDAP Directory-Server geändert wurden. Meistens werden diese Attributnamen in LDAP Directory Server geändert, in diesem Fall können Sie einfach mit dem Standardattributnamen fortfahren.
+Geben Sie die folgenden für den Verzeichnisserver erforderlichen Attribute ein, wenn die Standardattributnamen im LDAP-Verzeichnisserver geändert wurden.  Meistens werden diese Attributnamen im LDAP-Verzeichnisserver _nicht_ geändert. In diesem Fall können Sie einfach mit dem Standardattributnamen fortfahren.
 
 [cols="2*"]
 |===
 
 
-| Merkmale | Attributname im Verzeichnisserver 
+| Eigenschaften | Attributname im Verzeichnisserver 
 
 
 | Anzeigename | Name 
 
 
-| UNIXID | Nummer der Uidnummer 
+| UNIXID | UID-Nummer 
 
 
-| Benutzername | uid 
+| Benutzername | UID 
 |===
-Klicken Sie auf Optionale Attribute einschließen, um eines der folgenden Attribute hinzuzufügen:
+Klicken Sie auf „Optionale Attribute einschließen“, um die folgenden Attribute hinzuzufügen:
 
 [cols="2*"]
 |===
 
 
-| Merkmale | Attributname im Verzeichnisserver 
+| Eigenschaften | Attributname im Verzeichnisserver 
 
 
-| E-Mail-Adresse | E-Mail 
+| E-Mail-Adresse | mail 
 
 
-| Telefonnummer | Telefonnummerierung 
+| Telefonnummer | Telefonnummer 
 
 
 | Rolle | Titel 
 
 
-| Land | Co 
+| Land | co 
 
 
-| Status | Bundesland 
+| Status | Zustand 
 
 
-| Abteilung | Abteilnummer 
+| Abteilung | Abteilungsnummer 
 
 
 | Foto | Foto 
 
 
-| ManagerDN | manager an 
+| ManagerDN | Manager 
 
 
-| Gruppen | Mitgliedschafts 
+| Gruppen | Mitglied von 
 |===
 
 
-== Die Konfiguration Des Benutzerverzeichnissammler Wird Getestet
+== Testen der Konfiguration Ihres Benutzerverzeichnis-Collectors
 
 Sie können LDAP-Benutzerberechtigungen und Attributdefinitionen mithilfe der folgenden Verfahren validieren:
 
-* Verwenden Sie den folgenden Befehl, um die Berechtigung für LDAP-Benutzer für die Workload-Sicherheit zu validieren:
+* Verwenden Sie den folgenden Befehl, um die LDAP-Benutzerberechtigung für Workload Security zu validieren:
 +
  ldapsearch -D "uid=john ,cn=users,cn=accounts,dc=dorp,dc=company,dc=com" -W -x -LLL -o ldif-wrap=no -b "cn=accounts,dc=dorp,dc=company,dc=com" -H ldap://vmwipaapp08.dorp.company.com
-* Verwenden Sie den LDAP Explorer, um in einer LDAP-Datenbank zu navigieren, Objekteigenschaften und -Attribute anzuzeigen, Berechtigungen anzuzeigen, das Schema eines Objekts anzuzeigen und komplexe Suchen auszuführen, die Sie speichern und erneut ausführen können.
+* Verwenden Sie den LDAP Explorer, um in einer LDAP-Datenbank zu navigieren, Objekteigenschaften und -attribute anzuzeigen, Berechtigungen anzuzeigen, das Schema eines Objekts anzuzeigen und komplexe Suchvorgänge auszuführen, die Sie speichern und erneut ausführen können.
 +
-** Installieren Sie LDAP Explorer (http://ldaptool.sourceforge.net/[]) oder Java LDAP Explorer (http://jxplorer.org/[]) auf jedem Windows-Rechner, der sich mit dem LDAP-Server verbinden kann.
-** Stellen Sie eine Verbindung mit dem LDAP-Server unter Verwendung des Benutzernamens/Kennworts des LDAP-Verzeichnisservers her.
+** Installieren Sie den LDAP Explorer(http://ldaptool.sourceforge.net/[] ) oder Java LDAP Explorer(http://jxplorer.org/[] ) auf jedem Windows-Computer, der eine Verbindung zum LDAP-Server herstellen kann.
+** Stellen Sie mit dem Benutzernamen/Passwort des LDAP-Verzeichnisservers eine Verbindung zum LDAP-Server her.
 
 
 
@@ -136,59 +136,59 @@ image:CloudSecure_LDAPDialog.png["LDAP-Verbindung"]
 
 
 
-== Fehlerbehebung bei LDAP Directory Collector-Konfigurationsfehlern
+== Fehlerbehebung bei Konfigurationsfehlern des LDAP-Verzeichnissammlers
 
-In der folgenden Tabelle werden bekannte Probleme und Auflösungen beschrieben, die während der Kollektor-Konfiguration auftreten können:
+In der folgenden Tabelle werden bekannte Probleme und Lösungen beschrieben, die während der Collector-Konfiguration auftreten können:
 
 [cols="2*"]
 |===
 | Problem: | Auflösung: 
 
 
-| Das Hinzufügen eines LDAP-Directory-Connectors führt zum Status ‘Fehler’. Fehler sagt, „ungültige Anmeldeinformationen für LDAP-Server bereitgestellt“. | Falscher Bind-DN oder Bind-Kennwort oder die Suchbasis angegeben. Bearbeiten Sie die richtigen Informationen, und geben Sie sie an. 
+| Das Hinzufügen eines LDAP-Verzeichniskonnektors führt zum Status „Fehler“.  Der Fehler lautet: „Ungültige Anmeldeinformationen für LDAP-Server angegeben.“ | Falscher Bind-DN oder falsches Bind-Passwort oder falsche Suchbasis angegeben.  Bearbeiten und geben Sie die richtigen Informationen ein. 
 
 
-| Das Hinzufügen eines LDAP-Directory-Connectors führt zum Status ‘Fehler’. Fehler sagt: „Das Objekt, das DN=DC=hq,DC=Domainname,DC=com als Waldname angegeben hat, konnte nicht abgerufen werden.“ | Falsche Suchbasis angegeben. Bearbeiten und geben Sie den richtigen Namen für die Gesamtstruktur an. 
+| Das Hinzufügen eines LDAP-Verzeichniskonnektors führt zum Status „Fehler“.  Der Fehler lautet: „Das Objekt, das DN=DC=hq,DC=domainname,DC=com entspricht und als Gesamtstrukturname angegeben wurde, konnte nicht abgerufen werden.“ | Falsche Suchbasis angegeben.  Bearbeiten Sie den Vorgang und geben Sie den richtigen Gesamtstrukturnamen ein. 
 
 
-| Die optionalen Attribute des Domänenbenutzers werden auf der Seite „Workload Security User Profile“ nicht angezeigt. | Dies ist wahrscheinlich auf eine Diskrepanz zwischen den Namen der in CloudSecure hinzugefügten optionalen Attribute und den tatsächlichen Attributnamen in Active Directory zurückzuführen. Bei Feldern wird die Groß-/Kleinschreibung beachtet. Bearbeiten und geben Sie die korrekten optionalen Attributnamen an. 
+| Die optionalen Attribute des Domänenbenutzers werden auf der Workload Security-Benutzerprofilseite nicht angezeigt. | Dies liegt wahrscheinlich an einer Nichtübereinstimmung zwischen den Namen der in CloudSecure hinzugefügten optionalen Attribute und den tatsächlichen Attributnamen in Active Directory.  Bei den Feldern wird zwischen Groß- und Kleinschreibung unterschieden.  Bearbeiten Sie die Datei und geben Sie die korrekten optionalen Attributnamen an. 
 
 
-| Datensammler im Fehlerzustand mit „LDAP-Benutzer konnten nicht abgerufen werden. Grund für Fehler: Verbindung auf dem Server nicht möglich, Verbindung ist Null“ | Starten Sie den Kollektor neu, indem Sie auf die Schaltfläche _Neustart_ klicken. 
+| Datensammler im Fehlerzustand mit „Fehler beim Abrufen der LDAP-Benutzer.“  Grund für den Fehler: „Verbindung zum Server nicht möglich, die Verbindung ist null“ | Starten Sie den Collector neu, indem Sie auf die Schaltfläche _Neustart_ klicken. 
 
 
-| Das Hinzufügen eines LDAP-Directory-Connectors führt zum Status ‘Fehler’. | Stellen Sie sicher, dass Sie für die erforderlichen Felder gültige Werte angegeben haben (Server, Forest-Name, BIND-DN, BIND-Password). Stellen Sie sicher, dass die Eingabe von Bind-DN immer als uid=ldapuser,cn=users,cn=Accounts,dc=Domain,dc=commeryname,dc=com angegeben ist. 
+| Das Hinzufügen eines LDAP-Verzeichniskonnektors führt zum Status „Fehler“. | Stellen Sie sicher, dass Sie für die erforderlichen Felder (Server, Gesamtstrukturname, Bind-DN, Bind-Passwort) gültige Werte angegeben haben.  Stellen Sie sicher, dass die Bind-DN-Eingabe immer als uid=ldapuser,cn=users,cn=accounts,dc=domain,dc=companyname,dc=com bereitgestellt wird. 
 
 
-| Das Hinzufügen eines LDAP-Directory-Connectors führt zum ‘reVERSUCH’-Status. Zeigt Fehler „Fehler bei der Ermittlung des Zustands des Kollektors und damit erneuter Versuch“ an. | Stellen Sie sicher, dass die richtige Server-IP und die richtige Suchbasis bereitgestellt sind //// 
+| Das Hinzufügen eines LDAP-Verzeichniskonnektors führt zum Status „WIEDERHOLT“.  Zeigt den Fehler „Fehler beim Ermitteln des Zustands des Collectors, daher erneuter Versuch“ an. | Stellen Sie sicher, dass die richtige Server-IP und Suchbasis angegeben ist //// 
 
 
-| Beim Hinzufügen des LDAP-Verzeichnisses wird der folgende Fehler angezeigt: „Fehler bei der Ermittlung des Zustands des Collectors innerhalb von 2 Wiederholungen, versuchen Sie erneut, den Collector neu zu starten (Fehlercode: AGENT008)“ | Stellen Sie sicher, dass die Server-IP-Adresse und die Suchbasis korrekt sind 
+| Beim Hinzufügen des LDAP-Verzeichnisses wird der folgende Fehler angezeigt: „Der Zustand des Collectors konnte innerhalb von 2 Versuchen nicht ermittelt werden. Versuchen Sie, den Collector erneut neu zu starten (Fehlercode: AGENT008)“ | Stellen Sie sicher, dass die richtige Server-IP und Suchbasis angegeben ist 
 
 
-| Das Hinzufügen eines LDAP-Directory-Connectors führt zum ‘reVERSUCH’-Status. Zeigt den Fehler „kann den Status des Collectors nicht definieren,Grund TCP Befehl [Connect(localhost:35012,None,List(),some(,seconds),true)] fehlgeschlagen, weil java.net.ConnectionException:Connection abgelehnt wurde.“ | Für den AD-Server wurde eine falsche IP oder ein falscher FQDN bereitgestellt. Bearbeiten Sie die korrekte IP-Adresse oder den korrekten FQDN. //// 
+| Das Hinzufügen eines LDAP-Verzeichniskonnektors führt zum Status „WIEDERHOLT“.  Zeigt den Fehler „Der Status des Collectors konnte nicht definiert werden, Grund: Der TCP-Befehl [Connect(localhost:35012,None,List(),Some(,seconds),true)] ist aufgrund von java.net.ConnectionException:Connection refused fehlgeschlagen.“ | Für den AD-Server wurde eine falsche IP-Adresse oder ein falscher FQDN angegeben.  Bearbeiten und geben Sie die richtige IP-Adresse oder den richtigen FQDN ein.  //// 
 
 
-| Das Hinzufügen eines LDAP-Directory-Connectors führt zum Status ‘Fehler’. Fehler sagt: „LDAP-Verbindung konnte nicht hergestellt werden“. | Für den LDAP-Server wurde eine falsche IP oder ein falscher FQDN bereitgestellt. Bearbeiten Sie die korrekte IP-Adresse oder den korrekten FQDN. Oder falscher Wert für den angegebenen Port. Versuchen Sie, die Standardanschlusswerte oder die korrekte Portnummer für den LDAP-Server zu verwenden. 
+| Das Hinzufügen eines LDAP-Verzeichniskonnektors führt zum Status „Fehler“.  Der Fehler lautet: „LDAP-Verbindung konnte nicht hergestellt werden.“ | Für den LDAP-Server wurde eine falsche IP-Adresse oder ein falscher FQDN angegeben.  Bearbeiten und geben Sie die richtige IP-Adresse oder den richtigen FQDN ein.  Oder falscher Wert für den angegebenen Port.  Versuchen Sie, die Standard-Portwerte oder die richtige Portnummer für den LDAP-Server zu verwenden. 
 
 
-| Das Hinzufügen eines LDAP-Directory-Connectors führt zum Status ‘Fehler’. Fehler sagt, “die Einstellungen konnten nicht geladen werden. Grund: Datasource Configuration hat einen Fehler. Spezifischer Grund: /Connector/conf/Application.conf: 70: ldap.ldap-Port hat type STRING statt NUMBER“ | Falscher Wert für Port angegeben. Versuchen Sie, die Standardanschlusswerte oder die korrekte Portnummer für den AD-Server zu verwenden. 
+| Das Hinzufügen eines LDAP-Verzeichniskonnektors führt zum Status „Fehler“.  Der Fehler lautet: „Die Einstellungen konnten nicht geladen werden.“  Grund: Die Datenquellenkonfiguration weist einen Fehler auf.  Spezifischer Grund: /connector/conf/application.conf: 70: ldap.ldap-port hat den Typ STRING statt NUMBER“ | Falscher Wert für Port angegeben.  Versuchen Sie, die Standard-Portwerte oder die richtige Portnummer für den AD-Server zu verwenden. 
 
 
-| Ich begann mit den obligatorischen Attributen, und es funktionierte. Nach dem Hinzufügen der optionalen Attribute werden die Daten der optionalen Attribute nicht aus AD abgerufen. | Dies ist wahrscheinlich auf eine Diskrepanz zwischen den in CloudSecure hinzugefügten optionalen Attributen und den tatsächlichen Attributnamen in Active Directory zurückzuführen. Bearbeiten und geben Sie den korrekten obligatorischen oder optionalen Attributnamen an. 
+| Ich habe mit den obligatorischen Attributen begonnen und es hat funktioniert.  Nach dem Hinzufügen der optionalen Attribute werden die Daten der optionalen Attribute nicht aus AD abgerufen. | Dies liegt wahrscheinlich an einer Nichtübereinstimmung zwischen den in CloudSecure hinzugefügten optionalen Attributen und den tatsächlichen Attributnamen in Active Directory.  Bearbeiten Sie den korrekten obligatorischen oder optionalen Attributnamen und geben Sie ihn an. 
 
 
-| Wann erfolgt die LDAP-Synchronisierung nach dem Neustart des Collectors? | Die LDAP-Synchronisierung erfolgt unmittelbar nach dem Neustart des Collectors. Es dauert etwa 15 Minuten, bis Benutzerdaten von etwa 300.000 Benutzern abgerufen wurden. Und wird automatisch alle 12 Stunden aktualisiert. 
+| Wann erfolgt die LDAP-Synchronisierung nach dem Neustart des Collectors? | Die LDAP-Synchronisierung erfolgt unmittelbar nach dem Neustart des Collectors.  Das Abrufen der Benutzerdaten von etwa 300.000 Benutzern dauert etwa 15 Minuten und wird alle 12 Stunden automatisch aktualisiert. 
 
 
-| Benutzerdaten werden von LDAP zu CloudSecure synchronisiert. Wann werden die Daten gelöscht? | Benutzerdaten werden 13 Monate lang aufbewahrt, wenn keine Aktualisierung erfolgt. Wenn der Mandant gelöscht wird, werden die Daten gelöscht. 
+| Benutzerdaten werden von LDAP mit CloudSecure synchronisiert.  Wann werden die Daten gelöscht? | Benutzerdaten werden 13 Monate lang gespeichert, wenn keine Aktualisierung erfolgt.  Bei Löschung des Mandanten werden auch die Daten gelöscht. 
 
 
-| Der LDAP-Directory-Konnektor führt zum ‘Fehler’-Status. „Der Stecker befindet sich im Fehlerzustand. Dienstname: UsersLdap. Grund für Fehler: Abrufen von LDAP-Benutzern fehlgeschlagen. Grund für Fehlschlag: 80090308: LdapErr: DSID-0C090453, Kommentar: ACkeptSecurityContext error, Data 52e, v3839“ | Falscher Waldname angegeben. Siehe oben, wie Sie den richtigen Namen für die Gesamtstruktur angeben. 
+| Der LDAP-Verzeichnis-Connector führt zum Status „Fehler“.  „Der Connector befindet sich im Fehlerzustand.  Dienstname: usersLdap.  Grund für den Fehler: LDAP-Benutzer konnten nicht abgerufen werden.  Grund für den Fehler: 80090308: LdapErr: DSID-0C090453, Kommentar: AcceptSecurityContext-Fehler, Daten 52e, v3839" | Falscher Gesamtstrukturname angegeben.  Informationen zum Angeben des richtigen Gesamtstrukturnamens finden Sie oben. 
 
 
-| Die Telefonnummer wird nicht auf der Benutzerprofilseite ausgefüllt. | Dies ist wahrscheinlich auf ein Problem bei der Attributzuordnung mit dem Active Directory zurückzuführen. 1. Bearbeiten Sie den bestimmten Active Directory-Collector, der die Benutzerinformationen aus Active Directory abruft. 2. Hinweis unter den optionalen Attributen gibt es einen Feldnamen „Telefonnummer“, der dem Active Directory-Attribut ‘Telefonnummer’ zugeordnet ist. 4. Verwenden Sie jetzt das oben beschriebene Active Directory Explorer-Tool, um den LDAP-Verzeichnisserver zu durchsuchen und den korrekten Attributnamen anzuzeigen. 3. Stellen Sie sicher, dass im LDAP-Verzeichnis ein Attribut namens ‘telephonnumber’ vorhanden ist, das tatsächlich die Telefonnummer des Benutzers hat. 5. Sagen wir im LDAP-Verzeichnis, dass es in ‘phonenumber’ geändert wurde. 6. Bearbeiten Sie dann den CloudSecure User Directory Collector. Ersetzen Sie im optionalen Attributbereich ‘Telefonnummerierung’ durch ‘Phonenumber’. 7. Speichern Sie den Active Directory-Collector, der Collector wird neu gestartet, erhält die Telefonnummer des Benutzers und zeigt diese auf der Seite Benutzerprofil an. 
+| Die Telefonnummer wird auf der Benutzerprofilseite nicht eingetragen. | Dies liegt höchstwahrscheinlich an einem Attributzuordnungsproblem mit Active Directory. 1.  Bearbeiten Sie den jeweiligen Active Directory-Collector, der die Benutzerinformationen aus Active Directory abruft. 2.  Beachten Sie, dass unter den optionalen Attributen ein Feldname „Telefonnummer“ vorhanden ist, der dem Active Directory-Attribut „Telefonnummer“ zugeordnet ist. 4.  Verwenden Sie nun das Tool „Active Directory Explorer“ wie oben beschrieben, um den LDAP-Verzeichnisserver zu durchsuchen und den richtigen Attributnamen anzuzeigen. 3.  Stellen Sie sicher, dass im LDAP-Verzeichnis ein Attribut mit dem Namen „Telefonnummer“ vorhanden ist, das tatsächlich die Telefonnummer des Benutzers enthält. 5.  Nehmen wir an, im LDAP-Verzeichnis wurde es in „Telefonnummer“ geändert. 6.  Bearbeiten Sie dann den CloudSecure-Benutzerverzeichnis-Collector.  Ersetzen Sie im Abschnitt „Optionale Attribute“ „Telefonnummer“ durch „Telefonnummer“. 7.  Speichern Sie den Active Directory-Collector. Der Collector wird neu gestartet, ruft die Telefonnummer des Benutzers ab und zeigt diese auf der Benutzerprofilseite an. 
 
 
-| Wenn das Verschlüsselungszertifikat (SSL) auf dem Active Directory (AD)-Server aktiviert ist, kann der Workload Security User Directory Collector keine Verbindung zum AD-Server herstellen. | Deaktivieren Sie die AD-Serververschlüsselung, bevor Sie einen User Directory Collector konfigurieren. Sobald die Benutzerdetails abgerufen wurde, wird es dort für 13 Monate sein. Wenn der AD-Server nach dem Abrufen der Benutzerdetails getrennt wird, werden die neu hinzugefügten Benutzer in AD nicht abgerufen. Um wieder abrufen zu können, muss der Benutzer-Verzeichnis-Collector mit AD verbunden sein. 
+| Wenn das Verschlüsselungszertifikat (SSL) auf dem Active Directory (AD)-Server aktiviert ist, kann der Workload Security User Directory Collector keine Verbindung zum AD-Server herstellen. | Deaktivieren Sie die AD-Server-Verschlüsselung, bevor Sie einen User Directory Collector konfigurieren.  Sobald die Benutzerdetails abgerufen wurden, bleiben sie 13 Monate lang dort.  Wenn die Verbindung zum AD-Server nach dem Abrufen der Benutzerdetails getrennt wird, werden die neu hinzugefügten Benutzer in AD nicht abgerufen.  Zum erneuten Abrufen muss der Benutzerverzeichnis-Collector mit AD verbunden sein. 
 |===

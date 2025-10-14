@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_ws_integration_with_ontap_access_denied.html 
-summary: Workload-Sicherheit lässt sich in ONTAP integrieren, um Ereignisse, die auf Zugangsverweigerung zugreifen, zu empfangen und eine zusätzliche Analyse und automatische Antwortebene bereitzustellen. 
+summary: Workload Security lässt sich in ONTAP integrieren, um Zugriffsverweigerungsereignisse zu empfangen und eine zusätzliche Analyse- und automatische Reaktionsebene bereitzustellen. 
 keywords: ransomware, ARP, Protection, Security, access 
 ---
-= Integration mit ONTAP-Zugriff verweigert
+= Integration mit ONTAP Access Denied
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,40 +14,40 @@ keywords: ransomware, ARP, Protection, Security, access
 
 
 [role="lead"]
-Die ONTAP-Zugriffsverweigerung verwendet Workload-Analysen in NAS-Umgebungen (NFS und SMB), um proaktiv fehlgeschlagene Dateivorgänge zu erkennen und zu warnen (d. h. Benutzer, die versuchen, einen Vorgang auszuführen, für den sie keine Berechtigung haben). Diese Benachrichtigungen über fehlgeschlagene Dateioperationen – insbesondere bei sicherheitsrelevanten Fehlern – werden auch dazu beitragen, Insider-Angriffe frühzeitig zu blockieren.
+Die ONTAP Access Denied-Funktion verwendet eine Workload-Analyse in NAS-Umgebungen (NFS und SMB), um fehlgeschlagene Dateivorgänge (z. B. wenn ein Benutzer versucht, einen Vorgang auszuführen, für den er keine Berechtigung hat) proaktiv zu erkennen und davor zu warnen.  Diese Benachrichtigungen über fehlgeschlagene Dateivorgänge – insbesondere bei sicherheitsrelevanten Fehlern – tragen zusätzlich dazu bei, Insider-Angriffe bereits im Frühstadium zu blockieren.
 
-Einblicke in die Dateninfrastruktur Workload Security lässt sich in ONTAP integrieren, um Ereignisse mit Zugriffsverweigerung zu empfangen und eine zusätzliche Analyse- und automatische Antwortebene bereitzustellen.
+Data Infrastructure Insights Workload Security lässt sich in ONTAP integrieren, um Zugriffsverweigerungsereignisse zu empfangen und eine zusätzliche Analyse- und automatische Reaktionsebene bereitzustellen.
 
 
 
 == Voraussetzungen
 
-* Minimale ONTAP-Version: 9.13.0.
-* Ein Workload Security-Administrator muss die Funktion Zugriff verweigert aktivieren, während er einen neuen Collector hinzufügt oder vorhandene Collector bearbeitet, indem er das Kontrollkästchen _Zugriff verweigert überwachen_ unter Erweiterte Konfiguration aktiviert.
+* Mindestversion von ONTAP : 9.13.0.
+* Ein Workload-Sicherheitsadministrator muss die Funktion „Zugriff verweigert“ aktivieren, wenn er einen neuen Collector hinzufügt oder einen vorhandenen Collector bearbeitet, indem er unter „Erweiterte Konfiguration“ das Kontrollkästchen „Ereignisse „Zugriff verweigert“ überwachen“ aktiviert.
 
 
-image:WS_Access_Denied_Enable_in_Collector.png["Aktivierung des Zugriffs verweigert in der erweiterten Konfiguration des ONTAP Collectors"]
+image:WS_Access_Denied_Enable_in_Collector.png["Aktivieren Sie „Zugriff verweigert“ in der erweiterten ONTAP -Collector-Konfiguration"]
 
 
 
-== Benutzerberechtigungen erforderlich
+== Erforderliche Benutzerberechtigungen
 
-Wenn der Data Collector mithilfe der Anmeldeinformationen für die Clusteradministration hinzugefügt wird, sind keine neuen Berechtigungen erforderlich.
+Wenn der Datensammler mithilfe der Clusteradministrationsanmeldeinformationen hinzugefügt wird, sind keine neuen Berechtigungen erforderlich.
 
-Wenn der Collector mithilfe eines benutzerdefinierten Benutzers (z. B. _csuser_) mit den Berechtigungen für den Benutzer hinzugefügt wird, führen Sie die folgenden Schritte aus, um Workload Security die erforderliche Berechtigung zur Registrierung für Ereignisse mit Zugangsverweigerung bei ONTAP zu erteilen.
+Wenn der Collector mithilfe eines benutzerdefinierten Benutzers (z. B. _csuser_) mit dem Benutzer erteilten Berechtigungen hinzugefügt wird, führen Sie die folgenden Schritte aus, um Workload Security die erforderliche Berechtigung zum Registrieren für Zugriffsverweigerungsereignisse bei ONTAP zu erteilen.
 
-Führen Sie für csuser mit _Cluster_-Anmeldeinformationen die folgenden Befehle über die ONTAP-Befehlszeile aus. Beachten Sie, dass diese Berechtigung möglicherweise bereits vorhanden ist.
+Führen Sie für csuser mit _cluster_-Anmeldeinformationen die folgenden Befehle über die ONTAP -Befehlszeile aus.  Beachten Sie, dass diese Berechtigung möglicherweise bereits vorhanden ist.
 
  security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-Führen Sie für csuser mit _SVM_-Anmeldeinformationen die folgenden Befehle über die ONTAP-Befehlszeile aus. Beachten Sie, dass diese Berechtigung möglicherweise bereits vorhanden ist.
+Führen Sie für csuser mit _SVM_-Anmeldeinformationen die folgenden Befehle über die ONTAP -Befehlszeile aus.  Beachten Sie, dass diese Berechtigung möglicherweise bereits vorhanden ist.
 
  security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
-Lesen Sie mehr über die Konfiguration anderer link:task_add_collector_svm.html["ONTAP-Berechtigungen"].
+Lesen Sie mehr über die Konfiguration andererlink:task_add_collector_svm.html["ONTAP-Berechtigungen"] .
 
 
 
-== Zugriff verweigert Ereignisse
+== Ereignisse vom Typ „Zugriff verweigert“
 
-Sobald Ereignisse vom ONTAP-System erfasst wurden, werden auf der Seite Forensik für Workload-Sicherheit Ereignisse mit Zugriffsverweigerung angezeigt. Zusätzlich zu den angezeigten Informationen können Sie die fehlenden Benutzerberechtigungen für eine bestimmte Operation anzeigen, indem Sie die Spalte _gewünschte Aktivität_ aus dem Zahnradsymbol zur Tabelle hinzufügen.
+Sobald Ereignisse vom ONTAP System abgerufen wurden, werden auf der Seite „Workload Security Forensics“ Ereignisse mit dem Status „Zugriff verweigert“ angezeigt.  Zusätzlich zu den angezeigten Informationen können Sie die fehlenden Benutzerberechtigungen für einen bestimmten Vorgang anzeigen, indem Sie der Tabelle über das Zahnradsymbol die Spalte _Gewünschte Aktivität_ hinzufügen.
 
-image:WS_Access_Denied_Example_Event_1.png["Beispiel Für Ereignis „Zugriff Verweigert“"]
+image:WS_Access_Denied_Example_Event_1.png["Beispiel für ein Zugriffsverweigerungsereignis"]

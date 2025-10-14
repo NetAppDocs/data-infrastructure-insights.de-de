@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_cs.html 
 keywords: data collector, IBM CS, CS Series 
-summary: IBM CS Data Collector wird konfiguriert. 
+summary: Konfigurieren des IBM CS-Datenkollektors. 
 ---
-= IBM CS Datensammler
+= IBM CS-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights nutzt diesen Datensammler zur Ermittlung von Bestands- und Leistungsdaten für IBM CS-Speichersysteme.
+Data Infrastructure Insights verwendet diesen Datensammler, um Bestands- und Leistungsdaten für IBM CS-Speichersysteme zu ermitteln.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Inventarinformationen aus dem IBM CS-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom IBM CS-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Storage-Pool | Storage-Pool 
+| Speicherpool | Speicherpool 
 
 
 | Container | Internes Volumen 
@@ -32,17 +32,17 @@ Data Infrastructure Insights erfasst die folgenden Inventarinformationen aus dem
 | Container | Dateifreigabe 
 
 
-| NFS-Share | Share 
+| NFS-Freigabe | Aktie 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* Die IP-Adresse für externe Datendienste für den Cluster
+* Die IP-Adresse der externen Datendienste für den Cluster
 * Administrator-Benutzername und -Passwort
-* Anschluss 9440
+* Port 9440
 
 
 
@@ -54,13 +54,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Externe IP-Adresse des Prism | Die IP-Adresse für externe Datendienste für den Cluster 
+| Externe Prism-IP-Adresse | Die IP-Adresse der externen Datendienste für den Cluster 
 
 
-| Benutzername | Benutzername für das Administratorkonto 
+| Benutzername | Benutzername für das Admin-Konto 
 
 
-| Passwort | Kennwort für das Administratorkonto 
+| Passwort | Passwort für das Admin-Konto 
 |===
 
 
@@ -71,16 +71,16 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| TCP-Port | TCP-Port, der für die Verbindung mit dem IBM CS-Array verwendet wird. Der Standardwert ist 9440. 
+| TCP-Port | TCP-Port, der für die Verbindung mit dem IBM CS-Array verwendet wird.  Der Standardwert ist 9440. 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
 
 
-| Abfrageintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 300 Sekunden. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

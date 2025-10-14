@@ -4,7 +4,7 @@ permalink: vm_analyzer_overview.html
 summary: VM Analyzer bietet Topologie für virtuelle Assets auf Ihrem Mandanten 
 keywords: topology, analyze, analysis, map, virtual, vm, vmware 
 ---
-= VM Analyzer Übersicht
+= VM Analyzer – Übersicht
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ keywords: topology, analyze, analysis, map, virtual, vm, vmware
 
 
 [role="lead"]
-Mit dem *VM Analyzer* von DII wird die Verwaltung Ihrer virtuellen Assets einfacher und effizienter. Dieses leistungsstarke Tool bietet umfassende Transparenz und bildet Abhängigkeiten von VMDK/VM über Host und Datastore bis hin zu internem Volume/Volume und Speicher ab.
+Mit dem *VM Analyzer* von DII wird die Verwaltung Ihrer virtuellen Assets einfacher und effizienter.  Dieses leistungsstarke Tool bietet End-to-End-Sichtbarkeit und ordnet Abhängigkeiten von VMDK/VM über Host und Datastore bis hin zu internem Volume/Volume und Speicher zu.
 
-Durch die Bereitstellung einer interaktiven Topologieübersicht ermöglicht VM Analyzer es Ihnen, Probleme zu lokalisieren, Änderungen zu verstehen und das Verständnis des Datenflusses zu verbessern. Optimieren Sie die VM-Verwaltung und erhöhen Sie Ihre Transparenz bei virtuellen Workloads.
+Durch die Bereitstellung einer interaktiven Topologiekarte ermöglicht Ihnen VM Analyzer, Probleme zu lokalisieren, Änderungen zu verstehen und das Verständnis des Datenflusses zu verbessern.  Optimieren Sie die VM-Verwaltung und erhöhen Sie Ihre Transparenz bei virtuellen Workloads.
 
-image:vm_analyzer_example_with_panel_a.png["Topologiezuordnung eines Storage-Systems in VM Analyzer"]
+image:vm_analyzer_example_with_panel_a.png["VM Analyzer-Topologiekarte eines Speichersystems"]
 
 
 
-== Entdecken Sie Verbindungen zwischen Ihren Ressourcen
+== Untersuchen Sie die Verbindungen zwischen Ihren Assets
 
-Wählen Sie *Observability > Analyze > VM Analyzer*, um den VM Analyzer anzuzeigen. Legen Sie einen Filter für Anwendung, virtuelle Maschine, Volume, internes Volume fest oder fügen Sie Ihre eigenen Filter hinzu. Die Karte für die Objekte wird angezeigt und zeigt verbundene Objekte an. Bewegen Sie den Mauszeiger über ein Objekt, um Verkehrsmetriken für diese Verbindungen anzuzeigen.
+Wählen Sie *Beobachtbarkeit > Analysieren > VM-Analysator*, um den VM-Analysator anzuzeigen.  Legen Sie einen Filter für Anwendung, virtuelle Maschine, Volume, internes Volume fest oder fügen Sie Ihre eigenen Filter hinzu.  Die Karte für die Objekte wird angezeigt und zeigt verbundene Objekte.  Bewegen Sie den Mauszeiger über ein Objekt, um die Verkehrsmetriken für diese Verbindungen anzuzeigen.
 
 image:vm_analyzer_performance_metrics.png["Beispiel für VM Analyzer-Leistungsmetriken"]
 
 
-NOTE: Die meisten VM Analyzer-Filter (einschließlich der Filter, die Sie hinzufügen können) sind kontextbezogen. Wenn Sie ein Objekt in einem dieser Filter auswählen, werden die in den anderen Filter-Dropdown-Listen angezeigten Optionen im Kontext mit dem ausgewählten Objekt oder den ausgewählten Objekten aktualisiert.
+NOTE: Die meisten VM Analyzer-Filter (einschließlich derer, die Sie hinzufügen können) sind kontextbezogen. Wenn Sie in einem dieser Filter ein Objekt auswählen, werden die in den anderen Filter-Dropdowns angezeigten Auswahlmöglichkeiten im Kontext mit dem bzw. den ausgewählten Objekten aktualisiert.
 
-Wenn Sie auf ein Objekt oder eine Gruppe klicken, wird ein Schiebefenster mit zusätzlichen Details zum Objekt und seinen Verbindungen geöffnet. Das Slideout-Panel zeigt eine Zusammenfassung mit Details zum ausgewählten Objekt (z. B. Durchsatz oder Auslastung, je nach Objekttyp) sowie Diagramme mit Messdaten zum Objekt, z. B. Latenz oder IOPS. Zusätzliche Registerkarten ermöglichen die Untersuchung zugehöriger Ressourcen, Änderungen und Warnungen. Auf Wunsch können Sie in den Diagrammen auch Messdaten für die am stärksten korrelierten oder konkurrierenden Objekte anzeigen.
+Durch Klicken auf ein Objekt oder eine Gruppe wird ein Slideout-Fenster geöffnet, das zusätzliche Details zum Objekt und seinen Verbindungen bietet.  Das Slideout-Panel zeigt eine Zusammenfassung mit Details zum ausgewählten Objekt (z. B. Durchsatz oder Auslastung, je nach Objekttyp) sowie Diagramme mit Metriken für das Objekt wie Latenz oder IOPS.  Über zusätzliche Registerkarten können Sie zugehörige zusätzliche Ressourcen oder Änderungen und Warnungen erkunden.  Sie können bei Bedarf auch die Anzeige von Metriken für die am stärksten korrelierten oder konkurrierenden Objekte in den Diagrammen auswählen.
 
 
 

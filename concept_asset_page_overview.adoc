@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_page_overview.html 
-summary: Asset-Seiten können für die meisten Objekttypen angezeigt werden. 
+summary: Für die meisten Objekttypen können Asset-Seiten angezeigt werden. 
 keywords: asset page, objects, landing page, Virtual machine, VM, Storage Virtual Machine, SVM, Volume, Internal volume, Host, Hypervisor, pool, Storage, Datastore, Application, node, Qtree, Disk, VMDK, Port, Switch, Fabric, refresh 
 ---
-= Übersicht Über Die Asset-Seite
+= Übersicht über die Asset-Seite
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,49 +14,49 @@ keywords: asset page, objects, landing page, Virtual machine, VM, Storage Virtua
 
 
 [role="lead"]
-Landing Pages für Anlagen fassen den aktuellen Status eines Assets zusammen und enthalten Links zu zusätzlichen Informationen über das Asset und seine zugehörigen Assets.
+Asset-Landingpages fassen den aktuellen Status eines Assets zusammen und enthalten Links zu zusätzlichen Informationen über das Asset und die zugehörigen Assets.
 
-Auf den Landing Pages erhalten Sie eine einseitige Ansicht des Objekts mit Informationen zu Zusammenfassung, Leistung und zugehöriger Ressource.
+Auf Zielseiten erhalten Sie eine Einzelseitenansicht des Objekts mit Informationen zu Zusammenfassung, Leistung und zugehörigen Ressourcen.
 
-image:lp_new_design.png["Neues LP-Design"]
-
-
-
-== Abschnitt „Zusammenfassung“
-
-Oben auf einer Landing Page befindet sich der Abschnitt Expandible Summary, der mehrere Sparkline-Diagramme enthält, die aktuelle Datentrends für Aspekte wie Durchsatz oder Latenz sowie Objektinformationen und -Attribute sowie alle Monitore anzeigen, die möglicherweise Warnmeldungen für das Objekt anzeigen.
-
-Der Abschnitt „Zusammenfassung“ wird auch angezeigt und ermöglicht Ihnen das Ändern von Anmerkungen, die der Anlage zugeordnet sind.
+image:lp_new_design.png["neues LP-Design"]
 
 
 
-== Abschnitt „Leistung“
+== Zusammenfassung
 
-Im Abschnitt „Performance“ werden die Performance-Daten für das Objekt angezeigt. Wählen Sie _Settings_, um der Anzeige zusätzliche Diagramme wie Durchsatz oder Kapazität hinzuzufügen, oder wählen Sie korrelierte oder beitragende Ressourcen aus, um ihre Daten neben den Objekten zu graten. Geräte, die möglicherweise Konflikte verursachen, werden ebenfalls im Abschnitt „Leistung“ aufgeführt. Die Daten in den Diagrammen werden automatisch aktualisiert, wenn Datensammler abfragen und aktualisierte Daten erfasst werden.
+Oben auf einer Zielseite befindet sich der erweiterbare Abschnitt „Zusammenfassung“, der mehrere Sparkline-Diagramme enthält, die aktuelle Datentrends für Dinge wie Durchsatz oder Latenz sowie Objektinformationen und -attribute und alle Monitore anzeigen, die möglicherweise Warnungen für das Objekt ausgeben.
 
-Sie können die auswählen, die <<performance-metric-definitions,Kennzahlen>>im Leistungsdiagramm für den ausgewählten Zeitraum angezeigt werden soll. Klicken Sie auf das Dropdown-Menü _Settings_, und wählen Sie eine der aufgeführten Metriken aus.
+Im Abschnitt „Zusammenfassung“ werden auch die dem Asset zugewiesenen Anmerkungen angezeigt und Sie können diese ändern.
 
-Zusätzlich zu den Leistungsdaten werden auch alle Warnmeldungen angezeigt, die innerhalb des ausgewählten Seitenzeitbereichs aktiv sind oder waren.
 
-image:lp_alert_example.png["Warnbeispiel auf einer Landing Page"]
 
-Sie können unter den folgenden Geräten auswählen, die im Abschnitt „Leistung“ aufgelistet werden können:
+== Leistungsbereich
 
-* Oben korreliert
+Im Abschnitt „Leistung“ werden Leistungsdaten für das Objekt angezeigt.  Wählen Sie _Einstellungen_, um der Anzeige zusätzliche Diagramme wie Durchsatz oder Kapazität hinzuzufügen, oder wählen Sie korrelierte oder beitragende Ressourcen aus, um deren Daten neben denen des Objekts darzustellen.  Geräte, die möglicherweise Konflikte verursachen, werden auch im Abschnitt „Leistung“ aufgeführt.  Die Daten in den Diagrammen werden automatisch aktualisiert, wenn Datensammler Abfragen durchführen und aktualisierte Daten erfasst werden.
+
+Sie können die<<performance-metric-definitions,Metriken>> Sie im Leistungsdiagramm für den ausgewählten Zeitraum anzeigen möchten.  Klicken Sie auf das Dropdown-Menü „Einstellungen“ und wählen Sie aus den aufgelisteten Metriken aus.
+
+Zusätzlich zu den Leistungsdaten werden auch alle Warnungen angezeigt, die innerhalb des ausgewählten Seitenzeitraums aktiv sind oder waren.
+
+image:lp_alert_example.png["Warnbeispiel auf einer Zielseite"]
+
+Sie können aus den folgenden Geräten auswählen, die im Abschnitt „Leistung“ aufgeführt sein können:
+
+* Am stärksten korreliert
 +
-Zeigt die Assets, die eine hohe Korrelation (in Prozent) mit einem oder mehreren Performance-Kennzahlen zur Basisinressource haben.
+Zeigt die Vermögenswerte an, die eine hohe Korrelation (Prozentsatz) mit einer oder mehreren Leistungskennzahlen zum Basisvermögenswert aufweisen.
 
 * Top-Mitwirkende
 +
-Zeigt die Assets an, die (in Prozent) zur Basisinressource beitragen.
+Zeigt die Vermögenswerte an, die (prozentual) zum Basisvermögen beitragen.
 
 * Wichtigste Änderungen
 +
-Anlagen im Zusammenhang mit den letzten Änderungen.
+Vermögenswerte im Zusammenhang mit den jüngsten Änderungen.
 
 * Workload-Konflikte
 +
-Zeigt die Ressourcen an, die Auswirkungen auf andere gemeinsam genutzte Ressourcen wie Hosts, Netzwerke und Storage haben bzw. von diesen betroffen sind. Diese werden manchmal als _gierige_ und _degradierte_ Ressourcen bezeichnet.
+Zeigt die Assets an, die sich auf andere gemeinsam genutzte Ressourcen wie Hosts, Netzwerke und Speicher auswirken oder von diesen beeinflusst werden.  Diese werden manchmal als _gierige_ und _verschlechterte_ Ressourcen bezeichnet.
 
 
 
@@ -64,39 +64,39 @@ Zeigt die Ressourcen an, die Auswirkungen auf andere gemeinsam genutzte Ressourc
 
 == Abschnitt „Zusätzliche Ressourcen“
 
-Im Abschnitt zusätzliche Ressourcen werden Tabellen mit Daten für Ressourcen angezeigt, die mit dem aktuellen Objekttyp in Verbindung stehen. Sie können diese Tabellen ein- und ausblenden, um sich auf bestimmte Ressourcen zu konzentrieren. Wählen Sie das Zahnradsymbol aus, um vorübergehend zusätzliche Metriken oder Attribute in einer Tabelle anzuzeigen.
+Im Abschnitt „Zusätzliche Ressourcen“ werden Datentabellen für Ressourcen angezeigt, die sich auf den aktuellen Objekttyp beziehen.  Sie können diese Tabellen erweitern und reduzieren, um sich auf bestimmte Ressourcen zu konzentrieren.  Wählen Sie das Zahnradsymbol aus, um vorübergehend zusätzliche Metriken oder Attribute in einer Tabelle anzuzeigen.
 
 
 
-== Benutzerdefinierte Widgets Hinzufügen
+== Benutzerdefinierte Widgets hinzufügen
 
-Sie können Ihre eigenen Widgets zu jeder Asset-Seite hinzufügen. Widgets, die Sie hinzufügen, werden für alle Objekte dieses Typs auf den Asset-Seiten angezeigt. Wenn Sie beispielsweise ein benutzerdefiniertes Widget zu einer Speicherressource hinzufügen, wird dieses Widget auf den Asset-Seiten für alle Speicherressourcen angezeigt.
+Sie können jeder Asset-Seite Ihre eigenen Widgets hinzufügen.  Von Ihnen hinzugefügte Widgets werden auf den Asset-Seiten für alle Objekte dieses Typs angezeigt.  Wenn Sie beispielsweise einer Speicher-Asset-Seite ein benutzerdefiniertes Widget hinzufügen, wird dieses Widget auf den Asset-Seiten für alle Speicher-Assets angezeigt.
 
-Benutzerdefinierte Widgets werden unten auf einer Landing Page unter den Abschnitten „Leistung“ und „Ressource“ platziert.
+Benutzerdefinierte Widgets werden unten auf einer Zielseite unter den Abschnitten „Leistung“ und „Ressourcen“ platziert.
 
 
 
 == Arten von Asset-Seiten
 
-Data Infrastructure Insights bietet Asset-Seiten für die folgenden Ressourcen:
+Data Infrastructure Insights bietet Asset-Seiten für die folgenden Assets:
 
-* Virtual Machine
-* Storage Virtual Machine (SVM)
-* Datenmenge
+* Virtuelle Maschine
+* Virtuelle Speichermaschine (SVM)
+* Volumen
 * Internes Volumen
 * Host (einschließlich Hypervisor)
-* Storage-Pool
+* Speicherpool
 * Storage
 * Datenspeicher
-* Applikation
-* Storage-Node
+* Anwendung
+* Speicherknoten
 * Qtree
-* Festplatte
+* Scheibe
 * VMDK
-* Port
-* Switch
-* Fabric
-* Host
+* Hafen
+* Schalten
+* Stoff
+* Gastgeber
 * Zone
 
 
@@ -104,16 +104,16 @@ Data Infrastructure Insights bietet Asset-Seiten für die folgenden Ressourcen:
 
 == Ändern des Zeitbereichs der angezeigten Daten
 
-Standardmäßig werden auf einer Bestandsseite die letzten 3 Stunden der Daten angezeigt. Sie können jedoch das Zeitsegment der angezeigten Daten ändern, indem Sie eine Option verwenden, die sich auf jeder Bestandsseite befindet, unabhängig vom Asset-Typ. Um den Zeitbereich zu ändern, klicken Sie in der oberen Leiste auf den angezeigten Zeitbereich, und wählen Sie zwischen den folgenden Zeitsegmenten aus:
+Standardmäßig werden auf einer Asset-Seite die Daten der letzten drei Stunden angezeigt. Sie können den Zeitabschnitt der angezeigten Daten jedoch mithilfe einer Option ändern, die sich auf jeder Asset-Seite befindet, unabhängig vom Asset-Typ.  Um den Zeitraum zu ändern, klicken Sie auf den angezeigten Zeitraum in der oberen Leiste und wählen Sie aus den folgenden Zeitsegmenten:
 
 * Letzte 15 Minuten
 * Letzte 30 Minuten
 * Letzte 60 Minuten
-* Die Letzten 2 Stunden
-* Die letzten 3 Stunden (dies ist die Standardeinstellung)
-* Die Letzten 6 Stunden
-* Die Letzten 12 Stunden
-* Die Letzten 24 Stunden
+* Letzte 2 Stunden
+* Letzte 3 Stunden (dies ist die Standardeinstellung)
+* Letzte 6 Stunden
+* Letzte 12 Stunden
+* Letzte 24 Stunden
 * Letzte 2 Tage
 * Letzte 3 Tage
 * Letzte 7 Tage
@@ -122,15 +122,15 @@ Standardmäßig werden auf einer Bestandsseite die letzten 3 Stunden der Daten a
 * Benutzerdefinierter Zeitbereich
 
 
-Im benutzerdefinierten Zeitbereich können Sie bis zu 31 aufeinander folgende Tage auswählen. Sie können für diesen Bereich auch die Startzeit und die Endzeit des Tages festlegen. Die Standardstartzeit ist 12:00 UHR am ersten ausgewählten Tag und die Standardendzeit ist 11:59 Uhr am letzten ausgewählten Tag. Wenn Sie auf Anwenden klicken, wird der benutzerdefinierte Zeitbereich auf die Asset-Seite angewendet.
+Mit dem benutzerdefinierten Zeitbereich können Sie bis zu 31 aufeinanderfolgende Tage auswählen.  Sie können auch die Start- und Endzeit des Tages für diesen Bereich festlegen.  Die Standardstartzeit ist 0:00 Uhr am ersten ausgewählten Tag und die Standardendzeit ist 23:59 Uhr am letzten ausgewählten Tag.  Durch Klicken auf „Übernehmen“ wird der benutzerdefinierte Zeitbereich auf die Asset-Seite angewendet.
 
-Die Informationen auf der Seite werden basierend auf dem ausgewählten Zeitraum automatisch aktualisiert. Die aktuelle Aktualisierungsrate wird in der oberen rechten Ecke des Abschnitts Zusammenfassung sowie in allen relevanten Tabellen oder Widgets auf der Seite angezeigt.
+Die Informationen auf der Seite werden basierend auf dem ausgewählten Zeitraum automatisch aktualisiert.  Die aktuelle Aktualisierungsrate wird in der oberen rechten Ecke des Abschnitts „Zusammenfassung“ sowie in allen relevanten Tabellen oder Widgets auf der Seite angezeigt.
 
 
 
-== Definitionen der Performance-Kennzahlen
+== Definitionen von Leistungsmetriken
 
-Im Abschnitt „Performance“ können auf der Grundlage des für die Anlage ausgewählten Zeitraums mehrere Metriken angezeigt werden. Jede Metrik wird in einem eigenen Performance-Diagramm angezeigt. Je nachdem, welche Daten Sie sehen möchten, können Sie Metriken und zugehörige Assets aus den Diagrammen hinzufügen oder entfernen. Die zur Auswahl stehenden Metriken sind je nach Asset-Typ unterschiedlich.
+Im Abschnitt „Leistung“ können basierend auf dem für das Asset ausgewählten Zeitraum mehrere Kennzahlen angezeigt werden.  Jede Metrik wird in einem eigenen Leistungsdiagramm angezeigt.  Sie können den Diagrammen Metriken und zugehörige Assets hinzufügen oder daraus entfernen, je nachdem, welche Daten Sie sehen möchten. Die zur Auswahl stehenden Metriken variieren je nach Asset-Typ.
 
 |===
 
@@ -138,101 +138,101 @@ Im Abschnitt „Performance“ können auf der Grundlage des für die Anlage aus
 | *Metrisch* | *Beschreibung* 
 
 
-| BB Credit Null Rx, Tx | Die Anzahl der Empfangs-/Übertragungs-Buffer-zu-Buffer-Gutschriften wurde während des Probenzeitraums auf Null übertragen. Diese Metrik gibt an, wie oft der angeschlossene Port die Übertragung beenden musste, da dieser Port nicht mehr als Credits zur Verfügung stand. 
+| BB-Guthaben Null Rx, Tx | Gibt an, wie oft der Puffer-zu-Puffer-Guthabenzähler während des Abtastzeitraums auf Null gewechselt ist.  Diese Metrik gibt an, wie oft der angeschlossene Port die Übertragung stoppen musste, weil dieser Port keine Credits mehr bereitstellen konnte. 
 
 
-| BB Kredit Null Dauer Tx | Zeit in Millisekunden, während der der transmit BB-Guthaben während des Abtastintervalls null war. 
+| BB Kredit Null Dauer Tx | Zeit in Millisekunden, während der das Sende-BB-Guthaben während des Abtastintervalls Null war. 
 
 
-| Cache-Trefferrverhältnis (gesamt, Lesen, Schreiben) % | Prozentsatz von Anforderungen, die zu Cache-Treffern führen. Je höher die Anzahl der Treffer im Vergleich zum Volume ist, desto besser ist die Performance. Diese Spalte ist leer für Speicher-Arrays, die keine Cache-Trefferinformationen erfassen. 
+| Cache-Trefferquote (Gesamt, Lesen, Schreiben) % | Prozentsatz der Anfragen, die zu Cache-Treffern führen.  Je höher die Anzahl der Treffer im Verhältnis zu den Zugriffen auf das Volume ist, desto besser ist die Leistung.  Diese Spalte ist für Speicher-Arrays leer, die keine Cache-Trefferinformationen erfassen. 
 
 
-| Cache-Auslastung (gesamt) % | Gesamtprozentsatz der Cacheanforderungen, die zu Cache-Treffern führen 
+| Cache-Auslastung (Gesamt) % | Gesamtprozentsatz der Cache-Anfragen, die zu Cache-Treffern führen 
 
 
-| Discards der Klasse 3 | Anzahl der Rückwürfe für die Datenübertragung in der Fibre Channel-Klasse 3 
+| Rückwürfe der Klasse 3 | Anzahl der beim Fibre Channel Class 3-Datentransport verworfenen Daten. 
 
 
-| CPU-Auslastung (gesamt) % | Menge der aktiv genutzten CPU-Ressourcen als Prozentsatz der insgesamt verfügbaren (über alle virtuellen CPUs) 
+| CPU-Auslastung (Gesamt) % | Menge der aktiv genutzten CPU-Ressourcen als Prozentsatz der insgesamt verfügbaren Ressourcen (über alle virtuellen CPUs). 
 
 
-| CRC-Fehler | Anzahl der Frames mit ungültigen zyklischen Redundanzprüfungen (CRCs), die vom Port während des Probenahmezeitraums erkannt wurden 
+| CRC-Fehler | Anzahl der Frames mit ungültigen zyklischen Redundanzprüfungen (CRCs), die vom Port während des Abtastzeitraums erkannt wurden 
 
 
-| Frame-Rate | Bildrate in Bildern pro Sekunde übertragen (FPS) 
+| Bildrate | Übertragungsbildrate in Bildern pro Sekunde (FPS) 
 
 
-| Bildgröße durchschnittlich (Rx, Tx) | Verhältnis von Datenverkehr zu Bildgröße. Mit dieser Metrik können Sie feststellen, ob es Overhead Frames in der Fabric gibt. 
+| Durchschnittliche Framegröße (Rx, Tx) | Verhältnis von Datenverkehr zu Framegröße.  Mit dieser Kennzahl können Sie feststellen, ob sich im Gewebe Überkopfrahmen befinden. 
 
 
-| Rahmengröße zu lang | Anzahl der zu langen Fibre Channel-Datenübertragungsrahmen 
+| Rahmengröße zu lang | Anzahl der zu langen Fibre-Channel-Datenübertragungsrahmen. 
 
 
-| Rahmengröße zu kurz | Anzahl der zu kurzen Fibre Channel-Datenübertragungsrahmen 
+| Rahmengröße zu klein | Anzahl der zu kurzen Fibre Channel-Datenübertragungsframes. 
 
 
-| I/O-Dichte (gesamt, Lesen, Schreiben) | Anzahl der IOPS geteilt durch genutzte Kapazität (wie bei der letzten Inventarabfrage der Datenquelle erworben) für das Element Volume, Internal Volume oder Storage. Diese wird anhand der Anzahl der I/O-Vorgänge pro Sekunde pro TB gemessen. 
+| I/O-Dichte (Gesamt, Lesen, Schreiben) | Anzahl der IOPS geteilt durch die genutzte Kapazität (wie aus der letzten Bestandsabfrage der Datenquelle ermittelt) für das Volume, das interne Volume oder das Speicherelement.  Gemessen in der Anzahl der E/A-Vorgänge pro Sekunde pro TB. 
 
 
-| IOPS (gesamt, Lesen, Schreiben) | Anzahl der Lese-/Schreib-I/O-Serviceanfragen, die den I/O-Kanal oder einen Teil dieses Kanals pro Zeiteinheit durchlaufen (gemessen in I/O pro Sekunde) 
+| IOPS (Gesamt, Lesen, Schreiben) | Anzahl der Lese-/Schreib-E/A-Dienstanforderungen, die pro Zeiteinheit den E/A-Kanal oder einen Teil dieses Kanals durchlaufen (gemessen in E/A pro Sekunde) 
 
 
-| IP-Durchsatz (gesamt, Lesen, Schreiben) | Gesamt: Aggregierte Rate, bei der IP-Daten in Megabyte pro Sekunde übertragen und empfangen wurden. 
+| IP-Durchsatz (Gesamt, Lesen, Schreiben) | Gesamt: Aggregierte Rate, mit der IP-Daten in Megabyte pro Sekunde gesendet und empfangen wurden. 
 
 
 | Lesen: IP-Durchsatz (Empfangen): | Durchschnittliche Rate, mit der IP-Daten in Megabyte pro Sekunde empfangen wurden. 
 
 
-| Schreiben: IP-Durchsatz (übertragen): | Durchschnittliche Rate, mit der IP-Daten in Megabyte pro Sekunde übertragen wurden. 
+| Schreiben: IP-Durchsatz (Übertragen): | Durchschnittliche Rate, mit der IP-Daten in Megabyte pro Sekunde übertragen wurden. 
 
 
-| Latenz (Gesamt, Lesen, Schreiben) | Latenz (R&W): Geschwindigkeit, mit der Daten in einem festgelegten Zeitraum gelesen oder auf die Virtual Machines geschrieben werden Der Wert wird in Megabyte pro Sekunde gemessen. 
+| Latenz (Gesamt, Lesen, Schreiben) | Latenz (R&W): Rate, mit der Daten in einer festgelegten Zeitspanne von den virtuellen Maschinen gelesen oder auf diese geschrieben werden.  Der Wert wird in Megabyte pro Sekunde gemessen. 
 
 
-| Latenz | Durchschnittliche Antwortzeit von den Virtual Machines in einem Datenspeicher. 
+| Latenz: | Durchschnittliche Antwortzeit der virtuellen Maschinen in einem Datenspeicher. 
 
 
-| Höchste Latenz: | Die höchste Reaktionszeit von den Virtual Machines in einem Datenspeicher. 
+| Höchste Latenz: | Die höchste Antwortzeit der virtuellen Maschinen in einem Datenspeicher. 
 
 
-| Verbindungsfehler | Anzahl der Verbindungsfehler, die der Port während des Probenahmezeitraums entdeckt hat. 
+| Verbindungsfehler | Anzahl der vom Port während des Stichprobenzeitraums erkannten Verbindungsfehler. 
 
 
-| Link Reset Rx, Tx | Anzahl der Rücksetzungen von Empfangs- oder Übertragungsverbindung während des Probenzeitraums. Diese Metrik gibt die Anzahl der vom angeschlossenen Port an diesen Port ausgegebenen Link-Resets an. 
+| Link-Reset Rx, Tx | Anzahl der Zurücksetzungen der Empfangs- oder Sendeverbindung während des Abtastzeitraums.  Diese Metrik stellt die Anzahl der Link-Resets dar, die vom angeschlossenen Port an diesen Port ausgegeben wurden. 
 
 
-| Speicherauslastung (gesamt) % | Schwellenwert für den vom Host verwendeten Speicher. 
+| Speicherauslastung (Gesamt) % | Schwellenwert für den vom Host verwendeten Speicher. 
 
 
-| Teilweise R/W (gesamt) % | Gesamtzahl der Male, die ein Lese-/Schreibvorgang einen Stripe-Grenzwert auf einem Festplattenmodul in RAID 5, RAID 1/0 oder RAID 0 LUN überschreitet, sind Stripe-Crossings in der Regel nicht von Vorteil, da jeder eine zusätzliche I/O-Operation erfordert Ein geringer Prozentsatz zeigt eine effiziente Stripe-Elementgröße an und gibt Aufschluss über eine nicht ordnungsgemäße Ausrichtung eines Volumes (oder einer NetApp LUN). Bei CLARiiON ist dieser Wert die Anzahl der Stripe-Crossings, geteilt durch die Gesamtzahl der IOPS. 
+| Teilweise R/W (Gesamt) % | Gesamtzahl der Male, die ein Lese-/Schreibvorgang eine Streifengrenze auf einem beliebigen Festplattenmodul in einem RAID 5-, RAID 1/0- oder RAID 0-LUN überschreitet. Im Allgemeinen sind Streifenüberschreitungen nicht vorteilhaft, da jede einen zusätzlichen E/A-Vorgang erfordert.  Ein niedriger Prozentsatz weist auf eine effiziente Stripe-Elementgröße hin und ist ein Hinweis auf eine falsche Ausrichtung eines Volumes (oder einer NetApp LUN).  Bei CLARiiON ist dieser Wert die Anzahl der Stripe-Übergänge geteilt durch die Gesamtzahl der IOPS. 
 
 
-| Port-Fehler | Bericht über Port-Fehler über den Probenzeitraum/den angegebenen Zeitraum. 
+| Portfehler | Bericht über Portfehler über den Abtastzeitraum/angegebenen Zeitraum. 
 
 
-| Signalverlust zählen | Anzahl der Signalverlustfehler. Wenn ein Signalverlustfehler auftritt, gibt es keine elektrische Verbindung und es besteht ein physikalisches Problem. 
+| Signalverlustzähler | Anzahl der Signalverlustfehler.  Wenn ein Signalverlustfehler auftritt, besteht keine elektrische Verbindung und es liegt ein physikalisches Problem vor. 
 
 
-| Swap-Rate (Gesamtrate, Rate, out-Rate) | Rate, mit welcher der Speicher während des Probenzeitraums in den aktiven Speicher des Laufwerks oder aus dem Datenträger in den aktiven Speicher eingetauscht wird. Dieser Zähler bezieht sich auf virtuelle Maschinen. 
+| Swapsatz (Gesamtsatz, Eingangssatz, Ausgangssatz) | Rate, mit der während des Stichprobenzeitraums Speicher von der Festplatte in den aktiven Speicher ein- und ausgelagert wird oder beides.  Dieser Zähler gilt für virtuelle Maschinen. 
 
 
-| Synchrone Verlustzahl | Anzahl der Fehler bei Synchronisierungsverlust. Wenn ein Fehler bei der Synchronisierung auftritt, kann die Hardware den Datenverkehr nicht erkennen oder darauf sperren. Das gesamte Gerät verwendet möglicherweise nicht die gleiche Datenrate, oder die optischen oder physischen Verbindungen können von schlechter Qualität sein. Der Port muss nach jedem solchen Fehler erneut synchronisiert werden, was sich auf die Systemleistung auswirkt. Gemessen in KB/Sek. 
+| Anzahl der Synchronisierungsverluste | Anzahl der Synchronisierungsverlustfehler.  Wenn ein Synchronisierungsverlustfehler auftritt, kann die Hardware den Datenverkehr nicht verstehen oder sich darauf fixieren.  Möglicherweise verwenden nicht alle Geräte dieselbe Datenrate oder die optische oder physische Verbindung ist von schlechter Qualität.  Der Port muss nach jedem solchen Fehler neu synchronisiert werden, was sich auf die Systemleistung auswirkt.  Gemessen in KB/Sek. 
 
 
-| Durchsatz (Gesamt, Lesen, Schreiben) | Geschwindigkeit, mit der Daten übertragen, empfangen oder in einem festen Zeitraum als Reaktion auf I/O-Serviceanfragen (gemessen in MB pro s) gesendet werden. 
+| Durchsatz (Gesamt, Lesen, Schreiben) | Rate, mit der Daten als Antwort auf E/A-Dienstanforderungen in einer festgelegten Zeitspanne gesendet, empfangen oder beides werden (gemessen in MB pro Sekunde). 
 
 
-| Timeout - Rahmen verwerfen - Tx | Anzahl der durch Timeout verursachten verworfenen Übertragungsrahmen. 
+| Timeout-Verwerfungsrahmen - Tx | Anzahl der durch Timeout verworfenen Sendeframes. 
 
 
-| Traffic-Rate (gesamt, Lesen, Schreiben) | Der während des Probenahmezeitraums übertragenen, empfangenen oder beide empfangenen Datenverkehr in Mebibyte pro Sekunde. 
+| Verkehrsrate (Gesamt, Lesen, Schreiben) | Während des Stichprobenzeitraums gesendeter, empfangener oder beides empfangener Datenverkehr in Mebibyte pro Sekunde. 
 
 
-| Traffic-Auslastung (gesamt, Lesen, Schreiben) | Verhältnis der empfangenen/übertragenen/gesamten Kapazität zu Empfangs-/Übertragungs-/Gesamtkapazität während des Probenzeitraums. 
+| Verkehrsauslastung (Gesamt, Lesen, Schreiben) | Verhältnis des empfangenen/gesendeten/gesamten Datenverkehrs zur Empfangs-/Sende-/Gesamtkapazität während des Stichprobenzeitraums. 
 
 
-| Auslastung (Gesamt, Lesen, Schreiben) % | Prozentsatz der verfügbaren Bandbreite für die Übertragung (Tx) und den Empfang (Rx). 
+| Auslastung (Gesamt, Lesen, Schreiben) % | Prozentsatz der verfügbaren Bandbreite, die für Übertragung (Tx) und Empfang (Rx) verwendet wird. 
 
 
-| Ausstehende Schreibvorgänge (Gesamt) | Anzahl der ausstehenden Schreib-I/O-Serviceanfragen. 
+| Ausstehendes Schreiben (Gesamt) | Anzahl der ausstehenden Schreib-E/A-Dienstanforderungen. 
 |===

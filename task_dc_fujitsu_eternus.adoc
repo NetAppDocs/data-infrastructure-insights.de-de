@@ -2,42 +2,42 @@
 sidebar: sidebar 
 permalink: task_dc_fujitsu_eternus.html 
 keywords: data collector, Fujitsu, Eternus 
-summary: Fujitsu ETERNUS-Datensammler konfigurieren. 
+summary: Konfigurieren des Fujitsu Eternus-Datensammlers. 
 ---
-= Fujitsu ETERNUS Datensammler
+= Fujitsu Eternus Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der Fujitsu ETERNUS-Datensammler erfasst Bestandsdaten über administrativen Zugriff auf das Speichersystem.
+Der Fujitsu Eternus-Datenkollektor erfasst Inventardaten mithilfe des Administratorzugriffs auf das Speichersystem.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights bezieht die folgenden Bestandsinformationen aus dem Fujitsu ETERNUS Storage. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erfasst die folgenden Bestandsinformationen vom Fujitsu Eternus-Speicher.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 
 
 | Storage | Storage 
 
 
-| Thin Pool, Flexible Tier Pool, Raid-Gruppe | Storage-Pool 
+| Thin Pool, Flexible Tier Pool, Raid-Gruppe | Speicherpool 
 
 
-| Standard-Volume, Snap Data Volume (SDV), Snap Data Pool Volume (SDPV), Thin Provisioning Volume (TPV), Flexible Tier Volume (FTV), Wide Striping Volume (WSV) | Datenmenge 
+| Standard-Volume, Snap-Daten-Volume (SDV), Snap-Daten-Pool-Volume (SDPV), Thin-Provisioning-Volume (TPV), Flexible-Tier-Volume (FTV), Wide-Striping-Volume (WSV) | Volumen 
 
 
-| Channel-Adapter | Controller 
+| Kanaladapter | Regler 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diese Datensammlung möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
@@ -45,10 +45,10 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 
 Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlich:
 
-* Eine IP-Adresse des ETERNUS-Speichers, die nicht durch Komma getrennt werden kann
-* Benutzername und Passwort der SSH-Administration
-* Anschluss 22
-* Stellen Sie sicher, dass die Seitenscrollen deaktiviert ist (clienv-show-more-Scroll deaktiviert)
+* Eine IP-Adresse des Eternus-Speichers, die nicht durch Kommas getrennt sein darf
+* Benutzername und Kennwort auf SSH-Administrationsebene
+* Port 22
+* Stellen Sie sicher, dass das Scrollen der Seite deaktiviert ist (clienv-show-more-scroll disable)
 
 
 
@@ -60,13 +60,13 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 | Feld | Beschreibung 
 
 
-| IP-Adresse des ETERNUS-Speichers | IP-Adresse des ETERNUS-Speichers 
+| IP-Adresse des Eternus-Speichers | IP-Adresse des Eternus-Speichers 
 
 
-| Benutzername | Benutzername für ETERNUS-Speicher 
+| Benutzername | Benutzername für Eternus-Speicher 
 
 
-| Passwort | Passwort für den ETERNUS-Speicher 
+| Passwort | Passwort für den Eternus-Speicher 
 |===
 
 
@@ -77,13 +77,13 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Die Standardeinstellung ist 20 Minuten. 
+| Inventarabfrageintervall (min) | Der Standardwert beträgt 20 Minuten. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -91,12 +91,12 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| „Fehler beim Abrufen von Daten“ mit Fehlermeldungen „Error Finding prompt CLI“ oder „Error Finding prompt at the end of Shell results“ | Wahrscheinlich verursacht durch: Speichersystem hat Seite Scrollen aktiviert. Mögliche Lösung: * Versuchen Sie, den Bildlauf zu deaktivieren, indem Sie den folgenden Befehl ausführen: Clienv-show-more -scroll disable 
+| „Fehler beim Abrufen der Daten“ mit den Fehlermeldungen „Fehler beim Suchen der Eingabeaufforderung CLI“ oder „Fehler beim Suchen der Eingabeaufforderung am Ende der Shell-Ergebnisse“ | Wahrscheinliche Ursache: Im Speichersystem ist das Scrollen von Seiten aktiviert.  Mögliche Lösung: * Versuchen Sie, das Scrollen der Seite zu deaktivieren, indem Sie den folgenden Befehl ausführen: set clienv-show-more -scroll disable 
 
 
-| „Verbindungsfehler“ mit Fehlermeldungen „konnte eine SSH-Verbindung zum Storage nicht instanziieren“ oder „Verbindung zum VirtualCenter konnte nicht hergestellt werden“ | Wahrscheinliche Ursachen: * Falsche Anmeldeinformationen. * Falsche IP-Adresse. * Netzwerkproblem. * Storage kann ausgefallen oder nicht mehr reagiert werden. Mögliche Lösungen: * Überprüfen Sie die eingegebenen Anmeldeinformationen und die eingegebene IP-Adresse. * Versuchen Sie, mit dem Speicher über SSH Client zu kommunizieren. 
+| „Verbindungsfehler“ mit den Fehlermeldungen „Fehler beim Herstellen einer SSH-Verbindung zum Speicher“ oder „Fehler beim Herstellen einer Verbindung zu VirtualCenter“ | Mögliche Ursachen: * Falsche Anmeldeinformationen.  * Falsche IP-Adresse.  * Netzwerkproblem.  * Der Speicher ist möglicherweise ausgefallen oder reagiert nicht.  Mögliche Lösungen: * Überprüfen Sie die eingegebenen Anmeldeinformationen und die IP-Adresse.  * Versuchen Sie, über den SSH-Client mit dem Speicher zu kommunizieren. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

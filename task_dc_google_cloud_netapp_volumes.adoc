@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_google_cloud_netapp_volumes.html 
-summary: Konfigurieren Sie den Google Cloud NetApp Volumes Datensammler. 
+summary: Konfigurieren Sie den Google Cloud NetApp Volumes Datenkollektor. 
 keywords: data collector, queries, create, google, cloud, volumes, 
 ---
 = Google Cloud NetApp Volumes Datensammler
@@ -14,15 +14,15 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 
 [role="lead"]
-Dieser Datensammler unterstützt die Inventarisierung und Leistungserfassung von Google Cloud NetApp Volumes -Konfigurationen. Der Sammler erkennt NetApp Volumes und Speicherressourcen in allen Projekten einer Google-Organisation. Wenn Sie mehrere Google-Organisationen mit Data Infrastructure Insights überwachen möchten, stellen Sie pro Organisation einen Sammler bereit.
+Dieser Datensammler unterstützt die Bestands- und Leistungserfassung von Google Cloud NetApp Volumes -Konfigurationen.  Der Collector erkennt NetApp -Volumes und Speicherressourcen in allen Projekten innerhalb einer Google-Organisation.  Wenn Sie mehrere Google-Organisationen haben, die Sie mit Data Infrastructure Insights überwachen möchten, stellen Sie einen Collector pro Organisation bereit.
 
 
 
-== Anforderungen Für Servicekonten
+== Anforderungen für Dienstkonten
 
-* Sie müssen ein Service-Konto erstellen, indem Sie die Anweisungen in befolgenlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Erstellen/Verwalten Von Servicekonten"]. Dieses Dienstkonto wird durch eine eindeutige ID identifiziert, die als _clientId_ bezeichnet wird und als Benutzername verwendet wird.
-* Erstellen Sie außerdem einen Servicekontoschlüssel, indem Sie die Anweisungen in befolgenlink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Erstellen/Verwalten Von Servicekontoschlüsseln"]. Dieser Schlüssel kann als json-Datei heruntergeladen werden, deren Inhalt als Passwort verwendet wird.
-* Das Servicekonto muss für _Compute.Readonly_, _Monitoring.read_ und _Cloud-Platform_ berücksichtigt werden.
+* Sie müssen ein Dienstkonto erstellen, indem Sie den Anweisungen inlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Erstellen/Verwalten von Dienstkonten"] .  Dieses Dienstkonto wird durch eine eindeutige ID identifiziert, die als _clientId_ bezeichnet wird und als Benutzername verwendet wird.
+* Erstellen Sie außerdem einen Dienstkontoschlüssel, indem Sie den Anweisungen inlink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Erstellen/Verwalten von Dienstkontoschlüsseln"] .  Dieser Schlüssel kann als JSON-Datei heruntergeladen werden, deren Inhalt als Passwort verwendet wird.
+* Das Dienstkonto muss auf _compute.readonly_, _monitoring.read_ und _cloud-platform_ beschränkt sein.
 
 
 
@@ -34,22 +34,22 @@ Dieser Datensammler unterstützt die Inventarisierung und Leistungserfassung von
 | Feld | Beschreibung 
 
 
-| Organisation-ID | Die Organisations-ID, die Sie mit diesem Sammler entdecken möchten. Dieses Feld ist erforderlich, wenn Ihr Servicekonto mehr als eine Organisation sehen kann 
+| Organisations-ID | Die Organisations-ID, die Sie mit diesem Collector ermitteln möchten.  Dieses Feld ist erforderlich, wenn Ihr Servicekonto mehr als eine Organisation sehen kann 
 
 
-| Wählen Sie „Ausschließen“ oder „Einschließen“, um GCNV-Assets nach Standort zu filtern | Dies wird standardmäßig ausgeschlossen, da dieser Collector standardmäßig beabsichtigt, alle GCNV-Volumes weltweit in Ihrem Unternehmen zu ermitteln. 
+| Wählen Sie „Ausschließen“ oder „Einschließen“, um GCNV-Assets nach Standort zu filtern | Die Standardeinstellung ist „Ausschließen“, da dieser Collector standardmäßig alle GCNV-Volumes weltweit innerhalb Ihrer Organisation ermitteln soll. 
 
 
-| GCNV Exclude/Include Locations | Dies ist standardmäßig leer und wird in Verbindung mit der Option „Wählen Sie ‚Ausschließen‘ oder ‚Einschließen‘“ verwendet. Wenn Sie Assets nur in bestimmten Regionen ermitteln möchten, verwenden Sie diese beiden Optionen, um den Umfang dieses Collectors einzuschränken. 
+| GCNV-Standorte ausschließen/einschließen | Dies ist standardmäßig leer und wird in Verbindung mit der Option „Wählen Sie ‚Ausschließen‘ oder ‚Einschließen‘“ verwendet.  Wenn Sie Assets nur in bestimmten Regionen entdecken möchten, verwenden Sie diese beiden Optionen, um den Umfang dieses Collectors einzuschränken. 
 
 
-| Projekt-IDs | Die Liste der Projekt-IDs, die Sie in oder aus der Erkennung filtern möchten, hängt vom Wert des Werts "Ausschließen"... ab. Die Standardliste ist leer 
+| Projekt-IDs | Die Liste der Projekt-IDs, die Sie je nach Wert des Werts „Wählen Sie ‚Ausschließen‘ …“ in die Erkennung ein- oder ausfiltern möchten.  Die Standardliste ist leer 
 
 
-| Client-ID | Client-ID für die Konfiguration der Google Cloud Platform 
+| Client-ID | Client-ID für die Google Cloud Platform-Konfiguration 
 
 
-| Kopieren Sie den Inhalt Ihrer Google Credential-Datei hier | Kopieren Sie Ihre Google-Anmeldedaten für das Cloud-Plattform-Konto in dieses Feld 
+| Kopieren Sie den Inhalt Ihrer Google-Anmeldeinformationsdatei und fügen Sie ihn hier ein. | Kopieren Sie Ihre Google-Anmeldeinformationen für das Cloud Platform-Konto in dieses Feld 
 |===
 
 
@@ -60,19 +60,19 @@ Dieser Datensammler unterstützt die Inventarisierung und Leistungserfassung von
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten 
+| Inventarabfrageintervall (min) | Der Standardwert ist 60 Minuten 
 
 
-| Verwenden Sie AU-Proxy für REST-API-Aufrufe | Wählen Sie diese Option, damit der Collector denselben Proxy verwendet wie die Acquisition Unit, auf der er sich befindet. Standardmäßig ist diese Option deaktiviert. Der Collector versucht daher, HTTPS-API-Aufrufe direkt an Google zu senden. 
+| Verwenden Sie den AU-Proxy für REST-API-Aufrufe | Wählen Sie diese Option, damit der Collector denselben Proxy verwendet wie die Erfassungseinheit, auf der sich der Collector befindet.  Standardmäßig ist dies deaktiviert, was bedeutet, dass der Collector versucht, HTTPS-API-Aufrufe direkt an Google zu senden. 
 
 
-| Bezeichnungsschlüssel und Werte, auf denen VMs gefiltert werden sollen | Klicken Sie auf *+ Filter Label*, um die VMs (und zugehörigen Festplatten) auszuwählen, die durch Filtern nach Schlüsseln und Werten, die Schlüssel und Werte der Labels auf der VM entsprechen, einzuschließen bzw. auszuschließen. Etikettenschlüssel ist erforderlich, Etikettenwert ist optional. Wenn der Etikettenwert leer ist, wird die VM solange gefiltert, wie sie dem Etikettenschlüssel entspricht. 
+| Label-Schlüssel und -Werte zum Filtern von VMs | Klicken Sie auf *+ Bezeichnung filtern*, um auszuwählen, welche VMs (und zugehörigen Datenträger) ein-/ausgeschlossen werden sollen, indem Sie nach Schlüsseln und Werten filtern, die mit den Schlüsseln und Werten der Bezeichnungen auf der VM übereinstimmen.  Der Beschriftungsschlüssel ist erforderlich, der Beschriftungswert ist optional.  Wenn der Labelwert leer ist, wird die VM gefiltert, solange sie mit dem Labelschlüssel übereinstimmt. 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 300 Sekunden 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 300 Sekunden 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

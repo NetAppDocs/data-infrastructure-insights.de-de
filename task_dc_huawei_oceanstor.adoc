@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_huawei_oceanstor.html 
 keywords: data collector, Huawei, OceanStor, Dorado 
-summary: 'Konfigurieren des Datensammlers Huawei OceanStor (REST/HTTPS)' 
+summary: 'Konfigurieren des Huawei OceanStor (REST/HTTPS)-Datensammlers.' 
 ---
 = Huawei OceanStor Datensammler
 :hardbreaks:
@@ -10,56 +10,56 @@ summary: 'Konfigurieren des Datensammlers Huawei OceanStor (REST/HTTPS)'
 
 
 [role="lead"]
-Data Infrastructure Insights nutzt den Huawei OceanStor (REST/HTTPS) Datensammler zur Ermittlung von Inventar und Leistung für Huawei OceanStor und OceanStor Dorado Speicher.
+Data Infrastructure Insights verwendet den Huawei OceanStor (REST/HTTPS)-Datensammler, um Inventar und Leistung für Huawei OceanStor- und OceanStor Dorado-Speicher zu ermitteln.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestands- und Leistungsinformationen vom Huawei OceanStor. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestands- und Leistungsinformationen vom Huawei OceanStor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Storage-Pool | Storage-Pool 
+| Speicherpool | Speicherpool 
 
 
-| File-System | Internes Volumen 
+| Dateisystem | Internes Volumen 
 
 
-| Controller | Storage-Node 
+| Regler | Speicherknoten 
 
 
-| FC-Port (zugeordnet) | Volume-Zuordnung 
+| FC-Port (zugeordnet) | Volumenkarte 
 
 
-| Host FC Initiator (zugeordnet) | Volume-Maske 
+| Host-FC-Initiator (zugeordnet) | Volumenmaske 
 
 
-| NFS/CIFS-Freigabe | Share 
+| NFS/CIFS-Freigabe | Aktie 
 
 
-| ISCSI-Link-Ziel | ISCSI-Ziel-Node 
+| iSCSI-Link-Ziel | iSCSI-Zielknoten 
 
 
-| ISCSI-Link-Initiator | ISCSI-Initiator-Node 
+| iSCSI-Link-Initiator | iSCSI-Initiatorknoten 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 
 
-| LUN | Datenmenge 
+| LUN | Volumen 
 |===
 
 
 == Anforderungen
 
-Zur Konfiguration dieses Datensammlers sind folgende Anforderungen erforderlich:
+Zum Konfigurieren dieses Datensammlers sind die folgenden Voraussetzungen erforderlich:
 
 * IP-Adresse des Geräts
-* Anmeldeinformationen für den Zugriff auf OceanStor Geräte-Manager
+* Anmeldeinformationen für den Zugriff auf den OceanStor-Gerätemanager
 * Port 8088 muss verfügbar sein
 
 
@@ -72,10 +72,10 @@ Zur Konfiguration dieses Datensammlers sind folgende Anforderungen erforderlich:
 | Feld | Beschreibung 
 
 
-| OceanStor Host-IP-Adresse | IP-Adresse oder vollqualifizierter Domain-Name des OceanStor Device Managers 
+| OceanStor-Host-IP-Adresse | IP-Adresse oder vollqualifizierter Domänenname des OceanStor Device Managers 
 
 
-| Benutzername | Name, der zur Anmeldung beim OceanStor Device Manager verwendet wird 
+| Benutzername | Name, der für die Anmeldung beim OceanStor Device Manager verwendet wird 
 
 
 | Passwort | Passwort zur Anmeldung beim OceanStor Device Manager 
@@ -89,16 +89,16 @@ Zur Konfiguration dieses Datensammlers sind folgende Anforderungen erforderlich:
 | Feld | Beschreibung 
 
 
-| TCP-Anschluss | TCP-Port zur Verbindung mit dem OceanStor Device Manager. Der Standardwert ist 8088. 
+| TCP-Port | TCP-Port, der für die Verbindung mit dem OceanStor Device Manager verwendet wird.  Der Standardwert ist 8088. 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
 
 
-| Leistungsintervall (Sek.). | Die Standardeinstellung ist 300 Sekunden. 
+| Leistungsabfrageintervall (Sek.). | Der Standardwert beträgt 300 Sekunden. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

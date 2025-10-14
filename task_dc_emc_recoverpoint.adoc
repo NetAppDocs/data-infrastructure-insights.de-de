@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: task_dc_emc_recoverpoint.html 
 keywords: data collector, RecoverPoint, EMC, DELL 
-summary: Konfigurieren VON DELL EMC RecoverPoint Data Collector 
+summary: Konfigurieren des DELL EMC RecoverPoint-Datenkollektors. 
 ---
-= Dell EMC RecoverPoint Data Collector
+= Dell EMC RecoverPoint-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der primäre Anwendungsfall des EMC RecoverPoint Data Collector ist die Ermittlung von Replikationsbeziehungen zwischen Volumes, die von der RecoverPoint-Speicher-Appliance unterstützt werden. Dieser Sammler entdeckt auch das RecoverPoint-Gerät selbst. Bitte beachten Sie, dass Dell/EMC eine VMware Backup-Lösung für VMs--„RecoverPoint for VMs“ verkauft, die von diesem Collector nicht unterstützt wird
+Der Hauptanwendungsfall des EMC RecoverPoint-Datensammlers besteht darin, Volume-zu-Volume-Replikationsbeziehungen zu ermitteln, die das RecoverPoint-Speichergerät ermöglicht.  Dieser Collector erkennt auch das Recoverpoint-Gerät selbst.  Bitte beachten Sie, dass Dell/EMC eine VMware-Backup-Lösung für VMs verkauft – „RecoverPoint für VMs“ – die von diesem Collector nicht unterstützt wird.
 
-Zur Konfiguration benötigt der Datensammler die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Kennwort.
+Zur Konfiguration benötigt der Datensammler die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Passwort.
 
-Der EMC RecoverPoint Data Collector sammelt die Replikationsbeziehungen zwischen Volume und Volume, die RecoverPoint über andere Speicher-Arrays hinweg koordiniert. Data Infrastructure Insights zeigt ein Speicher-Array für jeden RecoverPoint-Cluster an und sammelt Bestandsdaten für Knoten und Speicherports auf diesem Cluster. Es werden keine Storage-Pool- oder Volume-Daten erfasst.
+Der EMC RecoverPoint-Datenkollektor erfasst die Volume-zu-Volume-Replikationsbeziehungen, die RecoverPoint über andere Speicher-Arrays hinweg koordiniert.  Data Infrastructure Insights zeigt ein Speicherarray für jeden RecoverPoint-Cluster und sammelt Inventardaten für Knoten und Speicherports auf diesem Cluster.  Es werden keine Speicherpool- oder Volumedaten erfasst.
 
 
 
 == Anforderungen
 
-Zur Konfiguration dieses Datensammlers sind folgende Informationen erforderlich:
+Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
 
-* IP-Adresse oder vollqualifizierter Domain-Name des Speicherprozessors
-* Schreibgeschützter Benutzername und Kennwort
+* IP-Adresse oder vollqualifizierter Domänenname des Speicherprozessors
+* Benutzername und Kennwort nur zum Lesen
 * REST-API-Zugriff über Port 443
 
 
@@ -36,13 +36,13 @@ Zur Konfiguration dieses Datensammlers sind folgende Informationen erforderlich:
 | Feld | Beschreibung 
 
 
-| Adresse von RecoverPoint | IP-Adresse oder vollqualifizierter Domain-Name des RecoverPoint-Clusters 
+| Adresse von RecoverPoint | IP-Adresse oder vollqualifizierter Domänenname des RecoverPoint-Clusters 
 
 
-| Benutzername | Benutzername für das RecoverPoint-Cluster 
+| Benutzername | Benutzername für den RecoverPoint-Cluster 
 
 
-| Passwort | Passwort, das für den RecoverPoint-Cluster verwendet wird 
+| Passwort | Für den RecoverPoint-Cluster verwendetes Kennwort 
 |===
 
 
@@ -53,16 +53,16 @@ Zur Konfiguration dieses Datensammlers sind folgende Informationen erforderlich:
 | Feld | Beschreibung 
 
 
-| TCP-Anschluss | TCP-Port für die Verbindung mit dem RecoverPoint-Cluster 
+| TCP-Port | Für die Verbindung mit dem Recoverpoint-Cluster verwendeter TCP-Port 
 
 
-| Abfrageintervall für Bestand (Minuten) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 20 Minuten. 
+| Inventarabfrageintervall (Minuten) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 20 Minuten. 
 
 
-| Ausgeschlossene Cluster | Kommagetrennte Liste von Cluster-IDs oder Namen, die beim Abfragen ausgeschlossen werden sollen. 
+| Ausgeschlossene Cluster | Durch Kommas getrennte Liste von Cluster-IDs oder -Namen, die beim Polling ausgeschlossen werden sollen. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept_cs_attack_simulator.html 
 keywords: ransomware, simulation, simulator, restrict, attack 
-summary: Mithilfe eines Skripts können Sie einen Ransomware-Angriff zum Testen oder Vorführen von Workload Security simulieren 
+summary: Mithilfe eines Skripts können Sie einen Ransomware-Angriff simulieren, um die Workload-Sicherheit zu testen oder zu demonstrieren 
 ---
-= Workload Security: Simulation eines Angriffs
+= Workload-Sicherheit: Simulation eines Angriffs
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,52 +14,52 @@ summary: Mithilfe eines Skripts können Sie einen Ransomware-Angriff zum Testen 
 
 
 [role="lead"]
-Mithilfe der Anweisungen auf dieser Seite können Sie einen Angriff für das Testen oder Demonieren der Workload-Sicherheit mithilfe des im Lieferumfang enthaltenen Skripts Ransomware Simulation simulieren.
+Sie können die Anweisungen auf dieser Seite verwenden, um einen Angriff zum Testen oder Demonstrieren der Workload-Sicherheit mithilfe des enthaltenen Ransomware-Simulationsskripts zu simulieren.
 
 
 
-== Dinge zu beachten, bevor Sie beginnen
+== Dinge, die Sie vor dem Beginn beachten sollten
 
-* Das Ransomware-Simulationsskript funktioniert nur auf Linux. Das Simulationsskript sollte auch Warnmeldungen mit hoher Zuverlässigkeit generieren, falls der Benutzer ONTAP ARP mit Workload Security integriert hat.
-* Workload Security erkennt mit NFS 4.1 generierte Ereignisse und Warnungen nur, wenn die ONTAP-Version 9.15 oder höher ist.
-* Das Skript wird mit den Installationsdateien des Workload Security Agent bereitgestellt. Sie ist auf jedem Computer verfügbar, auf dem ein Workload Security Agent installiert ist.
-* Sie können das Skript auf dem Workload Security Agent-Rechner selbst ausführen; es ist nicht erforderlich, einen anderen Linux-Rechner vorzubereiten. Wenn Sie jedoch das Skript lieber auf einem anderen System ausführen möchten, kopieren Sie einfach das Skript und führen es dort aus.
-* Benutzer können sich je nach ihren Vorlieben und Systemanforderungen entweder für das Python- oder das Shell-Skript entscheiden.
-* Das Python-Skript erfordert eine Installation. Wenn Sie Python nicht verwenden möchten, verwenden Sie das Shell-Skript.
+* Das Ransomware-Simulationsskript funktioniert nur unter Linux.  Das Simulationsskript sollte auch Warnmeldungen mit hoher Zuverlässigkeit generieren, falls der Benutzer ONTAP ARP mit Workload Security integriert hat.
+* Workload Security erkennt mit NFS 4.1 generierte Ereignisse und Warnungen nur, wenn die ONTAP Version 9.15 oder höher ist.
+* Das Skript wird mit den Installationsdateien des Workload Security-Agenten bereitgestellt.  Es ist auf jedem Computer verfügbar, auf dem ein Workload Security-Agent installiert ist.
+* Sie können das Skript auf der Workload Security-Agent-Maschine selbst ausführen. Es ist nicht erforderlich, eine weitere Linux-Maschine vorzubereiten.  Wenn Sie das Skript jedoch lieber auf einem anderen System ausführen möchten, kopieren Sie das Skript einfach und führen Sie es dort aus.
+* Benutzer können sich je nach ihren Präferenzen und Systemanforderungen entweder für das Python- oder das Shell-Skript entscheiden.
+* Für das Python-Skript sind Installationen erforderlich.  Wenn Sie Python nicht verwenden möchten, verwenden Sie das Shell-Skript.
 
 
 
 
 == Richtlinien:
 
-Dieses Skript sollte auf einer SVM ausgeführt werden, die einen Ordner mit einer beträchtlichen Anzahl zu verschlüsselnder Dateien enthält (idealerweise 100 oder mehr, einschließlich der Dateien in Unterordnern). Stellen Sie sicher, dass die Dateien nicht leer sind.
+Dieses Skript sollte auf einer SVM ausgeführt werden, die einen Ordner mit einer beträchtlichen Anzahl zu verschlüsselnder Dateien enthält, idealerweise 100 oder mehr, einschließlich Dateien in Unterordnern.  Stellen Sie sicher, dass die Dateien nicht leer sind.
 
-Um die Warnung zu generieren, pausieren Sie den Collector vor der Erstellung der Testdaten vorübergehend. Sobald die Beispieldateien generiert sind, setzen Sie den Collector fort und starten Sie den Verschlüsselungsprozess.
+Um die Warnung zu generieren, halten Sie den Collector vor der Erstellung der Testdaten vorübergehend an.  Sobald die Beispieldateien generiert sind, setzen Sie den Collector fort und starten Sie den Verschlüsselungsprozess.
 
 
 
-== Schritte
+== Schritte:
 
 
 
 === Bereiten Sie das System vor:
 
-Mounten Sie zunächst das Zielvolume auf dem Computer. Sie können entweder einen NFS- oder einen CIFS-Export mounten.
+Mounten Sie zunächst das Zielvolume auf der Maschine.  Sie können entweder einen NFS- oder einen CIFS-Export mounten.
 
 
 
-==== So mounten Sie den NFS-Export in Linux:
+==== So mounten Sie den NFS-Export unter Linux:
 
 [listing]
 ----
 mount -t nfs -o vers=4.0 10.193.177.158:/svmvol1 /mntpt
 mount -t nfs -o vers=4.0 Vserver data IP>:/nfsvol /destinationlinuxfolder
 ----
-Mounten Sie NFS Version 4.1 nicht; es wird von FPolicy nicht unterstützt.
+Mounten Sie NFS Version 4.1 nicht, da es von Fpolicy nicht unterstützt wird.
 
 
 
-==== So mounten Sie CIFS in Linux:
+==== So mounten Sie CIFS unter Linux:
 
 [listing]
 ----
@@ -67,14 +67,14 @@ mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o u
 ----
 
 
-==== Aktivieren Sie den autonomen ONTAP-Ransomware-Schutz (optional):
+==== Aktivieren Sie den autonomen ONTAP Ransomware-Schutz (optional):
 
-Wenn Ihre ONTAP-Clusterversion 9.11.1 oder höher ist, können Sie den ONTAP Ransomware Protection-Dienst aktivieren, indem Sie den folgenden Befehl auf der ONTAP-Befehlskonsole ausführen.
+Wenn Ihre ONTAP Clusterversion 9.11.1 oder höher ist, können Sie den ONTAP Ransomware Protection-Dienst aktivieren, indem Sie den folgenden Befehl auf der ONTAP Befehlskonsole ausführen.
 
  security anti-ransomware volume enable -volume [volume_name] -vserver [svm_name]
-Richten Sie als Nächstes einen Data Collector ein:
+Richten Sie als Nächstes einen Datensammler ein:
 
-. Konfigurieren Sie den Workload Security Agent, falls er noch nicht ausgeführt wurde.
+. Konfigurieren Sie den Workload Security-Agenten, falls dies noch nicht geschehen ist.
 . Konfigurieren Sie einen SVM-Datensammler, falls dies noch nicht geschehen ist.
 . Stellen Sie sicher, dass beim Konfigurieren des Datensammlers das Mount-Protokoll ausgewählt ist.
 
@@ -83,9 +83,9 @@ Richten Sie als Nächstes einen Data Collector ein:
 
 == Generieren Sie die Beispieldateien programmgesteuert:
 
-Bevor Sie die Dateien erstellen, müssen Sie zuerst stoppen oder link:task_add_collector_svm.html#play-pause-data-collector["den Datensammler anhalten"] Verarbeitung.
+Bevor Sie die Dateien erstellen, müssen Sie zuerst stoppen oderlink:task_add_collector_svm.html#play-pause-data-collector["den Datensammler anhalten"] Verarbeitung.
 
-Bevor Sie die Simulation ausführen, müssen Sie zuerst Dateien hinzufügen, die verschlüsselt werden sollen. Sie können die zu verschlüsselnden Dateien entweder manuell in den Zielordner kopieren oder eines der mitgelieferten Skripts verwenden, um die Dateien programmgesteuert zu erstellen. Unabhängig von der gewählten Methode müssen mindestens 100 zu verschlüsselnde Dateien vorhanden sein.
+Bevor Sie die Simulation ausführen, müssen Sie zunächst zu verschlüsselnde Dateien hinzufügen.  Sie können die zu verschlüsselnden Dateien entweder manuell in den Zielordner kopieren oder eines der enthaltenen Skripte verwenden, um die Dateien programmgesteuert zu erstellen.  Unabhängig davon, welche Methode Sie verwenden, stellen Sie sicher, dass mindestens 100 Dateien zum Verschlüsseln vorhanden sind.
 
 Wenn Sie die Dateien programmgesteuert erstellen möchten, können Sie die Shell oder Python verwenden:
 
@@ -93,8 +93,8 @@ Wenn Sie die Dateien programmgesteuert erstellen möchten, können Sie die Shell
 
 === Hülse:
 
-. Melden Sie sich im Feld Agent an.
-. Mounten Sie eine NFS- oder CIFS-Freigabe vom SVM des Filers auf der Agent-Maschine. CD in diesen Ordner.
+. Melden Sie sich beim Agentenfeld an.
+. Mounten Sie eine NFS- oder CIFS-Freigabe vom SVM des Filers auf der Agent-Maschine.  Wechseln Sie mit CD in diesen Ordner.
 . Kopieren Sie das Skript aus dem Agent-Installationsverzeichnis (%AGENT_INSTALL_DIR/ agent/install/ransomware_simulation/shell/create_dataset.sh) an den Ziel-Mount-Speicherort.
 . Führen Sie den folgenden Befehl mithilfe der Skripts im bereitgestellten Verzeichnis (z. B. /root/demo) aus, um den Ordner und die Dateien des Testdatensatzes zu erstellen:
 +
@@ -112,23 +112,23 @@ Wenn Sie die Dateien programmgesteuert erstellen möchten, können Sie die Shell
 
 * Installieren Sie Python (falls noch nicht installiert).
 +
-** Laden Sie Python 3.5.2 oder höher herunter von  https://www.python.org/[] .
-** Um die Python-Installation zu überprüfen, führen Sie  `python --version` .
+** Laden Sie Python 3.5.2 oder höher herunter von https://www.python.org/[] .
+** Um die Python-Installation zu überprüfen, führen Sie `python --version` .
 ** Das Python-Skript wurde bereits in Versionen ab 3.5.2 getestet.
 
 
 * Installieren Sie pip, falls es noch nicht installiert ist:
 +
-** Laden Sie das Skript get-pip.py herunter von  https://bootstrap.pypa.io/[] .
-** Installieren Sie pip mit  `python get-pip.py` .
-** Überprüfen Sie die Pip-Installation mit  `pip --version` .
+** Laden Sie das Skript get-pip.py herunter von https://bootstrap.pypa.io/[] .
+** Installieren Sie pip mit `python get-pip.py` .
+** Überprüfen Sie die Pip-Installation mit `pip --version` .
 
 
 * PyCryptodome-Bibliothek:
 +
 ** Das Skript verwendet die PyCryptodome-Bibliothek.
-** Installieren Sie PyCryptodome mit  `pip install pycryptodome` .
-** Bestätigen Sie die Installation von PyCryptodome durch Ausführen  `pip show pycryptodome` .
+** Installieren Sie PyCryptodome mit `pip install pycryptodome` .
+** Bestätigen Sie die Installation von PyCryptodome durch Ausführen `pip show pycryptodome` .
 
 
 
@@ -137,10 +137,10 @@ Wenn Sie die Dateien programmgesteuert erstellen möchten, können Sie die Shell
 
 ==== Python-Skript zum Erstellen von Dateien:
 
-. Melden Sie sich im Feld Agent an.
-. Mounten Sie eine NFS- oder CIFS-Freigabe vom SVM des Filers auf der Agent-Maschine. CD in diesen Ordner.
+. Melden Sie sich beim Agentenfeld an.
+. Mounten Sie eine NFS- oder CIFS-Freigabe vom SVM des Filers auf der Agent-Maschine.  Wechseln Sie mit CD in diesen Ordner.
 . Kopieren Sie das Skript aus dem Agent-Installationsverzeichnis (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/create_dataset.py) an den Ziel-Mount-Speicherort.
-. Führen Sie den folgenden Befehl mithilfe der Skripts im bereitgestellten Verzeichnis (z. B. /root/demo) aus, um den Ordner und die Dateien für das Test-Dataset zu erstellen:
+. Führen Sie den folgenden Befehl mithilfe der Skripts im bereitgestellten Verzeichnis (z. B. /root/demo) aus, um den Ordner und die Dateien für den Testdatensatz zu erstellen:
 +
  'python create_dataset.py'
 . Dadurch werden 100 nicht leere Dateien mit verschiedenen Erweiterungen im Mount-Ordner unter einem Verzeichnis namens „test_dataset“ erstellt.
@@ -156,7 +156,7 @@ Wenn Sie den Collector vor dem Ausführen dieser Schritte angehalten haben, denk
 
 == Generieren Sie die Beispieldateien programmgesteuert:
 
-Bevor Sie die Dateien erstellen, müssen Sie zuerst stoppen oder link:task_add_collector_svm.html#play-pause-data-collector["den Datensammler anhalten"] Verarbeitung.
+Bevor Sie die Dateien erstellen, müssen Sie zuerst stoppen oderlink:task_add_collector_svm.html#play-pause-data-collector["den Datensammler anhalten"] Verarbeitung.
 
 Um eine Ransomware-Warnung zu generieren, können Sie das enthaltene Skript ausführen, das eine Ransomware-Warnung in Workload Security simuliert.
 
@@ -165,7 +165,7 @@ Um eine Ransomware-Warnung zu generieren, können Sie das enthaltene Skript ausf
 === Hülse:
 
 . Kopieren Sie das Skript aus dem Agent-Installationsverzeichnis (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/simulate_attack.sh) an den Ziel-Mount-Speicherort.
-. Führen Sie den folgenden Befehl mithilfe der Skripts im bereitgestellten Verzeichnis (z. B. /root/demo) aus, um den Testdatensatz zu verschlüsseln:
+. Führen Sie den folgenden Befehl mithilfe der Skripte im bereitgestellten Verzeichnis (z. B. /root/demo) aus, um den Testdatensatz zu verschlüsseln:
 +
  './simulate_attack.sh'
 . Dadurch werden die im Verzeichnis „test_dataset“ erstellten Beispieldateien verschlüsselt.
@@ -177,7 +177,7 @@ Um eine Ransomware-Warnung zu generieren, können Sie das enthaltene Skript ausf
 
 . Kopieren Sie das Skript aus dem Agent-Installationsverzeichnis (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/simulate_attack.py) an den Ziel-Mount-Speicherort.
 . Bitte beachten Sie, dass die Python-Voraussetzungen gemäß dem Abschnitt „Voraussetzungen für Python-Skripte“ installiert werden.
-. Führen Sie den folgenden Befehl mithilfe der Skripts im bereitgestellten Verzeichnis (z. B. /root/demo) aus, um den Testdatensatz zu verschlüsseln:
+. Führen Sie den folgenden Befehl mithilfe der Skripte im bereitgestellten Verzeichnis (z. B. /root/demo) aus, um den Testdatensatz zu verschlüsseln:
 +
  'python simulate_attack.py'
 . Dadurch werden die im Verzeichnis „test_dataset“ erstellten Beispieldateien verschlüsselt.
@@ -191,7 +191,7 @@ Sobald die Ausführung des Simulatorskripts abgeschlossen ist, wird innerhalb we
 
 Hinweis: Falls alle der folgenden Bedingungen erfüllt sind, wird eine Warnung mit hoher Zuverlässigkeit generiert.
 
-. Überwachte SVM-ONTAP-Version höher als 9.11.1
+. Überwachte SVM- ONTAP Version höher als 9.11.1
 . ONTAP Autonomous Ransomware Protection konfiguriert
 . Der Workload Security Data Collector wird im Clustermodus hinzugefügt.
 
@@ -204,14 +204,14 @@ Beispiel für eine Warnung mit hoher Zuverlässigkeit auf der Seite mit der Warn
 
 image:ws_high_confidence_alert.png["Beispiel für eine Warnung mit hoher Zuverlässigkeit, Listenseite"]
 
-Beispiel für die Details einer Warnung mit hoher Zuverlässigkeit:
+Beispiel für Details einer Warnung mit hoher Zuverlässigkeit:
 
 image:ws_high_confidence_alert_detail.png["Beispiel für eine Warnung mit hoher Zuverlässigkeit, Detailseite"]
 
 
 
-== Alarm wird mehrfach ausgelöst
+== Alarm wird mehrmals ausgelöst
 
 Workload Security lernt das Benutzerverhalten und generiert keine Warnungen bei wiederholten Ransomware-Angriffen innerhalb von 24 Stunden für denselben Benutzer.
 
-Um einen neuen Alarm mit einem anderen Benutzer zu generieren, führen Sie dieselben Schritte erneut aus (Erstellen von Testdaten und anschließendes Verschlüsseln der Testdaten).
+Um einen neuen Alarm mit einem anderen Benutzer zu generieren, führen Sie bitte dieselben Schritte erneut aus (Erstellen von Testdaten und anschließendes Verschlüsseln der Testdaten).

@@ -2,63 +2,63 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnx_block.html 
 keywords: data collector, EMC, clariion, VNX block 
-summary: 'Konfiguration VON DELL EMC VNX Block Storage (ehemals CLARiiON)' 
+summary: 'Konfigurieren von DELL EMC VNX Block Storage (früher CLARiiON).' 
 ---
-= Datensammler Dell EMC VNX Block Storage (NaviCLI
+= Dell EMC VNX Block Storage (NaviCLI)-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Dell EMC VNX Block Storage (NaviSec) Data Collector (ehemals CLARiiON) zur Erfassung von Bestands- und Performance-Daten.
+Data Infrastructure Insights verwendet den Datensammler Dell EMC VNX Block Storage (NaviSec) (ehemals CLARiiON), um Bestands- und Leistungsdaten zu erfassen.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem EMC VNX Block Storage Data Collector. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom EMC VNX Block Storage-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 
 
 | Storage | Storage 
 
 
-| Storage Processor | Storage-Node 
+| Speicherprozessor | Speicherknoten 
 
 
-| Dieser Pool, RAID-Gruppe | Storage-Pool 
+| Dieser Pool, RAID-Gruppe | Speicherpool 
 
 
-| LUN | Datenmenge 
+| LUN | Volumen 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In dieser Datenquelle fallen möglicherweise nicht alle Fälle an.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diese Datenquelle darstellen.
 
 
 
 == Anforderungen
 
-Zur Datenerfassung müssen die folgenden Anforderungen erfüllt sein:
+Für die Datenerhebung müssen folgende Voraussetzungen erfüllt sein:
 
 * Eine IP-Adresse jedes VNX-Blockspeicherprozessors
-* Schreibgeschützter Navisphere-Benutzername und Kennwort für die VNX-Block-Speicher-Arrays
-* Naviseccli muss auf der Data Infrastructure Insights AU installiert sein
-* Zugriffsvalidierung: Führen Sie NaviSecCLI von der Data Infrastructure Insights AU zu jedem Array mit dem Benutzernamen und Passwort aus.
-* Port-Anforderungen: 80, 443
-* Naviseccli Version sollte mit dem neuesten FLARE-Code auf Ihrem Array entsprechen
-* Zur Performance muss die Statistik-Protokollierung aktiviert sein.
+* Schreibgeschützter Navisphere-Benutzername und -Passwort für die VNX-Blockspeicher-Arrays
+* NaviSecCli muss auf der Data Infrastructure Insights AU installiert sein
+* Zugriffsvalidierung: Führen Sie NaviSecCLI von der Data Infrastructure Insights AU mit dem Benutzernamen und dem Kennwort für jedes Array aus.
+* Portanforderungen: 80, 443
+* Die NaviSecCLI-Version sollte dem neuesten FLARE-Code auf Ihrem Array entsprechen
+* Aus Leistungsgründen muss die Statistikprotokollierung aktiviert sein.
 
 
 
 
-== Syntax der Navisphere Befehlszeilenschnittstelle
+== Syntax der NaviSphere-Befehlszeilenschnittstelle
 
-NaviSECCLI.exe -h <IP-Adresse> -user <user> -password <password> -scope <scope,use 0 for global Scope> -Port <use 443 by default> Command
+naviseccli.exe -h <IP-Adresse> -user <Benutzer> -password <Passwort> -scope <Bereich, verwenden Sie 0 für den globalen Bereich> -port <verwenden Sie standardmäßig 443> Befehl
 
 
 
@@ -69,16 +69,16 @@ NaviSECCLI.exe -h <IP-Adresse> -user <user> -password <password> -scope <scope,u
 | Feld | Beschreibung 
 
 
-| VNX Block Storage-IP-Adresse | IP-Adresse oder vollqualifizierter Domain-Name des VNX-Blockspeichers 
+| VNX-Blockspeicher-IP-Adresse | IP-Adresse oder vollqualifizierter Domänenname des VNX-Blockspeichers 
 
 
-| Benutzername | Name, der für die Anmeldung beim VNX-Block-Speichergerät verwendet wird. 
+| Benutzername | Name, der für die Anmeldung beim VNX-Blockspeichergerät verwendet wird. 
 
 
-| Passwort | Passwort zur Anmeldung beim VNX-Block-Speichergerät. 
+| Passwort | Kennwort zum Anmelden beim VNX-Blockspeichergerät. 
 
 
-| CLI-Pfad zu NaviSECCLI.exe | Vollständiger Pfad zum Ordner mit der ausführbaren Datei _naviseccli.exe_ 
+| CLI-Pfad zu naviseccli.exe | Vollständiger Pfad zum Ordner, der die ausführbare Datei _naviseccli.exe_ enthält 
 |===
 
 
@@ -89,19 +89,19 @@ NaviSECCLI.exe -h <IP-Adresse> -user <user> -password <password> -scope <scope,u
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 40 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen.  Der Standardwert ist 40 Minuten. 
 
 
-| Umfang | Der Umfang des sicheren Clients. Die Standardeinstellung ist Global. 
+| Umfang | Der sichere Clientbereich.  Die Standardeinstellung ist „Global“. 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 300 Sekunden. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -109,26 +109,26 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2a, 2a"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
  a| 
 Fehler:
 
-* Agent Wird Nicht Ausgeführt
+* Agent wird nicht ausgeführt
 * Naviseccli konnte nicht gefunden werden
-* Fehler beim Ausführen eines Befehls
+* Kein Befehl konnte ausgeführt werden
 
  a| 
-* Vergewissern Sie sich, dass Navisphere CLI auf der Cloud Insight Acquisition Unit installiert ist
-* Sie haben die Option „Secure Client verwenden“ im Assistenten für die Konfiguration des Datensammlers nicht ausgewählt und haben keine nicht sichere Version der Navisphere CLI installiert.
-* Vergewissern Sie sich, dass das Navisphere CLI-Installationsverzeichnis in der Data Collector-Konfiguration korrekt ist
-* Vergewissern Sie sich, dass die IP-Adresse des VNX-Blockspeichers in der Data Collector-Konfiguration korrekt ist:
-* Aus der Abteilung Data Infrastructure Insights Acquisition:
+* Bestätigen Sie, dass NaviSphere CLI auf der Cloud Insight Acquisition Unit installiert ist
+* Sie haben im Konfigurationsassistenten des Datensammlers nicht die Option „Sicheren Client verwenden“ ausgewählt und keine nicht sichere Version von Naviphere CLI installiert.
+* Bestätigen Sie, dass das NaviSphere CLI-Installationsverzeichnis in der Datensammlerkonfiguration korrekt ist
+* Bestätigen Sie, dass die IP des VNX-Blockspeichers in der Datensammlerkonfiguration korrekt ist:
+* Von der Data Infrastructure Insights Acquisition Unit:
 +
 ** Öffnen Sie eine CMD.
 ** Ändern Sie das Verzeichnis in das konfigurierte Installationsverzeichnis
-** Versuchen Sie, eine Verbindung mit dem VNX-Blockspeichergerät herzustellen, indem Sie „navicli -h} ip {getagent“ eingeben (ersetzen Sie die {ip} durch die tatsächliche IP).
+** Versuchen Sie, eine Verbindung mit dem VNX-Blockspeichergerät herzustellen, indem Sie „navicli -h {ip} getagent“ eingeben (ersetzen Sie {ip} durch die tatsächliche IP).
 
 
 
@@ -136,41 +136,41 @@ Fehler:
 
 
  a| 
-Fehler: 4.29 emc235848 emc241018 getall konnte keine Host-Alias-Info analysieren
+Fehler: 4.29 emc235848 emc241018 getall Fehler beim Parsen der Host-Alias-Informationen
  a| 
-Dies wird wahrscheinlich durch eine FLARE 29-Fehlerproblematik der Host-Initiator-Datenbank auf dem Array selbst verursacht. Siehe EMC Knowledge Base Artikel: Emc235848, emc241018. Sie können auch überprüfen https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[]
-
-
-
- a| 
-Fehler: Die Meta-LUNs können nicht abgerufen werden. Fehler beim Ausführen von java -jar navicli.jar
- a| 
-* Ändern der Datensammlerkonfiguration zur Verwendung des sicheren Clients (empfohlen)
-* Installieren Sie navicli.jar im CLI-Pfad zu navicli.exe ODER NaviSECCLI.exe
-* Hinweis: navicli.jar ist ab EMC Navisphere Version 6.26 veraltet
-* Das navicli.jar steht möglicherweise auf \http://powerlink.emc.com zur Verfügung
-
+Dies wird wahrscheinlich durch ein FLARE 29-Beschädigungsproblem der Host-Initiator-Datenbank auf dem Array selbst verursacht.  Siehe EMC-Wissensdatenbankartikel: emc235848, emc241018.  Sie können auch überprüfen https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[]
 
 
 
  a| 
-Fehler: Speicherpools melden keine Festplatten auf dem Serviceprozessor bei der konfigurierten IP-Adresse
+Fehler: Meta-LUNs konnten nicht abgerufen werden.  Fehler beim Ausführen von java -jar navicli.jar
  a| 
-Konfigurieren Sie den Datensammler mit beiden Service-Prozessor-IPs, getrennt durch Komma
+* Ändern Sie die Datensammlerkonfiguration, um den sicheren Client zu verwenden (empfohlen)
+* Installieren Sie navicli.jar im CLI-Pfad zu navicli.exe ODER naviseccli.exe
+* Hinweis: navicli.jar ist ab EMC Navisphere Version 6.26 veraltet.
+* Die navicli.jar ist möglicherweise verfügbar auf \http://powerlink.emc.com
+
+
+
+
+ a| 
+Fehler: Speicherpools melden keine Datenträger auf dem Serviceprozessor unter der konfigurierten IP-Adresse
+ a| 
+Konfigurieren Sie den Datensammler mit beiden Serviceprozessor-IPs, getrennt durch ein Komma
 
 
 
  a| 
-Fehler: Fehler bei nicht übereinstimmender Revision
+Fehler: Revisionskonflikt
  a| 
-* Dies wird normalerweise durch die Aktualisierung der Firmware auf dem VNX-Blockspeichergerät verursacht, aber nicht durch die Aktualisierung der Installation von NaviCLI.exe. Dies kann auch dadurch verursacht werden, dass verschiedene Geräte mit unterschiedlichen Firmwares installiert sind, aber nur eine CLI (mit einer anderen Firmware-Version).
-* Vergewissern Sie sich, dass sowohl das Gerät als auch der Host identische Versionen der Software ausführen:
+* Dies wird normalerweise dadurch verursacht, dass die Firmware auf dem VNX-Blockspeichergerät aktualisiert wird, nicht jedoch die Installation von NaviCLI.exe.  Dies kann auch daran liegen, dass auf verschiedenen Geräten unterschiedliche Firmwares vorhanden sind, aber nur eine CLI (mit einer anderen Firmware-Version) installiert ist.
+* Stellen Sie sicher, dass auf dem Gerät und dem Host identische Versionen der Software ausgeführt werden:
 +
 ** Öffnen Sie in der Data Infrastructure Insights Acquisition Unit ein Befehlszeilenfenster
 ** Ändern Sie das Verzeichnis in das konfigurierte Installationsverzeichnis
 ** Stellen Sie eine Verbindung mit dem CLARiiON-Gerät her, indem Sie „navicli -h <ip> getagent“ eingeben.
-** Achten Sie auf die Versionsnummer auf den ersten Zeilen. Beispiel: „Agent Rev: 6.16.2 (0.1)“
-** Suchen und vergleichen Sie die Version in der ersten Zeile. Beispiel: „Navisphere CLI Revision 6.07.00.04.07“
+** Suchen Sie in den ersten Zeilen nach der Versionsnummer.  Beispiel: „Agent Rev: 6.16.2 (0.1)“
+** Suchen und vergleichen Sie die Version in der ersten Zeile.  Beispiel: „Navisphere CLI Revision 6.07.00.04.07“
 
 
 
@@ -178,9 +178,9 @@ Fehler: Fehler bei nicht übereinstimmender Revision
 
 
  a| 
-Fehler: Nicht Unterstützte Konfiguration - Keine Fibre-Channel-Ports
+Fehler: Nicht unterstützte Konfiguration – Keine Fibre Channel-Ports
  a| 
-Das Gerät ist nicht mit Fibre-Channel-Ports konfiguriert. Aktuell werden nur FC-Konfigurationen unterstützt. Überprüfen Sie, ob diese Version/Firmware unterstützt wird.
+Das Gerät ist nicht mit Fibre-Channel-Ports konfiguriert.  Derzeit werden nur FC-Konfigurationen unterstützt.  Überprüfen Sie, ob diese Version/Firmware unterstützt wird.
 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -1,58 +1,62 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_expert_view_section.html 
-summary: Der Abschnitt „Expertenansicht“ einer Asset-Seite ist ein leistungsstarkes Tool zur Fehlerbehebung oder Überwachung. 
-keywords: asset page, expert view, metrics, greedy, degraded, correlated, contributors, chart, refresh 
+summary: Der Abschnitt „Leistung“ einer Asset-Seite ist ein leistungsstarkes Tool zur Fehlerbehebung oder Überwachung. 
+keywords: asset page, expert view, metrics, greedy, degraded, correlated, contributors, chart, refresh, performance 
 ---
-= Expertensicht
+= Leistungsbereich
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Im Abschnitt „Expertenansicht“ auf der Seite „Anlage“ können Sie anhand einer beliebigen Anzahl anwendbarer Metriken im Kontext eines ausgewählten Zeitraums im Leistungsdiagramm und aller damit verbundenen Ressourcen eine Performance-Probe für das Basisressource anzeigen. Die Daten in den Diagrammen werden automatisch aktualisiert, wenn Datensammler abfragen und aktualisierte Daten erfasst werden.
+Im Abschnitt „Leistung“ einer Asset-Seite oder eines Slideout-Panels können Sie ein Leistungsbeispiel für das Basis-Asset basierend auf einer beliebigen Anzahl anwendbarer Metriken im Kontext eines ausgewählten Zeitraums im Leistungsdiagramm und aller damit verbundenen Assets anzeigen.  Die Daten in den Diagrammen werden automatisch aktualisiert, wenn Datensammler Abfragen durchführen und aktualisierte Daten erfasst werden.
 
 
 
-== Verwenden des Abschnitts „Expertenansicht“
+== Verwenden des Abschnitts „Leistung“
 
-Im Folgenden finden Sie ein Beispiel für den Abschnitt „Expert View“ auf einer Storage Asset-Seite:
+Nachfolgend sehen Sie ein Beispiel für den Abschnitt „Leistung“ auf einer Speicherressourcenseite:
 
-image:Expert_View_2021.png["Beispiel Einer Expertenansicht"]
+image:asset_page_performance_section.png["Leistungsbereich"]
 
-Sie können die Metriken auswählen, die im Performance-Diagramm für den ausgewählten Zeitraum angezeigt werden sollen. Klicken Sie auf das Dropdown-Menü „ Metriken anzeigen “, und wählen Sie aus den aufgeführten Metriken aus.
+Sie können die Kennzahlen auswählen, die Sie im Leistungsdiagramm für den ausgewählten Zeitraum anzeigen möchten.  Klicken Sie auf das Dropdown-Menü „Anzeigemetriken“ und wählen Sie aus den aufgelisteten Metriken aus.
 
-Der Abschnitt *Ressourcen* zeigt den Namen des Basisinformers und die Farbe, die das Basisoutum im Leistungsdiagramm darstellt. Wenn der Abschnitt *Top Correlated* kein Asset enthält, das im Leistungsdiagramm angezeigt werden soll, können Sie das Feld *Assets suchen* im Abschnitt *zusätzliche Ressourcen* verwenden, um das Asset zu lokalisieren und zum Leistungsdiagramm hinzuzufügen. Beim Hinzufügen von Ressourcen werden diese im Abschnitt zusätzliche Ressourcen angezeigt.
+Der Abschnitt *Ressourcen* zeigt den Namen des Basisvermögens und die Farbe, die das Basisvermögen im Leistungsdiagramm darstellt.  Wenn der Abschnitt *Top Correlated* einen Vermögenswert, den Sie im Leistungsdiagramm anzeigen möchten, nicht enthält, können Sie das Feld *Assets suchen* im Abschnitt *Zusätzliche Ressourcen* verwenden, um den Vermögenswert zu suchen und ihn dem Leistungsdiagramm hinzuzufügen.  Wenn Sie Ressourcen hinzufügen, werden diese im Abschnitt „Zusätzliche Ressourcen“ angezeigt.
 
-Sind auch im Abschnitt Ressourcen aufgeführt, sofern zutreffend, alle Assets, die sich auf das Basivermögen in den folgenden Kategorien beziehen:
+Im Abschnitt „Ressourcen“ werden gegebenenfalls auch alle mit dem Basisvermögenswert verbundenen Vermögenswerte in den folgenden Kategorien angezeigt:
 
-* Oben korreliert
+* Am stärksten korreliert
 +
-Zeigt die Assets, die eine hohe Korrelation (in Prozent) mit einem oder mehreren Performance-Kennzahlen zur Basisinressource haben.
+Zeigt die Vermögenswerte an, die eine hohe Korrelation (Prozentsatz) mit einer oder mehreren Leistungskennzahlen zum Basisvermögenswert aufweisen.
 
 * Top-Mitwirkende
 +
-Zeigt die Assets an, die (in Prozent) zur Basisinressource beitragen.
+Zeigt die Vermögenswerte an, die (prozentual) zum Basisvermögen beitragen.
 
 * Workload-Konflikte
 +
-Zeigt die Ressourcen an, die Auswirkungen auf andere gemeinsam genutzte Ressourcen wie Hosts, Netzwerke und Storage haben bzw. von diesen betroffen sind. Diese werden manchmal als _gierige_ und _degradierte_ Ressourcen bezeichnet.
+Zeigt die Assets an, die sich auf andere gemeinsam genutzte Ressourcen wie Hosts, Netzwerke und Speicher auswirken oder von diesen beeinflusst werden.  Diese werden manchmal als _gierige_ und _verschlechterte_ Ressourcen bezeichnet.
 
 
 
 
 
-== Warnmeldungen in der Ansicht „Experten“
+== Warnungen im Abschnitt „Leistung“
 
-Warnmeldungen werden auch im Abschnitt „Expertenansicht“ einer Asset-Landing-Page angezeigt, auf der die Zeit und Dauer der Warnmeldung sowie die Monitorbedingung angezeigt werden, die diese ausgelöst hat.
+Warnungen werden auch im Abschnitt „Leistung“ einer Asset-Landingpage angezeigt und geben die Uhrzeit und Dauer der Warnung sowie die Monitorbedingung an, die sie ausgelöst hat.  Bewegen Sie den Mauszeiger über einen Warnhinweis, um Details zu dem Warnhinweis anzuzeigen.
 
-image:Alerts_In_Expert_View.png["Warnmeldungen in der Ansicht „Experten“"]
+image:asset_page_alert_section.png["Warnungen im Leistungsbereich"]
 
 
 
-== Metrische Definitionen der Expertenansicht
+== Definitionen von Leistungsmetriken
 
-Im Abschnitt „Expertenansicht“ einer Asset-Seite werden je nach dem für das Asset ausgewählten Zeitraum mehrere Metriken angezeigt. Jede Metrik wird in einem eigenen Performance-Diagramm angezeigt. Je nachdem, welche Daten angezeigt werden sollen, können Sie Metriken und zugehörige Assets in den Diagrammen hinzufügen oder entfernen. Die ausgewählten Metriken sind abhängig von dem Asset-Typ.
+Der Abschnitt „Leistung“ einer Asset-Seite zeigt mehrere Metriken basierend auf dem für das Asset ausgewählten Zeitraum an.  Jede Metrik wird in einem eigenen Leistungsdiagramm angezeigt.  Sie können den Diagrammen Metriken und zugehörige Assets hinzufügen oder daraus entfernen, je nachdem, welche Daten Sie sehen möchten.  Die Metriken, die Sie auswählen können, variieren je nach Asset-Typ.
 
 |===
 
@@ -60,157 +64,157 @@ Im Abschnitt „Expertenansicht“ einer Asset-Seite werden je nach dem für das
 | *Metrisch* | *Beschreibung* 
 
 
-| BB Credit Null Rx, Tx | Die Anzahl der Empfangs-/Übertragungs-Buffer-zu-Buffer-Gutschriften wurde während des Probenzeitraums auf Null übertragen. Diese Metrik gibt an, wie oft der angeschlossene Port die Übertragung beenden musste, da dieser Port nicht mehr als Credits zur Verfügung stand. 
+| BB-Guthaben Null Rx, Tx | Gibt an, wie oft der Puffer-zu-Puffer-Guthabenzähler während des Abtastzeitraums auf Null gewechselt ist.  Diese Metrik gibt an, wie oft der angeschlossene Port die Übertragung stoppen musste, weil dieser Port keine Credits mehr bereitstellen konnte. 
 
 
-| BB Kredit Null Dauer Tx | Zeit in Millisekunden, während der der transmit BB-Guthaben während des Abtastintervalls null war. 
+| BB Kredit Null Dauer Tx | Zeit in Millisekunden, während der das Sende-BB-Guthaben während des Abtastintervalls Null war. 
 
 
-| Cache-Trefferrverhältnis (gesamt, Lesen, Schreiben) % | Prozentsatz von Anforderungen, die zu Cache-Treffern führen. Je höher die Anzahl der Treffer im Vergleich zum Volume ist, desto besser ist die Performance. Diese Spalte ist leer für Speicher-Arrays, die keine Cache-Trefferinformationen erfassen. 
+| Cache-Trefferquote (Gesamt, Lesen, Schreiben) % | Prozentsatz der Anfragen, die zu Cache-Treffern führen.  Je höher die Anzahl der Treffer im Verhältnis zu den Zugriffen auf das Volume ist, desto besser ist die Leistung.  Diese Spalte ist für Speicher-Arrays leer, die keine Cache-Trefferinformationen erfassen. 
 
 
-| Cache-Auslastung (gesamt) % | Gesamtprozentsatz der Cacheanforderungen, die zu Cache-Treffern führen 
+| Cache-Auslastung (Gesamt) % | Gesamtprozentsatz der Cache-Anfragen, die zu Cache-Treffern führen 
 
 
-| Discards der Klasse 3 | Anzahl der Rückwürfe für die Datenübertragung in der Fibre Channel-Klasse 3 
+| Rückwürfe der Klasse 3 | Anzahl der beim Fibre Channel Class 3-Datentransport verworfenen Daten. 
 
 
-| CPU-Auslastung (gesamt) % | Menge der aktiv genutzten CPU-Ressourcen als Prozentsatz der insgesamt verfügbaren (über alle virtuellen CPUs) 
+| CPU-Auslastung (Gesamt) % | Menge der aktiv genutzten CPU-Ressourcen als Prozentsatz der insgesamt verfügbaren Ressourcen (über alle virtuellen CPUs). 
 
 
-| CRC-Fehler | Anzahl der Frames mit ungültigen zyklischen Redundanzprüfungen (CRCs), die vom Port während des Probenahmezeitraums erkannt wurden 
+| CRC-Fehler | Anzahl der Frames mit ungültigen zyklischen Redundanzprüfungen (CRCs), die vom Port während des Abtastzeitraums erkannt wurden 
 
 
-| Frame-Rate | Bildrate in Bildern pro Sekunde übertragen (FPS) 
+| Bildrate | Übertragungsbildrate in Bildern pro Sekunde (FPS) 
 
 
-| Bildgröße durchschnittlich (Rx, Tx) | Verhältnis von Datenverkehr zu Bildgröße. Mit dieser Metrik können Sie feststellen, ob es Overhead Frames in der Fabric gibt. 
+| Durchschnittliche Framegröße (Rx, Tx) | Verhältnis von Datenverkehr zu Framegröße.  Mit dieser Kennzahl können Sie feststellen, ob sich im Gewebe Überkopfrahmen befinden. 
 
 
-| Rahmengröße zu lang | Anzahl der zu langen Fibre Channel-Datenübertragungsrahmen 
+| Rahmengröße zu lang | Anzahl der zu langen Fibre-Channel-Datenübertragungsrahmen. 
 
 
-| Rahmengröße zu kurz | Anzahl der zu kurzen Fibre Channel-Datenübertragungsrahmen 
+| Rahmengröße zu klein | Anzahl der zu kurzen Fibre Channel-Datenübertragungsframes. 
 
 
-| I/O-Dichte (gesamt, Lesen, Schreiben) | Anzahl der IOPS geteilt durch genutzte Kapazität (wie bei der letzten Inventarabfrage der Datenquelle erworben) für das Element Volume, Internal Volume oder Storage. Diese wird anhand der Anzahl der I/O-Vorgänge pro Sekunde pro TB gemessen. 
+| I/O-Dichte (Gesamt, Lesen, Schreiben) | Anzahl der IOPS geteilt durch die genutzte Kapazität (wie aus der letzten Bestandsabfrage der Datenquelle ermittelt) für das Volume, das interne Volume oder das Speicherelement.  Gemessen in der Anzahl der E/A-Vorgänge pro Sekunde pro TB. 
 
 
-| IOPS (gesamt, Lesen, Schreiben) | Anzahl der Lese-/Schreib-I/O-Serviceanfragen, die den I/O-Kanal oder einen Teil dieses Kanals pro Zeiteinheit durchlaufen (gemessen in I/O pro Sekunde) 
+| IOPS (Gesamt, Lesen, Schreiben) | Anzahl der Lese-/Schreib-E/A-Dienstanforderungen, die pro Zeiteinheit den E/A-Kanal oder einen Teil dieses Kanals durchlaufen (gemessen in E/A pro Sekunde) 
 
 
-| IP-Durchsatz (gesamt, Lesen, Schreiben) | Gesamt: Aggregierte Rate, bei der IP-Daten in Megabyte pro Sekunde übertragen und empfangen wurden. 
+| IP-Durchsatz (Gesamt, Lesen, Schreiben) | Gesamt: Aggregierte Rate, mit der IP-Daten in Megabyte pro Sekunde gesendet und empfangen wurden. 
 
 
 | Lesen: IP-Durchsatz (Empfangen): | Durchschnittliche Rate, mit der IP-Daten in Megabyte pro Sekunde empfangen wurden. 
 
 
-| Schreiben: IP-Durchsatz (übertragen): | Durchschnittliche Rate, mit der IP-Daten in Megabyte pro Sekunde übertragen wurden. 
+| Schreiben: IP-Durchsatz (Übertragen): | Durchschnittliche Rate, mit der IP-Daten in Megabyte pro Sekunde übertragen wurden. 
 
 
-| Latenz (Gesamt, Lesen, Schreiben) | Latenz (R&W): Geschwindigkeit, mit der Daten in einem festgelegten Zeitraum gelesen oder auf die Virtual Machines geschrieben werden Der Wert wird in Megabyte pro Sekunde gemessen. 
+| Latenz (Gesamt, Lesen, Schreiben) | Latenz (R&W): Rate, mit der Daten in einer festgelegten Zeitspanne von den virtuellen Maschinen gelesen oder auf diese geschrieben werden.  Der Wert wird in Megabyte pro Sekunde gemessen. 
 
 
-| Latenz | Durchschnittliche Antwortzeit von den Virtual Machines in einem Datenspeicher. 
+| Latenz: | Durchschnittliche Antwortzeit der virtuellen Maschinen in einem Datenspeicher. 
 
 
-| Höchste Latenz: | Die höchste Reaktionszeit von den Virtual Machines in einem Datenspeicher. 
+| Höchste Latenz: | Die höchste Antwortzeit der virtuellen Maschinen in einem Datenspeicher. 
 
 
-| Verbindungsfehler | Anzahl der Verbindungsfehler, die der Port während des Probenahmezeitraums entdeckt hat. 
+| Verbindungsfehler | Anzahl der vom Port während des Stichprobenzeitraums erkannten Verbindungsfehler. 
 
 
-| Link Reset Rx, Tx | Anzahl der Rücksetzungen von Empfangs- oder Übertragungsverbindung während des Probenzeitraums. Diese Metrik gibt die Anzahl der vom angeschlossenen Port an diesen Port ausgegebenen Link-Resets an. 
+| Link-Reset Rx, Tx | Anzahl der Zurücksetzungen der Empfangs- oder Sendeverbindung während des Abtastzeitraums.  Diese Metrik stellt die Anzahl der Link-Resets dar, die vom angeschlossenen Port an diesen Port ausgegeben wurden. 
 
 
-| Speicherauslastung (gesamt) % | Schwellenwert für den vom Host verwendeten Speicher. 
+| Speicherauslastung (Gesamt) % | Schwellenwert für den vom Host verwendeten Speicher. 
 
 
-| Teilweise R/W (gesamt) % | Gesamtzahl der Male, die ein Lese-/Schreibvorgang einen Stripe-Grenzwert auf einem Festplattenmodul in RAID 5, RAID 1/0 oder RAID 0 LUN überschreitet, sind Stripe-Crossings in der Regel nicht von Vorteil, da jeder eine zusätzliche I/O-Operation erfordert Ein geringer Prozentsatz zeigt eine effiziente Stripe-Elementgröße an und gibt Aufschluss über eine nicht ordnungsgemäße Ausrichtung eines Volumes (oder einer NetApp LUN). Bei CLARiiON ist dieser Wert die Anzahl der Stripe-Crossings, geteilt durch die Gesamtzahl der IOPS. 
+| Teilweise R/W (Gesamt) % | Gesamtzahl der Male, die ein Lese-/Schreibvorgang eine Streifengrenze auf einem beliebigen Festplattenmodul in einem RAID 5-, RAID 1/0- oder RAID 0-LUN überschreitet. Im Allgemeinen sind Streifenüberschreitungen nicht vorteilhaft, da jede einen zusätzlichen E/A-Vorgang erfordert.  Ein niedriger Prozentsatz weist auf eine effiziente Stripe-Elementgröße hin und ist ein Hinweis auf eine falsche Ausrichtung eines Volumes (oder einer NetApp LUN).  Bei CLARiiON ist dieser Wert die Anzahl der Stripe-Übergänge geteilt durch die Gesamtzahl der IOPS. 
 
 
-| Port-Fehler | Bericht über Port-Fehler über den Probenzeitraum/den angegebenen Zeitraum. 
+| Portfehler | Bericht über Portfehler über den Abtastzeitraum/angegebenen Zeitraum. 
 
 
-| Signalverlust zählen | Anzahl der Signalverlustfehler. Wenn ein Signalverlustfehler auftritt, gibt es keine elektrische Verbindung und es besteht ein physikalisches Problem. 
+| Signalverlustzähler | Anzahl der Signalverlustfehler.  Wenn ein Signalverlustfehler auftritt, besteht keine elektrische Verbindung und es liegt ein physikalisches Problem vor. 
 
 
-| Swap-Rate (Gesamtrate, Rate, out-Rate) | Rate, mit welcher der Speicher während des Probenzeitraums in den aktiven Speicher des Laufwerks oder aus dem Datenträger in den aktiven Speicher eingetauscht wird. Dieser Zähler bezieht sich auf virtuelle Maschinen. 
+| Swapsatz (Gesamtsatz, Eingangssatz, Ausgangssatz) | Rate, mit der während des Stichprobenzeitraums Speicher von der Festplatte in den aktiven Speicher ein- und ausgelagert wird oder beides.  Dieser Zähler gilt für virtuelle Maschinen. 
 
 
-| Synchrone Verlustzahl | Anzahl der Fehler bei Synchronisierungsverlust. Wenn ein Fehler bei der Synchronisierung auftritt, kann die Hardware den Datenverkehr nicht erkennen oder darauf sperren. Das gesamte Gerät verwendet möglicherweise nicht die gleiche Datenrate, oder die optischen oder physischen Verbindungen können von schlechter Qualität sein. Der Port muss nach jedem solchen Fehler erneut synchronisiert werden, was sich auf die Systemleistung auswirkt. Gemessen in KB/Sek. 
+| Anzahl der Synchronisierungsverluste | Anzahl der Synchronisierungsverlustfehler.  Wenn ein Synchronisierungsverlustfehler auftritt, kann die Hardware den Datenverkehr nicht verstehen oder sich darauf fixieren.  Möglicherweise verwenden nicht alle Geräte dieselbe Datenrate oder die optische oder physische Verbindung ist von schlechter Qualität.  Der Port muss nach jedem solchen Fehler neu synchronisiert werden, was sich auf die Systemleistung auswirkt.  Gemessen in KB/Sek. 
 
 
-| Durchsatz (Gesamt, Lesen, Schreiben) | Geschwindigkeit, mit der Daten übertragen, empfangen oder in einem festen Zeitraum als Reaktion auf I/O-Serviceanfragen (gemessen in MB pro s) gesendet werden. 
+| Durchsatz (Gesamt, Lesen, Schreiben) | Rate, mit der Daten als Antwort auf E/A-Dienstanforderungen in einer festgelegten Zeitspanne gesendet, empfangen oder beides werden (gemessen in MB pro Sekunde). 
 
 
-| Timeout - Rahmen verwerfen - Tx | Anzahl der durch Timeout verursachten verworfenen Übertragungsrahmen. 
+| Timeout-Verwerfungsrahmen - Tx | Anzahl der durch Timeout verworfenen Sendeframes. 
 
 
-| Traffic-Rate (gesamt, Lesen, Schreiben) | Der während des Probenahmezeitraums übertragenen, empfangenen oder beide empfangenen Datenverkehr in Mebibyte pro Sekunde. 
+| Verkehrsrate (Gesamt, Lesen, Schreiben) | Während des Stichprobenzeitraums gesendeter, empfangener oder beides empfangener Datenverkehr in Mebibyte pro Sekunde. 
 
 
-| Traffic-Auslastung (gesamt, Lesen, Schreiben) | Verhältnis der empfangenen/übertragenen/gesamten Kapazität zu Empfangs-/Übertragungs-/Gesamtkapazität während des Probenzeitraums. 
+| Verkehrsauslastung (Gesamt, Lesen, Schreiben) | Verhältnis des empfangenen/gesendeten/gesamten Datenverkehrs zur Empfangs-/Sende-/Gesamtkapazität während des Stichprobenzeitraums. 
 
 
-| Auslastung (Gesamt, Lesen, Schreiben) % | Prozentsatz der verfügbaren Bandbreite für die Übertragung (Tx) und den Empfang (Rx). 
+| Auslastung (Gesamt, Lesen, Schreiben) % | Prozentsatz der verfügbaren Bandbreite, die für Übertragung (Tx) und Empfang (Rx) verwendet wird. 
 
 
-| Ausstehende Schreibvorgänge (Gesamt) | Anzahl der ausstehenden Schreib-I/O-Serviceanfragen. 
+| Ausstehendes Schreiben (Gesamt) | Anzahl der ausstehenden Schreib-E/A-Dienstanforderungen. 
 |===
 
 
-== Verwenden des Abschnitts „Expertenansicht“
+== Verwenden des Abschnitts „Leistung“
 
-In der Ansicht „Experten“ können Sie Leistungsdiagramme für ein Asset anzeigen, die auf einer beliebigen Anzahl von anwendbaren Metriken während eines ausgewählten Zeitraums basieren, und zugehörige Assets hinzufügen, um Asset- und Performance-Werte über verschiedene Zeiträume zu vergleichen und zu kontrastieren.
+Im Abschnitt „Leistung“ können Sie Leistungsdiagramme für einen Vermögenswert basierend auf einer beliebigen Anzahl anwendbarer Kennzahlen während eines ausgewählten Zeitraums anzeigen und zugehörige Vermögenswerte hinzufügen, um die Leistung von Vermögenswerten und zugehörigen Vermögenswerten über verschiedene Zeiträume hinweg zu vergleichen und gegenüberzustellen.
 
 .Schritte
-. Suchen Sie eine Asset-Seite, indem Sie eine der folgenden Aktionen ausführen:
+. Suchen Sie eine Asset-Seite, indem Sie einen der folgenden Schritte ausführen:
 +
-** Suchen Sie nach einem bestimmten Asset, und wählen Sie es aus.
-** Wählen Sie in einem Dashboard-Widget einen Asset aus.
-** Fragen Sie nach einem Satz von Assets ab, und wählen Sie eines aus der Ergebnisliste aus.
+** Suchen Sie nach einem bestimmten Asset und wählen Sie es aus.
+** Wählen Sie ein Asset aus einem Dashboard-Widget aus.
+** Führen Sie eine Abfrage nach einer Reihe von Assets durch und wählen Sie eines aus der Ergebnisliste aus.
 +
-Die Seite Anlage wird angezeigt. Standardmäßig werden im Performance-Diagramm zwei Metriken für den Zeitraum angezeigt, der für die Seite Anlage ausgewählt wurde. Beispielsweise zeigt das Performance-Diagramm für einen Storage standardmäßig die Latenz und die IOPS insgesamt an. Im Abschnitt Ressourcen werden der Ressourcenname und der Abschnitt „zusätzliche Ressourcen“ angezeigt, in dem Sie nach Assets suchen können. Je nach Asset können Sie auch Assets in den Abschnitten „Top Correlated“, „Top Contributor“, „Greedy“ und „degradierte Werte“ sehen. Wenn für diese Abschnitte keine relevanten Assets vorhanden sind, werden sie nicht angezeigt.
+Die Asset-Seite wird angezeigt.  Standardmäßig zeigt das Leistungsdiagramm zwei Kennzahlen für den für die Asset-Seite ausgewählten Zeitraum an.  Beispielsweise zeigt das Leistungsdiagramm für einen Speicher standardmäßig die Latenz und die gesamten IOPS an.  Im Abschnitt „Ressourcen“ werden der Ressourcenname und ein Abschnitt „Zusätzliche Ressourcen“ angezeigt, in dem Sie nach Assets suchen können.  Je nach Asset werden Ihnen möglicherweise auch Assets in den Abschnitten „Top korreliert“, „Top-Beitragender“, „Gierig“ und „Herabgestuft“ angezeigt.  Wenn für diese Abschnitte keine relevanten Assets vorhanden sind, werden sie nicht angezeigt.
 
 
 
-. Sie können ein Leistungsdiagramm für eine Metrik hinzufügen, indem Sie auf *Kennzahlen anzeigen* klicken und die gewünschten Metriken auswählen.
+. Sie können ein Leistungsdiagramm für eine Metrik hinzufügen, indem Sie auf das Zahnradsymbol *Einstellungen* klicken und die Metriken auswählen, die angezeigt werden sollen.
 +
-Für jede ausgewählte Metrik wird ein separates Diagramm angezeigt. Das Diagramm zeigt die Daten für den ausgewählten Zeitraum an. Sie können den Zeitraum ändern, indem Sie auf einen anderen Zeitraum in der rechten oberen Ecke der Asset-Seite klicken oder ein beliebiges Diagramm vergrößern.
+Für jede ausgewählte Metrik wird ein separates Diagramm angezeigt.  Das Diagramm zeigt die Daten für den ausgewählten Zeitraum.  Sie können den Zeitraum ändern, indem Sie oben rechts auf der Asset-Seite auf einen anderen Zeitraum klicken oder in ein beliebiges Diagramm hineinzoomen.
 
 +
-Klicken Sie auf *Kennzahlen anzeigen*, um die Auswahl eines Diagramms zu dewählen. Das Performance-Diagramm für die Metrik wird aus Expert View entfernt.
+Klicken Sie auf *Einstellungen*, um die Auswahl eines Diagramms aufzuheben.  Das Leistungsdiagramm für die Metrik wird aus dem Abschnitt „Leistung“ entfernt.
 
-. Sie können den Cursor über das Diagramm positionieren und die für das Diagramm angezeigten metrischen Daten ändern, indem Sie je nach Anlage auf eine der folgenden Optionen klicken:
+. Sie können den Cursor über dem Diagramm positionieren und die für dieses Diagramm angezeigten Metrikdaten ändern, indem Sie je nach Asset auf eine der folgenden Optionen klicken:
 +
 ** Lesen, Schreiben oder Gesamt
-** TX, Rx oder Total
+** Tx, Rx oder Gesamt
 +
-Die Gesamtsumme ist die Standardvorgabe.
+Der Standardwert ist „Gesamt“.
 
 +
-Sie können den Cursor über die Datenpunkte im Diagramm ziehen, um zu sehen, wie sich der Wert der Metrik im ausgewählten Zeitraum ändert.
+Sie können Ihren Cursor über die Datenpunkte im Diagramm ziehen, um zu sehen, wie sich der Wert der Metrik im ausgewählten Zeitraum ändert.
 
 
 
-. Im Abschnitt Ressourcen können Sie den Leistungsdiagrammen alle zugehörigen Assets hinzufügen:
+. Im Abschnitt „Ressourcen“ können Sie den Leistungsdiagrammen alle zugehörigen Assets hinzufügen:
 +
-** Sie können eine zugehörige Ressource in den Abschnitten *Top Correlated*, *Top Contributors*, *Greedy* und *degraded* auswählen, um Daten aus dieser Ressource in das Leistungsdiagramm für jede ausgewählte Metrik hinzuzufügen.
+** Sie können in den Abschnitten *Top Correlated*, *Top Contributors*, *Greedy* und *Degraded* ein zugehöriges Asset auswählen, um dem Leistungsdiagramm für jede ausgewählte Metrik Daten aus diesem Asset hinzuzufügen.
 +
-Nachdem Sie das Element ausgewählt haben, wird neben dem Element ein Farbblock angezeigt, der die Farbe seiner Datenpunkte im Diagramm kennzeichnet.
+Nachdem Sie das Asset ausgewählt haben, wird neben dem Asset ein Farbblock angezeigt, der die Farbe seiner Datenpunkte im Diagramm angibt.
 
 
 
-. Klicken Sie auf *Ressourcen ausblenden*, um das Fenster zusätzliche Ressourcen auszublenden. Klicken Sie auf *Ressourcen*, um das Fenster anzuzeigen.
+. Klicken Sie auf *Ressourcen ausblenden*, um den Bereich mit zusätzlichen Ressourcen auszublenden.  Klicken Sie auf *Ressourcen*, um den Bereich anzuzeigen.
 +
-** Für alle angezeigten Assets können Sie auf den Namen des Assets klicken, um die Seite des Assets anzuzeigen. Sie können auch auf den Prozentsatz klicken, der das Asset korreliert oder zum Basisspital beiträgt, um weitere Informationen über die Beziehung des Assets zum BasisinAsset anzuzeigen.
+** Sie können bei jedem angezeigten Asset auf den Asset-Namen klicken, um dessen Asset-Seite anzuzeigen, oder Sie können auf den Prozentsatz klicken, mit dem das Asset mit dem Basis-Asset korreliert oder zu diesem beiträgt, um weitere Informationen zur Beziehung des Assets zum Basis-Asset anzuzeigen.
 +
-Wenn Sie beispielsweise auf den verknüpften Prozentsatz neben einem Top-korrelierten Asset klicken, wird eine Informationsmeldung angezeigt, die den Typ der Korrelation zwischen der Anlage und der Basisinressource vergleicht.
+Wenn Sie beispielsweise auf den verknüpften Prozentsatz neben einem am stärksten korrelierten Vermögenswert klicken, wird eine Informationsmeldung angezeigt, in der die Art der Korrelation dieses Vermögenswerts mit dem Basisvermögenswert verglichen wird.
 
-** Wenn der Abschnitt „Top Correlated“ keine Anlage enthält, die in einem Leistungsdiagramm zum Vergleich angezeigt werden soll, können Sie im Abschnitt „zusätzliche Ressourcen“ das Feld „Assets suchen“ verwenden, um andere Assets zu finden.
-
-
+** Wenn der Abschnitt „Topkorreliert“ keinen Vermögenswert enthält, den Sie zu Vergleichszwecken in einem Leistungsdiagramm anzeigen möchten, können Sie das Feld „Vermögenswerte suchen“ im Abschnitt „Zusätzliche Ressourcen“ verwenden, um andere Vermögenswerte zu finden.
 
 
-Nachdem Sie ein Asset ausgewählt haben, wird es im Abschnitt zusätzliche Ressourcen angezeigt. Wenn Sie keine Informationen mehr über das Asset anzeigen möchten, klicken Sie auf das Papierkorb-Symbol, um es zu löschen.
+
+
+Nachdem Sie ein Asset ausgewählt haben, wird es im Abschnitt „Zusätzliche Ressourcen“ angezeigt.  Wenn Sie keine Informationen mehr zu dem Asset anzeigen möchten, klicken Sie zum Löschen auf das Papierkorbsymbol.

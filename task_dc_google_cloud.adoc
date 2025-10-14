@@ -1,24 +1,24 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_google_cloud.html 
-summary: Konfigurieren Sie Google Compute Data Collector 
+summary: Konfigurieren des Google Compute-Datensammlers 
 keywords: data collector, queries, create 
 ---
-= NetApp Google Compute Data Collector
+= NetApp Google Compute-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler unterstützt Inventar- und Performance-Erfassung aus Google Compute Cloud-Plattformkonfigurationen. Dieser Sammler wird versuchen, alle Computing-Ressourcen in allen Projekten innerhalb einer Google-Organisation zu entdecken. Wenn Sie über mehrere Google-Unternehmen verfügen, die Sie mit Data Infrastructure Insights ermitteln möchten, möchten Sie pro Unternehmen einen Data Infrastructure Insights Collector implementieren.
+Dieser Datensammler unterstützt die Bestands- und Leistungserfassung von Google Compute-Cloud-Plattformkonfigurationen.  Dieser Collector versucht, alle Rechenressourcen in allen Projekten einer Google-Organisation zu ermitteln.  Wenn Sie mehrere Google-Organisationen haben, die Sie mit Data Infrastructure Insights ermitteln möchten, sollten Sie pro Organisation einen Data Infrastructure Insights -Collector bereitstellen.
 
 
 
-== Anforderungen Für Servicekonten
+== Anforderungen für Dienstkonten
 
-* Sie müssen ein Service-Konto erstellen, indem Sie die Anweisungen in befolgenlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Erstellen/Verwalten Von Servicekonten"]. Ein solches Dienstkonto wird durch eine eindeutige ID identifiziert, die als _ClientID_ bezeichnet wird und als Benutzername verwendet wird.
-* Erstellen Sie außerdem einen Servicekontoschlüssel, indem Sie die Anweisungen in befolgenlink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Erstellen/Verwalten Von Servicekontoschlüsseln"]. Dieser Schlüssel kann als json-Datei heruntergeladen werden, deren Inhalt als Passwort verwendet wird.
-* Das Servicekonto muss für _Compute.Readonly_, _Monitoring.read_ und _Cloud-Platform_ berücksichtigt werden.
+* Sie müssen ein Dienstkonto erstellen, indem Sie den Anweisungen inlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Erstellen/Verwalten von Dienstkonten"] .  Ein solches Dienstkonto wird durch eine eindeutige ID identifiziert, die als _clientId_ bezeichnet wird und als Benutzername verwendet wird.
+* Erstellen Sie außerdem einen Dienstkontoschlüssel, indem Sie den Anweisungen inlink:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Erstellen/Verwalten von Dienstkontoschlüsseln"] .  Dieser Schlüssel kann als JSON-Datei heruntergeladen werden, deren Inhalt als Passwort verwendet wird.
+* Das Dienstkonto muss auf _compute.readonly_, _monitoring.read_ und _cloud-platform_ beschränkt sein.
 
 
 
@@ -30,19 +30,19 @@ Dieser Datensammler unterstützt Inventar- und Performance-Erfassung aus Google 
 | Feld | Beschreibung 
 
 
-| Organisation-ID | Die Organisations-ID, die Sie mit diesem Sammler entdecken möchten. Dieses Feld ist erforderlich, wenn Ihr Servicekonto mehr als eine Organisation sehen kann 
+| Organisations-ID | Die Organisations-ID, die Sie mit diesem Collector ermitteln möchten.  Dieses Feld ist erforderlich, wenn Ihr Servicekonto mehr als eine Organisation sehen kann 
 
 
-| Wählen Sie „Ausschließen“ oder „Einschließen“, um GCP-Projekte nach IDs zu filtern | Wenn Sie einschränken möchten, welche Projektressourcen in Data Infrastructure Insights einfließen. 
+| Wählen Sie „Ausschließen“ oder „Einschließen“, um GCP-Projekte nach IDs zu filtern | Wenn Sie einschränken möchten, welche Projektressourcen in Data Infrastructure Insights eingebracht werden. 
 
 
-| Projekt-IDs | Die Liste der Projekt-IDs, die Sie in oder aus der Erkennung filtern möchten, hängt vom Wert des Werts "Ausschließen"... ab. Die Standardliste ist leer 
+| Projekt-IDs | Die Liste der Projekt-IDs, die Sie je nach Wert des Werts „Wählen Sie ‚Ausschließen‘ …“ in die Erkennung ein- oder ausfiltern möchten.  Die Standardliste ist leer 
 
 
-| Client-ID | Client-ID für die Konfiguration der Google Cloud Platform 
+| Client-ID | Client-ID für die Google Cloud Platform-Konfiguration 
 
 
-| Kopieren Sie den Inhalt Ihrer Google Credential-Datei hier | Kopieren Sie Ihre Google-Anmeldedaten für das Cloud-Plattform-Konto in dieses Feld 
+| Kopieren Sie den Inhalt Ihrer Google-Anmeldeinformationsdatei und fügen Sie ihn hier ein. | Kopieren Sie Ihre Google-Anmeldeinformationen für das Cloud Platform-Konto in dieses Feld 
 |===
 
 
@@ -53,19 +53,19 @@ Dieser Datensammler unterstützt Inventar- und Performance-Erfassung aus Google 
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten 
+| Inventarabfrageintervall (min) | Der Standardwert ist 60 Minuten 
 
 
-| Wählen Sie „Exclude“ oder „include“, um VMs nach Etiketten filtern zu können | Geben Sie an, ob VM's by Labels beim Sammeln von Daten einbezogen oder ausgeschlossen werden sollen. Wenn ‘include’ ausgewählt ist, kann das Feld Label Key nicht leer sein. 
+| Wählen Sie „Ausschließen“ oder „Einschließen“, um VMs nach Labels zu filtern. | Geben Sie an, ob VMs beim Sammeln von Daten anhand von Labels ein- oder ausgeschlossen werden sollen.  Wenn „Einschließen“ ausgewählt ist, darf das Feld „Beschriftungsschlüssel“ nicht leer sein. 
 
 
-| Bezeichnungsschlüssel und Werte, auf denen VMs gefiltert werden sollen | Klicken Sie auf *+ Filter Label*, um die VMs (und zugehörigen Festplatten) auszuwählen, die durch Filtern nach Schlüsseln und Werten, die Schlüssel und Werte der Labels auf der VM entsprechen, einzuschließen bzw. auszuschließen. Etikettenschlüssel ist erforderlich, Etikettenwert ist optional. Wenn der Etikettenwert leer ist, wird die VM solange gefiltert, wie sie dem Etikettenschlüssel entspricht. 
+| Label-Schlüssel und -Werte zum Filtern von VMs | Klicken Sie auf *+ Bezeichnung filtern*, um auszuwählen, welche VMs (und zugehörigen Datenträger) ein-/ausgeschlossen werden sollen, indem Sie nach Schlüsseln und Werten filtern, die mit den Schlüsseln und Werten der Bezeichnungen auf der VM übereinstimmen.  Der Beschriftungsschlüssel ist erforderlich, der Beschriftungswert ist optional.  Wenn der Labelwert leer ist, wird die VM gefiltert, solange sie mit dem Labelschlüssel übereinstimmt. 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 1800 Sekunden 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 1800 Sekunden 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

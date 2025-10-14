@@ -10,51 +10,51 @@ keywords: asset page, user data, applications, annotations
 
 
 [role="lead"]
-Der Abschnitt „Benutzerdaten“ einer Asset-Seite wird angezeigt und ermöglicht das Ändern benutzerdefinierter Daten wie Anwendungen und Anmerkungen.
+Im Abschnitt „Benutzerdaten“ einer Asset-Seite werden alle benutzerdefinierten Daten wie Anwendungen und Anmerkungen angezeigt und Sie können diese ändern.
 
 
 
 == Verwenden des Abschnitts „Benutzerdaten“ zum Zuweisen oder Ändern von Anwendungen
 
-Sie können Applikationen, die auf Ihrem Mandanten ausgeführt werden, bestimmten Assets (Host, Virtual Machines, Volumes, interne Volumes, qtrees und Hypervisoren) zuweisen. Im Abschnitt „Benutzerdaten“ können Sie die Anwendungen hinzufügen, ändern oder entfernen, die einem Asset zugewiesen sind. Für alle diese Asset-Typen außer für Volumes können Sie mehr als eine Anwendung zuweisen.
+Sie können auf Ihrem Mandanten ausgeführte Anwendungen bestimmten Assets (Host, virtuelle Maschinen, Volumes, interne Volumes, Qtrees und Hypervisoren) zuweisen.  Im Abschnitt „Benutzerdaten“ können Sie die einem Asset zugewiesenen Anwendungen hinzufügen, ändern oder entfernen.  Für alle diese Asset-Typen außer Volumes können Sie mehr als eine Anwendung zuweisen.
 
 .Schritte
 . Suchen Sie eine Asset-Seite, indem Sie einen der folgenden Schritte ausführen:
 +
-.. Abfrage nach einer Liste von Assets, und wählen Sie dann eine aus der Liste aus.
-.. Suchen Sie in einem Dashboard nach einem Asset-Namen, und klicken Sie darauf.
-.. Führen Sie eine Suche durch, und wählen Sie aus den Ergebnissen eine Anlage aus.
+.. Fragen Sie nach einer Liste von Assets und wählen Sie dann eines aus der Liste aus.
+.. Suchen Sie auf einem Dashboard nach einem Asset-Namen und klicken Sie darauf.
+.. Führen Sie eine Suche durch und wählen Sie aus den Ergebnissen ein Asset aus.
 +
-Die Seite Anlage wird angezeigt. Im Abschnitt „Benutzerdaten“ auf der Seite werden aktuell zugewiesene Anwendungen oder Anmerkungen angezeigt.
+Die Asset-Seite wird angezeigt.  Im Abschnitt „Benutzerdaten“ der Seite werden aktuell zugewiesene Anwendungen oder Anmerkungen angezeigt.
 
 
 
 
 
-Um die zugewiesene Anwendung zu ändern oder eine Anwendung oder weitere Anwendungen zuzuweisen, klicken Sie auf die Liste *Anwendung* und wählen Sie die Anwendung(en) aus, die Sie dem Asset zuweisen möchten. Sie können eingeben, um nach einer Anwendung zu suchen, oder eine aus der Liste auswählen.
+Um die zugewiesene Anwendung zu ändern oder eine oder mehrere Anwendungen zuzuweisen, öffnen Sie die Liste *Anwendung* und wählen Sie die Anwendung(en) aus, die Sie dem Asset zuweisen möchten.  Sie können eine Anwendung eingeben, um nach ihr zu suchen, oder eine aus der Liste auswählen.
 
-Um eine Anwendung zu entfernen, legen Sie die Anwendungsliste herunter und deaktivieren Sie die Prüfung der Anwendung.
+Um eine Anwendung zu entfernen, öffnen Sie die Anwendungsliste und deaktivieren Sie die Anwendung.
 
 
 
 == Verwenden des Abschnitts „Benutzerdaten“ zum Zuweisen oder Ändern von Anmerkungen
 
-Wenn Sie Data Infrastructure Insights an Ihre Unternehmensanforderungen anpassen, um Daten nachzuverfolgen, können Sie spezielle Notizen als Anmerkungen definieren und sie Ihren Ressourcen zuweisen. Im Abschnitt „Benutzerdaten“ einer Asset-Seite werden Anmerkungen angezeigt, die einem Asset zugeordnet sind, und Sie können auch die Anmerkungen ändern, die diesem Asset zugewiesen sind.
+Wenn Sie Data Infrastructure Insights anpassen, um Daten für Ihre Unternehmensanforderungen zu verfolgen, können Sie spezielle Notizen, sogenannte Anmerkungen, definieren und sie Ihren Assets zuweisen.  Im Abschnitt „Benutzerdaten“ einer Asset-Seite werden einem Asset zugewiesene Anmerkungen angezeigt. Außerdem können Sie die diesem Asset zugewiesenen Anmerkungen ändern.
 
 .Schritte
-. Um dem Asset eine Anmerkung hinzuzufügen, klicken Sie im Bereich Benutzerdaten auf der Asset-Seite auf *+Annotation*.
+. Um dem Asset eine Anmerkung hinzuzufügen, klicken Sie im Abschnitt „Benutzerdaten“ der Asset-Seite auf *+Anmerkung*.
 . Wählen Sie eine Anmerkung aus der Liste aus.
-. Klicken Sie auf „Wert“ und führen Sie eine der folgenden Aktionen aus, je nachdem, welche Anmerkungstypen Sie ausgewählt haben:
+. Klicken Sie auf „Wert“ und führen Sie je nach ausgewähltem Anmerkungstyp einen der folgenden Schritte aus:
 +
-.. Wenn der Anmerkungstyp Liste, Datum oder Boolean ist, wählen Sie einen Wert aus der Liste aus.
-.. Wenn es sich bei dem Anmerkungstyp um Text handelt, geben Sie einen Wert ein.
+.. Wenn der Anmerkungstyp „Liste“, „Datum“ oder „Boolesch“ ist, wählen Sie einen Wert aus der Liste aus.
+.. Wenn der Anmerkungstyp Text ist, geben Sie einen Wert ein.
 
 
-. Klicken Sie auf Speichern .
+. Klicken Sie auf Speichern.
 
 
-Die Anmerkung wird dem Asset zugewiesen. Sie können Assets später mithilfe einer Abfrage nach Anmerkungen filtern.
+Die Anmerkung wird dem Asset zugewiesen.  Sie können Assets später mithilfe einer Abfrage nach Anmerkungen filtern.
 
-Wenn Sie den Wert der Anmerkung nach der Zuweisung ändern möchten, lassen Sie die Anmerkungsliste herunter und geben einen anderen Wert ein.
+Wenn Sie den Wert der Anmerkung nach der Zuweisung ändern möchten, öffnen Sie die Anmerkungsliste und geben Sie einen anderen Wert ein.
 
-Wenn die Anmerkung vom Listentyp ist, für den die Option _neue Werte hinzufügen auf der Fly_ ausgewählt ist, können Sie zusätzlich zur Auswahl eines vorhandenen Wertes einen neuen Wert hinzufügen.
+Wenn die Anmerkung vom Typ „Liste“ ist und die Option „Neue Werte spontan hinzufügen“ ausgewählt ist, können Sie zusätzlich zur Auswahl eines vorhandenen Werts auch einen neuen Wert eingeben.

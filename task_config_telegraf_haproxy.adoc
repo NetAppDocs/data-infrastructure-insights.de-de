@@ -2,48 +2,48 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_haproxy.html 
 keywords: telegraf, installation, install, haproxy 
-summary: HAProxy Data Collector-Konfiguration 
+summary: HAProxy-Datensammlerkonfiguration 
 ---
-= HAProxy Data Collector
+= HAProxy-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet diesen Datensammler, um Kennzahlen von HAProxy zu sammeln.
+Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von HAProxy zu sammeln.
 
 
 
 == Installation
 
-. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie HAProxy.
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*.  Wählen Sie HAProxy.
 +
-Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.
+Wählen Sie das Betriebssystem oder die Plattform aus, auf der der Telegraf-Agent installiert ist.
 
-. Wenn Sie noch keinen Agenten zur Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um die  Anweisungen zu erweiternlink:task_config_telegraf_agent.html["Agenten-Installation"].
-. Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.
-. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+. Wenn Sie noch keinen Agenten für die Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um daslink:task_config_telegraf_agent.html["Agenteninstallation"] Anweisungen.
+. Wählen Sie den Agent-Zugriffsschlüssel zur Verwendung mit diesem Datensammler aus.  Sie können einen neuen Agentenzugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agentenzugriffsschlüssel* klicken.  Best Practice: Verwenden Sie nur dann einen anderen Agent-Zugriffsschlüssel, wenn Sie Datensammler beispielsweise nach Betriebssystem/Plattform gruppieren möchten.
+. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren.  Die Anweisungen variieren je nach Art des Betriebssystems oder der Plattform, die Sie zum Sammeln von Daten verwenden.
 
 
 image:HAProxyDCConfigLinux.png["HAProxy-Konfiguration"]
 
 
 
-== Einrichtung
+== Aufstellen
 
-Telegraf's Plugin für HAProxy setzt auf HAProxy Stats Aktivierung. Diese Konfiguration ist in HAProxy integriert, ist jedoch nicht sofort aktiviert. Wenn HAProxy aktiviert ist, wird ein HTML-Endpunkt angezeigt, der in Ihrem Browser angezeigt werden kann oder für die Extraktion des Status aller HAProxy-Konfigurationen abgekratzt werden kann.
+Das Plugin von Telegraf für HAProxy basiert auf der Aktivierung von HAProxy Stats.  Dies ist eine in HAProxy integrierte Konfiguration, die jedoch nicht standardmäßig aktiviert ist.  Wenn aktiviert, stellt HAProxy einen HTML-Endpunkt bereit, der in Ihrem Browser angezeigt oder zum Extrahieren des Status aller HAProxy-Konfigurationen abgerufen werden kann.
 
 
 
 === Kompatibilität:
 
-Die Konfiguration wurde gegen HAProxy-Version 1.9.4 entwickelt.
+Die Konfiguration wurde für HAProxy Version 1.9.4 entwickelt.
 
 
 
-=== Einrichtung:
+=== Einrichten:
 
-Um Statistiken zu aktivieren, bearbeiten Sie Ihre haproxy-Konfigurationsdatei und fügen Sie nach dem Abschnitt 'Standards' die folgenden Zeilen hinzu: Verwenden Sie Ihren eigenen Benutzer/Ihr Passwort und/oder die haproxy-URL:
+Um Statistiken zu aktivieren, bearbeiten Sie Ihre Haproxy-Konfigurationsdatei und fügen Sie nach dem Abschnitt „Standardeinstellungen“ die folgenden Zeilen hinzu. Verwenden Sie dabei Ihren eigenen Benutzer/Ihr eigenes Passwort und/oder Ihre Haproxy-URL:
 
 [listing]
 ----
@@ -51,7 +51,7 @@ stats enable
 stats auth myuser:mypassword
 stats uri  /haproxy?stats
 ----
-Im Folgenden finden Sie eine vereinfachte Beispiel-Konfigurationsdatei mit aktivierten Statistiken:
+Nachfolgend sehen Sie eine vereinfachte Beispielkonfigurationsdatei mit aktivierten Statistiken:
 
 [listing]
 ----
@@ -84,29 +84,29 @@ backend servers_2
   server server3 10.128.0.57:8080 check ssl verify none
   server server4 10.128.0.58:8080 check ssl verify none
 ----
-Vollständige und aktuelle Anweisungen finden Sie im link:https://cbonte.github.io/haproxy-dconv/1.8/configuration.html#4-stats%20enable["HAProxy-Dokumentation"].
+Vollständige und aktuelle Anweisungen finden Sie imlink:https://cbonte.github.io/haproxy-dconv/1.8/configuration.html#4-stats%20enable["HAProxy-Dokumentation"] .
 
 
 
 == Objekte und Zähler
 
-Folgende Objekte und ihre Zähler werden gesammelt:
+Die folgenden Objekte und ihre Zähler werden gesammelt:
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+| Objekt: | Kennungen: | Merkmale: | Datenpunkte: 
 
 
-| HAProxy Frontend | Namespace-Adressenproproxy | Node-IP-Knotenname Proxy-ID-Modus Prozess-id Sitzungen Ratenlimit Server-id Sitzungen Limit Status | Bytes in Bytes Out Cache Hits Cache Lookups Komprimierung Bytes umgangen Komprimierung Bytes in Komprimierung Bytes Out Komprimierung Reaktionen Verbindungsrate Verbindungsrate Max Verbindungen insgesamt Anträge, die von der Verbindung abgelehnt werden Rule Requests verweigert durch Sicherheitsbedenken Antworten verweigert durch Sicherheitsbedenken Anfragen abgelehnt durch Session Rule Requests erfragt Fehler Antworten 1xx Antworten 2xx Antworten 3xx Antworten 4xx Antworten 5xx Antworten andere Anfragen Abfangen Sitzungen Rate Sitzungen Max Anfragen Rate Max Anfragen Rate Max Anforderungen Total Sessions Sitzungen Max Sitzungen Antworten Neuschreibung Total Requests 
+| HAProxy Frontend | Namespace-Adressproxy | Knoten-IP Knotenname Proxy-ID Modus Prozess-ID Sitzungsratenbegrenzung Server-ID Sitzungsbegrenzungsstatus | Bytes Eingehend Bytes Ausgehend Cache-Treffer Cache-Suchen Komprimierung Bytes Umgangene Komprimierung Bytes Eingehend Komprimierung Bytes Ausgehend Komprimierung Antworten Verbindungsrate Verbindungsrate Max. Verbindungen Gesamt Durch Verbindungsregel abgelehnte Anfragen Durch Sicherheitsbedenken abgelehnte Anfragen Antworten Durch Sicherheitsbedenken abgelehnte Anfragen Durch Sitzungsregel abgelehnte Anfragen Fehler bei Anfragen Antworten 1xx Antworten 2xx Antworten 3xx Antworten 4xx Antworten 5xx Antworten Andere Anfragen Abgefangene Anfragen Sitzungsrate Sitzungsrate Max. Anfragen Rate Anfragen Rate Max. Anfragen Gesamtanzahl Sitzungen Sitzungen Max. Sitzungen Gesamtanzahl Anfragen Neuschreibungen 
 
 
-| HAProxy-Server | Namespace-Adresse-Proxy-Server | Node-IP-Knotenname Check Time to Finish Check Fall Configuration Check Health Value Check RISE Configuration Check Status Proxy ID Last Change Time Last Session Time Mode Process id Server Status Weight | Aktive Server Backup Server Bytes in Bytes Out Downs Check Downs Check Fails Client abgebrochen Verbindungen Verbindung Verbindung Durchschnittliche Zeit Ausfallzeit Gesamt Denied Responses Verbindungsfehler Antwort 1xx Antworten 2xx Antworten 3xx Antworten 4xx Antworten 5xx Antworten anderer Server ausgewählt Total Queue Current Queue Max. Durchschnittliche Zeit Sitzungen pro Zweite Sitzungen pro Sekunde Max. Wiederverwendbarkeit der Verbindung Reaktionszeit Durchschnittliche Sitzungen Sitzungen Max Server Transfer bricht Sitzungen gesamte Sitzungen Gesamtzeit Durchschnittliche Anforderungen Redispatches Anfragen Wiederholungen Anfragen Neuschreibung Anfragen 
+| HAProxy Server | Namespace-Adress-Proxy-Server | Knoten-IP Knotenname Zeit bis zum Abschluss der Prüfung Fallkonfiguration prüfen Gesundheitswert prüfen Anstiegskonfiguration prüfen Status prüfen Proxy-ID Zeit der letzten Änderung Zeit der letzten Sitzung Modus Prozess-ID Server-ID Status Gewicht | Aktive Server Backup-Server Bytes rein Bytes raus Check-Downs Check-Fehlschläge Client-Abbrüche Verbindungen Durchschnittliche Verbindungsdauer Ausfallzeit Gesamt abgelehnte Antworten Verbindungsfehler Antwortfehler Antworten 1xx Antworten 2xx Antworten 3xx Antworten 4xx Antworten 5xx Antworten Andere ausgewählte Server Gesamtwarteschlange Aktuelle Warteschlange Max. Durchschnittliche Warteschlangendauer Sitzungen pro Sekunde Sitzungen pro Sekunde Max. Verbindungswiederverwendung Antwortzeit Durchschnittliche Sitzungen Sitzungen Max. Server-Übertragungsabbrüche Sitzungen Gesamtsitzungen Gesamtzeit Durchschnittliche Anfragen Neuzuweisungen Anfragen Wiederholungsversuche Anfragen Neuschreibungen 
 
 
-| HAProxy-Back-End | Namespace-Adressenproproxy | Node-IP-Node-Name Proxy-ID Letzte Änderung Zeit Letzte Sitzung Zeitmodus Prozess-id Server-id Sitzungen Limit Status Gewicht | Aktive Server Backup Server Bytes in Bytes Out Cache Aufrufe Cache Lookups überprüfen Downs Client abbricht Komprimierung Bytes umgangen Komprimierung Bytes in Komprimierung Bytes out Komprimierungsantworten Verbindung Durchschnittliche Zeit Ausfallzeit Total Requests verweigert durch Sicherheitsbedenken Antworten verweigert durch Sicherheit Bedenken Verbindungsfehler Antworten Reaktion 1xx Antworten 2xx Antworten 3xx Antworten 4xx Antworten 5xx Antworten anderer Server ausgewählt Total Queue Current Queue Max. Warteschlange Durchschnittliche Zeit Sitzungen pro Sekunde Sitzungen pro Sekunde Max. Anfragen Gesamt Verbindungswiederverwendung Reaktionszeit Durchschnittliche Sitzungen Sitzungen Max. Serverübertragung Abtreibungen Sitzungen Gesamtzeit Durchschnittliche Anfragen Neuzuweisen Wiederholungsanfragen Wiederholungsanfragen Wiederholungsanfragen Wiederholungsanfragen Anträge Neu Schreiben 
+| HAProxy-Backend | Namespace-Adressproxy | Knoten-IP Knotenname Proxy-ID Letzte Änderung Zeit der letzten Sitzung Modus Prozess-ID Server-ID Sitzungslimit Status Gewicht | Aktive Server Backup-Server Bytes In Bytes Out Cache-Treffer Cache-Lookups Check-Downs Client-Abbrüche Komprimierung Bytes Umgangene Komprimierung Bytes In Komprimierung Bytes Out Komprimierung Antworten Verbindungen Durchschnittliche Verbindungsausfallzeit Anfragen insgesamt aufgrund von Sicherheitsbedenken abgelehnt Antworten aufgrund von Sicherheitsbedenken abgelehnt Verbindungsfehler Antwortfehler Antworten 1xx Antworten 2xx Antworten 3xx Antworten 4xx Antworten 5xx Antworten Andere ausgewählte Server Gesamtwarteschlange Aktuelle Warteschlange Max. Durchschnittliche Warteschlangenzeit Sitzungen pro Sekunde Sitzungen pro Sekunde Max. Anfragen Gesamte Verbindungswiederverwendung Antwortzeit Durchschnittliche Sitzungen Sitzungen Max. Serverübertragungsabbrüche Sitzungen Gesamtsitzungen Gesamtzeit Durchschnittliche Anfragen Neuzuweisungen Anfragen Wiederholungsversuche Anfragen Neuschreibungen 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite.
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite.

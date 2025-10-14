@@ -1,46 +1,46 @@
 ---
 sidebar: sidebar 
 permalink: task_troubleshooting_general_problems.html 
-summary: Allgemeine Tipps zur Fehlerbehebung rund um die Dateninfrastruktur 
+summary: Allgemeine Tipps zur Fehlerbehebung bei Data Infrastructure Insights . 
 keywords: troubleshooting, problems, browser, login, log in, accessing, access to, Trident, qtree, quota 
 ---
-= Fehlerbehebung Bei Allgemeinen Problemen Mit Data Infrastructure Insights
+= Fehlerbehebung bei allgemeinen Problemen mit Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Hier finden Sie Vorschläge für die Fehlerbehebung Data Infrastructure Insights.
+Hier finden Sie Vorschläge zur Fehlerbehebung bei Data Infrastructure Insights.
 
-Siehe auch link:task_troubleshooting_linux_acquisition_unit_problems.html["Fehlerbehebung Bei Problemen Mit Der Linux-Erfassungseinheit"] und link:task_troubleshooting_windows_acquisition_unit_problems.html["Fehlerbehebung Bei Problemen Mit Der Windows-Erfassungseinheit"].
+Siehe auchlink:task_troubleshooting_linux_acquisition_unit_problems.html["Fehlerbehebung bei Problemen mit der Linux-Erfassungseinheit"] Undlink:task_troubleshooting_windows_acquisition_unit_problems.html["Fehlerbehebung bei Problemen mit der Windows-Erfassungseinheit"] .
 
 
 
-== Probleme bei der Anmeldung
+== Anmeldeprobleme
 
 |===
-| *Problem:* | *Teste das:* 
+| *Problem:* | *Versuchen Sie Folgendes:* 
 
 
-| Data Infrastructure Insights meldet sich automatisch alle 6 Stunden ab | Dies ist auf deaktivierte Browser-Cookies von Drittanbietern zurückzuführen. Benutzer können ihren Browser so konfigurieren, dass alle Drittanbieter-Cookies aktiviert werden, oder eine engere Ausnahmeliste verwenden, um nur diejenigen für Data Infrastructure Insights zu aktivieren. Beispiel: Browser-Einstellungen öffnen Wählen Sie die Option "Alle Cookies zulassen". *ODER* Wählen Sie „Cookies von Drittanbietern blockieren“ und fügen Sie Ausnahmen für _[\*.]auth0.com_ und _[*.]NetApp.com_ hinzu. Microsoft Edge follows das gleiche Format für Ausnahmen wie Chrome. In Firefox werden Cookie-Ausnahmen einfach als _auth0.com_ und _netapp.com_ bezeichnet. 
+| Data Infrastructure Insights meldet sich automatisch alle 6 Stunden ab | Dies liegt daran, dass im Browser Cookies von Drittanbietern deaktiviert sind.  Benutzer können ihren Browser so konfigurieren, dass alle Cookies von Drittanbietern aktiviert werden, oder eine engere Ausnahmeliste verwenden, um nur diese für Data Infrastructure Insights zu aktivieren.  Beispiel: Öffnen Sie die Einstellungen Ihres Browsers. Wählen Sie die Option „Alle Cookies zulassen“.  *ODER* Wählen Sie „Cookies von Drittanbietern blockieren“ und fügen Sie Ausnahmen für _[\*.]auth0.com_ und _[*.]netapp.com_ hinzu.  Microsoft Edge verwendet für Ausnahmen dasselbe Format wie Chrome.  In Firefox werden Cookie-Ausnahmen einfach als _auth0.com_ und _netapp.com_ bezeichnet. 
 
 
-| Ich habe ein Konsolenkonto, kann mich aber nicht anmelden. | Öffnen Sie ein Ticket von https://mysupport.netapp.com/site/help[] .  Wählen Sie die Kategorie „console.netapp.com > Konto-/Anmeldeprobleme“ oder „console.netapp.com > Föderationsprobleme“.  Diese sind speziell für Probleme oder Fragen zur Konsole gedacht.  Bei allen anderen technischen Supportfragen zu Data Infrastructure Insights wenden Sie sich anlink:concept_requesting_support.html["NetApp Support"] . 
+| Ich habe ein Konsolenkonto, kann mich aber nicht anmelden. | Öffnen Sie ein Ticket von https://mysupport.netapp.com/site/help[] .  Wählen Sie die Kategorie „console.netapp.com > Konto-/Anmeldeprobleme“ oder „console.netapp.com > Föderationsprobleme“.  Diese sind speziell für Probleme oder Fragen zur Konsole gedacht.  Bei allen anderen technischen Supportfragen zu Data Infrastructure Insights wenden Sie sich anlink:concept_requesting_support.html["NetApp -Support"] . 
 
 
-| Ich wurde zu Data Infrastructure Insights eingeladen, aber ich erhalte eine Nachricht „nicht autorisiert“. | Stellen Sie sicher, dass Sie sich für ein Konsolenkonto angemeldet haben oder dass Ihre Organisation die SSO-Anmeldung mit der Konsole verwendet.  Überprüfen Sie, ob die E-Mail-Adresse Ihres Konsolenprofils mit der E-Mail-Adresse übereinstimmt, die in Ihrer Data Infrastructure Insights -Begrüßungs-E-Mail angezeigt wird.  Wenn die E-Mail nicht übereinstimmt, fordern Sie eine neue Einladung mit der richtigen E-Mail-Adresse an. 
+| Ich wurde zu Data Infrastructure Insights eingeladen, erhalte jedoch die Meldung „Nicht autorisiert“. | Stellen Sie sicher, dass Sie sich für ein Konsolenkonto angemeldet haben oder dass Ihre Organisation die SSO-Anmeldung mit der Konsole verwendet.  Überprüfen Sie, ob die E-Mail-Adresse Ihres Konsolenprofils mit der E-Mail-Adresse in Ihrer Data Infrastructure Insights -Begrüßungs-E-Mail übereinstimmt.  Wenn die E-Mail nicht übereinstimmt, fordern Sie eine neue Einladung mit der richtigen E-Mail-Adresse an. 
 
 
-| Ich habe mich von der Konsole abgemeldet und wurde automatisch von Data Infrastructure Insights abgemeldet. | Bei Single Sign On (SSO) über NetApp-Cloud-Services werden alle Sitzungen zu Dateninfrastruktur-Einblicken abgehört. Wenn Sie Zugriff auf mehrere Konten für Data Infrastructure Insights haben, werden alle aktiven Sitzungen bei einer beliebigen Abmeldung abmeldet. Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
+| Ich habe mich von der Konsole abgemeldet und wurde automatisch von Data Infrastructure Insights abgemeldet. | Single Sign-On (SSO) über NetApp Cloud Services meldet alle Data Infrastructure Insights Sitzungen ab.  Wenn Sie Zugriff auf mehrere Data Infrastructure Insights -Konten haben, werden beim Abmelden von einem Konto alle aktiven Sitzungen abgemeldet.  Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
 
 
-| Ich wurde nach einigen Tagen automatisch abgemeldet. | NetApp Cloud-Konten erfordern alle paar Tage eine erneute Authentifizierung (die aktuelle Konsoleneinstellung ist 7 Tage).  Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
+| Ich wurde nach mehreren Tagen automatisch abgemeldet. | NetApp Cloud-Konten erfordern alle paar Tage eine erneute Authentifizierung (die aktuelle Konsoleneinstellung ist 7 Tage).  Melden Sie sich erneut an, um auf Ihr Konto zuzugreifen. 
 
 
-| Ich erhalte eine Fehlermeldung „Anmeldung nicht mehr zulässig“. | Wenden Sie sich an Ihren Kontoadministrator, um den Zugriff auf Data Infrastructure Insights zu überprüfen.  Überprüfen Sie, ob die E-Mail-Adresse Ihres Konsolenprofils mit der E-Mail-Adresse übereinstimmt, die in Ihrer Data Infrastructure Insights -Begrüßungs-E-Mail angezeigt wird. 
+| Ich erhalte die Fehlermeldung „Keine Berechtigung mehr zur Anmeldung“. | Wenden Sie sich an Ihren Kontoadministrator, um den Zugriff auf Data Infrastructure Insights zu überprüfen.  Überprüfen Sie, ob die E-Mail-Adresse Ihres Konsolenprofils mit der E-Mail-Adresse übereinstimmt, die in Ihrer Data Infrastructure Insights -Begrüßungs-E-Mail angezeigt wird. 
 
 
-| Andere Anmeldefehler | Testen Sie den Inkognito-Modus in Chrome, oder löschen Sie den Browserverlauf, Cookies und Cache. Versuchen Sie es mit einem anderen Browserprofil (d.h. Chrome - Person hinzufügen). 
+| Andere Anmeldefehler | Probieren Sie den Inkognito-Modus in Chrome aus oder löschen Sie den Browserverlauf, die Cookies und den Cache.  Versuchen Sie es mit einem anderen Browserprofil (z. B. Chrome – Person hinzufügen). 
 |===
 
 
@@ -52,24 +52,24 @@ Siehe auch link:task_troubleshooting_linux_acquisition_unit_problems.html["Fehle
 | *Frage:* | *Antwort:* 
 
 
-| Meine Qtree-Hard-Quoten werden korrekt in Abfragen angezeigt, aber meine Soft Quotas werden als Gesamtkapazität des Volumes angezeigt. Ist das richtig? | Nur harte Kontingente - die entweder manuell festgelegt oder durch Trident eingestellt sind - werden als festgelegte Kontingente angezeigt; wenn keine harten Kontingente angegeben werden, wird die Qtree-Kapazität die interne Volume-Kapazität sein. 
+| Meine Qtree-Hard-Quotas werden in Abfragen korrekt angezeigt, aber meine Soft-Quotas werden als Gesamtkapazität des Datenträgers angezeigt.  Ist das richtig? | Nur feste Kontingente – entweder manuell festgelegt oder über Trident festgelegt – werden als festgelegte Kontingente angezeigt. Wenn keine festen Kontingente angegeben sind, entspricht die Qtree-Kapazität der internen Volume-Kapazität. 
 
 
-| Ich habe sowohl eine weiche als auch eine harte Quote manuell im selben Qtree eingestellt, aber die insgesamt darstellende Kapazität ist die harte Quote; ist das richtig? | Ja, wenn eine harte Quote angegeben wird, wird diese als Gesamtkapazität angezeigt. 
+| Ich habe sowohl eine weiche als auch eine harte Quote manuell im selben Qtree festgelegt, aber die angezeigte Gesamtkapazität ist die harte Quote. Ist das richtig? | Ja, wenn eine feste Quote angegeben ist, wird diese als Gesamtkapazität angezeigt. 
 
 
-| Bei der Eingabe eines Cognos Report-Zeitplans endet manchmal ein zusätzliches „m“ in der Zeitplanung. Wenn ich die Zeit beispielsweise als „02:15 PM“ eingebe, kann ein zusätzliches Zeichen hinzugefügt werden: „02:15 PMM“ (oder PMM). Wenn ich draußen klicke, ändert es sich zu "2:15 AM". Ich kann den Bericht speichern, aber wenn ich den gespeicherten Bericht erneut öffne, wird die Zeitplanzeit als AM (d. h. morgens) angezeigt, unabhängig davon, ob ich in der Zeitplanzeit AM oder PM eingegeben habe. | Geben Sie die Zeitplanzeit erneut ein. Achten Sie dabei darauf, nicht die vollständigen Zeichen „AM“ oder „PM“ einzugeben. Es reicht aus, „A“ für „AM“ oder „P“ für „PM“ einzugeben. Wenn das zusätzliche Zeichen nicht angezeigt wird, wird die Zeitplanzeit korrekt eingestellt. 
+| Beim Eingeben einer Zeitplanzeit für einen Cognos-Bericht erhalte ich manchmal ein zusätzliches „m“ in der Zeitplanzeit.  Wenn ich die Uhrzeit beispielsweise als „02:15 PM“ eingebe, wird möglicherweise ein zusätzliches Zeichen hinzugefügt: „02:15 PMM“ (oder PMm).  Wenn ich nach draußen klicke, ändert sich die Anzeige in „2:15 Uhr“.  Ich kann den Bericht speichern, aber wenn ich den gespeicherten Bericht erneut öffne, wird als geplante Zeit AM (also Morgen) angezeigt, unabhängig davon, ob ich in der geplanten Zeit AM oder PM eingegeben habe. | Geben Sie die geplante Zeit erneut ein und achten Sie darauf, nicht die vollständigen Zeichen „AM“ oder „PM“ einzugeben. Es reicht aus, „A“ für „AM“ oder „P“ für „PM“ einzugeben.  Wenn Ihnen das zusätzliche Zeichen nicht angezeigt wird, ist die geplante Zeit korrekt eingestellt. 
 |===
 
 
 == Ressourcen
 
-Weitere Tipps zur Fehlerbehebung finden Sie imlink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp Knowledge Base"] (Support-Anmeldung erforderlich).
+Weitere Tipps zur Fehlerbehebung finden Sie imlink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp Wissensdatenbank"] (Support-Anmeldung erforderlich).
 
-Weitere Support-Informationen finden Sie auf der Seite Data Infrastructure Insightslink:concept_requesting_support.html["Support"].
+Weitere Supportinformationen finden Sie in den Data Infrastructure Insightslink:concept_requesting_support.html["Support"] Seite.
 
-Wenn Sie über ein aktives Abonnement von Data Infrastructure Insights verfügen, können Sie die folgenden Support-Optionen nutzen:
+Wenn Sie über ein aktives Data Infrastructure Insights -Abonnement verfügen, können Sie diese Supportoptionen nutzen:
 
 link:https://www.netapp.com/us/contact-us/support.aspx["Telefon"] link:https://mysupport.netapp.com/site/cases/mine/create?serialNumber=95001014387268156333["Support-Ticket"]
 
-Weitere Informationen finden Sie im https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Support-Dokumentation Zu Data Infrastructure Insights"].
+Weitere Informationen finden Sie im https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Supportdokumentation zu Data Infrastructure Insights"] .

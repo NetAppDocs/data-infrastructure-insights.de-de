@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_dc_hds_hcp.html 
 keywords: data collector, Hitachi HDS, HCP 
-summary: Konfiguration des HDS Datensammlers 
+summary: HDS-Datensammler konfigurieren. 
 ---
-= Datensammler Hitachi HCP
+= Hitachi HCP-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
@@ -13,40 +13,40 @@ summary: Konfiguration des HDS Datensammlers
 Dieser Datensammler unterstützt die Hitachi Content Platform (HCP) mithilfe der HCP Management API.
 
 
-NOTE: Hitachi Content Platform wird mit einer anderen Rate (Raw TB) für Managed Unit gemessen. Jede 40 TB unformatierte HCP-Kapazität wird als 1 berechnetlink:concept_subscribing_to_cloud_insights.html#pricing["Verwaltete Einheit (ME)"].
+NOTE: Für die Hitachi Content Platform gilt ein anderer Preis für Raw TB als für Managed Units.  Jede 40 TB unformatierte HCP-Kapazität wird als 1 berechnetlink:concept_subscribing_to_cloud_insights.html#pricing["Verwaltete Einheit (MU)"] .
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Hitachi HCP-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Hitachi HCP-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
 | HCP-Cluster | Storage 
 
 
-| Mandant | Storage-Pool 
+| Mieter | Speicherpool 
 
 
-|  | Namespace 
+|  | Namensraum 
 
 
-| Internes Volumen | Knoten 
+| Internes Volumen | Node 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Inventaranforderungen
 
-Zur Erfassung von Bestandsdaten müssen Sie Folgendes haben:
+Um Bestandsdaten erfassen zu können, benötigen Sie Folgendes:
 
 * IP-Adresse des HCP-Servers
-* Schreibgeschützter Benutzername und Kennwort für die HCP-Software und die Peer-Rechte
+* Nur-Lese-Benutzername und Passwort für die HCP-Software und Peer-Berechtigungen
 
 
 
@@ -58,7 +58,7 @@ Zur Erfassung von Bestandsdaten müssen Sie Folgendes haben:
 | Feld | Beschreibung 
 
 
-| HCP Host | IP-Adresse oder vollqualifizierter Domänenname des HCP-Hosts 
+| HCP-Host | IP-Adresse oder vollqualifizierter Domänenname des HCP-Hosts 
 
 
 | HCP-Anschluss | Der Standardwert ist 9090 
@@ -67,7 +67,7 @@ Zur Erfassung von Bestandsdaten müssen Sie Folgendes haben:
 | HCP-Benutzer-ID | Benutzername für den HCP-Host. 
 
 
-| HCP-Kennwort | Passwort, das für den HCP-Host verwendet wird. 
+| HCP-Passwort | Für den HCP-Host verwendetes Passwort. 
 
 
 | HCP-Authentifizierungstyp | Wählen Sie HCP_LOCAL oder ACTIVE_DIRECTORY 
@@ -82,9 +82,9 @@ Zur Erfassung von Bestandsdaten müssen Sie Folgendes haben:
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 60. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen.  Der Standardwert ist 60. 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Der Standardwert ist 900. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen.  Der Standardwert ist 900. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

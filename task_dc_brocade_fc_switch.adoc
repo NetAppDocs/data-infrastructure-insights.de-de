@@ -2,34 +2,34 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_fc_switch.html 
 keywords: data collector, Brocade, FC switch, 
-summary: Konfigurieren des Datensammlers von Brocade FC Switches. 
+summary: Konfigurieren des Datenkollektors für Brocade FC-Switches. 
 ---
-= Datensammler Brocade FC Switch
+= Brocade FC Switch-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dateninfrastruktur Insights verwendet die SSH-Datenquelle (Brocade FC Switch), um eine Bestandsaufnahme für Brocade- oder umbenannte Switch-Geräte zu erkennen, auf denen die Firmware des Factsored Operating System (FOS) 4.2 und höher ausgeführt wird. Geräte werden sowohl im FC-Switch- als auch im Access Gateway-Modus unterstützt.
+Data Infrastructure Insights verwendet die Datenquelle Brocade FC Switch (SSH), um den Bestand für Brocade oder umbenannte Switch-Geräte zu ermitteln, auf denen die Factored Operating System (FOS)-Firmware 4.2 und höher ausgeführt wird.  Es werden Geräte sowohl im FC-Switch- als auch im Access Gateway-Modus unterstützt.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Brocade FC Switch-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Brocade FC Switch-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Switch | Switch 
+| Schalten | Schalten 
 
 
-| Port | Port 
+| Hafen | Hafen 
 
 
-| Virtual Fabric, Physische Fabric | Fabric 
+| Virtuelles Gewebe, physisches Gewebe | Stoff 
 
 
 | Zone | Zone 
@@ -38,22 +38,22 @@ Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem
 | Logischer Switch | Logischer Switch 
 
 
-| Virtual Volume | Datenmenge 
+| Virtuelles Volume | Volumen 
 
 
-| LSAN-Zone zu erreichen | IVR-Zone zu erreichen 
+| LSAN-Zone | IVR-Zone 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* Die Data Infrastructure Insights Acquisition Unit (AU) initiiert Verbindungen zu TCP-Port 22 auf Brocade-Switches, um Bestandsdaten zu sammeln. Die AU wird auch Verbindungen zu UDP Port 161 für die Sammlung von Leistungsdaten initiieren.
-* Es muss eine IP-Verbindung zu allen Switches in der Fabric vorhanden sein. Wenn Sie das Kontrollkästchen Alle Switches in der Fabric ermitteln aktivieren, identifiziert Data Infrastructure Insights alle Switches in der Fabric, benötigt jedoch IP-Konnektivität zu diesen zusätzlichen Switches, um sie zu erkennen.
-* Weltweit ist dasselbe Konto über alle Switches in der Fabric erforderlich. Sie können PuTTY (Open Source Terminal Emulator) verwenden, um den Zugriff zu bestätigen.
-* Die Ports 161 und 162 müssen offen sein für alle Switches im Fabric für SNMP-Performance-Abfragen.
-* SNMP Read-Only Community String
+* Die Data Infrastructure Insights Acquisition Unit (AU) initiiert Verbindungen zum TCP-Port 22 auf Brocade -Switches, um Inventardaten zu erfassen.  Die AU initiiert außerdem Verbindungen zum UDP-Port 161, um Leistungsdaten zu erfassen.
+* Es muss eine IP-Konnektivität zu allen Switches im Fabric bestehen.  Wenn Sie das Kontrollkästchen „Alle Switches im Fabric erkennen“ aktivieren, identifiziert Data Infrastructure Insights alle Switches im Fabric. Allerdings ist für die Erkennung dieser zusätzlichen Switches eine IP-Verbindung erforderlich.
+* Für alle Switches im Fabric ist global dasselbe Konto erforderlich.  Sie können PuTTY (Open Source-Terminalemulator) verwenden, um den Zugriff zu bestätigen.
+* Die Ports 161 und 162 müssen für alle Switches im Fabric für die SNMP-Leistungsabfrage geöffnet sein.
+* SNMP-Nur-Lese-Community-String
 
 
 
@@ -65,7 +65,7 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Switch-IP | IP-Adresse oder vollständig qualifizierter Domänenname des EFC-Servers 
+| IP wechseln | IP-Adresse oder vollqualifizierter Domänenname des EFC-Servers 
 
 
 | Benutzername | Benutzername für den Switch 
@@ -77,13 +77,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | SNMP | SNMP-Version 
 
 
-| SNMP-Community-Zeichenfolge | SNMP read-only Community String verwendet, um auf den Switch zugreifen 
+| SNMP-Community-String | SNMP-schreibgeschützte Community-Zeichenfolge für den Zugriff auf den Switch 
 
 
 | SNMP-Benutzername | SNMP-Benutzername 
 
 
-| SNMP-Kennwort | SNMP-Passwort 
+| SNMP-Passwort | SNMP-Passwort 
 |===
 
 
@@ -94,49 +94,49 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Fabric-Name | Der Fabric-Name wird vom Data Collector gemeldet. Lassen Sie das Feld leer, um den Fabric-Namen als WWN zu melden. 
+| Stoffname | Vom Datensammler zu meldender Stoffname.  Lassen Sie das Feld leer, um den Fabric-Namen als WWN zu melden. 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 15. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen.  Der Standardwert ist 15. 
 
 
-| Ausgeschlossene Geräte | Kommagetrennte Liste der Geräte-IDs, die von der Abfrage ausgeschlossen werden sollen 
+| Ausgeschlossene Geräte | Durch Kommas getrennte Liste von Geräte-IDs, die von der Abfrage ausgeschlossen werden sollen 
 
 
-| Admin-Domänen Aktiv | Wählen Sie, wenn Sie Admin-Domains verwenden 
+| Aktive Admin-Domänen | Wählen Sie aus, ob Sie Admin-Domänen verwenden 
 
 
-| MPR-Daten abrufen | Wählen Sie diese Option aus, um Routing-Daten von Ihrem Multiprotokoll-Router zu erhalten. 
+| MPR-Daten abrufen | Wählen Sie diese Option aus, um Routingdaten von Ihrem Multiprotokoll-Router abzurufen. 
 
 
-| Trapping Aktivieren | Wählen Sie diese Option aus, um die Erfassung beim Empfang eines SNMP-Trap vom Gerät zu aktivieren. Wenn Sie Trapping aktivieren auswählen, müssen Sie auch SNMP aktivieren. 
+| Überfüllung aktivieren | Wählen Sie diese Option, um die Erfassung beim Empfang eines SNMP-Traps vom Gerät zu aktivieren.  Wenn Sie „Trapping aktivieren“ auswählen, müssen Sie auch SNMP aktivieren. 
 
 
-| Mindestzeit zwischen Traps (s) | Mindestzeit zwischen durch Traps ausgelösten Erfassungsversuchen. Der Standardwert ist 10. 
+| Mindestzeit zwischen Traps (Sek.) | Mindestzeit zwischen durch Traps ausgelösten Erfassungsversuchen.  Der Standardwert ist 10. 
 
 
-| Erkennung aller Switches in der Fabric | Wählen Sie diese Option, um alle Switches in der Fabric zu erkennen 
+| Entdecken Sie alle Switches im Fabric | Wählen Sie diese Option aus, um alle Switches im Fabric zu erkennen 
 
 
-| Wählen Sie „HBA vs. Zone Aliases bevorzugen“ | Wählen Sie, ob HBA- oder Zonenaliasen bevorzugt werden sollen 
+| Wählen Sie HBA gegenüber Zonenaliasen | Wählen Sie, ob HBA- oder Zonenaliase bevorzugt werden sollen 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Der Standardwert ist 300. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen.  Der Standardwert ist 300. 
 
 
-| SNMP-Auth-Protokoll | SNMP-Authentifizierungsprotokoll (nur SNMP v3) 
+| SNMP-Authentifizierungsprotokoll | SNMP-Authentifizierungsprotokoll (nur SNMP v3) 
 
 
 | SNMP-Datenschutzkennwort | SNMP-Datenschutzkennwort (nur SNMP v3) 
 
 
-| SNMP wird erneut verwendet | Anzahl der SNMP-Wiederholungsversuche 
+| SNMP-Wiederholungen | Anzahl der SNMP-Wiederholungsversuche 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -144,22 +144,22 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Die Bestandsaufnahme der Brocade Datenquelle schlägt mit dem Fehler fehl: <date> <time> ERROR [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] Fehler 2 von 2: <datasource Name> [Interner Fehler] - das Modell für das Gerät konnte nicht generiert werden <IP>. Fehler beim Erkennen der Eingabeaufforderung ([Gerätename <Name>]: Fehler beim Generieren des Modells für Gerät <IP> nicht möglich. Fehler beim Erkennen der Eingabeaufforderung) | Das Problem kann verursacht werden, wenn der Brocade Switch mit einer Eingabeaufforderung zu lange zurückgibt und damit die Standardzeitüberschreitung von 5 Sekunden überschreitet. Versuchen Sie in den Einstellungen für die erweiterte Konfiguration des Datensammlers in Data Infrastructure Insights, das _SSH Banner Wait Timeout (sec)_ auf einen höheren Wert zu erhöhen. 
+| Die Inventarerfassung der Brocade -Datenquelle schlägt mit folgendem Fehler fehl: <Datum> <Uhrzeit> FEHLER [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] Fehler 2 von 2: <Datenquellenname> [Interner Fehler] – Das Modell für Gerät <IP> konnte nicht generiert werden.  Fehler beim Erkennen der Eingabeaufforderung ([Gerätename <Name>]: Das Modell für Gerät <IP> konnte nicht generiert werden.  Fehler bei der Eingabeaufforderung) | Das Problem kann dadurch verursacht werden, dass der Brocade -Switch zu lange braucht, um mit einer Eingabeaufforderung zurückzukehren, und das Standard-Timeout von 5 Sekunden überschreitet.  Versuchen Sie, in den erweiterten Konfigurationseinstellungen des Datensammlers in Data Infrastructure Insights den Wert _SSH-Banner-Wartezeitüberschreitung (Sek.)_ auf einen höheren Wert zu erhöhen. 
 
 
-| Fehler: „Data Infrastructure Insights received invalid Chassis role“ | Vergewissern Sie sich, dass dem in dieser Datenquelle konfigurierten Benutzer die Berechtigung für die Gehäuserolle erteilt wurde. 
+| Fehler: „Data Infrastructure Insights hat eine ungültige Chassis-Rolle erhalten“ | Überprüfen Sie, ob dem in dieser Datenquelle konfigurierten Benutzer die Berechtigung für die Chassis-Rolle erteilt wurde. 
 
 
-| Fehler: „IP-Adresse des Gehäuses nicht stimmt überein“ | DII unterstützt grundsätzlich KEINE Netzwerkadressübersetzung oder Portadressübersetzung zwischen der Erfassungseinheit und den Geräten. DII erkennt möglicherweise, dass der Hostname/die IP-Adresse in der Collector-Konfiguration NICHT mit den Adressen übereinstimmt, die das Gerät zu haben glaubt. 
+| Fehler: „Nicht übereinstimmende Gehäuse-IP-Adresse“ | DII unterstützt grundsätzlich KEINE Netzwerkadressübersetzung oder Portadressübersetzung zwischen der Erfassungseinheit und Geräten.  DII erkennt möglicherweise, dass der Hostname/die IP-Adresse in der Collector-Konfiguration NICHT mit einer der Adressen übereinstimmt, die das Gerät zu haben glaubt. 
 
 
-| Sie erhalten eine Meldung, dass mehr als 1 Knoten am Access Gateway-Port angemeldet ist | Überprüfen Sie, ob das NPV-Gerät ordnungsgemäß funktioniert und dass alle verbundenen WWNs erwartet werden. Erwerben Sie das NPV-Gerät nicht direkt. Stattdessen erfasst die Akquisition des Core Fabric Switch die NPV Geräte-Daten. 
+| Erhalten Sie eine Meldung, dass mehr als ein Knoten am Access Gateway-Port angemeldet ist | Überprüfen Sie, ob das NPV-Gerät ordnungsgemäß funktioniert und ob alle angeschlossenen WWNs den Erwartungen entsprechen.  Erwerben Sie das NPV-Gerät nicht direkt.  Stattdessen werden die NPV-Gerätedaten durch die Erfassung des Core Fabric Switch erfasst. 
 
 
-| Fehler: ...Max. Remote-Sitzungen für die Anmeldung... | FOS hat unterschiedliche Limits für die Anzahl gleichzeitig unterstützter SSH-Sitzungen pro Benutzerrolle. Die SSH-Sitzung von DII zu diesem Gerät wird beim Login wegen Verstoßes gegen diese Limits abgelehnt. Dies kann ein Hinweis darauf sein, dass mehrere Collector-Instanzen dasselbe Asset entdecken. Dies sollte vermieden werden. 
+| Fehler: ....Maximale Remote-Sitzungen für die Anmeldung... | FOS hat unterschiedliche Beschränkungen für die Anzahl unterstützter gleichzeitiger SSH-Sitzungen pro Benutzerrolle.  Die SSH-Sitzung von DII zu diesem Gerät wird bei der Anmeldung wegen Verletzung dieser Grenzwerte abgelehnt.  Dies kann ein Zeichen dafür sein, dass Sie doppelte Sammler haben, die denselben Vermögenswert entdecken, was vermieden werden sollte 
 |===
 
 
@@ -167,24 +167,24 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Performance-Erfassung schlägt mit „Timeout beim Senden der SNMP-Anforderung“ fehl. | Abhängig von Abfragevariablen und Switch-Konfiguration können einige Abfragen das Standard-Timeout überschreiten. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Weitere Informationen"] . 
+| Die Leistungserfassung schlägt mit der Meldung „Zeitüberschreitung beim Senden der SNMP-Anforderung“ fehl. | Abhängig von Abfragevariablen und Switch-Konfiguration können einige Abfragen das Standard-Timeout überschreiten. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Weitere Informationen"] . 
 
 
-| Die Leistungserfassung schlägt fehl mit ...Zeilenduplikate in SNMP-Tabelle gefunden... | DII hat fehlerhafte SNMP-Antworten erkannt. Sie verwenden wahrscheinlich FOS 8.2.3e. Aktualisieren Sie auf 8.2.3e2 oder höher. 
+| Die Leistungserfassung schlägt fehl mit ... Zeilenduplikate in der SNMP-Tabelle gefunden ... | DII hat fehlerhafte SNMP-Antworten erkannt.  Sie verwenden wahrscheinlich FOS 8.2.3e.  Aktualisieren Sie auf 8.2.3e2 oder höher. 
 
 
-| Leistungserfassungen schlagen mit ...Unbekanntem Benutzernamen... fehl | Sie haben Ihren DII-Collector mit einem „SNMP-Benutzernamen“ konfiguriert, der keinem der SNMPv3-Benutzerslots zugeordnet ist. Das Anlegen eines Benutzers auf Brocade FOS führt NICHT zwangsläufig dazu, dass dieser als SNMPv3-Benutzer aktiviert wird. Sie müssen ihn in einem der v3-Benutzerslots platzieren. 
+| Leistungserfassungen schlagen mit ...Unbekanntem Benutzernamen... fehl | Sie haben Ihren DII-Collector mit einem „SNMP-Benutzernamen“-Wert konfiguriert, der nicht in einen der SNMPv3-Benutzersteckplätze passt.  Durch das einfache Erstellen eines Benutzers auf Brocade FOS wird dieser NICHT unbedingt als SNMPv3-Benutzer aktiviert – Sie müssen ihn in einem der v3-Benutzerslots platzieren. 
 
 
-| Leistungserfassungen schlagen mit ...Nicht unterstützte Sicherheitsstufe... fehl. | Sie haben Ihren DII-Collector für die Verwendung von SNMPv3 konfiguriert, allerdings mit Verschlüsselungs- (auch Datenschutz-) und/oder Autorisierungseinstellungen, die auf dem betreffenden Gerät nicht aktiviert sind. 
+| Leistungserfassungen schlagen mit ...Nicht unterstützte Sicherheitsstufe... fehl. | Sie haben Ihren DII-Collector für die Verwendung von SNMPv3 konfiguriert, jedoch mit Verschlüsselungs- (auch Datenschutz-) und/oder Autorisierungseinstellungen, die auf dem betreffenden Gerät nicht aktiviert sind. 
 
 
-| Die Leistungserfassung schlägt fehl mit ... Leeres Datenschutzkennwort ist nur für das Datenschutzprotokoll NONE zulässig. | Sie haben Ihren DII-Collector für die Verwendung von SNMPv3 mit einem Verschlüsselungs- bzw. Datenschutzprotokoll (AES usw.) konfiguriert, aber der Wert für „SNMP-Datenschutzkennwort“ ist leer, sodass DII keine verschlüsselten SNMPv3-Datenströme mit diesem Gerät aushandeln kann. 
+| Die Leistungserfassung schlägt fehl mit ... Leeres Datenschutzkennwort ist nur für das Datenschutzprotokoll NONE zulässig | Sie haben Ihren DII-Collector für die Verwendung von SNMPv3 mit einem Verschlüsselungs- bzw. Datenschutzprotokoll (AES usw.) konfiguriert, aber Sie haben einen leeren Wert für „SNMP-Datenschutzkennwort“, sodass DII keine verschlüsselten SNMPv3-Datenflüsse mit diesem Gerät aushandeln kann. 
 
 
-| Die Leistungserfassung schlägt mit .....VF:nn fehl, Fehler: Kein Zugriff... | Sie haben Ihren DII-Collector für die Verwendung von SNMPv3 auf einem Gerät mit mehreren aktivierten virtuellen Fabrics konfiguriert, der SNMPv3-Benutzer verfügt jedoch NICHT über Rechte für VF NN. DII unterstützt keine partielle Erkennung eines physischen Assets. Sie sollten DII stets proaktiv Zugriff auf alle 128 möglichen VFs gewähren, da DII stets versucht, Leistungsdaten für alle vorhandenen VFs auf einem bestimmten physischen Gerät abzurufen. 
+| Die Leistungserfassung schlägt mit .....VF:nn fehl, Fehler: Kein Zugriff... | Sie haben Ihren DII-Collector für die Verwendung von SNMPv3 auf einem Gerät mit mehreren aktivierten virtuellen Fabrics konfiguriert, aber der SNMPv3-Benutzer verfügt NICHT über Rechte für VF NN.  DII unterstützt keine teilweise Erkennung eines physischen Assets. Sie sollten DII immer proaktiv Zugriff auf alle 128 möglichen VFs gewähren, da DII immer versucht, Leistungsdaten für alle vorhandenen VFs auf einem bestimmten physischen Gerät abzurufen. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

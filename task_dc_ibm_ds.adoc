@@ -2,56 +2,56 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_ds.html 
 keywords: data collector, IBM DS6xxx, IBM DS6xxx, IBM, IBM DS 
-summary: Konfiguration des Datensammlers der DS8000-Serie 
+summary: Konfigurieren des Datenkollektors der System Storage DS8000-Serie. 
 ---
-= Datensammler der IBM System Storage DS8000-Serie
+= Datenkollektor der IBM System Storage DS8000-Serie
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der IBM DS (CLI) Datensammler unterstützt die Erfassung von Bestands- und Performancedaten für DS6xxx- und DS8xxx-Geräte.
+Der IBM DS (CLI)-Datenkollektor unterstützt die Erfassung von Inventar- und Leistungsdaten für DS6xxx- und DS8xxx-Geräte.
 
-DS3xxx-, DS4xxx- und DS5xxx-Geräte werden vom unterstütztlink:task_dc_na_eseries.html["NetApp E-Series Datensammler"]. Unterstützte Modelle und Firmware-Versionen finden Sie in der Data Infrastructure Insights Supportmatrix.
+DS3xxx-, DS4xxx- und DS5xxx-Geräte werden unterstützt vonlink:task_dc_na_eseries.html["NetApp E-Series Datenkollektor"] .  Informationen zu unterstützten Modellen und Firmware-Versionen finden Sie in der Supportmatrix von Data Infrastructure Insights .
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem IBM DS-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom IBM DS-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplattenmodul | Festplatte 
+| Festplattenmodul | Scheibe 
 
 
-| Storage-Bild | Storage 
+| Speicherimage | Storage 
 
 
-| Extent-Pool | Storage-Node 
+| Extent-Pool | Speicherknoten 
 
 
-| Festes Block-Volume | Datenmenge 
+| Festes Blockvolumen | Volumen 
 
 
-| Host FC Initiator (zugeordnet) | Volume-Maske 
+| Host-FC-Initiator (zugeordnet) | Volumenmaske 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen möglicherweise nicht alle Fälle für diese Datensammlung dar.
+Hinweis: Dies sind nur allgemeine Terminologiezuordnungen und stellen möglicherweise nicht jeden Fall für diesen Datensammler dar.
 
 
 
 == Anforderungen
 
-Sie benötigen Folgendes, um diesen Datensammler zu konfigurieren:
+Zur Konfiguration dieses Datensammlers benötigen Sie Folgendes:
 
 * IP-Adresse jedes DS-Arrays
-* Schreibgeschützter Benutzername und Kennwort auf jedem DS-Array
-* Software von Drittanbietern, die auf der Data Infrastructure Insights AU installiert ist: IBM _dscli_
-* Zugriffsvalidierung: Führen Sie die Befehle _dscli_ mit dem Benutzernamen und Passwort aus
-* Port-Anforderungen: 80, 443 und 1750
+* Nur-Lese-Benutzername und Passwort auf jedem DS-Array
+* Auf der Data Infrastructure Insights AU installierte Drittanbietersoftware: IBM _dscli_
+* Zugriffsvalidierung: Führen Sie _dscli_-Befehle mit dem Benutzernamen und dem Kennwort aus
+* Portanforderungen: 80, 443 und 1750
 
 
 
@@ -63,16 +63,16 @@ Sie benötigen Folgendes, um diesen Datensammler zu konfigurieren:
 | Feld | Beschreibung 
 
 
-| DS-Speicher | IP-Adresse oder vollqualifizierter Domain-Name des DS-Geräts 
+| DS-Speicher | IP-Adresse oder vollqualifizierter Domänenname des DS-Geräts 
 
 
-| Benutzername | Benutzername für die DS-CLI 
+| Benutzername | Benutzername für die DS CLI 
 
 
-| Passwort | Passwort für die DS-CLI 
+| Passwort | Passwort für die DS CLI 
 
 
-| _Dscli_ ausführbare Datei-Pfad | Vollständiger Pfad zur ausführbaren Datei _dscli_ 
+| _dscli_ ausführbarer Pfad | Vollständiger Pfad zur ausführbaren Datei _dscli_ 
 |===
 
 
@@ -83,28 +83,28 @@ Sie benötigen Folgendes, um diesen Datensammler zu konfigurieren:
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen (min). Der Standardwert ist 40. 
+| Inventarabfrageintervall (min) | Intervall zwischen Bestandsabfragen (min).  Der Standardwert ist 40. 
 
 
-| Anzeigename Für Speicher | Name des IBM DS-Speicherarrays 
+| Speicheranzeigename | Name des IBM DS-Speicherarrays 
 
 
-| Inventory Exclude Devices | Kommagetrennte Liste von Geräteseriennummer, die von der Bestandserfassung ausgeschlossen werden sollen 
+| Aus dem Inventar ausgeschlossene Geräte | Durch Kommas getrennte Liste der Geräteseriennummern, die von der Inventarerfassung ausgeschlossen werden sollen 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 300. 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 300. 
 
 
-| Typ Des Leistungsfilters | Enthalten: Daten, die nur von Geräten in der Liste erfasst werden. Ausschließen: Es werden keine Daten von diesen Geräten erfasst 
+| Leistungsfiltertyp | Einschließen: Nur von Geräten auf der Liste erfasste Daten.  Ausschließen: Von diesen Geräten werden keine Daten erfasst 
 
 
-| Geräteliste Für Leistungsfilter | Kommagetrennte Liste der Geräte-IDs, die die Leistungssammlung einschließen oder ausschließen sollen 
+| Leistungsfilter-Geräteliste | Durch Kommas getrennte Liste von Geräte-IDs, die in die Leistungserfassung einbezogen oder davon ausgeschlossen werden sollen 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -112,12 +112,12 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Fehler mit CMUC00192E, CMUC00191E oder CMUC00190E | * Eingabe von Anmeldeinformationen und IP-Adresse überprüfen. * Versuchen Sie, mit dem Array über die Web-Management-Konsole \https://<ip>:8452/DS8000/Console zu kommunizieren. Ersetzen Sie <ip> durch konfigurierte IP-Adresse für den Data Collector. 
+| Fehler mit: CMUC00192E, CMUC00191E oder CMUC00190E | * Überprüfen Sie die eingegebenen Anmeldeinformationen und die IP-Adresse.  * Versuchen Sie, über die Webverwaltungskonsole \https://<ip>:8452/DS8000/Console mit dem Array zu kommunizieren.  Ersetzen Sie <ip> durch die für den Datensammler konfigurierte IP. 
 
 
-| Fehler: * Programm kann nicht ausgeführt werden * Fehler beim Ausführen des Befehls | * Aus Data Infrastructure Insights Acquisition Unit Öffnen Sie eine CMD * Open CLI.CFG-Datei in CLI's Home dir/lib und überprüfen Sie die Eigenschaft Java_INSTALL, bearbeiten Sie den Wert, der Ihrer Umgebung entspricht * Java-Version auf diesem Rechner anzeigen, indem Sie "java -Version" eingeben * Ping die IP-Adresse des IBM-Speichergeräts, das im CLI-Befehl ausgegeben wurde. * Wenn alle oben genannten gut funktioniert haben, dann führen Sie manuell einen CLI-Befehl aus 
+| Fehler: * Programm kann nicht ausgeführt werden * Fehler beim Ausführen des Befehls | * Öffnen Sie von der Data Infrastructure Insights Acquisition Unit aus ein CMD. * Öffnen Sie die Datei CLI.CFG im Stammverzeichnis/der Bibliothek der CLI und überprüfen Sie die Eigenschaft JAVA_INSTALL. Bearbeiten Sie den Wert, damit er Ihrer Umgebung entspricht. * Zeigen Sie die auf diesem Computer installierte Java-Version an, indem Sie „java -version“ eingeben. * Pingen Sie die IP-Adresse des IBM-Speichergeräts an, das im ausgegebenen CLI-Befehl angegeben ist.  * Wenn alles oben genannte gut funktioniert hat, führen Sie manuell einen CLI-Befehl aus 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

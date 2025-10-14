@@ -2,95 +2,95 @@
 sidebar: sidebar 
 permalink: concept_anomaly_detection.html 
 keywords: Anomalies, anomaly, patterns, monitor, alert 
-summary: Kennzahlen auf Anomalien überwachen 
+summary: Überwachen Sie Metriken auf Anomalien 
 ---
-= Überwachung Der Anomalieerkennung
+= Anomalieerkennungsmonitore
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-Anomalieerkennung bietet Einblicke in unerwartete Änderungen in den Datenmustern auf Ihrem Mandanten. Eine Anomalie tritt auf, wenn sich das Muster des Objektes ändert, z. B. wenn ein Objekt mittwochs zu einer bestimmten Zeit eine bestimmte Latenz erfährt, jedoch am folgenden Mittwoch eine Latenzspitze über diesem Niveau liegt, die dann als Anomalie angesehen würde. Data Infrastructure Insights ermöglicht die Erstellung von Monitoren, die bei solchen Anomalien entsprechende Alarme ausgeben.
+Die Anomalieerkennung bietet Einblick in unerwartete Änderungen in den Datenmustern Ihres Mandanten.  Eine Anomalie tritt auf, wenn sich das Verhaltensmuster eines Objekts ändert. Wenn beispielsweise ein Objekt mittwochs zu einer bestimmten Uhrzeit eine bestimmte Latenz aufweist, die Latenz am darauffolgenden Mittwoch jedoch zu dieser Uhrzeit über diesen Wert ansteigt, wird dieser Anstieg als Anomalie betrachtet.  Data Infrastructure Insights ermöglicht die Erstellung von Monitoren, die beim Auftreten solcher Anomalien eine Warnung ausgeben.
 
-Die Anomalieerkennung ist für Objektmetriken geeignet, die ein wiederkehrendes, vorhersehbares Muster aufweisen. Wenn diese Objektkennzahlen über oder unter dem erwarteten Niveau liegen, kann Data Infrastructure Insights eine Warnmeldung zur schnellen Untersuchung generieren.
+Die Anomalieerkennung eignet sich für Objektmetriken, die ein wiederkehrendes, vorhersehbares Muster aufweisen.  Wenn diese Objektmetriken über oder unter die erwarteten Werte steigen, kann Data Infrastructure Insights eine Warnung generieren, um eine Untersuchung einzuleiten.
 
-image:anomaly_detection_expert_view.png["Diagramm mit einer erkannten Anomalie"]
+image:anomaly_detection_expert_view.png["Diagramm mit erkannter Anomalie"]
 
 
 
-== Was ist die Anomaly-Erkennung?
+== Was ist Anomalieerkennung?
 
-Eine Anomalie tritt auf, wenn der Mittelwert einer Metrik eine Reihe von Standardabweichungen außerhalb des gewichteten Mittelwerts dieser Metrik für die letzten Wochen ist, wobei die letzten Wochen mehr Gewicht als die letzten Wochen haben. Data Infrastructure Insights bietet die Möglichkeit, Daten zu überwachen und bei Anomalien entsprechende Warnmeldungen zu ausgeben. Sie haben die Wahl, die Erkennungsstufen für die „Empfindlichkeit“ einzustellen. Eine höhere Sensitivität wäre beispielsweise dann gegeben, wenn der Mittelwert weniger Standardabweichungen vom Mittelwert ist, wodurch mehr Warnungen generiert werden. Umgekehrt: Niedrigere Empfindlichkeit = mehr Standardabweichungen vom Mittelwert = weniger Alarme.
+Eine Anomalie tritt auf, wenn der Mittelwert einer Metrik um eine bestimmte Anzahl von Standardabweichungen vom gewichteten Mittelwert dieser Metrik der letzten Wochen abweicht, wobei die letzten Wochen stärker gewichtet werden als die vorherigen Wochen.  Data Infrastructure Insights bietet die Möglichkeit, Daten zu überwachen und bei erkannten Anomalien eine Warnung auszugeben.  Sie haben die Möglichkeit, die Empfindlichkeitsstufen der Erkennung einzustellen.  Eine höhere Empfindlichkeit liegt beispielsweise vor, wenn der Mittelwert weniger Standardabweichungen vom Mittelwert aufweist und somit mehr Warnungen generiert werden.  Umgekehrt gilt: geringere Empfindlichkeit = mehr Standardabweichungen vom Mittelwert = weniger Warnungen.
 
 
 
 === Die Überwachung der Anomalieerkennung unterscheidet sich von der Schwellenwertüberwachung.
 
-* *Schwellenwertbasierte Überwachung* funktioniert, wenn Sie vordefinierte Schwellenwerte für bestimmte Metriken haben. Mit anderen Worten, wenn Sie ein klares Verständnis davon haben, was erwartet wird (d.h. innerhalb eines normalen Bereichs).
+* *Schwellenwertbasierte Überwachung* funktioniert, wenn Sie vordefinierte Schwellenwerte für bestimmte Metriken haben.  Mit anderen Worten, wenn Sie ein klares Verständnis davon haben, was erwartet wird (d. h. innerhalb eines normalen Bereichs).
 
 
-image:MetricMonitor_blurb.png["Metrische Monitore sind für den Fall vorgesehen, dass Sie den Betriebsbereich kennen"]
+image:MetricMonitor_blurb.png["Metrische Monitore sind für den Fall gedacht, dass Sie den Betriebsbereich kennen"]
 
-* *Anomaly Detection Monitoring* verwendet Machine Learning Algorithmen, um Ausreißer zu identifizieren, die von der Norm abweichen, wenn die Definition von "normal" nicht klar ist.
-
-
-image:ADMonitor_blurb.png["Überwachung der Anomalieerkennung ist für den Fall geeignet, wenn Sie Spitzen oder Tropfen erkennen möchten"]
+* Bei der *Überwachung der Anomalieerkennung* werden Algorithmen des maschinellen Lernens verwendet, um Ausreißer zu identifizieren, die von der Norm abweichen, wenn die Definition von „normal“ nicht klar ist.
 
 
-
-== Wann benötige ich die Anomaly Detection?
-
-Das Monitoring der Anomalieerkennung bietet in vielen Situationen hilfreiche Warnmeldungen, darunter:
-
-* Wenn die Definition von _normal_ unklar ist. Beispielsweise können SAN-Fehlerraten je nach Port unterschiedlich hoch sein. Die Alarmierung bei einem Fehler ist laut und unnötig, aber eine plötzliche oder signifikante Steigerung kann auf ein weit verbreitetes Problem hinweisen.
-* Wo es Veränderungen im Laufe der Zeit gibt. Workloads mit saisonalen Schwankungen (d. h. zu bestimmten Zeiten sind sie beschäftigt oder still). Dies kann unerwartete Ruhezeiten sein, die auf einen Batch-Stillstand hindeuten können.
-* Die Arbeit mit großen Datenmengen, bei denen die manuelle Festlegung und Anpassung von Schwellenwerten unpraktisch ist. Beispielsweise ein Mandant mit einer großen Anzahl von Hosts und/oder Volumes mit unterschiedlichen Workloads. Für jeden kann es unterschiedliche SLAs geben. Daher ist es wichtig, diejenigen zu verstehen, die die Norm überschreiten.
+image:ADMonitor_blurb.png["Anomalieerkennungsmonitore sind für den Fall gedacht, dass Sie Spitzen oder Einbrüche erkennen möchten"]
 
 
 
+== Wann benötige ich eine Anomalieerkennung?
 
-== Erstellen eines Anomaly Detection Monitors
+Die Überwachung der Anomalieerkennung kann in vielen Situationen hilfreiche Warnungen liefern, darunter in den folgenden:
 
-Um bei Anomalien zu warnen, erstellen Sie einen Monitor, indem Sie zu *Observability > Alerts > +Monitor* navigieren. Wählen Sie _Anomaly Detection Monitor_ als Monitortyp.
+* Wenn die Definition von _normal_ unklar ist.  Beispielsweise kann es je nach Port zu unterschiedlich hohen SAN-Fehlerraten kommen.  Eine Warnung bei einem einzelnen Fehler ist unnötig und unauffällig, ein plötzlicher oder deutlicher Anstieg kann jedoch auf ein weitverbreitetes Problem hinweisen.
+* Wo es im Laufe der Zeit zu Veränderungen kommt.  Arbeitslasten, die Saisonalität aufweisen (d. h. zu bestimmten Zeiten sind sie ausgelastet oder ruhig).  Hierzu können unerwartete Ruhephasen gehören, die auf einen Batch-Stillstand hindeuten können.
+* Arbeiten mit großen Datenmengen, bei denen das manuelle Definieren und Anpassen von Schwellenwerten unpraktisch ist.  Beispielsweise ein Mandant mit einer großen Anzahl von Hosts und/oder Volumes mit unterschiedlichen Arbeitslasten.  Jeder hat möglicherweise andere SLAs, daher ist es wichtig zu verstehen, welche die Norm überschreiten.
 
-image:AnomalyDetectionMonitorChoice.png["Auswahl der Anomaly-Erkennung beim Erstellen eines Monitors, Breite=480"]
 
-Wählen Sie das Objekt und die Metrik aus, die Sie überwachen möchten. Sie können Filter und Gruppierung wie bei anderen Monitortypen festlegen.
+
+
+== Erstellen eines Anomalieerkennungsmonitors
+
+Um bei Anomalien Warnungen auszugeben, erstellen Sie einen Monitor, indem Sie zu *Beobachtbarkeit > Warnungen > +Monitor* navigieren.  Wählen Sie _Anomaly Detection Monitor_ als Monitortyp aus.
+
+image:AnomalyDetectionMonitorChoice.png["Auswählen der Anomalieerkennung beim Erstellen eines Monitors, Breite=480"]
+
+Wählen Sie das Objekt und die Metrik aus, die Sie überwachen möchten.  Sie können Filter und Gruppierungen wie bei anderen Monitortypen festlegen.
 
 Legen Sie als Nächstes die Bedingungen für den Monitor fest.
 
-* Lösen Sie eine Warnung aus, wenn die ausgewählte Metrik entweder _Spikes über_ die vorhergesagten Grenzen, _Drops unter_ diese Grenzen oder beides hat.
-* Stellen Sie die Empfindlichkeit auf _Medium_, _Low_ (weniger Anomalien werden erkannt) oder _High_ (es werden weitere Anomalien erkannt).
-* Bestimmen Sie, ob die Alarmstufe „_Critical_“ oder „_Warning_“ ist.
-* Legen Sie optional einen Wert fest, unter dem die Anomalien _ignoriert_ sind. Dies kann zur Reduzierung von Geräuschen beitragen. Dieser Wert wird als gestrichelte Linie im Beispieldiagramm angezeigt.
+* Lösen Sie eine Warnung aus, wenn die ausgewählte Metrik entweder über die vorhergesagten Grenzen _steigt_, _unter diese Grenzen fällt_ oder beides.
+* Stellen Sie die Empfindlichkeit auf _Mittel_, _Niedrig_ (es werden weniger Anomalien erkannt) oder _Hoch_ (es werden mehr Anomalien erkannt) ein.
+* Bestimmen Sie, ob die Warnstufe _Kritisch_ oder _Warnung_ ist.
+* Legen Sie optional einen Wert fest, unterhalb dessen Anomalien _ignoriert_ werden.  Dies kann zur Lärmreduzierung beitragen.  Dieser Wert wird im Beispieldiagramm als gestrichelte Linie angezeigt.
 
 
-image:AnomalyDetectionMonitorConditions.png["Einstellen der Bedingungen für die Überwachung der Anomaly-Erkennung"]
+image:AnomalyDetectionMonitorConditions.png["Festlegen von Bedingungen für den Anomalieerkennungsmonitor"]
 
-Schließlich können Sie eine Bereitstellungsmethode für die Warnungen (E-Mail, Webhook oder beides) konfigurieren, dem Monitor eine optionale Beschreibung oder Korrekturmaßnahmen geben und den Monitor bei Bedarf einer benutzerdefinierten Gruppe hinzufügen.
+Abschließend können Sie eine Übermittlungsmethode für die Warnungen konfigurieren (E-Mail, Webhook oder beides), dem Monitor eine optionale Beschreibung oder Korrekturmaßnahmen zuweisen und den Monitor bei Bedarf einer benutzerdefinierten Gruppe hinzufügen.
 
-Speichern Sie den Monitor mit einem aussagekräftigen Namen, und schon ist alles erledigt.
+Speichern Sie den Monitor unter einem aussagekräftigen Namen und fertig.
 
-Nach der Erstellung analysiert der Monitor die Daten der Vorwoche, um eine erste Baseline zu erstellen. Die Anomalieerkennung wird genauer, wenn die Zeit vergeht und mehr Geschichte auftritt.
+Nach der Erstellung analysiert der Monitor die Daten der vorherigen Woche, um eine erste Basislinie festzulegen.  Die Anomalieerkennung wird mit der Zeit und mit zunehmender Historie genauer.
 
 
-NOTE: Bei der Erstellung eines Monitors prüft DII alle vorhandenen Daten der Vorwoche auf signifikante Datenspitzen oder -einbrüche; diese gelten als Anomalien. In der ersten Woche nach der Monitorerstellung (der Lernphase) kann es zu verstärktem Rauschen in den Warnmeldungen kommen. Um dieses Rauschen zu minimieren, werden nur Spitzen oder Einbrüche, die länger als 30 Minuten dauern, als Anomalien gewertet und lösen Warnmeldungen aus. Wenn in der darauffolgenden Woche weitere Daten analysiert werden, nimmt das Rauschen normalerweise ab und ein signifikanter Anstieg oder Abfall, der länger anhält, wird als Anomalie betrachtet.
+NOTE: Wenn ein Monitor erstellt wird, prüft DII alle vorhandenen Daten der vorherigen Woche auf signifikante Datenspitzen oder -abfälle. Diese werden als Anomalien betrachtet.  Während der ersten Woche nach der Monitorerstellung (der „Lernphase“) besteht die Möglichkeit, dass es bei den Warnungen zu verstärktem „Rauschen“ kommt.  Um dieses Rauschen zu mildern, werden nur Spitzen oder Einbrüche, die länger als 30 Minuten andauern, als Anomalien betrachtet und lösen Warnungen aus.  Wenn in der darauffolgenden Woche weitere Daten analysiert werden, nimmt das Rauschen normalerweise ab und ein signifikanter Anstieg oder Abfall, der länger anhält, wird als Anomalie betrachtet.
 
 
 
 == Anzeigen der Anomalien
 
-Auf einer Landing Page für Warnmeldungen, die ausgelöst werden, wenn Anomalien erkannt werden, wird im Diagramm ein markiertes Band angezeigt, von dem Zeitpunkt, zu dem die Metrik außerhalb der vorhergesagten Grenzen stachelte, bis zu dem Zeitpunkt, zu dem sie sich innerhalb dieser Grenzen zurückbewegte.
+Auf einer Warnmeldungs-Landingpage werden Warnmeldungen, die bei der Erkennung von Anomalien ausgelöst werden, im Diagramm durch ein hervorgehobenes Band angezeigt, und zwar von dem Zeitpunkt an, als die Metrik die vorhergesagten Grenzen überschritt, bis zu dem Zeitpunkt, als sie wieder innerhalb dieser Grenzen lag.
 
-image:Anomaly_Detection_Chart_Example_Expert_View.png["Diagramm mit der Uhrzeit, zu der eine Anomalie aufgetreten ist"]
+image:Anomaly_Detection_Chart_Example_Expert_View.png["Diagramm, das den Zeitpunkt zeigt, zu dem eine Anomalie auftrat"]
 
-Beim Anzeigen eines Anomaliediagramms auf einer Landing Page für Warnmeldungen können Sie die folgenden Optionen auswählen:
+Beim Anzeigen eines Anomaliediagramms auf einer Warnmeldungs-Zielseite können Sie die folgenden Optionen auswählen:
 
-* Wöchentlicher Trend: vergleichen sie die Werte mit der gleichen Zeit, am gleichen Tag in den Vorwochen, für bis zu 5 vorherige Wochen.
-* Vollständige Anomaly-Grenzen: Standardmäßig konzentriert sich die Grafik auf den metrischen Wert, damit Sie das metrische Verhalten besser analysieren können. Auswählen, um vollständige Grenzen für Anomalien anzuzeigen (Maximalwert usw.)
+* Wöchentlicher Trend: Vergleichen Sie Werte mit der gleichen Uhrzeit und dem gleichen Tag der vorherigen Wochen für bis zu 5 vorherige Wochen.
+* Vollständige Anomaliegrenzen: Standardmäßig konzentriert sich das Diagramm auf den Metrikwert, damit Sie das Metrikverhalten besser analysieren können.  Wählen Sie diese Option aus, um die vollständigen Anomaliegrenzen (Maximalwert usw.) anzuzeigen.
 
 
-Sie können auch Objekte anzeigen, die zu der Anomalie beigetragen haben, indem Sie diese in der Expertenansicht der Landing Page auswählen. Das Diagramm zeigt das Verhalten der ausgewählten Objekte an.
+Sie können auch Objekte anzeigen, die zur Anomalie beigetragen haben, indem Sie diese im Leistungsbereich der Zielseite auswählen.  Das Diagramm zeigt das Verhalten der ausgewählten Objekte.
 
-image:Anomaly_Detection_Contributing_Objects.png["Dokumentation von Objekten, die zur Anomalie beitragen"]
+image:Anomaly_Detection_Contributing_Objects.png["Kartierung von Objekten, die zur Anomalie beitragen"]

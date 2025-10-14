@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: task_research_failed_collector.html 
 keywords: data collector, changes, failures 
-summary: Fehler beim Datensammler 
+summary: Datensammlerfehler 
 ---
-= Recherchieren eines fehlgeschlagenen Datensammlers
+= Untersuchung eines gescheiterten Datensammlers
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Wenn ein Datensammler über eine Fehlermeldung und eine hohe oder mittlere Auswirkung verfügt, müssen Sie dieses Problem anhand der Datensammler-Übersichtsseite mit den verknüpften Informationen untersuchen.
+Wenn ein Datensammler eine Fehlermeldung und eine hohe oder mittlere Auswirkung aufweist, müssen Sie dieses Problem mithilfe der Übersichtsseite des Datensammlers und der darin verknüpften Informationen untersuchen.
 
-Gehen Sie wie folgt vor, um die Ursache für fehlgeschlagene Datensammler zu ermitteln. Fehlermeldungen der Datensammler werden im Menü *Admin* und auf der Seite *installierte Datensammler* angezeigt.
+Führen Sie die folgenden Schritte aus, um die Ursache für fehlgeschlagene Datensammler zu ermitteln.  Fehlermeldungen zum Datensammler werden im Menü *Admin* und auf der Seite *Installierte Datensammler* angezeigt.
 
 .Schritte
-. Klicken Sie Auf *Admin* > *Datensammler* > *Installierte Datensammler*.
-. Klicken Sie auf den verknüpften Namen des defekten Datensammlers, um die Seite Zusammenfassung zu öffnen.
-. Auf der Seite Zusammenfassung können Sie im Bereich Kommentare alle Hinweise lesen, die von einem anderen Techniker hinterlassen wurden, der möglicherweise auch diesen Fehler untersucht hat.
-. Notieren Sie alle Leistungsmeldungen.
-. Bewegen Sie den Mauszeiger über die Segmente des Ereigniskleistendiagramms, um zusätzliche Informationen anzuzeigen.
-. Wählen Sie eine Fehlermeldung für ein Gerät aus, die unter der Ereigniszeitleiste angezeigt wird, und klicken Sie auf das Symbol Fehlerdetails rechts neben der Meldung.
+. Klicken Sie auf *Admin* > *Datensammler* > *Installierte Datensammler*.
+. Klicken Sie auf den verknüpften Namen des fehlerhaften Datensammlers, um die Seite „Zusammenfassung“ zu öffnen.
+. Überprüfen Sie auf der Seite „Zusammenfassung“ den Bereich „Kommentare“, um alle Notizen zu lesen, die möglicherweise von einem anderen Techniker hinterlassen wurden, der diesen Fehler möglicherweise ebenfalls untersucht.
+. Beachten Sie alle Leistungsmeldungen.
+. Bewegen Sie den Mauszeiger über die Segmente des Ereigniszeitleistendiagramms, um zusätzliche Informationen anzuzeigen.
+. Wählen Sie eine Fehlermeldung für ein Gerät aus, die unterhalb der Ereigniszeitleiste angezeigt wird, und klicken Sie auf das Symbol „Fehlerdetails“, das rechts neben der Meldung angezeigt wird.
 +
-Die Fehlerdetails enthalten den Text der Fehlermeldung, die wahrscheinlichsten Ursachen, die verwendeten Informationen und Vorschläge, was versucht werden kann, das Problem zu beheben.
+Die Fehlerdetails umfassen den Text der Fehlermeldung, die wahrscheinlichsten Ursachen, verwendete Informationen und Vorschläge, was zur Behebung des Problems versucht werden kann.
 
-. Im Bereich Geräte, die von diesem Data Collector gemeldet werden, können Sie die Liste filtern, um nur Geräte von Interesse anzuzeigen. Sie können dann auf den verknüpften *Name* eines Geräts klicken, um die Asset-Seite für dieses Gerät anzuzeigen.
-. Wenn Sie zur Übersichtsseite des Datensammlers zurückkehren, überprüfen Sie im Bereich *Letzte Änderungen anzeigen* unten auf der Seite, um zu sehen, ob die letzten Änderungen das Problem verursacht haben könnten.
+. Im Bereich „Von diesem Datensammler gemeldete Geräte“ können Sie die Liste filtern, um nur die Geräte anzuzeigen, die Sie interessieren, und Sie können auf den verknüpften *Namen* eines Geräts klicken, um die Asset-Seite für dieses Gerät anzuzeigen.
+. Wenn Sie zur Übersichtsseite des Datensammlers zurückkehren, überprüfen Sie den Bereich *Letzte Änderungen anzeigen* unten auf der Seite, um festzustellen, ob das Problem durch kürzliche Änderungen verursacht worden sein könnte.
 

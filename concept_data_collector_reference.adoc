@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_data_collector_reference.html 
-summary: Anbieterspezifische Daten-Collector-Referenzinformationen. 
+summary: Anbieterspezifische Referenzinformationen zum Datensammler. 
 keywords: data collector, vendor, AWS, BROADCOM, Cisco, Dell, EMC, Hitachi, IBM, NetApp, OceanStor, OpenStack, Oracle, Pure Storage, Red Hat, redhat, VMware 
 ---
 = Anbieterspezifische Referenz
@@ -10,6 +10,6 @@ keywords: data collector, vendor, AWS, BROADCOM, Cisco, Dell, EMC, Hitachi, IBM,
 
 
 [role="lead"]
-Die Themen in diesem Abschnitt enthalten anbieterspezifische Referenzinformationen. In den meisten Fällen ist die Konfiguration eines Datensammlers einfach. In einigen Fällen benötigen Sie möglicherweise zusätzliche Informationen oder Befehle, um den Datensammler richtig zu konfigurieren.
+Die Themen in diesem Abschnitt bieten anbieterspezifische Referenzinformationen.  In den meisten Fällen ist die Konfiguration eines Datensammlers unkompliziert.  In einigen Fällen benötigen Sie möglicherweise zusätzliche Informationen oder Befehle, um den Datensammler richtig zu konfigurieren.
 
-Klicken Sie im Menü links auf einen *Anbieter*, um Informationen zu ihren Datensammlern anzuzeigen.
+Klicken Sie im Menü links auf einen *Anbieter*, um Informationen zu dessen Datensammlern anzuzeigen.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_cs_api.html 
 keywords: api, access, token, swagger 
-summary: Workload Security umfasst eine leistungsstarke API zur Integration in andere Applikationen wie CMDBs. 
+summary: Workload Security umfasst eine leistungsstarke API für die Integration mit anderen Anwendungen wie CMDBs. 
 ---
 = Workload-Sicherheits-API
 :hardbreaks:
@@ -14,62 +14,62 @@ summary: Workload Security umfasst eine leistungsstarke API zur Integration in a
 
 
 [role="lead"]
-Die Workload-Sicherheits-API ermöglicht NetApp Kunden und unabhängigen Software-Anbietern (ISVs) die Integration der Workload-Sicherheit in andere Applikationen wie CMDB- oder andere Ticketsysteme.
+Die Workload Security API ermöglicht es NetApp Kunden und unabhängigen Softwareanbietern (ISVs), Workload Security in andere Anwendungen wie CMDBs oder andere Ticketsysteme zu integrieren.
 
-Anforderungen für API-Zugriff:
+Voraussetzungen für den API-Zugriff:
 
-* Ein API-Zugriffstoken-Modell wird verwendet, um den Zugriff zu gewähren.
-* Das Management von API-Token wird von Workload Security-Benutzern mit der Administratorrolle durchgeführt.
+* Zum Gewähren des Zugriffs wird ein API-Zugriffstokenmodell verwendet.
+* Die API-Token-Verwaltung wird von Workload Security-Benutzern mit der Administratorrolle durchgeführt.
 
 
 
 
 == API-Dokumentation (Swagger)
 
-Die neuesten API-Informationen finden Sie, indem Sie sich bei Workload Security anmelden und zu *Admin > API Access* navigieren. Klicken Sie auf den Link *API Documentation*. Die API-Dokumentation ist Swagger-basiert, die eine kurze Beschreibung und Nutzungsinformationen für die API bietet und es Ihnen ermöglicht, es auf Ihrem Mandanten auszuprobieren.
+Die neuesten API-Informationen finden Sie, indem Sie sich bei Workload Security anmelden und zu *Admin > API-Zugriff* navigieren.  Klicken Sie auf den Link *API-Dokumentation*.  Die API-Dokumentation basiert auf Swagger und bietet eine kurze Beschreibung und Nutzungsinformationen für die API. Sie können sie auch auf Ihrem Mandanten ausprobieren.
 
 
-NOTE: Wenn Sie die Forensics Activity API aufrufen, verwenden Sie die API cloudSecure_forensics.activities.*v2*. Wenn Sie mehrere Aufrufe zu dieser API ausführen, stellen Sie sicher, dass die Aufrufe nacheinander und nicht parallel erfolgen. Mehrere parallele Aufrufe können dazu führen, dass die API-Zeit abgeht.
-
-
-
-== API-Zugriffs-Tokens
-
-Bevor Sie die Workload Security API verwenden, müssen Sie ein oder mehrere *API Access Token* erstellen. Access Tokens gewähren Leseberechtigungen. Sie können auch die Ablauffrist für jedes Access Token festlegen.
-
-So erstellen Sie ein Access Token:
-
-* Klicken Sie auf *Admin > API Access*
-* Klicken Sie auf *+API Access Token*
-* Geben Sie *Tokenname* Ein
-* Geben Sie *Token Expiration* An
+NOTE: Wenn Sie die Forensics Activity API aufrufen, verwenden Sie die API cloudsecure_forensics.activities.*v2*.  Wenn Sie diese API mehrfach aufrufen, stellen Sie sicher, dass die Aufrufe nacheinander und nicht parallel erfolgen.  Mehrere parallele Aufrufe können zu einem Timeout der API führen.
 
 
 
-NOTE: Ihr Token kann nur während des Erstellungsvorgangs in die Zwischenablage kopiert und gespeichert werden. Token können nicht abgerufen werden, nachdem sie erstellt wurden. Daher wird dringend empfohlen, das Token zu kopieren und an einem sicheren Ort zu speichern. Sie werden aufgefordert, auf die Schaltfläche API-Zugriffstoken kopieren zu klicken, bevor Sie den Bildschirm zur Token-Erstellung schließen können.
+== API-Zugriffstoken
 
-Sie können Token deaktivieren, aktivieren und widerrufen. Deaktivierte Token können aktiviert werden.
+Bevor Sie die Workload Security API verwenden, müssen Sie ein oder mehrere *API-Zugriffstoken* erstellen.  Zugriffstoken gewähren Leseberechtigungen.  Sie können auch das Ablaufdatum für jedes Zugriffstoken festlegen.
 
-Token gewähren allgemeinen Zugriff auf APIs aus Kundensicht, indem sie den Zugriff auf APIs im Rahmen ihres eigenen Mandanten verwalten.
+So erstellen Sie ein Zugriffstoken:
 
-Die Anwendung erhält ein Zugriffstoken, nachdem ein Benutzer den Zugriff erfolgreich authentifiziert und autorisiert hat, und übergibt das Access Token dann als Berechtigung, wenn es die Ziel-API anruft. Das übergebene Token informiert die API, dass der Inhaber des Tokens berechtigt ist, auf die API zuzugreifen und bestimmte Aktionen basierend auf dem Umfang auszuführen, den während der Autorisierung gewährt wurde.
+* Klicken Sie auf *Admin > API-Zugriff*
+* Klicken Sie auf *+API-Zugriffstoken*
+* Geben Sie *Token-Name* ein
+* Geben Sie *Token-Ablauf* an
 
-Der HTTP-Header, in dem das Access Token übergeben wird, ist *X-CloudInsights-ApiKey:*
 
-Verwenden Sie zum Abrufen von Lagerbeständen beispielsweise Folgendes:
+
+NOTE: Ihr Token steht Ihnen während des Erstellungsprozesses nur zum Kopieren in die Zwischenablage und zum Speichern zur Verfügung.  Token können nach ihrer Erstellung nicht abgerufen werden. Es wird daher dringend empfohlen, das Token zu kopieren und an einem sicheren Ort zu speichern.  Sie werden aufgefordert, auf die Schaltfläche „API-Zugriffstoken kopieren“ zu klicken, bevor Sie den Bildschirm zur Token-Erstellung schließen können.
+
+Sie können Token deaktivieren, aktivieren und widerrufen.  Deaktivierte Token können aktiviert werden.
+
+Token gewähren aus Kundensicht allgemeinen Zugriff auf APIs und verwalten den Zugriff auf APIs im Rahmen ihres eigenen Mandanten.
+
+Die Anwendung erhält ein Zugriffstoken, nachdem ein Benutzer den Zugriff erfolgreich authentifiziert und autorisiert hat, und übergibt das Zugriffstoken dann als Anmeldeinformation, wenn sie die Ziel-API aufruft.  Das übergebene Token informiert die API darüber, dass der Inhaber des Tokens autorisiert wurde, auf die API zuzugreifen und basierend auf dem bei der Autorisierung gewährten Umfang bestimmte Aktionen auszuführen.
+
+Der HTTP-Header, an den das Zugriffstoken übergeben wird, lautet *X-CloudInsights-ApiKey:*
+
+Verwenden Sie beispielsweise Folgendes, um Speicherressourcen abzurufen:
 
  curl https://<Workload Security tenant>/rest/v1/cloudsecure/activities -H 'X-CloudInsights-ApiKey: <API_Access_Token>'
 Dabei ist _<API_Access_Token>_ das Token, das Sie während der Erstellung des API-Zugriffsschlüssels gespeichert haben, und _<Workload Security Tenant>_ die Tenant-URL Ihrer Workload Security-Umgebung.
 
-Detaillierte Informationen finden Sie im Link _API Documentation_ unter *Admin > API Access*.
+Detaillierte Informationen finden Sie im Link _API-Dokumentation_ unter *Admin > API-Zugriff*.
 
 
 
 == Skript zum Extrahieren von Daten über die API
 
-Workload Security-Agenten enthalten ein Exportskript, um parallele Aufrufe an die v2-API zu ermöglichen, indem sie den angeforderten Zeitraum in kleinere Stapel aufteilen.
+Workload Security-Agenten enthalten ein Exportskript, um parallele Aufrufe der v2-API zu ermöglichen, indem der angeforderte Zeitbereich in kleinere Stapel aufgeteilt wird.
 
-Das Skript befindet sich unter _/opt/NetApp/CloudSecure/Agent/Export-script_. Eine README-Datei im selben Verzeichnis enthält Anweisungen zur Verwendung.
+Das Skript befindet sich unter _/opt/netapp/cloudsecure/agent/export-script_.  Eine README-Datei im selben Verzeichnis enthält Verwendungsanweisungen.
 
 Hier ist ein Beispielbefehl zum Aufrufen des Skripts:
 
@@ -77,4 +77,4 @@ Hier ist ein Beispielbefehl zum Aufrufen des Skripts:
 ----
 python3 data-export.py --tenant_url <Workload Security tenant> --access_key %ACCESS_KEY% --path_filter "<dir path>" --user_name "<user>" --from_time "01-08-2024 00:00:00" --to_time "31-08-2024 23:59:59" --iteration_interval 12 --num_workers 3
 ----
-Key Parameters: - `--iteration_interval 12`: Teilt den gewünschten Zeitbereich in Intervalle von 12 Stunden auf. - `--num_workers 3`: Holt diese Intervalle parallel mit 3 Threads.
+Schlüsselparameter: - `--iteration_interval 12` : Teilt den angeforderten Zeitbereich in Intervalle von 12 Stunden auf.  - `--num_workers 3` : Ruft diese Intervalle parallel mithilfe von 3 Threads ab.

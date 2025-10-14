@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar 
 permalink: concept_preview_features.html 
-summary: Die Vorschaufunktionen stehen nur mit begrenzter Kapazität zur Verfügung und bieten noch keine Highlights-Funktionen zur Prime Time. 
+summary: Vorschaufunktionen sind in begrenztem Umfang verfügbar und heben Funktionen hervor, die noch nicht zur Hauptsendezeit bereit sind. 
 keywords: coming soon, preview, 
 ---
-= Funktionen und Funktionen der Vorschau
+= Vorschaufunktionen und -funktionalität
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights stellt neue Features und Funktionen _Preview_ vor. Die Vorschaufunktionen werden in begrenzten Umgebungen oder mit begrenzter Kapazität verfügbar gemacht.
+Data Infrastructure Insights hebt neue Features und Funktionen in einer _Vorschau_-Form hervor.  Vorschaufunktionen werden in eingeschränkten Umgebungen oder mit eingeschränkter Kapazität zur Verfügung gestellt.
 
 Wenn Sie an einer Vorschau einer oder mehrerer dieser Funktionen interessiert sind, wenden Sie sich für weitere Informationen an Ihr NetApp -Vertriebsteam.

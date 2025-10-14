@@ -2,65 +2,65 @@
 sidebar: sidebar 
 permalink: task_dc_emc_powerstore.html 
 keywords: data collector, PowerStore, EMC, DELL 
-summary: KONFIGURIEREN DES DELL EMC PowerStore-Datensammlers. 
+summary: Konfigurieren des DELL EMC PowerStore-Datenkollektors. 
 ---
-= Dell EMC PowerStore-Datensammler
+= Dell EMC PowerStore-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der EMC PowerStore Data Collector sammelt Bestandsdaten aus dem EMC PowerStore-Speicher. Zur Konfiguration benötigt der Datensammler die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Kennwort.
+Der EMC PowerStore-Datenkollektor sammelt Bestandsinformationen vom EMC PowerStore-Speicher.  Zur Konfiguration benötigt der Datensammler die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Passwort.
 
-Der EMC PowerStore Datensammler erfasst die Replikationsbeziehungen zwischen Volume und Volume, die PowerStore über andere Speicher-Arrays hinweg koordiniert. Data Infrastructure Insights zeigt ein Speicher-Array für jeden PowerStore-Cluster und sammelt Bestandsdaten für Knoten und Speicherports auf diesem Cluster. Es werden keine Storage-Pool- oder Volume-Daten erfasst.
+Der EMC PowerStore-Datenkollektor erfasst die Volume-zu-Volume-Replikationsbeziehungen, die PowerStore über andere Speicher-Arrays hinweg koordiniert.  Data Infrastructure Insights zeigt ein Speicherarray für jeden PowerStore-Cluster und sammelt Bestandsdaten für Knoten und Speicherports auf diesem Cluster.  Es werden keine Speicherpool- oder Volumedaten erfasst.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus diesem Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält von diesem Datensammler die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Host | Host 
+| Gastgeber | Gastgeber 
 
 
-| Host_Volume_Zuordnung | Host_Volume_Zuordnung 
+| Host-Volume-Zuordnung | Host-Volume-Zuordnung 
 
 
-| Hardware (es hat Laufwerke unter „extra_Details“-Objekt): Laufwerke | Festplatte 
+| Hardware (es hat Laufwerke unter dem Objekt "extra_details"): Laufwerke | Scheibe 
 
 
-| Appliance | Storage Pool 
+| Gerät | Speicherpool 
 
 
-| Cluster | Storage Array Durchführt 
+| Cluster | Speicher-Array 
 
 
-| Knoten | StorageNode 
+| Node | Speicherknoten 
 
 
-| fc_Port | Port 
+| fc_port | Hafen 
 
 
-| Datenmenge | Datenmenge 
+| Volumen | Volumen 
 
 
-| InternalVolume | File_System 
+| Internes Volumen | Dateisystem 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-Zur Konfiguration dieses Datensammlers sind folgende Informationen erforderlich:
+Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
 
-* IP-Adresse oder vollqualifizierter Domain-Name des Speicherprozessors
-* Schreibgeschützter Benutzername und Kennwort
+* IP-Adresse oder vollqualifizierter Domänenname des Speicherprozessors
+* Benutzername und Kennwort nur zum Lesen
 
 
 
@@ -72,13 +72,13 @@ Zur Konfiguration dieses Datensammlers sind folgende Informationen erforderlich:
 | Feld | Beschreibung 
 
 
-| PowerStore Gateway(s) | IP-Adressen oder vollqualifizierte Domain-Namen des PowerStore-Speichers 
+| PowerStore-Gateway(s) | IP-Adressen oder vollqualifizierte Domänennamen des PowerStore-Speichers 
 
 
 | Benutzername | Benutzername für PowerStore 
 
 
-| Passwort | Passwort, das für PowerStore verwendet wird 
+| Passwort | Für PowerStore verwendetes Kennwort 
 |===
 
 
@@ -89,15 +89,15 @@ Zur Konfiguration dieses Datensammlers sind folgende Informationen erforderlich:
 | Feld | Beschreibung 
 
 
-| HTTPS-Anschluss | Der Standardwert ist 443 
+| HTTPS-Port | Der Standardwert ist 443 
 
 
-| Abfrageintervall für Bestand (Minuten) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+| Inventarabfrageintervall (Minuten) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
 |===
-Die PowerStore Performance-Sammlung von Cloud Insight nutzt die 5-minütigen Granularitätsquelldaten von PowerStore. Daher fragt Data Infrastructure Insights diese Daten alle fünf Minuten ab. Dies ist nicht konfigurierbar.
+Die PowerStore-Leistungssammlung von Cloud Insight nutzt die Quelldaten von PowerStore mit einer Granularität von 5 Minuten.  Daher fragt Data Infrastructure Insights diese Daten alle fünf Minuten ab, und dies ist nicht konfigurierbar.
 
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

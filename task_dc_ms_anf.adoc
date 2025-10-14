@@ -2,29 +2,29 @@
 sidebar: sidebar 
 permalink: task_dc_ms_anf.html 
 keywords: data collector, azure, Netapp files, anf 
-summary: Azure NetApp Files Data Collector wird konfiguriert. 
+summary: Konfigurieren des Azure NetApp Files Datensammlers. 
 ---
-= Konfigurieren des Azure NetApp Files-Datensammlers
+= Konfigurieren des Azure NetApp Files Datensammlers
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Azure NetApp Files Datensammler zur Erfassung von Bestands- und Performance-Daten.
+Data Infrastructure Insights verwendet den Azure NetApp Files Datensammler, um Bestands- und Leistungsdaten zu erfassen.
 
 
 
 == Anforderungen
 
-Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurieren.
+Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen.
 
-* Port-Anforderung: 443 HTTPS
+* Portanforderung: 443 HTTPS
 * Azure Management Rest-IP (management.azure.com)
-* Principal Client-ID für den Azure-Service (Benutzerkonto)
-* Azure Service Principal Authentifizierungsschlüssel (Benutzerkennwort)
-* Sie müssen ein Azure-Konto für die Erkennung von Data Infrastructure Insights einrichten.
+* Azure-Dienstprinzipal-Client-ID (Benutzerkonto)
+* Azure-Dienstprinzipal-Authentifizierungsschlüssel (Benutzerkennwort)
+* Sie müssen für die Data Infrastructure Insights Erkennung ein Azure-Konto einrichten.
 +
-Sobald das Konto ordnungsgemäß konfiguriert ist und Sie die Applikation in Azure registrieren, verfügen Sie über die erforderlichen Zugangsdaten, um die Azure-Instanz mit Data Infrastructure Insights zu ermitteln. Über den folgenden Link wird beschrieben, wie Sie das Konto für die Ermittlung einrichten:
+Sobald das Konto ordnungsgemäß konfiguriert ist und Sie die Anwendung in Azure registrieren, verfügen Sie über die erforderlichen Anmeldeinformationen, um die Azure-Instanz mit Data Infrastructure Insights zu ermitteln.  Unter folgendem Link wird beschrieben, wie Sie das Konto für die Erkennung einrichten:
 
 
 
@@ -41,16 +41,16 @@ Geben Sie die Daten in die Felder des Datensammlers gemäß der folgenden Tabell
 | Feld | Beschreibung 
 
 
-| Azure Service Principal Client-ID | Anmelde-ID bei Azure 
+| Azure-Dienstprinzipal-Client-ID | Anmelde-ID für Azure 
 
 
-| Azure Mandanten-ID | Azure Mandanten-ID 
+| Azure-Mandanten-ID | Azure-Mandanten-ID 
 
 
-| Authentifizierungsschlüssel Des Azure Service Principal | Anmeldeauthentifizierungsschlüssel 
+| Azure-Dienstprinzipalauthentifizierungsschlüssel | Login-Authentifizierungsschlüssel 
 
 
-| Ich verstehe, dass Microsoft mir API-Anforderungen in Rechnung stellt | Überprüfen Sie dies, um zu überprüfen, ob Microsoft Ihnen die durch eine Insight-Umfrage gestellten API-Anforderungen abrechnungen aufstellt. 
+| Mir ist bekannt, dass Microsoft mir API-Anfragen in Rechnung stellt. | Aktivieren Sie dies, um zu bestätigen, dass Sie verstanden haben, dass Microsoft Ihnen für API-Anfragen, die durch Insight-Polling gestellt werden, eine Rechnung stellt. 
 |===
 
 
@@ -61,14 +61,14 @@ Geben Sie die Daten in die Felder des Datensammlers gemäß der folgenden Tabell
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 
+| Inventarabfrageintervall (min) | Der Standardwert ist 60 
 |===
 
 
 == Fehlerbehebung
 
-* Die von Ihrem ANF-Datensammler verwendeten Zugangsdaten müssen auf alle Azure-Abonnements zugreifen können, die ANF-Volumes enthalten.
-* Wenn der Zugang zum Reader dazu führt, dass die Leistensammlung fehlschlägt, versuchen Sie, den Zugriff auf Mitarbeiter auf Ressourcengruppenebene zu gewähren.
+* Die von Ihrem ANF-Datensammler verwendeten Anmeldeinformationen müssen Zugriff auf alle Azure-Abonnements haben, die ANF-Volumes enthalten.
+* Wenn die Leistungserfassung aufgrund des Leserzugriffs fehlschlägt, versuchen Sie, dem Mitwirkenden Zugriff auf Ressourcengruppenebene zu gewähren.
 
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

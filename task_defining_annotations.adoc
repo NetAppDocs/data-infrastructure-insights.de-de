@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_defining_annotations.html 
 keywords: annotations, monitor, notes, tags 
-summary: Verfolgen von Daten mithilfe von Anmerkungen 
+summary: Verfolgen Sie Daten mithilfe von Anmerkungen. 
 ---
 = Anmerkungen definieren
 :hardbreaks:
@@ -14,32 +14,32 @@ summary: Verfolgen von Daten mithilfe von Anmerkungen
 
 
 [role="lead"]
-Wenn Sie Data Infrastructure Insights an Ihre Unternehmensanforderungen anpassen, um Daten nachzuverfolgen, können Sie spezielle Notizen, sogenannte Annotationen, definieren und diese Ihren Ressourcen zuweisen.
+Wenn Sie Data Infrastructure Insights anpassen, um Daten für Ihre Unternehmensanforderungen zu verfolgen, können Sie spezielle Notizen, sogenannte Anmerkungen, definieren und sie Ihren Assets zuweisen.
 
-Sie können Assets mit Informationen zum Ende des Lebenszyklus der Ressource, zum Datacenter, zum Standort, zum Storage-Tier oder zu einem Volume Service-Level Anmerkungen zuweisen.
+Sie können Assets Anmerkungen mit Informationen wie dem Ende der Lebensdauer des Assets, dem Rechenzentrum, dem Gebäudestandort, der Speicherebene oder dem Volume-Servicelevel zuweisen.
 
-Durch die Verwendung von Annotationen zum Monitoring Ihrer Umgebung werden die folgenden grundlegenden Aufgaben aufgeführt:
+Die Verwendung von Anmerkungen zur Überwachung Ihrer Umgebung umfasst die folgenden übergeordneten Aufgaben:
 
 * Erstellen oder Bearbeiten von Definitionen für alle Anmerkungstypen.
-* Anzeigen von Asset-Seiten und Verknüpfen jeder Anlage mit einer oder mehreren Anmerkungen.
+* Anzeigen von Asset-Seiten und Zuordnen jedes Assets zu einer oder mehreren Anmerkungen.
 +
-Wenn z. B. ein Asset geleast wird und der Mietvertrag innerhalb von zwei Monaten abläuft, können Sie eine End-of-Life-Anmerkung auf das Asset anwenden. Dadurch wird verhindert, dass andere diese Ressource über einen längeren Zeitraum nutzen können.
+Wenn beispielsweise ein Vermögenswert geleast wird und der Leasingvertrag innerhalb von zwei Monaten abläuft, möchten Sie dem Vermögenswert möglicherweise eine End-of-Life-Anmerkung hinzufügen.  Dadurch wird verhindert, dass andere dieses Gut über einen längeren Zeitraum hinweg verwenden.
 
-* Erstellen von Regeln, um Anmerkungen automatisch auf mehrere Assets desselben Typs anzuwenden.
+* Erstellen von Regeln zum automatischen Anwenden von Anmerkungen auf mehrere Assets desselben Typs.
 * Filtern Sie Assets nach ihren Anmerkungen.
 
 
 
 
-== Standard-Anmerkungstypen
+== Standard-Annotationstypen
 
-Data Infrastructure Insights bietet einige standardmäßige Anmerkungstypen. Mit diesen Annotationen lassen sich Daten filtern oder gruppieren.
+Data Infrastructure Insights bietet einige Standardanmerkungstypen.  Diese Anmerkungen können zum Filtern oder Gruppieren von Daten verwendet werden.
 
-Sie können Assets mit Standardanmerkungstypen verknüpfen, z. B.:
+Sie können Assets mit Standardanmerkungstypen wie den folgenden verknüpfen:
 
-* Lebenszyklus von Anlagen, z. B. Geburtstag, Sonnenuntergang oder Ende des Lebenszyklus
-* Positionsinformationen zu einem Gerät wie z. B. Rechenzentren, Gebäude oder Etage
-* Klassifizierung von Assets, z. B. nach Qualität (Tiers), nach angeschlossenen Geräten (Switch-Ebene) oder nach Service-Level
+* Lebenszyklus von Anlagen, z. B. Geburtstag, Sonnenuntergang oder Ende der Lebensdauer
+* Standortinformationen zu einem Gerät, z. B. Rechenzentrum, Gebäude oder Stockwerk
+* Klassifizierung von Assets, beispielsweise nach Qualität (Tiers), nach angeschlossenen Geräten (Switch-Level) oder nach Service-Level
 * Status, z. B. „heiß“ (hohe Auslastung)
 
 
@@ -55,31 +55,31 @@ In der folgenden Tabelle sind die von Data Infrastructure Insights bereitgestell
 | Alias | Benutzerfreundlicher Name für eine Ressource | Text 
 
 
-| Rechnerressourcengruppe | Gruppenzuordnung, die vom Datensammler der Host- und VM-Dateisysteme verwendet wird | Liste 
+| Compute-Ressourcengruppe | Vom Host- und VM-Dateisystem-Datensammler verwendete Gruppenzuweisung | Liste 
 
 
 | Rechenzentrum | Physischer Standort | Liste 
 
 
-| Heiß | Geräte, die regelmäßig oder an der Kapazitätsgrenze unter hohem Verbrauch stehen | Boolesch 
+| Heiß | Geräte, die regelmäßig stark beansprucht werden oder an der Grenze ihrer Kapazität stehen | Boolescher Wert 
 
 
-| Hinweis | Kommentare, die einer Ressource zugeordnet sind | Test 
+| Hinweis | Mit einer Ressource verknüpfte Kommentare | Prüfen 
 
 
-| Service-Level | Eine Reihe unterstützter Service-Level, die Sie Ressourcen zuweisen können. Zeigt eine Liste mit bestellten Optionen für interne Volumes, qtree und Volumes an. Bearbeiten Sie Service Levels, um Performance-Richtlinien für unterschiedliche Level festzulegen. | Liste 
+| Service-Level | Eine Reihe unterstützter Servicelevel, die Sie Ressourcen zuweisen können.  Bietet eine geordnete Optionsliste für interne Volumes, Qtree und Volumes.  Bearbeiten Sie Service-Levels, um Leistungsrichtlinien für verschiedene Level festzulegen. | Liste 
 
 
-| Sonnenuntergang | Schwellenwert, nach dem keine neuen Zuordnungen an das Gerät vorgenommen werden können. Nützlich für geplante Migrationen und andere ausstehende Netzwerkänderungen. | Datum 
+| Sonnenuntergang | Festgelegter Schwellenwert, nach dessen Überschreitung keine neuen Zuweisungen mehr zu diesem Gerät vorgenommen werden können.  Nützlich für geplante Migrationen und andere anstehende Netzwerkänderungen. | Datum 
 
 
-| Switch-Ebene | Vordefinierte Optionen zum Einrichten von Kategorien für Schalter. In der Regel bleiben diese Bezeichnungen für die Lebensdauer des Geräts, Sie können sie jedoch bearbeiten. Nur für Switches verfügbar. | Liste 
+| Schalterebene | Vordefinierte Optionen zum Einrichten von Kategorien für Schalter.  Normalerweise bleiben diese Bezeichnungen für die gesamte Lebensdauer des Geräts bestehen, Sie können sie jedoch bearbeiten.  Nur für Schalter verfügbar. | Liste 
 
 
-| Ebene | Sie können darüber hinaus verwendet werden, um in Ihrer Umgebung verschiedene Service Levels zu definieren. Tiers können den Typ des Levels definieren, z. B. die erforderliche Geschwindigkeit (z. B. Gold oder Silber). Diese Funktion ist nur für interne Volumes, qtrees, Storage Arrays, Storage-Pools und Volumes verfügbar. | Liste 
+| Stufe | Kann verwendet werden, um verschiedene Serviceebenen innerhalb Ihrer Umgebung zu definieren.  Mit den Stufen kann die Art des Levels definiert werden, beispielsweise die erforderliche Geschwindigkeit (z. B. Gold oder Silber).  Diese Funktion ist nur auf internen Volumes, Qtrees, Speicher-Arrays, Speicherpools und Volumes verfügbar. | Liste 
 
 
-| Schweregrad Der Verletzung | Rangfolge (z. B. Major) eines Verstoßes (z. B. fehlende Host-Ports oder fehlende Redundanz) in einer Hierarchie von höchster bis niedrigster Bedeutung. | Liste 
+| Schweregrad des Verstoßes | Rang (z. B. schwerwiegend) eines Verstoßes (z. B. fehlende Host-Ports oder fehlende Redundanz) in einer Hierarchie von der höchsten bis zur niedrigsten Wichtigkeit. | Liste 
 |===
 
 NOTE: Alias, Data Center, Hot, Service Level, Sunset, Switch Level, Tier und Violation Severity sind Anmerkungen auf Systemebene, die Sie nicht löschen oder umbenennen können. Sie können nur die ihnen zugewiesenen Werte ändern.
@@ -88,15 +88,15 @@ NOTE: Alias, Data Center, Hot, Service Level, Sunset, Switch Level, Tier und Vio
 
 == Erstellen benutzerdefinierter Anmerkungen
 
-Mithilfe von Annotationen können Sie benutzerdefinierte geschäftsspezifische Daten hinzufügen, die auf die Anforderungen Ihres Unternehmens an Assets abgestimmt sind. Während Data Infrastructure Insights eine Reihe von Standardannotationen umfasst, kann es sein, dass Sie Daten auf andere Weise anzeigen möchten. Die Daten in benutzerdefinierten Annotationen ergänzen bereits erfassten Gerätedaten, wie z. B. Speicherhersteller, Anzahl Volumen und Leistungsstatistiken. Die mit Annotationen hinzugefügten Daten werden von Data Infrastructure Insights nicht erkannt.
+Mithilfe von Anmerkungen können Sie den Assets benutzerdefinierte, geschäftsspezifische Daten hinzufügen, die Ihren Geschäftsanforderungen entsprechen.  Obwohl Data Infrastructure Insights eine Reihe von Standardanmerkungen bereitstellt, möchten Sie die Daten möglicherweise auf andere Weise anzeigen.  Die Daten in benutzerdefinierten Anmerkungen ergänzen bereits erfasste Gerätedaten, wie etwa Speicherhersteller, Anzahl der Datenträger und Leistungsstatistiken.  Die Daten, die Sie mithilfe von Anmerkungen hinzufügen, werden von Data Infrastructure Insights nicht erkannt.
 
 .Schritte
-. Klicken Sie im Menü Data Infrastructure Insights auf *Verwalten > Anmerkungen*.
+. Klicken Sie im Data Infrastructure Insights -Menü auf *Verwalten > Anmerkungen*.
 +
-Auf der Seite Anmerkungen wird die Liste der Anmerkungen angezeigt.
+Auf der Seite „Anmerkungen“ wird die Liste der Anmerkungen angezeigt.
 
-. Klicken Sie Auf *+Hinzufügen*
-. Geben Sie einen *Name* und eine *Beschreibung* der Anmerkung ein.
+. Klicken Sie auf *+Hinzufügen*
+. Geben Sie einen *Namen* und eine *Beschreibung* der Anmerkung ein.
 +
 Sie können in diese Felder bis zu 255 Zeichen eingeben.
 
@@ -105,7 +105,7 @@ Sie können in diese Felder bis zu 255 Zeichen eingeben.
 
 .Anmerkungstypen
 * Boolesch: Erstellt eine Dropdownliste mit den Auswahlmöglichkeiten „Ja“ und „Nein“. Beispielsweise ist die Anmerkung „Direkt verbunden“ boolesch.
-* Datum: Dadurch wird ein Feld erstellt, das ein Datum enthält.  Wenn die Anmerkung beispielsweise ein Datum sein soll, wählen Sie dies aus.
+* Datum: Dadurch wird ein Feld erstellt, das ein Datum enthält. Wenn die Anmerkung beispielsweise ein Datum sein soll, wählen Sie dies aus.
 * Liste: Erstellt eines der folgenden Elemente:
 +
 ** Eine Dropdown-Liste mit festen
@@ -118,27 +118,27 @@ Wenn Sie beim Erstellen dieser Liste die Option „Neue Werte spontan hinzufüge
 
 
 
-* Nummer: Erstellt ein Feld, in dem der Benutzer, der die Anmerkung zuweist, eine Zahl eingeben kann. Wenn der Anmerkungstyp beispielsweise „Stockwerk“ lautet, kann der Benutzer den Wert „number“ auswählen und die Bodennummer eingeben.
-* Text: Erstellt ein Feld, das Freiformtext ermöglicht. Sie können z. B. „Sprache“ als Anmerkungstyp eingeben, „Text“ als Wertetyp auswählen und eine Sprache als Wert eingeben.
+* Nummer: Erstellt ein Feld, in das der Benutzer, der die Anmerkung zuweist, eine Nummer eingeben kann.  Wenn der Anmerkungstyp beispielsweise „Etage“ ist, kann der Benutzer den Werttyp „Nummer“ auswählen und die Etagennummer eingeben.
+* Text: Erstellt ein Feld, das Freitext zulässt.  Sie können beispielsweise „Sprache“ als Anmerkungstyp eingeben, „Text“ als Werttyp auswählen und eine Sprache als Wert eingeben.
 
 
 
-NOTE: Nachdem Sie den Typ festgelegt und Ihre Änderungen gespeichert haben, können Sie den Typ der Anmerkung nicht ändern. Wenn Sie den Typ ändern müssen, müssen Sie die Anmerkung löschen und eine neue erstellen.
+NOTE: Nachdem Sie den Typ festgelegt und Ihre Änderungen gespeichert haben, können Sie den Typ der Anmerkung nicht mehr ändern.  Wenn Sie den Typ ändern müssen, müssen Sie die Anmerkung löschen und eine neue erstellen.
 
-. Wenn Sie Liste als Anmerkungstyp auswählen, gehen Sie folgendermaßen vor:
+. Wenn Sie „Liste“ als Anmerkungstyp auswählen, gehen Sie wie folgt vor:
 +
-.. Wählen Sie *Neue Werte hinzufügen auf der Fly* aus, wenn Sie der Anmerkung weitere Werte hinzufügen möchten, wenn Sie auf einer Asset-Seite, die eine flexible Liste erstellt.
+.. Wählen Sie *Neue Werte spontan hinzufügen*, wenn Sie der Anmerkung auf einer Asset-Seite weitere Werte hinzufügen möchten, wodurch eine flexible Liste erstellt wird.
 +
-Angenommen, Sie befinden sich auf einer Asset-Seite und das Asset hat die City-Anmerkung mit den Werten Detroit, Tampa und Boston. Wenn Sie die Option *Neue Werte hinzufügen auf der Fly* ausgewählt haben, können Sie City wie San Francisco und Chicago direkt auf der Asset-Seite zusätzliche Werte hinzufügen, anstatt zur Seite Anmerkungen zu gehen, um sie hinzuzufügen. Wenn Sie diese Option nicht wählen, können Sie beim Anwenden der Anmerkung keine neuen Anmerkungswerte hinzufügen; dadurch wird eine feste Liste erstellt.
+Angenommen, Sie befinden sich auf einer Asset-Seite und das Asset verfügt über die Stadtanmerkung mit den Werten Detroit, Tampa und Boston.  Wenn Sie die Option *Neue Werte spontan hinzufügen* ausgewählt haben, können Sie der Stadt zusätzliche Werte wie San Francisco und Chicago direkt auf der Asset-Seite hinzufügen, anstatt sie auf der Anmerkungsseite hinzufügen zu müssen.  Wenn Sie diese Option nicht wählen, können Sie beim Anwenden der Annotation keine neuen Annotationswerte hinzufügen. Dadurch wird eine feste Liste erstellt.
 
-.. Geben Sie einen Wert und eine Beschreibung in die Felder *Wert* und *Beschreibung* ein.
-.. Klicken Sie auf *+Add+*, um weitere Werte hinzuzufügen.
-.. Klicken Sie auf das Papierkorb-Symbol, um einen Wert zu löschen.
+.. Geben Sie in die Felder *Wert* und *Beschreibung* einen Wert und eine Beschreibung ein.
+.. Klicken Sie auf *+Hinzufügen+*, um weitere Werte hinzuzufügen.
+.. Klicken Sie auf das Papierkorbsymbol, um einen Wert zu löschen.
 
 
-. Klicken Sie Auf *Speichern*
+. Klicken Sie auf *Speichern*
 +
-Ihre Anmerkungen werden in der Liste auf der Seite Anmerkungen angezeigt.
+Ihre Anmerkungen werden in der Liste auf der Anmerkungsseite angezeigt.
 
 
 
@@ -146,10 +146,10 @@ Ihre Anmerkungen werden in der Liste auf der Seite Anmerkungen angezeigt.
 Beim Filtern nach einer Booleschen Anmerkung werden Ihnen möglicherweise die folgenden Werte zum Filtern angezeigt:
 
 * *Beliebig*: Dies gibt _alle_ Ergebnisse zurück, einschließlich der Ergebnisse, die auf „Ja“, „Nein“ oder gar nicht festgelegt sind.
-* *Ja*: Gibt nur „Ja“-Ergebnisse zurück.  Beachten Sie, dass DII in den meisten Tabellen „Ja“ als Häkchen anzeigt.  Die Werte können auf „True“, „On“ usw. gesetzt werden; DII behandelt alle diese Werte als „Yes“.
-* *Nein*: Gibt nur „Nein“-Ergebnisse zurück.  Beachten Sie, dass DII in den meisten Tabellen „Nein“ als „X“ anzeigt.  Die Werte können auf „Falsch“, „Aus“ usw. gesetzt werden; DII behandelt alle diese Werte als „Nein“.
-* *Keine*: Gibt nur Ergebnisse zurück, bei denen die Anmerkung überhaupt nicht festgelegt wurde.  Auch als „Null“-Werte bezeichnet.
+* *Ja*: Gibt nur „Ja“-Ergebnisse zurück. Beachten Sie, dass DII in den meisten Tabellen „Ja“ als Häkchen anzeigt. Die Werte können auf „True“, „On“ usw. gesetzt werden; DII behandelt alle diese Werte als „Yes“.
+* *Nein*: Gibt nur „Nein“-Ergebnisse zurück. Beachten Sie, dass DII in den meisten Tabellen „Nein“ als „X“ anzeigt. Die Werte können auf „Falsch“, „Aus“ usw. gesetzt werden; DII behandelt alle diese Werte als „Nein“.
+* *Keine*: Gibt nur Ergebnisse zurück, bei denen die Anmerkung überhaupt nicht festgelegt wurde. Auch als „Null“-Werte bezeichnet.
 
 
-.Nachdem Sie fertig sind
-In der UI steht die Beschriftung sofort zur Verwendung zur Verfügung.
+.Nach Abschluss
+In der Benutzeroberfläche steht die Anmerkung sofort zur Verwendung bereit.

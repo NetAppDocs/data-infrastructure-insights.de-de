@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ws_webhook_example_slack.html 
 keywords: webhook, notification, Slack, integration, 
-summary: Erstellen Sie einen Workload Security Webhook für Slack, um über die Sicherheit zu informieren 
+summary: Erstellen Sie einen Workload Security-Webhook für Slack, um bei Sicherheitsproblemen zu warnen 
 ---
-= Workload Security Webhook Beispiel für Slack
+= Workload Security Webhook-Beispiel für Slack
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,45 +14,45 @@ summary: Erstellen Sie einen Workload Security Webhook für Slack, um über die 
 
 
 [role="lead"]
-Mit Webhooks können Benutzer über einen benutzerdefinierten Webhook-Kanal Benachrichtigungen an verschiedene Anwendungen senden. Diese Seite enthält ein Beispiel zum Einrichten von Webhooks für Slack.
+Mithilfe von Webhooks können Benutzer über einen benutzerdefinierten Webhook-Kanal Warnbenachrichtigungen an verschiedene Anwendungen senden.  Diese Seite bietet ein Beispiel zum Einrichten von Webhooks für Slack.
 
-Diese Seite bezieht sich auf Anweisungen von Dritten, die Änderungen unterliegen. Die aktuellsten Informationen finden Sie in der Dokumentation zu Slack.
-
-
-
-==== Beispiel Für Slack
-
-* Gehen Sie zu https://api.slack.com/apps[] und erstellen Sie eine neue App Geben Sie ihm einen aussagekräftigen Namen, und wählen Sie einen Arbeitsbereich aus.
-
-
-image:ws_create_slack_app.png["Erstellen Sie eine Slack-App, width=400"]
-
-* Gehen Sie zu Incoming Webhooks, klicken Sie auf _Activate Incoming Webhooks_, wählen Sie _Add New Webhook_ und wählen Sie den Kanal aus, auf dem Sie posten möchten.
-* Kopieren Sie die Webhook-URL. Diese URL wird beim Erstellen eines Workload Security Webhooks angegeben.
+Diese Seite verweist auf Anweisungen von Drittanbietern, die Änderungen unterliegen.  Die aktuellsten Informationen finden Sie in der Slack-Dokumentation.
 
 
 
+==== Slack-Beispiel
 
-==== Workload Security Slack Webhook Erstellen
+* Gehe zu https://api.slack.com/apps[] und erstellen Sie eine neue App.  Geben Sie ihm einen aussagekräftigen Namen und wählen Sie einen Arbeitsbereich aus.
 
-. Navigieren Sie zu Admin > Benachrichtigungen, und wählen Sie die Registerkarte „_Workload Security Webhooks_“ aus. Wählen Sie _+ Webhook_, um einen neuen Webhook zu erstellen.
+
+image:ws_create_slack_app.png["Erstellen Sie eine Slack-App, Breite = 400"]
+
+* Gehen Sie zu „Eingehende Webhooks“, klicken Sie auf „Eingehende Webhooks aktivieren“, wählen Sie „Neuen Webhook hinzufügen“ und wählen Sie den Kanal aus, auf dem gepostet werden soll.
+* Kopieren Sie die Webhook-URL.  Diese URL wird beim Erstellen eines Workload Security-Webhooks angegeben.
+
+
+
+
+==== Erstellen Sie einen Slack-Webhook für die Workload-Sicherheit
+
+. Navigieren Sie zu „Admin > Benachrichtigungen“ und wählen Sie die Registerkarte „Workload Security Webhooks“ aus.  Wählen Sie _+ Webhook_, um einen neuen Webhook zu erstellen.
 . Geben Sie dem Webhook einen aussagekräftigen Namen.
-. Wählen Sie im Dropdown _Template Type_ die Option _Slack_ aus.
-. Fügen Sie die von oben kopierte URL ein.
+. Wählen Sie im Dropdown-Menü _Vorlagentyp_ die Option _Slack_ aus.
+. Fügen Sie die oben kopierte URL ein.
 
 
-image:ws_webhook_slack_example.png["Webhook-Slack-Beispiel für Workload Security, width=400"]
+image:ws_webhook_slack_example.png["Webhook-Slack-Beispiel für Workload Security, Breite=400"]
 
 
 
-==== Benachrichtigungen über Webhook
+==== Benachrichtigungen per Webhook
 
-* Um Ereignisse über Webhook zu benachrichtigen, navigieren Sie zu _Workload Security > Policies_. Klicken Sie auf _+Angriffsrichtlinie_ oder _+Warnrichtlinie_.
+* Um über Ereignisse per Webhook benachrichtigt zu werden, navigieren Sie zu _Workload-Sicherheit > Richtlinien_.  Klicken Sie auf _+Angriffsrichtlinie_ oder _+Warnrichtlinie_.
 * Geben Sie einen aussagekräftigen Richtliniennamen ein.
-* Wählen Sie erforderliche Angriffstypen, Geräte, an die die Richtlinie angehängt werden soll, und erforderliche Aktionen aus.
-* Wählen Sie im Dropdown _Webhooks Notifications_ die gewünschten Webhooks aus. Speichern Sie die Richtlinie.
+* Wählen Sie die erforderlichen Angriffstypen, Geräte, an die die Richtlinie angehängt werden soll, und erforderliche Aktionen aus.
+* Wählen Sie im Dropdown-Menü „Webhook-Benachrichtigungen“ die erforderlichen Webhooks aus. Speichern Sie die Richtlinie.
 
 
-Hinweis: Webhooks können auch vorhandenen Richtlinien zugeordnet werden, indem sie bearbeitet werden.
+Hinweis: Webhooks können auch an vorhandene Richtlinien angehängt werden, indem diese bearbeitet werden.
 
-image:ws_add_attack_policy.png["Dialogfeld „Angriffsrichtlinie hinzufügen“, width=400"]
+image:ws_add_attack_policy.png["Dialogfeld „Angriffsrichtlinie hinzufügen“, Breite=400"]

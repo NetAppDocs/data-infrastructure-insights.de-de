@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_cloud_volumes_ontap.html 
-summary: NetApp Cloud Volumes ONTAP Data Collector konfigurieren 
+summary: Konfigurieren des NetApp Cloud Volumes ONTAP Datenkollektors 
 keywords: data collector, NetApp, Cloud, ONTAP 
 ---
-= NetApp Cloud Volumes ONTAP Datensammler
+= NetApp Cloud Volumes ONTAP Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler unterstützt die Bestandserfassung aus Cloud Volumes ONTAP-Konfigurationen.
+Dieser Datensammler unterstützt die Bestandserfassung von Cloud Volumes ONTAP -Konfigurationen.
 
 
 
@@ -21,7 +21,7 @@ Dieser Datensammler unterstützt die Bestandserfassung aus Cloud Volumes ONTAP-K
 | Feld | Beschreibung 
 
 
-| NetApp Management-IP-Adresse | IP-Adresse für Cloud Volumes ONTAP 
+| NetApp -Verwaltungs-IP-Adresse | IP-Adresse für Cloud Volumes ONTAP 
 
 
 | Benutzername | Benutzername für Cloud Volumes ONTAP 
@@ -38,43 +38,43 @@ Dieser Datensammler unterstützt die Bestandserfassung aus Cloud Volumes ONTAP-K
 | Feld | Beschreibung 
 
 
-| Verbindungstyp | HTTPS empfohlen. Zeigt außerdem den Standardport an. 
+| Verbindungstyp | HTTPS empfohlen.  Zeigt auch den Standardport an. 
 
 
-| Kommunikations-Port Überschreiben | Port zu verwenden, wenn nicht standardmäßig. 
+| Kommunikationsanschluss überschreiben | Zu verwendender Port, wenn nicht Standard. 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten. 
+| Inventarabfrageintervall (min) | Der Standardwert ist 60 Minuten. 
 
 
-| Inventurzählung Der Threads | Anzahl der gleichzeitigen Threads. 
+| Inventar gleichzeitige Thread-Anzahl | Anzahl gleichzeitiger Threads. 
 
 
-| Erzwingen von TLS für HTTPS | TLS über HTTPS erzwingen 
+| TLS für HTTPS erzwingen | TLS über HTTPS erzwingen 
 
 
-| Netzgruppen Automatisch Suchen | Netzgruppen Automatisch Suchen 
+| Netzgruppen automatisch suchen | Netzgruppen automatisch suchen 
 
 
-| Netzgruppenerweiterung | Wählen Sie Shell oder Datei aus 
+| Netgroup-Erweiterung | Shell oder Datei auswählen 
 
 
-| HTTP-Lesezeit Sekunden | Der Standardwert ist 30 Sekunden 
+| HTTP-Lesezeitlimit (Sekunden) | Der Standardwert ist 30 Sekunden 
 
 
-| Antworten als UTF-8 erzwingen | Antworten als UTF-8 erzwingen 
+| Erzwingen Sie Antworten als UTF-8 | Erzwingen Sie Antworten als UTF-8 
 
 
-| Leistungsintervall (min) | Der Standardwert ist 900 Sekunden. 
+| Leistungsabfrageintervall (min) | Der Standardwert ist 900 Sekunden. 
 
 
-| Performance-Threads Anzahl | Anzahl der gleichzeitigen Threads. 
+| Leistung: Gleichzeitige Threadanzahl | Anzahl gleichzeitiger Threads. 
 
 
-| Erweiterte Zähldatensammlung | Aktivieren Sie diese Option, damit Data Infrastructure Insights die erweiterten Metriken aus der folgenden Liste erfasst. 
+| Erweiterte Zählerdatenerfassung | Aktivieren Sie diese Option, damit Data Infrastructure Insights die erweiterten Metriken aus der folgenden Liste erfasst. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

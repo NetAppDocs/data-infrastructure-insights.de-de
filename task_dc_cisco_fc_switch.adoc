@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_cisco_fc_switch.html 
 keywords: data collector, cisco, FC, cisco FC 
-summary: Konfiguration des Datensammlers Cisco MDS Fablic Switch 
+summary: Konfigurieren des Cisco MDS Fablic Switch-Datenkollektors. 
 ---
 = Cisco MDS Fabric Switches Datensammler
 :hardbreaks:
@@ -10,28 +10,28 @@ summary: Konfiguration des Datensammlers Cisco MDS Fablic Switch
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Data Collector der Cisco MDS-Fabric-Switches zur Bestandsaufnahme von Cisco MDS-Fabric-Switches sowie einer Vielzahl von Cisco Nexus FCoE-Switches, auf denen der FC-Service aktiviert ist.
+Data Infrastructure Insights verwendet den Datensammler von Cisco MDS Fabric Switches, um den Bestand für Cisco MDS Fabric Switches sowie eine Vielzahl von Cisco Nexus FCoE-Switches zu ermitteln, auf denen der FC-Dienst aktiviert ist.
 
-Darüber hinaus können Sie mit diesem Datensammler viele Modelle von Cisco-Geräten im NPV-Modus entdecken.
+Darüber hinaus können Sie mit diesem Datensammler viele Modelle von Cisco -Geräten entdecken, die im NPV-Modus laufen.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Cisco FC Switch-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Cisco FC Switch-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Switch | Switch 
+| Schalten | Schalten 
 
 
-| Port | Port 
+| Hafen | Hafen 
 
 
-| VSAN | Fabric 
+| VSAN | Stoff 
 
 
 | Zone | Zone 
@@ -40,20 +40,20 @@ Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem
 | Logischer Switch | Logischer Switch 
 
 
-| Name Server-Eintrag | Name Server-Eintrag 
+| Nameserver-Eintrag | Nameserver-Eintrag 
 
 
-| Inter-VSAN Routing-Zone (IVR | IVR-Zone zu erreichen 
+| Inter-VSAN-Routing (IVR)-Zone | IVR-Zone 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* Eine IP-Adresse eines Switches in der Fabric oder den einzelnen Switches
-* Chassis-Erkennung für die Fabric-Erkennung
-* Bei Verwendung von SNMP V2, nur lesbare Community-String
+* Eine IP-Adresse eines Switches im Fabric oder einzelner Switches
+* Chassis-Erkennung, um die Fabric-Erkennung zu ermöglichen
+* Bei Verwendung von SNMP V2: schreibgeschützter Community-String
 * Port 161 wird für den Zugriff auf das Gerät verwendet
 
 
@@ -66,19 +66,19 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Cisco Switch IP | IP-Adresse oder vollqualifizierter Domain-Name des Switches 
+| Cisco Switch-IP | IP-Adresse oder vollqualifizierter Domänenname des Switches 
 
 
-| SNMP-Version | Wählen Sie V1, V2 oder V3 aus. Für Leistungserfassung ist V2 oder höher erforderlich. 
+| SNMP -Version | Wählen Sie V1, V2 oder V3.  Für die Leistungserfassung ist V2 oder höher erforderlich. 
 
 
-| SNMP-Community-Zeichenfolge | SNMP Read-Only-Community-String zum Zugriff auf den Switch (gilt nicht für SNMP v3) 
+| SNMP-Community-String | SNMP-Nur-Lese-Community-String für den Zugriff auf den Switch (gilt nicht für SNMP v3) 
 
 
 | Benutzername | Benutzername für den Switch (nur SNMP v3) 
 
 
-| Passwort | Passwort für den Switch (nur SNMPv3) 
+| Passwort | Für den Switch verwendetes Passwort (nur SNMPv3) 
 |===
 
 
@@ -89,10 +89,10 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen (Standard: 40 Minuten) 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen (Standard 40 Minuten) 
 
 
-| SNMP-Auth-Protokoll | SNMP-Authentifizierungsprotokoll (nur SNMPv3) 
+| SNMP-Authentifizierungsprotokoll | SNMP-Authentifizierungsprotokoll (nur SNMPv3) 
 
 
 | SNMP-Datenschutzprotokoll | SNMP-Datenschutzprotokoll (nur SNMPv3) 
@@ -101,49 +101,49 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | SNMP-Datenschutzkennwort | SNMP-Datenschutzkennwort 
 
 
-| SNMP wird erneut verwendet | Anzahl der SNMP-Wiederholungsversuche 
+| SNMP-Wiederholungen | Anzahl der SNMP-Wiederholungsversuche 
 
 
-| SNMP-Timeout (ms) | SNMP-Timeout (Standard 5000 ms) 
+| SNMP-Zeitüberschreitung (ms) | SNMP-Timeout (Standard 5000 ms) 
 
 
-| Trapping Aktivieren | Wählen Sie, um das Überfüllen zu aktivieren. Wenn Sie Trapping aktivieren, müssen Sie auch SNMP-Benachrichtigungen aktivieren. 
+| Überfüllung aktivieren | Wählen Sie diese Option, um das Trapping zu aktivieren.  Wenn Sie Trapping aktivieren, müssen Sie auch SNMP-Benachrichtigungen aktivieren. 
 
 
-| Mindestzeit zwischen Traps (s) | Mindestzeit zwischen den von Traps ausgelösten Erfassungsversuchen (Standard: 10 Sekunden) 
+| Mindestzeit zwischen Traps (Sek.) | Mindestzeit zwischen durch Traps ausgelösten Erfassungsversuchen (Standard 10 Sekunden) 
 
 
-| Alle Fabric Switches Erkennen | Wählen Sie diese Option, um alle Switches in der Fabric zu erkennen 
+| Entdecken Sie alle Fabric Switches | Wählen Sie diese Option aus, um alle Switches im Fabric zu erkennen 
 
 
-| Ausgeschlossene Geräte | Kommagetrennte Liste der Geräte-IP-Adressen, die von der Abfrage ausgeschlossen werden sollen 
+| Ausgeschlossene Geräte | Durch Kommas getrennte Liste von Geräte-IPs, die von der Abfrage ausgeschlossen werden sollen 
 
 
-| Enthaltene Geräte | Kommagetrennte Liste der Geräte-IPs, die in Abfrage aufgenommen werden sollen 
+| Enthaltene Geräte | Durch Kommas getrennte Liste der Geräte-IPs, die in die Abfrage einbezogen werden sollen 
 
 
-| Überprüfen Sie Den Gerätetyp | Wählen Sie diese Option aus, um nur die Geräte zu akzeptieren, die sich explizit als Cisco-Geräte bewerben 
+| Gerätetyp prüfen | Wählen Sie diese Option aus, um nur die Geräte zu akzeptieren, die sich ausdrücklich als Cisco -Geräte ausgeben 
 
 
-| Erster Alias-Typ | Geben Sie eine erste Präferenz für die Auflösung des Alias an. Wählen Sie aus folgenden Optionen: *Device Alais* Dies ist ein benutzerfreundlicher Name für einen Port WWN (PWWN), der bei Bedarf in allen Konfigurationsbefehlen verwendet werden kann. Alle Switches der Produktfamilie Cisco MDS 9000 unterstützen Distributed Device Alias Services (Geräte-Aliase). *Keine* meldet keinen Alias. *Port Description* Eine Beschreibung, um den Port in einer Liste von Ports zu identifizieren. *Zone Alias (all)* Ein benutzerfreundlicher Name für einen Port, der nur für die aktive Konfiguration verwendet werden kann. Dies ist die Standardeinstellung. 
+| Erster Aliastyp | Geben Sie eine erste Präferenz für die Auflösung des Alias ​​an.  Wählen Sie aus Folgendem: *Device Alais* Dies ist ein benutzerfreundlicher Name für einen Port-WWN (pWWN), der bei Bedarf in allen Konfigurationsbefehlen verwendet werden kann.  Alle Switches der Cisco MDS 9000-Familie unterstützen Distributed Device Alias ​​Services (Gerätealiase).  *Keine* Kein Alias ​​melden.  *Portbeschreibung* Eine Beschreibung zur Identifizierung des Ports in einer Portliste.  *Zonenalias (alle)* Ein benutzerfreundlicher Name für einen Port, der nur für die aktive Konfiguration verwendet werden kann. Dies ist die Standardeinstellung. 
 
 
-| Typ Des Zweiten Alias | Geben Sie eine zweite Vorliebe für die Auflösung des Alias an 
+| Zweiter Aliastyp | Geben Sie eine zweite Präferenz für die Auflösung des Alias an 
 
 
 | Dritter Aliastyp | Geben Sie eine dritte Präferenz für die Auflösung des Alias an 
 
 
-| Aktivieren Sie die Unterstützung für den SANTAP-Proxy-Modus | Wählen Sie aus, ob Ihr Cisco Switch SANTAP im Proxy-Modus verwendet. Wenn Sie EMC RecoverPoint verwenden, verwenden Sie wahrscheinlich SANTAP. 
+| Aktivieren Sie die SANTap-Proxy-Modus-Unterstützung | Wählen Sie aus, ob Ihr Cisco Switch SANTap im Proxy-Modus verwendet.  Wenn Sie EMC RecoverPoint verwenden, verwenden Sie wahrscheinlich SANTap. 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abfragen (Standard: 300 Sekunden) 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen (Standard 300 Sekunden) 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -151,22 +151,22 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Fehler: Gehäuse konnte nicht erkannt werden. Es wurden keine Switches gefunden | • Ping the device with the IP Configured • Melden Sie sich mit der Cisco Device Manager-GUI am Gerät an • Melden Sie sich über CLI beim Gerät an • Versuchen Sie, SNMP Walk auszuführen 
+| Fehler: Chassis konnte nicht erkannt werden – es wurden keine Switches erkannt | • Pingen Sie das Gerät mit der konfigurierten IP an. • Melden Sie sich über die GUI des Cisco Device Managers beim Gerät an. • Melden Sie sich über die CLI beim Gerät an. • Versuchen Sie, SNMP Walk auszuführen. 
 
 
-| Fehler: Gerät ist kein Cisco MDS Switch | • Vergewissern Sie sich, dass die für das Gerät konfigurierte IP-Adresse der Datenquelle richtig ist • Melden Sie sich über die Cisco Device Manager-GUI am Gerät an • Melden Sie sich über die CLI an 
+| Fehler: Gerät ist kein Cisco MDS-Switch | • Stellen Sie sicher, dass die für das Gerät konfigurierte Datenquellen-IP richtig ist. • Melden Sie sich über die Cisco Device Manager-GUI beim Gerät an. • Melden Sie sich über die CLI beim Gerät an. 
 
 
-| Fehler: Data Infrastructure Insights kann den WWN des Switches nicht abrufen. | Hierbei handelt es sich möglicherweise nicht um einen FC- oder FCoE-Switch, dessen Unterstützung möglicherweise nicht möglich ist. Stellen Sie sicher, dass der in der Datenquelle konfigurierte IP/FQDN wirklich ein FC/FCoE-Switch ist. 
+| Fehler: Data Infrastructure Insights kann den WWN des Switches nicht abrufen. | Dies ist möglicherweise kein FC- oder FCoE-Switch und wird daher möglicherweise nicht unterstützt.  Stellen Sie sicher, dass es sich bei der in der Datenquelle konfigurierten IP/FQDN tatsächlich um einen FC/FCoE-Switch handelt. 
 
 
-| Fehler: Es wurden mehrere Knoten gefunden, die beim NPV Switch Port angemeldet sind | Deaktivieren Sie die direkte Akquisition des NPV-Schalters 
+| Fehler: Es wurden mehrere Knoten gefunden, die am NPV-Switch-Port angemeldet sind. | Deaktivieren Sie die direkte Erfassung des NPV-Schalters 
 
 
-| Fehler: Verbindung zum Schalter konnte nicht hergestellt werden | • Stellen Sie sicher, dass das Gerät EINGESCHALTET ist • Überprüfen Sie die IP-Adresse und den Zuhörport • Ping the device • Melden Sie sich über die Cisco Device Manager-GUI beim Gerät an • Melden Sie sich über CLI beim Gerät an • Ausführen von SNMP Walk 
+| Fehler: Es konnte keine Verbindung zum Switch hergestellt werden | • Stellen Sie sicher, dass das Gerät aktiv ist. • Überprüfen Sie die IP-Adresse und den Abhörport. • Pingen Sie das Gerät an. • Melden Sie sich über die Cisco Device Manager-GUI beim Gerät an. • Melden Sie sich über die CLI beim Gerät an. • Führen Sie einen SNMP-Walk aus. 
 |===
 
 
@@ -174,9 +174,9 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Fehler: Leistungsaufnahme wird von SNMP v1 nicht unterstützt | • Datenquelle bearbeiten und Switch-Performance deaktivieren • Datenquelle und Switch-Konfiguration ändern, um SNMP v2 oder höher zu verwenden 
+| Fehler: Leistungserfassung wird von SNMP v1 nicht unterstützt | • Datenquelle bearbeiten und Switch-Leistung deaktivieren • Datenquelle und Switch-Konfiguration ändern, um SNMP v2 oder höher zu verwenden 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: forensic_activity_history.html 
 keywords: Forensic, activity history, activity data, history 
-summary: Verlaufsdaten für forensische Aktivitäten 
+summary: Daten zum Verlauf forensischer Aktivitäten 
 ---
-= Forensik - Alle Aktivitäten
+= Forensik – Alle Aktivitäten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,178 +14,178 @@ summary: Verlaufsdaten für forensische Aktivitäten
 
 
 [role="lead"]
-Auf der Seite Alle Aktivitäten können Sie die Aktionen verstehen, die für Einheiten in der Workload-Sicherheitsumgebung durchgeführt werden.
+Auf der Seite „Alle Aktivitäten“ können Sie die Aktionen nachvollziehen, die an Entitäten in der Workload Security-Umgebung ausgeführt werden.
 
 
 
-== Alle Aktivitätsdaten Werden Untersucht
+== Untersuchen aller Aktivitätsdaten
 
-Klicken Sie auf *Forensics > Vorgangsforensics* und klicken Sie auf die Registerkarte *Alle Aktivitäten*, um die Seite Alle Aktivitäten aufzurufen. Diese Seite bietet einen Überblick über die Aktivitäten Ihres Mandanten und hebt die folgenden Informationen hervor:
+Klicken Sie auf *Forensik > Aktivitätsforensik* und dann auf die Registerkarte *Alle Aktivitäten*, um auf die Seite „Alle Aktivitäten“ zuzugreifen.  Diese Seite bietet einen Überblick über die Aktivitäten Ihres Mandanten und hebt die folgenden Informationen hervor:
 
-* Ein Diagramm mit _Aktivitätsverlauf_ (basierend auf dem ausgewählten globalen Zeitbereich)
+* Ein Diagramm, das den _Aktivitätsverlauf_ zeigt (basierend auf einem ausgewählten globalen Zeitbereich)
 +
-Sie können das Diagramm vergrößern, indem Sie ein Rechteck im Diagramm herausziehen. Die gesamte Seite wird geladen, um den vergrößerten Zeitbereich anzuzeigen. Wenn der Zoom vergrößert wird, wird eine Schaltfläche angezeigt, mit der der Benutzer zoomen kann.
+Sie können das Diagramm vergrößern, indem Sie ein Rechteck im Diagramm aufziehen.  Die gesamte Seite wird geladen, um den gezoomten Zeitbereich anzuzeigen.  Beim Vergrößern wird eine Schaltfläche angezeigt, mit der der Benutzer herauszoomen kann.
 
-* Eine Liste der _All Activity_-Daten.
+* Eine Liste aller Aktivitätsdaten.
 * Ein Dropdown-Menü „Gruppieren nach“ bietet die Möglichkeit, die Aktivität nach Benutzern, Ordnern, Entitätstyp usw. zu gruppieren.
-* Über der Tabelle steht eine Schaltfläche für gemeinsamen Pfad zur Verfügung, auf die Sie klicken können, um das Fenster mit Details zum Entity-Pfad zu öffnen.
+* Über der Tabelle ist eine Schaltfläche für den allgemeinen Pfad verfügbar, über die wir durch Anklicken ein ausziehbares Bedienfeld mit Details zum Entitätspfad erhalten.
 
 
-Die Tabelle *Alle Aktivitäten* zeigt die folgenden Informationen an. Beachten Sie, dass standardmäßig nicht alle dieser Spalten angezeigt werden. Sie können Spalten auswählen, die angezeigt werden sollen, indem Sie auf das Zahnradsymbol klicken.
+Die Tabelle *Alle Aktivitäten* zeigt die folgenden Informationen.  Beachten Sie, dass nicht alle dieser Spalten standardmäßig angezeigt werden.  Sie können die anzuzeigenden Spalten auswählen, indem Sie auf das Zahnradsymbol klicken.
 
-* Die *Zeit*, auf die ein Unternehmen zugegriffen wurde, einschließlich Jahr, Monat, Tag und Uhrzeit des letzten Zugriffs.
-* Der *user*, der auf die Entität mit einem Link zum als Slide-out Panel zugegriffen link:forensic_user_overview.html["Benutzerinformationen"]hat.
+* Die *Zeit*, zu der auf eine Entität zugegriffen wurde, einschließlich Jahr, Monat, Tag und Uhrzeit des letzten Zugriffs.
+* Der *Benutzer*, der auf die Entität mit einem Link zugegriffen hatlink:forensic_user_overview.html["Benutzerinformationen"] als ausziehbare Platte.
 
 
-* Die *Aktivität*, die der Benutzer durchgeführt hat. Folgende Typen werden unterstützt:
+* Die *Aktivität*, die der Benutzer ausgeführt hat.  Unterstützte Typen sind:
 +
-** *Gruppeneigentum ändern* - Gruppeneigentum ist von Datei oder Ordner geändert. Weitere Informationen zur Gruppenbeteiligung finden Sie unter link:https://docs.microsoft.com/en-us/previous-versions/orphan-topics/ws.11/dn789205(v=ws.11)?redirectedfrom=MSDN["Dieser Link."]
-** *Eigentümer ändern* - das Eigentum an Datei oder Ordner wird zu einem anderen Benutzer geändert.
-** *Berechtigung ändern* - Datei- oder Ordnerrechte wurde geändert.
-** *Erstellen* - Erstellen Sie Datei oder Ordner.
-** *Löschen* - Datei oder Ordner löschen. Wenn ein Ordner gelöscht wird, werden _delete_ Ereignisse für alle Dateien in diesem Ordner und Unterordnern abgerufen.
-** *Lesen* - Datei wird gelesen.
-** *Metadaten lesen* - nur bei Option zur Ordnerüberwachung. Wird beim Öffnen eines Ordners unter Windows oder beim Ausführen von „ls“ in einem Ordner unter Linux generiert.
-** *Umbenennen* - Umbenennen Sie die Datei oder den Ordner.
-** *Schreiben* - Daten werden in eine Datei geschrieben.
-** *Metadaten schreiben* - Dateimetadaten werden geschrieben, zum Beispiel, Berechtigung geändert.
-** *Andere Änderung* - jedes andere Ereignis, das oben nicht beschrieben wird. Alle nicht zugeordneten Ereignisse werden dem Aktivitätstyp „Sonstige Änderung“ zugeordnet. Gilt für Dateien und Ordner.
+** *Gruppeneigentum ändern* – Der Gruppeneigentum einer Datei oder eines Ordners wird geändert.  Weitere Einzelheiten zum Gruppeneigentum finden Sie unterlink:https://docs.microsoft.com/en-us/previous-versions/orphan-topics/ws.11/dn789205(v=ws.11)?redirectedfrom=MSDN["dieser Link."]
+** *Eigentümer ändern* – Der Besitz einer Datei oder eines Ordners wird auf einen anderen Benutzer geändert.
+** *Berechtigung ändern* – Die Datei- oder Ordnerberechtigung wurde geändert.
+** *Erstellen* – Datei oder Ordner erstellen.
+** *Löschen* – Datei oder Ordner löschen.  Wenn ein Ordner gelöscht wird, werden _delete_-Ereignisse für alle Dateien in diesem Ordner und den Unterordnern abgerufen.
+** *Lesen* – Datei wird gelesen.
+** *Metadaten lesen* – Nur beim Aktivieren der Ordnerüberwachungsoption.  Wird beim Öffnen eines Ordners unter Windows oder beim Ausführen von „ls“ in einem Ordner unter Linux generiert.
+** *Umbenennen* – Datei oder Ordner umbenennen.
+** *Schreiben* – Daten werden in eine Datei geschrieben.
+** *Metadaten schreiben* – Dateimetadaten werden geschrieben, z. B. geänderte Berechtigungen.
+** *Andere Änderung* – Alle anderen Ereignisse, die oben nicht beschrieben sind.  Alle nicht zugeordneten Ereignisse werden dem Aktivitätstyp „Andere Änderung“ zugeordnet.  Gilt für Dateien und Ordner.
 
 
-* Der *Pfad* ist _entity_ Pfad. Dies sollte entweder der exakte Entity-Pfad (z.B. "_/Home/userX/nested1/nested2/abc.txt_") ODER DER Verzeichnisabschnitt des Pfads für rekursive Suche sein (z.B. "_/Home/userX/nested1/nested2/_"). HINWEIS: Regex-Pfadmuster (z.B. \*genested*) sind hier NICHT erlaubt. Alternativ können auch einzelne Filter auf Pfadordnerebene, wie unten erwähnt, für die Pfadfilterung angegeben werden.
-* Der * 1st Level Folder (Root)* ist das Stammverzeichnis des Entity-Pfades in Kleinbuchstaben.
-* Der *2nd Level Folder* ist das Verzeichnis der Entity PATH der zweiten Ebene im Kleinbuchstaben.
-* Der Ordner *3rd Level* ist das Verzeichnis 3rd Level des Entity PATH im Kleinbuchstaben.
-* Der Ordner *4th Level* ist das Verzeichnis der Entity PATH der vierten Ebene in Kleinbuchstaben.
-* Die Erweiterung *Entity Type*, einschließlich Entity (d. h. Datei) (.doc, .docx, .tmp usw.).
-* Das *Gerät*, in dem sich die Entitäten befinden.
-* Das *Protokoll* zum Abrufen von Ereignissen.
-* Der *Original-Pfad*, der bei der Umbenennung der Originaldatei verwendet wird. Diese Spalte ist in der Tabelle standardmäßig nicht sichtbar. Verwenden Sie die Spaltenauswahl, um diese Spalte zur Tabelle hinzuzufügen.
-* Das *Volumen*, in dem sich die Entitäten befinden. Diese Spalte ist in der Tabelle standardmäßig nicht sichtbar. Verwenden Sie die Spaltenauswahl, um diese Spalte zur Tabelle hinzuzufügen.
-* Der *Entity-Name* ist die letzte Komponente des Entity-Pfades; für den Entity-Typ als Datei ist es der Dateiname.
+* Der *Pfad* ist der _Entitätspfad.  Dies sollte entweder der genaue Entitätspfad (z. B. „_/home/userX/nested1/nested2/abc.txt_“) ODER der Verzeichnisteil des Pfads für die rekursive Suche (z. B. „_/home/userX/nested1/nested2/_“) sein.  HINWEIS: Regex-Pfadmuster (z. B. \*verschachtelt*) sind hier NICHT zulässig.  Alternativ können für die Pfadfilterung auch einzelne Filter auf Pfadordnerebene wie unten erwähnt angegeben werden.
+* Der *Ordner der 1. Ebene (Stammverzeichnis)* ist das Stammverzeichnis des Entitätspfads in Kleinbuchstaben.
+* Der *Ordner der zweiten Ebene* ist das Verzeichnis der zweiten Ebene des Entitätspfads in Kleinbuchstaben.
+* Der *Ordner der 3. Ebene* ist das Verzeichnis der dritten Ebene des Entitätspfads in Kleinbuchstaben.
+* Der *Ordner der 4. Ebene* ist das Verzeichnis der vierten Ebene des Entitätspfads in Kleinbuchstaben.
+* Der *Entitätstyp*, einschließlich der Entitätserweiterung (d. h. Dateierweiterung) (.doc, .docx, .tmp usw.).
+* Das *Gerät*, auf dem sich die Entitäten befinden.
+* Das zum Abrufen von Ereignissen verwendete *Protokoll*.
+* Der *Ursprüngliche Pfad*, der für Umbenennungsereignisse verwendet wurde, als die Originaldatei umbenannt wurde.  Diese Spalte ist in der Tabelle standardmäßig nicht sichtbar.  Verwenden Sie den Spaltenselektor, um diese Spalte zur Tabelle hinzuzufügen.
+* Das *Volume*, in dem sich die Entitäten befinden.  Diese Spalte ist in der Tabelle standardmäßig nicht sichtbar.  Verwenden Sie den Spaltenselektor, um diese Spalte zur Tabelle hinzuzufügen.
+* Der *Entitätsname* ist die letzte Komponente des Entitätspfads; beim Entitätstyp als Datei ist es der Dateiname.
 
 
-Wenn Sie eine Tabellenzeile auswählen, wird ein Schiebefenster geöffnet, in dem das Benutzerprofil auf einer Registerkarte und die Vorgangs- und Entitätsübersicht auf einer anderen Registerkarte angezeigt werden.
+Durch Auswählen einer Tabellenzeile wird ein ausziehbares Fenster mit dem Benutzerprofil auf einer Registerkarte und der Aktivitäts- und Entitätsübersicht auf einer anderen Registerkarte geöffnet.
 
-image:ws_forensics_slideout.png["forensics-Seite mit Slideout, das die Benutzeraktivität anzeigt"]
+image:ws_forensics_slideout.png["Forensikseite mit Slideout zur Anzeige der Benutzeraktivität"]
 
-Die standardmäßige _Group by_-Methode ist _Activity Forensics_. Wenn Sie eine andere _Group by_-Methode auswählen, z. B. Entity Type--die Entity_Group by_-Tabelle wird angezeigt. Wird keine Auswahl getroffen, wird _Group by_ *all* angezeigt.
+Die Standardmethode „Gruppieren nach“ ist „Aktivitätsforensik“.  Wenn Sie eine andere _Gruppieren nach_-Methode auswählen, beispielsweise Entitätstyp, wird die Entitäts-_Gruppieren nach_-Tabelle angezeigt.  Wenn keine Auswahl getroffen wird, wird _Gruppieren nach_ *alle* angezeigt.
 
-* Die Vorgangsanzahl wird als Hyperlink angezeigt. Wenn Sie diese Option auswählen, wird die ausgewählte Gruppierung als Filter hinzugefügt. Die Tabelle der Aktivität wird basierend auf diesem Filter aktualisiert.
-* Wenn Sie den Filter ändern, den Zeitraum ändern oder den Bildschirm aktualisieren, können Sie nicht zu den gefilterten Ergebnissen zurückkehren, ohne den Filter erneut einzustellen.
-* Beachten Sie bitte, dass bei Auswahl des Namens der Entität als Filter die Dropdown-Liste Gruppieren nach deaktiviert wird. Wenn der Benutzer bereits auf dem Bildschirm Gruppieren nach angezeigt wird, wird der Filter Entitätsname als deaktiviert.
-
-
+* Die Aktivitätsanzahl wird als Hyperlink angezeigt. Wenn Sie diesen auswählen, wird die ausgewählte Gruppierung als Filter hinzugefügt.  Die Aktivitätstabelle wird basierend auf diesem Filter aktualisiert.
+* Beachten Sie, dass Sie, wenn Sie den Filter ändern, den Zeitbereich ändern oder den Bildschirm aktualisieren, nicht zu den gefilterten Ergebnissen zurückkehren können, ohne den Filter erneut einzustellen.
+* Bitte beachten Sie, dass das Dropdown-Menü „Gruppieren nach“ deaktiviert wird, wenn „Entitätsname“ als Filter ausgewählt ist. Wenn sich der Benutzer bereits auf dem Bildschirm „Gruppieren nach“ befindet, wird der Entitätsname als Filter deaktiviert.
 
 
-== Filtern Forensischer Vorgangshistorie-Daten
 
-Es gibt zwei Methoden, mit denen Sie Daten filtern können.
 
-* Der Filter kann über das Schiebefeld hinzugefügt werden. Der Wert wird den entsprechenden Filtern in der oberen Liste _Filter by_ hinzugefügt.
-* Filtern Sie die Daten, indem Sie das Feld _Filter by_ eingeben:
+== Filtern von Daten zum forensischen Aktivitätsverlauf
+
+Zum Filtern von Daten können Sie zwei Methoden verwenden.
+
+* Der Filter kann über das ausziehbare Bedienfeld hinzugefügt werden.  Der Wert wird den entsprechenden Filtern in der oberen Liste „Filtern nach“ hinzugefügt.
+* Filtern Sie Daten, indem Sie in das Feld _Filtern nach_ Folgendes eingeben:
 +
-Wählen Sie den entsprechenden Filter aus dem Widget „Filtern nach“ aus, indem Sie auf die Schaltfläche *[+]* klicken:
+Wählen Sie den entsprechenden Filter aus dem oberen Widget „Filtern nach“ aus, indem Sie auf die Schaltfläche *[+]* klicken:
 
 +
-image:Forensic_Activity_Filter.png["Entity Filer, width=500"]
+image:Forensic_Activity_Filter.png["Entity Filer, Breite=500"]
 
 +
 Geben Sie den Suchtext ein
 
 +
-Drücken Sie die Eingabetaste, oder klicken Sie außerhalb des Filterfelds, um den Filter anzuwenden.
+Drücken Sie die Eingabetaste oder klicken Sie außerhalb des Filterfelds, um den Filter anzuwenden.
 
 
 
-Sie können forensische Aktivitätsdaten nach folgenden Feldern filtern:
+Sie können Daten zur forensischen Aktivität nach den folgenden Feldern filtern:
 
-* Der Typ *Aktivität*.
+* Der *Aktivitäts*typ.
 * *Protokoll* zum Abrufen protokollspezifischer Aktivitäten.
-* *Benutzername* des Benutzers, der die Aktivität ausführt. Sie müssen den genauen Benutzernamen angeben, um sie zu filtern. Die Suche mit einem teilweisen Benutzernamen oder einem teilweisen Benutzernamen mit Präfix oder Suffixed mit '*' funktioniert nicht.
-* *Rauschunterdrückung* zum Filtern von Dateien, die in den letzten 2 Stunden vom Benutzer erstellt werden. Sie wird auch zum Filtern temporärer Dateien (z. B. .tmp-Dateien) verwendet, auf die der Benutzer Zugriff hat.
-* *Domain* des Benutzers, der die Aktivität ausführt. Sie müssen die *genaue Domain* angeben, um zu filtern. Die Suche nach einer partiellen Domäne oder einer partiellen Domäne mit Präfix oder Suffix mit Platzhalter ('*') funktioniert nicht. _None_ kann angegeben werden, um nach fehlender Domain zu suchen.
+* *Benutzername* des Benutzers, der die Aktivität ausführt.  Sie müssen den genauen Benutzernamen zum Filtern angeben.  Die Suche mit einem teilweisen Benutzernamen oder einem teilweisen Benutzernamen mit dem Präfix oder Suffix „*“ funktioniert nicht.
+* *Rauschunterdrückung* zum Filtern von Dateien, die in den letzten 2 Stunden vom Benutzer erstellt wurden.  Es wird auch zum Filtern temporärer Dateien (z. B. .tmp-Dateien) verwendet, auf die der Benutzer zugreift.
+* *Domäne* des Benutzers, der die Aktivität ausführt.  Sie müssen die *genaue Domäne* zum Filtern angeben.  Die Suche nach Teildomänen oder Teildomänen mit einem Platzhalter ('*') als Präfix oder Suffix funktioniert nicht.  _None_ kann angegeben werden, um nach fehlenden Domänen zu suchen.
 
 
-Die folgenden Felder unterliegen speziellen Filterregeln:
+Für die folgenden Felder gelten besondere Filterregeln:
 
-* *Entity Type*, mit Entity (File) Extension - es ist vorzuziehen, den genauen Entity-Typ in Anführungszeichen anzugeben. Beispiel: _„txt“_.
-* *Pfad* der Entity - Dies sollte entweder der exakte Entity-Pfad (z.B. "_/Home/userX/nested1/nested2/abc.txt_") ODER DER Verzeichnisabschnitt des Pfads für rekursive Suche sein (z.B. "_/Home/userX/nested1/nested2/_"). HINWEIS: Regex-Pfadmuster (z.B. \*genested*) sind hier NICHT erlaubt. Verzeichnispfadfilter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Beispiel: „_/Home/userX/nested1/nested2/_“. Weitere Informationen finden Sie in der folgenden Tabelle.
-* 1st Level Folder (Root) - Stammverzeichnis des Entity Path als Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann Home ODER "Home" verwendet werden.
-* 2nd Level Folder - Verzeichnis 2nd Level der Entity Path Filter. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann userX ODER "userX" verwendet werden.
-* Ordner der dritten Ebene – Verzeichnis der Pfadfilter der dritten Ebene.
-* Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann nested1 ODER "nested1" verwendet werden.
-* Ordner der 4. Ebene – Verzeichnis der Filter für Entity Path auf vierter Ebene. Wenn beispielsweise der Entity-Pfad /Home/userX/nested1/nested2/ lautet, kann nested2 ODER "nested2" verwendet werden.
-* *User* die Aktivität durchführen - es ist vorzuziehen, den genauen Benutzer in Anführungszeichen anzugeben. Beispiel: _ „Administrator“_.
-* *Gerät* (SVM), in dem sich Entitäten befinden
-* *Volumen*, in dem sich Entitäten befinden
-* Der *Original-Pfad*, der bei der Umbenennung der Originaldatei verwendet wird.
-* *Quell-IP*, auf die das Element zugegriffen wurde.
+* *Entitätstyp*, unter Verwendung der Entitäts-(Datei-)Erweiterung – es ist vorzuziehen, den genauen Entitätstyp in Anführungszeichen anzugeben.  Zum Beispiel _"txt"_.
+* *Pfad* der Entität – Dies sollte entweder der genaue Entitätspfad (z. B. „_/home/userX/nested1/nested2/abc.txt_“) ODER der Verzeichnisteil des Pfads für die rekursive Suche (z. B. „_/home/userX/nested1/nested2/_“) sein.  HINWEIS: Regex-Pfadmuster (z. B. \*verschachtelt*) sind hier NICHT zulässig.  Für schnellere Ergebnisse werden Verzeichnispfadfilter (Pfadzeichenfolge endet mit /) mit einer Tiefe von bis zu 4 Verzeichnissen empfohlen.  Beispiel: „_/home/userX/nested1/nested2/_“.  Weitere Einzelheiten finden Sie in der folgenden Tabelle.
+* Ordner der 1. Ebene (Stammverzeichnis) – Stammverzeichnis des Entitätspfads als Filter.  Wenn der Entitätspfad beispielsweise /home/userX/nested1/nested2/ ist, kann home ODER „home“ verwendet werden.
+* Ordner der 2. Ebene – Verzeichnis der 2. Ebene der Entitätspfadfilter.  Wenn der Entitätspfad beispielsweise /home/userX/nested1/nested2/ ist, kann userX ODER „userX“ verwendet werden.
+* Ordner der 3. Ebene – Verzeichnis der 3. Ebene der Entitätspfadfilter.
+* Wenn der Entitätspfad beispielsweise /home/userX/nested1/nested2/ ist, kann nested1 ODER „nested1“ verwendet werden.
+* Ordner der 4. Ebene – Verzeichnis Verzeichnis der 4. Ebene der Entitätspfadfilter.  Wenn der Entitätspfad beispielsweise /home/userX/nested1/nested2/ ist, kann nested2 ODER „nested2“ verwendet werden.
+* *Benutzer*, der die Aktivität ausführt – es ist vorzuziehen, den genauen Benutzer in Anführungszeichen anzugeben.  Beispiel: _"Administrator"_.
+* *Gerät* (SVM), auf dem sich Entitäten befinden
+* *Volume*, in dem sich Entitäten befinden
+* Der *Ursprüngliche Pfad*, der für Umbenennungsereignisse verwendet wurde, als die Originaldatei umbenannt wurde.
+* *Quell-IP*, von der aus auf die Entität zugegriffen wurde.
 +
-** Sie können Wildcards * und ? verwenden. Beispiel: 10.0.0.*, 10.0?.0.10, 10.10*
-** Wenn eine genaue Übereinstimmung erforderlich ist, müssen Sie eine gültige Quell-IP-Adresse in doppelten Anführungszeichen angeben, z. B. „10.1.1.1.“. Unvollständige IPs mit doppelten Anführungszeichen wie "10.1.1.", "10.1...*" usw. funktionieren nicht.
+** Sie können die Platzhalter * und ? verwenden.  Zum Beispiel: 10.0.0.*, 10.0?.0.10, 10.10*
+** Wenn eine exakte Übereinstimmung erforderlich ist, müssen Sie eine gültige Quell-IP-Adresse in Anführungszeichen angeben, beispielsweise „10.1.1.1.“.  Unvollständige IPs mit Anführungszeichen wie „10.1.1.“, „10.1..*“ usw. funktionieren nicht.
 
 
-* Der *Entity Name* - der Dateiname des Entity Path als Filter. Wenn der Entity-Pfad beispielsweise /Home/userX/nested1/testfile.txt lautet, lautet der Entity-Name testfile.txt. Bitte beachten Sie, dass es empfohlen wird, den genauen Dateinamen in Anführungszeichen anzugeben; versuchen Sie, die Suche mit Platzhaltern zu vermeiden. Beispiel: „Testfile.txt“. Beachten Sie außerdem, dass dieser Filter für Entitätsnamen für kürzere Zeitbereiche (bis zu 3 Tage) empfohlen wird.
+* Der *Entitätsname* – der Dateiname des Entitätspfads als Filter.  Wenn der Entitätspfad beispielsweise /home/userX/nested1/testfile.txt lautet, ist der Entitätsname testfile.txt.  Bitte beachten Sie, dass es empfohlen wird, den genauen Dateinamen in Anführungszeichen anzugeben. Versuchen Sie, die Suche mit Platzhaltern zu vermeiden.  Beispiel: „testfile.txt“.  Beachten Sie außerdem, dass dieser Entitätsnamenfilter für kürzere Zeiträume (bis zu 3 Tage) empfohlen wird.
 
 
-Die vorhergehenden Felder unterliegen beim Filtern folgenden Kriterien:
+Für die vorangehenden Felder gelten beim Filtern folgende Punkte:
 
-* Der genaue Wert sollte in Anführungszeichen liegen: Beispiel: "suchtext"
-* Platzhalterzeichenfolgen dürfen keine Anführungszeichen enthalten: Beispiel: searchtext, \*searchtext*, filtert nach Zeichenfolgen, die 'Searchtext' enthalten.
-* String mit einem Präfix, Beispiel: searchtext* , sucht alle Zeichenketten, die mit 'Schartext' beginnen.
-
-
-Bitte beachten Sie, dass bei allen Filterfeldern die Groß-/Kleinschreibung berücksichtigt wird. Beispiel: Wenn der angewendete Filter Entity Type mit dem Wert 'Searchtext' ist, werden Ergebnisse mit Entity Type als 'Searchtext', 'Searchtext', 'Searchtext' zurückgegeben.
+* Der genaue Wert sollte in Anführungszeichen stehen: Beispiel: „Suchtext“
+* Platzhalterzeichenfolgen dürfen keine Anführungszeichen enthalten: Beispiel: Suchtext, \*Suchtext*, filtert nach allen Zeichenfolgen, die „Suchtext“ enthalten.
+* Zeichenfolgen mit einem Präfix, Beispiel: Suchtext*, suchen nach allen Zeichenfolgen, die mit „Suchtext“ beginnen.
 
 
+Bitte beachten Sie, dass bei allen Filterfeldern die Groß- und Kleinschreibung beachtet wird.  Beispiel: Wenn der angewendete Filter „Entitätstyp“ mit dem Wert „Suchtext“ ist, werden Ergebnisse mit dem Entitätstyp „Suchtext“, „Suchtext“ oder „SUCHTEXT“ zurückgegeben.
 
-== Beispiele Für Forensik-Filter Für Aktivitäten:
+
+
+== Beispiele für Aktivitätsforensikfilter:
 
 |===
-| Vom Benutzer angewendeter Filterausdruck | Erwartetes Ergebnis | Performance-Assessment | Kommentar 
+| Vom Benutzer angewendeter Filterausdruck | Erwartetes Ergebnis | Leistungsbeurteilung | Kommentar 
 
 
-| Pfad = „/Home/userX/nested1/nested2/“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Schnell | Verzeichnissuchen bis zu 4 Verzeichnisse werden schnell sein. 
+| Pfad = "/home/userX/nested1/nested2/" | Rekursive Suche aller Dateien und Ordner unter einem bestimmten Verzeichnis | Schnell | Verzeichnissuchen in bis zu 4 Verzeichnissen sind schnell. 
 
 
-| Pfad = „/Home/userX/nested1/“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Schnell | Verzeichnissuchen bis zu 4 Verzeichnisse werden schnell sein. 
+| Pfad = "/home/userX/nested1/" | Rekursive Suche aller Dateien und Ordner unter einem bestimmten Verzeichnis | Schnell | Verzeichnissuchen in bis zu 4 Verzeichnissen sind schnell. 
 
 
-| Pfad = „/Home/userX/nested1/Test“ | Exakte Übereinstimmung, wobei der Pfadwert mit /Home/userX/nested1/Test übereinstimmt | Langsamer | Die genaue Suche ist langsamer als die Suche nach Verzeichnissen. 
+| Pfad = "/home/userX/nested1/test" | Exakte Übereinstimmung, wenn der Pfadwert mit /home/userX/nested1/test übereinstimmt | Langsamer | Die exakte Suche ist im Vergleich zur Verzeichnissuche langsamer. 
 
 
-| Pfad = „/Home/userX/nested1/nested2/nested3/“ | Rekursive Abfrage aller Dateien und Ordner unter dem angegebenen Verzeichnis | Langsamer | Mehr als 4 Verzeichnissuchen sind langsamer zu suchen. 
+| Pfad = "/home/userX/nested1/nested2/nested3/" | Rekursive Suche aller Dateien und Ordner unter einem bestimmten Verzeichnis | Langsamer | Die Suche in mehr als 4 Verzeichnissen ist langsamer. 
 
 
-| Alle anderen nicht pfadbasierten Filter. Benutzer- und Entitätstyp-Filter, die in Anführungszeichen empfohlen werden, z. B. Benutzer=„Administrator“ Entitätstyp=„txt“ |  | Schnell |  
+| Alle anderen nicht pfadbasierten Filter.  Es wird empfohlen, Benutzer- und Entitätstypfilter in Anführungszeichen zu setzen, z. B. „Benutzer="Administrator" Entitätstyp="txt" |  | Schnell |  
 
 
-| Entity Name = „Test.log“ | Genaue Übereinstimmung mit Dateiname test.log | Schnell | Da es genau Übereinstimmung ist 
+| Entitätsname = "test.log" | Genaue Übereinstimmung, wenn der Dateiname „test.log“ lautet | Schnell | Da es sich um eine exakte Übereinstimmung handelt 
 
 
-| Entity Name = *test.log | Dateinamen enden mit test.log | Langsam | Aufgrund der Wildcard kann es langsam sein. 
+| Entitätsname = *test.log | Dateinamen, die mit test.log enden | Langsam | Aufgrund von Platzhaltern kann es langsam sein. 
 
 
-| Entity Name = Test*.log | Dateinamen beginnen mit Test und enden mit .log | Langsam | Aufgrund der Wildcard kann es langsam sein. 
+| Entitätsname = test*.log | Dateinamen, die mit „test“ beginnen und mit „.log“ enden | Langsam | Aufgrund von Platzhaltern kann es langsam sein. 
 
 
-| Entity Name = Test.lo | Dateinamen, die mit Test.lo beginnen, entsprechen z. B. Test.log, Test.log.1, Test.log1 | Langsamer | Aufgrund der Wildcard am Ende kann es langsam sein. 
+| Entitätsname = test.lo | Dateinamen, die mit test.lo beginnen. Beispiel: Es entspricht test.log, test.log.1, test.log1 | Langsamer | Aufgrund des Platzhalters am Ende kann es langsam sein. 
 
 
-| Entity Name = Test | Dateinamen beginnen mit Test | Langsam | Aufgrund der Platzhalterkarte am Ende und des generischen Werts, der verwendet wird, kann es am langsamsten sein. 
+| Entitätsname = Test | Dateinamen, die mit „test“ beginnen | Am langsamsten | Aufgrund des Platzhalters am Ende und der Verwendung allgemeinerer Werte kann es langsam sein. 
 |===
-HINWEIS:
+NOTIZ:
 
-. Die Anzahl der Aktivitäten, die neben dem Symbol „Alle Aktivitäten“ angezeigt wird, wird auf 30 Minuten gerundet, wenn der ausgewählte Zeitraum mehr als 3 Tage umfasst. In einem Zeitraum von _1. September 10:15 bis 7. September 10:15 werden die Aktivitätszahlen vom 1. September 10:00 bis 7. September 10:30 Uhr angezeigt.
-. Ebenso werden die im Diagramm „Aktivitätsverlauf“ angezeigten Zählwerte auf 30 Minuten abgerundet, wenn der ausgewählte Zeitraum mehr als 3 Tage umfasst.
-
-
+. Die neben dem Symbol „Alle Aktivitäten“ angezeigte Aktivitätsanzahl wird auf 30 Minuten gerundet, wenn der ausgewählte Zeitraum mehr als 3 Tage umfasst. Beispielsweise zeigt ein Zeitraum vom 1. September, 10:15 Uhr bis 7. September, 10:15 Uhr die Aktivitätsanzahl vom 1. September, 10:00 Uhr bis 7. September, 10:30 Uhr an.
+. Ebenso werden die im Diagramm „Aktivitätsverlauf“ angezeigten Zählmetriken auf 30 Minuten gerundet, wenn der ausgewählte Zeitraum mehr als 3 Tage umfasst.
 
 
-== Forensische Vorgangshistorie-Daten Sortieren
 
-Sie können Daten aus dem Aktivitätsverlauf nach _Zeit, Benutzer, Quell-IP, Aktivität,_, _Entity Type_, 1st Level Folder (Root), 2nd Level Folder, 3rd Level Folder und 4th Level Folder sortieren. Standardmäßig wird die Tabelle nach absteigender_Time_-Reihenfolge sortiert, was bedeutet, dass die neuesten Daten zuerst angezeigt werden. Die Sortierung ist für die Felder _Device_ und _Protocol_ deaktiviert.
+
+== Sortieren von Daten zum forensischen Aktivitätsverlauf
+
+Sie können die Aktivitätsverlaufsdaten nach _Zeit, Benutzer, Quell-IP, Aktivität_, _Entitätstyp_, Ordner der 1. Ebene (Stamm), Ordner der 2. Ebene, Ordner der 3. Ebene und Ordner der 4. Ebene sortieren.  Standardmäßig ist die Tabelle in absteigender Zeitreihenfolge sortiert, d. h. die neuesten Daten werden zuerst angezeigt.  Die Sortierung ist für die Felder _Gerät_ und _Protokoll_ deaktiviert.
 
 
 
@@ -195,60 +195,60 @@ Sie können Daten aus dem Aktivitätsverlauf nach _Zeit, Benutzer, Quell-IP, Akt
 
 === Überblick
 
-Die Funktion „asynchrone Exporte“ in „Storage Workload Security“ wurde für die Verarbeitung großer Datenexporte entwickelt.
+Die Funktion „Asynchrone Exporte“ in Storage Workload Security ist für die Verarbeitung großer Datenexporte konzipiert.
 
 
 
 === Schritt-für-Schritt-Anleitung: Daten mit asynchronen Exporten exportieren
 
-. *Export starten*: Wählen Sie die gewünschte Zeitdauer und Filter für den Export aus und klicken Sie auf den Export-Button.
-. *Wait for Export to complete*: Die Verarbeitungszeit kann von ein paar Minuten bis zu einigen Stunden betragen. Unter Umständen müssen Sie die Seite „Forensik“ einige Male aktualisieren. Sobald der Exportauftrag abgeschlossen ist, wird die Schaltfläche "Letzten Export CSV-Datei herunterladen" aktiviert.
-. *Download*: Klicken Sie auf den Button "Download Last created Export file", um die exportierten Daten im .zip-Format zu erhalten. Diese Daten können heruntergeladen werden, bis der Benutzer einen anderen asynchronen Export initiiert oder 3 Tage vergangen sind, je nachdem, was zuerst eintritt. Die Schaltfläche bleibt aktiviert, bis ein anderer asynchroner Export gestartet wird.
+. *Export starten*: Wählen Sie die gewünschte Zeitdauer und Filter für den Export aus und klicken Sie auf die Schaltfläche „Exportieren“.
+. *Warten Sie, bis der Export abgeschlossen ist*: Die Verarbeitungszeit kann zwischen einigen Minuten und einigen Stunden liegen.  Möglicherweise müssen Sie die Forensikseite einige Male aktualisieren.  Sobald der Exportauftrag abgeschlossen ist, wird die Schaltfläche „Letzte CSV-Exportdatei herunterladen“ aktiviert.
+. *Herunterladen*: Klicken Sie auf die Schaltfläche „Zuletzt erstellte Exportdatei herunterladen“, um die exportierten Daten im ZIP-Format zu erhalten.  Diese Daten stehen zum Download zur Verfügung, bis der Benutzer einen weiteren asynchronen Export initiiert oder drei Tage vergangen sind, je nachdem, was zuerst eintritt.  Die Schaltfläche bleibt aktiviert, bis ein weiterer asynchroner Export gestartet wird.
 . *Einschränkungen*:
 +
-** Die Anzahl asynchroner Downloads ist derzeit auf 1 pro Benutzer für jede Tabelle „Aktivitäten und Aktivitäten“ und 3 pro Mandant beschränkt.
-** Die exportierten Daten sind für die Tabelle „Vorgänge“ auf maximal 1 Million Datensätze beschränkt. Für „Gruppieren nach“ sind es nur halbe Millionen Datensätze.
+** Die Anzahl der asynchronen Downloads ist derzeit auf 1 pro Benutzer für jede Aktivitäts- und Aktivitätsanalysetabelle und 3 pro Mandant begrenzt.
+** Die exportierten Daten sind für die Aktivitätentabelle auf maximal 1 Million Datensätze begrenzt, während für „Gruppieren nach“ die Begrenzung auf eine halbe Million Datensätze liegt.
 
 
 
 
-Ein Beispielskript zum Extrahieren forensischer Daten über API ist auf dem Agenten unter _/opt/NetApp/CloudSecure/Agent/Export-script/_ vorhanden. Weitere Informationen zum Skript finden Sie in der Infodatei an dieser Stelle.
+Ein Beispielskript zum Extrahieren forensischer Daten über die API befindet sich unter _/opt/netapp/cloudsecure/agent/export-script/_ auf dem Agenten.  Weitere Einzelheiten zum Skript finden Sie in der Readme-Datei an dieser Stelle.
 
 
 
-== Spaltenauswahl für Alle Aktivitäten
+== Spaltenauswahl für alle Aktivitäten
 
-In der Tabelle _Alle Aktivitäten_ werden standardmäßig ausgewählte Spalten angezeigt. Um die Spalten hinzuzufügen, zu entfernen oder zu ändern, klicken Sie auf das Zahnradsymbol rechts neben der Tabelle und wählen Sie aus der Liste der verfügbaren Spalten aus.
+Die Tabelle „Alle Aktivitäten“ zeigt standardmäßig ausgewählte Spalten an.  Um Spalten hinzuzufügen, zu entfernen oder zu ändern, klicken Sie auf das Zahnradsymbol rechts neben der Tabelle und wählen Sie aus der Liste der verfügbaren Spalten aus.
 
-image:CloudSecure_ActivitySelection.png["Aktivitätsauswahl, width=30%"]
-
-
-
-== Aufbewahrung Des Aktivitätsverlaufs
-
-Der Aktivitätsverlauf wird 13 Monate lang in aktiven Workload-Sicherheitsumgebungen aufbewahrt.
+image:CloudSecure_ActivitySelection.png["Aktivitätsauswahl, Breite = 30 %"]
 
 
 
-== Anwendbarkeit von Filtern in Forensics Seite
+== Aufbewahrung des Aktivitätsverlaufs
+
+Der Aktivitätsverlauf wird für aktive Workload Security-Umgebungen 13 Monate lang aufbewahrt.
+
+
+
+== Anwendbarkeit von Filtern in der Forensik-Seite
 
 |===
-| Filtern | Das macht es | Beispiel | Gilt für diese Filter | Gilt nicht für diese Filter | Ergebnis 
+| Filter | Was es bewirkt | Beispiel | Anwendbar für diese Filter | Gilt nicht für diese Filter | Ergebnis 
 
 
-| * (Sternchen) | Ermöglicht Ihnen die Suche nach allem | Auto*03172022 Wenn der Suchtext Bindestrich oder Unterstrich enthält, geben Sie den Ausdruck in Klammern an, z. B. (svm*) für die Suche nach svm-123 | Benutzer, Entitätstyp, Gerät, Volume, ursprünglicher Pfad, Ordner der 1. Stufe, Ordner der 2. Stufe, Ordner der 3. Stufe, Ordner der 4. Stufe, Name der Entität, Quell-IP |  | Gibt alle Ressourcen zurück, die mit „Auto“ beginnen und mit „03172022“ enden 
+| * (Sternchen) | ermöglicht Ihnen die Suche nach allem | Auto*03172022 Wenn der Suchtext Bindestriche oder Unterstriche enthält, geben Sie den Ausdruck in Klammern ein. zB (svm*) für die Suche nach svm-123 | Benutzer, Entitätstyp, Gerät, Volume, Originalpfad, Ordner der 1. Ebene, Ordner der 2. Ebene, Ordner der 3. Ebene, Ordner der 4. Ebene, Entitätsname, Quell-IP |  | Gibt alle Ressourcen zurück, die mit „Auto“ beginnen und mit „03172022“ enden. 
 
 
-| ? (Fragezeichen) | Ermöglicht die Suche nach einer bestimmten Anzahl von Zeichen | AutoSabotageUser1_03172022? | Benutzer, Entitätstyp, Gerät, Volume, 1stLevel-Ordner, 2ndLevel-Ordner, 3rdLevel-Ordner, 4thLevel-Ordner, Entitätname, Quell-IP |  | Gibt AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225 usw. zurück 
+| ? (Fragezeichen) | ermöglicht die Suche nach einer bestimmten Anzahl von Zeichen | AutoSabotageUser1_03172022? | Benutzer, Entitätstyp, Gerät, Volume, Ordner der 1. Ebene, Ordner der 2. Ebene, Ordner der 3. Ebene, Ordner der 4. Ebene, Entitätsname, Quell-IP |  | gibt AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225 usw. zurück 
 
 
-| ODER | Ermöglicht Ihnen die Angabe mehrerer Elemente | AutoSabotageUser1_03172022 ODER AutoBefreiUser4_03162022 | Benutzer, Domäne, Entitätstyp, ursprünglicher Pfad, Entitätname, Quell-IP |  | Gibt eine beliebige von AutoSabotageUser1_03172022 ODER AutoBefreiUser4_03162022 zurück 
+| ODER | ermöglicht Ihnen die Angabe mehrerer Entitäten | AutoSabotageUser1_03172022 ODER AutoRansomUser4_03162022 | Benutzer, Domäne, Entitätstyp, ursprünglicher Pfad, Entitätsname, Quell-IP |  | gibt entweder AutoSabotageUser1_03172022 oder AutoRansomUser4_03162022 zurück. 
 
 
-| NICHT | Ermöglicht das Ausschließen von Text aus den Suchergebnissen | NICHT automatisch BefreiUser4_03162022 | Benutzer, Domäne, Entitätstyp, ursprünglicher Pfad, Ordner mit 1 Stufe, Ordner mit 2 Ebenen, Ordner mit 3 Ebenen, Ordner mit 4 Ebenen, Name der Entität, Quell-IP | Gerät | Gibt alles zurück, was nicht mit"AutoRansomUser4_03162022" startet 
+| NICHT | ermöglicht es Ihnen, Text aus den Suchergebnissen auszuschließen | NOT AutoRansomUser4_03162022 | Benutzer, Domäne, Entitätstyp, Originalpfad, Ordner der 1. Ebene, Ordner der 2. Ebene, Ordner der 3. Ebene, Ordner der 4. Ebene, Entitätsname, Quell-IP | Gerät | gibt alles zurück, was nicht mit „AutoRansomUser4_03162022“ beginnt 
 
 
-| Keine | Sucht in allen Feldern nach Null-Werten | Keine | Domäne |  | Gibt Ergebnisse an, bei denen das Zielfeld leer ist 
+| Keine | sucht in allen Feldern nach NULL-Werten | Keine | Domain |  | gibt Ergebnisse zurück, bei denen das Zielfeld leer ist 
 |===
 
 
@@ -259,13 +259,13 @@ Suchergebnisse mit und ohne / werden unterschiedlich sein
 |===
 
 
-| „/AutoDir1/AutoFile03242022“ | Nur die exakte Suche funktioniert; gibt alle Aktivitäten mit exaktem Pfad wie /AutoDir1/AutoFile03242022 zurück (Fall unsensibel) 
+| "/AutoDir1/AutoFile03242022" | Nur die exakte Suche funktioniert; gibt alle Aktivitäten mit dem exakten Pfad als /AutoDir1/AutoFile03242022 zurück (ohne Berücksichtigung der Groß-/Kleinschreibung). 
 
 
-| „/AutoDir1/“ | Funktioniert; gibt alle Aktivitäten mit Verzeichnis 1. Ebene zurück, die mit AutoDir1 übereinstimmen (unsensibel) 
+| "/AutoDir1/ " | Funktioniert; gibt alle Aktivitäten mit Verzeichnis der 1. Ebene zurück, das mit AutoDir1 übereinstimmt (ohne Berücksichtigung der Groß-/Kleinschreibung) 
 
 
-| „/AutoDir1/AutoFile03242022/“ | Funktioniert; gibt alle Aktivitäten mit Verzeichnis 1. Ebene mit AutoDir1 und Verzeichnis 2. Ebene mit AutoFile03242022 zurück (Fall nicht sensibel) 
+| "/AutoDir1/AutoFile03242022/" | Funktioniert; gibt alle Aktivitäten zurück, bei denen das Verzeichnis der 1. Ebene mit AutoDir1 übereinstimmt und das Verzeichnis der 2. Ebene mit AutoFile03242022 übereinstimmt (ohne Berücksichtigung der Groß-/Kleinschreibung). 
 
 
 | /AutoDir1/AutoFile03242022 ODER /AutoDir1/AutoFile03242022 | Funktioniert nicht 
@@ -284,17 +284,17 @@ Suchergebnisse mit und ohne / werden unterschiedlich sein
 |===
 
 
-== Lokale Root-SVM-Benutzeraktivitäten ändern sich
+== Änderungen der Aktivität des lokalen Root-SVM-Benutzers
 
-Wenn ein lokaler Root-SVM-Benutzer eine Aktivität ausführt, wird die IP des Clients, auf dem die NFS-Freigabe gemountet ist, jetzt im Benutzernamen berücksichtigt, der sowohl auf forensischen Aktivitäten als auch auf Benutzeraktivitäts-Seiten als Root@<ip-address-of-the-client> angezeigt wird.
+Wenn ein lokaler Root-SVM-Benutzer eine Aktivität ausführt, wird jetzt die IP des Clients, auf dem die NFS-Freigabe gemountet ist, im Benutzernamen berücksichtigt. Dieser wird sowohl auf der Seite mit der forensischen Aktivität als auch auf der Seite mit der Benutzeraktivität als root@<IP-Adresse des Clients> angezeigt.
 
 Beispiel:
 
-* Wenn SVM-1 von Workload Security überwacht wird und der Root-Benutzer dieser SVM die Freigabe auf einem Client mit der IP-Adresse 10.197.12.40 mountet, lautet der auf der Seite für forensische Aktivitäten angezeigte Benutzername _root@10.197.12.40_.
-* Wenn dieselbe SVM-1 in einen anderen Client mit der IP-Adresse 10.197.12.41 eingebunden wird, lautet der auf der Seite für forensische Aktivitäten angezeigte Benutzername _root@10.197.12.41_.
+* Wenn SVM-1 von Workload Security überwacht wird und der Root-Benutzer dieses SVM die Freigabe auf einem Client mit der IP-Adresse 10.197.12.40 bereitstellt, lautet der auf der Seite mit der forensischen Aktivität angezeigte Benutzername _root@10.197.12.40_.
+* Wenn derselbe SVM-1 in einen anderen Client mit der IP-Adresse 10.197.12.41 eingebunden wird, lautet der auf der forensischen Aktivitätsseite angezeigte Benutzername _root@10.197.12.41_.
 
 
-*• Dies wird getan, um NFS-Root-Benutzeraktivität durch IP-Adresse zu trennen. Zuvor wurde die gesamte Aktivität als vom _root_-Benutzer durchgeführt betrachtet, ohne IP-Unterscheidung.
+*• Dies geschieht, um die NFS-Root-Benutzeraktivität nach IP-Adresse zu trennen.  Zuvor wurde davon ausgegangen, dass alle Aktivitäten nur vom Root-Benutzer ohne IP-Unterscheidung ausgeführt werden konnten.
 
 
 
@@ -303,23 +303,23 @@ Beispiel:
 |===
 
 
-| Problem | Versuchen Sie Dies 
+| Problem | Versuchen Sie Folgendes 
 
 
-| In der Tabelle "Alle Aktivitäten" unter der Spalte "Benutzer" wird der Benutzername wie folgt angezeigt: "ldap:HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817" oder "ldap:default:80038003" | Mögliche Gründe sind: 1. Es wurden noch keine User Directory Collectors konfiguriert. Um einen hinzuzufügen, gehen Sie zu *Workload Security > Collectors > User Directory Collectors* und klicken Sie auf *+User Directory Collector*. Wählen Sie _Active Directory_ oder _LDAP Directory Server_. 2. Ein User Directory Collector wurde konfiguriert, jedoch wurde er angehalten oder befindet sich im Fehlerzustand. Bitte gehen Sie zu *Collectors > User Directory Collectors* und überprüfen Sie den Status. Tipps zur Fehlerbehebung finden Sie im link:http://docs.netapp.com/us-en/cloudinsights/task_config_user_dir_connect.html#troubleshooting-user-directory-collector-configuration-errors["Fehlerbehebung für Benutzerverzeichnissammler"] Abschnitt der Dokumentation. Nach der ordnungsgemäßen Konfiguration wird der Name innerhalb von 24 Stunden automatisch behoben. Wenn die Lösung immer noch nicht behoben wird, überprüfen Sie, ob Sie den korrekten Benutzer-Data Collector hinzugefügt haben. Stellen Sie sicher, dass der Benutzer tatsächlich Teil des hinzugefügten Active Directory/LDAP Directory Servers ist. 
+| In der Tabelle „Alle Aktivitäten“ wird der Benutzername in der Spalte „Benutzer“ wie folgt angezeigt: „ldap:HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817“ oder „ldap:default:80038003“. | Mögliche Gründe könnten sein: 1.  Es wurden noch keine Benutzerverzeichnis-Sammler konfiguriert.  Um einen hinzuzufügen, gehen Sie zu *Workload Security > Collectors > User Directory Collectors* und klicken Sie auf *+User Directory Collector*.  Wählen Sie _Active Directory_ oder _LDAP-Verzeichnisserver_. 2.  Ein User Directory Collector wurde konfiguriert, wurde jedoch gestoppt oder befindet sich in einem Fehlerzustand.  Gehen Sie bitte zu *Sammler > Benutzerverzeichnissammler* und überprüfen Sie den Status.  Weitere Informationen finden Sie imlink:http://docs.netapp.com/us-en/cloudinsights/task_config_user_dir_connect.html#troubleshooting-user-directory-collector-configuration-errors["Fehlerbehebung beim User Directory Collector"] Tipps zur Fehlerbehebung finden Sie im Abschnitt der Dokumentation.  Nach der ordnungsgemäßen Konfiguration wird der Name innerhalb von 24 Stunden automatisch aufgelöst.  Wenn das Problem immer noch nicht behoben ist, überprüfen Sie, ob Sie den richtigen Benutzerdatensammler hinzugefügt haben.  Stellen Sie sicher, dass der Benutzer tatsächlich Teil des hinzugefügten Active Directory/LDAP-Verzeichnisservers ist. 
 
 
-| Einige NFS-Ereignisse werden in der UI nicht angezeigt. | Überprüfen Sie Folgendes: 1. Ein Benutzer-Verzeichnis-Collector für AD-Server mit POSIX-Attributen sollte mit dem unixid-Attribut ausgeführt werden, das über UI aktiviert ist. 2. Jeder Benutzer, der NFS-Zugriff ausführt, sollte auf der Benutzerseite von UI 3 aus gesehen werden. RAW-Ereignisse (Ereignisse, für die der Benutzer noch nicht erkannt wurde) werden für NFS 4 nicht unterstützt. Anonymer Zugriff auf den NFS-Export wird nicht überwacht. 5. Stellen Sie sicher, dass die verwendete NFS-Version Version 4.1 oder weniger ist. (Beachten Sie, dass NFS 4.1 von ONTAP 9.15 oder höher unterstützt wird.) 
+| Einige NFS-Ereignisse werden in der Benutzeroberfläche nicht angezeigt. | Überprüfen Sie Folgendes: 1.  Ein Benutzerverzeichnis-Collector für AD-Server mit festgelegten POSIX-Attributen sollte mit dem über die Benutzeroberfläche aktivierten UnixID-Attribut ausgeführt werden. 2.  Jeder Benutzer mit NFS-Zugriff sollte bei der Suche auf der Benutzerseite von UI 3 angezeigt werden.  Rohereignisse (Ereignisse, bei denen der Benutzer noch nicht erkannt wurde) werden für NFS 4 nicht unterstützt.  Anonyme Zugriffe auf den NFS-Export werden nicht überwacht. 5.  Stellen Sie sicher, dass die verwendete NFS-Version 4.1 oder niedriger ist.  (Beachten Sie, dass NFS 4.1 mit ONTAP 9.15 oder höher unterstützt wird.) 
 
 
-| Nachdem Sie einige Buchstaben mit einem Platzhalterzeichen wie Sternchen (*) in die Filter auf den Seiten Forensics _All Activity_ oder _entities_ eingegeben haben, werden die Seiten sehr langsam geladen. | Ein Sternchen (\*) in der Suchzeichenfolge sucht nach allem. Führende Platzhalterzeichenfolgen wie _*<searchTerm>_ oder _*<searchTerm>*_ führen jedoch zu einer langsamen Abfrage. Um eine bessere Leistung zu erzielen, verwenden Sie stattdessen Präfix-Strings im Format _<searchTerm>*_ (mit anderen Worten: Fügen Sie das Sternchen (*) _nach_ einem Suchbegriff hinzu). Beispiel: Verwenden Sie den String _testvolume*_ anstatt _*testvolume_ oder _*Test*Volume_. Verwenden Sie eine Verzeichnissuche, um alle Aktivitäten unterhalb eines bestimmten Ordners rekursiv anzuzeigen (hierarchische Suche). Z.B. werden unter /path1/path2/path3/ alle Vorgänge rekursiv aufgelistet unter /path1/path2/path3. Alternativ können Sie die Option „zum Filter hinzufügen“ unter der Registerkarte „Alle Aktivitäten“ verwenden. 
+| Nachdem ich in den Filtern auf den Seiten „Alle Aktivitäten“ oder „Entitäten“ der Forensik einige Buchstaben mit Platzhalterzeichen wie einem Sternchen (*) eingegeben habe, werden die Seiten sehr langsam geladen. | Ein Sternchen (\*) im Suchstring sucht nach allem.  Führende Platzhalterzeichenfolgen wie _*<Suchbegriff>_ oder _*<Suchbegriff>*_ führen jedoch zu einer langsamen Abfrage.  Um eine bessere Leistung zu erzielen, verwenden Sie stattdessen Präfixzeichenfolgen im Format _<Suchbegriff>*_ (mit anderen Worten: Fügen Sie das Sternchen (*) _nach_ einem Suchbegriff an).  Beispiel: Verwenden Sie die Zeichenfolge _testvolume*_ anstelle von _*testvolume_ oder _*test*volume_.  Verwenden Sie eine Verzeichnissuche, um alle Aktivitäten unter einem bestimmten Ordner rekursiv anzuzeigen (hierarchische Suche). Beispielsweise listet „/Pfad1/Pfad2/Pfad3/“ alle Aktivitäten unter /Pfad1/Pfad2/Pfad3 rekursiv auf.  Alternativ können Sie die Option „Zum Filter hinzufügen“ unter der Registerkarte „Alle Aktivitäten“ verwenden. 
 
 
-| Bei der Verwendung eines Pfadfilters tritt ein Fehler „Anfrage fehlgeschlagen mit Statuscode 500/503“ auf. | Versuchen Sie, einen kleineren Datumsbereich zum Filtern von Datensätzen zu verwenden. 
+| Beim Verwenden eines Pfadfilters tritt die Fehlermeldung „Anforderung fehlgeschlagen mit Statuscode 500/503“ auf. | Versuchen Sie, zum Filtern der Datensätze einen kleineren Datumsbereich zu verwenden. 
 
 
-| Die forensische Benutzeroberfläche lädt Daten langsam, wenn der _PATH_-Filter verwendet wird. | Verzeichnispfad-Filter (Pfadstring endet mit /) für schnellere Ergebnisse werden bis zu 4 Verzeichnisse empfohlen. Z.B. wenn der Verzeichnispfad /AAA/BBB/CCC/DDD ist, versuchen Sie nach "/AAA/BBB/CCC/DDD/" zu suchen, um Daten schneller zu laden. 
+| Die forensische Benutzeroberfläche lädt Daten langsam, wenn der _Pfad_-Filter verwendet wird. | Für schnellere Ergebnisse werden Verzeichnispfadfilter (Pfadzeichenfolge endet mit /) mit einer Tiefe von bis zu 4 Verzeichnissen empfohlen. Wenn der Verzeichnispfad beispielsweise /Aaa/Bbb/Ccc/Ddd lautet, versuchen Sie, nach „/Aaa/Bbb/Ccc/Ddd/“ zu suchen, um die Daten schneller zu laden. 
 
 
-| Forensics UI lädt Daten langsam und weist auf Fehler hin, wenn der Entity-Name-Filter verwendet wird. | Bitte versuchen Sie es mit kleineren Zeitbereichen und mit exakter Wertsuche mit doppelten Anführungszeichen. Z.B. wenn der entityPath "/Home/userX/nested1/nested2/nested3/testfile.txt" ist, dann versuchen Sie es mit "testfile.txt" als Entity Name Filter. 
+| Die Forensics-Benutzeroberfläche lädt Daten langsam und weist Fehler auf, wenn der Entitätsnamenfilter verwendet wird. | Bitte versuchen Sie es mit kleineren Zeiträumen und mit einer genauen Wertesuche mit Anführungszeichen. Wenn der EntityPath beispielsweise „/home/userX/nested1/nested2/nested3/testfile.txt“ ist, versuchen Sie es mit „testfile.txt“ als Entity-Namensfilter. 
 |===

@@ -2,71 +2,71 @@
 sidebar: sidebar 
 permalink: task_dc_oracle_zfs.html 
 keywords: data collector, Oracle, ZFS, storage applicance 
-summary: Oracle ZFS-Datensammler konfigurieren. 
+summary: Konfigurieren des Oracle ZFS-Datenkollektors. 
 ---
-= Datensammler der Oracle ZFS Storage Appliance
+= Oracle ZFS Storage Appliance-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Datensammler der Oracle ZFS Storage Appliance zur Erfassung von Bestands- und Leistungsdaten.
+Data Infrastructure Insights verwendet den Oracle ZFS Storage Appliance-Datensammler, um Bestands- und Leistungsdaten zu erfassen.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst Bestandsinformationen mit dem Oracle ZFS-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erfasst Bestandsinformationen mit dem Oracle ZFS-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte (SSD) | Festplatte 
+| Festplatte (SSD) | Scheibe 
 
 
 | Cluster | Storage 
 
 
-| Controller | Storage-Node 
+| Regler | Speicherknoten 
 
 
-| LUN | Datenmenge 
+| LUN | Volumen 
 
 
-| LUN-Zuordnung | Volume-Zuordnung 
+| LUN-Karte | Volumenkarte 
 
 
-| Initiator, Ziel | Volume-Maske 
+| Initiator, Ziel | Volumenmaske 
 
 
-| Share | Internes Volumen 
+| Aktie | Internes Volumen 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In dieser Datenquelle fallen möglicherweise nicht alle Fälle an.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diese Datenquelle darstellen.
 
 
 
 == Anforderungen
 
-* Host-Namen für den ZFS-Controller-1 und den ZFS-Controller-2
+* Hostnamen für den ZFS-Controller-1 und den ZFS-Controller-2
 * Administrator-Benutzername und -Passwort
-* Port-Anforderung: 215 HTTP/HTTPS
+* Portanforderung: 215 HTTP/HTTPS
 
 
 
 
-== Erforderliche Performance-Metriken
+== Erforderliche Leistungsmetriken
 
-Oracle ZFS Appliances stellen Storage-Verwaltungen große Flexibilität zur Erfassung von Performance-Statistiken zur Verfügung. Data Infrastructure Insights erwartet, dass Sie in einem Hochverfügbarkeitspaar _each_ Controller konfiguriert haben, um die folgenden Kennzahlen zu erfassen:
+Oracle ZFS-Geräte bieten Speicheradministratoren große Flexibilität bei der Erfassung von Leistungsstatistiken.  Data Infrastructure Insights erwartet, dass Sie _jeden_ Controller in einem Hochverfügbarkeitspaar so konfigurieren, dass die folgenden Metriken erfasst werden:
 
-* smb2.OPS[Freigabe]
-* nfs3.OPS[Freigabe]
-* nfs4.OPS[Share]
-* nfs4-1.OPS[Share]
+* smb2.ops[teilen]
+* nfs3.ops[teilen]
+* nfs4.ops[teilen]
+* nfs4-1.ops[teilen]
 
 
-Wird ein Controller diese oder alle Funktionen nicht erfassen, führt dies wahrscheinlich dazu, dass Data Infrastructure Insights den Workload auf den „internen Volumes“ nicht oder nur unzureichend meldet.
+Wenn der Controller einige oder alle dieser Daten nicht erfasst, führt dies wahrscheinlich dazu, dass Data Infrastructure Insights die Arbeitslast auf den „internen Volumes“ nicht erfasst oder zu niedrig angibt.
 
 
 
@@ -77,16 +77,16 @@ Wird ein Controller diese oder alle Funktionen nicht erfassen, führt dies wahrs
 | Feld | Beschreibung 
 
 
-| ZFS Controller-1-Hostname | Host-Name für Storage Controller 1 
+| ZFS-Controller-1-Hostname | Hostname für Speichercontroller 1 
 
 
-| ZFS Controller-2-Hostname | Host-Name für Storage Controller 2 
+| ZFS-Controller-2-Hostname | Hostname für Speichercontroller 2 
 
 
 | Benutzername | Benutzername für das Benutzerkonto des Speichersystemadministrators 
 
 
-| Passwort | Kennwort für das Administratorbenutzerkonto 
+| Passwort | Kennwort für das Administrator-Benutzerkonto 
 |===
 
 
@@ -97,22 +97,22 @@ Wird ein Controller diese oder alle Funktionen nicht erfassen, führt dies wahrs
 | Feld | Beschreibung 
 
 
-| Verbindungstyp | HTTPS oder HTTP: Zeigt auch den Standardport an 
+| Verbindungstyp | HTTPS oder HTTP, zeigt auch den Standardport an 
 
 
-| Verbindungs-Port Überschreiben | Wenn Sie leer sind, verwenden Sie den Standardport im Feld Verbindungstyp. Andernfalls geben Sie den zu verwendenden Anschluss ein 
+| Verbindungsport überschreiben | Wenn das Feld „Verbindungstyp“ leer ist, verwenden Sie den Standardport. Andernfalls geben Sie den zu verwendenden Verbindungsport ein. 
 
 
-| Abfrageintervall für den Bestand | Der Standardwert beträgt 60 Sekunden 
+| Inventarabfrageintervall | Der Standardwert beträgt 60 Sekunden 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 300. 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 300. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -120,43 +120,43 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2a, 2a"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
  a| 
-„Ungültige Anmeldeinformationen“
+„Ungültige Anmeldedaten“
  a| 
-ZFS-Benutzerkonto und -Passwort validieren
-
-
-
- a| 
-„Anfrage mit Status 404 \https://.....:215/api/access/v1" fehlgeschlagen
- a| 
-Ihr ZFS-Array ist möglicherweise zu alt, um REST-API-Unterstützung zu erhalten. AK 2013.1.3.0 war die erste REST API-fähige ZFS OS-Version, und nicht alle ZFS-Appliances können darauf aktualisiert werden.
+ZFS-Benutzerkonto und Passwort validieren
 
 
 
  a| 
-„Konfigurationsfehler“ mit Fehlermeldung „REST Service ist deaktiviert“
+„Anforderung fehlgeschlagen mit Status 404 \https://.....:215/api/access/v1“
  a| 
-Vergewissern Sie sich, dass DER REST-Dienst auf diesem Gerät aktiviert ist.
+Ihr ZFS-Array ist möglicherweise zu alt, um REST-API-Unterstützung zu bieten.  AK 2013.1.3.0 war die erste REST-API-fähige ZFS-Betriebssystemversion und nicht alle ZFS-Geräte können darauf aktualisiert werden.
+
+
+
+ a| 
+„Konfigurationsfehler“ mit Fehlermeldung „REST-Dienst ist deaktiviert“
+ a| 
+Überprüfen Sie, ob der REST-Dienst auf diesem Gerät aktiviert ist.
 
 
 
  a| 
 „Konfigurationsfehler“ mit Fehlermeldung „Benutzer nicht autorisiert für Befehl“
  a| 
-Dieser Fehler ist wahrscheinlich darauf zurückzuführen, dass bestimmte Rollen (z. B. „Advanced_Analytics“) für den konfigurierten Benutzer nicht enthalten sind.
+Dieser Fehler ist wahrscheinlich darauf zurückzuführen, dass bestimmte Rollen (z. B. „advanced_analytics“) für den konfigurierten Benutzer nicht enthalten sind.
 
-Durch die Anwendung des Analysebereichs für den Benutzer mit schreibgeschützter Rolle kann der Fehler behoben werden. Führen Sie hierzu folgende Schritte aus:
+Durch Anwenden des Analytics-Bereichs für den Benutzer mit schreibgeschützter Rolle kann der Fehler möglicherweise behoben werden. Gehen Sie folgendermaßen vor:
 
-. Bewegen Sie auf dem ZFS-System im Bildschirm Konfiguration -> Benutzer die Maus über die Rolle und doppelklicken Sie, um die Bearbeitung zu ermöglichen
-. Wählen Sie im Dropdown-Menü „Bereich“ die Option „Analyse“ aus. Eine Liste der möglichen Eigenschaften wird angezeigt.
-. Klicken Sie auf das Kontrollkästchen am oberen Ende, um alle drei Eigenschaften auszuwählen.
-. Klicken Sie auf der rechten Seite auf die Schaltfläche Hinzufügen.
-. Klicken Sie oben rechts im Popup-Fenster auf die Schaltfläche Übernehmen. Das Popup-Fenster wird geschlossen.
+. Bewegen Sie im ZFs-System im Bildschirm „Konfiguration -> Benutzer“ die Maus über die Rolle und doppelklicken Sie, um die Bearbeitung zu ermöglichen
+. Wählen Sie „Analytics“ aus dem Dropdown-Menü „Bereich“ aus.  Es erscheint eine Liste der möglichen Eigenschaften.
+. Klicken Sie auf das oberste Kontrollkästchen, um alle drei Eigenschaften auszuwählen.
+. Klicken Sie auf der rechten Seite auf die Schaltfläche „Hinzufügen“.
+. Klicken Sie oben rechts im Popup-Fenster auf die Schaltfläche „Übernehmen“.  Das Popup-Fenster wird geschlossen.
 
 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

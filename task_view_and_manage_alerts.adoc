@@ -4,78 +4,78 @@ permalink: task_view_and_manage_alerts.html
 summary: Anzeigen von Warnungen, die von Monitoren ausgelöst wurden 
 keywords: monitor, alert, viewing 
 ---
-= Anzeigen und Verwalten von Warnmeldungen von Monitoren
+= Anzeigen und Verwalten von Warnungen von Monitoren
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights zeigt Warnmeldungen an, wenn link:task_create_monitor.html["Überwachte Schwellenwerte"] diese überschritten werden.
+Data Infrastructure Insights zeigt Warnungen an, wennlink:task_create_monitor.html["überwachte Schwellenwerte"] überschritten werden.
 
 
-TIP: Monitore und Alarmfunktionen sind ab Data Infrastructure Insights Standard Edition verfügbar.
+TIP: Monitore und Warnungen sind in der Data Infrastructure Insights Standard Edition und höher verfügbar.
 
 
 
 == Anzeigen und Verwalten von Warnungen
 
-Gehen Sie wie folgt vor, um Meldungen anzuzeigen und zu verwalten.
+Gehen Sie wie folgt vor, um Warnungen anzuzeigen und zu verwalten.
 
-. Navigieren Sie zur Seite *Alerts > All Alerts*.
-. Eine Liste der letzten 1,000 Meldungen wird angezeigt. Sie können diese Liste in einem beliebigen Feld sortieren, indem Sie auf die Spaltenüberschrift für das Feld klicken. In der Liste werden die folgenden Informationen angezeigt. Beachten Sie, dass standardmäßig nicht alle dieser Spalten angezeigt werden. Sie können die anzuzeigenden Spalten auswählen, indem Sie auf das Zahnradsymbol klicken:
+. Navigieren Sie zur Seite *Warnungen > Alle Warnungen*.
+. Es wird eine Liste mit bis zu 1.000 der letzten Warnungen angezeigt.  Sie können diese Liste nach jedem Feld sortieren, indem Sie auf die Spaltenüberschrift des Felds klicken.  Die Liste zeigt die folgenden Informationen an.  Beachten Sie, dass nicht alle dieser Spalten standardmäßig angezeigt werden.  Sie können die anzuzeigenden Spalten auswählen, indem Sie auf das Zahnradsymbol klicken:
 +
 ** *Alarm-ID*: Vom System generierte eindeutige Alarm-ID
-** *Auslösezeit*: Der Zeitpunkt, zu dem der betreffende Monitor den Alarm ausgelöst hat
-** *Aktueller Schweregrad* (Registerkarte Aktive Warnmeldungen): Der aktuelle Schweregrad der aktiven Warnmeldung
-** *Oberer Schweregrad* (Registerkarte „Erledigte Warnmeldungen“); der maximale Schweregrad der Warnmeldung, bevor sie behoben wurde
-** *Monitor*: Der Monitor ist so konfiguriert, dass der Alarm ausgelöst wird
-** *Ausgelöst an*: Das Objekt, auf dem die überwachte Schwelle überschritten wurde
-** *Status*: Aktueller Alarmstatus, _Neu_ oder _in Prozess_
-** *Aktiver Status*: _Aktiv_ oder _aufgelöst_
-** *Bedingung*: Die Schwellwertbedingung, die die Warnung ausgelöst hat
-** *Metrisch*: Die Objektmetrik, auf der der überwachte Schwellenwert überschritten wurde
-** *Überwachungsstatus*: Aktueller Status des Monitors, der die Warnung ausgelöst hat
-** *Hat Korrekturmaßnahmen*: Der Alarm hat Korrekturmaßnahmen vorgeschlagen. Öffnen Sie die Alarmseite, um diese anzuzeigen.
+** *Auslösezeit*: Der Zeitpunkt, zu dem der entsprechende Monitor den Alarm ausgelöst hat
+** *Aktueller Schweregrad* (Registerkarte „Aktive Warnungen“): Der aktuelle Schweregrad der aktiven Warnung
+** *Höchster Schweregrad* (Registerkarte „Behobene Warnungen“): Der maximale Schweregrad der Warnung, bevor sie behoben wurde.
+** *Monitor*: Der Monitor, der zum Auslösen des Alarms konfiguriert ist
+** *Ausgelöst am*: Das Objekt, bei dem der überwachte Schwellenwert überschritten wurde
+** *Status*: Aktueller Alarmstatus, _Neu_ oder _In Bearbeitung_
+** *Aktivstatus*: _Aktiv_ oder _Gelöst_
+** *Bedingung*: Die Schwellenwertbedingung, die den Alarm ausgelöst hat
+** *Metrik*: Die Metrik des Objekts, bei der der überwachte Schwellenwert überschritten wurde
+** *Monitorstatus*: Aktueller Status des Monitors, der den Alarm ausgelöst hat
+** *Hat Korrekturmaßnahmen*: Die Warnung hat Korrekturmaßnahmen vorgeschlagen.  Öffnen Sie die Warnseite, um diese anzuzeigen.
 
 
 
 
-Sie können eine Warnmeldung verwalten, indem Sie auf das Menü rechts neben der Warnmeldung klicken und eine der folgenden Optionen auswählen:
+Sie können eine Warnung verwalten, indem Sie auf das Menü rechts neben der Warnung klicken und eine der folgenden Optionen auswählen:
 
-* *In Bearbeitung* um anzuzeigen, dass der Alarm untersucht wird oder anderweitig offen gehalten werden muss
-* *Abweisen*, um die Warnung aus der Liste der aktiven Warnungen zu entfernen.
+* *In Bearbeitung*, um anzuzeigen, dass die Warnung untersucht wird oder aus anderen Gründen offen gehalten werden muss
+* *Ablehnen*, um die Warnung aus der Liste der aktiven Warnungen zu entfernen.
 
 
-Sie können mehrere Warnungen verwalten, indem Sie das Kontrollkästchen links neben jeder Warnung aktivieren und auf „_Ausgewählte Warnungen ändern Status_“ klicken.
+Sie können mehrere Warnungen verwalten, indem Sie das Kontrollkästchen links neben jeder Warnung aktivieren und auf „Status ausgewählter Warnungen ändern“ klicken.
 
-Wenn Sie auf eine Alarm-ID klicken, wird die Seite mit den Alarmdetails geöffnet.
+Durch Klicken auf eine Alarm-ID wird die Alarmdetailseite geöffnet.
 
 
 
 == Alarmdetailbereich
 
-Wählen Sie eine beliebige Alarmzeile aus, um das Detailfenster des Alarms zu öffnen. Das Detailfenster bietet zusätzliche Informationen zum Alarm, darunter eine Zusammenfassung, eine Expertenansicht mit Diagrammen zu den Objektdaten, alle zugehörigen Assets und Kommentare der Alarmermittler.
+Wählen Sie eine beliebige Alarmzeile aus, um das Detailfenster des Alarms zu öffnen.  Das Alarmdetailfenster bietet zusätzliche Einzelheiten zum Alarm, darunter eine _Zusammenfassung_, einen Abschnitt _Leistung_ mit Diagrammen zu den Daten des Objekts, alle _zugehörigen Assets_ und _Kommentare_, die von den Alarmermittlern eingegeben wurden.
 
 image:metric_alert_detail_pane.png["Detailbereich für Metrikwarnungen"]
 
 
 
-== Benachrichtigt, Wenn Daten Fehlen
+== Warnmeldungen bei fehlenden Daten
 
-In einem Echtzeit-System wie Data Infrastructure Insights, um die Analyse eines Monitors auszulösen, um zu entscheiden, ob ein Alarm generiert werden soll, setzen wir auf eines von zwei Dingen:
+Um in einem Echtzeitsystem wie Data Infrastructure Insights die Analyse eines Monitors auszulösen und zu entscheiden, ob eine Warnung generiert werden soll, verlassen wir uns auf eines von zwei Dingen:
 
-* Der nächste Datenpunkt zu kommen
-* Ein Timer zum Feuer, wenn es keinen Datenpunkt gibt und Sie lange genug gewartet haben
-
-
-Wie bei langsamen Dateneintreffen – oder gar keinem Dateneintreffen – muss der Timer-Mechanismus übernommen werden, da die Dateneingangsrate nicht ausreicht, um Warnungen in „Echtzeit“ auszulösen. Daher lautet die Frage in der Regel „wie lange warte ich, bevor ich das Analysefenster schließe und sehe, was ich habe?“ Wenn Sie zu lange warten, generieren Sie die Warnungen nicht schnell genug, um nützlich zu sein.
-
-Wenn Sie einen Monitor mit einem 30-Minuten-Fenster haben, das bemerkt, dass eine Bedingung durch den letzten Datenpunkt vor einem langfristigen Datenverlust verletzt wird, Es wird eine Warnung generiert, da der Monitor keine weiteren Informationen erhalten hat, die zur Bestätigung der Wiederherstellung der Metrik verwendet werden müssen, oder dass die Bedingung weiterhin besteht.
+* der nächste ankommende Datenpunkt
+* ein Timer, der ausgelöst wird, wenn kein Datenpunkt vorhanden ist und Sie lange genug gewartet haben
 
 
+Wie bei langsamem Dateneingang – oder keinem Dateneingang – muss der Zeitgebermechanismus eingreifen, da die Dateneingangsrate nicht ausreicht, um Warnungen in „Echtzeit“ auszulösen.  Daher lautet die Frage normalerweise: „Wie lange muss ich warten, bevor ich das Analysefenster schließe und mir ansehe, was ich habe?“  Wenn Sie zu lange warten, generieren Sie die Warnungen nicht schnell genug, um nützlich zu sein.
 
-== „Dauerhaft Aktiv“-Warnungen
+Wenn Sie einen Monitor mit einem 30-Minuten-Fenster haben, der erkennt, dass eine Bedingung durch den letzten Datenpunkt vor einem langfristigen Datenverlust verletzt wurde, wird eine Warnung generiert, da der Monitor keine anderen Informationen erhalten hat, um eine Wiederherstellung der Metrik zu bestätigen oder festzustellen, dass die Bedingung weiterhin besteht.
 
-Es ist möglich, einen Monitor so zu konfigurieren, dass die Bedingung *immer* auf dem überwachten Objekt vorhanden ist, z. B. IOPS > 1 oder Latenz > 0. Diese werden oft als „Test“-Monitore erzeugt und dann vergessen. Solche Monitore erzeugen Warnmeldungen, die dauerhaft an den einzelnen Objekten offen bleiben. Dies kann zu Problemen mit der Systemspannung und Stabilität im Laufe der Zeit führen.
 
-Um dies zu verhindern, schließt Data Infrastructure Insights automatisch alle „permanent aktiv“-Warnmeldungen nach 7 Tagen. Beachten Sie, dass die zugrunde liegenden Monitorbedingungen (wahrscheinlich) weiterhin existieren, wodurch fast sofort eine neue Warnung ausgegeben wird, aber durch das Schließen von „immer aktiven“ Warnungen werden einige der sonst auftretenden Systembelastungen verringert.
+
+== „Dauerhaft aktive“ Warnungen
+
+Es ist möglich, einen Monitor so zu konfigurieren, dass die Bedingung für das überwachte Objekt *immer* erfüllt ist – beispielsweise IOPS > 1 oder Latenz > 0.  Diese werden oft als „Test“-Monitore erstellt und dann vergessen.  Solche Monitore erstellen Warnungen, die für die einzelnen Objekte dauerhaft offen bleiben, was mit der Zeit zu Systembelastungen und Stabilitätsproblemen führen kann.
+
+Um dies zu verhindern, schließt Data Infrastructure Insights alle „dauerhaft aktiven“ Warnungen nach 7 Tagen automatisch.  Beachten Sie, dass die zugrunde liegenden Überwachungsbedingungen möglicherweise (wahrscheinlich) weiterhin bestehen bleiben, sodass fast sofort eine neue Warnung ausgegeben wird. Durch das Schließen der „immer aktiven“ Warnungen wird jedoch ein Teil der Systembelastung gemildert, die andernfalls auftreten kann.

@@ -2,50 +2,50 @@
 sidebar: sidebar 
 permalink: task_dc_emc_ecs.html 
 keywords: data collector, ecs, EMC 
-summary: Konfiguration des ECS Datensammlers 
+summary: ECS-Datensammler konfigurieren. 
 ---
-= Konfigurieren des EMC ECS-Datensammlers
+= Konfigurieren des EMC ECS-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler erfasst Bestands- und Performancedaten von EMC ECS-Speichersystemen. Für die Konfiguration benötigt der Datensammler eine IP-Adresse oder einen Hostnamen des ECS-Clusters sowie einen Benutzernamen und ein Passwort.
+Dieser Datensammler erfasst Bestands- und Leistungsdaten von EMC ECS-Speichersystemen.  Zur Konfiguration benötigt der Datensammler eine IP-Adresse oder den Hostnamen des ECS-Clusters sowie einen Benutzernamen und ein Passwort.
 
 
-NOTE: Dell EMC ECS wird mit einer anderen Rate von Raw TB zu Managed Units gemessen. Jede 40 TB unformatierte ECS-Kapazität wird als 1 berechnetlink:concept_subscribing_to_cloud_insights.html#pricing["Verwaltete Einheit (ME)"].
+NOTE: Dell EMC ECS wird zu einem anderen Preis als Raw TB und Managed Unit berechnet.  Jede 40 TB unformatierte ECS-Kapazität wird als 1 berechnetlink:concept_subscribing_to_cloud_insights.html#pricing["Verwaltete Einheit (MU)"] .
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem ECS-Datensammler. Für jeden erfassten Asset-Typ wird die am häufigsten für dieses Dokument verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom ECS-Datensammler.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
 | Cluster | Storage 
 
 
-| Mandant | Storage-Pool 
+| Mieter | Speicherpool 
 
 
 | Eimer | Internes Volumen 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
 * Eine IP-Adresse oder ein Hostname des ECS-Clusters
-* Benutzername und Passwort für das ECS-System
-* Port 4443 (HTTPS). Erfordert ausgehende Verbindungen zum TCP-Port 4443 auf dem ECS-System.
+* Ein Benutzername und ein Passwort für das ECS-System
+* Port 4443 (HTTPS).  Erfordert ausgehende Konnektivität zum TCP-Port 4443 auf dem ECS-System.
 
 
 
@@ -57,16 +57,16 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| ECS Host | IP-Adresse oder vollqualifizierter Domain-Name des ECS-Systems 
+| ECS-Host | IP-Adresse oder vollqualifizierter Domänenname des ECS-Systems 
 
 
-| ECS-Host-Port | Port, der für die Kommunikation mit ECS Host verwendet wird 
+| ECS-Host-Port | Für die Kommunikation mit dem ECS-Host verwendeter Port 
 
 
 | ECS-Benutzer-ID | Benutzer-ID für ECS 
 
 
-| Passwort | Passwort wird für ECS verwendet 
+| Passwort | Für ECS verwendetes Passwort 
 |===
 
 
@@ -77,13 +77,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Die Standardeinstellung ist 360 Minuten. 
+| Inventarabfrageintervall (min) | Der Standardwert beträgt 360 Minuten. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -91,7 +91,7 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
 | Fehler: Benutzerauthentifizierung fehlgeschlagen. | Stellen Sie sicher, dass Ihre Anmeldeinformationen für dieses Gerät korrekt sind. 
@@ -102,12 +102,12 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Fehler: Es wurden nicht genügend Daten erfasst. | * Überprüfen Sie den Erfassungszeitstempel in der Protokolldatei und ändern Sie das Abfrageintervall entsprechend. * Warten Sie länger 
+| Fehler: Nicht genügend Daten gesammelt. | * Überprüfen Sie den Erfassungszeitstempel in der Protokolldatei und ändern Sie das Abfrageintervall entsprechend. * Warten Sie länger 
 
 
-| Fehler: Das Abfrageintervall für die Performance ist zu groß. | Überprüfen Sie den Sammlungs-Zeitstempel in der Protokolldatei €{logfile} und ändern Sie das Abfrageintervall entsprechend 
+| Fehler: Das Leistungsabfrageintervall ist zu groß. | Überprüfen Sie den Erfassungszeitstempel in der Protokolldatei ${logfile} und ändern Sie das Abfrageintervall entsprechend 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

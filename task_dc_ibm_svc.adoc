@@ -2,47 +2,47 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_svc.html 
 keywords: IBM, SVC,SAN 
-summary: Konfigurieren des IBM SAN-Volume-Controller-Datensammlers. 
+summary: Konfigurieren des IBM SAN Volume Controller-Datenkollektors. 
 ---
-= Konfigurieren des IBM SAN Volume Controller-Datensammlers
+= Konfigurieren des IBM SAN Volume Controller-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der IBM SAN Volume Controller (SVC)-Datensammler sammelt Bestands- und Performancedaten mithilfe von SSH und unterstützt eine Vielzahl von Geräten, auf denen das SVC-Betriebssystem ausgeführt wird.
+Der IBM SAN Volume Controller (SVC)-Datenkollektor sammelt Inventar- und Leistungsdaten mithilfe von SSH und unterstützt eine Vielzahl von Geräten, auf denen das SVC-Betriebssystem ausgeführt wird.
 
-Die Liste der unterstützten Geräte umfasst Modelle wie SVC, v7000, v5000 und v3700. Unterstützte Modelle und Firmware-Versionen finden Sie in der Data Infrastructure Insights Supportmatrix.
+Die Liste der unterstützten Geräte umfasst Modelle wie SVC, v7000, v5000 und v3700.  Informationen zu unterstützten Modellen und Firmware-Versionen finden Sie in der Data Infrastructure Insights Supportmatrix.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Inventarinformationen aus dem IBM SVC-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom IBM SVC-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Laufwerk | Festplatte 
+| Fahren | Scheibe 
 
 
 | Cluster | Storage 
 
 
-| Knoten | Storage-Node 
+| Node | Speicherknoten 
 
 
-| Mdisk-Gruppe | Storage-Pool 
+| Mdisk-Gruppe | Speicherpool 
 
 
-| Vdisk | Datenmenge 
+| Vdisk | Volumen 
 
 
-| Mdisk | Back-End-LUNs und -Pfade 
+| MDisk | Backend-LUNs und -Pfade 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
@@ -50,18 +50,18 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 
 * IP-Adresse jedes SVC-Clusters
 * Port 22 verfügbar
-* Schreibgeschützter Benutzername und Kennwort
+* Benutzername und Kennwort nur zum Lesen
 
 
 
 
-=== Performance-Anforderungen Erfüllt
+=== Leistungsanforderungen
 
-* SVC-Konsole, die für jeden SVC-Cluster obligatorisch und für das Foundation-Paket für die SVC-Erkennung erforderlich ist
-* Mit den Anmeldedaten ist nur Administratorzugriff erforderlich, um Performance-Dateien von Cluster-Nodes auf den Konfigurations-Node zu kopieren.
-* Aktivieren Sie die Datensammlung, indem Sie über SSH eine Verbindung zum SVC-Cluster herstellen und ausführen: _Svctask startstats -Interval 1_
+* SVC-Konsole, die für jeden SVC-Cluster obligatorisch und für das SVC Discovery Foundation-Paket erforderlich ist.
+* Für die Anmeldeinformationen ist nur zum Kopieren von Leistungsdateien von Clusterknoten auf den Konfigurationsknoten eine Administratorzugriffsebene erforderlich.
+* Aktivieren Sie die Datenerfassung, indem Sie per SSH eine Verbindung zum SVC-Cluster herstellen und Folgendes ausführen: _svctask startstats -interval 1_
 +
-Hinweis: Alternativ können Sie die Datenerfassung über die SVC Management-Benutzeroberfläche aktivieren.
+Hinweis: Alternativ können Sie die Datenerfassung über die SVC-Verwaltungsbenutzeroberfläche aktivieren.
 
 
 
@@ -74,13 +74,13 @@ Hinweis: Alternativ können Sie die Datenerfassung über die SVC Management-Benu
 | Feld | Beschreibung 
 
 
-| Cluster-IP-Adressen | IP-Adressen oder vollqualifizierte Domain-Namen des SVC-Speichers 
+| Cluster-IP-Adressen | IP-Adressen oder vollqualifizierte Domänennamen des SVC-Speichers 
 
 
-| Benutzername Des Inventurbenutzers | Benutzername für die SVC-CLI 
+| Inventar-Benutzername | Benutzername für die SVC-CLI 
 
 
-| Inventurpasswort | Passwort für die SVC-CLI 
+| Inventarkennwort | Passwort für die SVC-CLI 
 |===
 
 
@@ -91,34 +91,34 @@ Hinweis: Alternativ können Sie die Datenerfassung über die SVC Management-Benu
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 40 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 40 Minuten. 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 300 Sekunden. 
 
 
-| Um dumpte Statistikdateien zu bereinigen | Aktivieren Sie dieses Kontrollkästchen, um heruntergelegte Statistikdateien zu bereinigen 
+| So bereinigen Sie gedumpte Statistikdateien | Aktivieren Sie dieses Kontrollkästchen, um die gespeicherten Statistikdateien zu bereinigen. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Fehler: „Der Befehl kann nicht initiiert werden, da er nicht auf dem Konfigurations-Node ausgeführt wurde.“ | Der Befehl muss auf dem Konfigurationsknoten ausgeführt werden. 
+| Fehler: „Der Befehl kann nicht initiiert werden, da er nicht auf dem Konfigurationsknoten ausgeführt wurde.“ | Der Befehl muss auf dem Konfigurationsknoten ausgeführt werden. 
 |===
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Fehler: „Der Befehl kann nicht initiiert werden, da er nicht auf dem Konfigurations-Node ausgeführt wurde.“ | Der Befehl muss auf dem Konfigurationsknoten ausgeführt werden. 
+| Fehler: „Der Befehl kann nicht initiiert werden, da er nicht auf dem Konfigurationsknoten ausgeführt wurde.“ | Der Befehl muss auf dem Konfigurationsknoten ausgeführt werden. 
 |===
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

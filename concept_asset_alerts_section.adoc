@@ -1,31 +1,31 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_alerts_section.html 
-summary: Überblick über den Abschnitt „Zugehörige Warnmeldungen“ der Bestandsseite in Data Infrastructure Insights. 
+summary: Übersicht über den Abschnitt „Verwandte Warnungen“ der Asset-Seite in Data Infrastructure Insights. 
 keywords: asset, landing page, violations, Alerts, 
 ---
-= Abschnitt „Hinweise auf der Seite „Ressourcen“
+= Abschnitt „Warnmeldungen zu Asset-Seiten“
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie können den Abschnitt „Zugehörige Warnmeldungen“ einer Anlagenseite verwenden, um alle Warnmeldungen anzuzeigen, die auf Ihrem Mandanten als Ergebnis eines Monitors auftreten, der einem Asset zugewiesen wurde. Monitore generieren Warnungen auf der Grundlage von festgelegten Bedingungen. So können Sie Implikationen identifizieren und die Auswirkungen und Ursache des Problems auf eine schnelle und effektive Korrektur analysieren.
+Sie können den Abschnitt „Verwandte Warnungen“ einer Asset-Seite verwenden, um alle Warnungen anzuzeigen, die bei Ihrem Mandanten aufgrund eines einem Asset zugewiesenen Monitors auftreten.  Monitore generieren Warnmeldungen auf Grundlage der von Ihnen festgelegten Bedingungen und ermöglichen Ihnen, die Auswirkungen zu identifizieren und die Grundursache des Problems so zu analysieren, dass eine schnelle und wirksame Korrektur möglich ist.
 
 Das folgende Beispiel zeigt einen typischen Abschnitt „Verwandte Warnungen“, der auf einer Asset-Seite angezeigt wird:
 
-image:Alerts_on_Landing_Page.png["Verwandte Warnungstabelle"]
+image:Alerts_on_Landing_Page.png["Tabelle „Zugehörige Warnungen“"]
 
-Im Abschnitt „Verwandte Warnungen“ können Sie die Warnmeldungen anzeigen und verwalten, die in Ihrem Netzwerk aufgrund von Überwachungsbedingungen auftreten, die einem Asset zugewiesen sind.
+Im Abschnitt „Verwandte Warnungen“ können Sie die Warnungen anzeigen und verwalten, die in Ihrem Netzwerk als Ergebnis der einem Asset zugewiesenen Überwachungsbedingungen auftreten.
 
 .Schritte
 * Suchen Sie eine Asset-Seite, indem Sie einen der folgenden Schritte ausführen:
 +
-** Geben Sie den Namen des Assets im Suchbereich ein, und wählen Sie das Element aus der Liste aus.
+** Geben Sie den Namen des Assets in den Suchbereich ein und wählen Sie dann das Asset aus der Liste aus.
 ** Klicken Sie in einem Dashboard-Widget auf den Namen eines Assets.
-** Fragen Sie nach einem Satz von Assets ab, und wählen Sie in der Ergebnisliste ein aus.
+** Führen Sie eine Abfrage nach einer Reihe von Assets durch und wählen Sie eines aus der Ergebnisliste aus.
 
 
 
 
-Die Seite Anlage wird angezeigt. Im Abschnitt „Verwandte Warnungen“ werden die Zeit angezeigt, zu der die Warnmeldung ausgelöst wurde, sowie der aktuelle Status der Warnmeldung und der Monitor, der sie ausgelöst hat. Sie können auf die Alarm-ID klicken, um die Landing Page für die Warnmeldung zur weiteren Untersuchung zu öffnen.
+Die Asset-Seite wird angezeigt.  Im Abschnitt „Verwandte Warnungen“ werden der Zeitpunkt der Auslösung der Warnung sowie der aktuelle Status der Warnung und des Monitors angezeigt, der sie ausgelöst hat.  Sie können auf die Warnmeldungs-ID klicken, um die Zielseite für die Warnmeldung zur weiteren Untersuchung zu öffnen.

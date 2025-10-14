@@ -2,39 +2,39 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_bna.html 
 keywords: data collector, Brocade, BNA 
-summary: Konfigurieren von Brocade BNA Collector 
+summary: Konfigurieren des Brocade BNA-Collectors. 
 ---
-= Datensammler Brocade Network Advisor
+= Brocade Network Advisor-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dateninfrastrukturanalysen verwenden den Datensammler Brocade Netzwerkberater, um Bestands- und Performancedaten von Brocade-Switches zu erfassen.
+Data Infrastructure Insights verwendet den Brocade Network Advisor-Datensammler, um Bestands- und Leistungsdaten von Brocade -Switches zu erfassen.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Inventarinformationen aus dem Brocade Netzwerkberater-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Brocade Network Advisor-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Switch | Switch 
+| Schalten | Schalten 
 
 
-| Port | Port 
+| Hafen | Hafen 
 
 
-| Virtual Fabric, Physische Fabric | Fabric 
+| Virtuelles Gewebe, physisches Gewebe | Stoff 
 
 
 | Logischer Switch | Logischer Switch 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
@@ -42,10 +42,10 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 
 Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlich:
 
-* Die Data Infrastructure Insights Acquisition Unit führt Verbindungen zu TCP-Port 443 auf dem BNA-Server ein. BNA-Server muss Version 14.2.1 oder höher ausführen.
-* IP-Adresse des Brocade Network Advisor Servers
+* Die Data Infrastructure Insights Acquisition Unit initiiert Verbindungen zum TCP-Port 443 auf dem BNA-Server.  Auf dem BNA-Server muss Version 14.2.1 oder höher ausgeführt werden.
+* IP-Adresse des Brocade Network Advisor-Servers
 * Benutzername und Kennwort für ein Administratorkonto
-* Port-Anforderung: HTTP/HTTPS 443
+* Portanforderung: HTTP/HTTPS 443
 
 
 
@@ -57,7 +57,7 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 | Feld | Beschreibung 
 
 
-| Brocade Network Advisor Server IP | IP-Adresse des Network Advisor-Servers 
+| Brocade Network Advisor-Server-IP | IP-Adresse des Network Advisor-Servers 
 
 
 | Benutzername | Benutzername für den Switch 
@@ -66,7 +66,7 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 | Benutzername | Administrator-Benutzername 
 
 
-| Passwort | Administratorpasswort 
+| Passwort | Administratorkennwort 
 |===
 
 
@@ -80,25 +80,25 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 | Verbindungstyp | HTTPS (Standardport 443) oder HTTP (Standardport 80) 
 
 
-| Verbindungs-Port Überschreiben | Wenn Sie leer sind, verwenden Sie den Standardport im Feld Verbindungstyp. Andernfalls geben Sie den zu verwendenden Anschluss ein 
+| Verbindungsport überschreiben | Wenn das Feld „Verbindungstyp“ leer ist, verwenden Sie den Standardport. Andernfalls geben Sie den zu verwendenden Verbindungsport ein. 
 
 
 | Passwort | Passwort für den Switch 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 40 
+| Inventarabfrageintervall (min) | Der Standardwert ist 40 
 
 
-| Access Gateway Melden | Aktivieren Sie diese Option, um Geräte im Access Gateway-Modus einzubeziehen 
+| Bericht Access Gateway | Aktivieren Sie dieses Kontrollkästchen, um Geräte in den Access Gateway-Modus einzuschließen 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 1800 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 1800 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -106,9 +106,9 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Sie erhalten eine Meldung, dass mehr als 1 Knoten am Access Gateway-Port angemeldet ist, oder Datensammler kann das Access Gateway-Gerät nicht erkennen. | Überprüfen Sie, ob das NPV-Gerät ordnungsgemäß funktioniert und dass alle verbundenen WWNs erwartet werden. Erwerben Sie das NPV-Gerät nicht direkt. Stattdessen erfasst die Akquisition des Core Fabric Switch die NPV Geräte-Daten. 
+| Sie erhalten eine Meldung, dass mehr als ein Knoten am Access Gateway-Port angemeldet ist oder dass der Datensammler das Access Gateway-Gerät nicht erkennen kann. | Überprüfen Sie, ob das NPV-Gerät ordnungsgemäß funktioniert und ob alle angeschlossenen WWNs den Erwartungen entsprechen.  Erwerben Sie das NPV-Gerät nicht direkt.  Stattdessen werden die NPV-Gerätedaten durch die Erfassung des Core Fabric Switch erfasst. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

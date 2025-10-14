@@ -2,67 +2,67 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vplex.html 
 keywords: data collector, VPLEX, EMC 
-summary: Konfiguration des VPLEX Datensammlers 
+summary: Konfigurieren des VPLEX-Datenkollektors. 
 ---
-= Konfigurieren des EMC VPLEX-Datensammlers
+= Konfigurieren des EMC VPLEX-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler erfasst Bestands- und Performancedaten von EMC VPLEX-Speichersystemen. Zur Konfiguration benötigt der Datensammler eine IP-Adresse des VPLEX-Servers und ein Domain-Konto auf Administratorebene.
+Dieser Datensammler erfasst Bestands- und Leistungsdaten von EMC VPLEX-Speichersystemen.  Zur Konfiguration benötigt der Datensammler eine IP-Adresse des VPLEX-Servers und ein Domänenkonto auf Administratorebene.
 
 
-NOTE: Die Performance-Erfassung von Data Infrastructure Insights aus VPLEX-Clustern erfordert, dass der Performance-Archivierungsservice betriebsbereit ist, um die CSV-Dateien und Protokolle zu füllen, die Data Infrastructure Insights über SCP-basierte Dateikopien abruft. NetApp hat beobachtet, dass viele Updates der VPLEX-Firmware-Upgrades/Management Station diese Funktionen nicht mehr betriebsbereit machen werden. Kunden, die ein solches Upgrade planen, fragen Dell/EMC möglicherweise proaktiv, ob ihr geplantes Upgrade diese Funktion nicht mehr funktionsfähig bleibt. Wenn ja, wie kann sie die IT neu aktivieren, um Lücken bei der Performance-Sichtbarkeit zu minimieren? Der VPLEX-Performance-Code von Cloud Insight bewertet bei jeder Umfrage, ob alle erwarteten Dateien vorhanden sind und ob sie ordnungsgemäß aktualisiert werden. Fehlen oder sind sie veraltet, protokolliert Data Infrastructure Insights Fehler bei der Performance-Erfassung.
+NOTE: Für die Leistungserfassung von Data Infrastructure Insights aus Vplex-Clustern muss der Leistungsarchivdienst betriebsbereit sein, um die CSV-Dateien und Protokolle zu füllen, die Data Infrastructure Insights über SCP-basierte Dateikopien abruft.  NetApp hat festgestellt, dass diese Funktionalität bei vielen Vplex-Firmware-Upgrades/Management-Station-Updates nicht mehr funktioniert.  Kunden, die solche Upgrades planen, möchten Dell/EMC möglicherweise proaktiv fragen, ob diese Funktionalität durch das geplante Upgrade nicht mehr funktionsfähig ist, und wenn ja, wie sie sie wieder aktivieren können, um Lücken in der Leistungstransparenz zu minimieren.  Der Vplex-Leistungscode von Cloud Insight prüft bei jeder Abfrage, ob alle erwarteten Dateien vorhanden sind und ob sie ordnungsgemäß aktualisiert werden. Wenn sie fehlen oder veraltet sind, protokolliert Data Infrastructure Insights Leistungserfassungsfehler.
 
 
 
 == Terminologie
 
-Data Infrastructure Insightst erfasst die folgenden Bestandsinformationen aus dem VPLEX-Datensammler. Für jeden erfassten Asset-Typ wird die am häufigsten für dieses Dokument verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insightst erhält die folgenden Bestandsinformationen vom VPLEX-Datensammler.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
 | Cluster | Storage 
 
 
-| Motor | Storage-Node 
+| Motor | Speicherknoten 
 
 
-| Gerät, Systemumfang | Back-End Storage-Pool 
+| Gerät, Systemumfang | Backend-Speicherpool 
 
 
-| Virtual Volume | Datenmenge 
+| Virtuelles Volume | Volumen 
 
 
-| Front-End-Port, Back-End-Port | Port 
+| Front-End-Port, Back-End-Port | Hafen 
 
 
-| Verteiltes Gerät | Storage-Synchronisierung 
+| Verteiltes Gerät | Speichersynchronisierung 
 
 
-| Übersicht Storage | Volume Map, Volume Mask 
+| Speicheransicht | Volumenkarte, Volumenmaske 
 
 
-| Storage Volume | Back-End LUN 
+| Speichervolumen | Backend-LUN 
 
 
-| ITLS | Back-End-Pfad 
+| ITLs | Backend-Pfad 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* Eine IP-Adresse der VPLEX Management Console
+* Eine IP-Adresse der VPLEX-Verwaltungskonsole
 * Domänenkonto auf Administratorebene für den VPLEX-Server
-* Port 443 (HTTPS). Erfordert eine ausgehende Verbindung zum TCP-Port 443 auf der VPLEX-Managementstation.
-* Für die Leistung können Sie den schreibgeschützten Benutzernamen und das Kennwort für den ssh/scp-Zugriff verwenden.
-* Für die Leistung ist Port 22 erforderlich.
+* Port 443 (HTTPS).  Erfordert ausgehende Konnektivität zum TCP-Port 443 auf der VPLEX-Verwaltungsstation.
+* Aus Leistungsgründen sind Benutzername und Kennwort für den SSH-/SCP-Zugriff schreibgeschützt.
+* Aus Leistungsgründen ist Port 22 erforderlich.
 
 
 
@@ -74,22 +74,22 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| IP-Adresse der VPLEX Management Console | IP-Adresse oder vollqualifizierter Domänenname der VPLEX Management Console 
+| IP-Adresse der VPLEX-Verwaltungskonsole | IP-Adresse oder vollqualifizierter Domänenname der VPLEX-Verwaltungskonsole 
 
 
-| Benutzername | Benutzername für VPLEX-CLI 
+| Benutzername | Benutzername für VPLEX CLI 
 
 
-| Passwort | Passwort, das für die VPLEX-CLI verwendet wird 
+| Passwort | Für VPLEX CLI verwendetes Kennwort 
 
 
-| Remote-IP-Adresse für die Performance | Performance Remote IP-Adresse der VPLEX Management Console 
+| Leistung Remote-IP-Adresse | Leistung Remote-IP-Adresse der VPLEX-Verwaltungskonsole 
 
 
-| Performance Remote User Name | Performance Remote-Benutzername der VPLEX Management Console 
+| Performance Remote-Benutzername | Leistung Remote-Benutzername der VPLEX-Verwaltungskonsole 
 
 
-| Kennwort Für Das Remote-Netzwerk Der Performance | Remote-Kennwort für die Performance der VPLEX Management Console 
+| Performance Remote-Passwort | Leistungs-Remotekennwort der VPLEX-Verwaltungskonsole 
 |===
 
 
@@ -100,25 +100,25 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Kommunikations-Port | Für VPLEX-CLI verwendeter Port. Der Standardwert ist 443. 
+| Kommunikationsanschluss | Für VPLEX CLI verwendeter Port.  Der Standardwert ist 443. 
 
 
-| Abfrageintervall für Bestand (min) | Die Standardeinstellung ist 20 Minuten. 
+| Inventarabfrageintervall (min) | Der Standardwert beträgt 20 Minuten. 
 
 
 | Anzahl der Verbindungsversuche | Der Standardwert ist 3. 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 600 Sekunden. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 600 Sekunden. 
 
 
-| Anzahl Wiederholungen | Der Standardwert ist 2. 
+| Anzahl der Wiederholungsversuche | Der Standardwert ist 2. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -126,7 +126,7 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
 | Fehler: Benutzerauthentifizierung fehlgeschlagen. | Stellen Sie sicher, dass Ihre Anmeldeinformationen für dieses Gerät korrekt sind. 
@@ -137,24 +137,24 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Fehler: VPLEX-Performance für Version unter 5.3 wird nicht unterstützt. | Aktualisieren Sie VPLEX auf 5.3 oder höher 
+| Fehler: Die VPLEX-Leistung für Versionen unter 5.3 wird nicht unterstützt. | Aktualisieren Sie VPLEX auf 5.3 oder höher 
 
 
-| Fehler: Es wurden nicht genügend Daten erfasst. | • Prüfen Sie den Zeitstempel der Sammlung in der Protokolldatei und ändern Sie das Abfrageintervall entsprechend • Warten Sie länger 
+| Fehler: Nicht genügend Daten gesammelt. | • Prüfen Sie den Erfassungszeitstempel in der Protokolldatei und ändern Sie das Abfrageintervall entsprechend. • Warten Sie länger 
 
 
-| Fehler: Unbefristete Log-Dateien werden nicht aktualisiert. | Wenden Sie sich an den EMC Support, um die Aktualisierung der unbefristeten Protokolldateien zu aktivieren 
+| Fehler: Perpetual-Log-Dateien werden nicht aktualisiert. | Bitte kontaktieren Sie den EMC-Support, um die Aktualisierung der permanenten Protokolldateien zu aktivieren 
 
 
-| Fehler: Das Abfrageintervall für die Performance ist zu groß. | Überprüfen Sie den Sammlungs-Zeitstempel in der Protokolldatei €{logfile} und ändern Sie das Abfrageintervall entsprechend 
+| Fehler: Das Leistungsabfrageintervall ist zu groß. | Überprüfen Sie den Erfassungszeitstempel in der Protokolldatei ${logfile} und ändern Sie das Abfrageintervall entsprechend 
 
 
-| Fehler: Performance Remote IP-Adresse der VPLEX Management Console ist nicht konfiguriert. | Bearbeiten Sie die Datenquelle, um die Performance Remote IP-Adresse der VPLEX Management Console festzulegen. 
+| Fehler: Die Remote-IP-Adresse der VPLEX-Verwaltungskonsole ist nicht konfiguriert. | Bearbeiten Sie die Datenquelle, um die Performance-Remote-IP-Adresse der VPLEX-Verwaltungskonsole festzulegen. 
 
 
-| Fehler: Keine Leistungsdaten vom Director gemeldet | • Überprüfen Sie, ob die System-Performance-Monitore ordnungsgemäß ausgeführt werden • Bitte wenden Sie sich an den EMC Support, um die Aktualisierung der Protokolldateien des Systems Performance Monitor zu ermöglichen 
+| Fehler: Keine Leistungsdaten vom Direktor gemeldet | • Überprüfen Sie, ob die Systemleistungsmonitore ordnungsgemäß ausgeführt werden. • Wenden Sie sich an den EMC-Support, um die Aktualisierung der Protokolldateien des Systemleistungsmonitors zu ermöglichen. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -1,76 +1,76 @@
 ---
 sidebar: sidebar 
 permalink: reporting_data_retention.html 
-summary: Dateninfrastruktur Insights Datenaufbewahrung für Reporting 
+summary: Data Infrastructure Insights Datenaufbewahrung für die Berichterstattung 
 keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying, retention 
 ---
-= Aufbewahrung historischer Daten für die Berichterstellung
+= So werden historische Daten für die Berichterstellung aufbewahrt
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights speichert historische Daten für die Verwendung in Reporting auf der Grundlage der Datentabellen und der Granularität der Daten, wie in der folgenden Tabelle dargestellt.
+Data Infrastructure Insights speichert historische Daten zur Verwendung in Berichten basierend auf den Data Marts und der Granularität der Daten, wie in der folgenden Tabelle gezeigt.
 
 |===
 
 
-| Datentabellen | Gemessenes Objekt | Granularität | Aufbewahrungszeitraum 
+| Datamart | Messobjekt | Granularität | Aufbewahrungsfrist 
 
 
-| Performance Marts | Volumes und interne Volumes | Stündlich | 14 Tage 
+| Performance-Märkte | Volumes und interne Volumes | Stündlich | 14 Tage 
 
 
-| Performance Marts | Volumes und interne Volumes | Täglich | 13 Monaten 
+| Performance-Märkte | Volumes und interne Volumes | Täglich | 13 Monate 
 
 
-| Performance Marts | Applikation | Stündlich | 13 Monaten 
+| Performance-Märkte | Anwendung | Stündlich | 13 Monate 
 
 
-| Performance Marts | Host | Stündlich | 13 Monaten 
+| Performance-Märkte | Gastgeber | Stündlich | 13 Monate 
 
 
-| Performance Marts | Switch-Leistung für Port | Stündlich | 35 Tage 
+| Performance-Märkte | Switch-Leistung für Port | Stündlich | 35 Tage 
 
 
-| Performance Marts | Performance-Switch für Host, Storage und Tape | Stündlich | 13 Monaten 
+| Performance-Märkte | Switch-Leistung für Host, Speicher und Band | Stündlich | 13 Monate 
 
 
-| Performance Marts | Storage-Node | Stündlich | 14 Tage 
+| Performance-Märkte | Speicherknoten | Stündlich | 14 Tage 
 
 
-| Performance Marts | Storage-Node | Täglich | 13 Monaten 
+| Performance-Märkte | Speicherknoten | Täglich | 13 Monate 
 
 
-| Performance Marts | VM-Performance | Stündlich | 14 Tage 
+| Performance-Märkte | VM-Leistung | Stündlich | 14 Tage 
 
 
-| Performance Marts | VM-Performance | Täglich | 13 Monaten 
+| Performance-Märkte | VM-Leistung | Täglich | 13 Monate 
 
 
-| Performance Marts | Hypervisor-Performance | Stündlich | 35 Tage 
+| Performance-Märkte | Hypervisor-Leistung | Stündlich | 35 Tage 
 
 
-| Performance Marts | Hypervisor-Performance | Täglich | 13 Monaten 
+| Performance-Märkte | Hypervisor-Leistung | Täglich | 13 Monate 
 
 
-| Performance Marts | VMDK-Performance | Stündlich | 35 Tage 
+| Performance-Märkte | VMDK-Leistung | Stündlich | 35 Tage 
 
 
-| Performance Marts | VMDK-Performance | Täglich | 13 Monaten 
+| Performance-Märkte | VMDK-Leistung | Täglich | 13 Monate 
 
 
-| Performance Marts | Disk Performance | Stündlich | 14 Tage 
+| Performance-Märkte | Festplattenleistung | Stündlich | 14 Tage 
 
 
-| Performance Marts | Disk Performance | Täglich | 13 Monaten 
+| Performance-Märkte | Festplattenleistung | Täglich | 13 Monate 
 
 
-| Capacity Marts | Alle (außer einzelne Volumes) | Täglich | 13 Monaten 
+| Kapazitätsmärkte | Alle (außer Einzelbände) | Täglich | 13 Monate 
 
 
-| Capacity Marts | Alle (außer einzelne Volumes) | Monatlicher Vertreter | 14 Monaten und darüber hinaus 
+| Kapazitätsmärkte | Alle (außer Einzelbände) | Monatsvertreter | 14 Monate und darüber hinaus 
 
 
-| Inventarmarke | Einzelne Volumes | Aktueller Stand | 1 Tag (oder bis zum nächsten ETL) 
+| Inventarmärkte | Einzelbände | Aktueller Stand | 1 Tag (oder bis zum nächsten ETL) 
 |===

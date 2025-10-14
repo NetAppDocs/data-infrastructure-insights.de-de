@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_webhook_example_pagerduty.html 
 keywords: webhook, notification, PagerDuty, integration 
-summary: Erstellen Sie einen Webhook, um über die Grenzwerte für Leistung oder Bestand für PagerDuty zu informieren 
+summary: Erstellen Sie einen Webhook, um bei Leistungs- oder Bestandsschwellenwerten für Pagerduty zu warnen 
 ---
 = Webhook-Beispiel für PagerDuty
 :hardbreaks:
@@ -10,87 +10,87 @@ summary: Erstellen Sie einen Webhook, um über die Grenzwerte für Leistung oder
 
 
 [role="lead"]
-Mit Webhooks können Benutzer über einen benutzerdefinierten Webhook-Kanal Benachrichtigungen an verschiedene Anwendungen senden. Diese Seite enthält ein Beispiel zum Einrichten von Webhooks für PagerDuty.
+Mithilfe von Webhooks können Benutzer über einen benutzerdefinierten Webhook-Kanal Warnbenachrichtigungen an verschiedene Anwendungen senden.  Diese Seite bietet ein Beispiel zum Einrichten von Webhooks für PagerDuty.
 
 
-NOTE: Diese Seite bezieht sich auf Anweisungen von Dritten, die möglicherweise geändert werden können. Die aktuellsten Informationen finden Sie imlink:https://support.pagerduty.com/docs/services-and-integrations["PagerDuty-Dokumentation"].
+NOTE: Diese Seite verweist auf Anweisungen von Drittanbietern, die Änderungen unterliegen können.  Weitere Informationen finden Sie imlink:https://support.pagerduty.com/docs/services-and-integrations["PagerDuty-Dokumentation"] für die aktuellsten Informationen.
 
 
 
-== PagerDuty Setup:
+== PagerDuty-Setup:
 
-. Navigieren Sie in PagerDuty zu *Services > Service Directory* und klicken Sie auf *+New Service* button​
-. Geben Sie einen _Name_ ein, und wählen Sie _Use our API direkt_ aus. Klicken Sie auf _Dienst hinzufügen_.
+. Navigieren Sie in PagerDuty zu *Dienste > Dienstverzeichnis* und klicken Sie auf die Schaltfläche *+Neuer Dienst*​
+. Geben Sie einen _Namen_ ein und wählen Sie _Unsere API direkt verwenden_.  Klicken Sie auf _Dienst hinzufügen_.
 +
-image:Webhooks_PagerDutyScreen1.png["Bildschirm PagerDuty"]
+image:Webhooks_PagerDutyScreen1.png["Pagerduty-Bildschirm"]
 
-. Klicken Sie auf die Registerkarte _Integrationen_, um den *Integrationsschlüssel* anzuzeigen. Sie benötigen diesen Schlüssel, wenn Sie den Data Infrastructure Insights Webhook unten erstellen.
+. Klicken Sie auf die Registerkarte _Integrationen_, um den *Integrationsschlüssel* anzuzeigen.  Sie benötigen diesen Schlüssel, wenn Sie unten den Data Infrastructure Insights -Webhook erstellen.
 
 
-. Gehen Sie zu *Incidents* oder *Services*, um Benachrichtigungen anzuzeigen.
+. Gehen Sie zu *Vorfälle* oder *Dienste*, um Warnungen anzuzeigen.
 +
-image:Webhooks_PagerDutyScreen2.png["Bildschirm Pagerduty"]
+image:Webhooks_PagerDutyScreen2.png["Pagerduty-Bildschirm"]
 
 
 
 
 
-== Data Infrastructure Insights Webhook Erstellen:
+== Erstellen Sie einen Data Infrastructure Insights -Webhook:
 
-. Navigieren Sie in Data Infrastructure Insights zu *Admin > Notifications* und wählen Sie die Registerkarte *Webhooks* aus. Klicken Sie auf *+Webhook*, um einen neuen Webhook zu erstellen.
-. Geben Sie dem Webhook einen aussagekräftigen Namen, z. B. „PagerDuty Trigger“. Sie verwenden diesen Webhook für kritische und warning-Level-Ereignisse.
-. Wählen Sie in der Dropdown-Liste _Vorlagenart_ die Option *PagerDuty* aus.
+. Navigieren Sie in Data Infrastructure Insights zu *Admin > Benachrichtigungen* und wählen Sie die Registerkarte *Webhooks* aus.  Klicken Sie auf *+Webhook*, um einen neuen Webhook zu erstellen.
+. Geben Sie dem Webhook einen aussagekräftigen Namen, beispielsweise „PagerDuty Trigger“.  Sie verwenden diesen Webhook für Ereignisse der Stufen „kritisch“ und „Warnung“.
+. Wählen Sie im Dropdown-Menü „Vorlagentyp“ die Option „PagerDuty“ aus.
 
 
-. Erstellen Sie ein benutzerdefiniertes Parametergeheimnis namens _routingKey_ und setzen Sie den Wert von oben auf den PagerDuty_Integration Key_-Wert.
+. Erstellen Sie ein benutzerdefiniertes Parametergeheimnis mit dem Namen _routingKey_ und legen Sie den Wert auf den PagerDuty-_Integrationsschlüssel_-Wert von oben fest.
 +
-image:Webhooks_Custom_Secret_Routing_Key.png["Einstellen des Routing-Schlüssels"]
+image:Webhooks_Custom_Secret_Routing_Key.png["Festlegen des Routing-Schlüssels"]
 
 
 
-Wiederholen Sie diese Schritte, um einen Webhook „PagerDuty Resolve“ für aufgelöste Ereignisse zu erstellen.
+Wiederholen Sie diese Schritte, um einen „PagerDuty Resolve“-Webhook für gelöste Ereignisse zu erstellen.
 
 
 
-== Feldzuordnung von PagerDuty zu Data Infrastructure Insights
+== PagerDuty zur Data Infrastructure Insights -Feldzuordnung
 
-Die folgende Tabelle und Abbildung zeigen die Zuordnung von Feldern zwischen PagerDuty und Data Infrastructure Insights:
+Die folgende Tabelle und das Bild zeigen die Zuordnung der Felder zwischen PagerDuty und Data Infrastructure Insights:
 
 [cols="<,<"]
 |===
-| PagerDuty | Einblicke In Die Dateninfrastruktur 
+| PagerDuty | Data Infrastructure Insights 
 
 
-| Warntaste | Alarm-ID 
+| Alarmschlüssel | Warnmeldungs-ID 
 
 
-| Quelle | Ausgelöst Am 
+| Quelle | Ausgelöst am 
 
 
-| Komponente | Metrischer Name 
+| Komponente | Metrikname 
 
 
-| Gruppieren | Objekttyp 
+| Gruppe | Objekttyp 
 
 
 | Klasse | Monitorname 
 |===
-image:Webhooks-PagerDuty_Fields.png["PagerDuty Felder in CI"]
+image:Webhooks-PagerDuty_Fields.png["PagerDuty-Felder in CI"]
 
 
 
-== Benachrichtigungen über Webhook
+== Benachrichtigungen per Webhook
 
-Um Ereignisse über Webhook zu benachrichtigen, navigieren Sie in Data Infrastructure Insights zu *Alerts > Monitors* und klicken Sie auf *+Monitor*, um eine neue zu erstellenlink:task_create_monitor.html["Überwachen"].
+Um über Ereignisse per Webhook zu benachrichtigen, navigieren Sie in Data Infrastructure Insights zu *Alerts > Monitors* und klicken Sie auf *+Monitor*, um einen neuenlink:task_create_monitor.html["Monitor"] .
 
-* Wählen Sie eine Metrik aus, und definieren Sie die Bedingungen des Monitors.
-* Wählen Sie unter „ Team-Benachrichtigung(en) einrichten“ die Option „ *Webhook* Liefermethode“.
-* Wählen Sie den Webhook „PagerDuty Trigger“ für Ereignisse auf kritischen und Warnstufen.
-* Wählen Sie „PagerDuty Resolve“ für aufgelöste Ereignisse.
+* Wählen Sie eine Metrik aus und definieren Sie die Bedingungen des Monitors.
+* Wählen Sie unter „Teambenachrichtigung(en) einrichten“ die Übermittlungsmethode „Webhook“ aus.
+* Wählen Sie den Webhook „PagerDuty Trigger“ für Ereignisse der Stufen „Kritisch“ und „Warnung“.
+* Wählen Sie „PagerDuty Resolve“ für gelöste Ereignisse.
 +
 image:Webhooks_Notifications.png["Webhook-Benachrichtigungen"]
 
 
 
 
-NOTE: Die Festlegung separater Benachrichtigungen für Trigger-Ereignisse und aufgelöste Ereignisse ist eine bewährte Vorgehensweise, da PagerDuty Trigger-Ereignisse anders als gelöste Ereignisse verarbeitet.
+NOTE: Das Festlegen separater Benachrichtigungen für Trigger-Ereignisse im Vergleich zu aufgelösten Ereignissen ist eine bewährte Methode, da PagerDuty Trigger-Ereignisse anders behandelt als aufgelöste Ereignisse.

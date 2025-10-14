@@ -2,72 +2,72 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_apache.html 
 keywords: telegraf, installation, install, apache 
-summary: Konfiguration des Apache Data Collector 
+summary: Apache-Datensammlerkonfiguration 
 ---
-= Apache Data Collector
+= Apache-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler ermöglicht die Erfassung von Daten von Apache-Servern auf Ihrem Mandanten.
+Dieser Datensammler ermöglicht das Sammeln von Daten von Apache-Servern auf Ihrem Mandanten.
 
 .Voraussetzungen
-* Sie müssen Ihren Apache HTTP Server einrichten und ordnungsgemäß ausführen lassen
-* Sie müssen über sudo- oder Administratorberechtigungen auf Ihrem Agent-Host/VM verfügen
-* In der Regel ist das Apache _mod_Status_-Modul so konfiguriert, dass eine Seite am Speicherort '/Server-Status?Auto' des Apache-Servers angezeigt wird. Die Option _ExtendedStatus_ muss aktiviert sein, um alle verfügbaren Felder zu erfassen. Informationen zur Konfiguration Ihres Servers finden Sie in der Dokumentation zum Apache-Modul: https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
+* Sie müssen Ihren Apache HTTP-Server eingerichtet und ordnungsgemäß ausgeführt haben
+* Sie müssen über Sudo- oder Administratorberechtigungen auf Ihrem Agent-Host/Ihrer VM verfügen
+* Normalerweise ist das Apache-Modul _mod_status_ so konfiguriert, dass eine Seite am Speicherort „/server-status?auto“ des Apache-Servers angezeigt wird.  Die Option _ExtendedStatus_ muss aktiviert sein, um alle verfügbaren Felder zu erfassen.  Informationen zum Konfigurieren Ihres Servers finden Sie in der Apache-Moduldokumentation: https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
 
 
 
 
 == Installation
 
-. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie Apache.
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*.  Wählen Sie Apache.
 +
-Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.
+Wählen Sie das Betriebssystem oder die Plattform aus, auf der der Telegraf-Agent installiert ist.
 
-. Wenn Sie noch keinen Agenten zur Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um die  Anweisungen zu erweiternlink:task_config_telegraf_agent.html["Agenten-Installation"].
-. Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.
-. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+. Wenn Sie noch keinen Agenten für die Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um daslink:task_config_telegraf_agent.html["Agenteninstallation"] Anweisungen.
+. Wählen Sie den Agent-Zugriffsschlüssel zur Verwendung mit diesem Datensammler aus.  Sie können einen neuen Agentenzugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agentenzugriffsschlüssel* klicken.  Best Practice: Verwenden Sie nur dann einen anderen Agent-Zugriffsschlüssel, wenn Sie Datensammler beispielsweise nach Betriebssystem/Plattform gruppieren möchten.
+. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren.  Die Anweisungen variieren je nach Art des Betriebssystems oder der Plattform, die Sie zum Sammeln von Daten verwenden.
 
 
 image:ApacheDCConfigLinux.png["Apache-Konfiguration"]
 
 
 
-== Einrichtung
+== Aufstellen
 
-Das Telegraf-Plugin für Apache's HTTP Server setzt auf das 'mod_Status'-Modul, um aktiviert zu werden. Wenn diese Option aktiviert ist, wird Apache HTTP Server einen HTML-Endpunkt anzeigen, der in Ihrem Browser angezeigt oder für die Extraktion des Status aller Apache HTTP Server-Konfigurationen gepatzt werden kann.
+Das Plugin von Telegraf für den HTTP-Server von Apache erfordert die Aktivierung des Moduls „mod_status“.  Wenn dies aktiviert ist, stellt der HTTP-Server von Apache einen HTML-Endpunkt bereit, der in Ihrem Browser angezeigt oder zum Extrahieren des Status der gesamten HTTP-Serverkonfiguration von Apache verwendet werden kann.
 
 
 
 === Kompatibilität:
 
-Die Konfiguration wurde gegen Apache HTTP Server Version 2.4.38 entwickelt.
+Die Konfiguration wurde für Apaches HTTP-Server Version 2.4.38 entwickelt.
 
 
 
-=== Aktivieren von mod_Status:
+=== Aktivieren von mod_status:
 
-Das Aktivieren und Bereitstellen der 'mod_Status'-Module umfasst zwei Schritte:
+Das Aktivieren und Freigeben der „mod_status“-Module umfasst zwei Schritte:
 
-* Modul wird aktivieren
-* Legen Sie Statistiken aus dem Modul fest
-
-
+* Aktivierungsmodul
+* Statistiken aus dem Modul anzeigen
 
 
-=== Modul aktivieren:
 
-Das Laden von Modulen wird durch die Konfigurationsdatei unter '/usr/local/apache/conf/httpd.conf' gesteuert. Bearbeiten Sie die config-Datei und heben Sie die folgenden Zeilen aus:
+
+=== Aktivierungsmodul:
+
+Das Laden der Module wird durch die Konfigurationsdatei unter „/usr/local/apache/conf/httpd.conf“ gesteuert.  Bearbeiten Sie die Konfigurationsdatei und entfernen Sie die Kommentarzeichen aus den folgenden Zeilen:
 
  LoadModule status_module modules/mod_status.so
  Include conf/extra/httpd-info.conf
 
 
-=== Statistiken aus dem Modul offenlegen:
+=== Statistiken aus dem Modul anzeigen:
 
-Die Offenlegung von 'mod_Status' wird durch die Konfigurationsdatei unter '/usr/local/apache2/conf/extra/httpd-info.conf' gesteuert. Stellen Sie sicher, dass Sie in dieser Konfigurationsdatei Folgendes haben (mindestens sind weitere Richtlinien vorhanden):
+Die Offenlegung von „mod_status“ wird durch die Konfigurationsdatei unter „/usr/local/apache2/conf/extra/httpd-info.conf“ gesteuert.  Stellen Sie sicher, dass die Konfigurationsdatei Folgendes enthält (zumindest andere Anweisungen werden dort vorhanden sein):
 
 [listing]
 ----
@@ -84,23 +84,23 @@ Die Offenlegung von 'mod_Status' wird durch die Konfigurationsdatei unter '/usr/
 #
 ExtendedStatus On
 ----
-Ausführliche Anweisungen zum Modul 'mod_Status' finden Sie im link:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Apache-Dokumentation"]
+Ausführliche Anweisungen zum Modul „mod_status“ finden Sie imlink:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Apache-Dokumentation"]
 
 
 
 == Objekte und Zähler
 
-Folgende Objekte und ihre Zähler werden gesammelt:
+Die folgenden Objekte und ihre Zähler werden gesammelt:
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+| Objekt: | Kennungen: | Merkmale: | Datenpunkte: 
 
 
-| Apache | Namespace-Server | Node-IP-Knotenname-Port-Parent Server-Konfiguration der übergeordnete Server-Generation der MPM-Generation wird angehalten | Beschäftigte Arbeiter Bytes pro Anfrage Bytes pro Sekunde CPU Kinder System CPU Kinder Benutzer CPU Last CPU System CPU System CPU Benutzer asynchrone Verbindungen Schließen Asynchronous Connections am Leben Asynchronous Connections Writing connections Total Duration per Request Idle Workers Load Average (Last 1m) Load Average (Last 15m) Load Average (Last Average (Last 5m) Prozesse Anfragen pro Sekunde Gesamtzugriff Gesamtdauer Gesamtdauer KBytes Scoreboard schließen Scoreboard DNS Lookups Scoreboard abschließen Scoreboard-Idle Cleanup Scoreboard halten am Leben Scoreboard Logging Scoreboard öffnen Scoreboard lesen Scoreboard senden Scoreboard Starting Scoreboard warten 
+| Apache | Namespace-Server | Knoten-IP Knotenname Port Übergeordneter Server Konfigurationsgenerierung Übergeordneter Server MPM-Generierung Server-Betriebszeit wird gestoppt | Beschäftigte Worker Bytes pro Anfrage Bytes pro Sekunde CPU-Kinder System-CPU-Kinder Benutzer-CPU-Last CPU-System-CPU-Benutzer Asynchrone Verbindungen Schließende asynchrone Verbindungen Asynchrone Keep-Alive-Verbindungen Schreibende Verbindungen Gesamtdauer pro Anfrage Inaktive Worker Durchschnittliche Auslastung (letzte 1 Min.) Durchschnittliche Auslastung (letzte 15 Min.) Durchschnittliche Auslastung (letzte 5 Min.) Prozesse Anfragen pro Sekunde Gesamtzugriffe Gesamtdauer Gesamt-KByte Anzeigetafel Anzeigetafel wird geschlossen Anzeigetafel DNS-Lookups Anzeigetafel wird beendet Anzeigetafel Anzeigetafel Leerlaufbereinigung Anzeigetafel Keep-Alive Anzeigetafel wird protokolliert Anzeigetafel geöffnet Anzeigetafel liest Anzeigetafel sendet Anzeigetafel startet Anzeigetafel wartet 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite.
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite.

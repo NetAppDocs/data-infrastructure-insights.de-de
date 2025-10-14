@@ -2,83 +2,83 @@
 sidebar: sidebar 
 permalink: concept_device_resolution_overview.html 
 keywords: Automatic, AR, AHR, Host, automatic device resolution 
-summary: Mit der automatischen Geräteauflösung können Sie die Leistung und den Bestand Ihres Mandanten genau verfolgen. 
+summary: Mithilfe der automatischen Geräteauflösung können Sie die Leistung und den Bestand Ihres Mandanten genau verfolgen. 
 ---
-= Überblick Über Die Automatische Geräteauflösung
+= Übersicht über die automatische Geräteauflösung
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie müssen alle Geräte identifizieren, die Sie mit Data Infrastructure Insights überwachen möchten. Eine Identifizierung ist erforderlich, um die Leistung und den Bestand Ihres Mandanten genau zu verfolgen. In der Regel werden die meisten auf Ihrem Mandanten erkannten Geräte durch _Automatic Device Resolution_ identifiziert.
+Sie müssen alle Geräte identifizieren, die Sie mit Data Infrastructure Insights überwachen möchten.  Eine Identifizierung ist erforderlich, um die Leistung und den Bestand Ihres Mieters genau zu verfolgen.  Normalerweise wird die Mehrheit der auf Ihrem Mandanten erkannten Geräte durch die _Automatische Geräteauflösung_ identifiziert.
 
-Nach der Konfiguration der Datensammler werden Geräte auf dem Mandanten, einschließlich Switches, Storage-Arrays und der virtuellen Infrastruktur mit Hypervisoren und VMs, identifiziert. Normalerweise werden dadurch jedoch nicht 100 % der Geräte auf Ihrem Mandanten identifiziert.
+Nachdem Sie Datensammler konfiguriert haben, werden Geräte auf Ihrem Mandanten identifiziert, darunter Switches, Speicher-Arrays und Ihre virtuelle Infrastruktur aus Hypervisoren und VMs.  Allerdings werden dadurch normalerweise nicht 100 % der Geräte Ihres Mandanten identifiziert.
 
-Nachdem Geräte vom Typ der Datensammlung konfiguriert wurden, empfiehlt es sich, die Regeln für die Geräteauflösung zu nutzen, um die verbleibenden unbekannten Geräte auf Ihrem Mandanten zu identifizieren. Die Geräteauflösung kann Ihnen dabei helfen, unbekannte Geräte als die folgenden Gerätetypen zu lösen:
+Nachdem Geräte vom Typ „Datensammler“ konfiguriert wurden, besteht die bewährte Vorgehensweise darin, Geräteauflösungsregeln zu nutzen, um die verbleibenden unbekannten Geräte auf Ihrem Mandanten zu identifizieren.  Mithilfe der Geräteauflösung können Sie unbekannte Geräte als folgende Gerätetypen auflösen:
 
 * Physische Hosts
-* Storage-Arrays durchführt
+* Speicher-Arrays
 * Bänder
 
 
-Geräte, die nach der Geräteauflösung als nicht bekannt sind, gelten als allgemeine Geräte, die Sie auch in Abfragen und auf Dashboards anzeigen können.
+Geräte, die nach der Geräteauflösung als unbekannt verbleiben, gelten als generische Geräte, die Sie auch in Abfragen und auf Dashboards anzeigen können.
 
-Die wiederum erstellten Regeln identifizieren automatisch neue Geräte mit ähnlichen Attributen, wie sie Ihrer Umgebung hinzugefügt werden. In einigen Fällen ermöglicht die Geräteauflösung auch die manuelle Identifizierung, wobei die Regeln für die Geräteauflösung für nicht erkannte Geräte in Data Infrastructure Insights umgangen werden.
+Die wiederum erstellten Regeln identifizieren automatisch neue Geräte mit ähnlichen Attributen, wenn sie Ihrer Umgebung hinzugefügt werden.  In einigen Fällen ermöglicht die Geräteauflösung auch eine manuelle Identifizierung, indem die Geräteauflösungsregeln für nicht erkannte Geräte in Data Infrastructure Insights umgangen werden.
 
 Eine unvollständige Identifizierung von Geräten kann zu folgenden Problemen führen:
 
 * Unvollständige Pfade
-* Nicht identifizierte Multipath-Verbindungen
-* Applikationen können nicht gruppieren
+* Nicht identifizierte Mehrwegeverbindungen
+* Die Unfähigkeit, Anwendungen zu gruppieren
 * Ungenaue Topologieansichten
-* Ungenaue Daten im Data Warehouse und Berichterstellung
+* Ungenaue Daten im Data Warehouse und Reporting
 
 
-Die Geräteauflösungsfunktion (Verwalten > Geräteauflösung) umfasst die folgenden Registerkarten, von denen jede eine Rolle bei der Planung der Geräteauflösung und der Anzeige der Ergebnisse spielt:
+Die Funktion zur Geräteauflösung (Verwalten > Geräteauflösung) umfasst die folgenden Registerkarten, die jeweils eine Rolle bei der Planung der Geräteauflösung und der Anzeige der Ergebnisse spielen:
 
-* *Fibre Channel Identify* enthält eine Liste WWNs und Port-Informationen von Fibre Channel-Geräten, die nicht durch automatische Geräteauflösung aufgelöst wurden. Auf der Registerkarte wird außerdem der Prozentsatz der erkannten Geräte angegeben.
-* *IP Address Identify* enthält eine Liste von Geräten, die auf CIFS-Freigaben und NFS-Freigaben zugreifen, die nicht durch automatische Geräteauflösung identifiziert wurden. Auf der Registerkarte wird außerdem der Prozentsatz der erkannten Geräte angegeben.
-* *Regeln zur automatischen Auflösung* enthält die Liste der Regeln, die bei der Durchführung der Auflösung eines Fibre-Channel-Geräts ausgeführt werden. Dies sind Regeln, die Sie erstellen, um nicht identifizierte Fibre Channel-Geräte zu lösen.
-* *Einstellungen* enthält Konfigurationsoptionen, mit denen Sie die Geräteauflösung für Ihre Umgebung anpassen können.
-
-
-
-
-== Bevor Sie Beginnen
-
-Sie müssen wissen, wie Ihre Umgebung konfiguriert ist, bevor Sie die Regeln für die Identifizierung von Geräten definieren. Je mehr Sie über Ihre Umgebung wissen, desto einfacher ist es, Geräte zu identifizieren.
-
-Sie müssen die folgenden Fragen beantworten, um genaue Regeln zu erstellen:
-
-* Gibt es in Ihrer Umgebung Namensstandards für Zonen oder Hosts, und wie viel Prozent dieser Standards sind korrekt?
-* Verwendet Ihre Umgebung einen Switch-Alias oder Storage-Alias und stimmt mit dem Host-Namen überein?
-
-
-* Wie oft ändern sich Namensschemata auf Ihren Mandanten?
-* Gab es Übernahmen oder Fusionen, bei denen verschiedene Benennungsschemata eingeführt wurden?
-
-
-Nach der Analyse Ihrer Umgebung sollten Sie in der Lage sein, zu identifizieren, welche Benennungsstandards existieren, die Sie mit der Zuverlässigkeit rechnen können. Die gesammelten Informationen können grafisch in einer Abbildung dargestellt werden, die der folgenden ähnelt:
-
-image:Device_Resolution_Venn.png["Übersicht Über Das Gerät"]
-
-In diesem Beispiel wird die größte Anzahl von Geräten zuverlässig durch Speicheraliasen dargestellt. Regeln, die Hosts mit Speicheraliasen identifizieren, sollten zuerst geschrieben werden, Regeln mit Switch-Aliasen sollten als Nächstes geschrieben werden, und die letzten erstellten Regeln sollten Zonenaliasen verwenden. Aufgrund der Überlappung der Verwendung von Zonen-Aliasen und Switch-Aliasen können einige Speicher-Alias-Regeln zusätzliche Geräte identifizieren, so dass weniger Regeln für Zonen-Aliase und Switch-Aliase erforderlich sind.
+* *Fibre Channel Identify* enthält eine Liste mit WWNs und Portinformationen von Fibre Channel-Geräten, die nicht durch die automatische Geräteauflösung aufgelöst wurden.  Auf der Registerkarte wird auch der Prozentsatz der identifizierten Geräte angegeben.
+* *IP-Adressidentifizierung* enthält eine Liste von Geräten, die auf CIFS-Freigaben und NFS-Freigaben zugreifen und nicht durch die automatische Geräteauflösung identifiziert wurden.  Auf der Registerkarte wird auch der Prozentsatz der identifizierten Geräte angegeben.
+* *Regeln zur automatischen Auflösung* enthält die Liste der Regeln, die bei der Auflösung von Fibre-Channel-Geräten ausgeführt werden.  Dies sind Regeln, die Sie erstellen, um nicht identifizierte Fibre-Channel-Geräte aufzulösen.
+* *Einstellungen* bietet Konfigurationsoptionen, mit denen Sie die Geräteauflösung an Ihre Umgebung anpassen können.
 
 
 
-== Schritte zur Identifizierung von Geräten
 
-In der Regel würden Sie einen ähnlichen Workflow wie den folgenden verwenden, um Geräte in Ihrem Mandanten zu identifizieren. Die Identifizierung ist ein iterativer Prozess und erfordert möglicherweise mehrere Schritte bei der Planung und Verfeinerung von Regeln.
+== Bevor Sie beginnen
 
-* Forschungsumgebung
+Sie müssen wissen, wie Ihre Umgebung konfiguriert ist, bevor Sie die Regeln zur Identifizierung von Geräten definieren.  Je mehr Sie über Ihre Umgebung wissen, desto einfacher ist es, Geräte zu identifizieren.
+
+Um genaue Regeln erstellen zu können, müssen Sie Fragen wie die folgenden beantworten:
+
+* Verfügt Ihre Umgebung über Benennungsstandards für Zonen oder Hosts und wie viel Prozent davon sind korrekt?
+* Verwendet Ihre Umgebung einen Switch-Alias oder Speicheralias und stimmen diese mit dem Hostnamen überein?
+
+
+* Wie oft ändern sich die Benennungsschemata Ihres Mandanten?
+* Gab es Übernahmen oder Fusionen, die zu unterschiedlichen Namensgebungen geführt haben?
+
+
+Nach der Analyse Ihrer Umgebung sollten Sie in der Lage sein, die vorhandenen Namensstandards zu ermitteln, die Sie voraussichtlich zuverlässig antreffen werden.  Die von Ihnen gesammelten Informationen können grafisch in einer Abbildung ähnlich der folgenden dargestellt werden:
+
+image:Device_Resolution_Venn.png["Geräteübersichtsdiagramm"]
+
+In diesem Beispiel wird die größte Anzahl von Geräten zuverlässig durch Speicheraliase dargestellt.  Regeln, die Hosts mithilfe von Speicheraliasen identifizieren, sollten zuerst geschrieben werden, Regeln mit Switch-Aliasen sollten als Nächstes geschrieben werden und die zuletzt erstellten Regeln sollten Zonen-Aliase verwenden.  Aufgrund der Überschneidung bei der Verwendung von Zonenaliasen und Switch-Aliasen können einige Speicheraliasregeln zusätzliche Geräte identifizieren, sodass weniger Regeln für Zonenaliase und Switch-Aliase erforderlich sind.
+
+
+
+== Schritte zum Identifizieren von Geräten
+
+Normalerweise verwenden Sie einen Workflow ähnlich dem folgenden, um Geräte auf Ihrem Mandanten zu identifizieren.  Die Identifizierung ist ein iterativer Prozess und kann mehrere Schritte der Planung und Verfeinerung von Regeln erfordern.
+
+* Forschungsumfeld
 * Planregeln
 * Regeln erstellen/überarbeiten
-* Prüfen Sie die Ergebnisse
+* Ergebnisse überprüfen
 * Erstellen Sie zusätzliche Regeln oder identifizieren Sie Geräte manuell
-* Fertig
+* Erledigt
 
 
 
-NOTE: Wenn Sie nicht identifizierte Geräte (auch unbekannte oder generische Geräte) auf Ihrem Mandanten haben und anschließend eine Datenquelle konfigurieren, die diese Geräte beim Abfragen identifiziert, werden sie nicht mehr als generische Geräte angezeigt oder gezählt.
+NOTE: Wenn sich auf Ihrem Mandanten nicht identifizierte Geräte (auch als unbekannte oder generische Geräte bezeichnet) befinden und Sie anschließend eine Datenquelle konfigurieren, die diese Geräte bei der Abfrage identifiziert, werden sie nicht mehr als generische Geräte angezeigt oder gezählt.
 
-Verwandte Themen: link:task_device_resolution_rules.html["Geräterauflösungsregeln Werden Erstellt"] link:task_device_resolution_fibre_channel.html["Fibre Channel-Geräteauflösung"] link:task_device_resolution_ip.html["IP-Geräteauflösung"] link:task_device_resolution_preferences.html["Einstellen Der Einstellungen Für Die Geräteauflösung"]
+Verwandt:link:task_device_resolution_rules.html["Erstellen von Geräteauflösungsregeln"] link:task_device_resolution_fibre_channel.html["Fibre Channel-Geräteauflösung"] link:task_device_resolution_ip.html["IP-Geräteauflösung"] link:task_device_resolution_preferences.html["Festlegen der Geräteauflösungseinstellungen"]

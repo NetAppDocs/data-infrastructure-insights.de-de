@@ -2,34 +2,34 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_activemq.html 
 keywords: telegraf, installation, install, ActiveMQ 
-summary: HTTP-Datensammler-Konfiguration 
+summary: Konfiguration des HTTP-Datensammlers 
 ---
-= ActiveMQ Data Collector
+= ActiveMQ-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet diesen Datensammler, um Kennzahlen aus ActiveMQ zu sammeln.
+Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von ActiveMQ zu sammeln.
 
 
 
 == Installation
 
-. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie ActiveMQ.
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*.  Wählen Sie ActiveMQ.
 +
-Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.
+Wählen Sie das Betriebssystem oder die Plattform aus, auf der der Telegraf-Agent installiert ist.
 
-. Wenn Sie noch keinen Agenten zur Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um die  Anweisungen zu erweiternlink:task_config_telegraf_agent.html["Agenten-Installation"].
-. Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.
-. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+. Wenn Sie noch keinen Agenten für die Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um daslink:task_config_telegraf_agent.html["Agenteninstallation"] Anweisungen.
+. Wählen Sie den Agent-Zugriffsschlüssel zur Verwendung mit diesem Datensammler aus.  Sie können einen neuen Agentenzugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agentenzugriffsschlüssel* klicken.  Best Practice: Verwenden Sie nur dann einen anderen Agent-Zugriffsschlüssel, wenn Sie Datensammler beispielsweise nach Betriebssystem/Plattform gruppieren möchten.
+. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren.  Die Anweisungen variieren je nach Art des Betriebssystems oder der Plattform, die Sie zum Sammeln von Daten verwenden.
 
 
 image:ActiveMQDCConfigWindows.png["ActiveMQ-Konfiguration"]
 
 
 
-== Einrichtung
+== Aufstellen
 
 Informationen finden Sie im http://activemq.apache.org/getting-started.html["ActiveMQ-Dokumentation"]
 
@@ -37,23 +37,23 @@ Informationen finden Sie im http://activemq.apache.org/getting-started.html["Act
 
 == Objekte und Zähler
 
-Folgende Objekte und ihre Zähler werden gesammelt:
+Die folgenden Objekte und ihre Zähler werden gesammelt:
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+| Objekt: | Kennungen: | Merkmale: | Datenpunkte: 
 
 
-| ActiveMQ-Warteschlange | Namespace Queue Port Server | Node Name Node-IP-Node-UUID | Anzahl Der Warteschlange Anzahl Der Kunden Anzahl Der Ausgleiche Anzahl Warteschlange Größe 
+| ActiveMQ-Warteschlange | Namespace-Warteschlangen-Port-Server | Knotenname Knoten-IP Knoten-UUID | Anzahl der Verbraucher Anzahl der Dequeues Anzahl der Enqueues Warteschlangengröße 
 
 
-| ActiveMQ-Abonnenten | Namespace für Client-ID-Verbindungs-ID-Port-Server | Ist Active Destination Node Name Node IP Node UUID Node OS Selector Subscription | Anzahl Der Entsandten Absendete Warteschlange Anzahl Der Abgesandten Warteschlange Größe Anzahl Der Warteschlange Anzahl Der Ausstehenden Warteschlange Größe 
+| ActiveMQ-Abonnent | Client-ID Verbindungs-ID Port Server-Namespace | Ist aktiv Zielknotenname Knoten-IP Knoten-UUID Knoten-Betriebssystem-Selektor Abonnement | Anzahl der aus der Warteschlange entfernten Aufgaben Anzahl der versendeten Aufgaben Warteschlangengröße Anzahl der in die Warteschlange entfernten Aufgaben Größe der ausstehenden Warteschlange 
 
 
-| ActiveMQ-Thema | Thema Port Server Namespace | Node Name Node-IP-Node-UUID-Node-OS | Anzahl Der Ausgleichen Anzahl Der Verbraucher Größe Der Anzahl Der Warteschlangen 
+| ActiveMQ-Thema | Thema Port Server Namespace | Knotenname Knoten-IP Knoten-UUID Knoten-Betriebssystem | Anzahl der Verbraucher Anzahl der Dequeues Anzahl der Enqueues Anzahl der Größe 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite.
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite.

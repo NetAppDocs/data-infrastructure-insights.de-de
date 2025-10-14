@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_create_monitor.html 
 keywords: monitors, alerts, log, metric, system-defined, system, metric, 
-summary: Erstellen von Monitoren, damit bei Performance- oder Bestandsschwellenwerten sowie bei metrischen oder Protokollbedingungen eine Warnmeldung ausgegeben wird 
+summary: Erstellen Sie Monitore, um bei Leistungs- oder Bestandsschwellenwerten sowie bei Metrik- oder Protokollbedingungen Warnmeldungen auszugeben. 
 ---
-= Warnfunktionen mit Monitoren
+= Alarmierung mit Monitoren
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,58 +14,58 @@ summary: Erstellen von Monitoren, damit bei Performance- oder Bestandsschwellenw
 
 
 [role="lead"]
-Konfigurieren Sie Monitore, um Leistungsschwellenwerte, Protokollereignisse und Anomalien in Ihren Infrastrukturressourcen zu verfolgen.  Erstellen Sie benutzerdefinierte Warnungen für Kennzahlen wie Schreiblatenz des Knotens, Speicherkapazität oder Anwendungsleistung und erhalten Sie Benachrichtigungen, wenn diese Bedingungen erfüllt sind.
+Konfigurieren Sie Monitore, um Leistungsschwellenwerte, Protokollereignisse und Anomalien in Ihren Infrastrukturressourcen zu verfolgen. Erstellen Sie benutzerdefinierte Warnungen für Kennzahlen wie Schreiblatenz des Knotens, Speicherkapazität oder Anwendungsleistung und erhalten Sie Benachrichtigungen, wenn diese Bedingungen erfüllt sind.
 
-Über Monitore können Sie Schwellenwerte auf Metriken festlegen, die von „Infrastruktur“-Objekten wie Storage, VM, EC2 und Ports generiert werden. Außerdem können Sie Daten zur „Integration“ verwenden, beispielsweise die für Kubernetes gesammelt wurden, erweiterte ONTAP Metriken und Telegraf Plug-ins. Diese _metrische_ Überwachung warnt Sie, wenn Warnmeldungen oder kritische Schwellenwerte überschritten werden.
+Mithilfe von Monitoren können Sie Schwellenwerte für Metriken festlegen, die von „Infrastruktur“-Objekten wie Speicher, VM, EC2 und Ports generiert werden, sowie für „Integration“-Daten, wie sie beispielsweise für Kubernetes, erweiterte ONTAP -Metriken und Telegraf-Plugins erfasst werden.  Diese _metrischen_ Monitore warnen Sie, wenn Warnschwellen oder kritische Schwellenwerte überschritten werden.
 
-Sie können auch Monitore erstellen, um Warnmeldungen auf Warn-, kritischen oder informationellen Ebene auszulösen, wenn bestimmte _log-Ereignisse_ erkannt werden.
+Sie können auch Monitore erstellen, um Warnungen auf Warn-, kritischer oder informativer Ebene auszulösen, wenn bestimmte _Protokollereignisse_ erkannt werden.
 
-Dateninfrastruktur Insights bietet ebenfalls eine Vielzahl an Funktionenlink:task_system_monitors.html["Systemdefinierte Monitore"], je nach Umgebung.
-
-
-
-== Best Practice Für Sicherheit
-
-Warnmeldungen zu Data Infrastructure Insights wurden entwickelt, um Datenpunkte und Trends für Ihren Mandanten hervorzuheben, und mit Data Infrastructure Insights können Sie jede gültige E-Mail-Adresse als Benachrichtigungsempfänger eingeben. Wenn Sie in einer sicheren Umgebung arbeiten, achten Sie besonders darauf, wer die Benachrichtigung erhält oder anderweitig Zugriff auf die Warnmeldung hat.
+Data Infrastructure Insights bietet eine Reihe vonlink:task_system_monitors.html["Systemdefinierte Monitore"] auch basierend auf Ihrer Umgebung.
 
 
 
-== Metrik oder Protokollmonitor?
+== Best Practice für die Sicherheit
 
-. Klicken Sie im Menü Data Infrastructure Insights auf *Alerts > Manage Monitors*
+Die Warnmeldungen von Data Infrastructure Insights sollen Datenpunkte und Trends zu Ihrem Mandanten hervorheben. Außerdem können Sie mit Data Infrastructure Insights eine beliebige gültige E-Mail-Adresse als Warnmeldungsempfänger eingeben.  Wenn Sie in einer sicheren Umgebung arbeiten, achten Sie besonders darauf, wer die Benachrichtigung erhält oder anderweitig Zugriff auf die Warnung hat.
+
+
+
+== Metrik- oder Protokollmonitor?
+
+. Klicken Sie im Menü „Data Infrastructure Insights“ auf *Warnungen > Monitore verwalten*
 +
-Die Listenseite Monitore wird angezeigt und zeigt die derzeit konfigurierten Monitore an.
+Die Seite mit der Monitorliste wird angezeigt und zeigt die aktuell konfigurierten Monitore.
 
 . Um einen vorhandenen Monitor zu ändern, klicken Sie in der Liste auf den Monitornamen.
 . Um einen Monitor hinzuzufügen, klicken Sie auf *+ Monitor*.
 +
-image:Monitor_log_or_metric.png["Wählen Sie System- oder Protokollüberwachung"]
+image:Monitor_log_or_metric.png["Wählen Sie den System- oder Protokollmonitor"]
 
 +
-Wenn Sie einen neuen Monitor hinzufügen, werden Sie aufgefordert, einen Metric Monitor oder einen Protokollmonitor zu erstellen.
+Wenn Sie einen neuen Monitor hinzufügen, werden Sie aufgefordert, einen Metrikmonitor oder einen Protokollmonitor zu erstellen.
 
 +
-** _Metric_ überwacht Warnmeldungen zu Infrastruktur- oder Performance-bezogenen Triggern
-** _Log_ überwacht die Warnung bei protokollbezogenen Aktivitäten
+** _Metric_ überwacht Warnungen bei infrastruktur- oder leistungsbezogenen Auslösern
+** _Log_ überwacht Warnungen bei protokollbezogenen Aktivitäten
 
 
 +
-Nachdem Sie den Monitortyp ausgewählt haben, wird das Dialogfeld Monitorkonfiguration angezeigt. Die Konfiguration hängt davon ab, welche Art von Monitor Sie erstellen.
+Nachdem Sie Ihren Monitortyp ausgewählt haben, wird das Dialogfeld „Monitorkonfiguration“ angezeigt.  Die Konfiguration variiert je nach dem von Ihnen erstellten Monitortyp.
 
 
 
 
 
-=== Metrischer Monitor
+=== Metrikmonitor
 
-. Suchen Sie im Dropdown-Menü nach einem Objekttyp und einer Metrik, die überwacht werden soll, und wählen Sie diesen aus.
+. Suchen Sie in der Dropdown-Liste nach einem zu überwachenden Objekttyp und einer Metrik und wählen Sie diese aus.
 
 
-Filter können eingesetzt werden, um festzulegen, welche Objektattribute oder Metriken überwacht werden sollen.
+Sie können Filter festlegen, um einzugrenzen, welche Objektattribute oder Metriken überwacht werden sollen.
 
-image:MonitorMetricFilter.png["Filtern Von Metriken"]
+image:MonitorMetricFilter.png["Metrikfilterung"]
 
-Beim Arbeiten mit Integrationsdaten (Kubernetes, erweiterte ONTAP Daten usw.) werden durch Metrikfilterung die einzelnen/nicht Punkte der aufgezeichneten Datenreihe entfernt, im Gegensatz zu Infrastrukturdaten (Storage, VM, Ports usw.). Dort arbeiten Filter am aggregierten Wert der Datenserie und entfernen das gesamte Objekt aus dem Diagramm.
+Beim Arbeiten mit Integrationsdaten (Kubernetes, ONTAP Advanced Data usw.) entfernt die Metrikfilterung die einzelnen/nicht übereinstimmenden Datenpunkte aus der dargestellten Datenreihe. Bei Infrastrukturdaten (Speicher, VM, Ports usw.) hingegen arbeiten Filter mit dem aggregierten Wert der Datenreihe und entfernen möglicherweise das gesamte Objekt aus dem Diagramm.
 
 
 TIP: Um einen Monitor mit mehreren Bedingungen zu erstellen (z. B. IOPS > X und Latenz > Y), definieren Sie die erste Bedingung als Schwellenwert und die zweite Bedingung als Filter.
@@ -74,15 +74,15 @@ TIP: Um einen Monitor mit mehreren Bedingungen zu erstellen (z. B. IOPS > X und 
 
 ==== Definieren Sie die Bedingungen des Monitors.
 
-. Nachdem Sie das zu überwachende Objekt und die Kennzahl ausgewählt haben, legen Sie die Schwellenwerte für Warnstufe und/oder kritische Stufe fest.
-. Geben Sie für die Stufe _Warnung_ 200 für unser Beispiel ein. Die gestrichelte Linie, die diese Warnstufe angibt, wird im Beispieldiagramm angezeigt.
-. Geben Sie für die Stufe _Critical_ 400 ein. Die gestrichelte Linie, die diesen kritischen Level angibt, wird im Beispieldiagramm angezeigt.
+. Nachdem Sie das zu überwachende Objekt und die Metrik ausgewählt haben, legen Sie die Schwellenwerte für die Warnstufe und/oder die kritische Stufe fest.
+. Geben Sie für die Warnstufe in unserem Beispiel 200 ein.  Die gestrichelte Linie, die diese Warnstufe anzeigt, wird im Beispieldiagramm angezeigt.
+. Geben Sie für die Stufe _Kritisch_ den Wert 400 ein.  Die gestrichelte Linie, die diesen kritischen Pegel anzeigt, wird im Beispieldiagramm angezeigt.
 +
-Im Diagramm werden Verlaufsdaten angezeigt. Die Zeilen Warnung und kritische Ebene im Diagramm sind eine visuelle Darstellung des Monitors, sodass Sie leicht sehen können, wann der Monitor in jedem Fall eine Warnmeldung auslöst.
+Das Diagramm zeigt historische Daten.  Die Warn- und Kritisch-Level-Linien im Diagramm sind eine visuelle Darstellung des Monitors, sodass Sie leicht erkennen können, wann der Monitor in jedem Fall eine Warnung auslösen könnte.
 
-. Wählen Sie für das Auftreten des Intervalls _kontinuierlich_ für einen Zeitraum von _15 Minuten_ aus.
+. Wählen Sie für das Auftretensintervall _Kontinuierlich_ für einen Zeitraum von _15 Minuten_.
 +
-Sie können eine Warnung auslösen, sobald ein Schwellenwert überschritten wird, oder warten, bis der Schwellenwert für einen bestimmten Zeitraum kontinuierlich verletzt wurde. In unserem Beispiel möchten wir nicht jedes Mal benachrichtigt werden, wenn die IOPS-Punkte insgesamt über dem Warnungs- oder kritischen Level liegen, sondern nur, wenn ein überwachtes Objekt mindestens 15 Minuten lang einen dieser Werte überschreitet.
+Sie können wählen, ob Sie einen Alarm auslösen möchten, sobald ein Schwellenwert überschritten wird, oder ob Sie warten möchten, bis der Schwellenwert über einen bestimmten Zeitraum hinweg kontinuierlich überschritten wurde.  In unserem Beispiel möchten wir nicht jedes Mal benachrichtigt werden, wenn die Gesamt-IOPS den Warn- oder kritischen Wert überschreiten, sondern nur, wenn ein überwachtes Objekt mindestens 15 Minuten lang kontinuierlich einen dieser Werte überschreitet.
 
 +
 image:Monitor_metric_conditions.png["Definieren Sie die Bedingungen des Monitors"]
@@ -91,114 +91,114 @@ image:Monitor_metric_conditions.png["Definieren Sie die Bedingungen des Monitors
 
 
 
-==== Definieren Sie das Verhalten für die Alarmauflösung
+==== Definieren des Alarmauflösungsverhaltens
 
-Sie können festlegen, wie eine Kennzahlüberwachung behoben werden soll. Ihnen stehen zwei Möglichkeiten zur Verfügung:
+Sie können auswählen, wie eine Metriküberwachungswarnung aufgelöst wird.  Ihnen stehen zwei Möglichkeiten zur Verfügung:
 
-* Beheben Sie, wenn die Metrik wieder in den zulässigen Bereich zurückkehrt.
-* Beheben Sie, wenn die Kennzahl für einen bestimmten Zeitraum innerhalb des zulässigen Bereichs liegt, von 1 Minute bis 7 Tage.
-
-
+* Lösen Sie das Problem, wenn die Metrik wieder in den akzeptablen Bereich zurückkehrt.
+* Lösen Sie das Problem, wenn die Metrik für einen bestimmten Zeitraum (von 1 Minute bis 7 Tagen) im akzeptablen Bereich liegt.
 
 
-=== Protokollüberwachung
-
-Beim Erstellen eines *Protokollmonitors* wählen Sie zunächst aus der verfügbaren Protokollliste aus, welches Protokoll überwacht werden soll. Sie können dann nach den verfügbaren Attributen wie oben filtern. Sie können auch ein oder mehrere Attribute „Gruppieren nach“ auswählen.
 
 
-NOTE: Der Filter Protokollmonitor darf nicht leer sein.
+=== Protokollmonitor
 
-image:Monitor_Group_By_Example.png["Wählen Sie Protokoll, das überwacht werden soll, legen Sie einen Filter fest, und wählen Sie ggf. Gruppe nach Methode aus"]
+Wählen Sie beim Erstellen eines *Protokollmonitors* zunächst aus der verfügbaren Protokollliste aus, welches Protokoll überwacht werden soll.  Anschließend können Sie wie oben beschrieben anhand der verfügbaren Attribute filtern.  Sie können auch ein oder mehrere „Gruppieren nach“-Attribute auswählen.
+
+
+NOTE: Der Log-Monitor-Filter darf nicht leer sein.
+
+image:Monitor_Group_By_Example.png["Wählen Sie das zu überwachende Protokoll aus, legen Sie einen Filter fest und wählen Sie bei Bedarf die Gruppierungsmethode aus."]
 
 
 
 ==== Definieren Sie das Alarmverhalten
 
-Sie können den Monitor so erstellen, dass er mit dem Schweregrad „_kritisch_“, „_Warnung_“ oder „_informationell_“ benachrichtigt wird, wenn die oben definierten Bedingungen einmal (d. h. sofort) auftreten, oder warten, bis die Bedingungen mindestens 2 Mal auftreten.
+Sie können den Monitor so erstellen, dass er mit dem Schweregrad _Kritisch_, _Warnung_ oder _Informativ_ warnt, wenn die oben definierten Bedingungen einmal (also sofort) eintreten, oder mit der Warnung warten, bis die Bedingungen zweimal oder öfter eintreten.
 
 
 
-==== Definieren Sie das Verhalten für die Alarmauflösung
+==== Definieren des Alarmauflösungsverhaltens
 
-Sie können festlegen, wie eine Protokollüberwachung behoben werden soll. Sie erhalten drei Möglichkeiten:
+Sie können auswählen, wie eine Warnung des Protokollmonitors aufgelöst wird.  Ihnen stehen drei Auswahlmöglichkeiten zur Verfügung:
 
-* *Sofort beheben*: Der Alarm wird sofort behoben, ohne dass weitere Maßnahmen erforderlich sind
-* *Auflösung basierend auf Zeit*: Der Alarm wird nach Ablauf der angegebenen Zeit gelöst
-* *Auflösung basierend auf Protokolleintrag*: Der Alarm wird aufgelöst, wenn eine nachfolgende Log-Aktivität stattgefunden hat. Beispiel: Wenn ein Objekt als „verfügbar“ protokolliert wird.
+* *Sofort lösen*: Der Alarm wird sofort gelöst, es sind keine weiteren Maßnahmen erforderlich
+* *Auflösung basierend auf Zeit*: Der Alarm wird nach Ablauf der angegebenen Zeit aufgelöst
+* *Auflösung basierend auf Protokolleintrag*: Der Alarm wird aufgelöst, wenn eine nachfolgende Protokollaktivität aufgetreten ist.  Beispielsweise wenn ein Objekt als „verfügbar“ protokolliert wird.
 
 
 image:Monitor_log_monitor_resolution.png["Alarmauflösung"]
 
 
 
-=== Überwachung Der Anomalieerkennung
+=== Anomalieerkennungsmonitor
 
-. Suchen Sie im Dropdown-Menü nach einem Objekttyp und einer Metrik, die überwacht werden soll, und wählen Sie diesen aus.
+. Suchen Sie in der Dropdown-Liste nach einem zu überwachenden Objekttyp und einer Metrik und wählen Sie diese aus.
 
 
-Filter können eingesetzt werden, um festzulegen, welche Objektattribute oder Metriken überwacht werden sollen.
+Sie können Filter festlegen, um einzugrenzen, welche Objektattribute oder Metriken überwacht werden sollen.
 
-image:AnomalyDetectionMonitorMetricChoosing.png["Filtern von Kennzahlen für die Erkennung von Anomalien"]
+image:AnomalyDetectionMonitorMetricChoosing.png["Metrikfilterung zur Anomalieerkennung"]
 
 
 
 ==== Definieren Sie die Bedingungen des Monitors.
 
-. Nachdem Sie das zu überwachende Objekt und die zu überwachende Metrik ausgewählt haben, legen Sie die Bedingungen fest, unter denen eine Anomalie erkannt wird.
+. Nachdem Sie das zu überwachende Objekt und die Metrik ausgewählt haben, legen Sie die Bedingungen fest, unter denen eine Anomalie erkannt wird.
 +
-** Wählen Sie aus, ob eine Anomalie erkannt werden soll, wenn die gewählte Metrik *über* die vorhergesagten Grenzen spikt, *unter* diese Grenzen fällt oder *Spikes über oder unter* die Grenzen fällt.
-** Stellen Sie die *Empfindlichkeit* der Erkennung ein. *Niedrig* (weniger Anomalien werden entfernt), *Mittel* oder *hoch* (es werden mehr Anomalien entdeckt).
-** Stellen Sie die Alarme auf verdorren *Warnung* oder *kritisch* ein.
+** Wählen Sie, ob eine Anomalie erkannt werden soll, wenn die gewählte Metrik die vorhergesagten Grenzen *überschreitet*, *unterschreitet* oder *über oder unterschreitet*.
+** Stellen Sie die *Empfindlichkeit* der Erkennung ein.  *Niedrig* (weniger Anomalien werden erkannt), *Mittel* oder *Hoch* (mehr Anomalien werden erkannt).
+** Stellen Sie die Warnungen auf *Warnung* oder *Kritisch* ein.
 ** Bei Bedarf können Sie das Rauschen reduzieren und Anomalien ignorieren, wenn die gewählte Metrik unter einem von Ihnen festgelegten Schwellenwert liegt.
 
 
 
 
-image:AnomalyDetectionMonitorDefineConditions.png["Definieren der Bedingungen, um eine Anomalieerkennung auszulösen"]
+image:AnomalyDetectionMonitorDefineConditions.png["Definieren der Bedingungen zum Auslösen einer Anomalieerkennung"]
 
 
 
-=== Wählen Sie Benachrichtigungstyp und Empfänger aus
+=== Benachrichtigungstyp und Empfänger auswählen
 
-Im Abschnitt „ Team Notification(s)_ einrichten“ können Sie auswählen, ob Sie Ihr Team per E-Mail oder Webhook benachrichtigen möchten.
+Im Abschnitt „Teambenachrichtigung(en) einrichten“ können Sie auswählen, ob Ihr Team per E-Mail oder Webhook benachrichtigt werden soll.
 
-image:Webhook_Choose_Monitor_Notification.png["Wählen Sie die Alarmmethode"]
+image:Webhook_Choose_Monitor_Notification.png["Wählen Sie eine Benachrichtigungsmethode"]
 
-*Alerting via Email:*
+*Benachrichtigung per E-Mail:*
 
-Geben Sie die E-Mail-Empfänger für Benachrichtigungen an. Bei Bedarf können Sie verschiedene Empfänger für Warnungen oder kritische Warnungen auswählen.
+Geben Sie die E-Mail-Empfänger für Warnbenachrichtigungen an.  Bei Bedarf können Sie für Warnungen oder kritische Alarme unterschiedliche Empfänger auswählen.
 
-image:email_monitor_alerts.png["Empfänger Für E-Mail-Benachrichtigung"]
+image:email_monitor_alerts.png["Empfänger von E-Mail-Benachrichtigungen"]
 
-*Alerting via Webhook:*
+*Alarmierung per Webhook:*
 
-Legen Sie die Webhook(s) für Benachrichtigungen für Warnmeldungen fest. Bei Bedarf können Sie verschiedene Webhooks für Warnung oder kritische Alarme auswählen.
+Geben Sie den/die Webhook(s) für Warnbenachrichtigungen an.  Bei Bedarf können Sie verschiedene Webhooks für Warnungen oder kritische Alarme auswählen.
 
-image:Webhook_Monitor_Notifications.png["Webhook Alerting"]
-
-
-NOTE: ONTAP Data Collector-Benachrichtigungen haben Vorrang vor allen spezifischen Monitoring-Benachrichtigungen, die für den Cluster/den Datensammler relevant sind. Die Empfängerliste, die Sie für den Data Collector selbst festgelegt haben, erhält die Warnungen zum Datensammler. Wenn keine aktiven Warnungen zur Datenerfassung vorhanden sind, werden die von Monitor erzeugten Warnmeldungen an bestimmte Überwachungsempfänger gesendet.
+image:Webhook_Monitor_Notifications.png["Webhook-Warnung"]
 
 
-
-=== Einstellen von Korrekturmaßnahmen oder zusätzlichen Informationen
-
-Sie können eine optionale Beschreibung sowie zusätzliche Erkenntnisse und/oder Korrekturmaßnahmen hinzufügen, indem Sie den Abschnitt *Alarm hinzufügen Beschreibung* ausfüllen. Die Beschreibung kann bis zu 1024 Zeichen lang sein und wird mit der Warnmeldung gesendet. Das Feld „Insights/Korrekturmaßnahmen“ kann bis zu 67,000 Zeichen lang sein und wird im Übersichtsbereich der Landing Page für die Warnmeldung angezeigt.
-
-In diesen Feldern können Sie Hinweise, Links oder Schritte angeben, die Sie zur Korrektur oder anderweitigen Adresse der Warnmeldung ergreifen können.
-
-Sie können ein beliebiges Objektattribut (z. B. Speichername) als Parameter zu einer Warnmeldungsbeschreibung hinzufügen. Beispielsweise können Sie Parameter für den Volume-Namen und den Speichernamen in einer Beschreibung wie „hohe Latenz für Volume: _%%relatedObject.volume.name%%_, Storage: _%%relatedObject.storage.name%%_"“ festlegen.
-
-image:Monitors_Alert_Description.png["Warnungen Korrekturmaßnahmen und Beschreibung"]
+NOTE: ONTAP Data Collector-Benachrichtigungen haben Vorrang vor allen spezifischen Monitor-Benachrichtigungen, die für den Cluster/Data Collector relevant sind.  Die Empfängerliste, die Sie für den Datensammler selbst festlegen, erhält die Warnungen des Datensammlers.  Wenn keine aktiven Datensammlerwarnungen vorliegen, werden vom Monitor generierte Warnungen an bestimmte Monitorempfänger gesendet.
 
 
 
-=== Speichern Sie den Monitor
+=== Festlegen von Korrekturmaßnahmen oder zusätzlichen Informationen
 
-. Auf Wunsch können Sie eine Beschreibung des Monitors hinzufügen.
+Sie können eine optionale Beschreibung sowie zusätzliche Erkenntnisse und/oder Korrekturmaßnahmen hinzufügen, indem Sie den Abschnitt *Warnungsbeschreibung hinzufügen* ausfüllen.  Die Beschreibung kann bis zu 1024 Zeichen lang sein und wird mit der Warnung gesendet.  Das Feld „Erkenntnisse/Korrekturmaßnahmen“ kann bis zu 67.000 Zeichen umfassen und wird im Zusammenfassungsbereich der Zielseite der Warnung angezeigt.
+
+In diesen Feldern können Sie Notizen, Links oder Schritte zur Korrektur oder anderweitigen Bearbeitung der Warnung angeben.
+
+Sie können einer Alarmbeschreibung jedes beliebige Objektattribut (z. B. den Speichernamen) als Parameter hinzufügen.  Sie können beispielsweise Parameter für den Volumenamen und den Speichernamen in einer Beschreibung wie folgt festlegen: „Hohe Latenz für Volume: _%%relatedObject.volume.name%%_, Speicher: _%%relatedObject.storage.name%%_“.
+
+image:Monitors_Alert_Description.png["Korrekturmaßnahmen und Beschreibung der Warnung"]
+
+
+
+=== Speichern Sie Ihren Monitor
+
+. Falls gewünscht, können Sie eine Beschreibung des Monitors hinzufügen.
 . Geben Sie dem Monitor einen aussagekräftigen Namen und klicken Sie auf *Speichern*.
 +
-Ihr neuer Monitor wird zur Liste der aktiven Monitore hinzugefügt.
+Ihr neuer Monitor wird der Liste der aktiven Monitore hinzugefügt.
 
 
 
@@ -206,96 +206,96 @@ Ihr neuer Monitor wird zur Liste der aktiven Monitore hinzugefügt.
 
 == Monitorliste
 
-Auf der Seite „Monitor“ werden die derzeit konfigurierten Monitore angezeigt, die Folgendes anzeigen:
+Auf der Seite „Monitor“ werden die aktuell konfigurierten Monitore aufgelistet und Folgendes angezeigt:
 
 * Monitorname
 * Status
-* Objekt/Metrik, die überwacht wird
+* Überwachtes Objekt/Metrik
 * Bedingungen des Monitors
 
 
-Sie können die Überwachung eines Objekttyps vorübergehend anhalten, indem Sie auf das Menü rechts neben dem Monitor klicken und *Pause* wählen. Wenn Sie bereit sind, die Überwachung fortzusetzen, klicken Sie auf *Fortsetzen*.
+Sie können die Überwachung eines Objekttyps vorübergehend anhalten, indem Sie auf das Menü rechts neben dem Monitor klicken und *Pause* auswählen.  Wenn Sie bereit sind, die Überwachung fortzusetzen, klicken Sie auf *Fortsetzen*.
 
-Sie können einen Monitor kopieren, indem Sie im Menü * Duplizieren* wählen. Anschließend können Sie den neuen Monitor ändern und das Objekt/die Metrik, den Filter, die Bedingungen, E-Mail-Empfänger usw. ändern
+Sie können einen Monitor kopieren, indem Sie im Menü *Duplizieren* auswählen.  Anschließend können Sie den neuen Monitor modifizieren und Objekt/Metrik, Filter, Bedingungen, E-Mail-Empfänger usw. ändern.
 
-Wenn ein Monitor nicht mehr benötigt wird, können Sie ihn löschen, indem Sie im Menü *Löschen* wählen.
+Wenn ein Monitor nicht mehr benötigt wird, können Sie ihn löschen, indem Sie im Menü *Löschen* auswählen.
 
 
 
-== Gruppen Überwachen
+== Monitorgruppen
 
-Durch Gruppierung können Sie zugehörige Monitore anzeigen und verwalten. Sie können beispielsweise eine Überwachungsgruppe für den Speicher Ihres Mandanten festlegen oder für eine bestimmte Empfängerliste relevante Überwachungsgruppen überwachen.
+Durch Gruppieren können Sie zusammengehörige Monitore anzeigen und verwalten.  Sie können beispielsweise eine Monitorgruppe speziell für den Speicher Ihres Mandanten einrichten oder Monitore, die für eine bestimmte Empfängerliste relevant sind.
 
-image:Monitors_GroupList.png["Gruppierung Überwachen"]
+image:Monitors_GroupList.png["Monitorgruppierung"]
 
-Die folgenden Monitorgruppen werden angezeigt. Neben dem Gruppennamen wird die Anzahl der in einer Gruppe enthaltenen Monitore angezeigt.
+Die folgenden Monitorgruppen werden angezeigt.  Die Anzahl der in einer Gruppe enthaltenen Monitore wird neben dem Gruppennamen angezeigt.
 
-* * Alle Monitore* listet alle Monitore auf.
+* *Alle Monitore* listet alle Monitore auf.
 * *Benutzerdefinierte Monitore* listet alle vom Benutzer erstellten Monitore auf.
-* *Suspended Monitors* listet alle Systemmonitore auf, die von Data Infrastructure Insights ausgesetzt wurden.
-* Data Infrastructure Insights zeigt auch eine Reihe von *Systemüberwachungsgruppen*, die eine oder mehrere Gruppen von auflistenlink:task_system_monitors.html["Systemdefinierte Monitore"], einschließlich ONTAP Infrastruktur und Workload-Monitore.
+* *Angehaltene Monitore* listet alle Systemmonitore auf, die von Data Infrastructure Insights angehalten wurden.
+* Data Infrastructure Insights zeigt auch eine Reihe von *System Monitor Groups* an, die eine oder mehrere Gruppen vonlink:task_system_monitors.html["systemdefinierte Monitore"] , einschließlich ONTAP -Infrastruktur- und Workload-Monitoren.
 
 
 
-NOTE: Benutzerdefinierte Monitore können angehalten, fortgesetzt, gelöscht oder in eine andere Gruppe verschoben werden. Systemdefinierte Monitore können angehalten und fortgesetzt werden, können aber nicht gelöscht oder verschoben werden.
+NOTE: Benutzerdefinierte Monitore können angehalten, fortgesetzt, gelöscht oder in eine andere Gruppe verschoben werden.  Systemdefinierte Monitore können angehalten und fortgesetzt, aber nicht gelöscht oder verschoben werden.
 
 
 
-=== Suspendierte Monitore
+=== Hängende Monitore
 
-Diese Gruppe wird nur angezeigt, wenn Data Infrastructure Insights einen oder mehrere Monitore ausgesetzt hat. Ein Monitor kann ausgesetzt werden, wenn er übermäßige oder kontinuierliche Alarme erzeugt. Wenn es sich bei dem Monitor um einen benutzerdefinierten Monitor handelt, ändern Sie die Bedingungen, um eine kontinuierliche Warnung zu verhindern, und setzen Sie den Monitor dann fort. Der Monitor wird aus der Gruppe der suspendierten Monitore entfernt, wenn das Problem, das die Aussetzung verursacht, behoben wird.
+Diese Gruppe wird nur angezeigt, wenn Data Infrastructure Insights einen oder mehrere Monitore angehalten hat.  Ein Monitor kann ausgesetzt werden, wenn er übermäßig viele oder kontinuierliche Warnungen generiert.  Wenn es sich bei dem Monitor um einen benutzerdefinierten Monitor handelt, ändern Sie die Bedingungen, um die kontinuierliche Alarmierung zu verhindern, und setzen Sie den Monitor dann fort.  Der Monitor wird aus der Gruppe „Angehaltene Monitore“ entfernt, wenn das Problem, das zur Anhaltung geführt hat, behoben ist.
 
 
 
 === Systemdefinierte Monitore
 
-In diesen Gruppen werden Monitore angezeigt, die von Data Infrastructure Insights bereitgestellt werden, sofern Ihre Umgebung die Geräte und/oder die Protokollverfügbarkeit enthält, die von den Monitoren benötigt werden.
+Diese Gruppen zeigen die von Data Infrastructure Insights bereitgestellten Monitore an, sofern Ihre Umgebung die von den Monitoren benötigten Geräte und/oder Protokollverfügbarkeit enthält.
 
-Systemdefinierte Monitore können nicht geändert, in eine andere Gruppe verschoben oder gelöscht werden. Sie können jedoch ein Systemmonitor duplizieren und das Duplikat ändern oder verschieben.
+Systemdefinierte Monitore können nicht geändert, in eine andere Gruppe verschoben oder gelöscht werden.  Sie können jedoch einen Systemmonitor duplizieren und das Duplikat ändern oder verschieben.
 
-Systemmonitore können auch Monitoring für ONTAP-Infrastruktur (Storage, Volume usw.) oder Workloads (Protokollmonitore) oder andere Gruppen umfassen. NetApp prüft die Anforderungen und Produktfunktionen von Kunden fortlaufend. Zudem werden Systemmonitore und -Gruppen nach Bedarf aktualisiert oder ergänzt.
+Systemmonitore können Monitore für die ONTAP Infrastruktur (Speicher, Volume usw.) oder Workloads (d. h. Protokollmonitore) oder andere Gruppen umfassen.  NetApp wertet ständig die Kundenbedürfnisse und Produktfunktionen aus und aktualisiert oder ergänzt Systemmonitore und -gruppen nach Bedarf.
 
 
 
 === Benutzerdefinierte Monitorgruppen
 
-Sie können Ihre eigenen Gruppen erstellen, die Monitore auf der Grundlage Ihrer Anforderungen enthalten. Sie möchten beispielsweise eine Gruppe für alle speicherbezogenen Monitore.
+Sie können Ihre eigenen Gruppen erstellen, um Monitore entsprechend Ihren Anforderungen zu enthalten.  Beispielsweise möchten Sie möglicherweise eine Gruppe für alle Ihre speicherbezogenen Monitore.
 
-Um eine neue benutzerdefinierte Monitorgruppe zu erstellen, klicken Sie auf die Schaltfläche *"+" Neue Monitorgruppe erstellen*. Geben Sie einen Namen für die Gruppe ein und klicken Sie auf *Gruppe erstellen*. Eine leere Gruppe mit diesem Namen wird erstellt.
+Um eine neue benutzerdefinierte Monitorgruppe zu erstellen, klicken Sie auf die Schaltfläche *"+" Neue Monitorgruppe erstellen*.  Geben Sie einen Namen für die Gruppe ein und klicken Sie auf *Gruppe erstellen*.  Es wird eine leere Gruppe mit diesem Namen erstellt.
 
-Um Monitore zur Gruppe hinzuzufügen, gehen Sie zur Gruppe _Alle Monitore_ (empfohlen) und führen Sie einen der folgenden Schritte aus:
+Um Monitore zur Gruppe hinzuzufügen, gehen Sie zur Gruppe „Alle Monitore“ (empfohlen) und führen Sie einen der folgenden Schritte aus:
 
-* Um einen einzelnen Monitor hinzuzufügen, klicken Sie auf das Menü rechts neben dem Monitor und wählen Sie _zu Gruppe hinzufügen_. Wählen Sie die Gruppe aus, der der Monitor hinzugefügt werden soll.
-* Klicken Sie auf den Monitornamen, um die Bearbeitungsansicht des Monitors zu öffnen, und wählen Sie im Abschnitt „_mit einer Monitorgruppe verknüpfen“ eine Gruppe aus.
+* Um einen einzelnen Monitor hinzuzufügen, klicken Sie auf das Menü rechts neben dem Monitor und wählen Sie _Zur Gruppe hinzufügen_.  Wählen Sie die Gruppe aus, zu der der Monitor hinzugefügt werden soll.
+* Klicken Sie auf den Monitornamen, um die Bearbeitungsansicht des Monitors zu öffnen, und wählen Sie im Abschnitt _Mit einer Monitorgruppe verknüpfen_ eine Gruppe aus.
 +
 image:Monitors_AssociateToGroup.png["Mit Gruppe verknüpfen"]
 
 
 
-Entfernen Sie Monitore, indem Sie auf eine Gruppe klicken und im Menü _aus Gruppe_ entfernen auswählen. Sie können keine Monitore aus der Gruppe „_Alle Monitore_“ oder „ Benutzerdefinierte Monitore_“ entfernen. Um einen Monitor aus diesen Gruppen zu löschen, müssen Sie den Monitor selbst löschen.
+Entfernen Sie Monitore, indem Sie auf eine Gruppe klicken und im Menü „Aus Gruppe entfernen“ auswählen.  Sie können keine Monitore aus der Gruppe „Alle Monitore“ oder „Benutzerdefinierte Monitore“ entfernen.  Um einen Monitor aus diesen Gruppen zu löschen, müssen Sie den Monitor selbst löschen.
 
 
-NOTE: Durch das Entfernen eines Monitors aus einer Gruppe wird der Monitor nicht aus Data Infrastructure Insights gelöscht. Um einen Monitor vollständig zu entfernen, wählen Sie den Monitor aus, und klicken Sie auf _Löschen_. Dadurch wird sie auch aus der Gruppe entfernt, zu der sie gehört hat und für keinen Benutzer mehr verfügbar ist.
+NOTE: Durch das Entfernen eines Monitors aus einer Gruppe wird der Monitor nicht aus Data Infrastructure Insights gelöscht.  Um einen Monitor vollständig zu entfernen, wählen Sie den Monitor aus und klicken Sie auf _Löschen_.  Dadurch wird es auch aus der Gruppe entfernt, zu der es gehörte, und steht keinem Benutzer mehr zur Verfügung.
 
-Sie können einen Monitor auf dieselbe Weise in eine andere Gruppe verschieben und dabei _zu Gruppe_ verschieben.
+Sie können einen Monitor auf die gleiche Weise auch in eine andere Gruppe verschieben, indem Sie _In Gruppe verschieben_ auswählen.
 
-Um alle Monitore in einer Gruppe gleichzeitig anzuhalten oder wieder aufzunehmen, wählen Sie das Menü für die Gruppe aus und klicken Sie auf _Pause_ oder _Fortsetzen_.
+Um alle Monitore einer Gruppe gleichzeitig anzuhalten oder fortzusetzen, wählen Sie das Menü für die Gruppe aus und klicken Sie auf _Pause_ oder _Fortsetzen_.
 
-Verwenden Sie dasselbe Menü, um eine Gruppe umzubenennen oder zu löschen. Beim Löschen einer Gruppe werden die Monitore nicht aus Data Infrastructure Insights gelöscht, sondern sind weiterhin in _Alle Monitore_ verfügbar.
+Verwenden Sie dasselbe Menü, um eine Gruppe umzubenennen oder zu löschen.  Durch das Löschen einer Gruppe werden die Monitore nicht aus Data Infrastructure Insights gelöscht. Sie sind weiterhin unter „Alle Monitore“ verfügbar.
 
-image:Monitors_PauseGroup.png["Anhalten einer Gruppe"]
+image:Monitors_PauseGroup.png["Eine Gruppe pausieren"]
 
 
 
 == Systemdefinierte Monitore
 
-Data Infrastructure Insights umfasst eine Reihe von systemdefinierten Monitoring-Funktionen für Kennzahlen und Protokolle. Die verfügbaren Systemmonitore hängen von den Datensammlern ab, die auf Ihrem Mandanten vorhanden sind. Aus diesem Grund können sich die in Data Infrastructure Insights verfügbaren Monitore ändern, wenn Datensammler hinzugefügt oder ihre Konfigurationen geändert werden.
+Data Infrastructure Insights umfasst eine Reihe systemdefinierter Monitore für Metriken und Protokolle.  Die verfügbaren Systemmonitore hängen von den auf Ihrem Mandanten vorhandenen Datensammlern ab.  Aus diesem Grund können sich die in Data Infrastructure Insights verfügbaren Monitore ändern, wenn Datensammler hinzugefügt oder ihre Konfigurationen geändert werden.
 
-Auf der link:task_system_monitors.html["Systemdefinierte Monitore"] Seite finden Sie Beschreibungen der in Data Infrastructure Insights enthaltenen Monitore.
+Sehen Sie sich dielink:task_system_monitors.html["Systemdefinierte Monitore"] Seite mit Beschreibungen der in Data Infrastructure Insights enthaltenen Monitore.
 
 
 
 === Weitere Informationen
 
-* link:task_view_and_manage_alerts.html["Anzeigen und Fehlstellen von Warnungen"]
+* link:task_view_and_manage_alerts.html["Anzeigen und Verwerfen von Warnungen"]
 

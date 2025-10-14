@@ -2,128 +2,128 @@
 sidebar: sidebar 
 permalink: task_dc_na_cdot.html 
 keywords: data collector, ontap, ontap, CDOT 
-summary: ONTAP Data Collector 
+summary: ONTAP-Datensammler 
 ---
-= Datensammler der NetApp ONTAP Datenmanagement-Software
+= Datenkollektor der NetApp ONTAP Data Management Software
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Diese Datensammlung erfasst Bestands- und Performancedaten von Storage-Systemen mit ONTAP unter Verwendung von schreibgeschützten API-Aufrufen eines ONTAP-Kontos. Dieser Datensammler erstellt auch einen Datensatz in der Cluster-Anwendungsregistrierung, um den Support zu beschleunigen.
+Dieser Datensammler erfasst Inventar- und Leistungsdaten von Speichersystemen, auf denen ONTAP ausgeführt wird, mithilfe von schreibgeschützten API-Aufrufen von einem ONTAP Konto.  Dieser Datensammler erstellt außerdem einen Datensatz im Cluster-Anwendungsregister, um den Support zu beschleunigen.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst Inventar- und Performance-Daten aus dem ONTAP Datensammler. Für jeden erworbenen Asset-Typ wird die am häufigsten für das Asset verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erfasst Bestands- und Leistungsdaten vom ONTAP Datensammler.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für den Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 
 
-| Raid-Gruppe | Festplattengruppe 
+| Raid-Gruppe | Datenträgergruppe 
 
 
 | Cluster | Storage 
 
 
-| Knoten | Storage-Node 
+| Node | Speicherknoten 
 
 
-| Aggregat | Storage-Pool 
+| Aggregat | Speicherpool 
 
 
-| LUN | Datenmenge 
+| LUN | Volumen 
 
 
-| Datenmenge | Internes Volumen 
+| Volumen | Internes Volumen 
 |===
 
 
-== Terminologie für ONTAP Datenmanagement
+== ONTAP Datenmanagement-Terminologie
 
-Die folgenden Begriffe gelten für Objekte oder Referenzen, die Sie auf den Landing Pages für ONTAP Storage-Assets finden können. Viele dieser Bedingungen gelten auch für andere Datensammler.
+Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherweise auf den Zielseiten der ONTAP Data Management-Speicherressourcen finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
 
 
 
 === Storage
 
-* Modell – Eine durch Komma getrennte Liste der eindeutigen Node-Modellnamen in diesem Cluster. Wenn alle Nodes in den Clustern denselben Modelltyp aufweisen, wird nur ein Modellname angezeigt.
+* Modell – Eine durch Kommas getrennte Liste der eindeutigen, diskreten Knotenmodellnamen innerhalb dieses Clusters.  Wenn alle Knoten in den Clustern vom gleichen Modelltyp sind, wird nur ein Modellname angezeigt.
 * Anbieter – derselbe Anbietername, den Sie sehen würden, wenn Sie eine neue Datenquelle konfigurieren würden.
-* Seriennummer: Die Seriennummer des Arrays. Bei Cluster-Architektur Storage-Systemen wie ONTAP Datenmanagement, ist diese Seriennummer möglicherweise weniger nützlich als die einzelnen Seriennummern der Storage-Nodes.
-* IP: In der Regel werden die in der Datenquelle konfigurierten IP(s) oder Hostnamen(s) verwendet.
-* Microcode-Version – Firmware.
-* Rohkapazität – Basis-2-Zusammenfassung aller physischen Laufwerke im System, unabhängig von ihrer Rolle.
-* Latenz – eine Darstellung der Workloads, die sich auf dem Host auslasten, sowohl bei Lese- als auch bei Schreibzugriffen. Idealerweise bezieht Data Infrastructure Insights diesen Wert direkt ein, ist dies jedoch häufig nicht der Fall. Statt dieses Array in Betracht zu ziehen, führt Data Infrastructure Insights in der Regel eine IOPS-gewichtete Berechnung aus den Statistiken der einzelnen internen Volumes durch.
-* Durchsatz: Aggregiert aus internen Volumes. Verwaltung – dieser kann einen Hyperlink für die Verwaltungsschnittstelle des Geräts enthalten. Programmgesteuert erstellt von der Datenquelle „Data Infrastructure Insights“ als Teil der Bestandsberichterstattung.
+* Seriennummer – Die Seriennummer des Arrays.  Bei Speichersystemen mit Clusterarchitektur wie ONTAP Data Management ist diese Seriennummer möglicherweise weniger nützlich als die Seriennummern der einzelnen „Storage Nodes“.
+* IP – im Allgemeinen handelt es sich dabei um die in der Datenquelle konfigurierten IPs oder Hostnamen.
+* Mikrocode-Version – Firmware.
+* Rohkapazität – Summe aller physischen Festplatten im System zur Basis 2, unabhängig von ihrer Rolle.
+* Latenz – eine Darstellung der Arbeitslasten, die der Host sowohl beim Lesen als auch beim Schreiben erfährt.  Im Idealfall bezieht Data Infrastructure Insights diesen Wert direkt, dies ist jedoch häufig nicht der Fall.  Anstelle des Arrays, das dies anbietet, führt Data Infrastructure Insights im Allgemeinen eine IOP-gewichtete Berechnung durch, die aus den Statistiken der einzelnen internen Volumes abgeleitet wird.
+* Durchsatz – aggregiert aus internen Volumes.  Verwaltung – dies kann einen Hyperlink zur Verwaltungsschnittstelle des Geräts enthalten.  Programmgesteuert von der Data Infrastructure Insights Datenquelle als Teil der Bestandsberichterstattung erstellt.
 
 
 
 
-=== Storage-Pool
+=== Speicherpool
 
-* Storage – auf welchem Storage-Array dieser Pool lebt. Obligatorisch.
-* Typ – ein beschreibenden Wert aus einer Liste mit einer Aufzählung der Möglichkeiten. Am häufigsten wird „Aggregat“ oder „RAID-Gruppe“ sein.
-* Node – Wenn die Architektur dieses Speicherarrays so ist, dass Pools zu einem bestimmten Speicherknoten gehören, wird sein Name hier als Hyperlink zu seiner eigenen Landing Page angezeigt.
-* Verwendet Flash Pool – Ja/kein Wert: Verfügen in diesem SATA/SAS-basierten Pool über SSDs zur Caching-Beschleunigung?
-* Redundanz: RAID-Level oder Schutzschema. RAID_DP ist Dual-Parity, RAID_TP ist die dreifache Parität.
-* Kapazität – die Werte hier sind die logische genutzte, nutzbare Kapazität und die logische Gesamtkapazität sowie der dafür genutzte Prozentsatz.
-* Überprovisionierung der Kapazität – Wenn Sie durch den Einsatz von Effizienztechnologien eine Summe der Volume- oder internen Volume-Kapazitäten zugewiesen haben, die größer sind als die logische Kapazität des Speicherpools, wird der Prozentwert hier größer als 0 % sein.
-* Snapshot – verwendete und insgesamt Snapshot-Kapazitäten, wenn Ihre Storage Pool-Architektur einem Teil ihrer Kapazität dedizierte Bereiche für Snapshots widmet. ONTAP in MetroCluster Konfigurationen zeigen dies wahrscheinlich, während andere ONTAP Konfigurationen weniger sind.
-* Auslastung – ein Prozentwert, der den höchsten ausgelastet anteil der Festplatte anzeigt, die zur Kapazität dieses Speicherpools beiträgt. Die Festplattenauslastung ist nicht unbedingt mit der Array-Performance korreliert – die Auslastung kann aufgrund von Festplattenwiederherstellungen, Deduplizierungsaktivitäten usw. bei Abwesenheit von Host-gestützten Workloads sehr hoch sein. Auch viele Arrays Replikationsimplementierungen können die Festplattenauslastung steigern, während sie nicht als internes Volume oder Volume-Workload angezeigt werden.
-* IOPS – die Summe der IOPS aller Festplatten, die Kapazität in diesem Storage-Pool beitragen. Durchsatz – der Gesamtdurchsatz aller Festplatten, die Kapazität zu diesem Speicherpool beitragen.
-
-
+* Speicher – auf welchem Speicher-Array dieser Pool lebt.  Obligatorisch.
+* Typ – ein beschreibender Wert aus einer Liste mit aufgezählten Möglichkeiten.  Am häufigsten wird „Aggregat“ oder „RAID-Gruppe“ verwendet.
+* Knoten – Wenn die Architektur dieses Speicherarrays so ist, dass Pools zu einem bestimmten Speicherknoten gehören, wird sein Name hier als Hyperlink zu seiner eigenen Zielseite angezeigt.
+* Verwendet Flash-Pool – Ja/Nein-Wert – verfügt dieser SATA/SAS-basierte Pool über SSDs, die zur Caching-Beschleunigung verwendet werden?
+* Redundanz – RAID-Level oder Schutzschema.  RAID_DP ist doppelte Parität, RAID_TP ist dreifache Parität.
+* Kapazität – die Werte hier sind die logisch genutzte, nutzbare Kapazität und die logische Gesamtkapazität sowie der davon genutzte Prozentsatz.
+* Überbelegte Kapazität – Wenn Sie durch den Einsatz von Effizienztechnologien eine Gesamtsumme an Volume- oder internen Volume-Kapazitäten zugewiesen haben, die größer ist als die logische Kapazität des Speicherpools, ist der Prozentwert hier größer als 0 %.
+* Snapshot – verwendete und gesamte Snapshot-Kapazitäten, wenn Ihre Speicherpoolarchitektur einen Teil ihrer Kapazität Segmentbereichen ausschließlich für Snapshots zuweist.  Bei ONTAP in MetroCluster -Konfigurationen ist dies wahrscheinlich, bei anderen ONTAP Konfigurationen ist dies weniger der Fall.
+* Auslastung – ein Prozentwert, der den höchsten Prozentsatz der Festplattenauslastung aller Festplatten anzeigt, die Kapazität zu diesem Speicherpool beitragen.  Die Festplattenauslastung weist nicht unbedingt eine starke Korrelation mit der Array-Leistung auf. Die Auslastung kann aufgrund von Festplattenneuaufbauten, Deduplizierungsaktivitäten usw. hoch sein, wenn keine vom Host gesteuerten Workloads vorliegen.  Darüber hinaus können Replikationsimplementierungen vieler Arrays die Festplattenauslastung erhöhen, ohne dass dies als internes Volume oder Volume-Workload angezeigt wird.
+* IOPS – die Summe der IOPs aller Festplatten, die Kapazität zu diesem Speicherpool beitragen.  Durchsatz – der Gesamtdurchsatz aller Festplatten, die Kapazität zu diesem Speicherpool beitragen.
 
 
-=== Storage-Node
 
-* Storage – welches Storage-Array gehört zu diesem Node? Obligatorisch.
-* HA-Partner: Auf Plattformen, auf denen ein Node auf einen und nur einen anderen Node Failover ausgeführt wird, ist er allgemein zu sehen.
-* Status: Systemzustand des Node. Nur verfügbar, wenn das Array ordnungsgemäß genug ist, um von einer Datenquelle inventarisiert zu werden.
-* Modell: Modellname des Knotens
+
+=== Speicherknoten
+
+* Speicher – zu welchem Speicherarray dieser Knoten gehört.  Obligatorisch.
+* HA-Partner – auf Plattformen, auf denen ein Knoten auf einen und nur einen anderen Knoten umgeschaltet wird, wird er im Allgemeinen hier angezeigt.
+* Status – Integrität des Knotens.  Nur verfügbar, wenn das Array fehlerfrei genug ist, um von einer Datenquelle inventarisiert zu werden.
+* Modell – Modellname des Knotens.
 * Version – Versionsname des Geräts.
-* Seriennummer: Die Seriennummer des Node.
-* Speicher: Sockel 2 Speicher, falls verfügbar.
-* Auslastung – bei ONTAP handelt es sich um einen Controller-Stressindex aus einem proprietären Algorithmus. Bei jeder Performance-Umfrage wird anhand einer Zahl zwischen 0 und 100 % angegeben, die der höhere Wert bei WAFL-Festplattenkonflikten oder der durchschnittlichen CPU-Auslastung ist. Wenn Sie nachhaltige Werte > 50 % beobachten, deutet dies auf eine Unterdimensionierung hin – möglicherweise ist ein Controller/Node nicht groß genug oder nicht genug rotierende Festplatten, um den Schreib-Workload abzufangen.
-* IOPS – direkt von ONTAP-ZAPI-Aufrufen des Node-Objekts abgeleitet.
-* Latenz – wird direkt von ONTAP-ZAPI-Aufrufen des Node-Objekts abgeleitet.
-* Durchsatz – wird direkt von ONTAP-ZAPI-Aufrufen des Node-Objekts abgeleitet.
-* Prozessoren: Anzahl der CPUs
+* Seriennummer – Die Seriennummer des Knotens.
+* Speicher – Basis-2-Speicher, falls verfügbar.
+* Auslastung – Bei ONTAP ist dies ein Controller-Stressindex aus einem proprietären Algorithmus.  Bei jeder Leistungsabfrage wird eine Zahl zwischen 0 und 100 % gemeldet, die entweder der höheren WAFL Festplattenkonflikt- oder der durchschnittlichen CPU-Auslastung entspricht.  Wenn Sie anhaltende Werte > 50 % beobachten, deutet dies auf eine Unterdimensionierung hin – möglicherweise ist ein Controller/Knoten nicht groß genug oder es sind nicht genügend rotierende Festplatten vorhanden, um die Schreibarbeitslast aufzunehmen.
+* IOPS – Direkt abgeleitet von ONTAP ZAPI-Aufrufen des Knotenobjekts.
+* Latenz – Wird direkt aus ONTAP ZAPI-Aufrufen des Knotenobjekts abgeleitet.
+* Durchsatz – Wird direkt aus ONTAP ZAPI-Aufrufen des Knotenobjekts abgeleitet.
+* Prozessoren – CPU-Anzahl.
 
 
 
 
 == Anforderungen
 
-Die folgenden Anforderungen gelten für die Konfiguration und Verwendung dieses Datensammlers:
+Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden Voraussetzungen:
 
 * Sie müssen Zugriff auf ein Administratorkonto haben, das für schreibgeschützte API-Aufrufe konfiguriert ist.
 * Zu den Kontodetails gehören Benutzername und Passwort.
-* Port-Anforderungen: 80 oder 443
+* Portanforderungen: 80 oder 443
 * Kontoberechtigungen:
 +
-** Nur den Rollennamen in der ontapi-Anwendung auf den Standard-Vserver lesen
-** Möglicherweise benötigen Sie zusätzliche optionale Schreibberechtigungen. Siehe Hinweis über Berechtigungen unten.
+** Nur-Lese-Rollennamen für die Ontapi-Anwendung auf dem Standard-Vserver
+** Möglicherweise benötigen Sie zusätzliche optionale Schreibberechtigungen.  Siehe den Hinweis zu Berechtigungen weiter unten.
 
 
-* ONTAP Lizenzanforderungen:
+* ONTAP -Lizenzanforderungen:
 +
-** FCP-Lizenz und zugeordnete/maskierte Volumes sind für die Fibre-Channel-Erkennung erforderlich
+** FCP-Lizenz und zugeordnete/maskierte Volumes für die Fibre-Channel-Erkennung erforderlich
 
 
 
 
 
 
-=== Berechtigungsanforderungen für das Sammeln von ONTAP-Switch-Metriken
+=== Berechtigungsanforderungen für die Erfassung von ONTAP Switch-Metriken
 
-Data Infrastructure Insights bietet die Möglichkeit, ONTAP-Cluster-Switch-Daten als Option in den Collector-<<advanced-configuration,Erweiterte Konfiguration>>Einstellungen zu erfassen. Zusätzlich zur Aktivierung dieser Funktion im Data Infrastructure Insights Collector müssen Sie das ONTAP-System* selbst so konfigurieren, dass link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["Switch-Informationen"]die korrekten <<a-note-about-permissions,Berechtigungen>>Einstellungen vorgenommen werden, damit die Switch-Daten an Data Infrastructure Insights gesendet werden können.
+Data Infrastructure Insights bietet die Möglichkeit, ONTAP Cluster-Switch-Daten als Option im Collector zu sammeln<<advanced-configuration,Erweiterte Konfiguration>> Einstellungen.  Zusätzlich zur Aktivierung auf dem Data Infrastructure Insights Kollektor müssen Sie auch *das ONTAP -System* selbst konfigurieren, um Folgendes bereitzustellen:link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["Switch-Informationen"] und stellen Sie sicher, dass die richtige<<a-note-about-permissions,Berechtigungen>> gesetzt, um die Switch-Daten an Data Infrastructure Insights senden zu können.
 
 
 
@@ -134,13 +134,13 @@ Data Infrastructure Insights bietet die Möglichkeit, ONTAP-Cluster-Switch-Daten
 | Feld | Beschreibung 
 
 
-| NetApp Management IP | IP-Adresse oder vollqualifizierter Domain-Name des NetApp Clusters 
+| NetApp Management IP | IP-Adresse oder vollqualifizierter Domänenname des NetApp -Clusters 
 
 
 | Benutzername | Benutzername für NetApp Cluster 
 
 
-| Passwort | Passwort für NetApp Cluster 
+| Passwort | Passwort für NetApp -Cluster 
 |===
 
 
@@ -151,66 +151,66 @@ Data Infrastructure Insights bietet die Möglichkeit, ONTAP-Cluster-Switch-Daten
 | Feld | Beschreibung 
 
 
-| Verbindungstyp | Wählen Sie HTTP (Standardport 80) oder HTTPS (Standardport 443). Die Standardeinstellung ist HTTPS 
+| Anschlussart | Wählen Sie HTTP (Standardport 80) oder HTTPS (Standardport 443).  Der Standardwert ist HTTPS 
 
 
-| Kommunikations-Port Überschreiben | Geben Sie einen anderen Port an, wenn Sie den Standardwert nicht verwenden möchten 
+| Kommunikationsanschluss überschreiben | Geben Sie einen anderen Port an, wenn Sie nicht den Standardport verwenden möchten 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten. 
+| Inventarabfrageintervall (min) | Der Standardwert ist 60 Minuten. 
 
 
-| Für TLS für HTTPS | TLS nur als Protokoll bei Verwendung von HTTPS zulassen 
+| Für TLS für HTTPS | Lassen Sie TLS nur als Protokoll zu, wenn Sie HTTPS verwenden 
 
 
-| Netzgruppen Automatisch Suchen | Aktivieren Sie die automatische Suche der Netzgruppe nach den Regeln für die Exportrichtlinie 
+| Netzgruppen automatisch suchen | Aktivieren Sie die automatische Netzgruppensuche für Exportrichtlinienregeln 
 
 
-| Netzgruppenerweiterung | Erweiterungsstrategie Für Netzgruppen: Wählen Sie_file_ oder_Shell_. Der Standardwert ist _shell_. 
+| Netgroup-Erweiterung | Expansionsstrategie der Netgroup.  Wählen Sie _Datei_ oder _Shell_.  Der Standardwert ist _shell_. 
 
 
-| HTTP-Lesezeit Sekunden | Der Standardwert ist 30 
+| HTTP-Lesezeitlimit (Sekunden) | Der Standardwert ist 30 
 
 
-| Antworten als UTF-8 erzwingen | Erzwingt den Datensammler-Code, um Antworten aus der CLI als in UTF-8 zu interpretieren 
+| Erzwingen Sie Antworten als UTF-8 | Zwingt den Datensammlercode, Antworten von der CLI als in UTF-8 vorliegend zu interpretieren 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 900 Sekunden. 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 900 Sekunden. 
 
 
-| Erweiterte Zähldatensammlung | ONTAP Integration aktivieren. Wählen Sie diese Option aus, um ONTAP Advanced Counter-Daten in Umfragen einzubeziehen. Wählen Sie die gewünschten Zähler aus der Liste aus. 
+| Erweiterte Zählerdatenerfassung | Aktivieren Sie die ONTAP Integration.  Wählen Sie diese Option aus, um ONTAP Advanced Counter-Daten in Umfragen einzubeziehen.  Wählen Sie die gewünschten Zähler aus der Liste aus. 
 
 
-| Kennzahlen Für Cluster-Switch | Erfassung von Cluster-Switch-Daten durch Data Infrastructure Insights Beachten Sie, dass Sie zusätzlich zur Aktivierung dieser Funktion auf der Seite Dateninfrastruktureinblicke auch das ONTAP-System so konfigurieren müssenlink:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["Switch-Informationen"], dass die korrekten <<a-note-about-permissions,Berechtigungen>>Einstellungen vorgenommen werden, damit die Switch-Daten an Dateninfrastruktureinblicke gesendet werden können. Siehe „Ein Hinweis zu Berechtigungen“ weiter unten. 
+| Cluster-Switch-Metriken | Erlauben Sie Data Infrastructure Insights , Cluster-Switch-Daten zu erfassen.  Beachten Sie, dass Sie zusätzlich zur Aktivierung auf der Data Infrastructure Insights Seite auch das ONTAP -System so konfigurieren müssen, dass eslink:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["Switch-Informationen"] und stellen Sie sicher, dass die richtige<<a-note-about-permissions,Berechtigungen>> gesetzt, um die Switch-Daten an Data Infrastructure Insights senden zu können.  Siehe „Hinweis zu Berechtigungen“ weiter unten. 
 |===
 
 
-== ONTAP-Leistungskennzahlen
+== ONTAP Leistungsmetriken
 
-Mehrere ONTAP Modelle bieten Stromkennzahlen für Einblicke in die Dateninfrastruktur, die für Monitoring oder Warnmeldungen genutzt werden können.
+Mehrere ONTAP -Modelle bieten Leistungsmetriken für Data Infrastructure Insights , die zur Überwachung oder für Warnmeldungen verwendet werden können.
 
 
-NOTE: Diese Listen sind nicht vollständig und können sich ändern. Wenn ein Modell zur gleichen Familie gehört wie ein in der Liste aufgeführtes, sollte die Unterstützung grundsätzlich gleich sein, dies kann jedoch nicht garantiert werden. Wenn Sie sich nicht sicher sind, ob Ihr Modell Leistungsmetriken unterstützt, wenden Sie sich an den ONTAP-Support.
+NOTE: Diese Listen sind nicht vollständig und können sich ändern.  Wenn ein Modell zur selben Familie gehört wie ein Modell auf der Liste, sollte die Unterstützung grundsätzlich dieselbe sein, dies kann jedoch nicht garantiert werden.  Wenn Sie nicht sicher sind, ob Ihr Modell Leistungsmetriken unterstützt, wenden Sie sich an den ONTAP Support.
 
 Unterstützte Modelle:
 
-A200 A220 A250 A300 A320 A400 A700 A700S A900 C190 FAS2240-4 FAS2552 FAS2650 FAS2720 FAS2750 FAS8200 FAS8300 FAS8700 FAS9000
+A200 A220 A250 A300 A320 A400 A700 A700s A800 A900 C190 FAS2240-4 FAS2552 FAS2650 FAS2720 FAS2750 FAS8200 FAS8300 FAS8700 FAS9000
 
-Nicht Unterstützte Modelle:
+Nicht unterstützte Modelle:
 
-FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/AFF 8020 FAS/AFF 8040 FAS/AFF 8060 FAS/AFF 8080
+FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 8060 FAS/ AFF 8080
 
 
 
 == Ein Hinweis zu Berechtigungen
 
-Da eine Reihe von ONTAP Dashboards von Data Infrastructure Insights auf erweiterten ONTAP-Zählern basieren, müssen Sie im Abschnitt Erweiterte Konfiguration des Datensammlers *Advanced Counter Data Collection* aktivieren.
+Da eine Reihe von ONTAP -Dashboards von Data Infrastructure Insights auf erweiterten ONTAP -Zählern basieren, müssen Sie im Abschnitt „Erweiterte Konfiguration“ des Datensammlers die Option „Erweiterte Zählerdatenerfassung“ aktivieren.
 
-Sie sollten außerdem sicherstellen, dass die Schreibberechtigung für die ONTAP-API aktiviert ist. Dafür ist in der Regel ein Konto auf Cluster-Ebene mit den erforderlichen Berechtigungen erforderlich.
+Sie sollten außerdem sicherstellen, dass die Schreibberechtigung für die ONTAP -API aktiviert ist.  Dies erfordert normalerweise ein Konto auf Clusterebene mit den erforderlichen Berechtigungen.
 
-Um ein lokales Konto für Dateninfrastrukturanalysen auf Cluster-Ebene zu erstellen, melden Sie sich mit dem Benutzernamen/Kennwort des Clusterverwaltungsadministrators bei ONTAP an, und führen Sie die folgenden Befehle auf dem ONTAP-Server aus:
+Um ein lokales Konto für Data Infrastructure Insights auf Clusterebene zu erstellen, melden Sie sich bei ONTAP mit dem Benutzernamen/Passwort des Clusterverwaltungsadministrators an und führen Sie die folgenden Befehle auf dem ONTAP -Server aus:
 
-. Bevor Sie beginnen, müssen Sie mit einem _Administrator_-Konto bei ONTAP angemeldet sein und die Befehle _diagnoseebene_ müssen aktiviert sein.
+. Bevor Sie beginnen, müssen Sie mit einem _Administrator_-Konto bei ONTAP angemeldet sein und _Befehle auf Diagnoseebene_ müssen aktiviert sein.
 . Erstellen Sie mit den folgenden Befehlen eine schreibgeschützte Rolle.
 +
 ....
@@ -218,12 +218,12 @@ security login role create -role ci_readonly -cmddirname DEFAULT -access readonl
 security login role create -role ci_readonly -cmddirname security -access readonly
 security login role create -role ci_readonly -access all -cmddirname {cluster application-record create}
 ....
-. Erstellen Sie den schreibgeschützten Benutzer mit dem folgenden Befehl. Sobald Sie den Befehl create ausgeführt haben, werden Sie aufgefordert, ein Passwort für diesen Benutzer einzugeben.
+. Erstellen Sie den schreibgeschützten Benutzer mit dem folgenden Befehl.  Nachdem Sie den Befehl „Erstellen“ ausgeführt haben, werden Sie aufgefordert, ein Kennwort für diesen Benutzer einzugeben.
 +
  security login create -username ci_user -application ontapi -authentication-method password -role ci_readonly
 
 
-Wenn AD/LDAP-Konto verwendet wird, sollte der Befehl sein
+Wenn ein AD/LDAP-Konto verwendet wird, sollte der Befehl
 
  security login create -user-or-group-name DOMAIN\aduser/adgroup -application ontapi -authentication-method domain -role ci_readonly
 Wenn Sie Cluster-Switch-Daten erfassen:
@@ -232,7 +232,7 @@ Wenn Sie Cluster-Switch-Daten erfassen:
 security login rest-role create -role ci_readonly_rest -api /api/network/ethernet -access readonly
 security login create -user-or-group-name ci_user -application http -authmethod password -role ci_readonly_rest
 ....
-Die daraus resultierende Rolle und Benutzeranmeldung sieht folgendermaßen aus: Die tatsächliche Ausgabe kann variieren:
+Die resultierende Rolle und Benutzeranmeldung werden etwa wie folgt aussehen.  Ihre tatsächliche Ausgabe kann abweichen:
 
 ....
 Role Command/ Access
@@ -250,13 +250,13 @@ UserName    Application   Method      Role Name      Locked
 ci_user     ontapi      password    ci_readonly   no
 ....
 
-NOTE: Wenn die ONTAP-Zugriffssteuerung nicht korrekt eingestellt ist, können die REST-Aufrufe von Data Infrastructure Insights fehlschlagen, was zu Datenlücken für das Gerät führt. Wenn Sie sie beispielsweise auf dem Dateninfrastruktursammler aktiviert haben, aber die Berechtigungen auf dem ONTAP nicht konfiguriert haben, schlägt die Erfassung fehl. Wenn die Rolle zuvor auf der ONTAP definiert ist und Sie die Rest-API-Fähigkeiten hinzufügen, stellen Sie außerdem sicher, dass _http_ der Rolle hinzugefügt wird.
+NOTE: Wenn die ONTAP Zugriffskontrolle nicht richtig eingestellt ist, können Data Infrastructure Insights REST-Aufrufe fehlschlagen, was zu Datenlücken für das Gerät führt.  Wenn Sie es beispielsweise auf dem Data Infrastructure Insights -Collector aktiviert, die Berechtigungen auf dem ONTAP jedoch nicht konfiguriert haben, schlägt die Erfassung fehl.  Wenn die Rolle zuvor auf ONTAP definiert wurde und Sie die Rest-API-Funktionen hinzufügen, stellen Sie außerdem sicher, dass _http_ zur Rolle hinzugefügt wird.
 
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -264,31 +264,31 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Erhalten Sie 401 HTTP-Antwort oder 13003 ZAPI-Fehlercode und ZAPI gibt „unzureichende Berechtigungen“ oder „nicht autorisiert für diesen Befehl“ zurück | Benutzernamen und Kennwort sowie Benutzerrechte/Berechtigungen überprüfen. 
+| Erhalten Sie die HTTP-Antwort 401 oder den ZAPI-Fehlercode 13003 und ZAPI gibt „Unzureichende Berechtigungen“ oder „Nicht für diesen Befehl autorisiert“ zurück. | Überprüfen Sie Benutzernamen und Passwort sowie Benutzerrechte/Berechtigungen. 
 
 
-| Cluster-Version ist < 8.1 | Die unterstützte Version für das Cluster-Minimum ist 8.1. Upgrade auf die unterstützte Mindestversion. 
+| Clusterversion ist < 8.1 | Die minimal unterstützte Clusterversion ist 8.1.  Aktualisieren Sie auf die minimal unterstützte Version. 
 
 
-| ZAPI gibt zurück „Cluster-Rolle ist keine Cluster_Mgmt LIF“ | AU muss mit Cluster Management IP sprechen. Überprüfen Sie die IP und wechseln Sie ggf. auf eine andere IP 
+| ZAPI gibt „Clusterrolle ist nicht cluster_mgmt LIF“ zurück. | AU muss mit der Cluster-Management-IP kommunizieren.  Überprüfen Sie die IP und wechseln Sie gegebenenfalls zu einer anderen IP 
 
 
-| Fehler: „7 Modus Filer werden nicht unterstützt“ | Dies kann passieren, wenn Sie diese Datensammler benutzen, um 7 Modus Filer zu entdecken. Ändern Sie die IP, um stattdessen auf cdot Cluster zu verweisen. 
+| Fehler: „7-Modus-Filer werden nicht unterstützt“ | Dies kann passieren, wenn Sie diesen Datensammler verwenden, um 7-Modus-Filer zu ermitteln.  Ändern Sie die IP, sodass sie stattdessen auf den CDOT-Cluster verweist. 
 
 
-| ZAPI-Befehl schlägt nach dem erneuten Versuch fehl | AU hat ein Kommunikationsproblem mit dem Cluster. Überprüfen Sie Netzwerk, Port-Nummer und IP-Adresse. Der Benutzer sollte auch versuchen, einen Befehl von der Befehlszeile aus dem AU-Rechner auszuführen. 
+| ZAPI-Befehl schlägt nach erneutem Versuch fehl | AU hat ein Kommunikationsproblem mit dem Cluster.  Überprüfen Sie Netzwerk, Portnummer und IP-Adresse.  Der Benutzer sollte auch versuchen, einen Befehl über die Befehlszeile der AU-Maschine auszuführen. 
 
 
-| AU konnte über HTTP keine Verbindung mit ZAPI herstellen | Prüfen Sie, ob der ZAPI-Port Klartext akzeptiert. Wenn AU versucht, Klartext an einen SSL-Socket zu senden, schlägt die Kommunikation fehl. 
+| AU konnte keine Verbindung zu ZAPI über HTTP herstellen | Überprüfen Sie, ob der ZAPI-Port Klartext akzeptiert.  Wenn AU versucht, Klartext an einen SSL-Socket zu senden, schlägt die Kommunikation fehl. 
 
 
-| Die Kommunikation schlägt mit SSLException fehl | AU versucht, SSL an einen Klartext Port auf einem Filer zu senden. Überprüfen Sie, ob der ZAPI-Port SSL akzeptiert, oder verwenden Sie einen anderen Port. 
+| Die Kommunikation schlägt mit SSLException fehl | AU versucht, SSL an einen Klartext-Port auf einem Filer zu senden.  Überprüfen Sie, ob der ZAPI-Port SSL akzeptiert, oder verwenden Sie einen anderen Port. 
 
 
-| Weitere Verbindungsfehler: ZAPI-Antwort hat Fehlercode 13001, „Datenbank ist nicht geöffnet“ ZAPI-Fehlercode ist 60 und die Antwort enthält „API hat nicht auf Zeit beendet“ ZAPI-Antwort enthält „initialize_Session() zurückgegebene Null-Umgebung“ ZAPI-Fehlercode ist 14007 und die Antwort enthält „Knoten ist nicht gesund“ | Überprüfen Sie Netzwerk, Port-Nummer und IP-Adresse. Der Benutzer sollte auch versuchen, einen Befehl von der Befehlszeile aus dem AU-Rechner auszuführen. 
+| Weitere Verbindungsfehler: Die ZAPI-Antwort hat den Fehlercode 13001, „Datenbank ist nicht geöffnet“. Der ZAPI-Fehlercode ist 60 und die Antwort enthält „API wurde nicht rechtzeitig beendet“. Die ZAPI-Antwort enthält „initialize_session() hat eine NULL-Umgebung zurückgegeben“. Der ZAPI-Fehlercode ist 14007 und die Antwort enthält „Knoten ist nicht fehlerfrei“. | Überprüfen Sie Netzwerk, Portnummer und IP-Adresse.  Der Benutzer sollte auch versuchen, einen Befehl über die Befehlszeile der AU-Maschine auszuführen. 
 |===
 
 
@@ -296,9 +296,9 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| „Fehler beim Sammeln der Leistung aus ZAPI“ Fehler | Dies liegt normalerweise daran, dass perfstat nicht ausgeführt wird. Versuchen Sie auf jedem Knoten den folgenden Befehl: > _System Node systemshell -Node * -command „spmctl -h cmd -stop; spmctl -h cmd -exec“_ 
+| Fehler „Leistung konnte nicht von ZAPI erfasst werden“ | Dies liegt normalerweise daran, dass die Leistungsstatistik nicht ausgeführt wird.  Versuchen Sie auf jedem Knoten den folgenden Befehl: > _system node systemshell -node * -command “spmctl -h cmd –stop; spmctl -h cmd –exec”_ 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

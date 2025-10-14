@@ -4,92 +4,92 @@ permalink: infrastructure_change_analytics.html
 keywords: changes, management, analysis, infra, infrastructure 
 summary: Data Infrastructure Insights verfolgt Änderungen in der Infrastruktur, um die Analyse und Fehlerbehebung zu vereinfachen. 
 ---
-= Analyse Von Infrastrukturänderungen
+= Analyse von Infrastrukturänderungen
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Infrastructure Change Analysis bieten einen All-in-One-Überblick über aktuelle Infrastrukturänderungen (Storage, Switch usw.) des Mandanten. Mit der Änderungsanalyse können Sie Konfigurationsänderungen verfolgen und sowohl erwartete als auch unerwartete Probleme untersuchen.
+Die Infrastrukturänderungsanalyse bietet Ihnen eine umfassende Übersicht über die jüngsten Änderungen an der Infrastruktur (Speicher, Switch usw.) Ihres Mandanten.  Mit der Änderungsanalyse können Sie Konfigurationsänderungen verfolgen und sowohl erwartete als auch unerwartete Probleme genauer untersuchen.
 
 
 
-== Wie hilft die Infrastrukturänderungsanalyse?
+== Wie hilft die Analyse von Infrastrukturänderungen?
 
-In jeder Umgebung können Änderungen an Ihren Ressourcen aufgrund von falsch konfigurierten Änderungen, Stromausfällen usw. auftreten. Mithilfe der Änderungsanalyse können Sie den Zustand Ihrer Ressourcen in einem einzigen Fenster anzeigen und mit Ausfällen oder geplanten Änderungen in Beziehung setzen. Änderungen werden mit jeder Bestandsabfrage berechnet (nach der ersten Abfrage eines neuen Sammlers).
+In jeder Umgebung können sich Ihre Ressourcen aufgrund von Fehlkonfigurationen, Stromausfällen usw. ändern. Die Änderungsanalyse hilft dabei, indem sie einen einzigen Bereich bereitstellt, in dem Sie den Zustand Ihrer Ressourcen anzeigen und mit Ausfällen oder geplanten Änderungen korrelieren können.  Änderungen werden bei jeder Bestandsabfrage (nach der ersten Abfrage eines neuen Sammlers) berechnet.
 
-Um Infrastrukturänderungen zu analysieren, navigieren Sie zu *Observability > Change Analysis*. Warnungen und Konfigurationsänderungen für den aktuellen Zeitraum werden aufgelistet. Warnungszeilen zeigen den aktuellen Warnungsstatus an (aktiv oder gelöst).
+Um Infrastrukturänderungen zu analysieren, navigieren Sie zu *Beobachtbarkeit > Änderungsanalyse*.  Es werden Warnungen und Konfigurationsänderungen für den aktuellen Zeitraum aufgelistet.  Alarmzeilen zeigen den aktuellen Alarmstatus (aktiv oder gelöst).
 
-Sie können auch zu einer Landing Page für eine Ressource navigieren. Wenn Änderungen an dieser Ressource oder zugehörigen Ressourcen vorgenommen wurden, werden diese im Abschnitt „Expertenansicht“ der Seite angezeigt. Vergrößern Sie die Ansicht, um einzelne Änderungen zu untersuchen, oder lassen Sie die Ansicht breit, um alle Änderungen innerhalb des ausgewählten Zeitbereichs anzuzeigen. Wenn Sie den Mauszeiger über eine Änderung bewegen, erhalten Sie eine Zusammenfassung der Änderung. Wenn Sie auf diese Änderung klicken, wird die Expertenansicht auf den Zeitpunkt dieser Änderung fokussiert.
+Sie können auch zu einer Zielseite für eine Ressource navigieren.  Wenn an dieser Ressource oder verwandten Ressourcen Änderungen vorgenommen wurden, werden diese im Abschnitt „Leistung“ der Seite angezeigt.  Zoomen Sie hinein, um einzelne Änderungen zu untersuchen, oder lassen Sie die Ansicht weit, um alle Änderungen innerhalb des ausgewählten Zeitraums anzuzeigen.  Wenn Sie mit der Maus über eine Änderung fahren, wird eine Zusammenfassung der Änderung angezeigt.  Durch Klicken auf diese Änderung wird die Leistung zum Zeitpunkt dieser Änderung fokussiert.
 
-image:change_analysis_on_a_landing_page.png["Änderungsanalyse auf einer Landing Page"]
+image:change_analysis_on_a_landing_page.png["Änderungsanalyse auf einer Zielseite"]
 
-Wenn Sie ein Element in der Liste auswählen, wird ein Schiebefenster geöffnet, in dem Sie mehr Details über die Warnmeldung oder die Änderung erhalten.
+Wenn Sie ein Element in der Liste auswählen, wird ein ausziehbarer Bereich geöffnet, der weitere Einzelheiten zu der Warnung oder Änderung enthält.
 
 
 
 == Filtern
 
-Wie bei allen Funktionen von Cloud Insights ist das Filtern der Änderungsliste intuitiv: Oben auf der Seite können Sie nach bestimmten Asset-Typen (_triggert on:type_) filtern und/oder nach Assets mit bestimmten Namen filtern (_triggert on:Name_) oder Ihre eigenen Filter hinzufügen, indem Sie die Schaltfläche {+] wählen.
+Wie bei allen Funktionen von Cloud Insights ist das Filtern der Änderungsliste intuitiv: Oben auf der Seite können Sie nach bestimmten Asset-Typen filtern (_Ausgelöst bei:Typ_) und/oder bei Bedarf nur nach Assets mit bestimmten Namen filtern (_Ausgelöst bei:Name_) oder Ihre eigenen Filter hinzufügen, indem Sie die Schaltfläche {+] auswählen.
 
-image:infraChange_filter_dropdown.png["Dropdown-Liste „Infrastrukturänderungsfilter“"]
+image:infraChange_filter_dropdown.png["Dropdown-Liste „Infrastrukturänderungsfilterung“"]
 
-Sie können auch direkt zu den wichtigsten Warnmeldungen oder Änderungen im Statusbereich unterhalb der Filtereinstellungen wechseln, einschließlich der aktuellen drei Ressourcen mit den meisten Warnmeldungen.
+Sie können auch direkt vom Statusbereich unter den Filtereinstellungen zu wichtigen Warnungen oder Änderungen gehen, einschließlich der drei aktuellen Ressourcen mit den meisten Warnungen.
 
-image:Change_Analysis_filters_and_status.png["Status und Quick Links zu Warnmeldungen und Änderungen"]
+image:Change_Analysis_filters_and_status.png["Status und Schnelllinks zu Warnungen und Änderungen"]
 
 
 
 == Welche Objekte werden auf Änderungen analysiert?
 
-In der folgenden Tabelle sind die Objekte und Attribute aufgeführt, die in der Analyse von Infrastrukturänderungen enthalten sind.
+In der folgenden Tabelle sind die Objekte und Attribute aufgeführt, die in der Analyse der Infrastrukturänderungen enthalten sind.
 
 |===
 
 
-| Objekttyp | Merkmale 
+| Objekttyp | Eigenschaften 
 
 
-| Festplatte | DiskSize.total isVirtual diskGruppe Geschwindigkeitstyp Standort Seriennummer Rollenstatus Anbietermodell storage.name storagePools.name Name isVerschlüsseln 
+| Scheibe | diskSize.total isVirtual diskGroup Geschwindigkeit Typ Standort Seriennummer Rolle Status Anbieter Modell storage.name storagePools.name Name isEncrypted 
 
 
-| Storage | Familie ip ist Active MicrocodeVersion Modell Name Protokolle Serialnummer Hersteller 
+| Storage | Familie IP isActive Mikrocode-Version Modellname Protokolle Seriennummer Hersteller 
 
 
-| StorageNode | Name storage.name nodeVersion model serialnumber numberOfProcessors State partner.name Cache Memory ManagementIpAddresses parentSerialNumber Standortname 
+| Speicherknoten | Name Speichername Knotenversion Modell Seriennummer Anzahl der Prozessoren Status Partnername Cache Speicherverwaltung IP-Adressen übergeordnete Seriennummer Sitename 
 
 
-| Storage Pool | Namenstyp isAutoTiering isVirtual Redundancy VendorTier usesFlashPools Storage.Vendor Storage.ip Storage.model Storage.family storage.name storageNodes.name capacity.total (Dynamic Attribute) isCompactionSavingsEnabled isEncrypted objectStoreName objectStoreName objectStoreProviderType objectStoreSizeLimit objectStoreTieringFullnessThreshold objectStoreS3Name objectStoreServer 
+| Speicherpool | Name Typ isAutoTiering isVirtual Redundancy VendorTier verwendet FlashPools storage.vendor storage.ip storage.model storage.family storage.name storageNodes.name capacity.total (dynamisches Attribut) isCompactionSavingsEnabled isEncrypted objectStoreName objectStoreProviderType objectStoreSizeLimit objectStoreTieringFullnessThreshold objectStoreS3Name objectStoreServer 
 
 
-| Qtree | Geben Sie securityStyle isOplocksEnabled shares.name storage.name internalVolume.name storageVirtualMachine.name simpleName StatusTextname ein 
+| Qtree | Typ Sicherheitsstil isOplocksEnabled shares.name storage.name internalVolume.name storageVirtualMachine.name simpleName statusText Name 
 
 
-| Storage Virtual Machine | Name storage.name Zustandsart ipSpace Protokolle internalVolumeLimit 
+| StorageVirtualMachine | Name storage.name Status Typ ipSpace Protokolle internalVolumeLimit 
 
 
-| Datenmenge | Name simpleName Label type storage.name Storage.Vendor Storage.ip Storage.model Storage.family isAutoTiering isThinProvisioned disk GruppenrichtlinienMainframe isMeta isReplicaSource isReplicaTarget isSnapshot isVirtual internalVolume.name internalVolume.virtualStorage storageNodes.name storageNodes.partner.name storagePools.name storageVirtualMachine.name storageGroups isEncrypted isCompressionEnabled qosBurstIOPS qosLimitIOPS qosLimitMBPS qosMinIOPS qosMinisqosPolicy qosLimitRaw 
+| Volumen | Name simpleName Bezeichnung Typ storage.name storage.vendor storage.ip storage.model storage.family isAutoTiering isThinProvisioned diskGroup isMainframe isMeta isReplicaSource isReplicaTarget isSnapshot isVirtual internalVolume.name internalVolume.virtualStorage storageNodes.name storageNodes.partner.name storagePools.name storageVirtualMachine.name storageGroups isEncrypted isCompressionEnabled qosBurstIOPS qosLimitIOPS qosLimitMBPS qosMinIOPS qosPolicy qosLimitRaw 
 
 
-| InternalVolume | FlashPoolEignungsname simpleName spaceGarantiestatus virtualStorage replicaSources.name storageNodes.name storageNodes.partner.name storage.name Storage.Vendor Storage.ip Storage.model Storage.family storageVirtualMachine.name storagePool.name capacity.isThinProvisioned qosPolicy qosLimitRaw qosLimitIOPS qosLimitMBPS isVerschlüsselte AdaptiveQosPolicy junctionPath objectStoreTieringPolicy TieringMinimumCoolingDays 
+| Internes Volumen | FlashPoolEligibility Name simpleName spaceGuarantee Status Typ virtualStorage replicaSources.name storageNodes.name storageNodes.partner.name storage.name storage.vendor storage.ip storage.model storage.family storageVirtualMachine.name storagePool.name Kapazität.isThinProvisioned qosPolicy qosLimitRaw qosLimitIOPS qosLimitMBPS isEncrypted adaptiveQosPolicy junctionPath objectStoreTieringPolicy tieringMinimumCoolingDays 
 
 
-| Virtual Machine | Name dnsName ip os Speicherprozessoren guestState powerstate host.name Host.clusterName Host.ip Host.os dataStore.name instanceTyp publicIps sicherheitGroups virtualCenterIp 
+| Virtuelle Maschine | Name DNS-Name IP OS Speicher Prozessoren Gaststatus Stromversorgung Hostname Hostclustername Hostip Hostos DataStorename Instanztyp öffentliche IPs Sicherheitsgruppen IP des virtuellen Zentrums 
 
 
-| Datenspeicher | Name virtualCenterIp-Typ 
+| Datenspeicher | Name virtualCenterIp Typ 
 
 
-| Host | Namensmodell ip ist Active os Hersteller cpuCount Speicher isHypervisor ClusterName virtualCenterIp 
+| Gastgeber | Name Modell IP isActive Betriebssystem Hersteller CPU-Anzahl Speicher isHypervisor ClusterName VirtualCenterIp 
 
 
-| vmdk (Virtual Machine Disk) | Namenstyp dataStore.name isRdm virtualMachine.host.name virtualMachine.name isSnapshot 
+| vmdk (VirtualMachineDisk) | Name Typ dataStore.name isRdm virtualMachine.host.name virtualMachine.name isSnapshot 
 
 
-| Port | Name isActive wwn typPortIndex Blade Speed gbicType connectedPorts.device.name connectedPorts.device.type connectedPorts.name connectedPorts.nodeWwn connectedPorts.wwn Controller device.name device.type fabrics.name Fabrics.vsanId nodeWwn description 
+| Hafen | Name isActive wwn Typ portIndex Blade-Geschwindigkeit gbicType connectedPorts.device.name connectedPorts.device.type connectedPorts.name connectedPorts.nodeWwn connectedPorts.wwn Controller device.name device.type fabrics.name fabrics.vsanId nodeWwn Beschreibung 
 |===
-In der „Änderungsanalyse“ werden Warnmeldungen für die folgenden Fälle verfolgt:
+„Änderungsanalyse“ verfolgt Warnungen für die folgenden Fälle:
 
-* Warnmeldungen von Protokollüberwachern zu den Protokolltypen von _logs.vmware.Events_ und _logs.NetApp.ems_.
-* Warnungen von metrischen Monitoren für die oben genannten Objekttypen; diese müssen im Feld _Group by_ ausgewählt werden, damit die Änderungsanalyse sie nachverfolgen kann.
+* Warnungen von Protokollmonitoren zu den Protokolltypen _logs.vmware.events_ und _logs.netapp.ems_.
+* Warnungen von Metrikmonitoren zu den oben genannten Objekttypen; diese müssen im Feld „Gruppieren nach“ ausgewählt werden, damit sie von der Änderungsanalyse verfolgt werden können.
 

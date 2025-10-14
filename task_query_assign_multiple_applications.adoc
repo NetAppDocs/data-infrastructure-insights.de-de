@@ -1,50 +1,50 @@
 ---
 sidebar: sidebar 
 permalink: task_query_assign_multiple_applications.html 
-summary: Verwenden Sie eine Abfrage, um mehreren Anwendungen oder Anmerkungen zuzuweisen oder mehrere Anwendungen oder Anmerkungen aus Objekten zu entfernen. 
+summary: Verwenden Sie eine Abfrage, um Objekten mehrere Anwendungen oder Anmerkungen zuzuweisen oder mehrere Anwendungen oder Anmerkungen von Objekten zu entfernen. 
 keywords: query, queries, application, annotation, multiple 
 ---
-= Zuweisen mehrerer Anwendungen zu oder Entfernen mehrerer Anwendungen aus Assets
+= Zuweisen mehrerer Anwendungen zu oder Entfernen mehrerer Anwendungen von Assets
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie können mehrere Anwendungen zuweisen link:task_create_application.html["Applikationen unterstützt"]oder mehrere Anwendungen aus Assets entfernen, indem Sie eine Abfrage verwenden, anstatt sie manuell zuweisen oder entfernen zu müssen.
+Sie können mehrerelink:task_create_application.html["Anwendungen"] Sie können mehrere Anwendungen mithilfe einer Abfrage zu Assets hinzufügen oder daraus entfernen, anstatt sie manuell zuweisen oder entfernen zu müssen.
 
 
-NOTE: Mit diesen Schritten können Sie auf die gleiche Weise hinzufügen oder entfernenlink:task_defining_annotations.html["Anmerkungen"].
+NOTE: Mit diesen Schritten können Sie hinzufügen oder entfernenlink:task_defining_annotations.html["Anmerkungen"] auf die gleiche Weise.
 
 .Bevor Sie beginnen
 Sie müssen bereits eine Abfrage erstellt haben, die alle Assets findet, die Sie bearbeiten möchten.
 
 .Schritte
-. Klicken Sie auf *Explore* und wählen Sie *Metric Queries*.
+. Klicken Sie auf *Erkunden* und wählen Sie *Metrikabfragen* aus.
 +
-Die Seite Abfragen wird angezeigt.
+Die Seite „Abfragen“ wird angezeigt.
 
 . Klicken Sie auf den Namen der Abfrage, die die Assets findet.
 +
 Die Liste der mit der Abfrage verknüpften Assets wird angezeigt.
 
-. Wählen Sie die gewünschten Assets in der Liste aus, oder klicken Sie auf das oberste Kontrollkästchen, um alle auszuwählen.
+. Wählen Sie die gewünschten Assets in der Liste aus oder klicken Sie auf das obere Kontrollkästchen, um „Alle“ auszuwählen.
 +
-Die Dropdown-Liste Massenaktionen wird angezeigt.
+Das Dropdown-Menü „Massenaktionen“ wird angezeigt.
 
-. Um eine Anwendung zu den ausgewählten Assets hinzuzufügen, klicken Sie auf Massenaktionen und wählen *Anwendung hinzufügen*.
+. Um den ausgewählten Assets eine Anwendung hinzuzufügen, klicken Sie auf Massenaktionen und wählen Sie *Anwendung hinzufügen*.
 . Wählen Sie eine oder mehrere Anwendungen aus.
 +
-Sie können jedoch mehrere Applikationen für Hosts, interne Volumes, qtrees und Virtual Machines auswählen. Sie können nur eine Anwendung für ein Volume oder eine Freigabe auswählen.
+Sie können mehrere Anwendungen für Hosts, interne Volumes, Qtrees und virtuelle Maschinen auswählen. Für ein Volume oder eine Freigabe können Sie jedoch nur eine Anwendung auswählen.
 
-. Klicken Sie Auf *Speichern*.
-. Um eine Anwendung zu entfernen, die den Assets zugewiesen ist, klicken Sie auf Massenaktionen und wählen Sie *Anwendung entfernen*.
-. Wählen Sie die Anwendung oder die Anwendungen aus, die Sie entfernen möchten.
-. Klicken Sie Auf *Löschen*.
-
-
-Neue Anwendungen, die Sie zuweisen, überschreiben alle Anwendungen auf dem Asset, die von einem anderen Asset abgeleitet wurden. Beispielsweise übernehmen Volumes Applikationen von Hosts, und wenn neuen Applikationen einem Volume zugewiesen werden, hat die neue Applikation Vorrang vor der abgeleiteten Applikation.
-
-Nachdem Sie bei einer Massenlöschung auf _Speichern_ oder _Entfernen_ geklickt haben, werden Sie von Data Infrastructure Insights darüber informiert, dass die Aktion einige Zeit in Anspruch nehmen wird. Sie können diese Meldung verwerfen; die Aktion wird im Hintergrund fortgesetzt.
+. Klicken Sie auf *Speichern*.
+. Um eine den Assets zugewiesene Anwendung zu entfernen, klicken Sie auf „Massenaktionen“ und wählen Sie „Anwendung entfernen“ aus.
+. Wählen Sie die Anwendung(en) aus, die Sie entfernen möchten.
+. Klicken Sie auf *Löschen*.
 
 
-NOTE: In Umgebungen mit großen Mengen verwandter Assets kann die Vererbung von Applikationszuweisungen an diese Ressourcen mehrere Minuten dauern. Bitte geben Sie mehr Zeit für Vererbung, wenn Sie viele verwandte Vermögenswerte haben.
+Alle neuen Anwendungen, die Sie zuweisen, überschreiben alle Anwendungen auf dem Asset, die von einem anderen Asset abgeleitet wurden.  Beispielsweise erben Volumes Anwendungen von Hosts, und wenn einem Volume neue Anwendungen zugewiesen werden, hat die neue Anwendung Vorrang vor der abgeleiteten Anwendung.
+
+Nachdem Sie bei einer Massenhinzufügungsaktion auf _Speichern_ oder bei einer Massenlöschaktion auf _Entfernen_ geklickt haben, werden Sie von Data Infrastructure Insights darüber informiert, dass die Aktion einige Zeit in Anspruch nehmen wird.  Sie können diese Meldung ignorieren; die Aktion wird im Hintergrund fortgesetzt.
+
+
+NOTE: In Umgebungen mit einer großen Menge verwandter Assets kann die Vererbung von Anwendungszuweisungen zu diesen Assets mehrere Minuten dauern.  Bitte rechnen Sie mit einer längeren Vererbungszeit, wenn Sie über viele zusammenhängende Vermögenswerte verfügen.

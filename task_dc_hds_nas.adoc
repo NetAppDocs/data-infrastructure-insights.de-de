@@ -2,45 +2,45 @@
 sidebar: sidebar 
 permalink: task_dc_hds_nas.html 
 keywords: data collector, HDS HNAS, HDS NAS 
-summary: 'Konfiguration des HDS NAS (HNAS) Data Collector' 
+summary: 'Konfigurieren des HDS NAS (HNAS)-Datensammlers.' 
 ---
-= Konfiguration des Hitachi Vantara NAS Data Collector
+= Konfigurieren des Hitachi Vantara NAS-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der Hitachi Vantara NAS Data Collector ist ein Bestands- und Konfigurationsdatensammler, der die Erkennung von HDS NAS-Clustern unterstützt. Data Infrastructure Insights unterstützt die Erkennung von NFS- und CIFS-Freigaben, Filesystemen (interne Volumes) und Spanns (Storage-Pools).
+Der Hitachi Vantara NAS-Datensammler ist ein Inventar- und Konfigurationsdatensammler, der die Erkennung von HDS NAS-Clustern unterstützt.  Data Infrastructure Insights unterstützt die Erkennung von NFS- und CIFS-Freigaben, Dateisystemen (internen Volumes) und Spans (Speicherpools).
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem HNAS-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom HNAS-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Ebene | Festplattengruppe 
+| Stufe | Datenträgergruppe 
 
 
 | Cluster | Storage 
 
 
-| Knoten | Storage-Node 
+| Node | Speicherknoten 
 
 
-| Span | Storage-Pool 
+| Spanne | Speicherpool 
 
 
-| Systemlaufwerk | Back-End Lun 
+| Systemlaufwerk | Backend-Lun 
 
 
-| File System | Internes Volumen 
+| Dateisystem | Internes Volumen 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
@@ -48,8 +48,8 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 
 * IP-Adresse des Geräts
 * Port 22, SSH-Protokoll
-* Benutzername und Passwort - Berechtigungsebene: Supervisor
-* Hinweis: Dieser Datensammler ist SSH-basiert, also muss die AU, die auf dem HNAS selbst SSH-Sitzungen auf TCP 22 oder auf der Systemverwaltungseinheit (SMU) initiieren können, mit der das Cluster verbunden ist.
+* Benutzername und Passwort – Berechtigungsstufe: Supervisor
+* Hinweis: Dieser Datensammler ist SSH-basiert, daher muss die AU, die ihn hostet, in der Lage sein, SSH-Sitzungen zu TCP 22 auf dem HNAS selbst oder der Systems Management Unit (SMU), mit der der Cluster verbunden ist, zu initiieren.
 
 
 
@@ -61,13 +61,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| HNAS Host | IP-Adresse oder vollqualifizierter Domain-Name des HNAS Management Host 
+| HNAS-Host | IP-Adresse oder vollqualifizierter Domänenname des HNAS-Verwaltungshosts 
 
 
-| Benutzername | Benutzername für HNAS-CLI 
+| Benutzername | Benutzername für HNAS CLI 
 
 
-| Passwort | Passwort, das für die HNAS-CLI verwendet wird 
+| Passwort | Für HNAS CLI verwendetes Passwort 
 |===
 
 
@@ -78,13 +78,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 30 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 30 Minuten. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -92,15 +92,15 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| „Fehler beim Verbinden“ mit Fehlermeldungen „Fehler beim Einrichten des Shell-Kanals:“ oder „Fehler beim Öffnen des Shell-Kanals“ | Wahrscheinlich verursacht durch Probleme mit der Netzwerkverbindung oder SSH ist falsch konfiguriert. Bestätigen Sie die Verbindung mit dem alternativen SSH-Client 
+| „Fehler beim Verbinden“ mit den Fehlermeldungen „Fehler beim Einrichten des Shell-Kanals:“ oder „Fehler beim Öffnen des Shell-Kanals“ | Wird wahrscheinlich durch Probleme mit der Netzwerkverbindung oder eine falsche SSH-Konfiguration verursacht.  Bestätigen Sie die Verbindung mit einem alternativen SSH-Client 
 
 
-| „Timeout“ oder „Fehler beim Abrufen von Daten“ mit Fehlermeldungen „Befehl: XXX hat Timeout.“ | * Versuchen Sie den Befehl mit dem alternativen SSH-Client * Erhöhen Sie die Zeitüberschreitung 
+| „Timeout“ oder „Fehler beim Abrufen der Daten“ mit der Fehlermeldung „Befehl: XXX hat eine Zeitüberschreitung.“ | * Versuchen Sie den Befehl mit einem anderen SSH-Client. * Erhöhen Sie das Timeout. 
 
 
-| „Fehler beim Verbindungsaufbau“ oder „Ungültige Anmeldeinformationen“ mit Fehlermeldungen „konnte nicht mit dem Gerät kommunizieren:“ | * IP-Adresse prüfen * Benutzername und Passwort überprüfen * Verbindung mit alternativem SSH-Client bestätigen 
+| „Fehler beim Verbinden“ oder „Ungültige Anmeldeinformationen“ mit der Fehlermeldung „Konnte nicht mit dem Gerät kommunizieren:“ | * IP-Adresse prüfen * Benutzernamen und Passwort prüfen * Verbindung mit alternativem SSH-Client bestätigen 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

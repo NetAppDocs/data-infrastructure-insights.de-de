@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: concept_determining_data_collector_acq_status.html 
-summary: Erfassungsstatus des Data Collectors 
+summary: Erfassungsstatus des Datensammlers 
 keywords: collector, acquisition, status 
 ---
-= Bestimmen des Erfassungsstatus der Datensammlung
+= Ermitteln des Erfassungsstatus des Datensammlers
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Da Datensammler die primäre Informationsquelle für Einblicke in die Dateninfrastruktur sind, muss sichergestellt werden, dass der Betrieb auch weiterhin gewährleistet ist.
+Da Datensammler die primäre Informationsquelle für Data Infrastructure Insights sind, müssen Sie unbedingt sicherstellen, dass sie in einem laufenden Zustand bleiben.
 
-Der Datenerfassungsstatus wird in der rechten oberen Ecke einer beliebigen Asset-Seite als Meldung „Erfasste N Minuten zuvor“ angezeigt, wobei N die letzte Erfassungszeit des Datensammlers des Assets angibt. Die Aufnahmezeit/das Erfassungsdatum wird ebenfalls angezeigt.
+Der Status des Datensammlers wird in der oberen rechten Ecke jeder Asset-Seite als Meldung „Vor N Minuten erfasst“ angezeigt, wobei N den aktuellsten Erfassungszeitpunkt des/der Datensammlers/Datensammler des Assets angibt.  Außerdem werden Uhrzeit und Datum der Erfassung angezeigt.
 
-Durch Klicken auf die Meldung wird eine Tabelle mit dem Namen, dem Status und der letzten erfolgreichen Aufnahmezeit angezeigt. Wenn Sie als Administrator angemeldet sind, klicken Sie auf den Link für den Namen des Datensammlers in der Tabelle, um die Detailseite für diesen Datensammler aufzurufen.
+Wenn Sie auf die Nachricht klicken, wird eine Tabelle mit dem Namen, dem Status und der letzten erfolgreichen Erfassungszeit des Datensammlers angezeigt.  Wenn Sie als Administrator angemeldet sind, gelangen Sie durch Klicken auf den Link mit dem Namen des Datensammlers in der Tabelle zur Detailseite dieses Datensammlers.

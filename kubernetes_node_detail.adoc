@@ -2,39 +2,39 @@
 sidebar: sidebar 
 permalink: kubernetes_node_detail.html 
 keywords: k8s, pods, clusters, nodes. troubleshooting, planning 
-summary: Die Seite mit den Kubernetes-Node-Details bietet Einblick in das Back-End-PV und den Pod Storage. 
+summary: Die Detailseite des Kubernetes-Knotens bietet Einblicke in den Back-End-PV- und Pod-Speicher. 
 ---
-= Kubernetes Node Detail-Seite
+= Kubernetes-Knoten-Detailseite
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Im Kubernetes Explorer können Sie auf ein Node-Symbol klicken, um eine detaillierte Informationsseite für diesen Node zu öffnen. Auf dieser Seite können Sie Informationen zum Node anzeigen sowie Informationen zu VMs, Pod und Containern abrufen.
+Im Kubernetes Explorer können Sie auf ein Knotensymbol klicken, um eine Seite mit detaillierten Informationen zu diesem Knoten zu öffnen.  Auf dieser Seite können Sie Informationen zum Knoten anzeigen sowie VM-, Pod- und Containerinformationen erkunden.
 
-image:KubernetesNodeFiltering.png["Die Seite Kubernetes Node Detail mit der Filterung"]
-
-
-
-== Wie die Pods und persistenten Volumes des Node erforscht werden
-
-Data Infrastructure Insights bietet einen transparenten Einblick in den Back-End Storage Ihrer Kubernetes-Umgebungen und erlaubt Ihnen, Ihre Kubernetes Pods und Persistent Volumes (PVs) im Blick zu behalten. Sie können PV-Zähler wie IOPS, Latenz und Durchsatz von der Nutzung eines einzelnen Pods über einen PV-Zähler zu einem PV und bis zum Back-End-Speichergerät verfolgen.
-
-Auf PV-Ebene erfasst Data Infrastructure Insights Back-End-Kapazitätsinformationen (internes Volume oder Volume, je nach PV-Typ) (Gesamt-, verbrauchte, verwendete Prozent) sowie die Anzahl interner Volume-Snapshots. Auf der Ebene des Pod zum Storage werden Back-End-Kapazität und die Anzahl interner Volume-Snapshots erfasst.
-
-Auf einer Landing Page des Volume oder des internen Volume werden zwei Tabellen angezeigt:
-
-image:Kubernetes_PV_Table.png["Kubernetes PV-Tabelle"] image:Kubernetes_Pod_Table.png["Kubernetes Pod Tabelle"]
-
-
-NOTE: Wenn Sie Ihre Landing Page für Volume- oder Internal Volume angepasst haben, werden die PV- und Pod-Tabellen möglicherweise nicht automatisch angezeigt. Um diese Tabellen zu sehen, müssen Sie die Seite auf die Standardseite zurücksetzen. Zu diesem Zeitpunkt werden die PV- und Pod-Tabellen angezeigt. Anschließend können Sie mit der Anpassung der Seite fortfahren.
-
-Um die Vorteile dieser neuen Tabellen zu nutzen, wird empfohlen, Ihren aktuellen Kubernetes Agent zu deinstallieren und neu zu installieren. Sie müssen auch Kube-State-Metrics Version 2.1.0 oder höher installieren.
+image:KubernetesNodeFiltering.png["Kubernetes-Knoten-Detailseite mit Filterung"]
 
 
 
-== Kubernetes Node zu VM-Links
+== Erkunden der Pods und persistenten Volumes des Knotens
 
-Auf einer Kubernetes Node-Seite können Sie auf klicken, um die VM-Seite des Node zu öffnen. Die VM-Seite enthält auch einen Link zurück zum Node selbst.
+Data Infrastructure Insights bietet Einblick in den Back-End-Speicher Ihrer Kubernetes-Umgebungen und gibt Ihnen Einblick in Ihre Kubernetes-Pods und Persistent Volumes (PVs).  Sie können PV-Zähler wie IOPS, Latenz und Durchsatz von der Nutzung eines einzelnen Pods über einen PV-Zähler bis hin zu einem PV und dem gesamten Weg zum Back-End-Speichergerät verfolgen.
 
-image:Kubernetes_Node_Page_with_VM_Link.png["Kubernetes-Knotenseite mit VM-Link"] image:Kubernetes_VM_Page_with_Node_Link.png["Kubernetes-VM-Seite mit Node-Link"]
+Auf PV-Ebene sammelt Data Infrastructure Insights Informationen zur Back-End-Kapazität (internes Volume oder Volume, abhängig vom PV-Typ) (Gesamt, genutzt, Prozent genutzt) sowie die Anzahl der Snapshots des internen Volumes.  Auf der Pod- bis Speicherebene erfasst es die Back-End-Kapazität und die Anzahl der internen Volume-Snapshots.
+
+Auf einer Volume- oder Internal Volume-Landingpage werden zwei Tabellen angezeigt:
+
+image:Kubernetes_PV_Table.png["Kubernetes PV-Tabelle"] image:Kubernetes_Pod_Table.png["Kubernetes-Pod-Tabelle"]
+
+
+NOTE: Wenn Sie Ihre Zielseite für das Volumen oder das interne Volumen angepasst haben, werden die PV- und Pod-Tabellen möglicherweise nicht automatisch angezeigt.  Um diese Tabellen anzuzeigen, müssen Sie die Seite auf die Standardeinstellung zurücksetzen. Dann werden Ihnen die PV- und Pod-Tabellen angezeigt.  Anschließend können Sie die Seite nach Wunsch neu anpassen.
+
+Beachten Sie, dass es zur Nutzung dieser neuen Tabellen empfohlen wird, Ihren aktuellen Kubernetes-Agenten zu deinstallieren und neu zu installieren.  Sie müssen außerdem Kube-State-Metrics Version 2.1.0 oder höher installieren.
+
+
+
+== Kubernetes-Knoten-zu-VM-Links
+
+Auf einer Kubernetes-Knotenseite können Sie klicken, um die VM-Seite des Knotens zu öffnen.  Die VM-Seite enthält auch einen Link zurück zum Knoten selbst.
+
+image:Kubernetes_Node_Page_with_VM_Link.png["Kubernetes-Knotenseite mit VM-Link"] image:Kubernetes_VM_Page_with_Node_Link.png["Kubernetes-VM-Seite mit Knotenlink"]

@@ -1,29 +1,29 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_integration_with_ontap_arp.html 
-summary: Workload-Sicherheit lässt sich in ONTAP Autonomous Ransomware Protection integrieren, um die Erkennung von Ransomware zu verbessern. 
+summary: Workload Security lässt sich in ONTAP Autonomous Ransomware Protection integrieren, um die Ransomware-Erkennung zu verbessern. 
 keywords: ransomware, ARP, Protection, Security 
 ---
-= Integration in ONTAP Autonomous Ransomware Protection
+= Integration mit ONTAP Autonomous Ransomware Protection
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Die Funktion ONTAP Autonomous Ransomware Protection (ARP) verwendet Workload-Analysen in NAS-Umgebungen (NFS und SMB), um ungewöhnliche Dateiaktivitäten proaktiv zu erkennen und zu warnen, die auf einen Ransomware-Angriff hinweisen könnten.
+Die Funktion ONTAP Autonomous Ransomware Protection (ARP) nutzt Workload-Analysen in NAS-Umgebungen (NFS und SMB), um proaktiv ungewöhnliche Aktivitäten in Dateien zu erkennen und davor zu warnen, die auf einen Ransomware-Angriff hindeuten könnten.
 
-Weitere Details und Lizenzanforderungen zu ARP finden Sie link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Hier"].
+Weitere Details und Lizenzanforderungen zu ARP finden Sielink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["hier,"] .
 
-Workload Security ist in ONTAP integriert, um ARP-Ereignisse zu empfangen, und bietet zusätzliche Analysen und automatische Antwortebenen.
+Workload Security lässt sich in ONTAP integrieren, um ARP-Ereignisse zu empfangen und eine zusätzliche Analyse- und automatische Antwortebene bereitzustellen.
 
-Workload Security erhält die ARP-Ereignisse vom ONTAP und ergreift die folgenden Maßnahmen:
+Workload Security empfängt die ARP-Ereignisse von ONTAP und führt die folgenden Aktionen aus:
 
-. Korreliert Ereignisse der Volume-Verschlüsselung mit den Benutzeraktivitäten, um zu ermitteln, wer den Schaden verursacht.
-. Implementierung von Richtlinien zur automatischen Reaktion (falls definiert)
+. Korreliert Volume-Verschlüsselungsereignisse mit der Benutzeraktivität, um zu ermitteln, wer den Schaden verursacht.
+. Implementiert automatische Antwortrichtlinien (falls definiert)
 . Bietet forensische Funktionen:
 +
-** Ermöglichen Sie Kunden die Durchführung von Untersuchungen zu Datensicherheitsverletzungen.
-** Erkennen Sie, welche Dateien betroffen waren, sodass das Recovery schneller erfolgt und Untersuchungen zu Datensicherheitsverletzungen durchgeführt werden können.
+** Ermöglichen Sie Kunden die Durchführung von Untersuchungen zu Datenschutzverletzungen.
+** Ermitteln Sie, welche Dateien betroffen waren, und beschleunigen Sie so die Wiederherstellung und die Durchführung von Untersuchungen zu Datenschutzverletzungen.
 
 
 
@@ -32,54 +32,54 @@ Workload Security erhält die ARP-Ereignisse vom ONTAP und ergreift die folgende
 
 == Voraussetzungen
 
-. Minimale ONTAP-Version: 9.11.1
-. ARP-aktivierte Volumes. Details zur Aktivierung von ARP finden Sie link:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Hier"]. ARP muss über den OnCommand System Manager aktiviert sein. Workload Security kann ARP nicht aktivieren.
-. Workload Security Collector sollte über Cluster-IP hinzugefügt werden.
-. Für diese Funktion sind Anmeldedaten auf Cluster-Ebene erforderlich. Das bedeutet, dass beim Hinzufügen der SVM Anmeldedaten für die Cluster-Ebene verwendet werden müssen.
+. Mindestversion von ONTAP : 9.11.1
+. ARP-fähige Volumes.  Details zur Aktivierung von ARP finden Sielink:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["hier,"] .  ARP muss über OnCommand System Manager aktiviert werden.  Workload Security kann ARP nicht aktivieren.
+. Der Workload Security Collector sollte über die Cluster-IP hinzugefügt werden.
+. Damit diese Funktion funktioniert, sind Anmeldeinformationen auf Clusterebene erforderlich.  Mit anderen Worten: Beim Hinzufügen der SVM müssen Anmeldeinformationen auf Clusterebene verwendet werden.
 
 
 
 
-== Benutzerberechtigungen erforderlich
+== Erforderliche Benutzerberechtigungen
 
-Wenn Sie Anmeldedaten für die Cluster-Administration verwenden, sind keine neuen Berechtigungen erforderlich.
+Wenn Sie Anmeldeinformationen für die Clusterverwaltung verwenden, sind keine neuen Berechtigungen erforderlich.
 
-Wenn Sie einen benutzerdefinierten Benutzer (z. B. _csuser_) mit den dem Benutzer angegebenen Berechtigungen verwenden, befolgen Sie die folgenden Schritte, um Workload Security-Berechtigungen zum Sammeln von ARP-bezogenen Informationen aus ONTAP zu erteilen.
+Wenn Sie einen benutzerdefinierten Benutzer (z. B. _csuser_) mit dem Benutzer erteilten Berechtigungen verwenden, führen Sie die folgenden Schritte aus, um Workload Security die Berechtigung zum Sammeln von ARP-bezogenen Informationen von ONTAP zu erteilen.
 
-Führen Sie für _csuser_ mit Cluster-Anmeldedaten folgende Schritte in der ONTAP-Befehlszeile aus:
+Führen Sie für _csuser_ mit Cluster-Anmeldeinformationen Folgendes über die ONTAP Befehlszeile aus:
 
 ....
 security login role create -role csrole -cmddirname "volume" -access readonly
 security login role create -role csrole -cmddirname "security anti-ransomware volume" -access readonly
 ....
-Lesen Sie mehr über die Konfiguration anderer link:task_add_collector_svm.html["ONTAP-Berechtigungen"].
+Lesen Sie mehr über die Konfiguration andererlink:task_add_collector_svm.html["ONTAP-Berechtigungen"] .
 
 
 
-== Beispielalarm
+== Beispielwarnung
 
-Im Folgenden wird eine Beispielwarnung angezeigt, die aufgrund eines ARP-Ereignisses generiert wurde:
+Nachfolgend sehen Sie ein Beispiel für eine Warnung, die aufgrund eines ARP-Ereignisses generiert wurde:
 
-image:CS_Ransomware_Example_1.png["Ransomware Alert – oberer Abschnitt"] image:CS_Ransomware_Example_2.png["Ransomware Alert – oberer Abschnitt"] image:CS_Ransomware_Example_3.png["Ransomware Alert – oberer Abschnitt"]
+image:CS_Ransomware_Example_1.png["Ransomware-Alarm – oberer Abschnitt"] image:CS_Ransomware_Example_2.png["Ransomware-Alarm – oberer Abschnitt"] image:CS_Ransomware_Example_3.png["Ransomware-Alarm – oberer Abschnitt"]
 
-Ein hochvertrauliches Banner zeigt auf, dass der Angriff das Verhalten von Ransomware zusammen mit Dateiverschlüsselungsaktivitäten gezeigt hat. Das Diagramm der verschlüsselten Dateien gibt den Zeitstempel an, mit dem die Volume-Verschlüsselungsaktivität von der ARP-Lösung erkannt wurde.
+Ein Banner mit hoher Vertrauenswürdigkeit weist darauf hin, dass der Angriff neben Dateiverschlüsselungsaktivitäten auch Ransomware-Verhalten gezeigt hat.  Das Diagramm der verschlüsselten Dateien zeigt den Zeitstempel an, zu dem die Volume-Verschlüsselungsaktivität von der ARP-Lösung erkannt wurde.
 
 
 
 == Einschränkungen
 
-Wenn eine SVM nicht durch Workload-Sicherheit überwacht wird, aber durch ONTAP ARP-Ereignisse generiert werden, dann werden die Ereignisse weiterhin durch die Workload-Sicherheit empfangen und angezeigt. Es werden jedoch keine forensischen Informationen bezüglich der Warnmeldung und auch keine Benutzerzuordnung erfasst oder angezeigt.
+Falls eine SVM nicht von Workload Security überwacht wird, aber von ONTAP ARP-Ereignisse generiert werden, werden die Ereignisse dennoch von Workload Security empfangen und angezeigt.  Forensische Informationen im Zusammenhang mit der Warnung sowie die Benutzerzuordnung werden jedoch nicht erfasst oder angezeigt.
 
 
 
 == Fehlerbehebung
 
-Bekannte Probleme und deren Lösungen sind in der folgenden Tabelle beschrieben.
+Bekannte Probleme und deren Lösungen werden in der folgenden Tabelle beschrieben.
 
 [cols="2*"]
 |===
 | Problem: | Auflösung: 
 
 
-| E-Mail-Alarme werden 24 Stunden nach einem Angriff empfangen. In der UI werden die Warnmeldungen 24 Stunden vor dem Eingang der E-Mails bei Data Infrastructure Insights Workload Security angezeigt. | Wenn ONTAP das Ereignis „_Ransomware Detected_“ (Ransomware Detected_) an Data Infrastructure Insights Workload Security (d. h. Workload-Sicherheit) sendet, wird die E-Mail gesendet. Das Ereignis enthält eine Liste von Angriffen und Zeitstempel. Die Workload Security UI zeigt den Warnungszeitstempel der ersten angegriffenen Datei an. ONTAP sendet das _Ransomware Detected_ Ereignis an Dateninfrastrukturerkennungen, wenn eine bestimmte Anzahl von Dateien codiert wird. Daher kann es einen Unterschied geben zwischen dem Zeitpunkt, zu dem die Warnung in der UI angezeigt wird, und dem Zeitpunkt, zu dem die E-Mail gesendet wird. 
+| E-Mail-Benachrichtigungen werden 24 Stunden nach Erkennung eines Angriffs empfangen.  In der Benutzeroberfläche werden die Warnungen 24 Stunden vorher angezeigt, wenn die E-Mails von Data Infrastructure Insights Workload Security empfangen werden. | Wenn ONTAP das Ereignis _Ransomware erkannt_ an Data Infrastructure Insights Workload Security (d. h. Workload Security) sendet, wird die E-Mail gesendet.  Das Ereignis enthält eine Liste der Angriffe und deren Zeitstempel.  Die Workload Security-Benutzeroberfläche zeigt den Alarmzeitstempel der ersten angegriffenen Datei an.  ONTAP sendet das Ereignis _Ransomware erkannt_ an Data Infrastructure Insights, wenn eine bestimmte Anzahl von Dateien verschlüsselt ist.  Daher kann es zu einer Differenz zwischen dem Zeitpunkt, zu dem die Warnung in der Benutzeroberfläche angezeigt wird, und dem Zeitpunkt, zu dem die E-Mail gesendet wird, kommen. 
 |===

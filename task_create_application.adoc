@@ -1,50 +1,50 @@
 ---
 sidebar: sidebar 
 permalink: task_create_application.html 
-summary: Sie definieren Anwendungen, die Sie dann bei Bedarf auf Anlagen auf Ihrem Mandanten anwenden. 
+summary: Sie definieren Anwendungen, die Sie dann nach Bedarf auf die Assets Ihres Mandanten anwenden. 
 keywords: application, create application, 
 ---
-= Anwendungen Werden Erstellt
+= Erstellen von Anwendungen
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Zum Nachverfolgen von Daten, die bestimmten auf dem Mandanten ausgeführten Applikationen zugeordnet sind, können Sie die Applikationen in Data Infrastructure Insights definieren.
+Um Daten zu verfolgen, die mit bestimmten Anwendungen verknüpft sind, die auf Ihrem Mandanten ausgeführt werden, können Sie die Anwendungen in Data Infrastructure Insights definieren.
 
-.Über diese Aufgabe
-Anhand von Einblicke in die Dateninfrastruktur lassen sich Daten von Applikationen-Assets nachverfolgen, beispielsweise zur Nutzung oder zur Kostenberichterstellung.
+.Informationen zu diesem Vorgang
+Mit Data Infrastructure Insights können Sie Daten von Assets, die mit Anwendungen verknüpft sind, für Zwecke wie Nutzungs- oder Kostenberichte verfolgen.
 
 .Schritte
-. Klicken Sie im Menü Data Infrastructure Insights auf *Observability > Enrich > Applications*. Wählen Sie
+. Klicken Sie im Menü „Data Infrastructure Insights“ auf *Observability > Enrich > Applications*. Auswählen
 +
-Das Dialogfeld Anwendung hinzufügen wird angezeigt.
+Das Dialogfeld „Anwendung hinzufügen“ wird angezeigt.
 
 . Geben Sie einen eindeutigen Namen für die Anwendung ein.
 . Wählen Sie eine Priorität für die Anwendung aus.
-. Klicken Sie Auf *Speichern*.
+. Klicken Sie auf *Speichern*.
 
 
-Nach dem Definieren einer Anwendung kann sie Assets zugewiesen werden.
+Nachdem eine Anwendung definiert wurde, kann sie den Assets zugewiesen werden.
 
 
 
 == Zuweisen von Anwendungen zu Assets
 
-Diese Prozedur weist die Anwendung einem Host als Beispiel zu. Sie können einer Applikation Host, Virtual Machine, Volume oder interne Volumes zuweisen.
+Dieses Verfahren weist die Anwendung beispielhaft einem Host zu.  Sie können einer Anwendung Host, virtuelle Maschine, Volume oder interne Volumes zuweisen.
 
 .Schritte
-. Suchen Sie das Asset, dem Sie der Anwendung zuweisen möchten:
+. Suchen Sie das Asset, dem Sie die Anwendung zuweisen möchten:
 . Klicken Sie auf *Abfragen > +Neue Abfrage* und suchen Sie nach Host.
-. Klicken Sie auf das Kontrollkästchen links neben dem Host, den Sie der Anwendung zuordnen möchten.
-. Klicken Sie Auf *Massenaktionen > Anwendung Hinzufügen*.
-. Wählen Sie die Anwendung aus, der Sie die Anlage zuweisen.
+. Aktivieren Sie das Kontrollkästchen links neben dem Host, den Sie mit der Anwendung verknüpfen möchten.
+. Klicken Sie auf *Massenaktionen > Anwendung hinzufügen*.
+. Wählen Sie die Anwendung aus, der Sie das Asset zuweisen.
 
 
-Neue Anwendungen, die Sie zuweisen, überschreiben alle Anwendungen auf dem Asset, die von einem anderen Asset abgeleitet wurden. Beispielsweise übernehmen Volumes Applikationen von Hosts, und wenn neuen Applikationen einem Volume zugewiesen werden, hat die neue Applikation Vorrang vor der abgeleiteten Applikation.
+Alle neuen Anwendungen, die Sie zuweisen, überschreiben alle Anwendungen auf dem Asset, die von einem anderen Asset abgeleitet wurden.  Beispielsweise erben Volumes Anwendungen von Hosts, und wenn einem Volume neue Anwendungen zugewiesen werden, hat die neue Anwendung Vorrang vor der abgeleiteten Anwendung.
 
 
-NOTE: In Umgebungen mit großen Mengen verwandter Assets kann die Vererbung von Applikationszuweisungen an diese Ressourcen mehrere Minuten dauern. Bitte geben Sie mehr Zeit für Vererbung, wenn Sie viele verwandte Vermögenswerte haben.
+NOTE: In Umgebungen mit einer großen Menge verwandter Assets kann die Vererbung von Anwendungszuweisungen zu diesen Assets mehrere Minuten dauern.  Bitte rechnen Sie mit einer längeren Vererbungszeit, wenn Sie über viele zusammenhängende Vermögenswerte verfügen.
 
-.Nachdem Sie fertig sind
-Nachdem Sie den Host der Anwendung zugewiesen haben, können Sie die verbleibenden Assets der Anwendung zuweisen. Um auf die Landing Page für die Anwendung zuzugreifen, klicken Sie auf *Verwalten > Anwendung* und wählen Sie die von Ihnen erstellte Anwendung aus.
+.Nach Abschluss
+Nachdem Sie der Anwendung den Host zugewiesen haben, können Sie der Anwendung die restlichen Assets zuweisen.  Um auf die Zielseite der Anwendung zuzugreifen, klicken Sie auf *Verwalten > Anwendung* und wählen Sie die von Ihnen erstellte Anwendung aus.

@@ -1,91 +1,91 @@
 ---
 sidebar: sidebar 
 permalink: task_io_density_report_no_root.html 
-summary: Beim Abfragen für eine hohe I/O-Dichte möchten Sie Root-Volumes ausschließen. 
+summary: Wenn Sie nach einer hohen E/A-Dichte suchen, möchten Sie Stammvolumes ausschließen. 
 keywords: NetApp, root volume, high I/O, 
 ---
-= Berichte zur I/O-Dichte beschreiben nur interne Daten-Volumes
+= Sicherstellen, dass IO-Dichteberichte nur interne Datenmengen beschreiben
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Das Root-Volume von NetApp enthält Verzeichnisse und Konfigurationsdateien zum Management des Storage-Systems. Beim Abfragen für eine hohe I/O-Dichte möchten Sie diese Root-Volumes ausschließen.
+Das NetApp -Stammvolume enthält Verzeichnisse und Konfigurationsdateien zur Verwaltung des Speichersystems.  Wenn Sie nach einer hohen E/A-Dichte suchen, möchten Sie diese Stammvolumes ausschließen.
 
-Bei der Überwachung Ihrer Umgebung ist es wichtiger, zu ermitteln, welche internen Datenvolumen eine hohe I/O-Dichte erzeugen. Damit nur die Daten-Volumes präzise ermittelt werden können, müssen die internen NetApp Volumes von Anfragen isoliert werden, die zur Überwachung der I/O-Dichte erforderlich sind.
+Beim Überwachen Ihrer Umgebung ist es wichtiger zu ermitteln, welche internen Datenvolumes hohe E/A-Dichtezahlen erzeugen.  Um nur die Datenvolumes genau zu identifizieren, müssen Sie die internen NetApp Volumes von den Abfragen isolieren, die Sie zur Überwachung der E/A-Dichte verwenden.
 
-Dieser Leitfaden beschreibt, wie NetApp Root-Aggregate leicht identifiziert, von den Ergebnissen interner Volume-Abfragen isoliert und Regeln erstellt werden können, die beim Hinzufügen zum System neue NetApp Root-Aggregate ausschließen. Die folgenden Insight Funktionen sorgen dafür, dass die Berichte zur I/O-Dichte von internen Daten-Volumes abgeleitet werden:
+In diesem Handbuch wird beschrieben, wie Sie die NetApp -Root-Aggregate einfach identifizieren, sie von den Ergebnissen interner Volume-Abfragen isolieren und Regeln erstellen, die alle neuen NetApp Root-Aggregate ausschließen, wenn sie dem System hinzugefügt werden.  Die folgenden Insight-Funktionen werden verwendet, um sicherzustellen, dass Ihre E/A-Dichteberichte aus internen Datenvolumina abgeleitet werden:
 
 * Es wird eine Abfrage erstellt, um alle NetApp Root-Aggregate zu identifizieren, die von Insight überwacht werden.
-* Jedem NetApp Root-Aggregat wird eine Annotation zugewiesen.
-* Es wird eine Annotation-Regel erstellt, um die Annotation auf neue NetApp Root-Aggregate anzuwenden.
+* Jedem der NetApp -Root-Aggregate wird eine Anmerkung zugewiesen.
+* Es wird eine Annotationsregel erstellt, um die Annotation auf neue NetApp Root-Aggregate anzuwenden.
 
 
-Die in diesem Leitfaden aufgeführten Schritte können auch auf Storage-Systeme anderer Anbieter angewendet werden. Sie müssen die Volumes identifizieren, die Verzeichnisse und Konfigurationsdateien für die Verwaltung des Speichersystems enthalten, und ähnliche Schritte verwenden, um diese Volumes auszuschließen.
+Die Schritte in dieser Anleitung können auch auf Speichersysteme anderer Anbieter angewendet werden.  Sie müssen die Volumes identifizieren, die Verzeichnisse und Konfigurationsdateien zur Verwaltung des Speichersystems enthalten, und ähnliche Schritte ausführen, um diese Volumes auszuschließen.
 
 
 
-== Erstellen einer Abfrage zur Identifizierung von NetApp-Root-Aggregaten
+== Erstellen einer Abfrage zum Identifizieren von NetApp Root-Aggregaten
 
-Abfragen ermöglichen die Suche auf granularer Ebene, basierend auf vom Benutzer ausgewählten Kriterien. Mithilfe einer Abfrage können Sie in Ihrem Mandanten nach internen Volumes suchen, die das Root-Aggregat von NetApp enthalten.
+Abfragen ermöglichen eine Suche auf granularer Ebene basierend auf vom Benutzer ausgewählten Kriterien.  Mithilfe einer Abfrage können Sie nach internen Volumes auf Ihrem Mandanten suchen, die das NetApp Root-Aggregat enthalten.
 
 .Schritte
-. Erstellen Sie eine Abfrage, um NetApp-Root-Aggregate auf Ihrem Mandanten zu identifizieren: Klicken Sie auf *Abfragen > Neue Abfrage > Ressourcentyp auswählen* (?)
+. Erstellen Sie eine Abfrage, um NetApp Root-Aggregate auf Ihrem Mandanten zu identifizieren: Klicken Sie auf *Abfragen > Neue Abfrage > Ressourcentyp auswählen* (?)
 . Klicken Sie auf *Speicherpool*
-. Geben Sie den Namen für das Root-Aggregat ein
+. Geben Sie den Namen für das Stammaggregat ein
 +
-Dieses Beispiel verwendet für den Namen „aggr0“. Beim Erstellen eines Aggregats müssen nur die folgenden Anforderungen für den Namen erfüllt werden:
+In diesem Beispiel wird „aggr0“ als Name verwendet.  Beim Erstellen eines Aggregats müssen lediglich folgende Vorgaben für den Namen beachtet werden:
 
 +
-.. Er muss entweder mit einem Buchstaben oder einem Unterstrich (_) beginnen.
-.. Er darf nur Buchstaben, Ziffern und Unterstriche enthalten.
-.. Sie kann maximal 250 Zeichen umfassen. In den meisten Fällen ist das Aggregat der Name aggr0, aggr_0, oder etwas ähnliches. Es kann ein iterativer Prozess erforderlich sein, um alle NetApp-Root-Aggregate auf dem Mandanten zu identifizieren.
+.. Es muss entweder mit einem Buchstaben oder einem Unterstrich (_) beginnen.
+.. Es darf nur Buchstaben, Ziffern und Unterstriche enthalten.
+.. Es dürfen höchstens 250 Zeichen lang sein.  In den meisten Fällen hat das Aggregat den Namen aggr0, aggr_0 oder etwas Ähnliches.  Möglicherweise ist ein iterativer Prozess erforderlich, um alle NetApp Root-Aggregate auf Ihrem Mandanten zu identifizieren.
 
 
 . Klicken Sie auf *Speichern* und geben Sie einen Namen für die neue Abfrage ein.
 +
-Wie bereits erwähnt, könnte dies ein iterativer Prozess sein und mehrere Anfragen zur Identifizierung aller NetApp Root-Aggregate erfordern.
+Wie bereits erwähnt, kann dies ein iterativer Prozess sein und mehrere Abfragen erfordern, um alle NetApp Root-Aggregate zu identifizieren.
 
 
 
 
 
-== Erstellen Sie eine Anmerkung für die von Ihren Abfragen zurückgegebenen Root-Volumes
+== Erstellen Sie eine Anmerkung für die von Ihren Abfragen zurückgegebenen Stammvolumes
 
-Anmerkungen sind spezielle Notizen, die Sie Ihren Assets zuweisen, damit Sie Assets nach ihren Anmerkungen filtern können. Die von Ihnen erstellte Annotation dient dazu, die NetApp-Root-Aggregate Ihres Mandanten zu identifizieren und sicherzustellen, dass diese nicht in einem bestimmten Bericht enthalten sind.
+Anmerkungen sind spezielle Notizen, die Sie Ihren Assets zuweisen und die es Ihnen ermöglichen, Assets nach ihren Anmerkungen zu filtern.  Die von Ihnen erstellte Anmerkung wird verwendet, um die NetApp Root-Aggregate auf Ihrem Mandanten zu identifizieren und sicherzustellen, dass sie nicht in einem bestimmten Bericht enthalten sind.
 
 .Bevor Sie beginnen
-Sie müssen alle Root-Aggregate identifiziert haben, die Sie aus dem Bericht „hohe I/O-Dichte“ ausschließen möchten.
+Sie müssen alle Root-Aggregate identifiziert haben, die Sie aus dem Bericht „Hohe E/A-Dichte“ ausschließen möchten.
 
 .Schritte
-. Klicken Sie im Menü Data Infrastructure Insights auf *Verwalten > Anmerkungen*
-. Klicken Sie Auf *Hinzufügen*
+. Klicken Sie im Menü „Data Infrastructure Insights“ auf *Verwalten > Anmerkungen*
+. Klicken Sie auf *Hinzufügen*
 +
 .. Geben Sie den Namen für die Anmerkung ein: *RootAggr*
-.. Geben Sie eine Beschreibung der Anmerkung ein: *Root-Aggregat aus dem Bericht "hohe I/O-Dichte" entfernen*
+.. Geben Sie eine Beschreibung der Anmerkung ein: *Stammaggregat aus Bericht „Hohe E/A-Dichte“ entfernen*
 .. Geben Sie den Typ der Anmerkung ein: *Boolean*
 
 
-. Klicken Sie Auf *Speichern*
+. Klicken Sie auf *Speichern*
 
 
 
 
-== Erstellen einer Annotation-Regel, um bestimmte Aggregate aus Ihrem I/O-Dichtebericht zu automatisieren
+== Erstellen Sie eine Anmerkungsregel, um bestimmte Aggregate automatisch aus Ihrem E/A-Dichtebericht auszuschließen.
 
-Alternativ zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden. Anmerkungsregeln basieren auf Abfragen, die Sie erstellen, und wenn sie auf dem System ausgeführt werden, fügen sie vorhandenen Assets neue Assets hinzu. Wenn diese Vermögenswerte von einem Bericht ausgeschlossen werden, werden auch die neuen Vermögenswerte automatisch ausgeschlossen.
+Als Alternative zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden.  Anmerkungsregeln basieren auf von Ihnen erstellten Abfragen und fügen bei der Ausführung auf dem System neue Assets zu vorhandenen Asset-Sets hinzu.  Wenn diese Asset-Gruppen aus einem Bericht ausgeschlossen werden, werden die neuen Assets automatisch ebenfalls ausgeschlossen.
 
 .Bevor Sie beginnen
-Sie müssen eine Abfrage zur Identifikation der NetApp-Root-Aggregate erstellt und gespeichert haben, die Sie auf Ihrem Mandanten identifiziert haben.
+Sie müssen eine Abfrage erstellt und gespeichert haben, die die NetApp Root-Aggregate identifiziert, die Sie auf Ihrem Mandanten identifiziert haben.
 
 .Schritte
-. Klicken Sie in der Symbolleiste Data Infrastructure Insights auf *Verwalten > Anmerkungsregeln*.
-. Klicken Sie Auf *Hinzufügen*. Das Dialogfeld Regel hinzufügen wird angezeigt.
+. Klicken Sie in der Data Infrastructure Insights Symbolleiste auf *Verwalten > Anmerkungsregeln*.
+. Klicken Sie auf *Hinzufügen*. Das Dialogfeld „Regel hinzufügen“ wird angezeigt.
 +
-.. Geben Sie im Feld Name einen eindeutigen Namen ein, der die Regel *"RootAggrExclude"* beschreibt
-.. Klicken Sie auf Query und wählen Sie die Abfrage aus, die Insight verwenden soll, um die Annotationsregel auf: *„Aggregate0“* anzuwenden
-.. Klicken Sie auf Anmerkung und wählen Sie *"Root agg exclude"*
-.. Klicken Sie auf *Wert* und geben Sie *true* ein
+.. Geben Sie im Feld „Name“ einen eindeutigen Namen ein, der die Regel beschreibt: *"RootAggrExclude"*
+.. Klicken Sie auf Abfrage und wählen Sie die Abfrage aus, die Insight verwenden soll, um die Anmerkungsregel auf *"Aggregate0"* anzuwenden.
+.. Klicken Sie auf Anmerkung und wählen Sie: *"Root agg exclude"*
+.. Klicken Sie auf *Wert* und geben Sie *Wahr* ein
 
 
 

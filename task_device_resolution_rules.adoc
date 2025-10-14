@@ -4,71 +4,71 @@ permalink: task_device_resolution_rules.html
 keywords: Automatic, AR, AHR, Host, automatic device resolution 
 summary: Mithilfe der Geräteauflösung können Sie die Leistung und den Bestand in Ihrer Umgebung genau verfolgen. 
 ---
-= Regeln zur Geräterauflösung
+= Regeln zur Geräteauflösung
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie erstellen Regeln für die Geräteauflösung, um Hosts, Speicher und Bänder zu identifizieren, die derzeit von Data Infrastructure Insights nicht automatisch erkannt werden. Die Regeln, die Sie erstellen, identifizieren Geräte, die sich derzeit in Ihrer Umgebung befinden, und identifizieren ähnliche Geräte, die Ihrer Umgebung hinzugefügt werden.
+Sie erstellen Geräteauflösungsregeln, um Hosts, Speicher und Bänder zu identifizieren, die derzeit nicht automatisch von Data Infrastructure Insights identifiziert werden.  Die von Ihnen erstellten Regeln identifizieren Geräte, die sich derzeit in Ihrer Umgebung befinden, und identifizieren auch ähnliche Geräte, wenn sie Ihrer Umgebung hinzugefügt werden.
 
 
 
-== Geräterauflösungsregeln Werden Erstellt
+== Erstellen von Geräteauflösungsregeln
 
-Wenn Sie Regeln erstellen, müssen Sie zunächst die Informationsquelle identifizieren, auf die die Regel angewendet wird, die Methode, mit der Informationen extrahiert werden sollen, und ob DNS-Suche auf die Ergebnisse der Regel angewendet wird.
+Wenn Sie Regeln erstellen, identifizieren Sie zunächst die Informationsquelle, auf die die Regel angewendet wird, die zum Extrahieren der Informationen verwendete Methode und ob auf die Ergebnisse der Regel eine DNS-Suche angewendet wird.
 
 [cols="2*"]
 |===
 
 
-| Quelle, mit der das Gerät identifiziert wird | * SRM Aliase für Hosts * Storage-Alias mit eingebettetem Host- oder Bandnamen * Switch-Alias, der einen eingebetteten Host- oder Bandnamen enthält * Zonennamen, die einen eingebetteten Hostnamen enthalten 
+| Quelle, die zur Identifizierung des Geräts verwendet wird | * SRM-Aliase für Hosts * Speicheralias mit eingebettetem Host- oder Bandnamen * Switch-Alias mit eingebettetem Host- oder Bandnamen * Zonennamen mit eingebettetem Hostnamen 
 
 
-| Methode, die zum Extrahieren des Gerätenamens aus der Quelle verwendet wird | * AS (einen Namen aus einem SRM extrahieren) * Trennzeichen * reguläre Ausdrücke 
+| Methode, die zum Extrahieren des Gerätenamens aus der Quelle verwendet wird | * Wie es ist (einen Namen aus einem SRM extrahieren) * Trennzeichen * Reguläre Ausdrücke 
 
 
-| DNS-Suche | Gibt an, ob Sie den Hostnamen mit DNS überprüfen 
+| DNS-Suche | Gibt an, ob Sie DNS zur Überprüfung des Hostnamens verwenden 
 |===
-Sie erstellen Regeln auf der Registerkarte Regeln für die automatische Auflösung. Die folgenden Schritte beschreiben den Prozess zur Regelerstellung.
+Sie erstellen Regeln auf der Registerkarte „Regeln für die automatische Auflösung“.  Die folgenden Schritte beschreiben den Regelerstellungsprozess.
 
 .Verfahren
-. Klicken Sie Auf *Verwalten > Geräteauflösung*
-. Klicken Sie auf der Registerkarte *Regeln zur automatischen Auflösung* auf *+ Hostregel* oder *+ Bandregel*.
+. Klicken Sie auf *Verwalten > Geräteauflösung*
+. Klicken Sie auf der Registerkarte *Regeln zur automatischen Auflösung* auf *+ Host-Regel* oder *+ Bandregel*.
 +
 Der Bildschirm *Auflösungsregel* wird angezeigt.
 
 +
 
-NOTE: Klicken Sie auf den Link _Matching Criteria_, um Hilfe zu erhalten und Beispiele zum Erstellen von regulären Ausdrücken zu erhalten.
+NOTE: Klicken Sie auf den Link „Übereinstimmungskriterien anzeigen“, um Hilfe und Beispiele zum Erstellen regulärer Ausdrücke zu erhalten.
 
 . Wählen Sie in der Liste *Typ* das Gerät aus, das Sie identifizieren möchten.
 +
-Sie können _Host_ oder _Band_ auswählen.
+Sie können _Host_ oder _Tape_ auswählen.
 
-. Wählen Sie in der Liste *Quelle* die Quelle aus, mit der Sie den Host identifizieren möchten.
+. Wählen Sie in der Liste *Quelle* die Quelle aus, die Sie zur Identifizierung des Hosts verwenden möchten.
 +
-Je nach gewählter Quelle zeigt Data Infrastructure Insights die folgende Antwort an:
+Abhängig von der ausgewählten Quelle zeigt Data Infrastructure Insights die folgende Antwort an:
 
 +
-.. *Zonen* listet die Zonen und WWN auf, die durch Data Infrastructure Insights identifiziert werden müssen.
-.. *SRM* listet die nicht identifizierten Aliase auf, die durch Data Infrastructure Insights identifiziert werden müssen
-.. *Storage Alias* listet Speicheraliase und WWN auf, die durch Data Infrastructure Insights identifiziert werden müssen
-.. *Switch Alias* listet die Switch-Aliase auf, die durch Data Infrastructure Insights identifiziert werden müssen
+.. *Zonen* listet die Zonen und WWN auf, die von Data Infrastructure Insights identifiziert werden müssen.
+.. *SRM* listet die nicht identifizierten Aliase auf, die von Data Infrastructure Insights identifiziert werden müssen
+.. *Speicheralias* listet Speicheraliase und WWN auf, die von Data Infrastructure Insights identifiziert werden müssen
+.. *Switch-Alias* listet die Switch-Aliase auf, die von Data Infrastructure Insights identifiziert werden müssen
 
 
-. Wählen Sie in der Liste *Methode* die Methode aus, die Sie verwenden möchten, um den Host zu identifizieren.
+. Wählen Sie in der Liste *Methode* die Methode aus, die Sie zur Identifizierung des Hosts verwenden möchten.
 +
 |===
 
 
-| Quelle | Methode 
+| Quelle | Verfahren 
 
 
-| SRM | Wie ist, Trennzeichen, reguläre Ausdrücke 
+| SRM | Wie es ist, Trennzeichen, reguläre Ausdrücke 
 
 
-| Storage-Alias | Trennzeichen, reguläre Ausdrücke 
+| Speicheralias | Trennzeichen, reguläre Ausdrücke 
 
 
 | Alias wechseln | Trennzeichen, reguläre Ausdrücke 
@@ -77,14 +77,14 @@ Je nach gewählter Quelle zeigt Data Infrastructure Insights die folgende Antwor
 | Zonen | Trennzeichen, reguläre Ausdrücke 
 |===
 +
-** Für Regeln, die Trennzeichen verwenden, sind die Trennzeichen und die Mindestlänge des Hostnamens erforderlich. Die Mindestlänge des Hostnamens ist die Anzahl der Zeichen, die Data Infrastructure Insights zur Identifizierung eines Hosts verwenden sollte. Data Infrastructure Insights führt DNS-Suchvorgänge nur für Hostnamen aus, die so lange oder länger sind.
+** Regeln mit Trennzeichen erfordern die Trennzeichen und die Mindestlänge des Hostnamens.  Die Mindestlänge des Hostnamens ist die Anzahl der Zeichen, die Data Infrastructure Insights zur Identifizierung eines Hosts verwenden soll.  Data Infrastructure Insights führt DNS-Lookups nur für Hostnamen durch, die so lang oder länger sind.
 +
-Bei Regeln, die Trennzeichen verwenden, wird die Eingabeszeichenfolge durch das Trennzeichen getokenisiert, und eine Liste von Hostnamenkandidaten wird durch das Erstellen mehrerer Kombinationen des benachbarten Tokens erstellt. Die Liste wird dann sortiert, die größte bis die kleinste. Für einen Eingabeerring von _vipsnq03_hba3_emc3_12ep0_ würde die Liste beispielsweise Folgendes ergeben:
+Bei Regeln mit Trennzeichen wird die Eingabezeichenfolge durch das Trennzeichen tokenisiert und eine Liste mit Hostnamenkandidaten wird erstellt, indem mehrere Kombinationen des angrenzenden Tokens erstellt werden.  Die Liste wird dann von groß nach klein sortiert.  Beispielsweise würde die Liste bei einer Eingabezeichenfolge von _vipsnq03_hba3_emc3_12ep0_ Folgendes ergeben:
 
 +
 *** vipsnq03_hba3_emc3_12ep0
 *** vipsnq03_hba3_emc3
-*** Hba3 emc3_12ep0
+*** hba3 emc3_12ep0
 *** vipsnq03_hba3
 *** emc3_12ep0
 *** hba3_emc3
@@ -94,12 +94,12 @@ Bei Regeln, die Trennzeichen verwenden, wird die Eingabeszeichenfolge durch das 
 *** hba3
 
 
-** Regeln, die reguläre Ausdrücke verwenden, erfordern einen regulären Ausdruck, das Format und die Empfindlichkeitsauswahl für Fälle.
+** Regeln, die reguläre Ausdrücke verwenden, erfordern einen regulären Ausdruck, das Format und die Auswahl der Groß-/Kleinschreibung.
 
 
-. Klicken Sie auf *Run AR*, um alle Regeln auszuführen, oder klicken Sie auf den Pfeil nach unten in der Schaltfläche, um die von Ihnen erstellte Regel (und alle anderen Regeln, die seit der letzten vollständigen Ausführung von AR erstellt wurden) auszuführen.
+. Klicken Sie auf *AR ausführen*, um alle Regeln auszuführen, oder klicken Sie auf den Abwärtspfeil in der Schaltfläche, um die von Ihnen erstellte Regel auszuführen (und alle anderen Regeln, die seit der letzten vollständigen Ausführung von AR erstellt wurden).
 +
-Die Ergebnisse des Regellaufs werden auf der Registerkarte * FC Identify* angezeigt.
+Die Ergebnisse des Regellaufs werden auf der Registerkarte *FC-Identifizierung* angezeigt.
 
 
 
@@ -107,48 +107,48 @@ Die Ergebnisse des Regellaufs werden auf der Registerkarte * FC Identify* angeze
 
 == Starten einer automatischen Aktualisierung der Geräteauflösung
 
-Ein Update zur Geräteauflösung setzt manuelle Änderungen fest, die seit der letzten vollständigen automatischen Gerätelaufauflösung hinzugefügt wurden. Das Ausführen eines Updates kann verwendet werden, um nur die neuen manuellen Einträge für die Konfiguration der Geräteauflösung zu übergeben und auszuführen. Es wird keine vollständige Gerätelaufauflösung durchgeführt.
+Bei einer Aktualisierung der Geräteauflösung werden manuelle Änderungen übernommen, die seit dem letzten vollautomatischen Geräteauflösungslauf hinzugefügt wurden.  Durch Ausführen eines Updates können nur die neuen manuellen Einträge in der Geräteauflösungskonfiguration übernommen und ausgeführt werden.  Es wird kein vollständiger Geräteauflösungslauf durchgeführt.
 
 .Verfahren
-. Melden Sie sich bei der Web-UI von Data Infrastructure Insights an.
-. Klicken Sie Auf *Verwalten > Geräteauflösung*
-. Klicken Sie im Bildschirm *Geräteauflösung* auf den Pfeil nach unten in der Schaltfläche *Run AR*.
-. Klicken Sie auf *Aktualisieren*, um die Aktualisierung zu starten.
+. Melden Sie sich bei der Web-Benutzeroberfläche von Data Infrastructure Insights an.
+. Klicken Sie auf *Verwalten > Geräteauflösung*
+. Klicken Sie im Bildschirm *Geräteauflösung* auf den Abwärtspfeil in der Schaltfläche *AR ausführen*.
+. Klicken Sie auf *Aktualisieren*, um das Update zu starten.
 
 
 
 
-== Regelgestützte manuelle Identifizierung
+== Regelgestützte manuelle Identifikation
 
-Diese Funktion wird für spezielle Fälle verwendet, in denen Sie eine bestimmte Regel oder eine Liste von Regeln (mit oder ohne einmalige Neuanordnung) ausführen möchten, um unbekannte Hosts, Speicher und Bandgeräte aufzulösen.
+Diese Funktion wird für Sonderfälle verwendet, in denen Sie eine bestimmte Regel oder eine Liste von Regeln (mit oder ohne einmalige Neuordnung) ausführen möchten, um unbekannte Hosts, Speicher- und Bandgeräte aufzulösen.
 
 .Bevor Sie beginnen
-Sie verfügen über eine Reihe von Geräten, die nicht identifiziert wurden, und Sie haben auch mehrere Regeln, die andere Geräte erfolgreich identifiziert haben.
+Sie haben eine Reihe von Geräten, die nicht identifiziert wurden, und Sie haben auch mehrere Regeln, die andere Geräte erfolgreich identifiziert haben.
 
 
-NOTE: Wenn Ihre Quelle nur einen Teil eines Host- oder Gerätenamens enthält, verwenden Sie eine Regel für reguläre Ausdrücke, und formatieren Sie sie, um den fehlenden Text hinzuzufügen.
+NOTE: Wenn Ihre Quelle nur einen Teil eines Host- oder Gerätenamens enthält, verwenden Sie eine reguläre Ausdrucksregel und formatieren Sie sie, um den fehlenden Text hinzuzufügen.
 
 .Verfahren
-. Melden Sie sich bei der Web-UI von Data Infrastructure Insights an.
-. Klicken Sie Auf *Verwalten > Geräteauflösung*
-. Klicken Sie auf die Registerkarte * Fibre Channel Identify*.
+. Melden Sie sich bei der Web-Benutzeroberfläche von Data Infrastructure Insights an.
+. Klicken Sie auf *Verwalten > Geräteauflösung*
+. Klicken Sie auf die Registerkarte *Fibre Channel Identify*.
 +
 Das System zeigt die Geräte zusammen mit ihrem Auflösungsstatus an.
 
 . Wählen Sie mehrere nicht identifizierte Geräte aus.
 . Klicken Sie auf *Massenaktionen* und wählen Sie *Hostauflösung festlegen* oder *Bandauflösung festlegen*.
 +
-Das System zeigt den Identify-Bildschirm an, der eine Liste aller Regeln enthält, die Geräte erfolgreich identifiziert haben.
+Das System zeigt den Bildschirm „Identifizieren“ an, der eine Liste aller Regeln enthält, die Geräte erfolgreich identifiziert haben.
 
-. Ändern Sie die Reihenfolge der Regeln in eine Bestellung, die Ihren Anforderungen entspricht.
+. Ändern Sie die Reihenfolge der Regeln in eine Reihenfolge, die Ihren Anforderungen entspricht.
 +
-Die Reihenfolge der Regeln wird im Identify-Bildschirm geändert, aber nicht global geändert.
+Die Reihenfolge der Regeln wird im Identifizierungsbildschirm geändert, jedoch nicht global.
 
 . Wählen Sie die Methode aus, die Ihren Anforderungen entspricht.
 
 
-Data Infrastructure Insights führt den Prozess der Hostauflösung in der Reihenfolge aus, in der die Methoden angezeigt werden, beginnend mit den Methoden oben.
+Data Infrastructure Insights führt den Hostauflösungsprozess in der Reihenfolge aus, in der die Methoden angezeigt werden, beginnend mit denen ganz oben.
 
-Wenn geltende Regeln gefunden werden, werden in der Spalte Regeln Regelnamen angezeigt und als Handbuch identifiziert.
+Wenn zutreffende Regeln gefunden werden, werden die Regelnamen in der Spalte „Regeln“ angezeigt und als „manuell“ gekennzeichnet.
 
-Verwandte Themen: link:task_device_resolution_fibre_channel.html["Fibre Channel-Geräteauflösung"] link:task_device_resolution_ip.html["IP-Geräteauflösung"] link:task_device_resolution_preferences.html["Einstellen Der Einstellungen Für Die Geräteauflösung"]
+Verwandt:link:task_device_resolution_fibre_channel.html["Fibre Channel-Geräteauflösung"] link:task_device_resolution_ip.html["IP-Geräteauflösung"] link:task_device_resolution_preferences.html["Festlegen der Geräteauflösungseinstellungen"]

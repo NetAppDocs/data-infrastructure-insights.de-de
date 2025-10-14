@@ -14,7 +14,7 @@ summary: Überwachen Sie den Zustand Ihrer Infrastruktur mit einer einheitlichen
 
 
 [role="lead"]
-Data Infrastructure Insights bietet eine umfassende Überwachung der Infrastrukturintegrität, die Leistung, Kapazität, Konfiguration und Komponentenstatus Ihrer Speicherumgebung verfolgt.  Die Integritätswerte werden auf Grundlage von Monitorwarnungen in diesen Kategorien berechnet. So erhalten Sie einen einheitlichen Überblick über die Systemintegrität und können Probleme proaktiv lösen.
+Data Infrastructure Insights bietet eine umfassende Überwachung der Infrastrukturintegrität, die Leistung, Kapazität, Konfiguration und Komponentenstatus Ihrer Speicherumgebung verfolgt. Die Integritätswerte werden auf Grundlage von Monitorwarnungen in diesen Kategorien berechnet. So erhalten Sie einen einheitlichen Überblick über die Systemintegrität und können Probleme proaktiv lösen.
 
 
 
@@ -23,7 +23,7 @@ Data Infrastructure Insights bietet eine umfassende Überwachung der Infrastrukt
 
 NOTE: Die Überwachung des Infrastrukturzustands ist einlink:concept_preview_features.html["Vorschau"] Funktion und kann sich ändern.
 
-Navigieren Sie zu *Beobachtbarkeit > Analysieren* und wählen Sie *Infrastrukturzustand* aus.  Das Dashboard bietet einen Überblick über den Zustand Ihres Systems, basierend auf den unten erläuterten Alarmkategorien und Bewertungen des Monitors.  Legen Sie oben Filter fest, um den Fokus Ihrer Untersuchung einzugrenzen.
+Navigieren Sie zu *Beobachtbarkeit > Analysieren* und wählen Sie *Infrastrukturzustand* aus. Das Dashboard bietet einen Überblick über den Zustand Ihres Systems, basierend auf den unten erläuterten Alarmkategorien und Bewertungen des Monitors. Legen Sie oben Filter fest, um den Fokus Ihrer Untersuchung einzugrenzen.
 
 image:infra_health_main_screen.png["Übersicht über den Zustand der Infrastruktur"]
 
@@ -35,7 +35,7 @@ Standardmäßig werden Integritätswerte nach Rechenzentrum gruppiert. Sie könn
 
 Die Integritätswerte werden durch Warnungen bestimmt, die für die Einbeziehung in die Berechnung der Systemintegrität konfiguriert sind.
 
-Beim Erstellen eines Monitors für ein Infrastrukturobjekt können Sie auswählen, ob Warnungen vom Monitor in die Berechnungen einbezogen werden sollen.  Erweitern Sie unten auf dem Bildschirm die erweiterte Konfiguration und wählen Sie „In Infrastrukturzustandsberechnung einbeziehen“ aus.  Wählen Sie eine Kategorie aus, auf die die Berechnung für den Monitor angewendet werden soll:
+Beim Erstellen eines Monitors für ein Infrastrukturobjekt können Sie auswählen, ob Warnungen vom Monitor in die Berechnungen einbezogen werden sollen. Erweitern Sie unten auf dem Bildschirm die erweiterte Konfiguration und wählen Sie „In Infrastrukturzustandsberechnung einbeziehen“ aus. Wählen Sie eine Kategorie aus, auf die die Berechnung für den Monitor angewendet werden soll:
 
 * *Komponentenzustand* – Lüfterausfall, Serviceprozessor offline usw.
 * *Leistungszustand* – hohe Speicherknotenauslastung, anormale Spitze der Knotenlatenz usw.
@@ -49,7 +49,7 @@ image:infra_health_monitor_advanced_config.png["Erweiterte Monitorkonfiguration 
 
 == Gesundheitswerte erklärt
 
-Die Punktzahlen werden auf einer Skala von 0 bis 100 angegeben, wobei 100 für volle Gesundheit steht.  Überwachte Infrastrukturobjekte, bei denen derzeit oder in letzter Zeit Probleme aufgetreten sind, senken diesen Wert entsprechend den folgenden gewichteten Durchschnittswerten:
+Die Punktzahlen werden auf einer Skala von 0 bis 100 angegeben, wobei 100 für volle Gesundheit steht. Überwachte Infrastrukturobjekte, bei denen derzeit oder in letzter Zeit Probleme aufgetreten sind, senken diesen Wert entsprechend den folgenden gewichteten Durchschnittswerten:
 
 * Komponenten, Leistung oder Kapazität: jeweils 30 %
 * Konfiguration: 10 %

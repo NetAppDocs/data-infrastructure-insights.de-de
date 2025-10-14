@@ -1,49 +1,49 @@
 ---
 sidebar: sidebar 
 permalink: cs_notifications_email.html 
-summary: Hinzufügen von E-Mail-Adressen für Benachrichtigungen zu Workload-Sicherheitswarnungen 
+summary: Hinzufügen von E-Mail-Adressen für Benachrichtigungen zu Workload-Sicherheitswarnungen. 
 keywords: email, notifications, alerts, warnings, attacks 
 ---
-= Konfigurieren von E-Mail-Benachrichtigungen für Warnungen, Warnungen und den Zustand des Agent/Data Source Collectors
+= Konfigurieren von E-Mail-Benachrichtigungen für Alarme, Warnungen und den Zustand von Agenten/Datenquellen-Sammlern
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Um die Empfänger von Benachrichtigungen für die Workload-Sicherheit zu konfigurieren, klicken Sie auf *Admin > Benachrichtigungen* und geben Sie für jeden Empfänger eine E-Mail-Adresse in die entsprechenden Abschnitte ein.
+Um die Empfänger von Workload Security-Warnmeldungen zu konfigurieren, klicken Sie auf *Admin > Benachrichtigungen* und geben Sie in den entsprechenden Abschnitten für jeden Empfänger eine E-Mail-Adresse ein.
 
 
 
-== Potenzielle Angriffs- und Warnhinweise
+== Alarme und Warnungen vor potenziellen Angriffen
 
-Um Benachrichtigungen zu potenziellen Angriffen zu senden, geben Sie die E-Mail-Adressen der Empfänger im Abschnitt „ potenzielle Angriffswarnungen senden “ ein. Für jede Aktion der Warnmeldung werden E-Mail-Benachrichtigungen an die Benachrichtigungsliste gesendet.
+Um Warnmeldungen zu _potenziellen Angriffen_ zu senden, geben Sie die E-Mail-Adressen der Empfänger im Abschnitt _Warnmeldungen zu potenziellen Angriffen senden_ ein.  Für jede Aktion im Zusammenhang mit der Warnung werden E-Mail-Benachrichtigungen an die Empfängerliste der Warnung gesendet.
 
-Um _Warnhinweise zu senden, geben Sie die E-Mail-Adressen der Empfänger im Abschnitt „ Warnhinweise senden “ ein.
+Um _Warnbenachrichtigungen_ zu senden, geben Sie die E-Mail-Adressen der Empfänger im Abschnitt _Warnmeldungen senden_ ein.
 
 
 
-== Statusüberwachung von Agent und Data Collector
+== Integritätsüberwachung für Agenten und Datensammler
 
-Sie können den Zustand von Agenten und Datenquellen über Benachrichtigungen überwachen.
+Sie können den Zustand von Agenten und Datenquellen durch Benachrichtigungen überwachen.
 
-Um Benachrichtigungen zu erhalten, wenn ein Agent oder Datenquellensammler nicht funktioniert, geben Sie die E-Mail-Adressen der Empfänger im Abschnitt „_Data Collection Health Alerts_“ ein.
+Um Benachrichtigungen zu erhalten, falls ein Agent oder Datenquellensammler nicht funktioniert, geben Sie die E-Mail-Adressen der Empfänger im Abschnitt „Warnungen zum Zustand der Datensammlung“ ein.
 
 Beachten Sie Folgendes:
 
-* Zustandswarnmeldungen werden erst gesendet, nachdem der Agent/Sammler mindestens eine Stunde lang die Meldung beendet hat.
-* Es wird nur eine E-Mail-Benachrichtigung an die vorgesehenen Empfänger in einem bestimmten Zeitraum von 24 Stunden gesendet, auch wenn der Agent oder der Datensammler länger getrennt ist.
-* Bei einem Agent-Fehler wird eine Warnung gesendet (nicht eine pro Collector). Die E-Mail enthält eine Liste aller betroffenen SVMs.
-* Active Directory-Sammlung Fehler wird als Warnung gemeldet; es hat keine Auswirkungen auf Ransomware-Erkennung.
-* Die Setup-Liste „erste Schritte“ enthält jetzt eine neue Phase „_E-Mail-Benachrichtigungen konfigurieren_“.
+* Gesundheitswarnungen werden erst gesendet, wenn der Agent/Sammler mindestens eine Stunde lang keine Berichte mehr sendet.
+* Innerhalb eines Zeitraums von 24 Stunden wird nur eine E-Mail-Benachrichtigung an die vorgesehenen Empfänger gesendet, selbst wenn die Verbindung zum Agenten oder Datensammler für einen längeren Zeitraum unterbrochen ist.
+* Im Falle eines Agentenfehlers wird eine Warnung gesendet (nicht eine pro Collector).  Die E-Mail enthält eine Liste aller betroffenen SVMs.
+* Ein Fehler bei der Active Directory-Sammlung wird als Warnung gemeldet und hat keinen Einfluss auf die Ransomware-Erkennung.
+* Die Setup-Liste „Erste Schritte“ enthält jetzt eine neue Phase „E-Mail-Benachrichtigungen konfigurieren“.
 
 
 
 
-== Empfangen Von Agent- Und Data Collector-Upgrade-Benachrichtigungen
+== Empfangen von Agent- und Data Collector-Upgrade-Benachrichtigungen
 
-* Geben Sie in „Data Collection Health Alerts“ die E-Mail-ID(s) ein.
+* Geben Sie die E-Mail-ID(s) in den „Health Alerts zur Datenerfassung“ ein.
 * Das Kontrollkästchen „Upgrade-Benachrichtigungen aktivieren“ wird aktiviert.
-* Die E-Mail-Benachrichtigungen für Agent- und Data Collector-Upgrades werden einen Tag vor dem geplanten Upgrade an die E-Mail-IDs gesendet.
+* E-Mail-Benachrichtigungen zu Agent- und Data Collector-Upgrades werden einen Tag vor dem geplanten Upgrade an die E-Mail-IDs gesendet.
 
 
 
@@ -51,8 +51,8 @@ Beachten Sie Folgendes:
 == Fehlerbehebung
 
 |===
-| *Problem:* | *Teste das:* 
+| *Problem:* | *Versuchen Sie Folgendes:* 
 
 
-| E-Mail-IDs sind in den „Data Collector Health Alerts“ vorhanden, ich erhalte jedoch keine Benachrichtigungen. | Benachrichtigungs-E-Mails werden von der NetApp-Data-Infrastructure-Insights-Domain gesendet, d. h. von _accounts@service.cloudinsights.NetApp.com_. Einige Unternehmen blockieren eingehende E-Mails, wenn sie von einer externen Domäne stammen. Stellen Sie sicher, dass externe Benachrichtigungen aus NetApp-Dateninfrastrukturdomänen auf die Whitelist gesetzt sind. 
+| In den „Data Collector Health Alerts“ sind E-Mail-IDs vorhanden, ich erhalte jedoch keine Benachrichtigungen. | Benachrichtigungs-E-Mails werden von der NetApp Data Infrastructure Insights Domäne gesendet, d. h. von _accounts@service.cloudinsights.netapp.com_.  Einige Unternehmen blockieren eingehende E-Mails, wenn diese von einer externen Domäne stammen.  Stellen Sie sicher, dass externe Benachrichtigungen von NetApp Data Infrastructure Insights -Domänen auf die Whitelist gesetzt werden. 
 |===

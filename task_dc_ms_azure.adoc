@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: task_dc_ms_azure.html 
 keywords: data collector, azure, 
-summary: Azure Compute Data Collector konfigurieren. 
+summary: Konfigurieren des Azure-Compute-Datensammlers. 
 ---
-= Konfigurieren des Azure Compute-Datensammlers
+= Konfigurieren des Azure-Compute-Datensammlers
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Compute-Datensammler Azure, um Inventar- und Performance-Daten aus Azure Computing-Instanzen zu erfassen.
+Data Infrastructure Insights verwendet den Azure Compute-Datensammler, um Bestands- und Leistungsdaten von Azure Compute-Instanzen zu erfassen.
 
 
 
 == Anforderungen
 
-Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurieren.
+Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen.
 
-* Port-Anforderung: 443 HTTPS
-* Azure OAuth 2.0 Redirect URI (login.microsoftonline.com)
+* Portanforderung: 443 HTTPS
+* Azure OAuth 2.0-Umleitungs-URI (login.microsoftonline.com)
 * Azure Management Rest-IP (management.azure.com)
-* Azure Resource Manager IP (management.core.windows.net)
-* Azure Service Principal Application (Client)-ID (Reader-Rolle erforderlich)
-* Azure Service Principal Authentifizierungsschlüssel (Benutzerkennwort)
-* Sie müssen ein Azure-Konto für die Erkennung von Data Infrastructure Insights einrichten.
+* Azure Resource Manager-IP (management.core.windows.net)
+* Azure Service Principal Application (Client) ID (Leserrolle erforderlich)
+* Azure-Dienstprinzipal-Authentifizierungsschlüssel (Benutzerkennwort)
+* Sie müssen für die Data Infrastructure Insights Erkennung ein Azure-Konto einrichten.
 +
-Sobald das Konto ordnungsgemäß konfiguriert ist und Sie die Applikation in Azure registrieren, verfügen Sie über die erforderlichen Zugangsdaten, um die Azure-Instanz mit Data Infrastructure Insights zu ermitteln. Über den folgenden Link wird beschrieben, wie Sie das Konto für die Ermittlung einrichten. https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+Sobald das Konto ordnungsgemäß konfiguriert ist und Sie die Anwendung in Azure registrieren, verfügen Sie über die erforderlichen Anmeldeinformationen, um die Azure-Instanz mit Data Infrastructure Insights zu ermitteln.  Unter dem folgenden Link wird beschrieben, wie Sie das Konto für die Erkennung einrichten.https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
 
 
 
@@ -41,16 +41,16 @@ Geben Sie die Daten in die Felder des Datensammlers gemäß der folgenden Tabell
 | Feld | Beschreibung 
 
 
-| Azure Service Principal Application (Client)-ID (Reader-Rolle erforderlich) | Anmelde-ID bei Azure. Erfordert Zugriff auf die Leserrolle. 
+| Azure Service Principal Application (Client) ID (Leserrolle erforderlich) | Anmelde-ID für Azure.  Erfordert Zugriff mit der Rolle „Leser“. 
 
 
-| Azure-Mandanten-ID | Microsoft Mandanten-ID 
+| Azure-Mandanten-ID | Microsoft-Mandanten-ID 
 
 
-| Authentifizierungsschlüssel Des Azure Service Principal | Anmeldeauthentifizierungsschlüssel 
+| Azure-Dienstprinzipalauthentifizierungsschlüssel | Login-Authentifizierungsschlüssel 
 
 
-| Ich verstehe, dass Microsoft mir API-Anforderungen in Rechnung stellt | Überprüfen Sie dies, um zu überprüfen, ob Microsoft Ihnen die durch eine Insight-Umfrage gestellten API-Anforderungen abrechnungen aufstellt. 
+| Mir ist bekannt, dass Microsoft mir API-Anfragen in Rechnung stellt. | Aktivieren Sie dies, um zu bestätigen, dass Sie verstanden haben, dass Microsoft Ihnen für API-Anfragen, die durch Insight-Polling gestellt werden, eine Rechnung stellt. 
 |===
 
 
@@ -61,19 +61,19 @@ Geben Sie die Daten in die Felder des Datensammlers gemäß der folgenden Tabell
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 
+| Inventarabfrageintervall (min) | Der Standardwert ist 60 
 
 
-| Wählen Sie „exclude“ oder „include“, um VMs nach Tags zu filtern | Geben Sie an, ob VM's by Tags beim Sammeln von Daten einbezogen oder ausgeschlossen werden sollen. Wenn ‘include’ ausgewählt ist, kann das Feld Tag-Schlüssel nicht leer sein. 
+| Wählen Sie „Ausschließen“ oder „Einschließen“, um VMs nach Tags zu filtern | Geben Sie an, ob VMs beim Sammeln von Daten anhand von Tags ein- oder ausgeschlossen werden sollen.  Wenn „Einschließen“ ausgewählt ist, darf das Feld „Tag-Schlüssel“ nicht leer sein. 
 
 
-| Markieren Sie Schlüssel und Werte, nach denen VMs gefiltert werden sollen | Klicken Sie auf *+ Filter Tag*, um die VMs (und die zugehörigen Festplatten) auszuwählen, die durch Filtern nach Schlüsseln und Werten, die Schlüssel und Werte von Tags auf der VM entsprechen, einzuschließen bzw. auszuschließen. Tag-Schlüssel erforderlich, Tag-Wert ist optional. Wenn der Tag-Wert leer ist, wird die VM solange gefiltert, wie sie dem Tag-Schlüssel entspricht. 
+| Tag-Schlüssel und -Werte zum Filtern von VMs | Klicken Sie auf *+ Tag filtern*, um auszuwählen, welche VMs (und zugehörigen Datenträger) ein-/ausgeschlossen werden sollen, indem Sie nach Schlüsseln und Werten filtern, die mit den Schlüsseln und Werten der Tags auf der VM übereinstimmen.  Tag-Schlüssel ist erforderlich, Tag-Wert ist optional.  Wenn der Tag-Wert leer ist, wird die VM gefiltert, solange sie mit dem Tag-Schlüssel übereinstimmt. 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 300 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 300 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

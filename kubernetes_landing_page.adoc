@@ -2,46 +2,46 @@
 sidebar: sidebar 
 permalink: kubernetes_landing_page.html 
 keywords: telegraf, installation, install, kubernetes, pods, clusters, filters, filtering, k8s 
-summary: Auf der Kubernetes-Landing Page wird erläutert 
+summary: Die Kubernetes-Landingpage erklärt 
 ---
-= Kubernetes-Cluster – Übersicht
+= Übersicht über Kubernetes-Cluster
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der Data Infrastructure Insights Kubernetes Explorer ist ein leistungsstarkes Tool zum Anzeigen des Gesamtzustands und der Auslastung Ihrer Kubernetes-Cluster. Hier können Sie ganz einfach detaillierte Untersuchungsbereiche aufschlüsseln.
+Der Data Infrastructure Insights Kubernetes Explorer ist ein leistungsstarkes Tool zur Anzeige des Gesamtzustands und der Nutzung Ihrer Kubernetes-Cluster und ermöglicht Ihnen eine einfache Detailansicht der Untersuchungsbereiche.
 
-Durch Klicken auf *Dashboards > Kubernetes Explorer* wird die Listenseite für Kubernetes-Cluster geöffnet. Diese Übersichtsseite enthält eine Tabelle der Kubernetes-Cluster auf Ihrem Mandanten.
+Durch Klicken auf *Dashboards > Kubernetes Explorer* wird die Seite mit der Kubernetes-Clusterliste geöffnet.  Diese Übersichtsseite enthält eine Tabelle der Kubernetes-Cluster auf Ihrem Mandanten.
 
-image:Kubernetes_List_Page_new.png["Listenseite für Kubernetes"]
+image:Kubernetes_List_Page_new.png["Kubernetes-Listenseite"]
 
 
 
-=== Cluster-Liste
+=== Clusterliste
 
-In der Cluster-Liste werden die folgenden Informationen zu jedem Cluster des Mandanten angezeigt:
+Die Clusterliste zeigt die folgenden Informationen für jeden Cluster auf Ihrem Mandanten an:
 
-* Cluster *Name*. Wenn Sie auf einen Cluster-Namen klicken, wird das  für dieses Cluster geöffnetlink:kubernetes_cluster_detail.html["*Detailseite*"].
-* *Sättigung* Prozentsätze. „Gesamteinlagerung“ entspricht dem höchsten Wert für CPU, Speicher oder Speichersättigung.
-* Anzahl *Nodes* im Cluster. Wenn Sie auf diese Nummer klicken, wird die Seite Knotenliste geöffnet.
-* Anzahl *Pods* im Cluster. Wenn Sie auf diese Nummer klicken, wird die Pod-Listenseite geöffnet.
-* Anzahl *Namesaces* im Cluster. Wenn Sie auf diese Nummer klicken, wird die Namespace-Listenseite geöffnet.
-* Anzahl *Workloads* im Cluster. Wenn Sie auf diese Nummer klicken, wird die Listenseite Workload geöffnet.
+* Cluster *Name*.  Durch Klicken auf einen Clusternamen wird daslink:kubernetes_cluster_detail.html["*Detailseite*"] für diesen Cluster.
+* *Sättigungs*prozentsätze.  Die Gesamtsättigung ist die höchste CPU-, Speicher- oder Speichersättigung.
+* Anzahl der *Knoten* im Cluster.  Durch Klicken auf diese Nummer wird die Seite mit der Knotenliste geöffnet.
+* Anzahl der *Pods* im Cluster.  Durch Klicken auf diese Nummer wird die Pod-Listenseite geöffnet.
+* Anzahl der *Namespaces* im Cluster.  Durch Klicken auf diese Nummer wird die Seite mit der Namespace-Liste geöffnet.
+* Anzahl der *Workloads* im Cluster.  Durch Klicken auf diese Nummer wird die Seite mit der Arbeitslastliste geöffnet.
 
 
 
 
 == Verfeinern des Filters
 
-Wenn Sie filtern, werden Sie beim Eingeben mit der Option angezeigt, basierend auf dem aktuellen Text einen *Platzhalterfilter* zu erstellen. Wenn Sie diese Option auswählen, werden alle Ergebnisse angezeigt, die dem Platzhalterausdruck entsprechen. Sie können auch *Expressions* mit NOT oder UND erstellen, oder Sie können die Option "Keine" auswählen, um nach Null-Werten im Feld zu filtern.
+Wenn Sie beim Filtern mit der Eingabe beginnen, wird Ihnen die Option angezeigt, einen *Platzhalterfilter* basierend auf dem aktuellen Text zu erstellen.  Wenn Sie diese Option auswählen, werden alle Ergebnisse zurückgegeben, die mit dem Platzhalterausdruck übereinstimmen.  Sie können *Ausdrücke* auch mit NOT oder AND erstellen oder die Option „Keine“ auswählen, um nach Nullwerten im Feld zu filtern.
 
-image:Filter_Kubernetes_Explorer.png["Filtern mit Platzhalter im K8S Explorer"]
+image:Filter_Kubernetes_Explorer.png["Filtern mit Platzhaltern im K8S Explorer"]
 
-Filter basierend auf Platzhalter oder Ausdrücken (z. B. NOT, AND, „None“ etc.) wird im Filterfeld dunkelblau angezeigt. Elemente, die Sie direkt aus der Liste auswählen, werden hellblau angezeigt.
+Filter, die auf Platzhaltern oder Ausdrücken basieren (z. B. NICHT, UND, „Keine“ usw.), werden im Filterfeld dunkelblau angezeigt.  Elemente, die Sie direkt aus der Liste auswählen, werden hellblau angezeigt.
 
-image:Filter_Kubernetes_Explorer_2.png["Filter zeigt Platzhalter und ausgewählte Elemente an"]
+image:Filter_Kubernetes_Explorer_2.png["Filter mit Platzhaltern und ausgewählten Elementen"]
 
-Kubernetes-Filter sind kontextbezogen, d. h., wenn Sie sich beispielsweise auf einer bestimmten Knotenseite befinden, listet der Pod_Name-Filter nur die Pods auf, die mit diesem Node zusammenhängen. Wenn Sie darüber hinaus einen Filter für einen bestimmten Namespace anwenden, werden im Pod_Name-Filter nur Pods auf diesem Node _und_ in diesem Namespace aufgelistet.
+Kubernetes-Filter sind kontextbezogen. Das bedeutet beispielsweise, dass, wenn Sie sich auf einer bestimmten Knotenseite befinden, der Filter „pod_name“ nur Pods auflistet, die mit diesem Knoten in Zusammenhang stehen.  Wenn Sie außerdem einen Filter für einen bestimmten Namespace anwenden, listet der Pod_Name-Filter nur Pods auf diesem Knoten _und_ in diesem Namespace auf.
 
-Beachten Sie, dass die Platzhalter- und Ausdrucksfilterung mit Text oder Listen funktioniert, jedoch nicht mit numerischen Werten, Daten oder Booleanen.
+Beachten Sie, dass die Platzhalter- und Ausdrucksfilterung mit Text oder Listen funktioniert, jedoch nicht mit Zahlen, Datumsangaben oder Booleschen Werten.

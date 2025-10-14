@@ -2,45 +2,45 @@
 sidebar: sidebar 
 permalink: task_cs_getting_started.html 
 keywords: collectors, data collectors, configure, introduction, browsers , Cloud Secure 
-summary: Mit ein paar einfachen Schritten können Sie die Verwendung von Workload Security beginnen 
+summary: Mit wenigen einfachen Schritten können Sie Workload Security nutzen 
 ---
-= Erste Schritte mit Workload Security
+= Erste Schritte mit Workload-Sicherheit
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Es müssen Konfigurationsaufgaben abgeschlossen werden, bevor Sie mit Workload Security beginnen können, um die Benutzeraktivitäten zu überwachen.
+Bevor Sie Workload Security zur Überwachung der Benutzeraktivität verwenden können, müssen einige Konfigurationsaufgaben abgeschlossen werden.
 
-Das Workload Security-System verwendet einen Agenten, um Zugriffsdaten von Speichersystemen und Benutzerinformationen von Directory Services-Servern zu erfassen.
+Das Workload Security-System verwendet einen Agenten, um Zugriffsdaten von Speichersystemen und Benutzerinformationen von Directory Services-Servern zu sammeln.
 
-Sie müssen Folgendes konfigurieren, bevor Sie mit dem Erfassen von Daten beginnen können:
+Bevor Sie mit der Datenerfassung beginnen können, müssen Sie Folgendes konfigurieren:
 
 [cols="2*"]
 |===
 
 
-| Aufgabe | Verwandte Informationen 
+| Aufgabe | Ähnliche Informationen 
 
 
 | Konfigurieren eines Agenten  a| 
-link:concept_cs_agent_requirements.html["Anforderungen An Den Agenten"]
+link:concept_cs_agent_requirements.html["Agentenanforderungen"]
 
-link:task_cs_add_agent.html["Agent Hinzufügen"]
+link:task_cs_add_agent.html["Agent hinzufügen"]
 
 link:https://netapp.hubs.vidyard.com/watch/Lce7EaGg7NZfvCUw4Jwy5P?["*Video*: Agentenbereitstellung"]
 
 
 
-| Konfigurieren Sie einen User Directory Connector | link:task_config_user_dir_connect.html["Fügen Sie Den User Directory Connector Hinzu"] link:https://netapp.hubs.vidyard.com/watch/NEmbmYrFjCHvPps7QMy8me?["*Video*: Active Directory-Verbindung"] 
+| Konfigurieren eines Benutzerverzeichnis-Connectors | link:task_config_user_dir_connect.html["Benutzerverzeichnis-Connector hinzufügen"] link:https://netapp.hubs.vidyard.com/watch/NEmbmYrFjCHvPps7QMy8me?["*Video*: Active Directory-Verbindung"] 
 
 
-| Konfigurieren Sie Datensammler | Klicken Sie auf *Workload Security > Collectors* Klicken Sie auf den Datensammler, den Sie konfigurieren möchten. Weitere Informationen finden Sie im Abschnitt „Data Collector Vendor Reference“ der Dokumentation. link:https://netapp.hubs.vidyard.com/watch/YSQrcYA7DKXbj1UGeLYnSF?["*Video*: ONTAP SVM Verbindung"] 
+| Konfigurieren von Datensammlern | Klicken Sie auf *Workload-Sicherheit > Collector*. Klicken Sie auf den Datensammler, den Sie konfigurieren möchten.  Weitere Informationen finden Sie im Abschnitt „Data Collector Vendor Reference“ der Dokumentation.link:https://netapp.hubs.vidyard.com/watch/YSQrcYA7DKXbj1UGeLYnSF?["*Video*: ONTAP SVM-Verbindung"] 
 
 
-| Erstellen Von Benutzerkonten | link:concept_user_roles.html["Benutzerkonten Verwalten"] 
+| Benutzerkonten erstellen | link:concept_user_roles.html["Benutzerkonten verwalten"] 
 
 
 | Fehlerbehebung | link:https://netapp.hubs.vidyard.com/watch/Fs8N2w9wBtsFGrhRH9X85U?["*Video*: Fehlerbehebung"] 
 |===
-Auch die Workload-Sicherheit lässt sich in andere Tools integrieren. Beispielsweise zur link:http://docs.netapp.com/us-en/cloudinsights/CloudInsights_CloudSecure_Splunk_integration_guide.pdf["Siehe diesen Leitfaden"]Integration in Splunk.
+Workload Security kann auch in andere Tools integriert werden.  Zum Beispiel,link:http://docs.netapp.com/us-en/cloudinsights/CloudInsights_CloudSecure_Splunk_integration_guide.pdf["siehe diese Anleitung"] zur Integration mit Splunk.

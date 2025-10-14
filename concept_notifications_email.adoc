@@ -1,55 +1,55 @@
 ---
 sidebar: sidebar 
 permalink: concept_notifications_email.html 
-summary: E-Mail-Adressen für Benachrichtigungen werden hinzugefügt. 
+summary: Hinzufügen von E-Mail-Adressen für Benachrichtigungen. 
 keywords: email, notifications, signature, recipient, list, subscription 
 ---
-= E-Mail-Benachrichtigungen Werden Konfiguriert
+= Konfigurieren von E-Mail-Benachrichtigungen
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie können eine E-Mail-Liste für abonnementbezogene Benachrichtigungen sowie eine globale E-Mail-Liste mit Empfängern für die Benachrichtigung über Schwellenverletzungen für Leistungsrichtlinien konfigurieren.
+Sie können eine E-Mail-Liste für abonnementbezogene Benachrichtigungen sowie eine globale E-Mail-Liste mit Empfängern für Benachrichtigungen über Verstöße gegen Schwellenwerte der Leistungsrichtlinie konfigurieren.
 
-Um die Einstellungen für Benachrichtigungen-E-Mail-Empfänger zu konfigurieren, gehen Sie zur Seite *Admin > Benachrichtigungen* und wählen Sie die Registerkarte _E-Mail_ aus.
+Um die Einstellungen für den Empfänger von Benachrichtigungs-E-Mails zu konfigurieren, gehen Sie zur Seite *Admin > Benachrichtigungen* und wählen Sie die Registerkarte _E-Mail_.
 
 [role="thumb"]
 image:Notifications_email_list.png["E-Mail-Benachrichtigungen"]
 
 
 
-== Empfänger Für Abonnementbenachrichtigung
+== Empfänger von Abonnementbenachrichtigungen
 
-Um Empfänger für abonnementbezogene Ereignisbenachrichtigungen zu konfigurieren, gehen Sie zum Abschnitt „Empfänger für Abonnementbenachrichtigungen“. Sie können wählen, dass E-Mail-Benachrichtigungen für abonnierte Ereignisse an einen oder alle der folgenden Empfänger gesendet werden:
+Um Empfänger für abonnementbezogene Ereignisbenachrichtigungen zu konfigurieren, gehen Sie zum Abschnitt „Empfänger von Abonnementbenachrichtigungen“.  Sie können festlegen, dass E-Mail-Benachrichtigungen zu abonnementbezogenen Ereignissen an einen oder alle der folgenden Empfänger gesendet werden:
 
-* Alle Account-Inhaber
-* Alle _Monitor & Optimize_ Administratoren
+* Alle Kontoinhaber
+* Alle _Monitor & Optimize_-Administratoren
 * Zusätzliche E-Mail-Adressen, die Sie angeben
 
 
-Im Folgenden finden Sie Beispiele für die Art von Benachrichtigungen, die gesendet werden können, und Benutzeraktionen, die Sie durchführen können.
+Im Folgenden finden Sie Beispiele für die Arten von Benachrichtigungen, die gesendet werden können, und für Benutzeraktionen, die Sie ausführen können.
 
 |===
 
 
-| *Hinweis:* | *Benutzeraktion:* 
+| *Benachrichtigung:* | *Benutzeraktion:* 
 
 
-| Testversion oder Abonnement wurde aktualisiert | Lesen Sie die Abonnementdetails auf der link:concept_subscribing_to_cloud_insights.html["Abonnement"] Seite 
+| Testversion oder Abonnement wurde aktualisiert | Überprüfen Sie die Abonnementdetails auf derlink:concept_subscribing_to_cloud_insights.html["Abonnement"] Seite 
 
 
-| Das Abonnement läuft in 90 Tagen ab das Abonnement läuft in 30 Tagen ab | Bei Aktivierung von „Automatische Verlängerung“ sind keine Maßnahmen erforderlich. Wenden Sie sich an den NetApp Vertrieb, um das Abonnement zu verlängern 
+| Das Abonnement läuft in 90 Tagen ab. Das Abonnement läuft in 30 Tagen ab. | Wenn „Automatische Verlängerung“ aktiviert ist, sind keine Maßnahmen erforderlich. Wenden Sie sich an den NetApp -Vertrieb, um das Abonnement zu verlängern. 
 
 
-| Die Testversion endet in 2 Tagen | Testversion von der  Seite erneuernlink:concept_subscribing_to_cloud_insights.html["Abonnement"]. Sie können eine einmalige Testversion erneuern. Wenden Sie sich an den NetApp Vertrieb, um ein Abonnement zu erwerben 
+| Testversion endet in 2 Tagen | Testversion erneuern vonlink:concept_subscribing_to_cloud_insights.html["Abonnement"] Seite.  Sie können eine Testversion einmal verlängern.  Kontaktieren Sie den NetApp -Vertrieb, um ein Abonnement zu erwerben 
 
 
-| Testversion oder Abonnement abgelaufen Konto wird das Sammeln von Daten in 48 Stunden beendet Konto wird nach 48 Stunden gelöscht | Wenden Sie sich an den NetApp Vertrieb, um ein Abonnement zu erwerben 
+| Testversion oder Abonnement ist abgelaufen. Das Konto wird in 48 Stunden keine Daten mehr sammeln. Das Konto wird nach 48 Stunden gelöscht. | Kontaktieren Sie den NetApp -Vertrieb, um ein Abonnement zu erwerben 
 |===
 [NOTE]
 ====
-Um sicherzustellen, dass Ihre Empfänger Benachrichtigungen von Data Infrastructure Insights erhalten, fügen Sie die folgenden E-Mail-Adressen zu beliebigen „Zulassen“-Listen hinzu:
+Um sicherzustellen, dass Ihre Empfänger Benachrichtigungen von Data Infrastructure Insights erhalten, fügen Sie die folgenden E-Mail-Adressen zu allen Zulassungslisten hinzu:
 
 * \accounts@service.cloudinsights.netapp.com
 * \DoNotReply@cloudinsights.netapp.com
@@ -58,25 +58,25 @@ Um sicherzustellen, dass Ihre Empfänger Benachrichtigungen von Data Infrastruct
 ====
 
 
-== Globale Empfängerliste für Warnungen
+== Globale Empfängerliste für Warnmeldungen
 
-Für jede Aktion der Warnmeldung werden E-Mail-Benachrichtigungen an die Benachrichtigungsliste gesendet. Sie können Benachrichtigungen an eine globale Empfängerliste senden.
+Für jede Aktion im Zusammenhang mit der Warnung werden E-Mail-Benachrichtigungen zu Warnungen an die Warnungsempfängerliste gesendet.  Sie können Warnbenachrichtigungen an eine globale Empfängerliste senden.
 
-Wählen Sie zum Konfigurieren von Empfängern für globale Warnmeldungen die gewünschten Empfänger im Abschnitt *Empfänger für globale Monitorbenachrichtigungen* aus.
+Um globale Alarmempfänger zu konfigurieren, wählen Sie die gewünschten Empfänger im Abschnitt *Globale Monitor-Benachrichtigungsempfänger* aus.
 
-Sie können die globale Empfängerliste für einen einzelnen Monitor immer überschreiben, wenn Sie den Monitor erstellen oder ändern.
+Sie können die globale Empfängerliste für einen einzelnen Monitor jederzeit überschreiben, wenn Sie den Monitor erstellen oder ändern.
 
 
-NOTE: ONTAP Data Collector-Benachrichtigungen haben Vorrang vor allen spezifischen Monitoring-Benachrichtigungen, die für den Cluster/den Datensammler relevant sind. Die Empfängerliste, die Sie für den Data Collector selbst festgelegt haben, erhält die Warnungen zum Datensammler. Wenn keine aktiven Warnungen zur Datenerfassung vorhanden sind, werden die von Monitor erzeugten Warnmeldungen an bestimmte Überwachungsempfänger gesendet.
+NOTE: ONTAP Data Collector-Benachrichtigungen haben Vorrang vor allen spezifischen Monitor-Benachrichtigungen, die für den Cluster/Data Collector relevant sind.  Die Empfängerliste, die Sie für den Datensammler selbst festlegen, erhält die Warnungen des Datensammlers.  Wenn keine aktiven Datensammlerwarnungen vorliegen, werden vom Monitor generierte Warnungen an bestimmte Monitorempfänger gesendet.
 
 
 
 == Bearbeiten von Benachrichtigungen für ONTAP
 
-Sie können Benachrichtigungen für ONTAP-Cluster ändern, indem Sie in der oberen rechten Dropdown-Liste auf einer Storage-Landing-Page „_Benachrichtigungen bearbeiten“ auswählen.
+Sie können Benachrichtigungen für ONTAP Cluster ändern, indem Sie auf einer Speicher-Landingpage im Dropdown-Menü oben rechts „Benachrichtigungen bearbeiten“ auswählen.
 
 image:EditONTAPNotifications.png["ONTAP Benachrichtigungen bearbeiten"]
 
-Von hier aus können Sie Benachrichtigungen für kritische, Warn-, Informations- und/oder gelöste Warnmeldungen festlegen. Jedes Szenario kann die Liste der globalen Empfänger oder andere von Ihnen ausgewählte Empfänger benachrichtigen.
+Von hier aus können Sie Benachrichtigungen für kritische, Warn-, Informations- und/oder behobene Alarme festlegen.  Jedes Szenario kann die globale Empfängerliste oder andere von Ihnen ausgewählte Empfänger benachrichtigen.
 
-image:EditONTAPNotifications_MultipleScenarios.png["ONTAP-Benachrichtigungen für verschiedene Szenarien"]
+image:EditONTAPNotifications_MultipleScenarios.png["ONTAP -Benachrichtigungen für verschiedene Szenarien"]

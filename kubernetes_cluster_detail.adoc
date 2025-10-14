@@ -4,76 +4,76 @@ permalink: kubernetes_cluster_detail.html
 keywords: kubernetes, pods, clusters, nodes. troubleshooting, planning 
 summary: Die Kubernetes-Detailseite bietet Informationen und Details zur Unterstützung bei der Fehlerbehebung und Planung. 
 ---
-= Detailseite Zu Kubernetes Cluster
+= Kubernetes-Cluster-Detailseite
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Auf der Kubernetes-Cluster-Detailseite wird eine detaillierte Übersicht über das Kubernetes-Cluster angezeigt.
+Auf der Detailseite des Kubernetes-Clusters wird eine detaillierte Übersicht über Ihren Kubernetes-Cluster angezeigt.
 
 image:Kubernetes_Detail_Page_new.png["Cluster-Detailseite"]
 
 
 
-== Namespace, Node und Pod-Anzahl
+== Anzahl der Namespaces, Knoten und Pods
 
-Die Zählungen oben auf der Seite zeigen Ihnen die Gesamtzahl der Namespaces, Nodes und Pods im Cluster sowie die Anzahl der Pops, die derzeit Warnungen und ausstehend sind.
-
-
-
-== Shared Ressourcen und Sättigung
-
-Oben rechts auf der Detailseite ist Ihre Cluster-Sättigung als aktueller Prozentsatz sowie ein Diagramm, das den letzten Trend im Laufe der Zeit zeigt. Cluster-Sättigung ist der höchste CPU-, Arbeitsspeicher- oder Storage-Sättigung bei jedem Zeitpunkt.
-
-Im Folgenden wird die Seite standardmäßig *Nutzung von freigegebenen Ressourcen* mit Registerkarten für CPU, Speicher und Speicher angezeigt. Auf jeder Registerkarte werden der Sättigungspunkt und der Trend über die Zeit mit zusätzlichen Nutzungsdetails angezeigt. Für den Storage ist der angezeigte Wert der größere Backend- und Filesystem-Sättigung, die unabhängig voneinander berechnet wird.
-
-Die Geräte mit der höchsten Nutzung werden in einer Tabelle unten angezeigt. Klicken Sie auf einen beliebigen Link, um diese Geräte zu durchsuchen.
+Die Zählungen oben auf der Seite zeigen Ihnen die Gesamtzahl der Namespaces, Knoten und Pods im Cluster sowie die Anzahl der Popds, die derzeit Alarm schlagen und ausstehen.
 
 
 
-== Namespaces
+== Gemeinsam genutzte Ressourcen und Sättigung
 
-Auf der Registerkarte Namespaces wird eine Liste aller Namespaces in der Kubernetes-Umgebung angezeigt. Die CPU- und Arbeitsspeicherauslastung sowie die Anzahl der Workloads in jedem Namespace werden angezeigt. Klicken Sie auf die Namenslinks, um die einzelnen Namespaces zu erkunden.
+Oben rechts auf der Detailseite wird Ihre Clustersättigung als aktueller Prozentsatz sowie ein Diagramm angezeigt, das den aktuellen Trend im Zeitverlauf zeigt.  Die Clustersättigung ist die höchste CPU-, Speicher- oder Speichersättigung zu jedem Zeitpunkt.
+
+Darunter zeigt die Seite standardmäßig die Nutzung *gemeinsam genutzter Ressourcen* mit Registerkarten für CPU, Arbeitsspeicher und Speicherplatz.  Jede Registerkarte zeigt den Sättigungsprozentsatz und den Trend im Zeitverlauf mit zusätzlichen Nutzungsdetails.  Beim Speicher ist der angezeigte Wert der höhere der beiden Werte für Backend- und Dateisystemsättigung, die unabhängig voneinander berechnet werden.
+
+Die Geräte mit der höchsten Nutzung werden unten in einer Tabelle angezeigt.  Klicken Sie auf einen beliebigen Link, um diese Geräte zu erkunden.
+
+
+
+== Namensräume
+
+Auf der Registerkarte „Namespaces“ wird eine Liste aller Namespaces in Ihrer Kubernetes-Umgebung angezeigt, die die CPU- und Speicherauslastung sowie die Anzahl der Workloads in jedem Namespace anzeigt.  Klicken Sie auf die Namenslinks, um die einzelnen Namespaces zu erkunden.
 
 image:Kubernetes_Namespace_tab_new.png["Liste der aktuellen Namespaces in Ihrer K8s-Umgebung"]
 
 
 
-== Workloads
+== Arbeitslasten
 
-Auf der Registerkarte Workloads wird zudem eine Liste der Workloads in den einzelnen Namespace angezeigt. Auch hier wird die CPU- und Arbeitsspeicherauslastung angezeigt. Wenn Sie auf den Namespace-Links klicken, ist jeder Link bohrt.
+Ebenso wird auf der Registerkarte „Workloads“ eine Liste der Workloads in jedem Namespace angezeigt, wobei auch hier die CPU- und Speicherauslastung angezeigt wird.  Durch Klicken auf die Namespace-Links gelangen Sie zu den einzelnen Links.
 
 image:Kubernetes_Workloads_tab_new.png["Liste der aktuellen Namespaces in Ihrer K8s-Umgebung"]
 
 
 
-== Das Cluster „Wheel“
+== Das Cluster-„Rad“
 
-image:Kubernetes_Wheel_Section.png["Cluster Wheel"]
+image:Kubernetes_Wheel_Section.png["Cluster-Rad"]
 
-Im Abschnitt „Cluster „Wheel“ finden Sie auf einen Blick den Zustand der Nodes und des POD. Weitere Informationen hierzu finden Sie unter. Wenn Ihr Cluster mehr Nodes enthält, als in diesem Bereich der Seite angezeigt werden kann, können Sie das Rad mit den verfügbaren Schaltflächen drehen.
+Der Cluster-Abschnitt „Rad“ bietet auf einen Blick Informationen zum Zustand von Knoten und Pods, die Sie für weitere Informationen genauer untersuchen können.  Wenn Ihr Cluster mehr Knoten enthält, als in diesem Bereich der Seite angezeigt werden können, können Sie das Rad mit den verfügbaren Schaltflächen drehen.
 
-AlarmPods oder Nodes werden rot angezeigt. Die Bereiche „Warnung“ werden orange angezeigt. PODs, die nicht geplant sind (d.h. unangebracht), werden in der unteren Ecke des Cluster „Wheel“ angezeigt.
+Alarmierende Pods oder Knoten werden rot angezeigt.  „Warnbereiche“ werden orange angezeigt.  Nicht geplante (d. h. nicht verbundene) Pods werden in der unteren Ecke des Cluster-„Rads“ angezeigt.
 
-Wenn Sie sich über einen Pod (Kreis) oder Knoten (Balken) bewegen, wird die Ansicht des Knotens erweitert.
+Wenn Sie mit der Maus über einen Pod (Kreis) oder Knoten (Balken) fahren, wird die Ansicht des Knotens erweitert.
 
-image:Kubernetes_Node_Expand.png["Erweiterter Node"]
+image:Kubernetes_Node_Expand.png["Erweiterter Knoten"]
 
-Wenn Sie in der Ansicht auf den Pod oder Node klicken, wird die Ansicht „erweiterter Node“ vergrößert.
+Wenn Sie in dieser Ansicht auf den Pod oder Knoten klicken, wird die erweiterte Knotenansicht vergrößert.
 
 image:Kubernetes_Critical_Pod_Zoom.png["Erweiterte Knotenansicht"]
 
-Von hier aus können Sie mit dem Mauszeiger auf ein Element zeigen, um Details zu diesem Element anzuzeigen. Beispiel: Wenn Sie den Mauszeiger über den kritischen POD in diesem Beispiel halten, werden Details zu diesem POD angezeigt.
+Von hier aus können Sie mit der Maus über ein Element fahren, um Details zu diesem Element anzuzeigen.  Wenn Sie in diesem Beispiel beispielsweise mit der Maus über den kritischen Pod fahren, werden Details zu diesem Pod angezeigt.
 
 image:Kubernetes_Pod_Red.png["Wichtige Pod-Informationen"]
 
-Sie können Filesystem-, Speicher- und CPU-Informationen anzeigen, indem Sie den Mauszeiger über die Knoten-Elemente bewegen.
+Sie können Informationen zu Dateisystem, Speicher und CPU anzeigen, indem Sie mit der Maus über die Knotenelemente fahren.
 
-image:Kubernetes_Capacity_Info.png["Node-Kapazität und -Zuweisung"]
+image:Kubernetes_Capacity_Info.png["Knotenkapazität und -zuweisung"]
 
 
 
 == Ein Hinweis zu den Messgeräten
 
-Die Speicher- und CPU-Anzeigen zeigen drei Farben, da sie _used_ in Bezug auf _zuteilbare Kapazität_ und _Gesamtkapazität_ zeigen.
+Die Speicher- und CPU-Anzeigen zeigen drei Farben an, da sie die _Nutzung_ im Verhältnis zur _zuweisbaren Kapazität_ und zur _Gesamtkapazität_ anzeigen.

@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: task_dc_emc_scaleio.html 
 keywords: data collector, scaleIO, PowerFlex EMC, DELL 
-summary: Konfigurieren des DELL EMC ScaleIO/PowerFlex-Datensammlers. 
+summary: Konfigurieren des DELL EMC ScaleIO/PowerFlex-Datenkollektors. 
 ---
-= DELL EMC ScaleIO/PowerFlex-Datensammler
+= DELL EMC ScaleIO / PowerFlex-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der Datensammler ScaleIO/PowerFlex erfasst Bestandsdaten aus ScaleIO und PowerFlex-Speicher. Für die Konfiguration benötigt dieser Datensammler die ScaleIO/PowerFlex-Gateway-Adresse sowie einen Admin-Benutzernamen und ein Passwort.
+Der ScaleIO/PowerFlex-Datensammler sammelt Bestandsinformationen vom ScaleIO- und PowerFlex-Speicher.  Zur Konfiguration benötigt dieser Datensammler die ScaleIO/PowerFlex-Gateway-Adresse sowie einen Administrator-Benutzernamen und ein Administrator-Passwort.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Datensammler ScaleIO/PowerFlex. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom ScaleIO/PowerFlex-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| MDM-Cluster (Meta Data Manager | Storage 
+| MDM-Cluster (Metadaten-Manager) | Storage 
 
 
-| SDS (ScaleIO/PowerFlex Data Server) | Storage-Node 
+| SDS (ScaleIO/PowerFlex-Datenserver) | Speicherknoten 
 
 
-| Storage-Pool | Storage-Pool 
+| Speicherpool | Speicherpool 
 
 
-| Datenmenge | Datenmenge 
+| Volumen | Volumen 
 
 
-| Gerät | Festplatte 
+| Gerät | Scheibe 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* Schreibgeschützter Zugriff auf das Admin-Benutzerkonto
-* Port-Anforderung: HTTPS-Port 443
+* Nur-Lese-Zugriff auf das Admin-Benutzerkonto
+* Portanforderung: HTTPS-Port 443
 
 
 
@@ -56,19 +56,19 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| ScaleIO/PowerFlex-Gateway(s) | IP-Adressen oder FQDNs von ScaleIO/PowerFlex Gateways, getrennt durch Komma (,) oder Semikolon (;) 
+| ScaleIO/PowerFlex-Gateway(s) | IP-Adressen oder FQDNs von ScaleIO/PowerFlex-Gateways, getrennt durch Komma (,) oder Semikolon (;) 
 
 
-| Benutzername | Admin-Benutzername für die Anmeldung beim ScaleIO/PowerFlex-Gerät 
+| Benutzername | Administrator-Benutzername für die Anmeldung beim ScaleIO/PowerFlex-Gerät 
 
 
-| Passwort | Passwort für die Anmeldung beim ScaleIO/PowerFlex-Gerät 
+| Passwort | Kennwort zur Anmeldung beim ScaleIO/PowerFlex-Gerät 
 |===
 
 
 == Erweiterte Konfiguration
 
-Klicken Sie auf das Kontrollkästchen Inventar, um die Bestandssammlung zu aktivieren.
+Klicken Sie auf das Kontrollkästchen Inventar, um die Inventarerfassung zu aktivieren.
 
 [cols="2*"]
 |===
@@ -78,13 +78,13 @@ Klicken Sie auf das Kontrollkästchen Inventar, um die Bestandssammlung zu aktiv
 | HTTPS-Port | 443 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60. 
+| Inventarabfrageintervall (min) | Der Standardwert ist 60. 
 
 
-| Verbindungs-Timeout (s) | Der Standardwert ist 60. 
+| Verbindungs-Timeout (Sek.) | Der Standardwert ist 60. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

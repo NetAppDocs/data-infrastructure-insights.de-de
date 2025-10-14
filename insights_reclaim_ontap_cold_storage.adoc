@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: insights_reclaim_ontap_cold_storage.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: Sie erfahren, wie sich Ressourcen auf andere Ressourcen Ihres Mandanten auswirken. 
+summary: Mithilfe von Insights erhalten Sie einen Einblick, wie sich Ressourcen auf andere Ressourcen Ihres Mandanten auswirken. 
 ---
-= Einblick: Rückgewinnung von ONTAP Cold Storage
+= Einblicke: ONTAP Cold Storage zurückgewinnen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,37 +14,37 @@ summary: Sie erfahren, wie sich Ressourcen auf andere Ressourcen Ihres Mandanten
 
 
 [role="lead"]
-Der _Reclaim ONTAP Cold Storage_ Insight liefert Daten zur kalten Kapazität, zu potenziellen Kosten-/Energieeinsparungen sowie empfohlene Maßnahmen für Volumes auf ONTAP Systemen.
+Der _Reclaim ONTAP Cold Storage_ Insight bietet Daten zur Kaltkapazität, zu potenziellen Kosten-/Stromeinsparungen und empfohlenen Aktionselementen für Volumes auf ONTAP Systemen.
 
-Um diese Einblicke anzuzeigen, navigieren Sie zu *Dashboards > Einblicke* und werfen Sie einen Blick auf den _Reclaim ONTAP Cold Storage_ Insight. Beachten Sie, dass diese Insight nur betroffene Storage-Systeme aufführt, wenn Data Infrastructure Insights Cold Storage entdeckt hat. Andernfalls wird die Meldung „alles löschen“ angezeigt.
+Um diese Insights anzuzeigen, navigieren Sie zu *Dashboards > Insights* und werfen Sie einen Blick auf den Insight „Reclaim ONTAP Cold Storage“.  Beachten Sie, dass dieser Insight betroffene Speicher nur auflistet, wenn Data Infrastructure Insights Cold Storage erkannt hat. Andernfalls wird die Meldung „Entwarnung“ angezeigt.
 
-Beachten Sie, dass kalte Daten, die weniger als 30 Tage alt sind, nicht angezeigt werden.
+Beachten Sie, dass Kältedaten, die jünger als 30 Tage sind, nicht angezeigt werden.
 
-image:Cold_Data_Insight_List.png["Insight-Liste mit 3 Storages mit kalten Daten"]
+image:Cold_Data_Insight_List.png["Insight-Liste mit 3 Speichern mit kalten Daten"]
 
-Die Beschreibung von Insight gibt schnell Aufschluss über die erkannte Datenmenge, die als „kalt“ erkannt wird und auf welchem Storage sich die Daten befinden. Die Tabelle bietet auch die Anzahl der Workloads mit „kalten“ Daten.
+Die Insight-Beschreibung gibt einen schnellen Hinweis auf die Menge der als „kalt“ erkannten Daten und auf welchem Speicher sich diese Daten befinden.  Die Tabelle enthält außerdem eine Zählung der Workloads mit kalten Daten.
 
-Wenn Sie einen Insight aus der Liste auswählen, wird eine Seite mit weiteren Details geöffnet, darunter Empfehlungen zum Verschieben von Daten in die Cloud oder zum Herunterfahren von nicht verwendeten Festplatten sowie geschätzte Kosten- und Energieeinsparungen, die Sie durch die Implementierung dieser Empfehlungen erzielen können. Die Seite bietet sogar einen praktischen Linklink:https://bluexp.netapp.com/cloud-tiering-service-tco["Der TCO-Rechner von NetApp"], damit Sie mit den Zahlen experimentieren können.
+Wenn Sie einen Insight aus der Liste auswählen, wird eine Seite mit weiteren Details geöffnet, darunter Empfehlungen zum Verschieben von Daten in die Cloud oder zum Herunterfahren unisierter Datenträger sowie geschätzte Kosten- und Energieeinsparungen, die Sie möglicherweise durch die Umsetzung dieser Empfehlungen erzielen könnten.  Die Seite bietet sogar einen praktischen Link zulink:https://bluexp.netapp.com/cloud-tiering-service-tco["TCO-Rechner von NetApp"] Sie können also mit den Zahlen experimentieren.
 
-image:Cold_Data_Power_Info.png["Informationen Zur Stromversorgung Für Kalte Daten"]
+image:Cold_Data_Power_Info.png["Cold Data Power Info"]
 
 
 
 === Empfehlungen
 
-Erweitern Sie auf der Insight-Seite die Option *Empfehlungen*, um die folgenden Optionen zu untersuchen:
+Erweitern Sie auf der Insight-Seite die *Empfehlungen*, um die folgenden Optionen zu erkunden:
 
-* Verschieben Sie ungenutzte Workloads (Zombies) auf kostengünstigeren Storage Tier (HDD).
+* Verschieben Sie ungenutzte Workloads (Zombies) auf eine kostengünstigere Speicherebene (HDD).
 +
-Mithilfe der Zombie-Flagge, des Cold Storage und der Anzahl der Tage, finden Sie die kälteste und größte Datenmenge und verschieben Sie den Workload auf eine kostengünstigere Storage-Ebene (z. B. einen Speicherpool, der Festplattenspeicher nutzt). Ein Workload wird als „Zombie“ betrachtet, wenn IS 30 Tage oder länger keine wesentlichen I/O-Anfragen erhalten hat.
+Suchen Sie mithilfe der Zombie-Flagge, des Cold Storage und der Anzahl der Tage die kälteste und größte Datenmenge und verschieben Sie die Arbeitslast auf eine kostengünstigere Speicherebene (z. B. einen Speicherpool mit Festplattenspeicher).  Eine Arbeitslast wird als „Zombie“ betrachtet, wenn sie 30 Tage oder länger keine nennenswerten E/A-Anfragen erhalten hat.
 
-* Löschen Sie ungenutzte Workloads
+* Löschen Sie nicht verwendete Workloads
 +
-Überprüfung, welche Workloads nicht verwendet werden, und Archivierung dieser Workloads erwägen oder Entfernen aus dem Storage-System.
+Überprüfen Sie, welche Workloads nicht verwendet werden, und ziehen Sie in Erwägung, sie zu archivieren oder aus dem Speichersystem zu entfernen.
 
-* Man betrachte die Fabric Pool Lösung von NetApp
+* Ziehen Sie die Fabric Pool-Lösung von NetApp in Betracht
 +
-NetApp link:https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html#features["Fabric Pool Lösung"]verschiebt selten genutzte Daten automatisch in kostengünstigen Cloud-Storage, um so die Effizienz Ihrer Performance-Tiers zu steigern und Remote-Datensicherung zu bieten.
+NetAppslink:https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html#features["Fabric Pool-Lösung"] verteilt kalte Daten automatisch auf kostengünstigen Cloud-Speicher und erhöht so die Effizienz Ihrer Leistungsebene und bietet Remote-Datenschutz.
 
 
 
@@ -52,6 +52,6 @@ NetApp link:https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-ti
 
 === Visualisieren und erkunden
 
-Die Diagramme und die Tabelle bieten zusätzliche Trendinformationen sowie die Möglichkeit, detaillierte Informationen zu den einzelnen Workloads zu erhalten.
+Die Diagramme und Tabellen liefern zusätzliche Trendinformationen und ermöglichen Ihnen, die einzelnen Arbeitslasten genauer zu untersuchen.
 
-image:Cold_Data_Storage_Trend.png["Übersichtsdiagramme Für Kalte Daten"] image:Cold_Data_Workload_Table.png["Tabelle Mit Kalten Daten-Workloads"]
+image:Cold_Data_Storage_Trend.png["Kalte Datenübersichtsdiagramme"] image:Cold_Data_Workload_Table.png["Cold Data-Workload-Tabelle"]

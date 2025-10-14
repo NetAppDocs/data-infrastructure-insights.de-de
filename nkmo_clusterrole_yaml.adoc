@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: nkmo_clusterrole_yaml.html 
 keywords: NKMO, yaml, 
-summary: Eine YAML-Beispieldatei für NKMO Clusterrole 
+summary: Eine Beispiel-YAML-Datei für NKMO Clusterrole 
 ---
-= NKMO Clusterrole YAML Beispiel
+= NKMO Clusterrole YAML-Beispiel
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-Die _kubectl_ Komponente des NetApp Kubernetes Monitoring Operator (NKMO) muss mindestens mit Zugriff auf die folgenden kubernetes-Objekte konfiguriert werden: Agents, Clusterroles, clusterrolebindings, customresourcedefinitions, Deployments, Namespaces, Rollen, Rollenbindungen, Secrets, Serviceaccounts, Und Services von NetApp. Nachfolgend sehen Sie ein Beispiel für eine Clusterrolle mit diesen Mindestberechtigungen.
+Die _kubectl_-Komponente des NetApp Kubernetes Monitoring Operator (NKMO) muss mit Zugriff auf mindestens die folgenden Kubernetes-Objekte konfiguriert werden: Agenten, Clusterrollen, Clusterrollenbindungen, benutzerdefinierte Ressourcendefinitionen, Bereitstellungen, Namespaces, Rollen, Rollenbindungen, Geheimnisse, Servicekonten und Dienste.  Unten sehen Sie ein Beispiel für eine Clusterrolle mit diesen Mindestberechtigungen.
 
 [listing]
 ----

@@ -2,34 +2,34 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_puppetagent.html 
 keywords: telegraf, installation, install, Puppet 
-summary: Konfiguration des Puppet Datensammlers 
+summary: Puppet-Datensammlerkonfiguration 
 ---
-= Puppet Agent Data Collector
+= Puppet Agent-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights nutzt diesen Datensammler, um Kennzahlen von Puppet Agent zu sammeln.
+Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von Puppet Agent zu sammeln.
 
 
 
 == Installation
 
-. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie Puppet.
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*.  Wählen Sie Puppet.
 +
-Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.
+Wählen Sie das Betriebssystem oder die Plattform aus, auf der der Telegraf-Agent installiert ist.
 
-. Wenn Sie noch keinen Agenten zur Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um die  Anweisungen zu erweiternlink:task_config_telegraf_agent.html["Agenten-Installation"].
-. Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.
-. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+. Wenn Sie noch keinen Agenten für die Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um daslink:task_config_telegraf_agent.html["Agenteninstallation"] Anweisungen.
+. Wählen Sie den Agent-Zugriffsschlüssel zur Verwendung mit diesem Datensammler aus.  Sie können einen neuen Agentenzugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agentenzugriffsschlüssel* klicken.  Best Practice: Verwenden Sie nur dann einen anderen Agent-Zugriffsschlüssel, wenn Sie Datensammler beispielsweise nach Betriebssystem/Plattform gruppieren möchten.
+. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren.  Die Anweisungen variieren je nach Art des Betriebssystems oder der Plattform, die Sie zum Sammeln von Daten verwenden.
 
 
 image:PuppetDCConfigWindows.png["Puppet-Konfiguration"]
 
 
 
-== Einrichtung
+== Aufstellen
 
 Informationen finden Sie im https://puppet.com/docs["Puppet-Dokumentation"]
 
@@ -37,19 +37,19 @@ Informationen finden Sie im https://puppet.com/docs["Puppet-Dokumentation"]
 
 == Objekte und Zähler
 
-Folgende Objekte und ihre Zähler werden gesammelt:
+Die folgenden Objekte und ihre Zähler werden gesammelt:
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
 
 
-| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+| Objekt: | Kennungen: | Merkmale: | Datenpunkte: 
 
 
-| Puppet Agent | Namespace-Node-UUID | Node Name Ort Node-IP-Version Konfigstring Version Puppet | Änderungen Total Events Failure Ereignisse Success Events Summe Ressourcen Geänderte Ressourcen Fehlgeschlagen Ressourcen Konnten Nicht Neu Starten Ressourcen Outofsync Ressourcen Neustart Ressourcen Geplante Ressourcen Übersprungene Ressourcen Gesamtzeit Ankerzeit Abruf Configtime Cron Time Exec Time File Time Filebucket Time Lastrun Time Package Time Zeitplanzeit Service Time Sshauorizedkey Time Total Time User 
+| Puppenagent | Namespace-Knoten-UUID | Knotenname Standort Knoten-IP-Version Konfigurationszeichenfolge-Version Puppet | Änderungen Gesamtereignisse Fehlerereignisse Erfolgsereignisse Gesamtressourcen Geänderte Ressourcen Fehlgeschlagene Ressourcen Neustart fehlgeschlagene Ressourcen Nicht synchronisierte Ressourcen Neu gestartete Ressourcen Geplante Ressourcen Übersprungene Ressourcen Gesamtzeit Ankerzeit Konfigurationsabrufzeit Cron-Zeit Ausführungszeit Dateizeit Filebucket-Zeit Lastrun-Zeit Paketzeit Zeitplanzeit Servicezeit Sshauthorizedkey-Zeit Gesamtzeit Benutzer 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite.
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite.

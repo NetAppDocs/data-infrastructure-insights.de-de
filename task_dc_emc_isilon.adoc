@@ -2,47 +2,47 @@
 sidebar: sidebar 
 permalink: task_dc_emc_isilon.html 
 keywords: data collector, isilon, EMC, DELL, PowerScale 
-summary: 'Konfiguration des Datensammlers Dell EMC PowerScale (ehemals Isilon).' 
+summary: 'Konfigurieren des Dell EMC PowerScale-Datensammlers (früher Isilon).' 
 ---
-= Dell EMC PowerScale Datensammler
+= Dell EMC PowerScale-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den SSH-Datensammler Dell EMC PowerScale (ehemals Isilon), um Bestands- und Performance-Daten aus PowerScale-out-NAS-Speicher zu erfassen.
+Data Infrastructure Insights verwendet den SSH-Datensammler Dell EMC PowerScale (früher Isilon), um Bestands- und Leistungsdaten vom PowerScale-Scale-Out-NAS-Speicher zu erfassen.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus diesem Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält von diesem Datensammler die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Laufwerk | Festplatte 
+| Fahren | Scheibe 
 
 
 | Cluster | Storage 
 
 
-| Knoten | Storage-Node 
+| Node | Speicherknoten 
 
 
-| File-System | Internes Volumen 
+| Dateisystem | Internes Volumen 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurieren:
+Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 
-* Administrator Berechtigungen für den PowerScale-Speicher
+* Administratorberechtigungen für den PowerScale-Speicher
 * IP-Adresse des PowerScale-Clusters
 * SSH-Zugriff auf Port 22
 
@@ -62,7 +62,7 @@ Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurie
 | Benutzername | Benutzername für den PowerScale-Cluster 
 
 
-| Passwort | Passwort, das für den PowerScale-Cluster verwendet wird 
+| Passwort | Für den PowerScale-Cluster verwendetes Kennwort 
 |===
 
 
@@ -73,19 +73,19 @@ Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurie
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 20. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen.  Der Standardwert ist 20. 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Der Standardwert ist 300. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen.  Der Standardwert ist 300. 
 
 
-| SSH-Anschluss | SSH-Service-Port. Der Standardwert ist 22. 
+| SSH-Port | SSH-Dienstport.  Der Standardwert ist 22. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -93,12 +93,12 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| „Ungültige Anmeldeinformationen“ mit Fehlermeldungen „Befehle, die für die rollenbasierte Administration nicht aktiviert sind, benötigen Root-Benutzerzugriff“ | * Überprüfen Sie, dass der Benutzer über die Berechtigungen verfügt, um die folgenden Befehle auf dem Gerät auszuführen: > isi Version osselease > isi Status -q > isi Status -n > isi Devices -d %s > isi Lizenz * Überprüfen Sie, dass die im Assistenten verwendeten Anmeldeinformationen mit den Geräteanmeldeinformationen übereinstimmen 
+| „Ungültige Anmeldeinformationen“ mit der Fehlermeldung „Für die rollenbasierte Verwaltung nicht aktivierte Befehle erfordern Root-Benutzerzugriff“ | * Überprüfen Sie, ob der Benutzer über die Berechtigung verfügt, die folgenden Befehle auf dem Gerät auszuführen: > isi version osrelease > isi status -q > isi status -n > isi devices -d %s > isi license * Überprüfen Sie, ob die im Assistenten verwendeten Anmeldeinformationen mit den Anmeldeinformationen des Geräts übereinstimmen 
 
 
-| „Interner Fehler“ mit Fehlermeldungen “Befehl <Ihr Befehl> Ausführen fehlgeschlagen mit Berechtigung: <Ihre aktuelle Berechtigung>. Sudo Befehl ausführen Berechtigungsproblem“ | Überprüfen Sie, ob der Benutzer über sudo-Berechtigungen verfügt, um den folgenden Befehl auf dem Gerät auszuführen 
+| „Interner Fehler“ mit Fehlermeldungen „Ausführung des Befehls <Ihr Befehl> fehlgeschlagen mit Berechtigung: <Ihre aktuelle Berechtigung>.“  Problem mit der Berechtigung zum Ausführen des Sudo-Befehls“ | Stellen Sie sicher, dass der Benutzer über Sudo-Berechtigungen verfügt, um den folgenden Befehl auf dem Gerät auszuführen. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

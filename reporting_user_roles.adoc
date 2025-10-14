@@ -1,91 +1,91 @@
 ---
 sidebar: sidebar 
 permalink: reporting_user_roles.html 
-summary: Was mit Data Infrastructure Insights Reporting möglich ist, hängt von Ihrer Benutzerrolle ab. 
+summary: Was Sie mit Data Infrastructure Insights Reporting tun können, hängt von Ihrer Benutzerrolle ab. 
 keywords: reporting, cognos, data warehouse, dwh, users, roles, user roles 
 ---
-= Dateninfrastruktur Insights Reporting Benutzerrollen
+= Benutzerrollen für Data Infrastructure Insights Reporting
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Wenn Sie über Data Infrastructure Insights Premium Edition mit Reporting verfügen, verfügt jeder Benutzer von Data Infrastructure Insights in Ihrem Mandanten auch über eine Single Sign-On (SSO)-Anmeldung bei der Reporting-Anwendung (z. B. Cognos). Klicken Sie einfach im Menü auf den Link *Berichte* und Sie werden automatisch bei Reporting angemeldet.
+Wenn Sie über Data Infrastructure Insights Premium Edition mit Reporting verfügen, verfügt jeder Data Infrastructure Insights Benutzer auf Ihrem Mandanten auch über eine Single Sign-On-Anmeldung (SSO) bei der Reporting-Anwendung (d. h. Cognos).  Klicken Sie einfach im Menü auf den Link *Berichte* und Sie werden automatisch bei Reporting angemeldet.
 
 Ihre Benutzerrolle in Data Infrastructure Insights bestimmt Ihre Reporting-Benutzerrolle:
 
 |===
 
 
-| Einblicke Aus Die Dateninfrastruktur | Berichtsrolle | Reporting-Berechtigungen 
+| Rolle „Data Infrastructure Insights“ | Berichtsrolle | Berichtsberechtigungen 
 
 
-| Gast | Verbraucher | Es können Berichte angezeigt, geplant und erstellt sowie persönliche Einstellungen wie z. B. für Sprachen und Zeitzonen festgelegt werden. Verbraucher können keine Berichte erstellen oder administrative Aufgaben ausführen. 
+| Gast | Verbraucher | Kann Berichte anzeigen, planen und ausführen und persönliche Einstellungen wie Sprachen und Zeitzonen festlegen.  Verbraucher können keine Berichte erstellen oder Verwaltungsaufgaben ausführen. 
 
 
-| Benutzer | Autor | Kann alle Funktionen des Verbrauchers ausführen sowie Berichte und Dashboards erstellen und verwalten. 
+| Benutzer | Autor | Kann alle Verbraucherfunktionen ausführen sowie Berichte und Dashboards erstellen und verwalten. 
 
 
-| Verwalter | Verwalter | Kann alle Author-Funktionen sowie alle administrativen Aufgaben wie die Konfiguration von Berichten und das Herunterfahren und Neustarten von Reporting-Aufgaben ausführen. 
+| Administrator | Administrator | Kann alle Autorenfunktionen sowie alle Verwaltungsaufgaben ausführen, z. B. die Konfiguration von Berichten und das Herunterfahren und Neustarten von Berichtsaufgaben. 
 |===
-Die folgende Tabelle zeigt die Funktionen, die den einzelnen Berichtsrollen zur Verfügung stehen.
+Die folgende Tabelle zeigt die für jede Berichterstellungsrolle verfügbaren Funktionen.
 
-|===
-
-
-| Funktion | Verbraucher | Autor | Verwalter 
-
-
-| Anzeigen von Berichten auf der Registerkarte „Teaminhalt“ | Ja. | Ja. | Ja. 
-
-
-| Berichte erstellen | Ja. | Ja. | Ja. 
-
-
-| Planen von Berichten | Ja. | Ja. | Ja. 
-
-
-| Externe Dateien hochladen | Nein | Ja. | Ja. 
-
-
-| Erstellen Von Jobs | Nein | Ja. | Ja. 
-
-
-| Erstellen von Geschichten | Nein | Ja. | Ja. 
-
-
-| Erstellen von Berichten | Nein | Ja. | Ja. 
-
-
-| Erstellen von Paketen und Datenmodulen | Nein | Ja. | Ja. 
-
-
-| Ausführung administrativer Aufgaben | Nein | Nein | Ja. 
-
-
-| HTML-Element hinzufügen/bearbeiten | Nein | Nein | Ja. 
-
-
-| Bericht mit HTML-Element ausführen | Ja. | Ja. | Ja. 
-
-
-| Benutzerdefinierte SQL hinzufügen/bearbeiten | Nein | Nein | Ja. 
-
-
-| Berichte mit benutzerdefiniertem SQL ausführen | Ja. | Ja. | Ja. 
 |===
 
 
-== Festlegen der E-Mail-Einstellungen für Berichte (Cognos)
+| Funktion | Verbraucher | Autor | Administrator 
 
 
-NOTE: Wenn Sie Ihre Benutzer-E-Mail-Einstellungen in Data Infrastructure Insights Reporting (d. h. der Cognos-Anwendung) ändern, sind diese Einstellungen _only für die aktuelle Sitzung_ aktiv. Wenn Sie sich bei Cognos und wieder zurück in anmelden, werden Ihre E-Mail-Einstellungen zurückgesetzt.
+| Berichte auf der Registerkarte „Teaminhalte“ anzeigen | Ja | Ja | Ja 
+
+
+| Ausführen von Berichten | Ja | Ja | Ja 
+
+
+| Berichte planen | Ja | Ja | Ja 
+
+
+| Externe Dateien hochladen | Nein | Ja | Ja 
+
+
+| Jobs erstellen | Nein | Ja | Ja 
+
+
+| Geschichten erstellen | Nein | Ja | Ja 
+
+
+| Erstellen von Berichten | Nein | Ja | Ja 
+
+
+| Erstellen von Paketen und Datenmodulen | Nein | Ja | Ja 
+
+
+| Ausführen administrativer Aufgaben | Nein | Nein | Ja 
+
+
+| HTML-Element hinzufügen/bearbeiten | Nein | Nein | Ja 
+
+
+| Bericht mit HTML-Element ausführen | Ja | Ja | Ja 
+
+
+| Benutzerdefiniertes SQL hinzufügen/bearbeiten | Nein | Nein | Ja 
+
+
+| Ausführen von Berichten mit benutzerdefiniertem SQL | Ja | Ja | Ja 
+|===
+
+
+== Festlegen von E-Mail-Einstellungen für Reporting (Cognos)
+
+
+NOTE: Wenn Sie Ihre E-Mail-Benutzereinstellungen in Data Infrastructure Insights Reporting (d. h. in der Cognos-Anwendung) ändern, sind diese Einstellungen _nur für die aktuelle Sitzung_ aktiv.  Wenn Sie sich bei Cognos ab- und wieder anmelden, werden Ihre E-Mail-Einstellungen zurückgesetzt.
 
 
 
-=== Welche Schritte sollte ich Unternehmen, um meine vorhandene Umgebung auf die Aktivierung von SSO vorzubereiten?
+=== Welche Schritte muss ich unternehmen, um meine vorhandene Umgebung für die Aktivierung von SSO vorzubereiten?
 
-Um sicherzustellen, dass Ihre Berichte erhalten bleiben, migrieren Sie alle Berichte von _My Content_ zu _Team Content_. Gehen Sie dabei wie folgt vor. Sie müssen dies tun, bevor Sie SSO für Ihren Mandanten aktivieren:
+Um sicherzustellen, dass Ihre Berichte erhalten bleiben, migrieren Sie alle Berichte mit den folgenden Schritten von „Meine Inhalte“ zu „Teaminhalte“.  Sie müssen dies tun, bevor Sie SSO auf Ihrem Mandanten aktivieren:
 
 . Navigieren Sie zu *Menü > Inhalt*
 
@@ -94,14 +94,14 @@ image:Reporting_Menu.png["Cognos-Menü oben links"]
 
 . Erstellen Sie einen neuen Ordner in *_Team Content_*
 +
-.. Wenn mehrere Benutzer erstellt wurden, erstellen Sie für jeden Benutzer einen separaten Ordner, um zu vermeiden, dass Berichte mit doppelten Namen überschrieben werden
+.. Wenn mehrere Benutzer angelegt wurden, erstellen Sie bitte für jeden Benutzer einen eigenen Ordner, um das Überschreiben von Berichten mit doppelten Namen zu vermeiden.
 
 
-. Navigieren Sie zu _My Content_
-. Wählen Sie alle Berichte aus, die Sie beibehalten möchten.
-. Wählen Sie oben rechts im Menü die Option „Kopieren oder Verschieben“ aus.
+. Navigieren Sie zu _Meine Inhalte_
+. Wählen Sie alle Berichte aus, die Sie behalten möchten.
+. Wählen Sie in der oberen rechten Ecke des Menüs "Kopieren oder Verschieben"
 . Navigieren Sie zum neu erstellten Ordner in _Team Content_
-. Fügen Sie die Berichte mithilfe der Schaltflächen „Kopieren nach“ oder „Verschieben nach“ in den neu erstellten Ordner ein
-. Sobald SSO für Cognos aktiviert ist, melden Sie sich mit der E-Mail-Adresse, die zum Erstellen Ihres Kontos verwendet wird, bei Data Infrastructure Insights an.
-. Navigieren Sie in Cognos zum Ordner „_Team Content_“, und kopieren oder verschieben Sie die zuvor gespeicherten Berichte zurück zu „_My Content_“.
+. Fügen Sie die Berichte mit den Schaltflächen „Kopieren nach“ oder „Verschieben nach“ in den neu erstellten Ordner ein
+. Sobald SSO für Cognos aktiviert ist, melden Sie sich bei Data Infrastructure Insights mit der E-Mail-Adresse an, die Sie zum Erstellen Ihres Kontos verwendet haben.
+. Navigieren Sie in Cognos zum Ordner „Team Content“ und kopieren oder verschieben Sie die zuvor gespeicherten Berichte zurück in „Meine Inhalte“.
 

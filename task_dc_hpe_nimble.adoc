@@ -2,65 +2,65 @@
 sidebar: sidebar 
 permalink: task_dc_hpe_nimble.html 
 keywords: data collector, HP Nimble, HP, HPE, Alletra 6000 
-summary: 'Konfiguration des Datensammlers HP Enterprise Alletra 6000 (ehemals Nimble).' 
+summary: 'Konfigurieren des HP Enterprise Alletra 6000-Datensammlers (ehemals Nimble).' 
 ---
-= HPE Alletra 6000 Datensammler
+= HPE Alletra 6000 Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der HP Enterprise Alletra 6000 (vormals Nimble) Datensammler unterstützt Bestands- und Performancedaten von Alletra 6000 Storage Arrays.
+Der HP Enterprise Alletra 6000 (früher Nimble) Datensammler unterstützt Inventar- und Leistungsdaten für Alletra 6000-Speicherarrays.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dieser Sammlung. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält von diesem Collector die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Array Erledigen | Storage 
+| Anordnung | Storage 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 
 
-| Datenmenge | Datenmenge 
+| Volumen | Volumen 
 
 
-| Pool | Storage-Pool 
+| Pool | Speicherpool 
 
 
-| Initiator | Storage-Host-Alias 
+| Initiator | Speicherhost-Alias 
 
 
-| Controller | Storage-Node 
+| Regler | Speicherknoten 
 
 
-| Fibre Channel-Schnittstelle | Controller 
+| Fibre-Channel-Schnittstelle | Regler 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-Zum Erfassen von Bestands- und Konfigurationsdaten aus dem Speicher-Array müssen Sie Folgendes haben:
+Um Inventar- und Konfigurationsdaten vom Speicherarray zu erfassen, müssen Sie über Folgendes verfügen:
 
-* Das Array muss installiert und konfiguriert sein und über den Client über seinen vollständig qualifizierten Domänennamen (FQDN) oder die Array-Management-IP-Adresse erreichbar sein.
+* Das Array muss installiert und konfiguriert sein und vom Client über seinen vollqualifizierten Domänennamen (FQDN) oder die Array-Verwaltungs-IP-Adresse erreichbar sein.
 * Auf dem Array muss NimbleOS 2.3.x oder höher ausgeführt werden.
-* Sie müssen einen gültigen Benutzernamen und ein Kennwort für das Array mit der Rolle „Operator“ besitzen. Die „Gast“-Rolle verfügt nicht über ausreichenden Zugriff, um Initiator-Konfigurationen zu verstehen.
+* Sie müssen über einen gültigen Benutzernamen und ein gültiges Kennwort für das Array verfügen und mindestens über die Rolle „Operator“ verfügen.  Die Rolle „Gast“ verfügt nicht über ausreichend Zugriff, um die Initiatorkonfigurationen zu verstehen.
 * Port 5392 muss auf dem Array geöffnet sein.
 
 
-Zum Erfassen von Performance-Daten aus dem Speicher-Array müssen Sie Folgendes haben:
+Um Leistungsdaten vom Speicherarray zu erfassen, müssen Sie über Folgendes verfügen:
 
-* Auf dem Array muss NimbleOS 4.0.0 oder höher ausgeführt werden
-* Für das Array müssen Volumes konfiguriert sein. Die einzige Performance-API, die NimbleOS bietet, gilt für Volumes. Alle Statistiken zu Data Infrastructure Insights Berichten werden aus den Statistiken zu Volumes abgeleitet
+* Auf dem Array muss NimbleOS 4.0.0 oder höher ausgeführt werden.
+* Für das Array müssen Volumes konfiguriert sein.  Die einzige Performance-API, die NimbleOS hat, ist für Volumes, und alle statistischen Data Infrastructure Insights -Berichte werden aus den Statistiken zu Volumes abgeleitet
 
 
 
@@ -72,13 +72,13 @@ Zum Erfassen von Performance-Daten aus dem Speicher-Array müssen Sie Folgendes 
 | Feld | Beschreibung 
 
 
-| Array-Management-IP-Adresse | Vollständig qualifizierter Domain-Name (FQDN) oder Array-Management-IP-Adresse. 
+| Array-Management-IP-Adresse | Vollqualifizierter Domänenname (FQDN) oder IP-Adresse für die Array-Verwaltung. 
 
 
 | Benutzername | Benutzername für das Array 
 
 
-| Passwort | Kennwort für das Array 
+| Passwort | Passwort für das Array 
 |===
 
 
@@ -90,9 +90,9 @@ Zum Erfassen von Performance-Daten aus dem Speicher-Array müssen Sie Folgendes 
 | Feld | Beschreibung 
 
 
-| Port | Der von Nimble REST API verwendete Port. Der Standardwert ist 5392. 
+| Hafen | Von der Nimble REST API verwendeter Port.  Der Standardwert ist 5392. 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
 |===
-Hinweis: Das Standard-Performance-Abfrageintervall beträgt 300 Sekunden und kann nicht geändert werden. Dies ist das einzige von HPE Alletra 6000 unterstützte Intervall.
+Hinweis: Das Standardintervall für die Leistungsabfrage beträgt 300 Sekunden und kann nicht geändert werden.  Dies ist das einzige von HPE Alletra 6000 unterstützte Intervall.

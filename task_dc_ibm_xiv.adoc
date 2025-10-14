@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_xiv.html 
 keywords: IBM, XIV, SAN, A9000 
-summary: Konfigurieren des Datensammlers IBM XIV/A9000 
+summary: Konfigurieren des IBM XIV/A9000-Datenkollektors. 
 ---
-= Konfiguration des IBM XIV/A9000 Datensammlers
+= Konfigurieren des IBM XIV/A9000-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der Datensammler IBM XIV und A9000 (CLI) verwendet die XIV-Befehlszeilenschnittstelle, um Bestandsdaten zu sammeln, während die Performance erfasst wird, indem SMI-S-Aufrufe zum XIV/A9000 Array ausführt, auf dem ein SMI-S-Provider über Port 7778 ausgeführt wird.
+Der IBM XIV- und A9000-Datenkollektor (CLI) verwendet die XIV-Befehlszeilenschnittstelle zum Erfassen von Inventardaten, während die Leistungserfassung durch SMI-S-Aufrufe an das XIV/A9000-Array erfolgt, auf dem ein SMI-S-Anbieter auf Port 7778 ausgeführt wird.
 
 
 
@@ -18,43 +18,43 @@ Der Datensammler IBM XIV und A9000 (CLI) verwendet die XIV-Befehlszeilenschnitts
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 
 
-| Storage-System | Storage 
+| Speichersystem | Storage 
 
 
-| Storage-Pool | Storage-Pool 
+| Speicherpool | Speicherpool 
 
 
-| Datenmenge | Datenmenge 
+| Volumen | Volumen 
 |===
 
 
 == Anforderungen
 
-Zur Konfiguration und Nutzung dieses Datensammlers müssen die folgenden Anforderungen erfüllt sein:
+Zur Konfiguration und Nutzung dieses Datensammlers müssen folgende Voraussetzungen erfüllt sein:
 
-* Port-Anforderung: TCP-Port 7778
-* Schreibgeschützter Benutzername und Kennwort
-* Das XIV CLI muss auf der AU installiert sein
-
-
+* Portanforderung: TCP-Port 7778
+* Benutzername und Kennwort nur zum Lesen
+* Die XIV CLI muss auf der AU installiert sein
 
 
-== Performance-Anforderungen erfüllt
 
-Im Folgenden sind Anforderungen für die Performance-Erfassung aufgeführt:
+
+== Leistungsanforderungen
+
+Voraussetzungen für die Leistungserfassung sind:
 
 * SMI-S Agent 1.4 oder höher
-* SMI-S-kompatibler CIMService auf Array. Bei den meisten XIV Arrays ist standardmäßig ein Cimserver installiert.
-* Für den Cimserver muss eine Benutzeranmeldung bereitgestellt werden. Die Anmeldung muss vollständigen Lesezugriff auf die Arraykonfiguration und -Eigenschaften haben.
-* SMI-S-Namespace. Der Standardwert ist root/ibm. Dies ist im Cimserver konfigurierbar.
-* Port-Anforderungen: 5988 für HTTP, 5989 für HTTPS.
-* Informationen zum Erstellen eines Kontos für die SMI-S Performance Collection finden Sie unter dem folgenden Link: https://www.ibm.com/docs/en/products?topic=/com.ibm.tpc_V41.doc/fqz0_t_adding_cim_agent.html[]
+* SMI-S-kompatibler CIMService, der auf dem Array ausgeführt wird.  Auf den meisten XIV-Arrays ist standardmäßig ein CIMServer installiert.
+* Für den CIMServer muss eine Benutzeranmeldung bereitgestellt werden.  Die Anmeldung muss über vollständigen Lesezugriff auf die Array-Konfiguration und -Eigenschaften verfügen.
+* SMI-S-Namespace.  Der Standardwert ist root/ibm.  Dies ist im CIMServer konfigurierbar.
+* Portanforderungen: 5988 für HTTP, 5989 für HTTPS.
+* Unter folgendem Link erfahren Sie, wie Sie ein Konto für die SMI-S-Leistungserfassung erstellen: https://www.ibm.com/docs/en/products?topic=/com.ibm.tpc_V41.doc/fqz0_t_adding_cim_agent.html[]
 
 
 
@@ -66,16 +66,16 @@ Im Folgenden sind Anforderungen für die Performance-Erfassung aufgeführt:
 | Feld | Beschreibung 
 
 
-| XIV-IP-Adresse | IP-Adresse oder vollqualifizierter Domain-Name des XIV Storage 
+| XIV IP-Adresse | IP-Adresse oder vollqualifizierter Domänenname des XIV-Speichers 
 
 
-| Benutzername | Benutzername für den XIV Storage 
+| Benutzername | Benutzername für den XIV-Speicher 
 
 
 | Passwort | Passwort für den XIV-Speicher 
 
 
-| Vollständiger Pfad zu XIV CLI Directory | Vollständiger Pfad zum Ordner mit der XIV CLI 
+| Vollständiger Pfad zum XIV CLI-Verzeichnis | Vollständiger Pfad zum Ordner, der die XIV CLI enthält 
 
 
 | SMI-S-Host-IP-Adresse | IP-Adresse des SMI-S-Hosts 
@@ -89,25 +89,25 @@ Im Folgenden sind Anforderungen für die Performance-Erfassung aufgeführt:
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 40 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 40 Minuten. 
 
 
-| SMI-S-Protokoll | Protokoll für die Verbindung mit dem SMI-S-Provider. Zeigt auch den Standardport an. 
+| SMI-S-Protokoll | Für die Verbindung mit dem SMI-S-Anbieter verwendetes Protokoll.  Zeigt auch den Standardport an. 
 
 
-| SMI-S-Port überschreiben | Wenn Sie leer sind, verwenden Sie den Standardport im Feld Verbindungstyp. Andernfalls geben Sie den zu verwendenden Anschluss ein 
+| SMI-S-Port überschreiben | Wenn das Feld „Verbindungstyp“ leer ist, verwenden Sie den Standardport. Andernfalls geben Sie den zu verwendenden Verbindungsport ein. 
 
 
-| Benutzername | Benutzername für den SMI-S Provider Host 
+| Benutzername | Benutzername für den SMI-S Provider-Host 
 
 
-| Passwort | Kennwort für den SMI-S Provider-Host 
+| Passwort | Kennwort für den SMI-S-Provider-Host 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 300 Sekunden. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

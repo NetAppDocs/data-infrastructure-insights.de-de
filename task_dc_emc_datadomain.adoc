@@ -2,54 +2,54 @@
 sidebar: sidebar 
 permalink: task_dc_emc_datadomain.html 
 keywords: data collector, Data Domain, EMC, DELL 
-summary: KONFIGURIEREN DES DELL EMC Data Domain-Datensammlers. 
+summary: Konfigurieren des DELL EMC Data Domain-Datenkollektors. 
 ---
-= DELL EMC Data Domain-Datensammler
+= DELL EMC Data Domain-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler erfasst Bestands- und Performance-Informationen von DELL EMC Data Domain Deduplizierungs-Storage-Systemen. Zur Konfiguration dieses Datensammlers sind spezifische Konfigurationsanweisungen und Nutzungsempfehlungen zu beachten.
+Dieser Datensammler sammelt Bestands- und Leistungsinformationen von DELL EMC Data Domain-Deduplizierungsspeichersystemen.  Zum Konfigurieren dieses Datensammlers müssen Sie bestimmte Konfigurationsanweisungen und Verwendungsempfehlungen befolgen.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights bezieht die folgenden Bestandsinformationen aus dem Data Domain-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Data Domain-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 
 
-| Array Erledigen | Storage 
+| Anordnung | Storage 
 
 
-| FC-Anschluss | Port 
+| FC-Anschluss | Hafen 
 
 
-| File-System | Internes Volumen 
+| Dateisystem | Internes Volumen 
 
 
-| Kontingente | Kontingente 
+| Quote | Quote 
 
 
 | NFS- und CIFS-Freigabe | Dateifreigabe 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In diesem Datencolletor sind dies möglicherweise nicht alle Fälle.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurieren:
+Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 
 * IP-Adresse des Data Domain-Geräts
-* Schreibgeschützter Benutzername und Kennwort für den Data Domain-Speicher
+* Nur-Lese-Benutzername und Kennwort für den Data Domain-Speicher
 * SSH-Port 22
 
 
@@ -79,13 +79,13 @@ Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurie
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 20. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen.  Der Standardwert ist 20. 
 
 
-| SSH-Anschluss | SSH-Service-Port 
+| SSH-Port | SSH-Dienstport 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

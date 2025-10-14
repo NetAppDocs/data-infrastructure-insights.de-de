@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: concept_activeiq.html 
 keywords: Active IQ, risks, svm, AIQ, risk, ADigital Advisor 
-summary: 'Einblicke in die Dateninfrastruktur sammeln Risikodaten vom digitalen Berater von NetApp Active IQ (auch als digitaler Berater bekannt)' 
+summary: 'Data Infrastructure Insights sammelt Risikodaten von NetApp Active IQ Digital Advisor (auch bekannt als Digital Advisor).' 
 ---
-= Active IQ Digitalberater
+= Active IQ Digital Advisor
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-NetApp link:https://docs.netapp.com/us-en/active-iq/["Active IQ Digitalberater"](auch als digitaler Berater bekannt) bietet NetApp Kunden eine Reihe von Visualisierungen, Analysen und anderen Support-bezogenen Services für ihre Hardware-/Softwaresysteme. Die von Digital Advisor gemeldeten Daten können die Fehlerbehebung bei Systemproblemen verbessern und bieten zudem Einblicke in die Optimierung und vorausschauende Analyse Ihrer Geräte.
+NetApplink:https://docs.netapp.com/us-en/active-iq/["Active IQ Digital Advisor"] (auch bekannt als Digital Advisor) bietet NetApp -Kunden eine Reihe von Visualisierungen, Analysen und anderen Support-bezogenen Diensten für ihre Hardware-/Softwaresysteme.  Die von Digital Advisor gemeldeten Daten können die Fehlerbehebung bei Systemproblemen verbessern und außerdem Einblicke in die Optimierung und prädiktive Analyse Ihrer Geräte bieten.
 
-Data Infrastructure Insights erfasst *Risiken* für jedes NetApp Clustered Data ONTAP Storage-System, das von Digital Advisor überwacht und gemeldet wird. Die für die Speichersysteme gemeldeten Risiken werden von Data Infrastructure Insights im Rahmen der Datenerfassung von diesen Geräten automatisch erfasst. Sie müssen den entsprechenden Datensammler zu Data Infrastructure Insights hinzufügen, um Risikoinformationen von Digital Advisor zu erfassen.
+Data Infrastructure Insights sammelt die *Risiken* für jedes NetApp Clustered Data ONTAP -Speichersystem, das von Digital Advisor überwacht und gemeldet wird.  Für die Speichersysteme gemeldete Risiken werden von Data Infrastructure Insights im Rahmen der Datenerfassung von diesen Geräten automatisch erfasst.  Sie müssen den entsprechenden Datensammler zu Data Infrastructure Insights hinzufügen, um Risikoinformationen zu Digital Advisor zu sammeln.
 
-Die Einblicke in die Dateninfrastruktur zeigen keine Risikodaten für ONTAP-Systeme an, die nicht von Digital Advisor überwacht und gemeldet werden.
+Data Infrastructure Insights zeigt keine Risikodaten für ONTAP -Systeme an, die nicht von Digital Advisor überwacht und gemeldet werden.
 
-Die gemeldeten Risiken werden in Data Infrastructure Insights auf den Landing Pages _Storage_ und _Storage Node_ in der Tabelle „Risiken“ angezeigt. Die Tabelle zeigt Risikodetails, Risikokategorien und potenzielle Auswirkungen des Risikos und enthält außerdem einen Link zur Seite Digitaler Berater, die alle Risiken für den Speicher-Node zusammenfasst (Anmeldung für NetApp-Support-Konto erforderlich).
+Die gemeldeten Risiken werden in Data Infrastructure Insights auf den Zielseiten der Assets „Storage“ und „Storage Node“ in der Tabelle „Risiken“ angezeigt.  Die Tabelle zeigt Risikodetails, Risikokategorie und potenzielle Auswirkungen des Risikos und bietet außerdem einen Link zur Digital Advisor -Seite, auf der alle Risiken für den Speicherknoten zusammengefasst sind (Anmeldung beim NetApp Support-Konto erforderlich).
 
-image:AIQ_Risks_Table_Example.png["Risikotabelle Für Digital Advisor"]
+image:AIQ_Risks_Table_Example.png["Tabelle mit den Risiken Digital Advisor"]
 
-Die Anzahl der gemeldeten Risiken wird auch im Widget „Zusammenfassung“ auf der Landing Page mit einem Link zur entsprechenden Seite „Digital Advisor“ angezeigt. Auf einer Landing Page „_Storage_“ stellt die Anzahl die Risiken aller zugrunde liegenden Storage Nodes dar.
+Eine Anzahl der gemeldeten Risiken wird auch im Zusammenfassungs-Widget der Zielseite angezeigt, mit einem Link zur entsprechenden Digital Advisor -Seite.  Auf einer _Speicher_-Landingpage ist die Anzahl die Summe der Risiken aller zugrunde liegenden Speicherknoten.
 
-image:AIQ_Summary_Example.png["Zusammenfassung Der Speicherseite"]
-
-
-
-== Öffnen der Digital Advisor-Seite
-
-Wenn Sie auf den Link zu einer Digital Advisor-Seite klicken und derzeit nicht bei Ihrem Digital Advisor-Konto angemeldet sind, müssen Sie die folgenden Schritte ausführen, um die Seite Digital Advisor für den Speicher-Node anzuzeigen.
-
-. Klicken Sie im Widget „Data Infrastructure Insights Summary“ oder in der Tabelle „Risks“ auf den Link „Digital Advisor“.
-. Melden Sie sich bei Ihrem NetApp Support Konto an. Sie werden direkt zur Seite „Speicher-Node“ in Digital Advisor weitergeleitet.
+image:AIQ_Summary_Example.png["Zusammenfassung der Speicherseite"]
 
 
 
+== Öffnen der Digital Advisor Seite
 
-== Abfrage nach Risiken
+Wenn Sie auf den Link zu einer Digital Advisor -Seite klicken und derzeit nicht bei Ihrem Digital Advisor -Konto angemeldet sind, müssen Sie die folgenden Schritte ausführen, um die Digital Advisor -Seite für den Speicherknoten anzuzeigen.
 
-In Data Infrastructure Insights können Sie die Spalte *Monitoring.count* einer Speicher- oder Speicher-Node-Abfrage hinzufügen. Wenn das zurückgegebene Ergebnis von Digital Advisor überwachte Speichersysteme umfasst, wird in der Spalte Monitoring.count die Anzahl der Risiken für das Speichersystem oder den Knoten angezeigt.
+. Klicken Sie im Widget „Zusammenfassung der Data Infrastructure Insights“ oder in der Risikotabelle auf den Link „Digital Advisor“.
+. Sign in bei Ihrem NetApp Support-Konto an.  Sie werden direkt zur Speicherknotenseite in Digital Advisor weitergeleitet.
+
+
+
+
+== Abfragen nach Risiken
+
+In Data Infrastructure Insights können Sie die Spalte *monitoring.count* zu einer Speicher- oder Speicherknotenabfrage hinzufügen.  Wenn das zurückgegebene Ergebnis von Digital Advisor überwachte Speichersysteme umfasst, wird in der Spalte „monitoring.count“ die Anzahl der Risiken für das Speichersystem oder den Knoten angezeigt.
 
 
 
 == Dashboards
 
-Sie können Widgets erstellen (z. B. Kreisdiagramm, Tabellen-Widget, Balken, Spalten, Streudiagramm und Widgets mit einem Wert), um Objektrisiken für Storage- und Storage-Nodes für von Digital Advisor überwachte NetApp Clustered Data ONTAP Systeme zu visualisieren. „Objektrisiken“ können in diesen Widgets als Spalte oder Metrik ausgewählt werden, wobei Storage oder Storage Node das Objekt des Fokus ist.
+Sie können Widgets erstellen (z. B. Kreisdiagramm-, Tabellen-Widget, Balken-, Säulen-, Streudiagramm- und Einzelwert-Widgets), um Objektrisiken für Speicher und Speicherknoten für NetApp Clustered Data ONTAP Systeme zu visualisieren, die von Digital Advisor überwacht werden.  „Objektrisiken“ können in diesen Widgets als Spalte oder Metrik ausgewählt werden, wobei Speicher oder Speicherknoten im Mittelpunkt stehen.
 
 image:ObjectRiskWidgets.png["Objektrisiken in Widgets"]

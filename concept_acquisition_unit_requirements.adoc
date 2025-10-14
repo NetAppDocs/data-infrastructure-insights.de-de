@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: concept_acquisition_unit_requirements.html 
-summary: Der Server oder die VM, die Sie als Acquisition Unit verwenden, muss die Mindestanforderungen erfüllen. 
+summary: Der Server oder die VM, die Sie als Erfassungseinheit verwenden, muss Mindestanforderungen erfüllen. 
 keywords: AU, acquisition unit, requirements, sizing 
 ---
-= Anforderungen An Die Erfassungseinheit
+= Anforderungen an die Erfassungseinheit
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie müssen eine Acquisition Unit (AU) installieren, um Informationen aus Ihren Infrastrukturdatenkollektoren (Speicher, VM, Port, EC2 usw.) zu erhalten. Bevor Sie die Acquisition Unit installieren, sollten Sie sicherstellen, dass Ihr Mandant die Anforderungen an Betriebssystem, CPU, Arbeitsspeicher und Festplattenspeicher erfüllt.
+Sie müssen eine Acquisition Unit (AU) installieren, um Informationen von Ihren Infrastrukturdatensammlern (Speicher, VM, Port, EC2 usw.) zu erfassen.  Bevor Sie die Erfassungseinheit installieren, sollten Sie sicherstellen, dass Ihr Mandant die Anforderungen an Betriebssystem, CPU, Speicher und Festplattenspeicher erfüllt.
 
 
 
@@ -19,48 +19,48 @@ Sie müssen eine Acquisition Unit (AU) installieren, um Informationen aus Ihren 
 |===
 
 
-| Komponente | Linux-Anforderungen Erfüllt | Windows Anforderungen 
+| Komponente | Linux-Anforderungen | Windows-Anforderung 
 
 
-| Betriebssystem | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Betriebssysteme läuft: * AlmaLinux 9.3 bis 9.5 * Centos (64-Bit): 7.2 bis 7.9, 8.1 bis 8.4, Stream 8, Stream 9 * Debian (64-Bit): 9 bis 12 * OpenSUSE Leap 15.1 bis 15.6 * Oracle Enterprise Linux (64-Bit): 7.5 bis 7.9, 8.1 bis 8.10, 9.3 bis 9.6 * Red Hat (64-Bit): 7.2 bis 7.9, 8.1 bis 8.10, 9.1 bis 9.6 * Rocky 9.0 bis 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 bis 15 SP6 * Ubuntu Server: 18.04, 20.04, 22.04, 24.04 LTS * SELinux auf dem oben genannte Plattformen: Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Es wird ein dedizierter Server empfohlen. Wenn Sie mit SELinux arbeiten, wird empfohlen, die folgenden Befehle auf dem System der Erfassungseinheit auszuführen: Sudo semanage fcontext -a -t usr_t "/opt/NetApp/Cloudinsights(/.*)?" sudo restorecon -R /opt/NetApp/Cloudinsights | Computer mit einer lizenzierten Version von einer der folgenden Versionen: * Microsoft Windows 10 64-Bit * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Es wird ein dedizierter Server empfohlen. 
+| Betriebssystem | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Betriebssysteme ausgeführt wird: * AlmaLinux 9.3 bis 9.5 * Centos (64-Bit): 7.2 bis 7.9, 8.1 bis 8.4, Stream 8, Stream 9 * Debian (64-Bit): 9 bis 12 * OpenSUSE Leap 15.1 bis 15.6 * Oracle Enterprise Linux (64-Bit): 7.5 bis 7.9, 8.1 bis 8.10, 9.3 bis 9.6 * Red Hat (64-Bit): 7.2 bis 7.9, 8.1 bis 8.10, 9.1 bis 9.6 * Rocky 9.0 bis 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 bis 15 SP6 * Ubuntu Server: 18.04, 20.04, 22.04, 24.04 LTS * SELinux auf dem über Plattformen Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Ein dedizierter Server wird empfohlen.  Wenn Sie mit SELinux arbeiten, wird empfohlen, die folgenden Befehle auf dem Erfassungseinheitssystem auszuführen: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Programme ausgeführt wird: * Microsoft Windows 10 64-Bit * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Ein dedizierter Server wird empfohlen. 
 
 
-| CPU | 2 CPU-Kerne | Gleich 
+| CPU | 2 CPU-Kerne | Dasselbe 
 
 
-| Speicher | 8 GB RAM | Gleich 
+| Erinnerung | 8 GB RAM | Dasselbe 
 
 
-| Verfügbarer Festplattenspeicher | 50 GB (100 GB empfohlen) für Linux sollte der Festplattenspeicher folgendermaßen zugewiesen werden: /Opt/NetApp 10 GB (20 GB für große Umgebungen) /var/log/NetApp 40 GB (80 GB für große Umgebungen) /tmp mindestens 1 GB verfügbar während der Installation | 50GB 
+| Verfügbarer Speicherplatz | 50 GB (100 GB empfohlen) Für Linux sollte der Speicherplatz folgendermaßen zugewiesen werden: /opt/netapp 10 GB (20 GB für große Umgebungen) /var/log/netapp 40 GB (80 GB für große Umgebungen) /tmp mindestens 1 GB während der Installation verfügbar | 50 GB 
 
 
-| Netzwerk | Eine Ethernet-Verbindung mit 100 Mbit/s/1 Gbit/s, eine statische IP-Adresse und eine ausgehende Verbindung von der Acquisition Unit zu *.cloudinsights.NetApp.com oder Ihrem Data Infrastructure Insights-Mandanten (d. h. \https://<tenant_id>.c01.cloudinsights.NetApp.com) mit Port 80 oder 443 ist erforderlich. Informationen zu Anforderungen zwischen der Erfassungseinheit und jedem Data Collector finden Sie in den Anweisungen für link:data_collector_list.html["Data Collector"]. Wenn Ihr Unternehmen die Proxy-Nutzung für den Internetzugang benötigt, müssen Sie möglicherweise das Proxy-Verhalten Ihres Unternehmens kennen und bestimmte Ausnahmen suchen, damit Data Infrastructure Insights funktioniert. Blockiert Ihr Unternehmen beispielsweise standardmäßig den Zugriff und gewährt ausnahmsweise nur Zugriff auf bestimmte Websites/Domänen? In diesem Fall müssen Sie die folgende Domain zur Ausnahmeliste hinzufügen: *.cloudinsights.NetApp.com Weitere Informationen finden Sie unter Proxies link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["Hier (Linux)"] oder link:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["Hier (Windows)"]. Beachten Sie, dass Port 443 „ausgehend“ von AU zu Data Infrastructure Insights geöffnet werden muss. | Gleich 
+| Netzwerk | Erforderlich sind eine Ethernet-Verbindung mit 100 Mbit/s/1 Gbit/s, eine statische IP-Adresse und Port 80 oder 443 (ausgehend) für die Konnektivität von der Erfassungseinheit zu *.cloudinsights.netapp.com oder Ihrem Data Infrastructure Insights Mandanten (d. h. \https://<tenant_id>.c01.cloudinsights.netapp.com).  Informationen zu den Anforderungen zwischen der Erfassungseinheit und den einzelnen Datensammlern finden Sie in den Anweisungen für dielink:data_collector_list.html["Datensammler"] .  Wenn Ihre Organisation die Verwendung eines Proxys für den Internetzugang erfordert, müssen Sie möglicherweise das Proxy-Verhalten Ihrer Organisation verstehen und nach bestimmten Ausnahmen suchen, damit Data Infrastructure Insights funktioniert.  Blockiert Ihre Organisation beispielsweise standardmäßig den Zugriff und erlaubt den Zugriff auf bestimmte Websites/Domänen nur ausnahmsweise?  In diesem Fall müssen Sie die folgende Domäne zur Ausnahmeliste hinzufügen: *.cloudinsights.netapp.com. Weitere Informationen finden Sie unter Proxies.link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["hier (Linux)"] oderlink:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["hier (Windows)"] .  Beachten Sie, dass Port 443 von der AU zu Data Infrastructure Insights„ausgehend“ geöffnet sein muss. | Dasselbe 
 
 
-| Berechtigungen | Sudo-Berechtigungen auf dem Akquisitionsgruppenserver. /Tmp muss mit exec-Funktionen montiert werden. | Administratorberechtigungen auf dem Akquisitionsbereiches-Server 
+| Berechtigungen | Sudo-Berechtigungen auf dem Acquisition Unit-Server.  /tmp muss mit Exec-Funktionen gemountet werden. | Administratorberechtigungen auf dem Acquisition Unit-Server 
 
 
-| Virenscan |  | Während der Installation müssen Sie alle Virenscanner vollständig deaktivieren. Nach der Installation müssen die Pfade, die von der Software Acquisition Unit verwendet werden, vom Virenscan ausgeschlossen werden. 
+| Virenscan |  | Während der Installation müssen Sie alle Virenscanner vollständig deaktivieren.  Nach der Installation müssen die von der Acquisition Unit-Software verwendeten Pfade vom Virenscan ausgeschlossen werden. 
 |===
 
 
 == Zusätzliche Empfehlungen
 
-* Für eine genaue Audit- und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Acquisition Unit-Rechner mit *Network Time Protocol (NTP)* oder *Simple Network Time Protocol (SNTP)* zu synchronisieren.
+* Für eine genaue Prüfung und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Computer der Erfassungseinheit mithilfe des *Network Time Protocol (NTP)* oder des *Simple Network Time Protocol (SNTP)* zu synchronisieren.
 
 
 
 
-== Bezüglich Der Größenanpassung
+== Zur Größenbestimmung
 
-Beginnen Sie mit einer Data Infrastructure Insights Acquisition Unit mit nur 8 GB Arbeitsspeicher und 50 GB Festplattenspeicher. In größeren Umgebungen sollten Sie sich jedoch folgende Fragen stellen:
+Sie können mit einer Data Infrastructure Insights Acquisition Unit mit nur 8 GB Speicher und 50 GB Festplattenspeicher beginnen. Bei größeren Umgebungen sollten Sie sich jedoch die folgenden Fragen stellen:
 
-Vorteile:
+Erwarten Sie:
 
-* Mehr als 2500 virtuelle Maschinen oder 10 große (> 2 Nodes) ONTAP-Cluster, Symmetrix oder HDS/HPE VSP/XP-Arrays auf dieser Acquisition Unit ermitteln?
-* 75 oder mehr Datensammler auf dieser Akquisitionseinheit bereitstellen?
+* Entdecken Sie mehr als 2500 virtuelle Maschinen oder 10 große (> 2 Knoten) ONTAP Cluster, Symmetrix oder HDS/HPE VSP/XP-Arrays auf dieser Erfassungseinheit?
+* Sollen insgesamt 75 oder mehr Datensammler auf dieser Erfassungseinheit eingesetzt werden?
 
 
-Für jede „Ja“ Antwort oben empfiehlt es sich, 8 GB Arbeitsspeicher und 50 GB Festplattenspeicher zur AU hinzuzufügen. Wenn Sie also beispielsweise beide Fragen mit „Ja“ beantwortet haben, sollten Sie ein 24-GB-Speichersystem mit 150 GB oder mehr Festplattenspeicher implementieren. Unter Linux wird der Speicherplatz, der dem Protokollverzeichnis hinzugefügt werden soll, hinzugefügt.
+Für jede der oben aufgeführten „Ja“-Antworten wird empfohlen, der AU 8 GB Arbeitsspeicher und 50 GB Festplattenspeicher hinzuzufügen.  Wenn Sie beispielsweise beide Fragen mit „Ja“ beantwortet haben, sollten Sie ein 24-GB-Speichersystem mit 150 GB oder mehr Festplattenspeicher einsetzen.  Unter Linux der Speicherplatz, der dem Protokollspeicherort hinzugefügt werden soll.
 
-Wenn Sie weitere Fragen zur Dimensionierung benötigen, wenden Sie sich an den NetApp Support.
+Wenden Sie sich bei weiteren Fragen zur Dimensionierung an den NetApp Support.

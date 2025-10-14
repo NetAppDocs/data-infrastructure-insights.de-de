@@ -1,103 +1,103 @@
 ---
 sidebar: sidebar 
 permalink: task_getting_started_with_cloud_insights.html 
-summary: Erste Schritte mit Data Infrastructure Insights 
+summary: Erste Schritte mit Data Infrastructure Insights. 
 keywords: invite, roles, data collector, acquisition unit, AU 
 ---
-= Erste Schritte zum Sammeln von Daten
+= Erste Schritte beim Sammeln von Daten
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Nachdem Sie sich bei Data Infrastructure Insights angemeldet und sich zum ersten Mal in Ihrer Umgebung angemeldet haben, werden Sie durch die folgenden Schritte geführt, um mit der Erfassung und dem Management von Daten zu beginnen.
+Nachdem Sie sich für Data Infrastructure Insights angemeldet und sich zum ersten Mal bei Ihrer Umgebung angemeldet haben, werden Sie durch die folgenden Schritte geführt, um mit dem Sammeln und Verwalten von Daten zu beginnen.
 
-Datensammler erkennen Informationen aus Ihren Datenquellen, wie Speichergeräte, Netzwerk-Switches und virtuelle Maschinen. Die erfassten Informationen werden für Analysen, Validierung, Monitoring und Fehlerbehebung verwendet.
+Datensammler ermitteln Informationen aus Ihren Datenquellen, beispielsweise Speichergeräten, Netzwerk-Switches und virtuellen Maschinen.  Die gesammelten Informationen werden zur Analyse, Validierung, Überwachung und Fehlerbehebung verwendet.
 
 Data Infrastructure Insights bietet drei Arten von Datensammlern:
 
-* Infrastruktur (Storage-Geräte, Netzwerk-Switches, Computing-Infrastruktur)
+* Infrastruktur (Speichergeräte, Netzwerk-Switches, Computerinfrastruktur)
 * Betriebssysteme (wie VMware oder Windows)
-* Services (wie Kafka)
+* Dienste (wie Kafka)
 
 
-Wählen Sie Ihren ersten Datensammler von den unterstützten Anbietern und Modellen aus. Sie können später ganz einfach weitere Datensammler hinzufügen.
+Wählen Sie Ihren ersten Datensammler aus den verfügbaren unterstützten Anbietern und Modellen aus.  Sie können später problemlos weitere Datensammler hinzufügen.
 
 
 
-== Installieren Sie eine Akquisitionseinheit
+== Installieren einer Erfassungseinheit
 
-Wenn Sie einen _Infrastructure_-Datensammler ausgewählt haben, ist eine Acquisition Unit erforderlich, um Daten in Data Infrastructure Insights zu integrieren. Sie müssen die Software Acquisition Unit auf einem Server oder einer VM auf dem Rechenzentrum herunterladen und installieren, von dem aus Sie die Software erfassen. Eine einzelne Erfassungseinheit kann für mehrere Datensammler verwendet werden.
+Wenn Sie einen _Infrastruktur_-Datensammler ausgewählt haben, ist eine Erfassungseinheit erforderlich, um Daten in Data Infrastructure Insights einzuspeisen.  Sie müssen die Acquisition Unit-Software herunterladen und auf einem Server oder einer VM im Rechenzentrum installieren, von dem Sie die Daten erfassen.  Eine einzelne Erfassungseinheit kann für mehrere Datensammler verwendet werden.
 
-image:NewLinuxAUInstall.png["Anweisungen für Linux AU"]
+image:NewLinuxAUInstall.png["Linux AU-Anweisungen"]
 
-* Folgen Sie den  angezeigten Anweisungenlink:task_configure_acquisition_unit.html["Anweisungen"], um die Acquisition Unit zu installieren. Sobald die Software für die Erfassungseinheit installiert ist, wird die Schaltfläche Weiter angezeigt, und Sie können mit dem nächsten Schritt fortfahren.
+* Folgen Sie denlink:task_configure_acquisition_unit.html["Anweisungen"] wird angezeigt, um Ihre Erfassungseinheit zu installieren.  Sobald die Software der Erfassungseinheit installiert ist, wird die Schaltfläche „Weiter“ angezeigt und Sie können mit dem nächsten Schritt fortfahren.
 
 
 image:NewAUDetected.png["Neue AU erkannt"]
 
-Sie können bei Bedarf später weitere Akquisitionseinheiten einrichten. So können Sie beispielsweise unterschiedliche Erfassungseinheiten wünschen, die Informationen aus Datacentern in verschiedenen Regionen erfassen.
+Bei Bedarf können Sie später weitere Erfassungseinheiten einrichten.  Beispielsweise möchten Sie möglicherweise, dass verschiedene Erfassungseinheiten Informationen aus Rechenzentren in unterschiedlichen Regionen sammeln.
 
 
 
-== Konfigurieren Sie den Data Collector - Infrastruktur
+== Konfigurieren des Datensammlers – Infrastruktur
 
-Für _Infrastructure_ Datensammler werden Sie aufgefordert, die präsentierten Datensammler-Felder auszufüllen:
+Bei _Infrastruktur_-Datensammlern werden Sie aufgefordert, die angezeigten Datensammlerfelder auszufüllen:
 
 * Geben Sie dem Datensammler einen eindeutigen und aussagekräftigen Namen.
-* Geben Sie die Anmeldeinformationen (Benutzername und Kennwort) ein, um eine Verbindung zum Gerät herzustellen.
-* Füllen Sie alle anderen Pflichtfelder in den Abschnitten_Configuration_ und_Advanced Configuration_ aus.
-* Klicken Sie auf *Collector hinzufügen*, um den Datensammler zu speichern.
+* Geben Sie die Anmeldeinformationen (Benutzername und Kennwort) ein, um gegebenenfalls eine Verbindung mit dem Gerät herzustellen.
+* Füllen Sie alle anderen Pflichtfelder in den Abschnitten _Konfiguration_ und _Erweiterte Konfiguration_ aus.
+* Klicken Sie auf *Sammler hinzufügen*, um den Datensammler zu speichern.
 
 
-Sie können später zusätzliche Datensammler konfigurieren.
+Sie können später weitere Datensammler konfigurieren.
 
 
 
-== Konfigurieren Sie den Data Collector - Betriebssysteme und Dienste
+== Konfigurieren des Datensammlers – Betriebssysteme und Dienste
 
 
 
 === Betriebssystem:
 
-Wählen Sie für _Operating System_-Datensammler eine Plattform (Linux, Windows) aus, um einen Data Infrastructure Insights Agent zu installieren. Sie müssen mindestens einen Agenten haben, um Daten von Services zu erfassen. Der Agent sammelt außerdem Daten vom Host selbst, um sie in Data Infrastructure Insights zu verwenden. Diese Daten werden in Widgets usw. als „Knoten“-Daten kategorisiert
+Wählen Sie für Datensammler vom Typ „Betriebssystem“ eine Plattform (Linux, Windows) aus, um einen Data Infrastructure Insights Agent zu installieren.  Sie müssen mindestens einen Agenten haben, um Daten von Diensten zu sammeln.  Der Agent sammelt auch Daten vom Host selbst zur Verwendung in Data Infrastructure Insights.  Diese Daten werden in Widgets usw. als „Knoten“-Daten kategorisiert.
 
-* Öffnen Sie ein Terminal- oder Befehlsfenster auf dem Agent-Host oder der VM, und fügen Sie den angezeigten Befehl ein, um den Agenten zu installieren.
-* Klicken Sie nach Abschluss der Installation auf *Setup abschließen*.
-
-
+* Öffnen Sie ein Terminal- oder Befehlsfenster auf dem Agent-Host oder der VM und fügen Sie den angezeigten Befehl ein, um den Agent zu installieren.
+* Wenn die Installation abgeschlossen ist, klicken Sie auf *Setup abschließen*.
 
 
-=== Dienste:
 
-Für _Service_ Datensammler, klicken Sie auf eine Kachel, um die Instructions-Seite für diesen Dienst zu öffnen.
 
-* Wählen Sie eine Plattform und einen Agent Access Key.
-* Wenn auf dieser Plattform kein Agent installiert ist, befolgen Sie die Anweisungen, um den Agent zu installieren.
-* Klicken Sie auf *Weiter*, um die Seite mit den Anweisungen für den Datensammler zu öffnen.
-* Befolgen Sie die Anweisungen, um den Datensammler zu konfigurieren.
+=== Leistungen:
+
+Klicken Sie bei _Service_-Datensammlern auf eine Kachel, um die Anleitungsseite für diesen Service zu öffnen.
+
+* Wählen Sie eine Plattform und einen Agent-Zugriffsschlüssel.
+* Wenn auf dieser Plattform kein Agent installiert ist, befolgen Sie die Anweisungen zum Installieren des Agenten.
+* Klicken Sie auf *Weiter*, um die Anleitungsseite zum Datensammler zu öffnen.
+* Befolgen Sie die Anweisungen zum Konfigurieren des Datensammlers.
 * Wenn die Konfiguration abgeschlossen ist, klicken Sie auf *Setup abschließen*.
 
 
 
 
-== Dashboards Hinzufügen
+== Dashboards hinzufügen
 
-Je nach Art des ersten zu konfigurierenden Datensammlers (Speicher, Switch usw.) wird ein oder mehrere relevante Dashboards importiert. Wenn Sie beispielsweise einen Speicherdatensammler konfiguriert haben, wird ein Satz speicherbezogener Dashboards importiert, und eines wird als Data Infrastructure Insights-Startseite festgelegt. Sie können die Startseite über die Liste *Dashboards > Alle Dashboards anzeigen* ändern.
+Abhängig vom Typ des anfänglichen Datensammlers, den Sie zur Konfiguration ausgewählt haben (Speicher, Switch usw.), werden ein oder mehrere relevante Dashboards importiert.  Wenn Sie beispielsweise einen Speicherdatensammler konfiguriert haben, wird eine Reihe speicherbezogener Dashboards importiert und eines davon als Ihre Data Infrastructure Insights Startseite festgelegt.  Sie können die Startseite über die Liste *Dashboards > Alle Dashboards anzeigen* ändern.
 
-Sie können weitere Dashboards später importieren, oder link:concept_dashboards_overview.html["Erstellen Sie Ihre eigene"].
+Sie können später weitere Dashboards importieren oderlink:concept_dashboards_overview.html["Erstellen Sie Ihre eigenen"] .
 
 
 
-== Mehr ist nicht nötig
+== Das ist alles, was dazu gehört
 
-Nach Abschluss des anfänglichen Einrichtungsvorgangs beginnt Ihre Umgebung mit der Erfassung der Daten.
+Nachdem Sie den anfänglichen Einrichtungsprozess abgeschlossen haben, beginnt Ihre Umgebung mit der Datenerfassung.
 
-Wenn der anfängliche Setup-Vorgang unterbrochen wird (z. B. wenn Sie das Browser-Fenster schließen), müssen Sie die folgenden Schritte manuell ausführen:
+Wenn Ihr anfänglicher Einrichtungsvorgang unterbrochen wird (z. B. wenn Sie das Browserfenster schließen), müssen Sie die Schritte manuell ausführen:
 
-* Wählen Sie einen Data Collector aus
-* Installieren Sie einen Agenten oder eine Akquisitionseinheit, wenn Sie dazu aufgefordert werden
-* Konfigurieren Sie den Data Collector
+* Wählen Sie einen Datensammler
+* Installieren Sie einen Agenten oder eine Erfassungseinheit, wenn Sie dazu aufgefordert werden
+* Konfigurieren des Datensammlers
 
 
 
@@ -106,14 +106,14 @@ Wenn der anfängliche Setup-Vorgang unterbrochen wird (z. B. wenn Sie das Browse
 
 Die folgenden Definitionen können hilfreich sein, wenn es um Datensammler oder Funktionen von Data Infrastructure Insights geht:
 
-* Kollektorlebenszyklus: Ein Sammler wird zu einem der folgenden Zustände in seinem Lebenszyklus gehören:
+* Lebenszyklus des Kollektors: Ein Kollektor befindet sich in seinem Lebenszyklus in einem der folgenden Zustände:
 +
-** *Vorschau*: Verfügbar in begrenzter Kapazität oder für ein begrenztes Publikum. link:concept_preview_features.html["Vorschaufunktionen"] Und Datensammler werden voraussichtlich nach dem Vorschauzeitraum GA werden. Die Vorschauzeiträume variieren je nach Zielgruppe oder Funktion.
-** *GA*: Ein Feature oder Datensammler, der allgemein für alle Kunden verfügbar ist, basierend auf Edition oder Feature Set.
-** *Deparated*: Gilt für Datensammler, die funktionell nicht mehr nachhaltig sind oder werden sollen. Veraltete Datensammler werden häufig durch neuere, funktional aktualisierte Datensammler ersetzt.
+** *Vorschau*: In begrenzter Kapazität oder für ein begrenztes Publikum verfügbar. link:concept_preview_features.html["Vorschaufunktionen"] und es wird erwartet, dass die Datensammler nach der Vorschauphase allgemein verfügbar werden.  Die Vorschauzeiträume variieren je nach Zielgruppe oder Funktionalität.
+** *GA*: Eine Funktion oder ein Datensammler, der basierend auf der Edition oder dem Funktionsumfang allgemein für alle Kunden verfügbar ist.
+** *Veraltet*: Gilt für Datensammler, deren Funktion nicht mehr aufrechterhalten werden kann oder voraussichtlich nicht mehr aufrechterhalten werden kann.  Veraltete Datensammler werden häufig durch neuere, funktional aktualisierte Datensammler ersetzt.
 ** *Gelöscht*: Ein Datensammler, der entfernt wurde und nicht mehr verfügbar ist.
 
 
-* Acquisition Unit: Ein Computer, der Datensammler hostet, typischerweise eine virtuelle Maschine. Dieser Computer befindet sich in der Regel im selben Rechenzentrum/VPC wie die überwachten Objekte.
-* Datenquelle: Ein Modul zur Kommunikation mit einem Hardware- oder Software-Stack. Es besteht aus einer Konfiguration und einem Code, der auf dem AU-Computer ausgeführt wird, um mit dem Gerät zu kommunizieren.
+* Erfassungseinheit: Ein Computer, der ausschließlich zum Hosten von Datensammlern dient, normalerweise eine virtuelle Maschine.  Dieser Computer befindet sich normalerweise im selben Rechenzentrum/VPC wie die überwachten Elemente.
+* Datenquelle: Ein Modul zur Kommunikation mit einem Hardware- oder Software-Stack.  Es besteht aus einer Konfiguration und einem Code, der auf dem AU-Computer ausgeführt wird, um mit dem Gerät zu kommunizieren.
 

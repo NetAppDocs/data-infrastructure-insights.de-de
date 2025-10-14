@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_business_entity_annotations.html 
 keywords: annotations, business entity 
-summary: Anmerkungen zur Unternehmenseinheit können zur Überwachung und Berichterstellung von Assets in Ihrer Unternehmenshierarchie verwendet werden 
+summary: Geschäftsentitätsanmerkungen können zur Überwachung und Berichterstattung von Vermögenswerten in Ihrer Geschäftshierarchie verwendet werden 
 ---
-= Anmerkungen Zur Geschäftseinheit
+= Anmerkungen zu Geschäftseinheiten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,51 +14,51 @@ summary: Anmerkungen zur Unternehmenseinheit können zur Überwachung und Berich
 
 
 [role="lead"]
-Erstellen und verwalten Sie Geschäftseinheiten für Ihre Unternehmensumgebung mit dem Anmerkungstyp * Business Entity*.
+Erstellen und verwalten Sie Geschäftsentitäten für Ihre Unternehmensumgebung mithilfe des Anmerkungstyps *Geschäftsentität*.
 
 
 
-== Erstellen einer Business-Einheit
+== Erstellen einer Geschäftseinheit
 
-Gehen Sie zum Erstellen einer Geschäftseinheit wie folgt vor:
+Um eine Geschäftseinheit zu erstellen, gehen Sie wie folgt vor:
 
-. Klicken Sie auf *Verwalten > Anmerkungen* und dann auf den Link _Business Entity_.
+. Klicken Sie auf *Verwalten > Anmerkungen* und dann auf den Link _Geschäftseinheit_.
 +
 Die Liste der aktuell definierten Geschäftseinheiten wird angezeigt.
 
-. Klicken Sie Auf *+ Business Entity*.
-. Geben Sie Werte für die Felder *Tenant*, *Line of Business*, *Business Unit* und *Project* ein.
+. Klicken Sie auf *+ Geschäftseinheit*.
+. Geben Sie Werte für die Felder *Mandant*, *Geschäftsbereich*, *Geschäftseinheit* und *Projekt* ein.
 +
-Sie können jedes Feld leer lassen, wenn es nicht für Ihre Geschäftseinheit gilt.
+Sie können jedes Feld leer lassen, wenn es für Ihr Unternehmen nicht zutrifft.
 
-. Wenn Sie zuvor einen Wert für ein Feld eingegeben haben, können Sie diesen Wert im Dropdown-Menü auswählen. Sie müssen es nicht erneut eingeben.
-
-
-
-NOTE: Die ausgewählten Werte müssen eine eindeutige gesamte Geschäftseinheit bilden. Wenn Sie beispielsweise bereits eine Geschäftseinheit mit den Werten _A / B / C / D_ in dieser Reihenfolge haben, können Sie keine andere Geschäftseinheit mit diesen Werten in dieser Reihenfolge erstellen. Sie können jedoch eine Geschäftseinheit mit diesen Werten in einer anderen Reihenfolge erstellen.
+. Wenn Sie zuvor einen Wert für ein Feld eingegeben haben, können Sie diesen Wert aus der Dropdown-Liste auswählen.  Sie müssen es nicht erneut eingeben.
 
 
 
-== Anwenden einer Business-Einheit auf ein Objekt
+NOTE: Die ausgewählten Werte müssen eine eindeutige Gesamtgeschäftseinheit bilden.  Wenn Sie beispielsweise bereits eine Geschäftsentität mit den Werten _A / B / C / D_ in dieser Reihenfolge haben, können Sie keine weitere Geschäftsentität mit diesen Werten in dieser Reihenfolge erstellen.  Sie können jedoch eine Geschäftseinheit mit diesen Werten in einer anderen Reihenfolge erstellen.
 
-Die einfachste Möglichkeit, eine Geschäftseinheit auf ein Objekt oder ein Objekt anzuwenden, besteht aus einer Abfrage.
 
-. Klicken Sie auf *Abfragen > +Neue Abfrage* und wählen Sie den gewünschten Objekttyp aus. Sie können Filter anwenden, um die Ergebnisse weiter einzugrenzen.
-. Aktivieren Sie das Kontrollkästchen, um die Objekte auszuwählen, für die Sie die Geschäftseinheit anwenden möchten.
+
+== Anwenden einer Geschäftsentität auf ein Objekt
+
+Der einfachste Weg, eine Geschäftsentität auf ein oder mehrere Objekte anzuwenden, ist eine Abfrage.
+
+. Klicken Sie auf *Abfragen > +Neue Abfrage* und wählen Sie den gewünschten Objekttyp aus.  Sie können Filter anwenden, um die Ergebnisse weiter einzugrenzen.
+. Klicken Sie auf das Kontrollkästchen, um das/die Objekt(e) auszuwählen, für das/die Sie die Geschäftseinheit anwenden möchten.
 . Klicken Sie auf *Massenaktionen* und wählen Sie *Anmerkung hinzufügen*.
-. Wählen Sie die Anmerkung _Business Entity_ aus, und wählen Sie den gewünschten Wert für die Geschäftseinheit aus der Liste aus.
-. Klicken Sie auf *Speichern*, um die Geschäftseinheit auf die Objekte anzuwenden.
+. Wählen Sie die Anmerkung _Geschäftsentität_ und wählen Sie den gewünschten Geschäftsentitätswert aus der Liste aus.
+. Klicken Sie auf *Speichern*, um die Geschäftsentität auf das/die Objekt(e) anzuwenden.
 
 
-Sie können eine Geschäftseinheit auch auf ein einzelnes Objekt anwenden, indem Sie zur Asset-Landing-Page des Objekts navigieren und im Bereich Benutzerdaten auf *+Annotation klicken.
+Sie können einem einzelnen Objekt auch eine Geschäftsentität zuweisen, indem Sie zur Asset-Landingpage des Objekts navigieren und im Abschnitt „Benutzerdaten“ auf *+Anmerkung) klicken.
 
-Sie können auch ein konfigurierenlink:task_create_annotation_rules.html["Anmerkungsregel"], um Business Entities auf Objekte anzuwenden.
-
-
-NOTE: Einem Objekt kann nur eine Geschäftseinheit zugeordnet sein.
+Sie können auch einelink:task_create_annotation_rules.html["Anmerkungsregel"] um Geschäftsentitäten auf Objekte anzuwenden.
 
 
+NOTE: Einem Objekt kann nur eine Geschäftsentität zugeordnet sein.
 
-== Entfernen einer Business-Einheit aus einem Objekt
 
-Um eine Business-Entity aus einem Objekt oder einem Objekt zu entfernen, wählen Sie die Objekte aus, klicken Sie auf *Massenaktionen* und wählen Sie _Anmerkung entfernen_. Wählen Sie die Anmerkung Business Entity aus, und klicken Sie auf *Löschen*.
+
+== Entfernen einer Geschäftsentität aus einem Objekt
+
+Um eine Geschäftsentität aus einem oder mehreren Objekten zu entfernen, fragen Sie nach den Objekten, wählen Sie sie aus, klicken Sie auf *Massenaktionen* und wählen Sie _Anmerkung entfernen_.  Wählen Sie die Anmerkung „Geschäftseinheit“ aus und klicken Sie auf *Löschen*.

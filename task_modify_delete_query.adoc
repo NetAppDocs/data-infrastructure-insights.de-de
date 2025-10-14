@@ -4,41 +4,41 @@ permalink: task_modify_delete_query.html
 summary: Ändern oder Löschen einer Abfrage 
 keywords: query, queries, modify, edit, delete, remove 
 ---
-= Eine Abfrage ändern oder löschen
+= Ändern oder Löschen einer Abfrage
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie können die Kriterien ändern, die einer Abfrage zugeordnet sind, wenn Sie die Suchkriterien für die abfragenden Assets ändern möchten.
+Sie können die mit einer Abfrage verknüpften Kriterien ändern, wenn Sie die Suchkriterien für die abgefragten Assets ändern möchten.
 
 
 
 == Ändern einer Abfrage
 
 .Schritte
-. Klicken Sie auf *Explore* und wählen Sie *All Metric Queries*.
+. Klicken Sie auf *Erkunden* und wählen Sie *Alle Metrikabfragen* aus.
 +
-Die Seite Abfragen wird angezeigt.
+Die Seite „Abfragen“ wird angezeigt.
 
-. Klicken Sie auf den Namen der Abfrage
-. Um der Abfrage ein Kriterium hinzuzufügen, klicken Sie auf das Symbol Spalten, und wählen Sie eine Metrik oder ein Attribut aus der Liste aus.
+. Klicken Sie auf den Abfragenamen
+. Um der Abfrage ein Kriterium hinzuzufügen, klicken Sie auf das Spaltensymbol und wählen Sie eine Metrik oder ein Attribut aus der Liste aus.
 
 
 Wenn Sie alle erforderlichen Änderungen vorgenommen haben, führen Sie einen der folgenden Schritte aus:
 
-* Klicken Sie auf die Schaltfläche *Speichern*, um die Abfrage mit dem ursprünglich verwendeten Namen zu speichern.
-* Klicken Sie auf das Dropdown-Menü neben der Schaltfläche *Speichern* und wählen Sie *Speichern unter*, um die Abfrage mit einem anderen Namen zu speichern. Die ursprüngliche Abfrage wird dadurch nicht überschrieben.
-* Klicken Sie auf das Dropdown-Menü neben der Schaltfläche *Speichern* und wählen Sie *Umbenennen* aus, um den ursprünglich verwendeten Abfragenamen zu ändern. Dadurch wird die ursprüngliche Abfrage überschrieben.
-* Klicken Sie auf das Dropdown-Menü neben der Schaltfläche *Speichern* und wählen Sie *Kartenänderungen* aus, um die Abfrage auf die zuletzt gespeicherten Änderungen zurückzusetzen.
+* Klicken Sie auf die Schaltfläche *Speichern*, um die Abfrage unter dem ursprünglich verwendeten Namen zu speichern.
+* Klicken Sie auf das Dropdown-Menü neben der Schaltfläche *Speichern* und wählen Sie *Speichern unter*, um die Abfrage unter einem anderen Namen zu speichern.  Dadurch wird die ursprüngliche Abfrage nicht überschrieben.
+* Klicken Sie auf das Dropdown-Menü neben der Schaltfläche *Speichern* und wählen Sie *Umbenennen*, um den ursprünglich verwendeten Abfragenamen zu ändern.  Dadurch wird die ursprüngliche Abfrage überschrieben.
+* Klicken Sie auf das Dropdown-Menü neben der Schaltfläche *Speichern* und wählen Sie *Änderungen verwerfen*, um die Abfrage auf die zuletzt gespeicherten Änderungen zurückzusetzen.
 
 
 
 
 == Löschen einer Abfrage
 
-Um eine Abfrage zu löschen, klicken Sie auf *Abfragen* und wählen Sie *Alle Abfragen anzeigen* aus, und führen Sie einen der folgenden Schritte aus:
+Um eine Abfrage zu löschen, klicken Sie auf *Abfragen*, wählen Sie *Alle Abfragen anzeigen* und führen Sie einen der folgenden Schritte aus:
 
-. Klicken Sie rechts neben der Abfrage auf das Menü "drei Punkte" und klicken Sie auf *Löschen*.
-. Klicken Sie auf den Namen der Abfrage und wählen Sie im Dropdown-Menü * Speichern* * die Option * Löschen.
+. Klicken Sie auf das Drei-Punkte-Menü rechts neben der Abfrage und klicken Sie auf *Löschen*.
+. Klicken Sie auf den Abfragenamen und wählen Sie *Löschen* aus dem Dropdown-Menü *Speichern*.
 

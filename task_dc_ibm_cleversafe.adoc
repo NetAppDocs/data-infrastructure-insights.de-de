@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_cleversafe.html 
 keywords: data collector, IBM Cleversafe 
-summary: Konfigurieren des IBM Cleversafe Datensammlers. 
+summary: Konfigurieren des IBM Cleversafe-Datenkollektors. 
 ---
-= IBM Cleversafe Datensammler
+= IBM Cleversafe-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights nutzt diesen Datensammler, um Bestands- und Leistungsdaten für IBM Cleversafe-Speichersysteme zu ermitteln.
+Data Infrastructure Insights verwendet diesen Datenkollektor, um Bestands- und Leistungsdaten für IBM Cleversafe-Speichersysteme zu ermitteln.
 
 
-NOTE: IBM Cleversafe wird mit einer anderen Raw TB zu Managed Unit Rate gemessen. Jede 40 TB unformatierte IBM Cleversafe Kapazität wird als 1 berechnetlink:concept_subscribing_to_cloud_insights.html#pricing["Verwaltete Einheit (ME)"].
+NOTE: Für IBM Cleversafe gilt ein anderer Tarif als für verwaltete Einheiten (Raw TB).  Für jeweils 40 TB unformatierte IBM Cleversafe-Kapazität wird 1link:concept_subscribing_to_cloud_insights.html#pricing["Verwaltete Einheit (MU)"] .
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem IBM Cleversafe Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom IBM Cleversafe-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Storage-Pool | Storage-Pool 
+| Speicherpool | Speicherpool 
 
 
 | Container | Internes Volumen 
@@ -35,17 +35,17 @@ Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem
 | Container | Dateifreigabe 
 
 
-| NFS-Share | Share 
+| NFS-Freigabe | Aktie 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* Die IP-Adresse für externe Datendienste für den Cluster
+* Die IP-Adresse der externen Datendienste für den Cluster
 * Administrator-Benutzername und -Passwort
-* Anschluss 9440
+* Port 9440
 
 
 
@@ -57,13 +57,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Manager-IP oder Host-Name | IP-Adresse oder Hostname des Management-Node 
+| Manager-IP oder Hostname | IP-Adresse oder Hostname des Verwaltungsknotens 
 
 
-| Benutzername | Benutzername für das Benutzerkonto mit Superuser- oder Systemadministrator-Rolle 
+| Benutzername | Benutzername für das Benutzerkonto mit Superuser- oder Systemadministratorrolle 
 
 
-| Passwort | Kennwort für das Benutzerkonto mit Superuser- oder Systemadministrator-Rolle 
+| Passwort | Kennwort für das Benutzerkonto mit der Rolle „Superuser“ oder „Systemadministrator“ 
 |===
 
 
@@ -74,13 +74,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. 
 
 
-| HTTP-Verbindungszeitlimit (Sek.) | HTTP-Zeitüberschreitung in Sekunden. 
+| HTTP-Verbindungs-Timeout (Sek.) | HTTP-Timeout in Sekunden. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: task_dc_redhat_virtualization.html 
 keywords: data collector, Red Hat Virtualization 
-summary: Konfiguration von Red hat Virtualization Data Collector 
+summary: Konfigurieren des Red Hat Virtualization-Datenkollektors. 
 ---
-= Datensammler Red hat Virtualization
+= Red Hat Virtualization-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Datensammler Red hat Virtualization zur Erfassung von Bestandsdaten aus virtualisierten Linux- und Microsoft Windows-Workloads.
+Data Infrastructure Insights verwendet den Red Hat Virtualization-Datensammler, um Inventardaten von virtualisierten Linux- und Microsoft Windows-Workloads zu sammeln.
 
 
 
 == Terminologie
 
-Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die gängigste Terminologie für die Ressource angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Für jeden von Data Infrastructure Insights erfassten Asset-Typ wird die am häufigsten verwendete Terminologie für das Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte | Virtuelles Laufwerk 
+| Scheibe | Virtuelle Festplatte 
 
 
-| Host | Host 
+| Gastgeber | Gastgeber 
 
 
-| Virtual Machine | Virtual Machine 
+| Virtuelle Maschine | Virtuelle Maschine 
 
 
-| Storage Domain | Datastore 
+| Speicherdomäne | Datenspeicher 
 
 
 | Logische Einheit | LUN 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* IP-Adresse des RHEV-Servers über Port 443 über REST-API
-* Nur-Lese-Benutzername und Kennwort
+* IP-Adresse des RHEV-Servers über Port 443 per REST-API
+* Nur-Lese-Benutzername und -Passwort
 * RHEV Version 3.0+
 
 
@@ -57,13 +57,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| IP-Adresse des RHEV-Servers | IP-Adresse des Storage-Systems 
+| RHEV-Server-IP-Adresse | IP-Adresse des Speichersystems 
 
 
 | Benutzername | Benutzername mit Administratorrechten 
 
 
-| Passwort für das Administratorkonto | Passwort 
+| Kennwort für das Administratorkonto | Passwort 
 |===
 
 
@@ -74,13 +74,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| HTTPS-Kommunikationsschnittstelle | Port, der für die HTTPS-Kommunikation mit RHEV verwendet wird 
+| HTTPS-Kommunikationsport | Für die HTTPS-Kommunikation mit RHEV verwendeter Port 
 
 
-| Abfrageintervall für Bestand (min) | Die Standardeinstellung ist 20 Minuten. 
+| Inventarabfrageintervall (min) | Der Standardwert beträgt 20 Minuten. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

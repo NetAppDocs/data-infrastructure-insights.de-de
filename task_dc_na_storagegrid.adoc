@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_storagegrid.html 
-summary: NetApp StorageGRID Data Collector konfigurieren 
+summary: Konfigurieren des NetApp StorageGRID Datenkollektors 
 keywords: data collector, queries, create, storagegrid 
 ---
-= NetApp StorageGRID Datensammler
+= NetApp StorageGRID Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der NetApp StorageGRID Datensammler unterstützt Inventar- und Performance-Sammlung aus StorageGRID Konfigurationen.
+Der NetApp StorageGRID Datenkollektor unterstützt die Bestands- und Leistungserfassung von StorageGRID Konfigurationen.
 
 [NOTE]
 ====
@@ -25,20 +25,20 @@ Für Kunden, die das alte (MU) Lizenzmodell verwenden, wird StorageGRID als Seku
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem NetApp StorageGRID-Collector. Für jeden erfassten Asset-Typ wird die am häufigsten für dieses Dokument verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom NetApp StorageGRID Collector.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
 | StorageGRID | Storage 
 
 
-| Knoten | Knoten 
+| Node | Node 
 
 
-| Mandant | Storage-Pool 
+| Mieter | Speicherpool 
 
 
 | Eimer | Internes Volumen 
@@ -47,11 +47,11 @@ Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem
 
 == Anforderungen
 
-Für die Konfiguration dieser Datenquelle gelten folgende Anforderungen:
+Für die Konfiguration dieser Datenquelle gelten die folgenden Voraussetzungen:
 
-* StorageGRID-Host-IP-Adresse
-* Ein Benutzername und ein Passwort für einen Benutzer, dem die Rollen Metric Query und Tenant Access zugewiesen sind
-* Anschluss 443
+* StorageGRID Host-IP-Adresse
+* Ein Benutzername und ein Kennwort für einen Benutzer, dem die Rollen „Metrikabfrage“ und „Mandantenzugriff“ zugewiesen wurden
+* Port 443
 
 
 
@@ -63,13 +63,13 @@ Für die Konfiguration dieser Datenquelle gelten folgende Anforderungen:
 | Feld | Beschreibung 
 
 
-| StorageGRID-Host-IP-Adresse | Management der virtuellen IP-Adresse der StorageGRID Appliance 
+| StorageGRID Host-IP-Adresse | Verwaltung Virtuelle IP-Adresse des StorageGRID -Geräts 
 
 
-| Benutzername | Name, der zur Anmeldung bei der StorageGRID Appliance verwendet wird 
+| Benutzername | Name, der für die Anmeldung beim StorageGRID -Gerät verwendet wird 
 
 
-| Passwort | Passwort, das zur Anmeldung bei der StorageGRID Appliance verwendet wird 
+| Passwort | Kennwort zum Anmelden bei der StorageGRID -Appliance 
 |===
 
 
@@ -80,33 +80,33 @@ Für die Konfiguration dieser Datenquelle gelten folgende Anforderungen:
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten 
+| Inventarabfrageintervall (min) | Der Standardwert ist 60 Minuten 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 900 Sekunden 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 900 Sekunden 
 |===
 
 
-== Single Sign On (SSO)
+== Einmaliges Anmelden (SSO)
 
-Die link:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"] Firmware-Versionen verfügen über entsprechende API-Versionen; 3.0 API und neuere Versionen unterstützen Single Sign-On (SSO)-Anmeldung.
+Derlink:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"] Firmware-Versionen haben entsprechende API-Versionen; 3.0 API und neuere Versionen unterstützen die Single Sign-On-Anmeldung (SSO).
 
 |===
 
 
-| Die Firmware-Version | API-Version | Unterstützung von Single Sign On (SSO) 
+| Firmware-Version | API-Version | Unterstützt Single Sign-On (SSO) 
 
 
 | 11,1 | 2 | Nein 
 
 
-| 11,2 | 3,0 | Ja. 
+| 11,2 | 3,0 | Ja 
 
 
-| 11,5 | 3,3 | Ja. 
+| 11,5 | 3,3 | Ja 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -1,63 +1,63 @@
 ---
 sidebar: sidebar 
 permalink: task_export_query_results.html 
-summary: Exportieren der Ergebnisse einer Abfrage in eine CSV-Datei 
+summary: So exportieren Sie die Ergebnisse einer Abfrage in eine CSV-Datei 
 keywords: query, queries, export, csv 
 ---
-= Abfrageergebnisse werden in eine CSV-Datei exportiert
+= Exportieren von Abfrageergebnissen in eine CSV-Datei
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie können die Ergebnisse einer beliebigen Abfrage in eine .CSV-Datei exportieren, die es Ihnen ermöglicht, die Daten zu analysieren oder in eine andere Anwendung zu importieren.
+Sie können die Ergebnisse jeder Abfrage in eine CSV-Datei exportieren, sodass Sie die Daten analysieren oder in eine andere Anwendung importieren können.
 
 .Schritte
 . Melden Sie sich bei Data Infrastructure Insights an.
-. Klicken Sie auf *Abfragen* und wählen Sie *Alle Anfragen anzeigen*.
+. Klicken Sie auf *Abfragen* und wählen Sie *Alle Abfragen anzeigen*.
 +
-Die Seite Abfragen wird angezeigt.
+Die Seite „Abfragen“ wird angezeigt.
 
 . Klicken Sie auf eine Abfrage.
-. Klicken Sie hierimage:ExportButton.png["Schaltfläche Exportieren"], um die Abfrageergebnisse in eine CSV-Datei zu exportieren.
+. Klickenimage:ExportButton.png["Schaltfläche „Exportieren“"] um die Abfrageergebnisse in eine CSV-Datei zu exportieren.
 
 
 
-NOTE: Der Export nach .CSV ist auch im Menü „drei Punkte“ in den Dashboard-Tabellen Widgets sowie in den meisten Landing Page-Tabellen verfügbar.
+NOTE: Der Export in .CSV ist auch im Menü „Drei Punkte“ in Dashboard-Tabellen-Widgets sowie in den meisten Landingpage-Tabellen verfügbar.
 
 
 
 == Asynchroner Export
 
-Der Export von Daten in .CSV kann je nach zu exportierender Datenmenge zwischen wenigen Sekunden und mehreren Stunden dauern. Data Infrastructure Insights exportiert diese Daten asynchron, sodass Sie weiterarbeiten können, während die CSV-Datei kompiliert wird.
+Das Exportieren von Daten in das CSV-Format kann je nach der zu exportierenden Datenmenge zwischen einigen Sekunden und mehreren Stunden dauern.  Data Infrastructure Insights exportiert diese Daten asynchron, sodass Sie weiterarbeiten können, während die CSV-Datei kompiliert wird.
 
 Zeigen Sie Ihre CSV-Exporte an und laden Sie sie herunter, indem Sie in der oberen rechten Symbolleiste das Glockensymbol auswählen.
 
 image:csv_export_async.png["Glockensymbol mit einer Liste der zum Download bereitstehenden CSV-Exporte, Breite = 400"]
 
-Die exportierten Daten geben die aktuell angezeigten Filter-, Spalten- und Spaltennamen wieder.
+Die exportierten Daten spiegeln die aktuelle Filterung, die angezeigten Spalten und Spaltennamen wider.
 
 
 
 == Kommas in Asset-Namen
 
-Hinweis: Wenn ein Komma in einem Asset-Namen angezeigt wird, schließt der Export den Namen in Anführungszeichen ein, wobei der Asset-Name und das richtige .csv-Format beibehalten werden.
+Hinweis: Wenn in einem Asset-Namen ein Komma erscheint, wird der Name beim Export in Anführungszeichen gesetzt, wodurch der Asset-Name und das richtige CSV-Format erhalten bleiben.
 
 
 
 == Zeitformat oder kein Zeitformat?
 
-Wenn Sie eine exportierte CSV-Datei mit Excel öffnen, wenn Sie einen Objektnamen oder ein anderes Feld im Format NN:NN haben (zwei Ziffern gefolgt von einem Doppelpunkt gefolgt von zwei weiteren Ziffern), interpretiert Excel diesen Namen manchmal als Zeitformat, statt Textformat. Dies kann dazu führen, dass in Excel falsche Werte in diesen Spalten angezeigt werden. Ein Objekt mit dem Namen „81:45“ wird beispielsweise in Excel als „81:45:00“ angezeigt.
+Wenn Sie eine exportierte CSV-Datei mit Excel öffnen und ein Objektname oder ein anderes Feld im Format NN:NN (zwei Ziffern gefolgt von einem Doppelpunkt und zwei weiteren Ziffern) vorliegt, interpretiert Excel diesen Namen manchmal als Zeitformat statt als Textformat.  Dies kann dazu führen, dass Excel in diesen Spalten falsche Werte anzeigt.  Beispielsweise würde ein Objekt mit dem Namen „81:45“ in Excel als „81:45:00“ angezeigt.
 
-Um dies zu umgehen, importieren Sie die .CSV-Datei in Excel anhand der folgenden Schritte:
+Um dieses Problem zu umgehen, importieren Sie die CSV-Datei mit den folgenden Schritten in Excel:
 
 . Öffnen Sie ein neues Blatt in Excel.
-. Wählen Sie auf der Registerkarte „Daten“ die Option „aus Text“.
-. Suchen Sie die gewünschte .CSV-Datei und klicken Sie auf „Importieren“.
-. Wählen Sie im Importassistenten die Option "getrennt" und klicken Sie auf Weiter.
-. Wählen Sie "Komma" für das Trennzeichen und klicken Sie auf Weiter.
-. Wählen Sie die gewünschten Spalten aus und wählen Sie „Text“ für das Spaltendatenformat.
-. Klicken Sie Auf Fertig Stellen.
+. Wählen Sie auf der Registerkarte „Daten“ die Option „Aus Text“.
+. Suchen Sie die gewünschte CSV-Datei und klicken Sie auf „Importieren“.
+. Wählen Sie im Importassistenten „Getrennt“ und klicken Sie auf „Weiter“.
+. Wählen Sie „Komma“ als Trennzeichen und klicken Sie auf „Weiter“.
+. Wählen Sie die gewünschten Spalten aus und wählen Sie „Text“ als Spaltendatenformat.
+. Klicken Sie auf Fertig stellen.
 +
 Ihre Objekte sollten in Excel im richtigen Format angezeigt werden.
 

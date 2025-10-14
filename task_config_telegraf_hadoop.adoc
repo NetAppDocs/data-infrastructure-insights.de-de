@@ -2,70 +2,70 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_hadoop.html 
 keywords: telegraf, installation, install, Hadoop 
-summary: Konfiguration des Hadoop Data Collector 
+summary: Konfiguration des Hadoop-Datensammlers 
 ---
-= Hadoop Data Collector
+= Hadoop-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet diesen Datensammler, um Kennzahlen aus Hadoop zu sammeln.
+Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von Hadoop zu sammeln.
 
 
 
 == Installation
 
-. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Für Hadoop.
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*.  Wählen Sie Hadoop.
 +
-Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.
+Wählen Sie das Betriebssystem oder die Plattform aus, auf der der Telegraf-Agent installiert ist.
 
-. Wenn Sie noch keinen Agenten zur Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um die  Anweisungen zu erweiternlink:task_config_telegraf_agent.html["Agenten-Installation"].
-. Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.
-. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
-
-
-image:HadoopDCConfigLinux-1.png["Hadoop Konfiguration"] image:HadoopDCConfigLinux-2.png["Hadoop Konfiguration"]
+. Wenn Sie noch keinen Agenten für die Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um daslink:task_config_telegraf_agent.html["Agenteninstallation"] Anweisungen.
+. Wählen Sie den Agent-Zugriffsschlüssel zur Verwendung mit diesem Datensammler aus.  Sie können einen neuen Agentenzugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agentenzugriffsschlüssel* klicken.  Best Practice: Verwenden Sie nur dann einen anderen Agent-Zugriffsschlüssel, wenn Sie Datensammler beispielsweise nach Betriebssystem/Plattform gruppieren möchten.
+. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren.  Die Anweisungen variieren je nach Art des Betriebssystems oder der Plattform, die Sie zum Sammeln von Daten verwenden.
 
 
-
-== Einrichtung
-
-Eine vollständige Hadoop Implementierung umfasst die folgenden Komponenten:
-
-* NameNode: Das primäre System Hadoop Distributed File System (HDFS) Koordiniert eine Reihe von DataNodes.
-* Sekundärer NameNode: Ein warmer Failover für den NameNode. In Hadoop erfolgt die Heraufstufung auf NameNode nicht automatisch. Secondary NameNode sammelt Informationen von NameNode, damit sie bei Bedarf heraufgestuft werden können.
-* DataNode: Tatsächlicher Eigentümer von Daten.
-* ResourceManager: Das primäre Computersystem (Yarn). Koordiniert eine Reihe von NodeManagers.
-* NodeManager: Die Ressource für Computing. Aktueller Speicherort für das Ausführen von Anwendungen.
-* JobHistorieServer: Verantwortlich für die Bearbeitung aller Anfragen im Zusammenhang mit der Jobhistorie.
+image:HadoopDCConfigLinux-1.png["Hadoop-Konfiguration"] image:HadoopDCConfigLinux-2.png["Hadoop-Konfiguration"]
 
 
-Das Hadoop Plugin basiert auf dem telegraf Jolokia Plugin. Um Informationen aus allen Hadoop Komponenten zu sammeln, muss JMX auf allen Komponenten konfiguriert und zugänglich gemacht werden.
+
+== Aufstellen
+
+Eine vollständige Hadoop-Bereitstellung umfasst die folgenden Komponenten:
+
+* NameNode: Das primäre System des Hadoop Distributed File System (HDFS).  Koordiniert eine Reihe von DataNodes.
+* Sekundärer NameNode: ein Warm-Failover für den Haupt-NameNode.  In Hadoop erfolgt die Beförderung zum NameNode nicht automatisch.  Der sekundäre NameNode sammelt Informationen vom NameNode, um bei Bedarf für die Beförderung bereit zu sein.
+* DataNode: Tatsächlicher Eigentümer der Daten.
+* ResourceManager: Das primäre Rechensystem (Yarn).  Koordiniert eine Reihe von NodeManagern.
+* NodeManager: Die Ressource für die Berechnung.  Tatsächlicher Speicherort für die Ausführung von Anwendungen.
+* JobHistoryServer: Verantwortlich für die Bearbeitung aller Anfragen zum Jobverlauf.
+
+
+Das Hadoop-Plugin basiert auf dem Jolokia-Plugin von Telegraf.  Um beispielsweise Informationen von allen Hadoop-Komponenten zu sammeln, muss JMX auf allen Komponenten konfiguriert und über Jolokia verfügbar gemacht werden.
 
 
 
 === Kompatibilität
 
-Die Konfiguration wurde mit Hadoop Version 2.9 entwickelt.
+Die Konfiguration wurde für Hadoop Version 2.9.2 entwickelt.
 
 
 
-=== Einrichtung
+=== Einrichten
 
 
 
 ==== Jolokia Agent Jar
 
-Für alle einzelnen Komponenten muss eine Version der Jolokia Agent JAR-Datei heruntergeladen werden. Die Version wurde getestet gegen war link:https://jolokia.org/download.html["Jolokia Agent 1.6.0"].
+Für alle Einzelkomponenten muss eine Version der Jolokia-Agent-JAR-Datei heruntergeladen werden.  Die getestete Version warlink:https://jolokia.org/download.html["Jolokia-Agent 1.6.0"] .
 
-Die nachfolgende Anleitung setzt voraus, dass die heruntergeladene JAR-Datei (jolokia-jvm-1.6.0-Agent.jar) unter der Adresse '/opt/hadoop/lib/' abgelegt wird.
+Die folgenden Anweisungen gehen davon aus, dass die heruntergeladene JAR-Datei (jolokia-jvm-1.6.0-agent.jar) am Speicherort „/opt/hadoop/lib/“ abgelegt ist.
 
 
 
 ==== NameNode
 
-Um NameNode zu konfigurieren, um die Jolokia API freizugeben, können Sie unter <HADOOP_HOME>/etc/hadoop/hadoop-env.sh Folgendes einrichten:
+Um NameNode für die Bereitstellung der Jolokia-API zu konfigurieren, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
 
 [listing]
 ----
@@ -76,7 +76,7 @@ You can choose a different port for JMX (8000 above) and Jolokia (7800). If you 
 
 ==== Sekundärer NameNode
 
-Um den sekundären NameNode zu konfigurieren, um die Jolokia API freizugeben, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
+Um den sekundären NameNode für die Bereitstellung der Jolokia-API zu konfigurieren, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
 
 [listing]
 ----
@@ -85,9 +85,9 @@ You can choose a different port for JMX (8002 above) and Jolokia (7802). If you 
 ----
 
 
-==== DataNode
+==== Datenknoten
 
-Um die DataNodes so zu konfigurieren, dass sie die Jolokia API aussetzen, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
+Um die DataNodes so zu konfigurieren, dass sie die Jolokia-API verfügbar machen, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
 
 [listing]
 ----
@@ -96,9 +96,9 @@ You can choose a different port for JMX (8001 above) and Jolokia (7801). If you 
 ----
 
 
-==== ResourceManager
+==== Ressourcenmanager
 
-Um den ResourceManager so zu konfigurieren, dass die Jolokia API zur Verfügung gestellt wird, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
+Um den ResourceManager für die Bereitstellung der Jolokia-API zu konfigurieren, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
 
 [listing]
 ----
@@ -107,9 +107,9 @@ You can choose a different port for JMX (8003 above) and Jolokia (7803). If you 
 ----
 
 
-==== NodeManager
+==== Knotenmanager
 
-Um die NodeManagers so zu konfigurieren, dass sie die Jolokia API aussetzen, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
+Um die NodeManager so zu konfigurieren, dass sie die Jolokia-API verfügbar machen, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
 
 [listing]
 ----
@@ -118,9 +118,9 @@ You can choose a different port for JMX (8004 above) and Jolokia (7804). If you 
 ----
 
 
-==== JobGeschichteServer
+==== JobHistoryServer
 
-Um den JobHistorieServer so zu konfigurieren, dass die Jolokia API zur Verfügung gestellt wird, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
+Um den JobHistoryServer für die Bereitstellung der Jolokia-API zu konfigurieren, können Sie Folgendes in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh einrichten:
 
 [listing]
 ----
@@ -131,32 +131,32 @@ You can choose a different port for JMX (8005 above) and Jolokia (7805). If you 
 
 == Objekte und Zähler
 
-Folgende Objekte und ihre Zähler werden gesammelt:
+Die folgenden Objekte und ihre Zähler werden gesammelt:
 
 [cols="<.<,<.<,<.<"]
 |===
-| Objekt: | Kennungen: | Attribute: 
+| Objekt: | Kennungen: | Merkmale: 
 
 
-| Sekundärer Hadoop NameNode | Cluster Namespace-Server | Node Name Node IP Compile Info Version 
+| Sekundärer NameNode von Hadoop | Cluster-Namespace-Server | Knotenname Knoten-IP Kompilierungsinformationen Version 
 
 
-| Hadoop NodeManager | Cluster Namespace-Server | Node Name Node-IP 
+| Hadoop NodeManager | Cluster-Namespace-Server | Knotenname Knoten-IP 
 
 
-| Hadoop ResourceManager | Cluster Namespace-Server | Node Name Node-IP 
+| Hadoop-Ressourcenmanager | Cluster-Namespace-Server | Knotenname Knoten-IP 
 
 
-| Hadoop DataNode | Cluster Namespace-Server | Node Name Node-IP Cluster-ID-Version 
+| Hadoop-Datenknoten | Cluster-Namespace-Server | Knotenname Knoten-IP Cluster-ID Version 
 
 
-| Hadoop NameNode | Cluster Namespace-Server | Node Name Node IP Transaktions-ID Letzte geschriebene Zeit seit Letzte geladen Edits HA State File System Status Block Pool ID Cluster ID Compile Info unterschiedliche Version Anzahl Version 
+| Hadoop-Namensknoten | Cluster-Namespace-Server | Knotenname Knoten-IP Transaktions-ID Zuletzt geschrieben Zeit seit dem letzten Laden Bearbeitungen HA-Status Dateisystemstatus Blockpool-ID Cluster-ID Kompilierungsinformationen Eindeutige Versionsanzahl Version 
 
 
-| Hadoop JobGeschichteServer | Cluster Namespace-Server | Node Name Node-IP 
+| Hadoop JobHistoryServer | Cluster-Namespace-Server | Knotenname Knoten-IP 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite.
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite.

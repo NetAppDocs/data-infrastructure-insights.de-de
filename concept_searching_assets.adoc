@@ -1,123 +1,123 @@
 ---
 sidebar: sidebar 
 permalink: concept_searching_assets.html 
-summary: Erweiterte Suche techniquest hilft Ihnen bei der Suche nach den gewünschten Assets. 
+summary: Mithilfe erweiterter Suchtechniken können Sie die gesuchten Assets finden. 
 keywords: asset page, objects, search, advanced, alerts 
 ---
-= Tipps und Tricks für die Suche nach Ressourcen und Warnungen
+= Hinweise und Tipps zur Suche nach Assets und Warnungen
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Es können mehrere Suchmethoden verwendet werden, um in Ihrer überwachten Umgebung nach Daten oder Objekten zu suchen.
+Zur Suche nach Daten oder Objekten in Ihrer überwachten Umgebung können mehrere Suchtechniken verwendet werden.
 
 * *Platzhaltersuche*
 +
-Sie können Platzhaltersuche für mehrere Zeichen mit dem * Zeichen durchführen. Zum Beispiel würde _Application*n__Application_ zurückgeben.
+Sie können eine Platzhaltersuche mit mehreren Zeichen durchführen, indem Sie das Zeichen * verwenden.  Beispielsweise würde _applic*n_ _application_ zurückgeben.
 
-* *Phrasen verwendet bei der Suche*
+* *Bei der Suche verwendete Ausdrücke*
 +
-Ein Begriff ist eine Gruppe von Wörtern, die von doppelten Anführungszeichen umgeben sind, z. B. „VNX LUN 5“. Sie können doppelte Anführungszeichen verwenden, um nach Dokumenten zu suchen, die Leerzeichen in ihren Namen oder Attributen enthalten.
+Eine Phrase ist eine Gruppe von Wörtern, die von doppelten Anführungszeichen umgeben sind, beispielsweise „VNX LUN 5“.  Sie können doppelte Anführungszeichen verwenden, um nach Dokumenten zu suchen, deren Namen oder Attribute Leerzeichen enthalten.
 
 * *Boolesche Operatoren*
 +
-Mit Booleschen Operatoren ODER, UND, und, und NICHT können Sie mehrere Begriffe kombinieren, um eine komplexere Abfrage zu bilden.
+Mithilfe der Booleschen Operatoren OR, AND und NOT können Sie mehrere Begriffe kombinieren, um eine komplexere Abfrage zu erstellen.
 
 +
 ODER
 
 +
-Der OR-Operator ist der Standard-Konjunktion-Operator.
+Der ODER-Operator ist der Standard-Konjunktionsoperator.
 
 +
-Wenn zwischen zwei Begriffen kein Boolescher Operator vorhanden ist, wird der OPERATOR ODER verwendet.
+Wenn zwischen zwei Begriffen kein Boolescher Operator steht, wird der ODER-Operator verwendet.
 
 +
-Der OR-Operator verknüpft zwei Begriffe und findet ein passendes Dokument, wenn einer der Termini in einem Dokument vorhanden ist.
+Der ODER-Operator verknüpft zwei Begriffe und findet ein passendes Dokument, wenn einer der Begriffe in einem Dokument vorhanden ist.
 
 +
-Beispielsweise sucht _Storage ODER netapp_ nach Dokumenten, die entweder _Storage_ oder _netapp_ enthalten.
+Beispielsweise sucht _storage OR netapp_ nach Dokumenten, die entweder _storage_ oder _netapp_ enthalten.
 
 +
-Hohe Bewertungen werden an Dokumente vergeben, die den meisten Bedingungen entsprechen.
+Dokumente, die den meisten Begriffen entsprechen, erhalten hohe Punktzahlen.
 
 +
 UND
 
 +
-Sie können den OPERATOR UND verwenden, um Dokumente zu suchen, in denen beide Suchbegriffe in einem einzigen Dokument vorhanden sind. Beispielsweise sucht _Storage UND netapp_ nach Dokumenten, die _Storage_ und _netapp_ enthalten.
+Mit dem UND-Operator können Sie nach Dokumenten suchen, in denen beide Suchbegriffe in einem einzigen Dokument vorkommen.  Beispielsweise sucht _storage AND netapp_ nach Dokumenten, die sowohl _storage_ als auch _netapp_ enthalten.
 
 +
-Sie können anstelle des Wortes UND das Symbol *&* verwenden.
+Sie können das Symbol *&&* anstelle des Wortes AND verwenden.
 
 +
 NICHT
 
 +
-Wenn Sie den NICHT-Operator verwenden, werden alle Dokumente, die den Begriff nachher NICHT enthalten, von den Suchergebnissen ausgeschlossen. Beispiel: _Storage NOT netapp_ sucht nach Dokumenten, die nur _Storage_ und nicht _netapp_ enthalten.
+Wenn Sie den Operator NOT verwenden, werden alle Dokumente, die den Begriff nach NOT enthalten, aus den Suchergebnissen ausgeschlossen.  Beispielsweise sucht _storage NOT netapp_ nach Dokumenten, die nur _storage_ und nicht _netapp_ enthalten.
 
 +
-Anstelle des Wortes NOT können Sie das Symbol *!* verwenden.
+Sie können das Symbol *!* anstelle des Wortes NOT verwenden.
 
 
 
-Die Groß-/Kleinschreibung der Suche wird nicht berücksichtigt.
+Bei der Suche wird die Groß-/Kleinschreibung nicht berücksichtigt.
 
 
 
-== Suche mit indizierten Begriffen
+== Suche mit indexierten Begriffen
 
-Suchvorgänge, die mehr der indizierten Begriffe entsprechen, führen zu höheren Punktzahlen.
+Suchen, die mit mehr indexierten Begriffen übereinstimmen, führen zu höheren Punktzahlen.
 
-Der Suchstring wird in separate Suchbegriffe nach Leerzeichen aufgeteilt. Die Suchzeichenfolge „Storage aurora netapp“ ist beispielsweise in drei Schlagwörter unterteilt: „Storage“, „aurora“ und „netapp“. Die Suche wird unter Verwendung aller drei Begriffe durchgeführt. Die Dokumente, die den meisten dieser Begriffe entsprechen, haben die höchste Punktzahl. Je mehr Informationen Sie zur Verfügung stellen, desto besser sind die Suchergebnisse. Sie können zum Beispiel nach einem Storage mit dessen Namen und Modell suchen.
+Der Suchstring wird durch Leerzeichen in einzelne Suchbegriffe aufgeteilt.  Beispielsweise wird die Suchzeichenfolge „storage aurora netapp“ in drei Schlüsselwörter aufgeteilt: „storage“, „aurora“ und „netapp“.  Die Suche wird mit allen drei Begriffen durchgeführt.  Die Dokumente, die den meisten dieser Begriffe entsprechen, erhalten die höchste Punktzahl.  Je mehr Informationen Sie angeben, desto besser sind die Suchergebnisse.  Sie können beispielsweise nach einem Speicher anhand seines Namens und Modells suchen.
 
-Die Benutzeroberfläche zeigt die Suchergebnisse für verschiedene Kategorien mit den drei besten Ergebnissen pro Kategorie an. Wenn Sie ein Objekt nicht gefunden haben, das Sie erwartet haben, können Sie weitere Termini in die Suchzeichenfolge eingeben, um die Suchergebnisse zu verbessern.
+Die Benutzeroberfläche zeigt die Suchergebnisse kategorienübergreifend an, mit den drei besten Ergebnissen pro Kategorie.  Wenn Sie ein erwartetes Objekt nicht gefunden haben, können Sie weitere Begriffe in den Suchbegriff aufnehmen, um die Suchergebnisse zu verbessern.
 
-Die folgende Tabelle enthält eine Liste indizierter Begriffe, die der Suchzeichenfolge hinzugefügt werden können.
+Die folgende Tabelle enthält eine Liste indexierter Begriffe, die der Suchzeichenfolge hinzugefügt werden können.
 
 |===
 | Kategorie | Indizierte Begriffe 
 
 
-| Storage | Name des Anbieters „Storage“ 
+| Storage | "Speicher" Name Anbieter Modell 
 
 
-| Storage Pool | „storagepool“: Name der Storage-IP-Adressen der Storage-Seriennummer des Storage-Anbieters Namen von Storage-Modellen aller damit verbundenen internen Volumes-Namen aller zugehörigen Festplatten 
+| Speicherpool | Name des „Speicherpools“ Name des Speichers IP-Adressen des Speichers Seriennummer des Speichers Speicheranbieter Speichermodell Namen aller zugehörigen internen Volumes Namen aller zugehörigen Datenträger 
 
 
-| Internes Volumen | Name des Storage IP-Adressen der Storage-Seriennummer des Storage-Anbieters Name des Storage-Modells: Namen des Storage-Pools aller damit verbundenen Shares Namen aller zugehörigen Applikationen 
+| Internes Volumen | Name des „internen Datenträgers“ Name des Speichers IP-Adressen des Speichers Seriennummer des Speichers Speicheranbieter Speichermodell Name des Speicherpools Namen aller zugehörigen Freigaben Namen aller zugehörigen Anwendungen 
 
 
-| Datenmenge | „Volume“: Name aller internen Volumes Name des Storage-Pools Name der Storage-IP-Adressen der Storage-Seriennummer des Storage-Anbietermodells 
+| Volumen | „Volume“-Name Bezeichnung Namen aller internen Volumes Name des Speicherpools Name des Speichers IP-Adressen des Speichers Seriennummer des Speichers Speicheranbieter Speichermodell 
 
 
-| Storage-Node | Name des Storage-IP-Adressen der Storage-Serialnummer des Storage-Anbieters, Name des Storage-Modells 
+| Speicherknoten | "storagenode" Name Name des Speichers IP-Adressen des Speichers Seriennummer des Speichers Speicheranbieter Speichermodell 
 
 
-| Host | Name „Host“ IP-Adressen Namen aller zugehörigen Anwendungen 
+| Gastgeber | „Host“-Name IP-Adressen Namen aller zugehörigen Anwendungen 
 
 
-| Datenspeicher | „Datastore“: Name der virtuellen Center-IP-Namen aller Volumes Namen aller internen Volumes 
+| Datenspeicher | Name des „Datenspeichers“ Virtuelles Zentrum IP-Namen aller Datenträger Namen aller internen Datenträger 
 
 
-| Virtual Machines | „virtualmachine“ Name DNS Name IP-Adressen Name der Host-IP-Adressen der Hostnamen aller Datenspeicher Namen aller zugehörigen Anwendungen 
+| Virtuelle Maschinen | Name der „virtuellen Maschine“ DNS-Name IP-Adressen Name des Hosts IP-Adressen der Hostnamen aller Datenspeicher Namen aller zugehörigen Anwendungen 
 
 
-| Switches (normal und Kapitalwert) | „Switch“-IP-Adresse wwn-Name Seriennummer Modell Domain-ID-Name des Fabric-wwn der Fabric 
+| Switches (regulär und NPV) | "Switch" IP-Adresse WWN-Name Seriennummer Modell Domänen-ID Name des Fabric WWN des Fabric 
 
 
-| Applikation | „Applikation“: Name des Mandantenbereichsprojekts der Geschäftseinheit 
+| Anwendung | "Anwendung" Name Mandant Geschäftsbereich Geschäftseinheit Projekt 
 
 
-| Tape | „Tape“-IP-Adresse Name Seriennummer Anbieter 
+| Band | "Band" IP-Adresse Name Seriennummer Hersteller 
 
 
-| Port | „Port“ wwn-Name 
+| Hafen | "Port" WWN-Name 
 
 
-| Fabric | „Fabric“ wwn-Name 
+| Stoff | "Stoff" WWN-Name 
 
 
-| Storage Virtual Machine (SVM) | Name UUID von „storagevirtualMachine“ 
+| Virtuelle Speichermaschine (SVM) | "storagevirtualmachine" Name UUID 
 |===

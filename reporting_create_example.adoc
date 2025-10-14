@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reporting_create_example.html 
-summary: Verwenden Sie dieses Verfahren, um mithilfe der vordefinierten Data Infrastructure Insights-Berichte einen Bericht zu erstellen. 
+summary: Verwenden Sie dieses Verfahren, um einen Bericht mithilfe der vordefinierten Data Infrastructure Insights -Berichte zu erstellen. 
 keywords: reporting, cognos, data warehouse, dwh, create, report 
 ---
 = Erstellen eines Berichts (Beispiel)
@@ -10,47 +10,47 @@ keywords: reporting, cognos, data warehouse, dwh, create, report
 
 
 [role="lead"]
-Erstellen Sie anhand der Schritte in diesem Beispiel einen einfachen Bericht zur physischen Kapazität von Storage- und Speicherpools in verschiedenen Datacentern.
+Verwenden Sie die Schritte in diesem Beispiel, um einen einfachen Bericht über die physische Kapazität von Speicher und Speicherpools in mehreren Rechenzentren zu erstellen.
 
 .Schritte
 . Navigieren Sie zu *Menü > Inhalt > Teaminhalt > Berichte*
-. Wählen Sie oben rechts im Bildschirm *[Neu +]* aus
+. Wählen Sie oben rechts auf dem Bildschirm *[Neu +]*
 . Wählen Sie *Bericht*
 +
 image:Reporting_New_Report.png["Erstellen eines neuen Berichts"]
 
-. Wählen Sie auf der Registerkarte *Templates* die Option _leer_
+. Wählen Sie auf der Registerkarte *Vorlagen* _Leer_
 +
-Die Registerkarte „Quelle und Daten“ wird angezeigt
+Die Registerkarten Quelle und Daten werden angezeigt
 
 . Öffnen *Quelle auswählen +*
-. Öffnen Sie unter *Team content* *Packages*
+. Öffnen Sie unter *Teaminhalte* *Pakete*
 +
-Eine Liste der verfügbaren Pakete wird angezeigt.
+Es wird eine Liste der verfügbaren Pakete angezeigt.
 
-. Wählen Sie *Speicher- und Speicherpool-Kapazität* image:Reporting_Select_Source_For_Report.png["Auswählen einer Quelle für den Bericht"]
-. Wählen Sie * Öffnen*
+. Wählen Sie *Speicher und Speicherpoolkapazität*image:Reporting_Select_Source_For_Report.png["Auswählen einer Quelle für den Bericht"]
+. Wählen Sie *Öffnen*
 +
 Die verfügbaren Stile für Ihren Bericht werden angezeigt.
 
 . Wählen Sie *Liste*
 +
-Fügen Sie entsprechende Namen für Liste und Abfrage hinzu
+Fügen Sie passende Namen für Liste und Abfrage hinzu
 
 . Wählen Sie *OK*
-. Erweiterung_Physische Kapazität_
-. Erweitern Sie das System auf die unterste Ebene _Data Center_
-. Ziehen Sie _Data Center_ zum Reporting-Gaumen.
-. Erweitern Sie _Capacity (MB)_
-. Ziehen Sie _Kapazität (MB)_ zum Berichtspaue.
-. Ziehen Sie _genutzte Kapazität (MB)_ zum Berichtsausgang.
-. Führen Sie den Bericht durch, indem Sie einen Ausgabetyp aus dem Menü *Ausführen* auswählen.
+. Erweitern Sie _Physische Kapazität_
+. Erweitern Sie auf die unterste Ebene des _Rechenzentrums_
+. Ziehen Sie „Data Center“ in die Berichtspalette.
+. Erweitern Sie _Kapazität (MB)_
+. Ziehen Sie _Kapazität (MB)_ in die Berichtspalette.
+. Ziehen Sie „Verwendete Kapazität (MB)“ in die Berichtspalette.
+. Führen Sie den Bericht aus, indem Sie im Menü *Ausführen* einen Ausgabetyp auswählen.
 +
 image:Reporting_Running_A_Report.png["Auswählen einer Berichtsausgabe"]
 
 
 
 .Ergebnis
-Ein Bericht wie der folgende wird erstellt:
+Es wird ein Bericht ähnlich dem folgenden erstellt:
 
 image:Reporting-Example1.png["Berichtsbeispiel"]

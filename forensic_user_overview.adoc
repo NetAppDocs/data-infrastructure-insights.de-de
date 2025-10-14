@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: forensic_user_overview.html 
 keywords: Forensic, user, user, activity 
-summary: Benutzerdetails über forensische Benutzer 
+summary: forensische Benutzerdetails 
 ---
-= Übersicht Über Forensische Benutzer
+= Forensische Benutzerübersicht
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,16 +14,16 @@ summary: Benutzerdetails über forensische Benutzer
 
 
 [role="lead"]
-Informationen zu jedem Benutzer finden Sie in der Benutzerübersicht. Verwenden Sie diese Ansichten, um Benutzereigenschaften, zugehörige Einheiten und aktuelle Aktivitäten zu verstehen.
+Informationen zu jedem Benutzer finden Sie in der Benutzerübersicht.  Verwenden Sie diese Ansichten, um Benutzermerkmale, zugehörige Entitäten und aktuelle Aktivitäten zu verstehen.
 
 
 
 == Benutzerprofil
 
-Zu den Benutzerprofilinformationen gehören die Kontaktinformationen und der Standort des Benutzers. Das Profil enthält folgende Informationen:
+Zu den Benutzerprofilinformationen gehören Kontaktinformationen und Standort des Benutzers.  Das Profil enthält die folgenden Informationen:
 
 * Name des Benutzers
-* E-Mail-Adresse des Benutzers
+* E-Mail-Adresse des Nutzers
 * Benutzermanager
 * Telefonkontakt für den Benutzer
 * Standort des Benutzers
@@ -31,29 +31,29 @@ Zu den Benutzerprofilinformationen gehören die Kontaktinformationen und der Sta
 
 
 
-== Benutzerverhalten
+== Nutzerverhalten
 
-Die Informationen zum Benutzerverhalten identifizieren aktuelle Aktivitäten und Vorgänge, die vom Benutzer durchgeführt werden. Zu diesen Informationen gehören:
+Die Informationen zum Benutzerverhalten identifizieren die letzten Aktivitäten und Vorgänge, die der Benutzer durchgeführt hat.  Zu diesen Informationen gehören:
 
-* Aktuelle Aktivität
+* Letzte Aktivität
 +
 ** Letzter Zugriffsort
 ** Aktivitätsdiagramm
-** Meldungen
+** Warnungen
 
 
 
 
-* Betrieb der letzten sieben Tage
+* Operationen der letzten sieben Tage
 +
-** Anzahl an Operationen
+** Anzahl der Operationen
 
 
 
 
 
 
-== Intervall Aktualisieren
+== Aktualisierungsintervall
 
 Die Benutzerliste wird alle 12 Stunden aktualisiert.
 
@@ -61,4 +61,4 @@ Die Benutzerliste wird alle 12 Stunden aktualisiert.
 
 == Aufbewahrungsrichtlinie
 
-Wenn die Benutzerliste nicht erneut aktualisiert wird, wird sie 13 Monate lang aufbewahrt. Nach 13 Monaten werden die Daten gelöscht. Wenn die Workload-Sicherheitsumgebung gelöscht wird, werden alle der Umgebung zugeordneten Daten gelöscht.
+Wenn die Benutzerliste nicht erneut aktualisiert wird, bleibt sie 13 Monate lang erhalten.  Nach 13 Monaten werden die Daten gelöscht.  Wenn Ihre Workload Security-Umgebung gelöscht wird, werden alle mit der Umgebung verknüpften Daten gelöscht.

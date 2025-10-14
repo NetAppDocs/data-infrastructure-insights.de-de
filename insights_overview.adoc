@@ -2,39 +2,39 @@
 sidebar: sidebar 
 permalink: insights_overview.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload, ttf, time to full, k8s, kubernetes, namespace 
-summary: Einblicke geben Ihnen einen Einblick in die Ressourcennutzung und Trendanalysen. 
+summary: Mithilfe von Insights erhalten Sie Einblick in die Ressourcennutzung und Trends. 
 ---
-= Einblick
+= Einblicke
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Einblicke ermöglichen es Ihnen, sich über Dinge wie die Ressourcennutzung und die Auswirkungen auf andere Ressourcen oder die Zeit-zu-volle Analyse zu informieren.
+Mithilfe von Insights können Sie beispielsweise die Ressourcennutzung und ihre Auswirkungen auf andere Ressourcen untersuchen oder die Zeit bis zur Fertigstellung analysieren.
 
-Eine Reihe von Einsichten stehen zur Verfügung. Navigieren Sie zu *Dashboards > Insights*, um mit dem Tauchen zu beginnen. Sie können aktive Insights (Insights, die derzeit auftreten) auf der Hauptregisterkarte oder inaktive Insights auf der Registerkarte _Inactive Insights_ anzeigen. Inaktive Einblicke sind solche, die zuvor aktiv waren, aber nicht mehr auftreten.
-
-
-
-== Insight Typen
+Es stehen zahlreiche Einblicke zur Verfügung.  Navigieren Sie zu *Dashboards > Insights*, um einzutauchen. Sie können aktive Insights (aktuell auftretende Insights) auf der Hauptregisterkarte oder inaktive Insights auf der Registerkarte _Inaktive Insights_ anzeigen.  Inaktive Erkenntnisse sind Erkenntnisse, die zuvor aktiv waren, aber nicht mehr auftreten.
 
 
 
-=== Unter Stress Abbauen
-
-Durch Workloads mit hohen Auswirkungen kann die Performance anderer Workloads in einer gemeinsamen Ressource reduziert werden. Dadurch wird die gemeinsam genutzte Ressource unter Druck. Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und Auswirkungen auf Ihre Mandanten untersuchen können. link:insights_shared_resources_under_stress.html["Weitere Informationen"]
+== Erkenntnistypen
 
 
 
-=== Kubernetes Namespaces sind nicht mehr platzsparend
+=== Gemeinsam genutzte Ressourcen unter Stress
 
-Die Kubernetes-Namespaces, bei denen der Space Insight nicht voll ist, bieten einen Einblick in die Workloads in den Kubernetes-Namespaces, bei denen das Risiko besteht, dass der Speicherplatz knapp wird. Sie schätzen die Anzahl der verbleibenden Tage, bevor der Speicherplatz voll wird. link:insights_k8s_namespaces_running_out_of_space.html["Weitere Informationen"]
-
-
-
-=== Rückgewinnung von ONTAP Cold Storage
-
-Der _Reclaim ONTAP Cold Storage_ Insight liefert Daten zur kalten Kapazität, zu potenziellen Kosten-/Energieeinsparungen sowie empfohlene Maßnahmen für Volumes auf ONTAP Systemen. link:insights_reclaim_ontap_cold_storage.html["Weitere Informationen"]
+Workloads mit hoher Auswirkung können die Leistung anderer Workloads in einer gemeinsam genutzten Ressource beeinträchtigen.  Dadurch wird die gemeinsam genutzte Ressource belastet.  Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und die Auswirkungen auf Ihren Mandanten untersuchen können.link:insights_shared_resources_under_stress.html["Weitere Informationen"]
 
 
-NOTE: Dies ist eine _Preview_ Funktion und kann sich im Laufe der Zeit ändern, wenn Verbesserungen vorgenommen werden. link:/concept_preview_features.html["Weitere Informationen ."] Informationen zu den Funktionen der Data Infrastructure Insights Preview.
+
+=== Kubernetes-Namespaces haben nicht mehr genügend Speicherplatz
+
+Die Einblicke in „Kubernetes-Namespaces, denen der Speicherplatz ausgeht“ geben Ihnen einen Überblick über die Workloads in Ihren Kubernetes-Namespaces, bei denen das Risiko besteht, dass ihnen der Speicherplatz ausgeht, und enthalten eine Schätzung der verbleibenden Tage, bis jeder Speicherplatz voll ist.link:insights_k8s_namespaces_running_out_of_space.html["Weitere Informationen"]
+
+
+
+=== ONTAP Cold Storage zurückgewinnen
+
+Der _Reclaim ONTAP Cold Storage_ Insight bietet Daten zur Kaltkapazität, zu potenziellen Kosten-/Stromeinsparungen und empfohlenen Aktionselementen für Volumes auf ONTAP Systemen.link:insights_reclaim_ontap_cold_storage.html["Weitere Informationen"]
+
+
+NOTE: Dies ist eine _Vorschau_-Funktion und kann sich im Laufe der Zeit ändern, wenn Verbesserungen vorgenommen werden. link:/concept_preview_features.html["Mehr erfahren"] Informationen zu den Vorschaufunktionen von Data Infrastructure Insights .

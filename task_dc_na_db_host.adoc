@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_dc_na_db_host.html 
 keywords: data collector, generic db 
-summary: Generischer Datenbank-Host-Resolver-Collector 
+summary: Generischer DB-Host-Resolver-Sammler 
 ---
-= NetApp-Hostauflösung für allgemeine DB
+= NetApp Generischer DB-Host-Resolver
 :hardbreaks:
 :allow-uri-read: 
 
@@ -16,7 +16,7 @@ Dieser Datensammler erfasst Inventar
 
 == Terminologie
 
-Data Infrastructure Insights erfasst Bestände aus diesem Collector.
+Data Infrastructure Insights erwirbt Inventar von diesem Collector.
 
 
 
@@ -30,16 +30,16 @@ Data Infrastructure Insights erfasst Bestände aus diesem Collector.
 | IP-Adresse des DB-Servers | IP-Adresse des DB-Servers 
 
 
-| DB-Server-Port | Der Standardwert ist 3306 
+| DB-Server-Port | Standard ist 3306 
 
 
-| Qualifizierter Name Der Treiberklasse | Klassenname für den Treiber. 
+| Name der qualifizierten Fahrerklasse | Klassenname für den Treiber. 
 
 
 | JDBC-Treiber-URL | URL für den Treiber 
 
 
-| SQL-Abfrage | Die Abfrage, die verwendet wird, um Daten aus der Tabelle zurückzugeben 
+| SQL-Abfrage | Die Abfrage, mit der Daten aus der Tabelle zurückgegeben werden 
 |===
 
 
@@ -50,12 +50,12 @@ Data Infrastructure Insights erfasst Bestände aus diesem Collector.
 | Feld | Beschreibung 
 
 
-| Intervall Für Bestandsabfrage (Min.) | Der Standardwert ist 60 Minuten 
+| Inventarabfrageintervall (Min.) | Der Standardwert ist 60 Minuten 
 
 
-| Aktivieren Sie die SSL-Verbindung | Wählen Sie diese Option, um die Verbindung über SSL zu aktivieren 
+| SSL-Verbindung aktivieren | Wählen Sie diese Option, um die Verbindung über SSL zu aktivieren. 
 
 
-| Bericht WWN Alias | Wählen Sie diese Option, um den WWN-Alias zu melden 
+| WWN-Alias melden | Wählen Sie diese Option aus, um den WWN-Alias zu melden 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

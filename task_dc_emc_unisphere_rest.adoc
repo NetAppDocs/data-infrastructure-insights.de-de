@@ -2,29 +2,29 @@
 sidebar: sidebar 
 permalink: task_dc_emc_unisphere_rest.html 
 keywords: data collector, Unisphere, EMC 
-summary: Dell EMC Unisphere REST Data Collector konfigurieren. 
+summary: Konfigurieren des Dell EMC Unisphere REST-Datenkollektors. 
 ---
-= Konfigurieren des Dell EMC Unisphere REST-Datensammlers
+= Konfigurieren des Dell EMC Unisphere REST-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler erfasst Bestands- und Performancedaten von Dell EMC Unisphere für PowerMax/VMAX 3 Managementsystemen.
+Dieser Datensammler erfasst Inventar- und Leistungsdaten von Dell EMC Unisphere für PowerMax/Vmax 3-Verwaltungssysteme.
 
-Bitte beachten Sie, dass Dell/EMC bis Unisphere 10.0 keine Statistiken pro Volume eingeführt hat - dieser Datensammler unterstützt 9.2.0+, kann aber keine Volume-Statistiken sammeln, da sie nicht vorhanden sind.
+Bitte beachten Sie, dass Dell/EMC erst mit Unisphere 10.0 Statistiken pro Volume eingeführt hat. Dieser Datensammler unterstützt 9.2.0+, kann jedoch keine Volumestatistiken erfassen, da diese nicht vorhanden sind.
 
-Eine Unisphere for VMAX/PowerMax-Instanz verwaltet möglicherweise ein oder mehrere Symmetrix VMAX 3 oder höhere Speicher-Arrays. Dieser Collector versucht standardmäßig, alle Speicherarrays zu ermitteln, die „lokal“ zu dieser Unisphere-Instanz sind. Wenn in einer Unisphere-Instanz „Remote“-Arrays (d. h. über SRDF-Replikation verbundene Arrays) angezeigt werden, werden diese ignoriert. Um diese zu ermitteln, sollten Sie einen zusätzlichen Unisphere Collector in Data Infrastructure Insights erstellen, auf den die Unisphere-Instanz an diesem Standort verweist.
+Eine Unisphere für Vmax/PowerMax-Instanz verwaltet möglicherweise ein oder mehrere Symmetrix Vmax 3- oder höhere Speicher-Arrays. Dieser Collector versucht standardmäßig, alle Arrays zu ermitteln, die für diese Unisphere-Instanz „lokal“ sind.  Wenn eine Unisphere-Instanz „Remote“-Arrays erkennt (d. h. solche, die über die SRDF-Replikation verbunden sind), werden diese ignoriert. Um diese zu erkennen, sollten Sie in Data Infrastructure Insights einen zusätzlichen Unisphere-Collector erstellen, der auf die Unisphere-Instanz an diesem Standort verweist, die sie als lokal erkennt.
 
-Für die Konfiguration benötigt der Datensammler eine IP-Adresse/FQDN des Unisphere-Servers, eine TCP-Verbindung zu Port 8443 sowie einen Benutzernamen und ein Passwort.
+Zur Konfiguration benötigt der Datensammler eine IP-Adresse/einen FQDN des Unisphere-Servers, eine TCP-Verbindung zum Port 8443 sowie einen Benutzernamen und ein Passwort.
 
 
 
 == Anforderungen
 
-* Eine IP-Adresse/ein vollständig qualifizierter Domain-Name des Unisphere-Servers
+* Eine IP-Adresse/ein vollständig qualifizierter Domänenname des Unisphere-Servers
 * Benutzername und Passwort
-* Port 8443:
+* Port 8443.
 
 
 
@@ -42,10 +42,10 @@ Für die Konfiguration benötigt der Datensammler eine IP-Adresse/FQDN des Unisp
 | Unisphere-Port | Der Standardwert ist 8443 
 
 
-| Benutzername | Benutzername für Unisphere-Server 
+| Benutzername | Benutzername für den Unisphere-Server 
 
 
-| Passwort | Kennwort, das für Unisphere-Server verwendet wird 
+| Passwort | Für den Unisphere-Server verwendetes Kennwort 
 |===
 
 
@@ -56,25 +56,25 @@ Für die Konfiguration benötigt der Datensammler eine IP-Adresse/FQDN des Unisp
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Die Standardeinstellung ist 40 Minuten. 
+| Inventarabfrageintervall (min) | Der Standardwert beträgt 40 Minuten. 
 
 
-| Leistungsintervall (Sek.) | Intervall zwischen Performance-Abstimmungen 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen. 
 
 
-| Wählen Sie „Ausschließen“ oder „Einschließen“, um eine Liste anzugeben | Geben Sie an, ob VMs ein- oder ausgeschlossen werden sollen 
+| Wählen Sie „Ausschließen“ oder „Einschließen“, um eine Liste anzugeben | Angeben, ob VMs ein- oder ausgeschlossen werden sollen 
 
 
-| Bestandsfilter Geräteliste | Liste der zu filternden VMs (durch Komma getrennt oder durch Semikolon getrennt, wenn Komma im Wert verwendet wird) für die Filterung 
+| Inventarfilter-Geräteliste | Liste der zu filternden VMs (durch Komma getrennt oder durch Semikolon getrennt, wenn im Wert ein Komma verwendet wird) zum Filtern 
 
 
-| Unisphere-Leistungsintervall (Sek.) | Der Standardwert beträgt 300 Sekunden 
+| Unisphere Performance Poll-Intervall (Sek.) | Der Standardwert beträgt 300 Sekunden 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -82,12 +82,12 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
 | Fehler: Benutzerauthentifizierung fehlgeschlagen. | Stellen Sie sicher, dass Ihre Anmeldeinformationen für dieses Gerät korrekt sind. 
 
 
-| Bestandsaufnahme Aktu. Status: Unerwartete Daten abgerufen -Array hat 0 Volumen gemeldet | Zeigt in der Regel ein Autorisierungsproblem (nicht die Authentifizierung) an. Stellen Sie sicher, dass Ihre Anmeldeinformationen korrekt sind und dass der Benutzername die Möglichkeit hat, alle Volumes aufzulisten und ihre Attribute anzuzeigen. 
+| Inventar Aktueller Status: Unerwartete Daten abgerufen - Array meldete 0 Volumen | Zeigt normalerweise ein Autorisierungsproblem (kein Authentifizierungsproblem) an.  Stellen Sie sicher, dass Ihre Anmeldeinformationen korrekt sind und dass der Benutzername die Berechtigung hat, alle Volumes aufzulisten und ihre Attribute anzuzeigen. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

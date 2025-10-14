@@ -1,31 +1,31 @@
 ---
 sidebar: sidebar 
 permalink: concept_ttl_and_downsampling.html 
-summary: Erläuterung der Datenaufbewahrungszeiten und Downsampling 
+summary: Datenaufbewahrungszeiten und Downsampling erklärt 
 keywords: time-to-live, TTL, downsampling, downsample, retention 
 ---
-= Datenhaltung und Downsampling von Daten
+= Datenaufbewahrung und heruntergerechnete Daten
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights speichert Daten je nach Abonnement für Zeiträume von 7 Tagen bis 13 Monaten.  Bei der Anzeige großer Datensätze kann eine Herunterskalierung der Daten erfolgen, um sicherzustellen, dass Diagramme und Grafiken effizient geladen werden und gleichzeitig die statistische Genauigkeit erhalten bleibt.
+Data Infrastructure Insights speichert Daten je nach Abonnement für Zeiträume von 7 Tagen bis 13 Monaten. Bei der Anzeige großer Datensätze kann eine Herunterskalierung der Daten erfolgen, um sicherzustellen, dass Diagramme und Grafiken effizient geladen werden und gleichzeitig die statistische Genauigkeit erhalten bleibt.
 
 
 
-== Datenhaltung
+== Datenaufbewahrung
 
 Data Infrastructure Insights speichert Daten für einen Zeitraum, der von Ihrem Abonnementtyp abhängt.
 
 |===
-| Abonnementtyp | Datenhaltung 
+| Abonnementtyp | Datenaufbewahrung 
 
 
 | Versuch | 7 Tage 
 
 
-| Gezeichnet | 13 Monaten 
+| Gezeichnet | 13 Monate 
 |===
 Ausführliche Informationen zu den Funktionen und Preisoptionen von Data Infrastructure Insights finden Sie imlink:https://bluexp.netapp.com/cloud-insights-pricing["Data Infrastructure Insights – Preise"] Seite.
 
@@ -33,53 +33,53 @@ Ausführliche Informationen zu den Funktionen und Preisoptionen von Data Infrast
 
 == Downsampling von Daten
 
-*Downsampling* bietet eine statistische Angleichung Ihrer Daten in Diagrammen, so dass Sie einen effizienten Überblick über die Daten erhalten, ohne jeden Datenpunkt anzeigen zu müssen, und gleichzeitig eine genaue Ansicht Ihrer gesammelten Daten erhalten.
+*Downsampling* bietet eine statistische Annäherung Ihrer Daten in Diagrammen und verschafft Ihnen einen effizienten Überblick über die Daten, ohne jeden Datenpunkt anzeigen zu müssen, während Sie gleichzeitig eine genaue Ansicht Ihrer gesammelten Daten behalten.
 
 
 
-=== Warum ist ein Downsampling erforderlich?
+=== Warum ist Downsampling erforderlich?
 
-Da eine große Menge an Verarbeitung erforderlich ist, um Daten für die Anzeige in Diagrammen und Diagrammen vorzubereiten, damit Diagramme schnell und effizient angezeigt werden können, Daten können so heruntergetastet werden, dass die Gesamtform eines Diagramms erhalten bleibt, ohne dass für dieses Diagramm jeder einzelne Datenpunkt verarbeitet werden muss.
+Da die Vorbereitung der Daten für die Anzeige in Diagrammen und Grafiken einen großen Verarbeitungsaufwand erfordert, können die Daten, um eine schnelle und effiziente Anzeige der Diagramme zu ermöglichen, so heruntergerechnet werden, dass die Gesamtform eines Diagramms erhalten bleibt, ohne dass jeder einzelne Datenpunkt für dieses Diagramm verarbeitet werden muss.
 
-Hinweis: Bei Downsampling gehen keine tatsächlichen Daten verloren. Sie können die tatsächlichen Daten für Ihr Diagramm anstelle von abtasteten Daten anzeigen, indem Sie die unten dargestellten Schritte befolgen.
-
-
-
-=== Funktionsweise von Downsampling
-
-Die Daten werden unter den folgenden Bedingungen heruntererfasst:
-
-* Wenn Ihr ausgewählter Zeitraum Daten von maximal 7 Tagen enthält, erfolgt keine Downsampling-Messung. Diagramme zeigen tatsächliche Daten an.
-* Wenn Ihr ausgewählter Zeitraum mehr als 7 Tage Daten enthält, jedoch weniger als 1,000 Datenpunkte, erfolgt keine Downsampling-Messung. Diagramme zeigen tatsächliche Daten an.
-* Wenn Ihr ausgewählter Zeitbereich mehr als 7 Tage Daten und mehr als 1,000 Datenpunkte umfasst, werden die Daten nach unten abgetastet. Diagramme zeigen angenähte Daten an.
-
-
-Die folgenden Beispiele zeigen ein Downsampling in Aktion. Die erste Abbildung zeigt Latenz- und IOPS-Diagramme auf der Seite „Datastore Assets“ für einen Zeitraum von 24 Stunden, wie durch Auswahl der Zeitauswahl für die Asset-Seite 24h gezeigt. Sie können auch dieselben Daten anzeigen, indem Sie Benutzerdefiniert auswählen und den Zeitbereich auf denselben Zeitraum von 24 Stunden festlegen.
-
-Da wir einen Zeitbereich von weniger als 7 Tagen wählen und wir weniger als 1,000 Datenpunkte haben, sind die angezeigten Daten tatsächliche Daten. Es erfolgt keine Downsampling-Messung.
-
-image:Charts_NoDownsample.png["Keine Downsampling"]
-
-Wenn Sie jedoch Daten anzeigen, indem Sie entweder 30d auf der Zeitauswahl der Anlagenseite auswählen, oder indem Sie einen benutzerdefinierten Zeitraum von mehr als 7 Tagen festlegen (oder wenn Data Infrastructure Insights mehr als 1,000 Datenproben für den ausgewählten Zeitraum erfasst hat), werden die Daten vor der Anzeige heruntergenommen. Wenn Sie ein abtasteter Diagramm vergrößern, werden im Display weiterhin die approximierten Daten angezeigt.
-
-
-NOTE: Wenn Sie ein Diagramm mit Downsampling vergrößern, handelt es sich bei dem Zoom um einen digitalen Zoom. Die Anzeige zeigt weiterhin die approximierten Daten an.
-
-Sie sehen dies in der folgenden Abbildung, in der der Zeitbereich zuerst auf 30d gesetzt wird, und das Diagramm wird dann vergrößert, um den gleichen 24-Stunden-Zeitraum wie oben anzuzeigen.
-
-image:Charts_Downsampled.png["Downsampling"]
-
-Die abtasteten Diagramme zeigen den gleichen 24-Stunden-Zeitraum wie die oben genannten "tatsächlichen" Diagramme, sodass die Linien die gleiche allgemeine Form folgen, so dass Sie schnell interessante Gipfel oder Täler in Ihren Leistungsdaten zu erkennen.
-
-
-NOTE: Aufgrund der Art und Weise, wie Daten für Downsampling angenähert werden, können Diagrammlinien beim Vergleich von Downsampling- und ist-Daten leicht deaktiviert sein, um eine bessere Ausrichtung in den Diagrammen zu ermöglichen. Die Differenz ist jedoch minimal und wirkt sich nicht auf die Gesamtgenauigkeit der angezeigten Daten aus.
+Hinweis: Beim Downsampling gehen keine tatsächlichen Daten verloren.  Sie können sich für Ihr Diagramm die tatsächlichen Daten anstelle der heruntergerechneten Daten anzeigen lassen, indem Sie die unten dargestellten Schritte ausführen.
 
 
 
-=== Verstöße gegen herunterbeprobierte Diagramme
+=== So funktioniert Downsampling
 
-Beachten Sie beim Anzeigen von Downsampling-Diagrammen, dass Verstöße nicht angezeigt werden. Um Verstöße zu sehen, können Sie eine von zwei Dingen tun:
+Die Daten werden unter den folgenden Bedingungen heruntergerechnet:
 
-* Zeigen Sie die aktuellen Daten für diesen Zeitbereich an, indem Sie in der Zeitauswahl der Anlagenseite „Benutzerdefiniert“ auswählen und einen Zeitbereich von weniger als 7 Tagen eingeben. Bewegen Sie den Mauszeiger über jeden roten Punkt. In der QuickInfo wird der aufgetretene Verstoß angezeigt.
-* Notieren Sie den Zeitbereich, und suchen Sie die Verstöße im Dashboard für Verstöße.
+* Wenn Ihr ausgewählter Zeitraum 7 Tage oder weniger Daten umfasst, erfolgt kein Downsampling.  Diagramme zeigen aktuelle Daten.
+* Wenn Ihr ausgewählter Zeitraum mehr als 7 Tage an Daten, aber weniger als 1.000 Datenpunkte umfasst, erfolgt kein Downsampling.  Diagramme zeigen aktuelle Daten.
+* Wenn Ihr ausgewählter Zeitraum mehr als 7 Tage Daten und mehr als 1.000 Datenpunkte umfasst, werden die Daten heruntergerechnet.  Diagramme zeigen ungefähre Daten.
+
+
+Die folgenden Beispiele zeigen Downsampling in Aktion.  Die erste Abbildung zeigt Latenz- und IOPS-Diagramme auf einer Datastore-Asset-Seite für einen Zeitraum von 24 Stunden, wie durch Auswahl von 24 Stunden im Zeitwähler der Asset-Seite angezeigt.  Sie können dieselben Daten auch anzeigen, indem Sie „Benutzerdefiniert“ auswählen und den Zeitraum auf denselben 24-Stunden-Zeitraum einstellen.
+
+Da wir einen Zeitraum von weniger als 7 Tagen wählen und weniger als 1.000 Datenpunkte zum Darstellen haben, handelt es sich bei den angezeigten Daten um tatsächliche Daten.  Es erfolgt kein Downsampling.
+
+image:Charts_NoDownsample.png["Kein Downsampling"]
+
+Wenn Sie jedoch Daten anzeigen, indem Sie entweder 30 Tage im Zeitwähler der Asset-Seite auswählen oder einen benutzerdefinierten Zeitraum von mehr als 7 Tagen festlegen (oder falls Data Infrastructure Insights mehr als 1.000 Datenproben für den ausgewählten Zeitraum erfasst hat), werden die Daten vor der Anzeige heruntergerechnet.  Wenn Sie in ein heruntergerechnetes Diagramm hineinzoomen, werden auf der Anzeige weiterhin die ungefähren Daten angezeigt.
+
+
+NOTE: Wenn Sie in ein heruntergerechnetes Diagramm hineinzoomen, handelt es sich um einen digitalen Zoom.  Auf dem Display werden weiterhin die ungefähren Daten angezeigt.
+
+Sie können dies in der folgenden Abbildung sehen, in der der Zeitbereich zunächst auf 30 Tage eingestellt ist und das Diagramm dann vergrößert wird, um denselben 24-Stunden-Zeitraum wie oben anzuzeigen.
+
+image:Charts_Downsampled.png["Neuberechnung"]
+
+Die heruntergerechneten Diagramme zeigen denselben 24-Stunden-Zeitraum wie die „tatsächlichen“ Diagramme oben, sodass die Linien im Großen und Ganzen derselben Form folgen und Sie interessante Spitzen oder Täler in Ihren Leistungsdaten schnell erkennen können.
+
+
+NOTE: Aufgrund der Art und Weise, wie Daten für das Downsampling angenähert werden, können die Diagrammlinien beim Vergleich der heruntergesampelten Daten mit den tatsächlichen Daten leicht abweichen, um eine bessere Ausrichtung in den Grafiken zu ermöglichen.  Der Unterschied ist jedoch minimal und beeinträchtigt die Gesamtgenauigkeit der angezeigten Daten nicht.
+
+
+
+=== Verstöße bei heruntergerechneten Diagrammen
+
+Beachten Sie beim Anzeigen heruntergerechneter Diagramme, dass Verstöße nicht angezeigt werden.  Um Verstöße anzuzeigen, haben Sie zwei Möglichkeiten:
+
+* Zeigen Sie die tatsächlichen Daten für diesen Zeitraum an, indem Sie im Zeitwähler der Asset-Seite „Benutzerdefiniert“ auswählen und einen Zeitraum von weniger als 7 Tagen eingeben.  Bewegen Sie den Mauszeiger über jeden roten Punkt.  Der Tooltip zeigt den aufgetretenen Verstoß an.
+* Notieren Sie den Zeitraum und suchen Sie die Verletzung(en) im Verletzungs-Dashboard.
 

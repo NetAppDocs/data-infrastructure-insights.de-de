@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: cs_alert_data.html 
 keywords: alert, attack, ransomware, activity, security, abnormal 
-summary: Workload Security erzeugt Warnmeldungen bei abnormalen Benutzeraktivitäten oder potenziellen Angriffen. Auf der Seite „Meldungen“ werden diese Aktivitäten für eine schnelle und einfache Untersuchung aufgeführt. 
+summary: Workload Security erstellt Warnungen im Falle einer ungewöhnlichen Benutzeraktivität oder eines potenziellen Angriffs.  Auf der Seite „Warnungen“ werden diese Aktivitäten aufgelistet, damit Sie sie schnell und einfach untersuchen können. 
 ---
-= Meldungen
+= Warnungen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,77 +14,77 @@ summary: Workload Security erzeugt Warnmeldungen bei abnormalen Benutzeraktivit�
 
 
 [role="lead"]
-Die Seite „Workload Security Alerts“ zeigt eine Zeitleiste aktueller Angriffe und/oder Warnungen an und ermöglicht Ihnen, Details zu jedem Problem anzuzeigen.
+Auf der Seite „Workload-Sicherheitswarnungen“ wird eine Zeitleiste der jüngsten Angriffe und/oder Warnungen angezeigt und Sie können Details zu jedem Problem anzeigen.
 
-image:CloudSecureAlertsListPage.png["Alarmliste"]
+image:CloudSecureAlertsListPage.png["Liste der Warnungen"]
 
 
 
 == Alarm
 
-In der Alarmliste wird ein Diagramm angezeigt, in dem die Gesamtanzahl der potenziellen Angriffe und/oder Warnungen angezeigt wird, die im ausgewählten Zeitraum angehoben wurden, gefolgt von einer Liste der Angriffe und/oder Warnungen, die in diesem Zeitraum aufgetreten sind. Sie können den Zeitbereich ändern, indem Sie die Schieberegler für Startzeit und Endzeit in der Grafik anpassen.
+Die Warnliste zeigt ein Diagramm mit der Gesamtzahl der potenziellen Angriffe und/oder Warnungen an, die im ausgewählten Zeitraum ausgelöst wurden, gefolgt von einer Liste der Angriffe und/oder Warnungen, die in diesem Zeitraum aufgetreten sind.  Sie können den Zeitbereich ändern, indem Sie die Schieberegler für Start- und Endzeit im Diagramm anpassen.
 
-Für jede Meldung wird Folgendes angezeigt:
+Für jeden Alarm wird Folgendes angezeigt:
 
-*Potentielle Angriffe:*
+*Potenzielle Angriffe:*
 
-* Der _Potential Attack_-Typ (z. B. Ransomware oder Sabotage)
-* Datum und Uhrzeit des potenziellen Angriffs wurde _entdeckt_
-* Der _Status_ der Warnmeldung:
+* Der _Potenzielle Angriffstyp_ (z. B. Ransomware oder Sabotage)
+* Datum und Uhrzeit der _Erkennung_ des potenziellen Angriffs
+* Der _Status_ der Warnung:
 +
-** *Neu*: Dies ist der Standard für neue Warnmeldungen.
-** *In Bearbeitung*: Der Alarm wird von einem Teammitglied oder Mitgliedern untersucht.
-** *Behoben*: Der Alarm wurde von einem Teammitglied als gelöst markiert.
-** *Abgeschieden*: Der Alarm wurde als falsch positives oder erwartetes Verhalten abgewiesen.
+** *Neu*: Dies ist die Standardeinstellung für neue Warnungen.
+** *In Bearbeitung*: Die Warnung wird von einem oder mehreren Teammitgliedern untersucht.
+** *Gelöst*: Der Alarm wurde von einem Teammitglied als gelöst markiert.
+** *Abgelehnt*: Die Warnung wurde als falsch positiv oder als erwartetes Verhalten abgewiesen.
 +
-Ein Administrator kann den Status der Warnmeldung ändern und eine Notiz hinzufügen, um die Untersuchung zu unterstützen.
+Ein Administrator kann den Status der Warnung ändern und eine Notiz hinzufügen, um die Untersuchung zu unterstützen.
 
 +
-image:CloudSecureChangeAlertStatus.png["Ändern Sie Den Alarmstatus"]
+image:CloudSecureChangeAlertStatus.png["Alarmstatus ändern"]
 
 
 
-* Der _User_, dessen Verhalten die Warnung ausgelöst hat
-* _Nachweis_ des Angriffs (zum Beispiel wurde eine große Anzahl von Dateien verschlüsselt)
-* Die _Aktion wurde ausgeführt_ (zum Beispiel wurde ein Snapshot erstellt)
+* Der _Benutzer_, dessen Verhalten den Alarm ausgelöst hat
+* _Beweise_ für den Angriff (z. B. wurde eine große Anzahl von Dateien verschlüsselt)
+* Die _durchgeführte Aktion_ (z. B. wurde ein Schnappschuss gemacht)
 
 
 *Warnungen:*
 
-* Das _anormale Verhalten_, das die Warnung ausgelöst hat
-* Das Datum und die Uhrzeit, zu der das Verhalten erkannt wurde_
-* Der _Status_ der Warnmeldung (Neu, wird ausgeführt usw.)
-* Der _User_, dessen Verhalten die Warnung ausgelöst hat
-* Eine Beschreibung des _Change_ (z. B. eine abnormale Erhöhung des Dateizugriffs)
-* Die _Aktion Ausgeführt_
+* Das _Abnormale Verhalten_, das die Warnung ausgelöst hat
+* Datum und Uhrzeit der _Erkennung_ des Verhaltens
+* Der _Status_ der Warnung (Neu, In Bearbeitung usw.)
+* Der _Benutzer_, dessen Verhalten den Alarm ausgelöst hat
+* Eine Beschreibung der _Änderung_ (z. B. ein ungewöhnlicher Anstieg der Dateizugriffe)
+* Die _durchgeführte Aktion_
 
 
 
 
 == Filteroptionen
 
-Sie können Warnungen nach folgenden Kriterien filtern:
+Sie können Warnungen nach Folgendem filtern:
 
-* Der _Status_ der Warnmeldung
-* Spezifischer Text in der _Note_
-* Die Art von _attacks/Warnings_
-* Der_Benutzer_, dessen Aktionen die Warnung/Warnung ausgelöst haben
-
-
-
-
-== Die Seite „Warndetails“
-
-Sie können auf der Seite mit den Warnmeldungen auf einen Alarm-Link klicken, um eine Detailseite für die Meldung zu öffnen. Die Alarmdetails können je nach Angriffstyp oder Alarmtyp variieren. Eine Seite mit den Details zum Angriff durch Ransomware kann beispielsweise folgende Informationen enthalten:
+* Der _Status_ der Warnung
+* Spezifischer Text in der _Anmerkung_
+* Die Art der _Angriffe/Warnungen_
+* Der _Benutzer_, dessen Aktionen den Alarm/die Warnung ausgelöst haben
 
 
 
-=== Zusammenfassung:
 
-* Angriffstyp (Ransomware, Sabotage) und Alarm-ID (zugewiesen durch Workload-Sicherheit)
-* Datum und Uhrzeit des Angriffs
-* Es wurde eine Aktion ausgeführt (beispielsweise ein automatischer Snapshot erstellt. Die Zeit des Snapshots wird direkt unter der Zusammenfassung angezeigt)
-* Status (Neu, in Bearbeitung usw.)
+== Die Seite „Warnungsdetails“
+
+Sie können auf der Seite mit der Warnmeldungsliste auf einen Warnmeldungslink klicken, um eine Detailseite für die Warnmeldung zu öffnen.  Die Alarmdetails können je nach Art des Angriffs oder Alarms variieren.  Beispielsweise kann eine Detailseite zu einem Ransomware-Angriff die folgenden Informationen anzeigen:
+
+
+
+=== Abschnitt „Zusammenfassung“:
+
+* Angriffstyp (Ransomware, Sabotage) und Warnmeldungs-ID (zugewiesen von Workload Security)
+* Datum und Uhrzeit der Erkennung des Angriffs
+* Durchgeführte Aktion (z. B. wurde ein automatischer Schnappschuss erstellt).  Die Uhrzeit des Schnappschusses wird direkt unter dem Abschnitt „Zusammenfassung“ angezeigt.))
+* Status (Neu, In Bearbeitung usw.)
 
 
 
@@ -92,63 +92,63 @@ Sie können auf der Seite mit den Warnmeldungen auf einen Alarm-Link klicken, um
 === Abschnitt „Angriffsergebnisse“:
 
 * Anzahl der betroffenen Volumes und Dateien
-* Eine begleitende Zusammenfassung der Detektion
-* Ein Diagramm mit Dateiaktivitäten während des Angriffs
+* Eine begleitende Zusammenfassung der Entdeckung
+* Ein Diagramm, das die Dateiaktivität während des Angriffs zeigt
 
 
 
 
 === Abschnitt „Verwandte Benutzer“:
 
-In diesem Abschnitt werden Details zu dem Benutzer angezeigt, der an dem potenziellen Angriff beteiligt ist, einschließlich einer Grafik der Top-Aktivität für den Benutzer.
+Dieser Abschnitt zeigt Details zum Benutzer, der an dem potenziellen Angriff beteiligt war, einschließlich eines Diagramms der Top-Aktivitäten des Benutzers.
 
-Warnmeldeseite (dieses Beispiel zeigt einen potenziellen Ransomware-Angriff): image:RansomwareAlertExample.png["Beispiel Für Ransomware-Warnungen"]
+Warnseite (dieses Beispiel zeigt einen potenziellen Ransomware-Angriff):image:RansomwareAlertExample.png["Beispiel für eine Ransomware-Warnung"]
 
-Detailseite (dieses Beispiel zeigt einen potenziellen Ransomware-Angriff): image:RansomwareDetailPageExample.png["Beispiel Für Die Detailseite Von Ransomware"]
-
-
-
-== _Snapshot_ Aktion durchführen
-
-Workload Security schützt Ihre Daten, indem bei Erkennung schädlicher Aktivitäten automatisch ein Snapshot erstellt wird. So wird sichergestellt, dass Ihre Daten sicher gesichert werden.
-
-Sie können festlegenlink:cs_automated_response_policies.html["Automatisierte Antwortrichtlinien"], dass ein Snapshot erstellt wird, wenn ein Ransomware-Angriff oder eine andere ungewöhnliche Benutzeraktivität erkannt wird. Sie können einen Snapshot auch manuell von der Warnungsseite aus erstellen.
-
-Automatischer Snapshot erstellt: image:AlertActionsAutomaticExample.png["Aktionsbildschirm Für Warnmeldungen, 1000"]
-
-Manueller Schnappschuss: image:AlertActionsExample.png["Aktionsbildschirm Für Warnmeldungen, 1000"]
+Detailseite (dieses Beispiel zeigt einen potenziellen Ransomware-Angriff):image:RansomwareDetailPageExample.png["Beispiel einer Ransomware-Detailseite"]
 
 
 
-== Warnbenachrichtigungen
+== Aktion „Schnappschuss machen“
 
-Für jede Aktion der Warnmeldung werden E-Mail-Benachrichtigungen an eine Benachrichtigungsliste gesendet. Um Warnungsempfänger zu konfigurieren, klicken Sie auf *Admin > Benachrichtigungen* und geben Sie für jeden Empfänger eine E-Mail-Adresse ein.
+Workload Security schützt Ihre Daten, indem es automatisch einen Snapshot erstellt, wenn böswillige Aktivitäten erkannt werden, und so gewährleistet, dass Ihre Daten sicher gesichert werden.
+
+Sie können definierenlink:cs_automated_response_policies.html["Richtlinien für automatisierte Antworten"] die einen Schnappschuss erstellen, wenn ein Ransomware-Angriff oder andere ungewöhnliche Benutzeraktivitäten erkannt werden.  Sie können auch manuell einen Schnappschuss von der Warnseite aus erstellen.
+
+Automatischer Schnappschuss erstellt:image:AlertActionsAutomaticExample.png["Alarmaktionsbildschirm, 1000"]
+
+Manueller Schnappschuss:image:AlertActionsExample.png["Alarmaktionsbildschirm, 1000"]
+
+
+
+== Warnmeldungen
+
+Für jede Aktion im Zusammenhang mit der Warnung werden E-Mail-Benachrichtigungen zu Warnungen an eine Warnungsempfängerliste gesendet.  Um die Empfänger der Benachrichtigungen zu konfigurieren, klicken Sie auf *Admin > Benachrichtigungen* und geben Sie für jeden Empfänger eine E-Mail-Adresse ein.
 
 
 
 == Aufbewahrungsrichtlinie
 
-Warnungen und Warnungen werden 13 Monate lang aufbewahrt. Warnungen und Warnungen, die älter als 13 Monate sind, werden gelöscht. Wenn die Workload-Sicherheitsumgebung gelöscht wird, werden auch alle mit der Umgebung verknüpften Daten gelöscht.
+Alarme und Warnungen werden 13 Monate lang gespeichert.  Alarme und Warnungen, die älter als 13 Monate sind, werden gelöscht.  Wenn die Workload Security-Umgebung gelöscht wird, werden auch alle mit der Umgebung verknüpften Daten gelöscht.
 
 
 
 == Fehlerbehebung
 
 |===
-| Problem: | Versuchen Sie Das: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Es besteht die Situation, dass ONTAP stündliche Snapshots pro Tag erstellt. Wirken sich Workload Security (WS)-Snapshots darauf aus? Wird WS-Schnappschuss den stündlichen Schnappschuss-Platz machen? Wird der stündliche StandardSnapshot angehalten? | Arbeitslastsicherheit Schnappschüsse werden die stündlichen Schnappschüsse nicht beeinflussen. WS-Schnappschüsse nehmen nicht den stündlichen Snapshot-Platz und das sollte so weitergehen wie zuvor. Der standardmäßige stündliche Snapshot wird nicht angehalten. 
+| Es gibt eine Situation, in der ONTAP stündlich Snapshots pro Tag erstellt.  Werden Workload Security (WS)-Snapshots dies beeinflussen?  Wird der WS-Snapshot den Platz des stündlichen Snapshots einnehmen?  Wird der standardmäßige stündliche Snapshot gestoppt? | Snapshots der Workload-Sicherheit haben keinen Einfluss auf die stündlichen Snapshots.  WS-Snapshots belegen nicht den stündlichen Snapshot-Speicherplatz und das sollte auch so bleiben wie bisher.  Der standardmäßige stündliche Snapshot wird nicht gestoppt. 
 
 
-| Was geschieht, wenn die Maximalanzahl der Snapshots in ONTAP erreicht wird? | Wenn die maximale Anzahl an Snapshots erreicht wird, schlägt das nachfolgende Erstellen eines Snapshots fehl, und die Workload-Sicherheit weist eine Fehlermeldung auf, dass der Snapshot voll ist. Benutzer müssen Snapshot-Richtlinien definieren, um die ältesten Snapshots zu löschen, sonst werden keine Snapshots erstellt. Ab ONTAP 9.3 und älteren Versionen kann ein Volume bis zu 255 Snapshot Kopien enthalten. Ab ONTAP 9.4 kann ein Volume bis zu 1023 Snapshot Kopien enthalten. Weitere Informationen finden Sie in der ONTAP-Dokumentation zu link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-cmpr-960%2Fvolume__snapshot__autodelete__modify.html["Richtlinie zum Löschen von Snapshots wird festgelegt"]. 
+| Was passiert, wenn die maximale Snapshot-Anzahl in ONTAP erreicht wird? | Wenn die maximale Snapshot-Anzahl erreicht ist, schlägt die nachfolgende Snapshot-Erstellung fehl und Workload Security zeigt eine Fehlermeldung mit dem Hinweis an, dass der Snapshot voll ist.  Der Benutzer muss Snapshot-Richtlinien definieren, um die ältesten Snapshots zu löschen, andernfalls werden keine Snapshots erstellt.  In ONTAP 9.3 und früheren Versionen kann ein Volume bis zu 255 Snapshot-Kopien enthalten.  In ONTAP 9.4 und höher kann ein Volume bis zu 1023 Snapshot-Kopien enthalten.  Informationen zulink:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-cmpr-960%2Fvolume__snapshot__autodelete__modify.html["Festlegen der Richtlinie zum Löschen von Snapshots"] . 
 
 
-| Workload Security kann überhaupt keine Snapshots erstellen. | Stellen Sie sicher, dass die Rolle, die zum Erstellen von Snapshots verwendet wird, über den Link https://docs.NetApp.com/US-en/cloudinsights/Task_add_Collector_svm.HTML#a-Note-about-permissions[Eigenrechte zugewiesen] verfügt. Stellen Sie sicher, dass _csrole_ mit entsprechenden Zugriffsrechten für die Erstellung von Snapshots erstellt wird: Security Login role create -vserver <vservername> -role csrolle -cmddirname „Volume Snapshot“ -Access all 
+| Workload Security kann überhaupt keine Snapshots erstellen. | Stellen Sie sicher, dass die zum Erstellen von Snapshots verwendete Rolle über den Link: https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html#a-note-about-permissions[korrekte Rechte zugewiesen] verfügt.  Stellen Sie sicher, dass _csrole_ mit den richtigen Zugriffsrechten zum Erstellen von Snapshots erstellt wird: security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all 
 
 
-| Snapshots versagen bei älteren Warnmeldungs-Warnungen auf SVMs, die aus der Workload Security entfernt und anschließend wieder hinzugefügt wurden. Für neue Warnmeldungen, die nach dem erneuten Hinzufügen der SVM auftreten, werden Snapshots erstellt. | Dies ist ein seltenes Szenario. Falls dies der Fall ist, melden Sie sich bei ONTAP an und erstellen Sie die Snapshots manuell, um die älteren Meldungen zu erhalten. 
+| Snapshots schlagen für ältere Warnungen auf SVMs fehl, die aus Workload Security entfernt und anschließend wieder hinzugefügt wurden.  Für neue Warnungen, die nach dem erneuten Hinzufügen von SVM auftreten, werden Snapshots erstellt. | Dies ist ein seltenes Szenario.  Falls dies bei Ihnen der Fall ist, melden Sie sich bei ONTAP an und erstellen Sie die Snapshots für die älteren Warnungen manuell. 
 
 
-| Auf der Seite „ Details der Warnmeldung “ wird die Meldung „Letzter Versuch fehlgeschlagen“ unter der Schaltfläche „_Take Snapshot_“ angezeigt. Wenn Sie den Fehler bewegen, wird „API-Befehl aufrufen hat Timeout für den Datensammler mit id“ angezeigt. | Dies kann passieren, wenn ein Datensammler zur Workload-Sicherheit über SVM Management IP hinzugefügt wird, wenn sich die LIF der SVM in ONTAP in „_dedisabled_ State“ befindet. Aktivieren Sie die bestimmte LIF in ONTAP und lösen Sie _Snapshot manuell aus der Workload-Sicherheit aus. Die Aktion „Snapshot“ wird dann erfolgreich ausgeführt. 
+| Auf der Seite „Alarmdetails“ wird unter der Schaltfläche „Snapshot erstellen“ die Fehlermeldung „Letzter Versuch fehlgeschlagen“ angezeigt.  Wenn Sie mit der Maus über den Fehler fahren, wird „Zeitüberschreitung beim Aufrufen des API-Befehls für den Datensammler mit der ID“ angezeigt. | Dies kann passieren, wenn ein Datensammler über die SVM-Verwaltungs-IP zur Workload-Sicherheit hinzugefügt wird, wenn sich das LIF der SVM in ONTAP im Status _deaktiviert_ befindet.  Aktivieren Sie das jeweilige LIF in ONTAP und lösen Sie „Manuell Snapshot erstellen“ von Workload Security aus.  Die Snapshot-Aktion wird dann erfolgreich sein. 
 |===

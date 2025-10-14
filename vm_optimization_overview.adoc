@@ -11,20 +11,20 @@ keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll 
 
 
 [role="lead"]
-Data Infrastructure Insights unterstützt Sie bei der Verwaltung der Infrastruktur- und Lizenzierungskosten, indem das Verlaufsverhalten der Umgebung analysiert und kurz- und langfristige Prognosen aufgestellt werden. Außerdem werden detaillierte Empfehlungen für die Deaktivierung und Rückgewinnung von ausgeschalteten und inaktiven VMs ausgesprochen. Diese Empfehlungen unterstützen Sie dabei, die Performance-Stabilität zu gewährleisten, ungenutzte Kapazität freizugeben und die Arbeitsspeicher- und CPU-Zuweisung zu reduzieren.
+Data Infrastructure Insights unterstützt Sie bei der Verwaltung der Infrastruktur- und Lizenzkosten, indem es das historische Verhalten der Umgebung analysiert und kurz- und langfristige Prognosen erstellt und detaillierte Empfehlungen für die Außerbetriebnahme von Hosts und die Wiederherstellung ausgeschalteter und inaktiver VMs generiert.  Diese Empfehlungen helfen Ihnen, die Leistungsstabilität sicherzustellen, ungenutzte Kapazitäten freizugeben und die Speicher- und CPU-Zuweisung zu reduzieren.
 
-image:vm_optimization_summary.png["Bildschirm „VM Optimization Summary“"]
+image:vm_optimization_summary.png["Bildschirm „VM-Optimierungsübersicht“"]
 
-Navigieren Sie zu Observability > Analyze > VM Optimization. Ihnen wird eine Zusammenfassung der potenziellen Einsparungen nach Anzahl der Kerne und Storage-Einsparungen angezeigt. Sie können Filter nach Datacenter, Virtual Center IP oder Cluster fokussieren oder eigene Filter festlegen, um Ihre Fokussierung weiter einzuschränken.
+Navigieren Sie zunächst zu Observability > Analysieren > VM-Optimierung.  Ihnen wird eine Zusammenfassung der potenziellen Einsparungen angezeigt, aufgeschlüsselt nach Anzahl der Kerne und Speichereinsparungen.  Sie können Filter festlegen, um sich auf Rechenzentrum, virtuelles Zentrum-IP oder Cluster zu konzentrieren, oder Ihre eigenen Filter festlegen, um Ihren Fokus weiter einzugrenzen.
 
-image:vm_optimization_overview.png["Übersicht über die vm-Optimierung"]
+image:vm_optimization_overview.png["Übersicht zur VM-Optimierung"]
 
-Auf der Registerkarte Hypervisor Decommissioning werden Ihre potenziellen Kosteneinsparungen basierend auf der von Ihnen gewählten Optimierungsstrategie angezeigt. In jeder Strategie werden unterschiedliche Schwellenwerte zur Bestimmung potenzieller Einsparungen genutzt.
+Auf der Registerkarte „Hypervisor-Außerbetriebnahme“ werden Ihre potenziellen Kosteneinsparungen basierend auf der von Ihnen ausgewählten Optimierungsstrategie angezeigt.  Jede Strategie verwendet unterschiedliche Schwellenwerte, um potenzielle Einsparungen zu bestimmen.
 
-Wählen Sie einen Cluster in der Liste aus, um einen Schiebebereich mit Details zur CPU- und Arbeitsspeicherauslastung für den Cluster zu öffnen.
+Wählen Sie einen Cluster in der Liste aus, um ein Slideout-Fenster mit Details zur CPU- und Speicherauslastung für den Cluster zu öffnen.
 
 image:vm_optimization_hypervisor_decommissioning_tab.png["Registerkarte „Hypervisor-Optimierung“"]
 
-Die Registerkarte „VM Reclamation“ enthält Details zu VMs, die seit mehr als 30, 60 oder 90 Tagen inaktiv oder abgeschaltet sind, sowie mögliche Einsparungen bei Kapazität, Arbeitsspeicher und vCPU. Durch Auswahl einer VM aus der Liste wird die Detailseite für diese VM geöffnet.
+Auf der Registerkarte „VM-Rückgewinnung“ erhalten Sie Details zu VMs, die länger als 30, 60 oder 90 Tage im Leerlauf oder ausgeschaltet sind, sowie Informationen zu potenziellen Kapazitäts-, Speicher- und vCPU-Einsparungen.  Wenn Sie eine VM aus der Liste auswählen, wird die Detailseite für diese VM geöffnet.
 
-image:vm_optimization_reclamation_tab.png["Registerkarte „vm-Rückgewinnung“"]
+image:vm_optimization_reclamation_tab.png["Registerkarte „VM-Rückgewinnung“"]

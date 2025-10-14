@@ -2,26 +2,26 @@
 sidebar: sidebar 
 permalink: concept_telegraf_display_options.html 
 keywords: telegraf, data, display, 
-summary: Optionen zur Anzeige von Telegraf-Daten 
+summary: Telegraf-Datenanzeigeoptionen 
 ---
-= Neue Metriken
+= Metriken transformieren
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights bietet verschiedene *transform*-Optionen für bestimmte Kennzahlen in Widgets (insbesondere die Kennzahlen, die als „Benutzerdefinierte“ oder „Integrationsmetriken“ bezeichnet werden, wie z. B. von Kubernetes, ONTAP Advanced Data, Telegraf-Plug-ins usw.), so dass Sie die Daten auf verschiedene Arten anzeigen können. Beim Hinzufügen transformbarer Metriken zu einem Widget werden Sie mit einem Dropdown-Menü mit den folgenden Optionen zur Transformation angezeigt:
+Data Infrastructure Insights bietet verschiedene *Transformations*optionen für bestimmte Metriken in Widgets (insbesondere die als „Benutzerdefiniert“ oder „Integrationsmetriken“ bezeichneten Metriken, z. B. von Kubernetes, ONTAP Advanced Data, Telegraf-Plugins usw.), sodass Sie die Daten auf verschiedene Arten anzeigen können.  Wenn Sie einem Widget transformierbare Metriken hinzufügen, wird Ihnen ein Dropdown-Menü mit den folgenden Transformationsoptionen angezeigt:
 
-Keine: Die Daten werden ohne Bearbeitung angezeigt.
+Keine: Die Daten werden unverändert und ohne Manipulation angezeigt.
 
-Rate: Aktueller Wert geteilt durch den Zeitbereich seit der vorherigen Beobachtung.
+Rate: Aktueller Wert geteilt durch den Zeitraum seit der letzten Beobachtung.
 
-Kumulativ: Die Akkumulation der Summe der vorherigen Werte und des aktuellen Wertes.
+Kumulativ: Die Ansammlung der Summe der vorherigen Werte und des aktuellen Werts.
 
 Delta: Die Differenz zwischen dem vorherigen Beobachtungswert und dem aktuellen Wert.
 
-Delta-Rate: Delta-Wert geteilt durch den Zeitbereich seit der vorherigen Beobachtung.
+Deltarate: Deltawert geteilt durch den Zeitraum seit der letzten Beobachtung.
 
-Kumulative Rate: Kumulativer Wert geteilt durch den Zeitbereich seit der vorherigen Beobachtung.
+Kumulative Rate: Kumulativer Wert geteilt durch den Zeitraum seit der letzten Beobachtung.
 
-Beachten Sie, dass bei der Transformation von Metriken nicht die zugrunde liegenden Daten selbst, sondern nur die Art und Weise geändert werden, wie Daten angezeigt werden.
+Beachten Sie, dass durch die Transformation von Metriken nicht die zugrunde liegenden Daten selbst geändert werden, sondern nur die Art und Weise, wie die Daten angezeigt werden.

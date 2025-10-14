@@ -4,63 +4,63 @@ permalink: forensic_alert_detail.html
 keywords: alert, Critical, Warning, Low, alert detail Synopsis, Time range, Start time, End time, user 
 summary: Alarmdetails 
 ---
-= Warnmeldungsdetails
+= Alarmdetails
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Wenn Sie auf das Synopsis klicken, um eine Warnung zu erhalten, wird die Seite mit ausführlichen Informationen für den Benutzer und die Warnung geöffnet.
+Wenn Sie auf die Zusammenfassung einer Warnung klicken, wird die Seite mit ausführlichen Informationen zum Benutzer und der von ihm ausgelösten Warnung geöffnet.
 
 
 
-== Auf der Seite Warnungsdetails wird der Benutzer angezeigt
+== Die Seite „Alarmdetails“ zeigt den Benutzer
 
-Warnungsdetails enthält Informationen zu der auf der Seite Meldungen ausgewählten Warnmeldung.
+Unter „Alarmdetails“ finden Sie Informationen zu dem auf der Seite „Alarme“ ausgewählten Alarm.
 
-* Der Schweregrad der Meldung
-* Der Benutzer, der die Warnung und den Alarmtyp angehoben hat:
+* Der Schweregrad der Warnung
+* Der Benutzer, der den Alarm ausgelöst hat, und der Alarmtyp:
 +
-** Anormaler Zugriff Durch Benutzer
-** Anormaler Zugang Durch Die Gemeinschaft
+** Ungewöhnlicher Zugriff durch den Benutzer
+** Anormaler Zugriff durch die Community
 ** Anormaler Zugriff durch Benutzer in der Community
-** Benutzer hat sich vielen Communitys angeschlossen
+** Der Benutzer ist vielen Communities beigetreten
 
 
-* Datum und Uhrzeit der Erkennung der Warnmeldung
-* Die ergriffene Aktion
+* Datum und Uhrzeit der Erkennung der Warnung
+* Die ergriffenen Maßnahmen
 +
-** Isoliert
-** Sonstiges
-** Sonstiges
+** Unter Quarantäne gestellt
+** Sonstige
+** Sonstige
 
 
-* Der Status der Meldung
+* Der Status der Warnung
 +
 ** Neu
-** In Bearbeitung
-** Abgelehnt
-** Behoben
+** Im Gange
+** Entlassen
+** Gelöst
 
 
-* Aktivitätsrate des Benutzers ändern
+* Änderung der Aktivitätsrate des Benutzers
 +
 ** Typische Aktivitäten pro Stunde
-** Aktivitäten pro Stunde, wenn die Warnung erhöht wurde.
-** Prozentsatz der Tarifänderung, die die Warnmeldung verursacht hat.
+** Aktivitäten pro Stunde, als der Alarm ausgelöst wurde.
+** Prozentsatz der Tarifänderung, die den Alarm verursacht hat.
 
 
-* Ein Diagramm mit dem historischen durchschnittlichen Aktivitätsrate und der Aktivitätrate, die zur Meldung geführt hat.
+* Ein Diagramm, das die durchschnittliche Aktivitätsrate im Verlauf und die Aktivitätsrate zeigt, die zur Warnung geführt hat.
 
 
 
 
-=== Verwandter Benutzer
+=== Zugehöriger Benutzer
 
 * Benutzername und Titel
 * Abteilung
 * E-Mail mit einem Link zur E-Mail-Adresse
-* Manager An
+* Manager
 * Telefon
 * Standort
 
@@ -69,17 +69,17 @@ Warnungsdetails enthält Informationen zu der auf der Seite Meldungen ausgewähl
 
 === Aktivität
 
-Zeigt die Aktivität des Benutzers für die letzten 7 Tage und den letzten Standort an, auf den der Benutzer Zugriff hat.
+Zeigt die Aktivität des Benutzers der letzten 7 Tage und den letzten Standort, von dem aus der Benutzer zugegriffen hat.
 
 * Aktivitäten:
 +
 ** Lesen
-** Sonstiges
+** Sonstige
 ** Erstellen
 
 
-* Gesamtanzahl der Warnungen in den letzten sieben Tagen.
+* Gesamtzahl der Warnungen in den letzten sieben Tagen.
 * Gesamtzahl der Aktivitäten in den letzten 7 Tagen.
 
 
-Klicken Sie auf *View Activity Detail*, um auf den  des untersuchten Benutzers zuzugreifenlink:forensic_activity_history["Aktivitätsverlauf"].
+Klicken Sie auf *Aktivitätsdetails anzeigen*, um auf dielink:forensic_activity_history["Aktivitätsverlauf"] des untersuchten Benutzers.

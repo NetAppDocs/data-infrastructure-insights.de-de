@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: cs_automated_response_policies.html 
 keywords: alert, snapshot, ransomware, attack 
-summary: 'Sie können automatische Antwortrichtlinien für potenzielle Angriffe (z. B. Ransomware) und/oder Warnungen zu Aktivitäten festlegen' 
+summary: 'Sie können automatisierte Reaktionsrichtlinien für potenzielle Angriffe (wie Ransomware) und/oder Aktivitätswarnungen festlegen' 
 ---
-= Automatisierte Antwortrichtlinien
+= Richtlinien für automatisierte Antworten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ summary: 'Sie können automatische Antwortrichtlinien für potenzielle Angriffe 
 
 
 [role="lead"]
-Antwortrichtlinien lösen Aktionen aus, wie z. B. das Erstellen eines Snapshots oder das Einschränken des Benutzerzugriffs bei einem Angriff oder einem anormalen Benutzerverhalten.
+Reaktionsrichtlinien lösen im Falle eines Angriffs oder abnormalen Benutzerverhaltens Aktionen aus, beispielsweise das Erstellen eines Snapshots oder die Einschränkung des Benutzerzugriffs.
 
-Sie können Richtlinien für bestimmte Geräte oder alle Geräte festlegen. Um eine Antwortrichtlinie festzulegen, wählen Sie *Admin > Automatische Antwortrichtlinien* aus und klicken Sie auf die entsprechende Schaltfläche *+Policy*. Sie können Richtlinien für Angriffe oder Warnungen erstellen.
+Sie können Richtlinien für bestimmte oder alle Geräte festlegen.  Um eine Antwortrichtlinie festzulegen, wählen Sie *Admin > Automatisierte Antwortrichtlinien* und klicken Sie auf die entsprechende Schaltfläche *+Richtlinie*.  Sie können Richtlinien für Angriffe oder Warnungen erstellen.
 
-image:ws_add_attack_policy.png["Fügen Sie ein Dialogfeld „Angriffsrichtlinie“ hinzu, in dem das Dropdown-Menü „Webhook"]
+image:ws_add_attack_policy.png["Fügen Sie ein Dialogfeld „Angriffsrichtlinie“ mit der Dropdown-Liste „Webhook“ hinzu"]
 
-Sie müssen die Richtlinie mit einem eindeutigen Namen speichern.
+Sie müssen die Richtlinie unter einem eindeutigen Namen speichern.
 
-Um eine automatische Antwortzeit zu deaktivieren (z. B. Snapshot erstellen), überprüfen Sie einfach die Aktion und speichern Sie die Richtlinie.
+Um eine automatisierte Antwortaktion (z. B. „Snapshot erstellen“) zu deaktivieren, deaktivieren Sie einfach die Aktion und speichern Sie die Richtlinie.
 
-Wenn eine Warnung für die angegebenen Geräte (oder alle Geräte, falls ausgewählt) ausgelöst wird, erstellt die Richtlinie zur automatischen Reaktion einen Snapshot Ihrer Daten. Sie können den Snapshot-Status auf der link:cs_alert_data.html#the-alert-details-page["Details zu Warnmeldungen"]anzeigen.
+Wenn für die angegebenen Geräte (oder alle Geräte, falls ausgewählt) eine Warnung ausgelöst wird, erstellt die Richtlinie für automatisierte Antworten einen Snapshot Ihrer Daten.  Sie können den Snapshot-Status auf derlink:cs_alert_data.html#the-alert-details-page["Seite mit den Alarmdetails"] .
 
-Weitere Informationen zur Einschränkung des Benutzerzugriffs über IP finden link:cs_restrict_user_access.html["Einschränken Des Benutzerzugriffs"]Sie auf der Seite.
+Siehe dielink:cs_restrict_user_access.html["Benutzerzugriff einschränken"] Weitere Informationen zum Einschränken des Benutzerzugriffs per IP finden Sie auf der Seite.
 
-Sie können eine oder mehrere Webhooks an eine Richtlinie anhängen, um benachrichtigt zu werden, wenn eine Warnung erstellt und Maßnahmen ergriffen werden. Es wird empfohlen, nicht mehr als 10 Webhooks zu einer Richtlinie hinzuzufügen.Denken Sie daran, dass Webhook-Benachrichtigungen nicht ausgelöst werden, wenn eine Richtlinie angehalten wird.
+Sie können einer Richtlinie einen oder mehrere Webhooks hinzufügen, um benachrichtigt zu werden, wenn eine Warnung erstellt und eine Aktion ausgeführt wird.  Es wird empfohlen, einer Richtlinie nicht mehr als 10 Webhooks hinzuzufügen. Beachten Sie, dass keine Webhook-Benachrichtigungen ausgelöst werden, wenn eine Richtlinie angehalten wird.
 
-Sie können eine Richtlinie für automatische Reaktionen ändern oder anhalten, indem Sie die Option im Dropdown-Menü der Richtlinie auswählen.
+Sie können eine Richtlinie für automatisierte Antworten ändern oder anhalten, indem Sie die Option im Dropdown-Menü der Richtlinie auswählen.
 
-Workload Security löscht automatisch Snapshots einmal pro Tag auf Basis der Snapshot-Einstellungen.
+Workload Security löscht Snapshots basierend auf den Snapshot-Bereinigungseinstellungen automatisch einmal pro Tag.
 
-image:CloudSecure_SnapshotPurgeSettings.png["Einstellungen Für Snapshot Löschen"]
+image:CloudSecure_SnapshotPurgeSettings.png["Einstellungen für die Snapshot-Bereinigung"]

@@ -4,7 +4,7 @@ permalink: task_display_widget_legends.html
 summary: Anzeigen von Legenden auf Dashboard-Widgets. 
 keywords: dashboard, widget, legends 
 ---
-= Widget-Legenden Werden Angezeigt
+= Anzeigen von Widget-Legenden
 :hardbreaks:
 :allow-uri-read: 
 
@@ -12,8 +12,8 @@ keywords: dashboard, widget, legends
 [role="lead"]
 Widgets auf Dashboards können mit oder ohne Legenden angezeigt werden.
 
-Beim Anzeigen des Dashboards können Legenden in Widgets aktiviert oder deaktiviert werden, indem Sie im Widget auf die Schaltfläche *Optionen* klicken und im Menü *Legende anzeigen* wählen.
+Beim Anzeigen des Dashboards können Legenden in Widgets ein- oder ausgeschaltet werden, indem Sie auf die Schaltfläche *Optionen* im Widget klicken und im Menü *Legenden anzeigen* auswählen.
 
 Wenn sich die im Widget angezeigten Daten ändern, wird die Legende für dieses Widget dynamisch aktualisiert.
 
-Wenn Legenden angezeigt werden, wird die Legende als Link zu dieser Asset-Seite angezeigt, wenn die Landing-Page des von der Legende angegebenen Assets navigiert werden kann.
+Wenn Legenden angezeigt werden und die Zielseite des durch die Legende angegebenen Assets aufgerufen werden kann, wird die Legende als Link zu dieser Asset-Seite angezeigt.

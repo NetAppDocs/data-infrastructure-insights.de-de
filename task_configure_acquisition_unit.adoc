@@ -2,54 +2,54 @@
 sidebar: sidebar 
 permalink: task_configure_acquisition_unit.html 
 keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving 
-summary: Acquisition Unit installiert, deinstalliert, Proxy-Support konfiguriert und vieles mehr unter Windows und Linux. 
+summary: Installieren, Deinstallieren und Konfigurieren der Proxy-Unterstützung der Erfassungseinheit unter Windows und Linux und mehr. 
 ---
-= Konfigurieren Von Akquisitionseinheiten
+= Konfigurieren von Erfassungseinheiten
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights erfasst Gerätedaten mithilfe einer oder mehrerer auf lokalen Servern installierten Acquisition Units. Jede Erfassungseinheit kann mehrere Datensammler hosten, die Gerätekennzahlen zur Analyse an Data Infrastructure Insights senden.
+Data Infrastructure Insights sammelt Gerätedaten mithilfe einer oder mehrerer auf lokalen Servern installierter Erfassungseinheiten.  Jede Erfassungseinheit kann mehrere Datensammler hosten, die Gerätemetriken zur Analyse an Data Infrastructure Insights senden.
 
-In diesem Thema wird beschrieben, wie Sie Akquisitionseinheiten hinzufügen und zusätzliche Schritte beschrieben, die erforderlich sind, wenn in Ihrer Umgebung ein Proxy verwendet wird.
-
-
-NOTE: Für eine genaue Audit- und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Acquisition Unit-Rechner mit *Network Time Protocol (NTP)* oder *Simple Network Time Protocol (SNTP)* zu synchronisieren.
-
-Erfahren Sie mehr über Data Infrastructure Insights Security link:security_overview.html["Hier"].
+In diesem Thema wird beschrieben, wie Sie Erfassungseinheiten hinzufügen, und es werden zusätzliche Schritte beschrieben, die erforderlich sind, wenn Ihre Umgebung einen Proxy verwendet.
 
 
+NOTE: Für eine genaue Prüfung und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Computer der Erfassungseinheit mithilfe des *Network Time Protocol (NTP)* oder des *Simple Network Time Protocol (SNTP)* zu synchronisieren.
 
-== Hinzufügen einer Linux-Akquisitionseinheit
+Lesen Sie mehr über die Sicherheit von Data Infrastructure Insightslink:security_overview.html["hier,"] .
+
+
+
+== Hinzufügen einer Linux-Erfassungseinheit
 
 .Bevor Sie beginnen
-* Wenn Ihr System einen Proxy verwendet, müssen Sie die Proxy-Umgebungsvariablen festlegen, bevor die Erfassungseinheit installiert wird. Weitere Informationen finden Sie unter <<Festlegen von Proxy-Umgebungsvariablen>>.
+* Wenn Ihr System einen Proxy verwendet, müssen Sie die Proxy-Umgebungsvariablen festlegen, bevor die Erfassungseinheit installiert wird. Weitere Informationen finden Sie unter <<Festlegen von Proxy-Umgebungsvariablen>> .
 
 
-.Schritte für die Installation der Linux-Erfassungseinheit
-. Melden Sie sich als Administrator oder Account Owner bei Ihrer Data Infrastructure Insights-Umgebung an.
-. Klicken Sie Auf *Observability > Collectors > Acquisition Units > +Acquisition Unit*
+.Schritte zur Installation der Linux Acquisition Unit
+. Melden Sie sich als Administrator oder Kontoinhaber bei Ihrer Data Infrastructure Insights Umgebung an.
+. Klicken Sie auf *Beobachtbarkeit > Sammler > Erfassungseinheiten > +Erfassungseinheit*
 +
-Das Dialogfeld „_Erfassungseinheit installieren “ wird angezeigt. Wählen Sie Linux.
+Das System zeigt das Dialogfeld „Erfassungseinheit installieren“ an.  Wählen Sie Linux.
 
 
 
 [role="thumb"]
-image:NewLinuxAUInstall.png["Anweisungen für Linux AU"]
+image:NewLinuxAUInstall.png["Linux AU-Anweisungen"]
 
-. Vergewissern Sie sich, dass der Server oder die VM, auf dem die Erfassungseinheit gehostet wird, die empfohlenen Systemanforderungen erfüllt.
-. Vergewissern Sie sich, dass auf dem Server eine unterstützte Linux-Version ausgeführt wird. Klicken Sie auf _OS-Versionen supported (i)_, um eine Liste der unterstützten Versionen anzuzeigen.
-. Kopieren Sie den Befehl Installation snippet im Dialogfeld in ein Terminal-Fenster auf dem Server oder der VM, auf dem die Erfassungseinheit gehostet wird.
+. Überprüfen Sie, ob der Server oder die VM, auf dem/der die Erfassungseinheit gehostet wird, die empfohlenen Systemanforderungen erfüllt.
+. Stellen Sie sicher, dass auf dem Server eine unterstützte Linux-Version ausgeführt wird.  Klicken Sie auf _Unterstützte Betriebssystemversionen (i)_, um eine Liste der unterstützten Versionen anzuzeigen.
+. Kopieren Sie den Installationsbefehlsausschnitt im Dialogfeld in ein Terminalfenster auf dem Server oder der VM, auf dem/der die Erfassungseinheit gehostet wird.
 . Fügen Sie den Befehl in die Bash-Shell ein und führen Sie ihn aus.
 
 
-.Nachdem Sie fertig sind
-* Klicken Sie auf *Observability > Collectors > Acquisition Units*, um den Status von Acquisition Units zu überprüfen.
-* Die Protokolle der Acquisition Unit finden Sie unter /var/log/netapp/nebinsights/acq/acq.log
+.Nach Abschluss
+* Klicken Sie auf *Beobachtbarkeit > Sammler > Erfassungseinheiten*, um den Status der Erfassungseinheiten zu überprüfen.
+* Sie können auf die Protokolle der Erfassungseinheit unter /var/log/netapp/cloudinsights/acq/acq.log zugreifen.
 * Verwenden Sie das folgende Skript, um die Erfassungseinheit zu steuern:
 +
-** cloudinsights-service.sh (Stopp, Start, Neustart, Status überprüfen)
+** cloudinsights-service.sh (Stoppen, Starten, Neustarten, Status prüfen)
 
 
 * Verwenden Sie das folgende Skript, um die Erfassungseinheit zu deinstallieren:
@@ -63,28 +63,28 @@ image:NewLinuxAUInstall.png["Anweisungen für Linux AU"]
 
 === Festlegen von Proxy-Umgebungsvariablen
 
-Für Umgebungen, die einen Proxy verwenden, müssen Sie die Variablen für die Proxy-Umgebung festlegen, bevor Sie die Akquisitionseinheit hinzufügen. Die Anweisungen zur Konfiguration des Proxy finden Sie im Dialogfeld „_Acquisition Unit_“.
+Für Umgebungen, die einen Proxy verwenden, müssen Sie die Proxy-Umgebungsvariablen festlegen, bevor Sie die Erfassungseinheit hinzufügen.  Die Anweisungen zum Konfigurieren des Proxys finden Sie im Dialogfeld „Erfassungseinheit hinzufügen“.
 
-. Klicken Sie auf + in _Proxy Server?_
-. Kopieren Sie die Befehle in einen Texteditor und legen Sie die Proxyvariablen nach Bedarf fest.
+. Klicken Sie auf + in _Haben Sie einen Proxyserver?_
+. Kopieren Sie die Befehle in einen Texteditor und legen Sie Ihre Proxyvariablen nach Bedarf fest.
 +
-Hinweis: Beachten Sie die Beschränkungen für Sonderzeichen in den Feldern Proxy-Benutzername und Passwort: '%' und '!' Sind im Feld Benutzername zulässig. ':', '%' und '!' Sind im Feld Passwort zulässig.
+Hinweis: Beachten Sie die Einschränkungen für Sonderzeichen in den Feldern für Proxy-Benutzernamen und -Passwörter: „%“ und „!“ sind im Feld „Benutzername“ zulässig.  Im Kennwortfeld sind die Zeichen „:“, „%“ und „!“ zulässig.
 
-. Führen Sie den bearbeiteten Befehl in einem Terminal mit der Bash-Shell aus.
-. Installieren Sie die Software Acquisition Unit.
+. Führen Sie den bearbeiteten Befehl in einem Terminal mithilfe der Bash-Shell aus.
+. Installieren Sie die Software der Erfassungseinheit.
 
 
 
 
 === Proxy-Konfiguration
 
-Die Acquisition Unit verwendet eine 2-Wege-/gegenseitige Authentifizierung, um eine Verbindung zum Data Infrastructure Insights Server herzustellen. Das Clientzertifikat muss an den Data Infrastructure Insights-Server übergeben werden, um authentifiziert zu werden. Dazu muss der Proxy so eingerichtet sein, dass er die HTTPS-Anforderung an den Data Infrastructure Insights Server weiterleitet, ohne die Daten zu entschlüsseln.
+Die Acquisition Unit verwendet eine 2-Wege-/gegenseitige Authentifizierung, um eine Verbindung zum Data Infrastructure Insights -Server herzustellen.  Zur Authentifizierung muss das Client-Zertifikat an den Data Infrastructure Insights -Server übergeben werden.  Um dies zu erreichen, muss der Proxy so eingerichtet werden, dass er die https-Anfrage an den Data Infrastructure Insights -Server weiterleitet, ohne die Daten zu entschlüsseln.
 
-Am einfachsten ist es, in Ihrem Proxy/Ihrer Firewall eine Platzhalterkonfiguration für die Kommunikation mit Data Infrastructure Insights festzulegen, z. B.:
+Am einfachsten ist es, in Ihrem Proxy/Ihrer Firewall eine Platzhalterkonfiguration für die Kommunikation mit Data Infrastructure Insights anzugeben, zum Beispiel:
 
  *.cloudinsights.netapp.com
 
-NOTE: Die Verwendung eines Sternchen (*) für Platzhalter ist üblich, aber Ihre Proxy-/Firewall-Konfiguration kann ein anderes Format verwenden. Fragen Sie in Ihrer Proxy-Dokumentation nach, um die korrekte Platzhalterspezifikation in Ihrer Umgebung sicherzustellen.
+NOTE: Die Verwendung eines Sternchens (*) als Platzhalter ist üblich, Ihre Proxy-/Firewall-Konfiguration verwendet jedoch möglicherweise ein anderes Format.  Überprüfen Sie anhand der Proxy-Dokumentation, ob die Platzhalterspezifikation in Ihrer Umgebung korrekt ist.
 
 Weitere Informationen zur Proxy-Konfiguration finden Sie in der NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Wissensdatenbank"] .
 
@@ -92,9 +92,9 @@ Weitere Informationen zur Proxy-Konfiguration finden Sie in der NetApplink:https
 
 ==== Anzeigen von Proxy-URLs
 
-Sie können Ihre Proxy-Endpunkt-URLs anzeigen, indem Sie beim Auswählen eines Datensammlers während des Onboarding auf den Link *Proxy-Einstellungen* klicken oder auf der Seite *Hilfe > Support* den Link unter _Proxy-Einstellungen_. Eine Tabelle wie die folgende wird angezeigt.
+Sie können die URLs Ihres Proxy-Endpunkts anzeigen, indem Sie beim Auswählen eines Datensammlers während des Onboardings auf den Link *Proxy-Einstellungen* oder auf der Seite *Hilfe > Support* auf den Link unter _Proxy-Einstellungen_ klicken.  Es wird eine Tabelle wie die folgende angezeigt.
 
-image:ProxyEndpoints_NewTable.png["Tabelle Mit Proxy-Endpunkten"]
+image:ProxyEndpoints_NewTable.png["Tabelle der Proxy-Endpunkte"]
 
 Wenn Sie Workload Security auf Ihrem Mandanten haben, werden die konfigurierten Endpunkt-URLs auch in dieser Liste angezeigt.
 
@@ -102,31 +102,31 @@ Wenn Sie Workload Security auf Ihrem Mandanten haben, werden die konfigurierten 
 
 == Hinzufügen einer Windows-Erfassungseinheit
 
-.Schritte für die Installation der Windows-Erfassungseinheit
-. Melden Sie sich als Benutzer mit Administratorrechten beim Server/der VM der Erfassungseinheit an.
-. Öffnen Sie auf diesem Server ein Browserfenster, und melden Sie sich als Administrator oder Kontoinhaber bei Ihrer Data Infrastructure Insights-Umgebung an.
-. Klicken Sie Auf *Observability > Collectors > Acquisition Units > +Acquisition Unit* .
+.Schritte zur Installation der Windows-Erfassungseinheit
+. Melden Sie sich beim Acquisition Unit-Server/VM als Benutzer mit Administratorberechtigungen an.
+. Öffnen Sie auf diesem Server ein Browserfenster und melden Sie sich als Administrator oder Kontoinhaber bei Ihrer Data Infrastructure Insights Umgebung an.
+. Klicken Sie auf *Beobachtbarkeit > Sammler > Erfassungseinheiten > +Erfassungseinheit*.
 +
-Das Dialogfeld „_Erfassungseinheit installieren “ wird angezeigt. Wählen Sie Windows.
+Das System zeigt das Dialogfeld „Erfassungseinheit installieren“ an.  Wählen Sie Windows.
 
 
 
 [role="thumb"]
-image:NewWindowsAUInstall.png["Windows AU Installation"]
+image:NewWindowsAUInstall.png["Windows AU-Installation"]
 
-. Vergewissern Sie sich, dass der Server oder die VM, auf dem die Erfassungseinheit gehostet wird, die empfohlenen Systemanforderungen erfüllt.
-. Überprüfen Sie, ob auf dem Server eine unterstützte Windows-Version ausgeführt wird. Klicken Sie auf _OS-Versionen supported (i)_, um eine Liste der unterstützten Versionen anzuzeigen.
-. Klicken Sie auf die Schaltfläche *Download Installer (Windows 64-bit)*.
-. Kopieren Sie den Zugriffsschlüssel. Sie benötigen diese während der Installation.
-. Führen Sie auf dem Erfassungseinheit-Server/VM das heruntergeladene Installationsprogramm aus.
-. Fügen Sie den Zugriffsschlüssel bei Aufforderung in den Installationsassistenten ein.
-. Während der Installation erhalten Sie die Möglichkeit, Ihre Proxy-Server-Einstellungen vorzunehmen.
+. Überprüfen Sie, ob der Server oder die VM, auf dem/der die Erfassungseinheit gehostet wird, die empfohlenen Systemanforderungen erfüllt.
+. Stellen Sie sicher, dass auf dem Server eine unterstützte Windows-Version ausgeführt wird.  Klicken Sie auf _Unterstützte Betriebssystemversionen (i)_, um eine Liste der unterstützten Versionen anzuzeigen.
+. Klicken Sie auf die Schaltfläche *Installer herunterladen (Windows 64-Bit)*.
+. Kopieren Sie den Zugriffsschlüssel.  Sie benötigen dies während der Installation.
+. Führen Sie auf dem Server/der VM der Acquisition Unit das heruntergeladene Installationsprogramm aus.
+. Fügen Sie den Zugriffsschlüssel bei entsprechender Aufforderung in den Installationsassistenten ein.
+. Während der Installation wird Ihnen die Möglichkeit geboten, Ihre Proxyserver-Einstellungen anzugeben.
 
 
-.Nachdem Sie fertig sind
-* Klicken Sie auf * > Observability > Collectors > Acquisition Units*, um den Status von Acquisition Units zu überprüfen.
-* Sie können das Protokoll der Erfassungseinheit in <install dir>\Cloud Insights\Acquisition Unit\log\acq.log aufrufen
-* Verwenden Sie das folgende Skript, um den Status der Erfassungseinheit zu beenden, zu starten, neu zu starten oder zu überprüfen:
+.Nach Abschluss
+* Klicken Sie auf * > Observability > Collectors > Acquisition Units*, um den Status der Acquisition Units zu überprüfen.
+* Sie können auf das Acquisition Unit-Protokoll unter <Installationsverzeichnis>\ Cloud Insights\Acquisition Unit\log\acq.log zugreifen.
+* Verwenden Sie das folgende Skript, um die Erfassungseinheit zu stoppen, zu starten, neu zu starten oder ihren Status zu überprüfen:
 +
  cloudinsights-service.sh
 
@@ -135,13 +135,13 @@ image:NewWindowsAUInstall.png["Windows AU Installation"]
 
 === Proxy-Konfiguration
 
-Die Acquisition Unit verwendet eine 2-Wege-/gegenseitige Authentifizierung, um eine Verbindung zum Data Infrastructure Insights Server herzustellen. Das Clientzertifikat muss an den Data Infrastructure Insights-Server übergeben werden, um authentifiziert zu werden. Dazu muss der Proxy so eingerichtet sein, dass er die HTTPS-Anforderung an den Data Infrastructure Insights Server weiterleitet, ohne die Daten zu entschlüsseln.
+Die Acquisition Unit verwendet eine 2-Wege-/gegenseitige Authentifizierung, um eine Verbindung zum Data Infrastructure Insights -Server herzustellen.  Zur Authentifizierung muss das Client-Zertifikat an den Data Infrastructure Insights -Server übergeben werden.  Um dies zu erreichen, muss der Proxy so eingerichtet werden, dass er die https-Anfrage an den Data Infrastructure Insights -Server weiterleitet, ohne die Daten zu entschlüsseln.
 
-Am einfachsten ist es, in Ihrem Proxy/Ihrer Firewall eine Platzhalterkonfiguration für die Kommunikation mit Data Infrastructure Insights festzulegen, z. B.:
+Am einfachsten ist es, in Ihrem Proxy/Ihrer Firewall eine Platzhalterkonfiguration für die Kommunikation mit Data Infrastructure Insights anzugeben, zum Beispiel:
 
  *.cloudinsights.netapp.com
 
-NOTE: Die Verwendung eines Sternchen (*) für Platzhalter ist üblich, aber Ihre Proxy-/Firewall-Konfiguration kann ein anderes Format verwenden. Fragen Sie in Ihrer Proxy-Dokumentation nach, um die korrekte Platzhalterspezifikation in Ihrer Umgebung sicherzustellen.
+NOTE: Die Verwendung eines Sternchens (*) als Platzhalter ist üblich, Ihre Proxy-/Firewall-Konfiguration verwendet jedoch möglicherweise ein anderes Format.  Überprüfen Sie anhand der Proxy-Dokumentation, ob die Platzhalterspezifikation in Ihrer Umgebung korrekt ist.
 
 Weitere Informationen zur Proxy-Konfiguration finden Sie in der NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Wissensdatenbank"] .
 
@@ -149,25 +149,25 @@ Weitere Informationen zur Proxy-Konfiguration finden Sie in der NetApplink:https
 
 ==== Anzeigen von Proxy-URLs
 
-Sie können Ihre Proxy-Endpunkt-URLs anzeigen, indem Sie beim Auswählen eines Datensammlers während des Onboarding auf den Link *Proxy-Einstellungen* klicken oder auf der Seite *Hilfe > Support* den Link unter _Proxy-Einstellungen_. Eine Tabelle wie die folgende wird angezeigt.
+Sie können die URLs Ihres Proxy-Endpunkts anzeigen, indem Sie beim Auswählen eines Datensammlers während des Onboardings auf den Link *Proxy-Einstellungen* oder auf der Seite *Hilfe > Support* auf den Link unter _Proxy-Einstellungen_ klicken.  Es wird eine Tabelle wie die folgende angezeigt.
 
-image:ProxyEndpoints_NewTable.png["Tabelle Mit Proxy-Endpunkten"]
+image:ProxyEndpoints_NewTable.png["Tabelle der Proxy-Endpunkte"]
 
 Wenn Sie Workload Security auf Ihrem Mandanten haben, werden die konfigurierten Endpunkt-URLs auch in dieser Liste angezeigt.
 
 
 
-== Deinstallation einer Akquisitionseinheit
+== Deinstallieren einer Erfassungseinheit
 
-Gehen Sie zum Deinstallieren der Software Acquisition Unit wie folgt vor:
+Um die Software der Erfassungseinheit zu deinstallieren, gehen Sie wie folgt vor:
 
 '''
 *Windows:*
 
 Wenn Sie eine *Windows*-Erfassungseinheit deinstallieren:
 
-. Öffnen Sie auf dem Acquisition Unit Server/VM die Systemsteuerung und wählen Sie *Programm deinstallieren*. Wählen Sie das Programm Data Infrastructure Insights Acquisition Unit aus, das Sie entfernen möchten.
-. Klicken Sie auf Deinstallieren, und befolgen Sie die Anweisungen.
+. Öffnen Sie auf dem Server/der VM der Erfassungseinheit die Systemsteuerung und wählen Sie *Programm deinstallieren*.  Wählen Sie das Data Infrastructure Insights Acquisition Unit-Programm zum Entfernen aus.
+. Klicken Sie auf „Deinstallieren“ und folgen Sie den Anweisungen.
 
 
 '''
@@ -175,10 +175,10 @@ Wenn Sie eine *Windows*-Erfassungseinheit deinstallieren:
 
 Wenn Sie eine *Linux*-Erfassungseinheit deinstallieren:
 
-. Führen Sie auf dem Server/VM der Acquisition Unit den folgenden Befehl aus:
+. Führen Sie auf dem Server/der VM der Acquisition Unit den folgenden Befehl aus:
 +
  sudo cloudinsights-uninstall.sh -p
-. Um Hilfe bei der Deinstallation zu erhalten, führen Sie folgende Schritte aus:
+. Um Hilfe bei der Deinstallation zu erhalten, führen Sie Folgendes aus:
 +
  sudo cloudinsights-uninstall.sh --help
 
@@ -186,70 +186,70 @@ Wenn Sie eine *Linux*-Erfassungseinheit deinstallieren:
 '''
 *Windows und Linux:*
 
-*Nach* die AU deinstallieren:
+*Nach* der Deinstallation der AU:
 
 . Gehen Sie in Data Infrastructure Insights zu *Observability > Collectors und wählen Sie die Registerkarte *Acquisition Units* aus.
-. Klicken Sie rechts neben der zu deinstallierenden Erfassungseinheit auf die Schaltfläche Optionen, und wählen Sie _Löschen_. Sie können eine Erfassungseinheit nur löschen, wenn ihr keine Datensammler zugewiesen sind.
+. Klicken Sie rechts neben der Erfassungseinheit, die Sie deinstallieren möchten, auf die Schaltfläche „Optionen“ und wählen Sie „Löschen“ aus.  Sie können eine Erfassungseinheit nur löschen, wenn ihr keine Datensammler zugewiesen sind.
 
 
 
-NOTE: Eine Acquisition Unit (AU), mit der Datensammler verbunden sind, kann nicht gelöscht werden. Verschieben Sie alle AU Datensammler auf eine andere AU (bearbeiten Sie den Sammler und wählen Sie einfach eine andere AU), bevor Sie die ursprüngliche AU löschen.
+NOTE: Sie können keine Erfassungseinheit (AU) löschen, an die Datensammler angeschlossen sind.  Verschieben Sie alle Datensammler der AU in eine andere AU (bearbeiten Sie den Sammler und wählen Sie einfach eine andere AU aus), bevor Sie die ursprüngliche AU löschen.
 
-Für die Geräteauflösung wird eine Akquisitionseinheit mit einem Stern daneben verwendet. Bevor Sie diese AU entfernen, müssen Sie ein anderes AU auswählen, das für die Geräteauflösung verwendet werden soll. Bewegen Sie den Mauszeiger über eine andere AU, und öffnen Sie das Menü „drei Punkte“, um „für Geräteauflösung verwenden“ auszuwählen.
+Zur Geräteauflösung wird eine Erfassungseinheit mit einem Stern daneben verwendet.  Bevor Sie diese AU entfernen, müssen Sie eine andere AU zur Verwendung für die Geräteauflösung auswählen.  Bewegen Sie den Mauszeiger über eine andere AU und öffnen Sie das Menü mit den drei Punkten, um „Für Geräteauflösung verwenden“ auszuwählen.
 
-image:AU_for_Device_Resolution.png["AU wird für Geräteauflösung verwendet"]
+image:AU_for_Device_Resolution.png["AU für die Geräteauflösung verwendet"]
 
 
 
-== Erneutes Installieren einer Erfassungseinheit
+== Neuinstallation einer Erfassungseinheit
 
-Um eine Erfassungseinheit auf demselben Server/derselben VM neu zu installieren, müssen Sie folgende Schritte ausführen:
+Um eine Erfassungseinheit auf demselben Server/derselben VM neu zu installieren, müssen Sie die folgenden Schritte ausführen:
 
 .Bevor Sie beginnen
-Sie müssen eine temporäre Erfassungseinheit auf einem separaten Server/einer separaten VM konfigurieren, bevor Sie eine Akquisitionseinheit neu installieren.
+Sie müssen eine temporäre Erfassungseinheit auf einem separaten Server/VM konfiguriert haben, bevor Sie eine Erfassungseinheit neu installieren.
 
 .Schritte
-. Melden Sie sich beim Server/VM der Acquisition Unit an und deinstallieren Sie die AU-Software.
-. Melden Sie sich bei Ihrer Data Infrastructure Insights-Umgebung an, und rufen Sie *Observability > Collectors* auf.
-. Klicken Sie für jeden Datensammler rechts auf das Menü Optionen, und wählen Sie _Bearbeiten_. Weisen Sie den Datensammler der temporären Erfassungseinheit zu und klicken Sie auf *Speichern*.
+. Melden Sie sich beim Acquisition Unit-Server/VM an und deinstallieren Sie die AU-Software.
+. Melden Sie sich bei Ihrer Data Infrastructure Insights Umgebung an und gehen Sie zu *Observability > Collectors*.
+. Klicken Sie für jeden Datensammler rechts auf das Optionsmenü und wählen Sie _Bearbeiten_.  Weisen Sie den Datensammler der temporären Erfassungseinheit zu und klicken Sie auf *Speichern*.
 +
-Sie können auch mehrere Datensammler desselben Typs auswählen und auf die Schaltfläche *Massenaktionen* klicken. Wählen Sie _Bearbeiten_ und weisen Sie die Datensammler der temporären Erfassungseinheit zu.
+Sie können auch mehrere Datensammler desselben Typs auswählen und auf die Schaltfläche *Massenaktionen* klicken.  Wählen Sie _Bearbeiten_ und weisen Sie die Datensammler der temporären Erfassungseinheit zu.
 
-. Nachdem alle Datensammler in die temporäre Erfassungseinheit verschoben wurden, gehen Sie zu *Observability > Collectors* und wählen Sie die Registerkarte *Erfassungseinheiten*.
-. Klicken Sie auf die Schaltfläche Optionen rechts neben der Erfassungseinheit, die Sie neu installieren möchten, und wählen Sie _Löschen_. Sie können eine Erfassungseinheit nur löschen, wenn ihr keine Datensammler zugewiesen sind.
-. Sie können die Software Acquisition Unit jetzt auf dem ursprünglichen Server/VM neu installieren. Klicken Sie auf *+Acquisition Unit*, und befolgen Sie die Anweisungen oben, um die Acquisition Unit zu installieren.
-. Sobald die Erfassungseinheit neu installiert wurde, weisen Sie Ihre Datensammler der Akquisitionseinheit zu.
+. Nachdem alle Datensammler in die temporäre Erfassungseinheit verschoben wurden, gehen Sie zu *Beobachtbarkeit > Sammler* und wählen Sie die Registerkarte *Erfassungseinheiten* aus.
+. Klicken Sie auf die Schaltfläche „Optionen“ rechts neben der Erfassungseinheit, die Sie neu installieren möchten, und wählen Sie „Löschen“ aus.  Sie können eine Erfassungseinheit nur löschen, wenn ihr keine Datensammler zugewiesen sind.
+. Sie können die Acquisition Unit-Software jetzt auf dem ursprünglichen Server/der ursprünglichen VM neu installieren.  Klicken Sie auf *+Erfassungseinheit* und befolgen Sie die obigen Anweisungen, um die Erfassungseinheit zu installieren.
+. Nachdem die Erfassungseinheit neu installiert wurde, weisen Sie Ihre Datensammler wieder der Erfassungseinheit zu.
 
 
 
 
 == Anzeigen von AU-Details
 
-Die Seite Acquisition Unit (AU) enthält nützliche Details für eine AU sowie Informationen zur Fehlerbehebung. Die AU-Detailseite enthält die folgenden Abschnitte:
+Die Detailseite der Erfassungseinheit (AU) bietet nützliche Einzelheiten zu einer AU sowie Informationen zur Fehlerbehebung.  Die AU-Detailseite enthält die folgenden Abschnitte:
 
-* Ein Abschnitt *Zusammenfassung* mit folgenden Informationen:
+* Ein *Zusammenfassungsabschnitt* mit folgendem Inhalt:
 +
-** *Name* und *IP* der Akquisitionseinheit
-** Aktuelle Verbindung *Status* der AU
-** *Zuletzt berichtet* erfolgreiche Datensammler-Abfragzeit
-** Das *Betriebssystem* der AU Maschine
-** Alle aktuellen *Hinweis* für die AU. Verwenden Sie dieses Feld, um einen Kommentar für die AU einzugeben. Das Feld zeigt die zuletzt hinzugefügte Notiz an.
+** *Name* und *IP* der Erfassungseinheit
+** Aktueller Verbindungsstatus der AU
+** *Zuletzt gemeldet* erfolgreiche Datensammler-Abfragezeit
+** Das *Betriebssystem* der AU-Maschine
+** Alle aktuellen *Hinweise* für die AU.  Verwenden Sie dieses Feld, um einen Kommentar für die AU einzugeben.  Das Feld zeigt die zuletzt hinzugefügte Notiz an.
 
 
-* Eine Tabelle der AU's *Data Collectors* für jeden Datensammler:
+* Eine Tabelle der *Datensammler* der AU, die für jeden Datensammler Folgendes anzeigt:
 +
-** *Name* - Klicken Sie auf diesen Link, um die Detailseite des Datensammlers mit zusätzlichen Informationen aufzurufen
-** *Status* - Erfolg- oder Fehlerinformationen
-** *Typ* - Hersteller/Modell
-** *IP* Adresse des Datensammlers
-** Aktuelle * Auswirkung*-Stufe
-** *Zuletzt erfasste* Zeit - als der Datensammler zuletzt erfolgreich abgefragt wurde
+** *Name* - Klicken Sie auf diesen Link, um zur Detailseite des Datensammlers mit zusätzlichen Informationen zu gelangen
+** *Status* – Erfolgs- oder Fehlerinformationen
+** *Typ* – Anbieter/Modell
+** *IP*-Adresse des Datensammlers
+** Aktuelles *Auswirkungsniveau*
+** *Letzte Erfassung* - Zeitpunkt der letzten erfolgreichen Abfrage des Datensammlers
 
 
 
 
-image:AU_Detail_Example.png["BEISPIEL FÜR DIE SEITE AU Detail"]
+image:AU_Detail_Example.png["Beispiel für eine AU-Detailseite"]
 
-Für jeden Datensammler können Sie auf das Menü „drei Punkte“ klicken, um den Datensammler zu klonen, zu bearbeiten, abzuspeichern oder zu löschen. Sie können auch mehrere Datensammler in dieser Liste auswählen, um Massenaktionen auf ihnen durchzuführen.
+Sie können bei jedem Datensammler auf das Menü mit den drei Punkten klicken, um den Datensammler zu klonen, zu bearbeiten, abzufragen oder zu löschen.  Sie können in dieser Liste auch mehrere Datensammler auswählen, um Massenaktionen für sie auszuführen.
 
-Um die Akquisitionseinheit neu zu starten, klicken Sie oben auf der Seite auf die Schaltfläche *Neustart*. Klicken Sie auf diese Schaltfläche, um zu versuchen, im Falle eines Verbindungsproblems eine Verbindung* mit der AU herzustellen.
+Um die Erfassungseinheit neu zu starten, klicken Sie oben auf der Seite auf die Schaltfläche *Neustart*.  Klicken Sie auf diese Schaltfläche, um im Falle eines Verbindungsproblems zu versuchen, die *Verbindung wiederherzustellen*.

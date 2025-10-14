@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: kubernetes_namespace_landing_page.html 
 keywords: telegraf, installation, install, kubernetes, pods, clusters, filters, filtering, k8s, namespace 
-summary: Auf der Landing Page des Kubernetes-Namespace wird erläutert 
+summary: Die Landingpage zum Kubernetes-Namespace erklärt 
 ---
-= Detailseite Kubernetes Namespace
+= Kubernetes-Namespace-Detailseite
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Die Kubernetes Namespace-Detailseite bietet eine Übersicht über alle Ressourcen, die von einem Namespace verwendet werden, einschließlich aller Backend-Storage-Ressourcen und ihrer Kapazitätsnutzung.
+Die Detailseite des Kubernetes-Namespace bietet eine Zusammenfassung aller von einem Namespace verwendeten Assets, einschließlich aller Back-End-Speicherressourcen und ihrer Kapazitätsauslastung.
 
 Wenn Sie auf einer beliebigen Kubernetes Explorer-Seite auf einen Namespace-Link klicken, wird eine Detailseite für diesen Namespace geöffnet.
 
 image:Kubernetes_Namespace_Detail_Example_2.png["Namespace-Detailseite"]
 
-Wie andere Kubernetes Excplorer-Seiten können Sie einen Filter so einstellen, dass er sich auf bestimmte Nodes oder andere Objekte konzentriert. Außerdem wird eine Übersicht über den Pod-Zustand und den Namespace-Status angezeigt, die Diagramme zeigen den CPU- und Arbeitsspeicherbedarf sowie die persistente Volume-Kapazität, falls zutreffend.
+Wie bei anderen Kubernetes Explorer-Seiten können Sie einen Filter festlegen, um sich auf bestimmte Knoten oder andere Objekte zu konzentrieren. Außerdem können Sie eine Übersicht über die Pod-Integrität und den Namespace-Status sowie Diagramme mit der CPU- und Speichernachfrage sowie gegebenenfalls der persistenten Volume-Kapazität anzeigen.
 
-Abschließend wird auf der Seite eine Tabelle mit den Workloads angezeigt, die dem Namespace zugeordnet sind.
+Abschließend zeigt die Seite eine Tabelle mit den mit dem Namespace verknüpften Workloads an.
 
-Klicken Sie auf einen der Links auf der Seite, um weitere Informationen zu erhalten oder Probleme in Ihrer Kubernetes-Umgebung zu beheben.
+Klicken Sie auf einen beliebigen Link auf der Seite, um Ihre Kubernetes-Umgebung weiter zu erkunden oder Fehler zu beheben.

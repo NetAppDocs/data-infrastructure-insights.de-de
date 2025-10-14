@@ -2,64 +2,64 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnxe.html 
 keywords: data collector, VNXe, EMC 
-summary: VNXe-Datensammler wird konfiguriert. 
+summary: Konfigurieren des VNXe-Datenkollektors. 
 ---
-= Konfigurieren des EMC VNXe-Datensammlers
+= Konfigurieren des EMC VNXe-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-DER DELL EMC VNXe Data Collector bietet Bestandsunterstützung für VNXe Unified Storage-Arrays. Data Infrastructure Insights unterstützt derzeit iSCSI- und NAS-Protokolle.
+Der DELL EMC VNXe-Datenkollektor bietet Inventarunterstützung für VNXe Unified Storage-Arrays.  Data Infrastructure Insights unterstützt derzeit iSCSI- und NAS-Protokolle.
 
 
 
 == Anforderungen
 
-* Der VNXe-Datensammler ist CLI-basiert. Sie müssen Unisphere for VNXe CLI (uemcli.exe) auf der Erfassungseinheit installieren, in der sich Ihr VNXe-Datensammler befindet.
-* uemcli.exe verwendet HTTPS als Transportprotokoll, sodass die Erfassungseinheit in der Lage sein muss, HTTPS-Verbindungen zur VNXe zu initiieren.
-* IP-Adresse oder vollqualifizierter Domänenname des VNXe -Geräts
-* Sie müssen mindestens einen schreibgeschützten Benutzer zur Verwendung durch den Datensammler haben.
-* IP-Adresse des Managing Solutions Enabler Servers.
-* HTTPS am Port 443 ist erforderlich
-* Der EMC VNXe Data Collector bietet NAS- und iSCSI-Unterstützung für die Bestandsaufnahme. Fibre-Channel-Volumes werden erkannt, Data Infrastructure Insights jedoch keine Berichte zu FC-Mapping-, Maskierungs- oder Speicherports.
+* Der VNXe-Datenkollektor ist CLI-basiert. Sie müssen die Unisphere für VNXe-CLI (uemcli.exe) auf der Erfassungseinheit installieren, auf der sich Ihr VNXe-Datenkollektor befindet.
+* uemcli.exe verwendet HTTPS als Transportprotokoll, daher muss die Erfassungseinheit in der Lage sein, HTTPS-Verbindungen zum VNXe herzustellen.
+* IP-Adresse oder vollqualifizierter Domänenname des VNXe-Geräts
+* Für die Verwendung durch den Datensammler müssen Sie mindestens über einen schreibgeschützten Benutzer verfügen.
+* IP-Adresse des verwaltenden Solutions Enabler-Servers.
+* HTTPS auf Port 443 ist erforderlich
+* Der EMC VNXe-Datenkollektor bietet NAS- und iSCSI-Unterstützung für die Bestandsaufnahme. Fibre-Channel-Volumes werden erkannt, Data Infrastructure Insights meldet jedoch keine FC-Zuordnung, Maskierung oder Speicherports.
 
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem VNXe-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom VNXe-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 
 
-| Storage Array Durchführt | Storage 
+| Speicher-Array | Storage 
 
 
-| Prozessor | Storage-Node 
+| Prozessor | Speicherknoten 
 
 
-| Storage-Pool | Storage-Pool 
+| Speicherpool | Speicherpool 
 
 
-| Allgemeine Informationen zu iSCSI Block, VMware VMFS | Share 
+| Allgemeine iSCSI-Blockinformationen, VMware VMFS | Aktie 
 
 
-| Remote-Replikationssystem | Synchronisierung 
+| Replikations-Remotesystem | Synchronisation 
 
 
-| ISCSI-Node | ISCSI-Ziel-Node 
+| iSCSI-Knoten | iSCSI-Zielknoten 
 
 
-| ISCSI-Initiator | ISCSI-Target-Initiator 
+| iSCSI-Initiator | iSCSI-Zielinitiator 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In dieser Datenquelle fallen möglicherweise nicht alle Fälle an.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diese Datenquelle darstellen.
 
 
 
@@ -70,13 +70,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In d
 | Feld | Beschreibung 
 
 
-| VNXe-Speicher | IP-Adresse oder vollqualifizierter Domänenname des VNXe -Geräts 
+| VNXe-Speicher | IP-Adresse oder vollqualifizierter Domänenname des VNXe-Geräts 
 
 
 | Benutzername | Benutzername für das VNXe-Gerät 
 
 
-| Passwort | Kennwort für das VNXe -Gerät 
+| Passwort | Kennwort für das VNXe-Gerät 
 |===
 
 
@@ -87,19 +87,19 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In d
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 40 Minuten 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen.  Der Standardwert beträgt 40 Minuten 
 
 
-| CLI-Anschluss | Port, der für die VNXe-CLI verwendet wird 
+| CLI-Port | Für die VNXe-CLI verwendeter Port 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 300. 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 300. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -107,9 +107,9 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| „Externes Dienstprogramm konnte nicht ausgeführt werden“ mit Fehlermeldungen „Unisphere executable uemcli konnte nicht gefunden werden“ | * Korrekte IP-Adresse, Benutzername und Kennwort überprüfen * Bestätigen Sie, dass Unisphere CLI auf der Data Infrastructure Insights Acquisition Unit installiert ist * Bestätigen Sie, dass das Unisphere CLI-Installationsverzeichnis in der Datenquelle korrekt ist * Bestätigen Sie, dass die IP-Adresse der VNXe in der Konfiguration der Datenquelle korrekt ist. Öffnen Sie in der Data Infrastructure Insights Acquisition Unit eine CMD und wechseln Sie in das konfigurierte Installationsverzeichnis: €{INSTALLDIR. Versuchen Sie, eine Verbindung zum VNXe-Gerät herzustellen, indem Sie Folgendes eingeben: Uemcli -d <Ihre IP> -U <Ihre ID> /sys/General show 
+| „Fehler beim Ausführen des externen Dienstprogramms“ mit der Fehlermeldung „Ausführbare Unisphere-Uemcli konnte nicht gefunden werden“ | * Überprüfen Sie, ob die IP-Adresse, der Benutzername und das Kennwort korrekt sind. * Bestätigen Sie, dass Unisphere CLI auf der Data Infrastructure Insights Acquisition Unit installiert ist. * Bestätigen Sie, dass das Installationsverzeichnis von Unisphere CLI in der Datenquellenkonfiguration korrekt ist. * Bestätigen Sie, dass die IP des VNXe in der Konfiguration der Datenquelle korrekt ist.  Öffnen Sie in der Data Infrastructure Insights Acquisition Unit eine CMD und wechseln Sie zum konfigurierten Installationsverzeichnis: ${INSTALLDIR.  Versuchen Sie, eine Verbindung mit dem VNXe-Gerät herzustellen, indem Sie Folgendes eingeben: uemcli -d <Ihre IP> -u <Ihre ID> /sys/general show 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -4,32 +4,32 @@ permalink: cs_intro.html
 keywords: CloudSecure, Cloud Secure 
 summary: Überblick 
 ---
-= Allgemeines Zur Storage Workload Security
+= Informationen zur Speicher-Workload-Sicherheit
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Einblicke in die Dateninfrastruktur Storage Workload Security (ehemals Cloud Secure) schützt Ihre Daten durch verwertbare Informationen zu Bedrohungen von innen. Es ermöglicht eine zentrale Übersicht und Kontrolle über den Zugriff auf alle Unternehmensdaten in Hybrid-Cloud-Umgebungen, damit Sicherheits- und Compliance-Ziele erfüllt werden.
+Data Infrastructure Insights Storage Workload Security (früher Cloud Secure) hilft Ihnen, Ihre Daten mit verwertbaren Informationen zu Insider-Bedrohungen zu schützen.  Es bietet eine zentrale Sichtbarkeit und Kontrolle aller Unternehmensdatenzugriffe in Hybrid-Cloud-Umgebungen, um sicherzustellen, dass Sicherheits- und Compliance-Ziele erreicht werden.
 
 
 
-== Übersicht
+== Sichtweite
 
-Verschaffen Sie sich einen zentralen Überblick und kontrollieren Sie den Benutzerzugriff auf wichtige Unternehmensdaten, die lokal oder in der Cloud gespeichert sind.
+Erhalten Sie zentrale Transparenz und Kontrolle über den Benutzerzugriff auf Ihre kritischen Unternehmensdaten, die vor Ort oder in der Cloud gespeichert sind.
 
-Ersetzen Sie Tools und manuelle Prozesse, die nicht zeitgerecht und präzise Einblicke in Datenzugriff und -Kontrolle bieten. Workload Security wird auf einzigartige Weise in der Cloud und in lokalen Storage-Systemen ausgeführt, sodass Sie über schädliches Benutzerverhalten in Echtzeit benachrichtigt werden können.
-
-
-
-== Darstellt
-
-Dank erweitertem Machine Learning und Anomalieerkennung werden Unternehmensdaten vor Missbrauch durch böswillige oder kompromittierte Benutzer geschützt.
-
-Benachrichtigt Sie über erweitertes Machine Learning und Anomalieerkennung des Benutzerverhaltens bei ungewöhnlichen Datenzugriff.
+Ersetzen Sie Tools und manuelle Prozesse, die keinen zeitnahen und genauen Einblick in den Datenzugriff und die Datenkontrolle bieten.  Workload Security funktioniert auf einzigartige Weise sowohl auf Cloud- als auch auf lokalen Speichersystemen und warnt Sie in Echtzeit vor böswilligem Benutzerverhalten.
 
 
 
-== Compliance
+== Schutz
 
-Durch Auditing von Benutzerzugriffen auf lokal oder in der Cloud gespeicherte wichtige Unternehmensdaten wird die unternehmensinterne Compliance gewahrt.
+Schützen Sie Unternehmensdaten durch fortschrittliches maschinelles Lernen und Anomalieerkennung vor Missbrauch durch böswillige oder kompromittierte Benutzer.
+
+Warnt Sie bei abnormalen Datenzugriffen durch fortschrittliches maschinelles Lernen und Anomalieerkennung des Benutzerverhaltens.
+
+
+
+== Einhaltung
+
+Stellen Sie die Unternehmenskonformität sicher, indem Sie den Benutzerdatenzugriff auf Ihre kritischen Unternehmensdaten prüfen, die vor Ort oder in der Cloud gespeichert sind.

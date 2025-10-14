@@ -4,44 +4,44 @@ permalink: task_cs_add_collector_ontap.html
 keywords: data collector, ONTAP, SVM 
 summary: Hinzufügen von Datensammlern 
 ---
-= Konfigurieren des NetApp ONTAP Data Collectors
+= Konfigurieren des NetApp ONTAP Data Collector
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen. Die Daten werden der Workload Security zur Analyse zur Verfügung gestellt.
+Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen.  Die Daten werden Workload Security zur Analyse bereitgestellt.
 
 .Bevor Sie beginnen
-Sie benötigen die folgenden Informationen, um diesen Datensammler zu konfigurieren:
+Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 
-* Ein Agent muss für das Sammeln von Daten konfiguriert sein
-* Die SVM-Management-IP-Adresse
+* Ein Agent muss zum Sammeln von Daten konfiguriert werden
+* Die SVM-Verwaltungs-IP-Adresse
 * Ein Benutzername für den Zugriff auf die SVM
 * Das Passwort für den Zugriff auf die SVM
 
 
 .Schritte zur Konfiguration
-. Melden Sie sich als Administrator oder Account-Inhaber an Ihrer Workload Security-Umgebung an.
-. Klicken Sie Auf *Observability > Collectors > +Data Collectors*
+. Melden Sie sich als Administrator oder Kontobesitzer bei Ihrer Workload Security-Umgebung an.
+. Klicken Sie auf *Beobachtbarkeit > Sammler > +Datensammler*
 +
 Das System zeigt die verfügbaren Datensammler an.
 
-. Klicken Sie auf *+Monitor* in der Kachel NetApp ONTAP.
+. Klicken Sie in der NetApp ONTAP Kachel auf *+Monitor*.
 +
-Das System zeigt die Konfigurationsseite Data Collector: ONTAP SVM hinzufügen an.
+Das System zeigt die Konfigurationsseite „Datensammler hinzufügen: Ontap SVM“ an.
 
-. Geben Sie einen eindeutigen Namen für den Sammler ein
-. Wählen Sie den Agenten aus, der die Daten sammelt
-. Geben Sie die SVM-Management-IP-Adresse ein
+. Geben Sie einen eindeutigen Namen für den Collector ein
+. Wählen Sie den Agenten aus, der die Daten erfassen soll
+. Geben Sie die SVM-Verwaltungs-IP-Adresse ein
 . Geben Sie den Benutzernamen für den Zugriff auf die SVM ein
-. Geben Sie das Passwort für den Zugriff auf die SVM ein
-. Klicken Sie Auf *+Collector Hinzufügen*
+. Geben Sie das Kennwort ein, um auf die SVM zuzugreifen
+. Klicken Sie auf *+Collector hinzufügen*
 
 
-.Nachdem Sie fertig sind
-* Klicken Sie auf *Workload Security > Collectors*, um den Status des konfigurierten Collectors zu überprüfen.
+.Nach Abschluss
+* Klicken Sie auf *Workload-Sicherheit > Collector*, um den Status des von Ihnen konfigurierten Collectors zu überprüfen.
 +
-Es liegt normalerweise eine Verzögerung vor der Anzeige des Kollektorstatus vor.
+Normalerweise kommt es zu einer Verzögerung, bevor der Collector-Status angezeigt wird.
 
 

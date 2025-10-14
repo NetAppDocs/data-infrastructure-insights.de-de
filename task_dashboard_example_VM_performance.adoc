@@ -1,93 +1,93 @@
 ---
 sidebar: sidebar 
 permalink: task_dashboard_example_VM_performance.html 
-summary: Dashboard-Beispiel mit Schwerpunkt auf der Performance virtueller Maschinen. 
+summary: Dashboard-Beispiel zur Hervorhebung der Leistung virtueller Maschinen. 
 keywords: dashboard, widget, custom, example, virtual machine, vm, performance 
 ---
-= Dashboard-Beispiel: Virtual Machine Performance
+= Dashboard-Beispiel: Leistung virtueller Maschinen
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-IT-Abteilungen stehen heute vor zahlreichen Herausforderungen. Von Administratoren muss mit weniger Aufwand mehr erreicht werden, und eine vollständige Übersicht über dynamische Datacenter ist daher ein muss. In diesem Beispiel zeigen wir Ihnen, wie Sie ein Dashboard mit Widgets erstellen, die Ihnen betriebliche Einblicke in die Performance der virtuellen Maschine (VM) auf Ihrem Mandanten geben. Wenn Sie diesem Beispiel folgen und Widgets erstellen, um Ihre spezifischen Anforderungen zu erfüllen, können Sie beispielsweise die Performance von Back-End-Storage im Vergleich zur Frontend-Performance der Virtual Machines oder die Anzeige von VM-Latenz gegenüber I/O-Anforderungen visualisieren.
+Der IT-Betrieb steht heute vor zahlreichen Herausforderungen.  Von Administratoren wird verlangt, mit weniger mehr zu erreichen, und die vollständige Transparenz Ihrer dynamischen Rechenzentren ist ein Muss.  In diesem Beispiel zeigen wir Ihnen, wie Sie ein Dashboard mit Widgets erstellen, die Ihnen betriebliche Einblicke in die Leistung der virtuellen Maschine (VM) auf Ihrem Mandanten geben.  Wenn Sie diesem Beispiel folgen und Widgets erstellen, die auf Ihre eigenen spezifischen Anforderungen zugeschnitten sind, können Sie beispielsweise die Backend-Speicherleistung im Vergleich zur Frontend-Leistung virtueller Maschinen visualisieren oder die VM-Latenz im Vergleich zur E/A-Nachfrage anzeigen.
 
-.Über diese Aufgabe
-Hier werden wir ein Dashboard für die Performance von virtuellen Maschinen erstellen, das Folgendes enthält:
+.Informationen zu diesem Vorgang
+Hier erstellen wir ein Dashboard zur Leistung virtueller Maschinen mit den folgenden Informationen:
 
-* Eine Tabelle mit VM-Namen und Performance-Daten
-* Ein Diagramm, das VM-Latenz mit Storage-Latenz vergleicht
-* Ein Diagramm mit den Angaben zu Lese-, Schreib- und IOPS insgesamt für VMs
-* Ein Diagramm zeigt den maximalen Durchsatz für Ihre VMs
+* eine Tabelle mit VM-Namen und Leistungsdaten
+* ein Diagramm, das die VM-Latenz mit der Speicherlatenz vergleicht
+* ein Diagramm, das Lese-, Schreib- und Gesamt-IOPS für VMs zeigt
+* ein Diagramm, das den maximalen Durchsatz für Ihre VMs zeigt
 
 
-Dies ist nur ein einfaches Beispiel. Sie können Ihr Dashboard so anpassen, dass Sie Ihre ausgewählten Performance-Daten hervorheben und vergleichen, um Ihre eigenen Best Practices im Betrieb zu berücksichtigen.
+Dies ist nur ein einfaches Beispiel.  Sie können Ihr Dashboard anpassen, um beliebige Leistungsdaten hervorzuheben und zu vergleichen und so Ihre eigenen betrieblichen Best Practices zu verfolgen.
 
 .Schritte
-. Melden Sie sich bei Insight als Benutzer mit Administratorrechten an.
-. Wählen Sie im Menü *Dashboards* * *[+Neues Dashboard]* aus.
+. Melden Sie sich bei Insight als Benutzer mit Administratorberechtigungen an.
+. Wählen Sie im Menü *Dashboards* die Option *[+Neues Dashboard]* aus.
 +
 Die Seite *Neues Dashboard* wird geöffnet.
 
-. Geben Sie oben auf der Seite einen eindeutigen Namen für das Dashboard ein, zum Beispiel „VM Performance by Application“.
-. Klicken Sie auf *Speichern*, um das Dashboard mit dem neuen Namen zu speichern.
-. Beginnen wir mit dem Hinzufügen unserer Widgets. Klicken Sie bei Bedarf auf das Symbol *Bearbeiten*, um den Bearbeitungsmodus zu aktivieren.
-. Klicken Sie auf das Symbol * Widget hinzufügen* und wählen Sie *Tabelle*, um dem Dashboard ein neues TabellenWidget hinzuzufügen.
+. Geben Sie oben auf der Seite einen eindeutigen Namen für das Dashboard ein, beispielsweise „VM-Leistung nach Anwendung“.
+. Klicken Sie auf *Speichern*, um das Dashboard unter dem neuen Namen zu speichern.
+. Beginnen wir mit dem Hinzufügen unserer Widgets.  Klicken Sie bei Bedarf auf das Symbol *Bearbeiten*, um den Bearbeitungsmodus zu aktivieren.
+. Klicken Sie auf das Symbol *Widget hinzufügen* und wählen Sie *Tabelle* aus, um dem Dashboard ein neues Tabellen-Widget hinzuzufügen.
 +
-Das Dialogfeld Widget bearbeiten wird geöffnet. Die Standarddaten werden für alle Speicher auf Ihrem Mandanten angezeigt.
+Das Dialogfeld „Widget bearbeiten“ wird geöffnet.  Die angezeigten Standarddaten gelten für alle Speicher Ihres Mandanten.
 
 
 
-image:VMDashboard-TableWidget1.png["Widget „Tabelle bearbeiten“"]
+image:VMDashboard-TableWidget1.png["Dialogfeld „Tabellen-Widget bearbeiten“"]
 
-. Wir können dieses Widget anpassen. Löschen Sie im Feld Name oben „Widget 1“ und geben Sie „Virtual Machine Performance table“ ein.
-. Klicken Sie auf das Dropdown-Menü Asset type und ändern Sie _Storage_ zu _Virtual Machine_.
+. Wir können dieses Widget anpassen.  Löschen Sie im Feld „Name“ oben „Widget 1“ und geben Sie „Virtual Machine Performance table“ ein.
+. Klicken Sie auf das Dropdown-Menü „Asset-Typ“ und ändern Sie „_Speicher_“ in „Virtuelle Maschine_“.
 +
-Die Tabellendaten ändern sich, um alle virtuellen Maschinen auf dem Mandanten anzuzeigen.
+Die Tabellendaten ändern sich, um alle virtuellen Maschinen auf Ihrem Mandanten anzuzeigen.
 
-. Fügen wir der Tabelle einige Spalten hinzu. Klicken Sie rechts auf das Symbol „Gear“, und wählen Sie „_Hypervisor Name_, _IOPS - Total_, and _Latenz - Total_“ aus. Sie können auch versuchen, den Namen in die Suche einzugeben, um das gewünschte Feld schnell anzuzeigen.
+. Fügen wir der Tabelle einige Spalten hinzu.  Klicken Sie rechts auf das Zahnradsymbol und wählen Sie _Hypervisorname_, _IOPS – Gesamt_ und _Latenz – Gesamt_ aus.  Sie können auch versuchen, den Namen in die Suche einzugeben, um schnell das gewünschte Feld anzuzeigen.
 +
-Diese Spalten werden nun in der Tabelle angezeigt. Sie können die Tabelle nach einer dieser Spalten sortieren. Beachten Sie, dass die Spalten in der Reihenfolge angezeigt werden, in der sie dem Widget hinzugefügt wurden.
+Diese Spalten werden nun in der Tabelle angezeigt.  Sie können die Tabelle nach jeder dieser Spalten sortieren.  Beachten Sie, dass die Spalten in der Reihenfolge angezeigt werden, in der sie dem Widget hinzugefügt wurden.
 
-. Bei dieser Übung werden wir VMs ausschließen, die nicht aktiv genutzt werden. Wir sollten also etwas mit weniger als 10 IOPS insgesamt herausfiltern. Klicken Sie auf die Schaltfläche *[+]* neben *Filtern nach* und wählen Sie _IOPS - Total_. Klicken Sie auf *Any* und geben Sie "10" in das Feld *von* ein. Lassen Sie das Feld * to* leer. Klicken Sie auf das Filterfeld auslassen, oder drücken Sie die Eingabetaste, um den Filter festzulegen.
+. Für diese Übung schließen wir VMs aus, die nicht aktiv verwendet werden. Filtern wir also alles heraus, was weniger als 10 IOPS insgesamt hat.  Klicken Sie auf die Schaltfläche *[+]* neben *Filtern nach* und wählen Sie _IOPS – Gesamt_ aus.  Klicken Sie auf *Beliebig* und geben Sie „10“ in das Feld *Von* ein.  Lassen Sie das Feld *An* leer.  Klicken Sie außerhalb des Filterfelds oder drücken Sie die Eingabetaste, um den Filter festzulegen.
 +
-Die Tabelle zeigt jetzt nur VMs mit insgesamt 10 IOPS oder mehr.
+Die Tabelle zeigt jetzt nur VMs mit 10 oder mehr Gesamt-IOPS.
 
-. Wir können die Tabelle weiter reduzieren, indem wir Ergebnisse gruppieren. Klicken Sie auf die Schaltfläche *[+]* neben *Group by* und wählen Sie ein Feld aus, nach dem Sie gruppieren möchten, z. B. _Application_ oder _Hypervisor Name_. Gruppierung wird automatisch angewendet.
+. Wir können die Tabelle weiter reduzieren, indem wir die Ergebnisse gruppieren.  Klicken Sie auf die Schaltfläche *[+]* neben *Gruppieren nach* und wählen Sie ein Feld zum Gruppieren aus, z. B. _Anwendung_ oder _Hypervisorname_.  Die Gruppierung wird automatisch angewendet.
 +
-Die Tabellenzeilen werden nun entsprechend Ihrer Einstellung gruppiert. Sie können die Gruppen nach Bedarf erweitern und reduzieren. Gruppierte Zeilen zeigen gerollte Daten für jede der Spalten an. In einigen Spalten können Sie die Aufrollmethode für diese Spalte auswählen.
+Die Tabellenzeilen werden nun entsprechend Ihrer Einstellung gruppiert.  Sie können die Gruppen nach Bedarf erweitern und reduzieren.  Gruppierte Zeilen zeigen zusammengefasste Daten für jede Spalte.  Bei einigen Spalten können Sie die Rollup-Methode für die jeweilige Spalte auswählen.
 
 
 
 image:VMDashboard-TableWidgetGroup.png["Beispiel für die Gruppierung von Tabellen-Widgets"]
 
-. Wenn Sie das TabellenWidget auf Ihre Zufriedenheit angepasst haben, klicken Sie auf die Schaltfläche *[Save]*.
+. Wenn Sie das Tabellen-Widget nach Ihren Wünschen angepasst haben, klicken Sie auf die Schaltfläche *[Speichern]*.
 +
-Das TabellenWidget wird im Dashboard gespeichert.
+Das Tabellen-Widget wird im Dashboard gespeichert.
 
 
 
-Sie können die Größe des Widgets auf dem Dashboard ändern, indem Sie die untere rechte Ecke ziehen. Machen Sie das Widget breiter, um alle Spalten deutlich anzuzeigen. Klicken Sie auf *Speichern*, um das aktuelle Dashboard zu speichern.
+Sie können die Größe des Widgets auf dem Dashboard ändern, indem Sie die untere rechte Ecke ziehen.  Machen Sie das Widget breiter, um alle Spalten deutlich anzuzeigen.  Klicken Sie auf *Speichern*, um das aktuelle Dashboard zu speichern.
 
-Als nächstes fügen wir einige Diagramme hinzu, um unsere VM-Performance anzuzeigen. Erstellen wir ein Liniendiagramm, in dem die VM-Latenz mit VMDK-Latenz verglichen wird.
+Als Nächstes fügen wir einige Diagramme hinzu, um die Leistung unserer VM anzuzeigen.  Erstellen wir ein Liniendiagramm, das die VM-Latenz mit der VMDK-Latenz vergleicht.
 
-. Klicken Sie bei Bedarf auf das Symbol *Bearbeiten* auf dem Dashboard, um den Bearbeitungsmodus zu aktivieren.
-. Klicken Sie auf das Symbol *[Widget hinzufügen]* und wählen Sie _Liniendiagramm_, um dem Dashboard ein neues Liniendiagramm-Widget hinzuzufügen.
-. Das Dialogfeld *Widget bearbeiten* wird geöffnet. Benennen Sie dieses Widget „VM/VMDK max Latency“ (max.
-. Wählen Sie *Virtual Machine* und wählen Sie _Latenz - Max_. Stellen Sie alle gewünschten Filter ein, oder lassen Sie *Filter durch* leer. Für *Roll Up* wählen Sie _sum_ by _All_. Diese Daten als _Liniendiagramm_ anzeigen und _Y-Achse_ als _Primär_ verlassen.
-. Klicken Sie auf die Schaltfläche *[+Query]*, um eine zweite Datenzeile hinzuzufügen. Wählen Sie in dieser Zeile _VMDK_ und _Latenz - Max_ aus. Stellen Sie alle gewünschten Filter ein, oder lassen Sie *Filter durch* leer. Für *Roll Up* wählen Sie _sum_ by _All_. Diese Daten als _Liniendiagramm_ anzeigen und _Y-Achse_ als _Primär_ verlassen.
+. Klicken Sie bei Bedarf auf das Symbol *Bearbeiten* im Dashboard, um den Bearbeitungsmodus zu aktivieren.
+. Klicken Sie auf das Symbol *[Widget hinzufügen]* und wählen Sie _Liniendiagramm_ aus, um dem Dashboard ein neues Liniendiagramm-Widget hinzuzufügen.
+. Das Dialogfeld *Widget bearbeiten* wird geöffnet.  Nennen Sie dieses Widget „VM / VMDK Max Latency“
+. Wählen Sie *Virtuelle Maschine* und wählen Sie _Latenz – Max_.  Legen Sie die gewünschten Filter fest oder lassen Sie *Filtern nach* leer.  Wählen Sie für *Rollup* _Sum_ by _All_.  Zeigen Sie diese Daten als _Liniendiagramm_ an und belassen Sie die _Y-Achse_ als _Primär_.
+. Klicken Sie auf die Schaltfläche *[+Abfrage]*, um eine zweite Datenzeile hinzuzufügen.  Wählen Sie für diese Zeile _VMDK_ und _Latency – Max_ aus.  Legen Sie die gewünschten Filter fest oder lassen Sie *Filtern nach* leer.  Wählen Sie für *Rollup* _Sum_ by _All_.  Zeigen Sie diese Daten als _Liniendiagramm_ an und belassen Sie die _Y-Achse_ als _Primär_.
 . Klicken Sie auf *[Speichern]*, um dieses Widget zum Dashboard hinzuzufügen.
 
 
 image:VMDashboard-LineChartVMLatency.png["Liniendiagramm mit Latenzdaten"]
 
-Als nächstes fügen wir ein Diagramm mit den IOPS „Lesen“, „Schreiben“ und „Gesamt“ in einem einzelnen Diagramm ein.
+Als Nächstes fügen wir ein Diagramm hinzu, das die Lese-, Schreib- und Gesamt-IOPS der VM in einem einzigen Diagramm zeigt.
 
-. Klicken Sie auf das Symbol *[Widget hinzufügen]* und wählen Sie _Flächendiagramm_, um dem Dashboard ein neues Widget mit einem Flächendiagramm hinzuzufügen.
-. Das Dialogfeld Widget bearbeiten wird geöffnet. Benennen Sie dieses Widget „VM IOPS“ (VM-IOPS).
-. Wählen Sie *Virtual Machine* und dann „_IOPS - Total_“. Stellen Sie alle gewünschten Filter ein, oder lassen Sie *Filter by* leer. Wählen Sie für *Roll Up* _Sum_ von _All_. Diese Daten als _Flächendiagramm_ anzeigen und _Y-Achse_ als _Primär_ verlassen.
-. Klicken Sie auf die Schaltfläche *[+Query]*, um eine zweite Datenzeile hinzuzufügen. Wählen Sie für diese Zeile *Virtual Machine* und dann _IOPS - Read_.
-. Klicken Sie auf die Schaltfläche *[+Query]*, um eine dritte Datenzeile hinzuzufügen. Wählen Sie für diese Zeile *Virtual Machine* aus und wählen Sie _IOPS - Write_.
+. Klicken Sie auf das Symbol *[Widget hinzufügen]* und wählen Sie _Flächendiagramm_ aus, um dem Dashboard ein neues Flächendiagramm-Widget hinzuzufügen.
+. Das Dialogfeld „Widget bearbeiten“ wird geöffnet.  Nennen Sie dieses Widget „VM IOPS“
+. Wählen Sie *Virtuelle Maschine* und wählen Sie _IOPS – Gesamt_.  Legen Sie die gewünschten Filter fest oder lassen Sie *Filtern nach* leer. Wählen Sie für *Aufsummieren* _Summe_ nach _Alle_.  Zeigen Sie diese Daten als _Flächendiagramm_ an und belassen Sie die _Y-Achse_ als _Primär_.
+. Klicken Sie auf die Schaltfläche *[+Abfrage]*, um eine zweite Datenzeile hinzuzufügen.  Wählen Sie für diese Zeile *Virtual Machine* und dann _IOPS – Lesen_.
+. Klicken Sie auf die Schaltfläche *[+Abfrage]*, um eine dritte Datenzeile hinzuzufügen.  Wählen Sie für diese Zeile *Virtual Machine* und dann _IOPS – Write_ aus.
 . Klicken Sie auf *Legende anzeigen*, um eine Legende für dieses Widget auf dem Dashboard anzuzeigen.
 
 
@@ -96,20 +96,20 @@ image:VMDashboard-AreaChartVMIOPS.png["Flächendiagramm mit VM-IOPS"]
 . Klicken Sie auf *[Speichern]*, um dieses Widget zum Dashboard hinzuzufügen.
 
 
-Danach fügen wir ein Diagramm hinzu, das den VM-Durchsatz für jede mit der VM verbundene Applikation anzeigt. Dafür nutzen wir die Roll-Up-Funktion.
+Als Nächstes fügen wir ein Diagramm hinzu, das den VM-Durchsatz für jede mit der VM verknüpfte Anwendung zeigt.  Wir werden hierfür die Roll-Up-Funktion verwenden.
 
-. Klicken Sie auf das Symbol *[Widget hinzufügen]* und wählen Sie _Liniendiagramm_, um dem Dashboard ein neues Liniendiagramm-Widget hinzuzufügen.
-. Das Dialogfeld Widget bearbeiten wird geöffnet. Benennen Sie dieses Widget „VM-Durchsatz nach Applikation“ (nach Applikation).
-. Wählen Sie Virtual Machine aus, und wählen Sie „Durchsatz – Gesamt“. Stellen Sie alle gewünschten Filter ein, oder lassen Sie den Filter leer. Wählen Sie bei Roll Up „Max“ und wählen Sie „Anwendung“ oder „Name“ aus. Zeigt die 10 besten Anwendungen an. Diese Daten als Liniendiagramm anzeigen und die Y-Achse als Primär belassen.
+. Klicken Sie auf das Symbol *[Widget hinzufügen]* und wählen Sie _Liniendiagramm_ aus, um dem Dashboard ein neues Liniendiagramm-Widget hinzuzufügen.
+. Das Dialogfeld „Widget bearbeiten“ wird geöffnet.  Nennen Sie dieses Widget „VM-Durchsatz nach Anwendung“.
+. Wählen Sie „Virtuelle Maschine“ und dann „Durchsatz – Gesamt“.  Legen Sie die gewünschten Filter fest oder lassen Sie das Feld „Filtern nach“ leer.  Wählen Sie für Rollup „Max“ und wählen Sie nach „Anwendung“ oder „Name“ aus.  Zeigen Sie die Top 10-Anwendungen.  Zeigen Sie diese Daten als Liniendiagramm an und belassen Sie die Y-Achse als primär.
 . Klicken Sie auf *[Speichern]*, um dieses Widget zum Dashboard hinzuzufügen.
 
 
-Sie können Widgets auf dem Dashboard verschieben, indem Sie die Maustaste an einer beliebigen Stelle im Widget gedrückt halten und an eine neue Position ziehen.
+Sie können Widgets auf dem Dashboard verschieben, indem Sie die Maustaste an einer beliebigen Stelle oben im Widget gedrückt halten und es an eine neue Position ziehen.
 
 Sie können die Größe von Widgets ändern, indem Sie die untere rechte Ecke ziehen.
 
-Achten Sie darauf, *[Speichern]* das Dashboard zu verwenden, nachdem Sie Ihre Änderungen vorgenommen haben.
+Denken Sie daran, das Dashboard nach dem Vornehmen Ihrer Änderungen *[Speichern]* zu speichern.
 
-Ihr letztes VM Performance Dashboard sieht so aus:
+Ihr endgültiges VM-Leistungs-Dashboard sieht ungefähr so aus:
 
-image:VMDashExample1.png["VM Dashboard vollständiges Beispiel, das alle Widgets anzeigt"]
+image:VMDashExample1.png["Vollständiges Beispiel für das VM-Dashboard, das alle vorhandenen Widgets zeigt"]

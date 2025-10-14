@@ -2,54 +2,54 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnx_file.html 
 keywords: data collector, Celerra, EMC, DELL, VNX File 
-summary: KONFIGURIEREN DES DELL EMC Celerra-Datensammlers. 
+summary: Konfigurieren des DELL EMC Celerra-Datenkollektors. 
 ---
-= DATENSAMMLUNG FÜR DELL EMC VNX File (ehemals Celerra Unified Storage System
+= DELL EMC VNX File (früher Celerra Unified Storage System) Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler erfasst Bestandsinformationen vom VNX File Storage System. Für die Konfiguration benötigt dieser Datensammler die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Kennwort.
+Dieser Datensammler ruft Inventarinformationen vom VNX File Storage System ab.  Zur Konfiguration benötigt dieser Datensammler die IP-Adresse der Speicherprozessoren sowie einen schreibgeschützten Benutzernamen und ein Passwort.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem VNX File Data Collector. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom VNX File-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Celerra Network Server/Celerra Storage-Pool | Storage-Pool 
+| Celerra-Netzwerkserver/Celerra-Speicherpool | Speicherpool 
 
 
-| File-System | Internes Volumen 
+| Dateisystem | Internes Volumen 
 
 
-| Data Mover | Controller 
+| Datenverschieber | Regler 
 
 
-| Auf einem Data Mover gemountet | Dateifreigabe 
+| Auf einem Data Mover gemountetes Dateisystem | Dateifreigabe 
 
 
-| CIFS- und NFS-Exporte | Share 
+| CIFS- und NFS-Exporte | Aktie 
 
 
-| Festplatten-Volume | Back-End LUN 
+| Datenträgervolumen | Backend-LUN 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-Sie benötigen Folgendes, um diesen Datensammler zu konfigurieren:
+Zur Konfiguration dieses Datensammlers benötigen Sie Folgendes:
 
 * Die IP-Adresse des Speicherprozessors
-* Schreibgeschützter Benutzername und Kennwort
+* Benutzername und Kennwort nur zum Lesen
 * SSH-Port 22
 
 
@@ -65,10 +65,10 @@ Sie benötigen Folgendes, um diesen Datensammler zu konfigurieren:
 | VNX-Datei-IP-Adresse | IP-Adresse oder vollqualifizierter Domänenname des VNX-Dateigeräts 
 
 
-| Benutzername | Name, der zum Anmelden am VNX-Speichergerät verwendet wird 
+| Benutzername | Name, der für die Anmeldung beim VNX-Dateigerät verwendet wird 
 
 
-| Passwort | Passwort zur Anmeldung beim VNX-Speichergerät 
+| Passwort | Kennwort zum Anmelden beim VNX-Dateigerät 
 |===
 
 
@@ -79,13 +79,13 @@ Sie benötigen Folgendes, um diesen Datensammler zu konfigurieren:
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (Minuten) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 20 Minuten. 
+| Inventarabfrageintervall (Minuten) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 20 Minuten. 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -93,9 +93,9 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Fehler: Fortfahren nicht möglich, während die DART-Aktualisierung ausgeführt wird | Mögliche Lösung: Unterbrechen Sie den Datensammler, und warten Sie, bis die DART-Aktualisierung abgeschlossen ist, bevor Sie eine andere Erfassungsanforderung versuchen. 
+| Fehler: Fortfahren nicht möglich, während DART-Update läuft | Mögliche Lösung: Halten Sie den Datensammler an und warten Sie, bis das DART-Upgrade abgeschlossen ist, bevor Sie eine weitere Erfassungsanforderung versuchen. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

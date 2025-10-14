@@ -4,7 +4,7 @@ permalink: task_config_cs_incloud.html
 keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet,  cloud secure 
 summary: Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen. 
 ---
-= Konfiguration des Cloud Volumes ONTAP und Amazon FSX für NetApp ONTAP Collector
+= Konfigurieren des Cloud Volumes ONTAP und Amazon FSx for NetApp ONTAP
 :hardbreaks:
 :allow-uri-read: 
 
@@ -14,66 +14,66 @@ Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten vo
 
 
 
-== Cloud Volumes ONTAP Storage-Konfiguration
+== Cloud Volumes ONTAP Speicherkonfiguration
 
-In der OnCommand Cloud Volumes ONTAP-Dokumentation finden Sie Informationen zur Konfiguration einer Single-Node-/HA-AWS-Instanz zum Hosten des Workload Security Agent: https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
+Informationen zum Konfigurieren einer AWS-Instanz mit einem einzelnen Knoten/HA zum Hosten des Workload Security Agent finden Sie in der OnCommand Cloud Volumes ONTAP Dokumentation:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
 
-Befolgen Sie nach Abschluss der Konfiguration die Schritte zur Einrichtung Ihrer SVM: https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html[]
+Nachdem die Konfiguration abgeschlossen ist, befolgen Sie die Schritte zum Einrichten Ihres SVM:https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html[]
 
 
 
 == Unterstützte Plattformen
 
-* Cloud Volumes ONTAP, unterstützt bei allen verfügbaren Cloud-Service-Providern. Zum Beispiel Amazon, Azure, Google Cloud.
-* ONTAP Amazon FSX
+* Cloud Volumes ONTAP, wird von allen verfügbaren Cloud-Service-Anbietern unterstützt, sofern verfügbar.  Zum Beispiel: Amazon, Azure, Google Cloud.
+* ONTAP Amazon FSx
 
 
 
 
-== Agent-Gerätekonfiguration
+== Agent-Computerkonfiguration
 
-Die Agent-Maschine muss in den jeweiligen Subnetzen der Cloud-Service-Provider konfiguriert sein. Weitere Informationen zum Netzwerkzugriff finden Sie unter [Agent-Anforderungen].
+Die Agent-Maschine muss in den jeweiligen Subnetzen der Cloud-Dienstanbieter konfiguriert werden.  Weitere Informationen zum Netzwerkzugriff finden Sie in den [Agentenanforderungen].
 
-Unten sind die Schritte für die Installation von Agenten in AWS aufgeführt. Die entsprechenden Schritte, die für den Cloud-Service-Provider gelten, können für die Installation in Azure oder Google Cloud befolgt werden.
+Nachfolgend finden Sie die Schritte zur Agenteninstallation in AWS.  Für die Installation können in Azure oder Google Cloud die entsprechenden Schritte ausgeführt werden, sofern diese für den Cloud-Dienstanbieter gelten.
 
-Konfigurieren Sie in AWS die Maschine, die als Workload Security Agent verwendet werden soll, mit den folgenden Schritten:
+Führen Sie in AWS die folgenden Schritte aus, um die Maschine für die Verwendung als Workload Security Agent zu konfigurieren:
 
-Konfigurieren Sie die Maschine, die als Workload Security Agent verwendet werden soll, wie folgt:
+Führen Sie die folgenden Schritte aus, um die Maschine für die Verwendung als Workload Security Agent zu konfigurieren:
 
 .Schritte
-. Melden Sie sich bei der AWS Konsole an, und navigieren Sie zur Seite EC2-instances, und wählen Sie _Launch Instance_ aus.
-. Wählen Sie ein RHEL oder CentOS AMI mit der entsprechenden Version aus, wie auf dieser Seite erwähnt: https://docs.netapp.com/us-en/cloudinsights/concept_cs_agent_requirements.html[]
-. Wählen Sie die VPC und das Subnetz aus, in der die Cloud-ONTAP-Instanz residiert.
-. Wählen Sie _t2.xlarge_ (4 vcpus und 16 GB RAM) als zugewiesene Ressourcen aus.
+. Melden Sie sich bei der AWS-Konsole an, navigieren Sie zur Seite „EC2-Instances“ und wählen Sie „Instanz starten“ aus.
+. Wählen Sie ein RHEL- oder CentOS-AMI mit der entsprechenden Version aus, wie auf dieser Seite erwähnt:https://docs.netapp.com/us-en/cloudinsights/concept_cs_agent_requirements.html[]
+. Wählen Sie die VPC und das Subnetz aus, in denen sich die Cloud ONTAP -Instanz befindet.
+. Wählen Sie _t2.xlarge_ (4 vcpus und 16 GB RAM) als zugewiesene Ressourcen.
 +
 .. Erstellen Sie die EC2-Instanz.
 
 
-. Installieren Sie die erforderlichen Linux-Pakete mithilfe des YUM-Paketmanagers:
+. Installieren Sie die erforderlichen Linux-Pakete mit dem YUM-Paketmanager:
 +
-.. Installieren Sie die nativen Linux-Pakete _wget_ und _unzip_.
+.. Installieren Sie _wget_ und _unzip_ native Linux-Pakete.
 
 
 
 
 
 
-== Installieren Sie den Workload Security Agent
+== Installieren des Workload Security Agent
 
-. Melden Sie sich als Administrator oder Account Owner bei Ihrer Data Infrastructure Insights-Umgebung an.
+. Melden Sie sich als Administrator oder Kontoinhaber bei Ihrer Data Infrastructure Insights Umgebung an.
 . Navigieren Sie zu Workload Security *Collectors* und klicken Sie auf die Registerkarte *Agents*.
 . Klicken Sie auf *+Agent* und geben Sie RHEL als Zielplattform an.
-. Kopieren Sie den Befehl Agenteninstallation.
-. Fügen Sie den Befehl „Agent Installation“ in die RHEL EC2-Instanz ein, bei der Sie angemeldet sind. Auf diese Weise wird der Workload Security Agent installiert, der alle link:concept_cs_agent_requirements.html["Agent-Voraussetzungen"]erfüllt.
+. Kopieren Sie den Befehl zur Agenteninstallation.
+. Fügen Sie den Agent-Installationsbefehl in die RHEL EC2-Instanz ein, bei der Sie angemeldet sind.  Dadurch wird der Workload Security-Agent installiert, der allelink:concept_cs_agent_requirements.html["Agentenvoraussetzungen"] erfüllt sind.
 
 
-Detaillierte Schritte finden Sie unter diesem Link: https://docs.NetApp.com/US-en/cloudinsights/Task_cs_add_Agent.HTML#Steps-to-install-Agent
+Detaillierte Schritte finden Sie unter diesem Link: https://docs.netapp.com/us-en/cloudinsights/task_cs_add_agent.html#steps-to-install-agent
 
 
 
 == Fehlerbehebung
 
-Bekannte Probleme und deren Lösungen sind in der folgenden Tabelle beschrieben.
+Bekannte Probleme und deren Lösungen werden in der folgenden Tabelle beschrieben.
 
 |===
 
@@ -81,5 +81,5 @@ Bekannte Probleme und deren Lösungen sind in der folgenden Tabelle beschrieben.
 | Problem | Auflösung 
 
 
-| „Workload-Sicherheit: Fehler beim ermitteln des ONTAP-Typs für Amazon FxSN Datensammler“ Fehler wird vom Data Collector angezeigt. Der Kunde kann den neuen Amazon FSxN Data Collector nicht zur Workload Security hinzufügen. Die Verbindung zum FSxN-Cluster an Port 443 vom Agenten ist zeitabhängig. Für die Kommunikation sind Firewall- und AWS Sicherheitsgruppen die erforderlichen Regeln aktiviert. Ein Agent wurde bereits bereitgestellt und befindet sich auch im selben AWS Konto. Dieser Agent wird verwendet, um die verbleibenden NetApp-Geräte zu verbinden und zu überwachen (und alle funktionieren). | Lösen Sie dieses Problem, indem Sie fsxadmin LIF-Netzwerksegment zur Sicherheitsregel des Agenten hinzufügen. Erlaubt alle Ports, wenn Sie sich nicht sicher über die Ports sind. 
+| Der Datensammler zeigt den Fehler „Workload-Sicherheit: ONTAP -Typ für Amazon FxSN-Datensammler konnte nicht ermittelt werden“ an.  Der Kunde kann keinen neuen Amazon FSxN-Datensammler zu Workload Security hinzufügen.  Bei der Verbindung vom Agenten zum FSxN-Cluster auf Port 443 kommt es zu einer Zeitüberschreitung.  Für Firewall- und AWS-Sicherheitsgruppen sind die erforderlichen Regeln aktiviert, um die Kommunikation zu ermöglichen.  Ein Agent ist bereits bereitgestellt und befindet sich auch im selben AWS-Konto.  Derselbe Agent wird zum Verbinden und Überwachen der verbleibenden NetApp -Geräte verwendet (und alle funktionieren). | Lösen Sie dieses Problem, indem Sie der Sicherheitsregel des Agenten das LIF-Netzwerksegment fsxadmin hinzufügen.  Alle Ports zulassen, wenn Sie sich bei den Ports nicht sicher sind. 
 |===

@@ -1,61 +1,61 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_solidfire.html 
-summary: NetApp SolidFire Data Collector konfigurieren 
+summary: Konfigurieren des NetApp SolidFire Datenkollektors 
 keywords: data collector, queries, create 
 ---
-= NetApp SolidFire All-Flash Array Datensammler
+= NetApp SolidFire All-Flash Array-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der NetApp SolidFire All-Flash Array Data Collector unterstützt die Bestandsaufnahme und Performance der iSCSI- und Fibre Channel SolidFire-Konfigurationen.
+Der NetApp SolidFire All-Flash Array-Datenkollektor unterstützt die Bestandsaufnahme und Leistungserfassung von iSCSI- und Fibre Channel SolidFire Konfigurationen.
 
-Der SolidFire Datensammler nutzt die SolidFire REST API. Die Erfassungseinheit, in der sich der Datensammler befindet, muss in der Lage sein, HTTPS-Verbindungen zum TCP-Port 443 an der SolidFire-Cluster-Management-IP-Adresse zu initiieren. Der Datensammler benötigt Zugangsdaten, die in der Lage sind, REST-API-Abfragen auf dem SolidFire Cluster zu erstellen.
+Der SolidFire Datensammler verwendet die SolidFire REST-API.  Die Erfassungseinheit, auf der sich der Datensammler befindet, muss in der Lage sein, HTTPS-Verbindungen zum TCP-Port 443 der SolidFire -Clusterverwaltungs-IP-Adresse herzustellen.  Der Datensammler benötigt Anmeldeinformationen, die REST-API-Abfragen im SolidFire Cluster durchführen können.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights bezieht die folgenden Inventarinformationen aus dem Datensammler für rein Flash-basierte NetApp SolidFire Arrays: Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom NetApp SolidFire All-Flash Array-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Laufwerk | Festplatte 
+| Fahren | Scheibe 
 
 
 | Cluster | Storage 
 
 
-| Knoten | Storage-Node 
+| Node | Speicherknoten 
 
 
-| Datenmenge | Datenmenge 
+| Volumen | Volumen 
 
 
-| Fibre-Channel-Port | Port 
+| Fibre-Channel-Anschluss | Hafen 
 
 
-| Volume Access Group, LUN-Zuweisung | Volume-Zuordnung 
+| Volume-Zugriffsgruppe, LUN-Zuweisung | Volumenkarte 
 
 
-| ISCSI-Sitzung | Volume-Maske 
+| iSCSI-Sitzung | Volumenmaske 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-Die folgenden Anforderungen gelten für die Konfiguration dieses Datensammlers:
+Für die Konfiguration dieses Datensammlers gelten die folgenden Voraussetzungen:
 
-* Management Virtual IP-Adresse
-* Schreibgeschützter Benutzername und Anmeldeinformationen
-* Anschluss 443
+* Virtuelle Verwaltungs-IP-Adresse
+* Benutzername und Anmeldeinformationen sind schreibgeschützt
+* Port 443
 
 
 
@@ -67,13 +67,13 @@ Die folgenden Anforderungen gelten für die Konfiguration dieses Datensammlers:
 | Feld | Beschreibung 
 
 
-| Management Virtual IP-Adresse (MVIP) | Management-virtuelle IP-Adresse des SolidFire-Clusters 
+| Virtuelle Verwaltungs-IP-Adresse (MVIP) | Virtuelle IP-Adresse des SolidFire -Clusters verwalten 
 
 
-| Benutzername | Name, der zur Anmeldung im SolidFire Cluster verwendet wird 
+| Benutzername | Name, der für die Anmeldung beim SolidFire -Cluster verwendet wird 
 
 
-| Passwort | Passwort, das zur Anmeldung beim SolidFire Cluster verwendet wird 
+| Passwort | Kennwort zum Anmelden beim SolidFire -Cluster 
 |===
 
 
@@ -84,30 +84,30 @@ Die folgenden Anforderungen gelten für die Konfiguration dieses Datensammlers:
 | Feld | Beschreibung 
 
 
-| Verbindungstyp | Wählen Sie den Verbindungstyp 
+| Verbindungstyp | Verbindungstyp auswählen 
 
 
-| Kommunikations-Port | Für NetApp API verwendeter Port 
+| Kommunikationsanschluss | Für die NetApp API verwendeter Port 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 20 Minuten 
+| Inventarabfrageintervall (min) | Der Standardwert ist 20 Minuten 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 300 Sekunden 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 300 Sekunden 
 |===
 
 
 == Fehlerbehebung
 
-Wenn SolidFire einen Fehler meldet, wird er in Data Infrastructure Insights wie folgt angezeigt:
+Wenn SolidFire einen Fehler meldet, wird dieser in Data Infrastructure Insights wie folgt angezeigt:
 
-_Beim Versuch, Daten abzurufen, wurde eine Fehlermeldung von einem SolidFire-Gerät empfangen. Der Aufruf war <method> (<parameterString> ). Die Fehlermeldung vom Gerät war (überprüfen Sie die Bedienungsanleitung des Geräts): <message>_
+_Beim Versuch, Daten abzurufen, wurde eine Fehlermeldung von einem SolidFire -Gerät empfangen.  Der Aufruf war <Methode> (<ParameterString>).  Die Fehlermeldung des Geräts lautete (siehe Gerätehandbuch): <message>_
 
-Wo?
+Wo:
 
-* Die <-Methode> ist eine HTTP-Methode, z. B. GET oder PUT.
-* Der <parameterString> ist eine kommagetrennte Liste von Parametern, die im REST-Aufruf enthalten waren.
-* Die Meldung <message> ist das Gerät, das als Fehlermeldung zurückgegeben wurde.
+* Die <Methode> ist eine HTTP-Methode, beispielsweise GET oder PUT.
+* Der <parameterString> ist eine durch Kommas getrennte Liste von Parametern, die im REST-Aufruf enthalten waren.
+* Die <message> ist die vom Gerät zurückgegebene Fehlermeldung.
 
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

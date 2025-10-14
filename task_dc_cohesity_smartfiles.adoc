@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_cohesity_smartfiles.html 
 keywords: data collector, cohesity 
-summary: Konfigurieren des Datensammlers Cohesity SmartFiles 
+summary: Konfigurieren des Cohesity SmartFiles-Datensammlers. 
 ---
-= Datensammler Cohesity SmartFiles
+= Cohesity SmartFiles-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser REST-API-basierte Collector erwirbt ein Cohesity-Cluster, das die „Ansichten“ (als interne Data Infrastructure Insights Volumes) und die verschiedenen Nodes erkennt und Performance-Metriken sammelt.
+Dieser auf REST-API basierende Collector erwirbt einen Cohesity-Cluster, erkennt die „Ansichten“ (als interne Volumes von Data Infrastructure Insights ) und die verschiedenen Knoten und sammelt Leistungsmetriken.
 
 
 
@@ -21,13 +21,13 @@ Dieser REST-API-basierte Collector erwirbt ein Cohesity-Cluster, das die „Ansi
 | Feld | Beschreibung 
 
 
-| Cohesity Cluster-IP | IP-Adresse des Cohesity-Clusters 
+| Cohesity-Cluster-IP | IP-Adresse des Cohesity-Clusters 
 
 
-| Benutzername | Benutzername für den Cohesity Cluster 
+| Benutzername | Benutzername für den Cohesity-Cluster 
 
 
-| Passwort | Passwort, das für den Cohesity Cluster verwendet wird 
+| Passwort | Für den Cohesity-Cluster verwendetes Passwort 
 |===
 
 
@@ -38,16 +38,16 @@ Dieser REST-API-basierte Collector erwirbt ein Cohesity-Cluster, das die „Ansi
 | Feld | Beschreibung 
 
 
-| TCP-Anschluss | Port, der für die TCP-Kommunikation mit dem Cohesity-Cluster verwendet wird 
+| TCP-Port | Für die TCP-Kommunikation mit dem Cohesity-Cluster verwendeter Port 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
 
 
-| Leistungsintervall (min) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 900 Sekunden. 
+| Leistungsabfrageintervall (min) | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 900 Sekunden. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -4,7 +4,7 @@ permalink: task_config_telegraf_kubernetes.html
 keywords: telegraf 
 summary: Datensammler für Kubernetes 
 ---
-= Data Collector: Kubernetes
+= Datensammler: Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,32 +14,32 @@ summary: Datensammler für Kubernetes
 
 
 [role="lead"]
-Data Infrastructure Insights nutzt diesen Datensammler, um Kennzahlen zu Kubernetes Pod, Node und Container zu sammeln.
+Data Infrastructure Insights verwendet diesen Datensammler, um Kubernetes-Pod-, Node- und Container-Metriken zu erfassen.
 
 
 
 == Installation
 
-Anweisungen zur Installation von Kubernetes finden Sie auf der link:task_config_telegraf_agent_k8s.html["Kubernetes Monitoring Operator"] Seite.
+Anweisungen zur Installation von Kubernetes finden Sie imlink:task_config_telegraf_agent_k8s.html["Kubernetes-Überwachungsoperator"] Seite.
 
 
 
 == Über Kube-State-Metrics
 
-Der Kubernetes Monitoring Operator installiert kube-State-Metriken automatisch. Es ist keine Benutzerinteraktion erforderlich.
+Der Kubernetes Monitoring Operator installiert kube-state-metrics automatisch; es ist keine Benutzerinteraktion erforderlich.
 
 
 
-=== Kube-State-metrics-Zähler
+=== Kube-State-Metrics-Zähler
 
-Der NetApp-Kubernetes-Überwachungsoperator extrahiert die unten aufgeführten Kennzahlen für den kube-Status. Weitere Informationen zu jedem Zähler finden Sie unter: https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[].
+Der NetApp Kubernetes Monitoring Operator extrahiert die unten aufgeführten Kube-State-Metrics-Zähler.  Weitere Einzelheiten zu den einzelnen Zählern finden Sie unter: https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[] .
 
-. DemonSet Metrics
-. Implementierungsmetriken
-. Namespace-Kennzahlen
-. Node-Kennzahlen
-. Persistente Volume-Kennzahlen
-. Persistent Volume Claim Metrics
+. DaemonSet-Metriken
+. Bereitstellungsmetriken
+. Namespace-Metriken
+. Knotenmetriken
+. Persistente Volumenmetriken
+. Metriken für persistente Volumenansprüche
 . Pod-Metriken
 . ReplicaSet-Metriken
 . Servicemetriken

@@ -2,46 +2,46 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_rest.html 
 keywords: data collector, Brocade, FC switch, FOS, Rest 
-summary: Konfigurieren des Brocade FOS REST-Datensammlers 
+summary: Konfigurieren des Brocade FOS REST-Datenkollektors. 
 ---
-= Brocade FOS REST Data Collector
+= Brocade FOS REST-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Brocade FOS REST Collector, um Bestand und Performance für Brocade-Switch-Geräte mit FabricOS (FOS) Firmware 8.2 und höher zu ermitteln. Bitte beachten Sie, dass frühe 8.2-FOS-Versionen möglicherweise REST-API-Fehler aufweisen. Es wird dringend empfohlen, die neuste FOS-Version auszuführen, die Ihre Plattform unterstützt.
+Data Infrastructure Insights verwendet den Brocade FOS REST-Collector, um Inventar und Leistung für Brocade -Switch-Geräte mit FabricOS (FOS)-Firmware 8.2 und höher zu ermitteln.  Bitte beachten Sie, dass frühe 8.2-FOS-Versionen möglicherweise REST-API-Fehler aufweisen. Es wird dringend empfohlen, die neuste FOS-Version auszuführen, die Ihre Plattform unterstützt.
 
-Bitte beachten Sie: FOS' Standard "user"-Ebene ist nicht ausreichend leistungsfähig, damit Data Infrastructure Insights alle logischen Aspekte eines Geräts anzeigen kann - wir benötigen ein Benutzerkonto mit aktivierter "Chassis Role" sowie Berechtigungen für alle auf einem Switch konfigurierten virtuellen Fabrics.
+Bitte beachten Sie: Die standardmäßige „Benutzer“-Ebene von FOS ist für Data Infrastructure Insights nicht leistungsfähig genug, um alle logischen Aspekte eines Geräts anzuzeigen. Wir benötigen ein Benutzerkonto mit aktivierter „Chassis-Rolle“ sowie Berechtigungen für alle auf einem Switch konfigurierten virtuellen Fabrics.
 
-Hier ist ein Beispiel dafür, wie Sie ein Benutzerkonto mit den geringsten Berechtigungen für die Verwendung von Data Infrastructure Insights in einer SSH-Sitzung auf einem FOS-Gerät erstellen können:
+Hier ist ein Beispiel, wie Sie ein Benutzerkonto mit den geringsten Berechtigungen für die Verwendung von Data Infrastructure Insights in einer SSH-Sitzung mit einem FOS-Gerät erstellen können:
 
-UserConfig --add NetAppCIUser -r user -l 1-128 -c user -p Qwerty!
+userConfig --add NetAppCIUser -r Benutzer -l 1-128 -c Benutzer -p Qwerty!
 
-Dadurch wird ein User „NetAppCIUser“ mit einem Passwort von „Qwerty!“ eingerichtet. Dieser Benutzer hat die „user“-Rolle (-r) für alle 128 möglichen virtuellen Fabrics ( -l ). Dieser Benutzer verfügt zusätzlich über die erforderliche „Chassis“-Rolle ( -c) mit zugewiesenem Zugriff auf Benutzerebene.
+Dadurch wird ein Benutzer „NetAppCIUser“ mit dem Kennwort „Qwerty!“ erstellt.  Dieser Benutzer hat die Rolle „Benutzer“ (-r) für alle 128 möglichen virtuellen Fabrics ( -l ).  Dieser Benutzer verfügt zusätzlich über die erforderliche „Chassis“-Rolle (-c) mit zugewiesenem Zugriff auf Benutzerebene.
 
-Standardmäßig versucht dieser Collector, alle FOS-Geräte zu ermitteln, die Teil aller Fabrics sind, zu denen der Switch gehört.
+Standardmäßig versucht dieser Collector, alle FOS-Geräte zu erkennen, die Teil aller Fabrics sind, zu denen der Switch gehört.
 
-Bitte beachten Sie: FOS' Standard-schreibgeschützter Benutzer "user" hat KEINE Ansichtsberechtigungen auf allen virtuellen Fabrics, noch hat er "Chassis Role" Berechtigungen. Dies bedeutet, dass Sie mit „Benutzer“ mit Data Infrastructure Insights eine geringe Erfolgswahrscheinlichkeit haben, da diese sowohl die physische als auch die logische Konfiguration des FOS-Geräts verstehen müssen.
+Bitte beachten Sie: Der standardmäßige schreibgeschützte Benutzer „Benutzer“ von FOS verfügt NICHT über Anzeigeberechtigungen für alle virtuellen Fabrics und auch nicht über Berechtigungen für die „Chassis-Rolle“.  Dies bedeutet, dass die Erfolgsaussichten bei der Verwendung von „Benutzer“ mit Data Infrastructure Insights gering sind, da hierfür sowohl die physische als auch die logische Konfiguration des FOS-Geräts bekannt sein muss.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Brocade FOS REST Data Collector. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Brocade FOS REST-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Switch | Switch 
+| Schalten | Schalten 
 
 
-| Port | Port 
+| Hafen | Hafen 
 
 
-| Virtual Fabric, Physische Fabric | Fabric 
+| Virtuelles Gewebe, physisches Gewebe | Stoff 
 
 
 | Zone | Zone 
@@ -50,16 +50,16 @@ Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem
 | Logischer Switch | Logischer Switch 
 
 
-| LSAN-Zone zu erreichen | IVR-Zone zu erreichen 
+| LSAN-Zone | IVR-Zone 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* Es muss eine TCP-Verbindung zu allen Switches in der Fabric vorhanden sein. Dieser Datensammlertyp versucht nahtlos sowohl HTTP als auch HTTPS für jedes Gerät in der Fabric. Wenn Sie das Kontrollkästchen _Discover all Switches in the Fabric_ aktivieren, identifiziert Data Infrastructure Insights alle Switches in der Fabric; es benötigt jedoch TCP-Konnektivität zu diesen zusätzlichen Switches, um sie zu erkennen.
-* Weltweit ist dasselbe Konto über alle Switches in der Fabric erforderlich. Sie können den Zugriff über die Webschnittstelle des Geräts bestätigen.
+* Es muss eine TCP-Konnektivität zu allen Switches im Fabric bestehen.  Dieser Datensammlertyp probiert nahtlos sowohl HTTP als auch HTTPS für jedes Gerät im Fabric aus.  Wenn Sie das Kontrollkästchen „Alle Switches im Fabric erkennen“ aktivieren, identifiziert Data Infrastructure Insights alle Switches im Fabric. Allerdings ist für die Erkennung dieser zusätzlichen Switches eine TCP-Verbindung erforderlich.
+* Für alle Switches im Fabric ist global dasselbe Konto erforderlich.  Sie können den Zugriff über die Weboberfläche des Geräts bestätigen.
 
 
 
@@ -71,7 +71,7 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Switch-IP | IP-Adresse oder vollständig qualifizierter Domänenname des FOS-Switches 
+| IP wechseln | IP-Adresse oder vollqualifizierter Domänenname des FOS-Switches 
 
 
 | Benutzername | Benutzername für den Switch 
@@ -88,31 +88,31 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Ausgeschlossene Geräte | Kommagetrennte Liste der Geräte-IPv4-Adressen, die von der Abfrage ausgeschlossen werden sollen. 
+| Ausgeschlossene Geräte | Durch Kommas getrennte Liste von Geräte-IPv4-Adressen, die von der Abfrage ausgeschlossen werden sollen. 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Der Standardwert ist 60. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen.  Der Standardwert ist 60. 
 
 
-| Erkennung aller Switches in der Fabric | Wählen Sie diese Option aus, um alle Switches in der Fabric zu ermitteln. 
+| Entdecken Sie alle Switches im Fabric | Wählen Sie diese Option aus, um alle Switches im Fabric zu erkennen. 
 
 
-| Wählen Sie „HBA vs. Zone Aliases bevorzugen“ | Wählen Sie aus, ob HBA- oder Zonenaliase bevorzugt werden sollen. 
+| Wählen Sie HBA gegenüber Zonenaliasen | Wählen Sie, ob HBA- oder Zonenaliase bevorzugt werden sollen. 
 
 
-| Verbindungstyp | HTTP oder HTTPS. 
+| Anschlussart | HTTP oder HTTPS. 
 
 
-| Beachten Sie, dass diese Einstellung nur ändert, welches Protokoll-CI zuerst pro Gerät verwendet. CI versucht automatisch, das andere Protokoll zu verwenden, wenn die Standardeinstellung fehlschlägt | TCP-Port überschreiben 
+| Beachten Sie, dass diese Einstellung nur ändert, welches Protokoll CI zuerst pro Gerät zu verwenden versucht. CI versucht automatisch das entgegengesetzte Protokoll, wenn die Standardeinstellung fehlschlägt. | TCP-Port überschreiben 
 
 
-| Geben Sie einen Port an, wenn der Standardwert nicht verwendet wird. | Leistungsintervall (Sek.) 
+| Geben Sie einen Port an, wenn Sie nicht den Standardport verwenden. | Leistungsabfrageintervall (Sek.) 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -120,21 +120,21 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Die Testfunktion warnt mich, dass ein Protokoll nicht zugänglich ist | Ein bestimmtes Brocade FOS 8.2+ Gerät will nur über HTTP oder HTTPS sprechen - wenn ein Switch ein digitales Zertifikat installiert hat, wirft der Switch HTTP-Fehler auf, wenn man versucht, mit unverschlüsseltem HTTP gegen HTTPS zu kommunizieren. Die Testfunktion versucht die Kommunikation mit HTTP und HTTPS - wenn der Test Ihnen mitteilt, dass ein Protokoll erfolgreich ist, können Sie den Collector sicher speichern und sich keine Sorgen machen, dass das andere Protokoll nicht erfolgreich war - der Collector versucht beide Protokolle während der Sammlung und schlägt nur fehl, wenn keines funktioniert. 
+| Die Testfunktion warnt mich, dass auf ein Protokoll nicht zugegriffen werden kann | Ein bestimmtes Brocade FOS 8.2+-Gerät möchte nur über HTTP oder HTTPS kommunizieren. Wenn auf einem Switch ein digitales Zertifikat installiert ist, gibt der Switch HTTP-Fehler aus, wenn versucht wird, mit ihm über unverschlüsseltes HTTP statt HTTPS zu kommunizieren.  Die Testfunktion versucht, sowohl mit HTTP als auch mit HTTPS zu kommunizieren. Wenn der Test ergibt, dass ein Protokoll erfolgreich ist, können Sie den Collector sicher speichern und müssen sich keine Sorgen machen, dass das andere Protokoll nicht erfolgreich war. Der Collector versucht während der Erfassung beide Protokolle und schlägt nur fehl, wenn keines von beiden funktioniert. 
 
 
-| Fehler: Inventarisierung schlägt mit 401 Nicht autorisiert fehl... Ungültiger Sitzungsschlüssel... | Dies ist ein eindeutiger Fehler in einigen sehr frühen 8.2 FOS-Versionen wie 8.2.1c, die die HTTP-Basisauthentifizierung NICHT ordnungsgemäß unterstützen. Aktualisieren Sie auf eine spätere Version 8.2 oder 9.* 
+| Fehler: Inventarisierung schlägt mit 401 Unauthorized fehl...Ungültiger Sitzungsschlüssel... | Dies ist ein eindeutiger Fehler in einigen sehr frühen 8.2 FOS-Versionen wie 8.2.1c, die die HTTP-Basisauthentifizierung NICHT richtig unterstützen.  Upgrade auf eine spätere Version 8.2 oder 9.* 
 
 
-| Fehler: „Data Infrastructure Insights received invalid Chassis role“ | Vergewissern Sie sich, dass dem in dieser Datenquelle konfigurierten Benutzer die Berechtigung für die Gehäuserolle erteilt wurde. 
+| Fehler: „Data Infrastructure Insights hat eine ungültige Chassis-Rolle erhalten“ | Überprüfen Sie, ob dem in dieser Datenquelle konfigurierten Benutzer die Berechtigung für die Chassis-Rolle erteilt wurde. 
 
 
-| Fehler: „IP-Adresse des Gehäuses nicht stimmt überein“ | Ändern Sie die Konfiguration der Datenquelle, um die Gehäuse-IP-Adresse zu verwenden. 
+| Fehler: „Nicht übereinstimmende Gehäuse-IP-Adresse“ | Ändern Sie die Datenquellenkonfiguration, um die IP-Adresse des Gehäuses zu verwenden. 
 
 
-| Die Inventur schlägt mit einer 403 Verbotenen fehl | Dies kann einfach schlechte Anmeldeinformationen sein, oder es kann bezeichnend sein, dass Sie versuchen, eine nicht ausreichend leistungsstarke Rolle zu verwenden - denken Sie daran, dass Benutzer auf Benutzerebene nicht über das erforderliche Recht auf „Gehäuserolle“ verfügen oder den Zugriff auf nicht standardmäßige virtuelle Fabrics anzeigen. 
+| Die Inventur schlägt mit der Fehlermeldung „403 Forbidden“ fehl | Dies können einfach ungültige Anmeldeinformationen sein oder ein Hinweis darauf, dass Sie versuchen, eine Rolle mit unzureichenden Befugnissen zu verwenden. Bedenken Sie, dass Benutzer auf der Ebene „Benutzer“ NICHT über die erforderlichen Rechte für die „Chassis-Rolle“ verfügen oder keinen Anzeigezugriff auf nicht standardmäßige virtuelle Fabrics haben. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

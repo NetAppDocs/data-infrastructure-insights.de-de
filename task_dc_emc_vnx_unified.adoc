@@ -2,68 +2,68 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnx_unified.html 
 keywords: data collector, VNX, EMC, Dell 
-summary: Konfiguration des VNX Datensammlers 
+summary: VNX-Datenkollektor konfigurieren. 
 ---
-= Konfigurieren des Dell EMC VNX Unified Data Collectors
+= Konfigurieren des Dell EMC VNX Unified-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Für die Konfiguration benötigt der Dell EMC VNX Unified (SSH)-Datensammler die IP-Adresse der Control Station sowie einen schreibgeschützten Benutzernamen und ein Kennwort.
+Zur Konfiguration benötigt der Dell EMC VNX Unified (SSH)-Datensammler die IP-Adresse der Control Station sowie einen schreibgeschützten Benutzernamen und ein Kennwort.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus diesem Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält von diesem Datensammler die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 
 
-| Festplattenordner | Festplattengruppe 
+| Datenträgerordner | Datenträgergruppe 
 
 
-| File-System | Internes Volumen 
+| Dateisystem | Internes Volumen 
 
 
 | Storage | Storage 
 
 
-| Storage Processor | Storage-Node 
+| Speicherprozessor | Speicherknoten 
 
 
-| Speicherpool, RAID-Gruppe | Storage-Pool 
+| Speicherpool, RAID-Gruppe | Speicherpool 
 
 
-| LUN | Datenmenge 
+| LUN | Volumen 
 
 
-| Data Mover | Controller 
+| Datenverschieber | Regler 
 
 
-| Auf einem Data Mover gemountet | Dateifreigabe 
+| Auf einem Data Mover gemountetes Dateisystem | Dateifreigabe 
 
 
-| CIFS- und NFS-Exporte | Share 
+| CIFS- und NFS-Exporte | Aktie 
 
 
-| Festplatten-Volume | Back-End LUN 
+| Datenträgervolumen | Backend-LUN 
 |===
 
 
 == Anforderungen
 
-Sie benötigen Folgendes, um den VNX (SSH) Data Collector zu konfigurieren:
+Zum Konfigurieren des VNX (SSH)-Datenkollektors benötigen Sie Folgendes:
 
-* VNX-IP-Adresse und Anmeldeinformationen an der Celerra Control Station.
-* Nur-Lese-Benutzername und Kennwort.
-* Der Datensammler kann NaviCLI/NaviSecCLI Befehle gegen das Backend-Array ausführen, das die DART OS NAS Heads verwendet
+* VNX-IP-Adresse und Anmeldeinformationen für die Celerra Control Station.
+* Benutzername und Passwort sind schreibgeschützt.
+* Der Datensammler kann NaviCLI/NaviSecCLI-Befehle auf dem Backend-Array ausführen, indem er die DART OS NAS-Köpfe nutzt.
 
 
 
@@ -81,24 +81,24 @@ Sie benötigen Folgendes, um den VNX (SSH) Data Collector zu konfigurieren:
 | Benutzername | Benutzername für die VNX Control Station 
 
 
-| Passwort | Kennwort für die VNX Control Station 
+| Passwort | Passwort für die VNX Control Station 
 |===
 
 
-== Erweiterte Konfigiration
+== Erweiterte Konfiguration
 
 [cols="2*"]
 |===
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 40 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 40 Minuten. 
 
 
-| Leistungsintervall (Sek.). | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+| Leistungsabfrageintervall (Sek.). | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 300 Sekunden. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

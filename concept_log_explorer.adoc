@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: concept_log_explorer.html 
 keywords: logs, monitors, alerts, EMS, 
-summary: Der Log Explorer ist ein leistungsstarkes Tool zur Untersuchung von Problemen anhand verschiedener Systemprotokolle. 
+summary: Der Log Explorer ist ein leistungsstarkes Tool zum Untersuchen von Problemen anhand verschiedener Systemprotokolle. 
 ---
-= Log-Explorer
+= Protokoll-Explorer
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der Data Infrastructure Insights Log Explorer ist ein leistungsstarkes Tool zum Abfragen von Systemprotokollen. Zusätzlich zur Unterstützung bei Ermittlungen können Sie auch eine Protokollabfrage in einem Monitor speichern, um Warnmeldungen zu geben, wenn diese bestimmten Protokollauslöser aktiviert sind.
+Der Data Infrastructure Insights Log Explorer ist ein leistungsstarkes Tool zum Abfragen von Systemprotokollen.  Zusätzlich zur Unterstützung bei Untersuchungen können Sie auch eine Protokollabfrage in einem Monitor speichern, um Warnungen bereitzustellen, wenn diese bestimmten Protokollauslöser aktiviert werden.
 
-Klicken Sie auf *Log Queries > +New Log Query*, um mit der Suche nach Protokollen zu beginnen.
+Um mit der Untersuchung der Protokolle zu beginnen, klicken Sie auf *Protokollabfragen > +Neue Protokollabfrage*.
 
 Wählen Sie ein verfügbares Protokoll aus der Liste aus.
 
 image:LogExplorer_2022.png["Wählen Sie Ihr Protokoll"]
 
 
-NOTE: Die für das Abfragen verfügbaren Protokolltypen können je nach Umgebung variieren. Im Laufe der Zeit können weitere Protokolltypen hinzugefügt werden.
+NOTE: Die für die Abfrage verfügbaren Protokolltypen können je nach Umgebung variieren.  Im Laufe der Zeit können weitere Protokolltypen hinzugefügt werden.
 
-Sie können Filter festlegen, um die Ergebnisse der Abfrage weiter zu verfeinern. Um beispielsweise alle Protokollmeldungen zu finden, die einen Fehler anzeigen, setzen Sie einen Filter für _Messages_, der das Wort „Fehlgeschlagen“ enthält.
+Sie können Filter setzen, um die Ergebnisse der Abfrage weiter zu verfeinern.  Um beispielsweise alle Protokollmeldungen zu finden, die einen Fehler anzeigen, legen Sie einen Filter für _Meldungen_ fest, die das Wort „fehlgeschlagen“ enthalten.
 
 
-TIP: Sie können den gewünschten Text in das Filterfeld eingeben. Data Infrastructure Insights fordert Sie auf, bei der Eingabe eine Platzhaltersuche zu erstellen, die den String enthält.
+TIP: Sie können mit der Eingabe des gewünschten Textes in das Filterfeld beginnen. Data Infrastructure Insights fordert Sie während der Eingabe auf, eine Platzhaltersuche mit der Zeichenfolge zu erstellen.
 
-Die Ergebnisse werden in einem Diagramm angezeigt, in dem die Anzahl der Protokollinstanzen in jedem angezeigten Zeitraum angezeigt wird. Unter der Grafik sehen Sie die Protokolleinträge, die sich selbst bewegen. Das Diagramm und die Einträge werden automatisch auf der Grundlage des ausgewählten Zeitbereichs aktualisiert.
+Die Ergebnisse werden in einem Diagramm angezeigt, das die Anzahl der Protokollinstanzen in jedem angezeigten Zeitraum zeigt.  Unter dem Diagramm befinden sich die Protokolleinträge selbst.  Das Diagramm und die Einträge werden basierend auf dem ausgewählten Zeitraum automatisch aktualisiert.
 
 image:LogExplorer_QueryForFailed.png["Abfragebeispiel mit Filter"]
 
@@ -36,111 +36,111 @@ image:LogExplorer_QueryForFailed.png["Abfragebeispiel mit Filter"]
 
 
 
-=== Ein-/Ausschließen
+=== Einschließen / Ausschließen
 
-Beim Filtern der Protokolle können Sie wählen, ob Sie *include* (d.h. "Filter to") oder *exclude* die von Ihnen eintippten Strings wählen. Ausgeschlossene Zeichenfolgen werden im abgeschlossenen Filter als „NICHT <string>“ angezeigt.
+Beim Filtern der Protokolle können Sie wählen, ob Sie die eingegebenen Zeichenfolgen *einschließen* (d. h. „Filtern nach“) oder *ausschließen* möchten.  Ausgeschlossene Zeichenfolgen werden im vervollständigten Filter als „NOT <string>“ angezeigt.
 
-image:Log_Advanced_Query_Filter_Exclude.png["Protokollfilter zeigt Ausschlussoption an"]
+image:Log_Advanced_Query_Filter_Exclude.png["Protokollfilter mit Ausschlussoption"]
 
-Filter basierend auf Wildcards oder Ausdrücken (z. B. NICHT, ODER, „Keine“ usw.) werden im Filterfeld dunkelblau angezeigt. Elemente, die Sie direkt aus der Liste auswählen, werden hellblau angezeigt.
+Filter, die auf Platzhaltern oder Ausdrücken basieren (z. B. NICHT, ODER, „Keine“ usw.), werden im Filterfeld dunkelblau angezeigt.  Elemente, die Sie direkt aus der Liste auswählen, werden hellblau angezeigt.
 
 
-NOTE: Sie können jederzeit auf _Protokollmonitor erstellen_ klicken, um einen neuen Monitor basierend auf dem aktuellen Filter zu erstellen.
+NOTE: Sie können jederzeit auf „Protokollmonitor erstellen“ klicken, um einen neuen Monitor basierend auf dem aktuellen Filter zu erstellen.
 
 
 
 === Erweiterte Filterung
 
-Wenn Sie in Abfragen oder Dashboard-Widgets nach Text- oder Listenwerten filtern, werden Sie beim Eingeben mit der Option angezeigt, basierend auf dem aktuellen Text einen *Platzhalter-Filter* zu erstellen. Wenn Sie diese Option auswählen, werden alle Ergebnisse angezeigt, die dem Platzhalterausdruck entsprechen. Sie können auch Ausdrücke mit NOT, AND, OR oder erstellen oder Sie können die Option „Keine“ auswählen, um nach Nullwerten zu filtern.
+Wenn Sie in Abfragen oder Dashboard-Widgets nach Text oder Listenwerten filtern, wird Ihnen beim Eintippen die Option angezeigt, einen *Platzhalterfilter* basierend auf dem aktuellen Text zu erstellen.  Wenn Sie diese Option auswählen, werden alle Ergebnisse zurückgegeben, die mit dem Platzhalterausdruck übereinstimmen.  Sie können auch Ausdrücke mit NOT, AND oder OR erstellen oder die Option „Keine“ auswählen, um nach Nullwerten zu filtern.
 
 
-NOTE: Achten Sie darauf, Ihre Abfrage frühzeitig und häufig zu speichern, wenn Sie Ihre Filterung erstellen. Beim erweiterten Abfragen handelt es sich um einen „Freiform“-String-Eintrag, und beim Erstellen können Fehler beim Parsen auftreten.
+NOTE: Denken Sie daran, Ihre Abfrage frühzeitig und häufig zu speichern, während Sie Ihre Filterung erstellen.  Bei der erweiterten Abfrage handelt es sich um eine Zeichenfolgeneingabe in „freier Form“, und beim Erstellen können Analysefehler auftreten.
 
-Sehen Sie sich dieses Bildschirmbild an, das gefilterte Ergebnisse für eine erweiterte Abfrage des _logs.kubernetes.Event_-Protokolls zeigt. Auf dieser Seite ist viel los, was unter dem Bild erklärt wird:
+Sehen Sie sich dieses Bildschirmbild an, das gefilterte Ergebnisse für eine erweiterte Abfrage des _logs.kubernetes.event_-Protokolls zeigt.  Auf dieser Seite ist eine Menge los, was unter dem Bild erklärt wird:
 
-image:Log_Advanced_Query_ScreenExplained.png["Der Bildschirm „Erweiterte Abfrage“ Wird Erläutert"]
+image:Log_Advanced_Query_ScreenExplained.png["Der Bildschirm „Erweiterte Abfrage“ erklärt"]
 
-. Diese erweiterte Abfragezeichenfolge filtert Folgendes:
+. Diese erweiterte Abfragezeichenfolge filtert nach Folgendem:
 +
-** Filtern Sie nach Protokolleinträgen mit einem _reason_, der das Wort "failed" enthält, aber nichts mit dem spezifischen Grund von "FailedMount".
-** Fügen Sie einen dieser Einträge mit _metadata.namespace_ ein, einschließlich des Wortes "Monitoring", aber schließen Sie die spezifischen Namespaces von "cm-Monitoring" oder "EG-Monitoring" aus.
+** Filtern Sie nach Protokolleinträgen mit einem _Grund_, der das Wort „fehlgeschlagen“ enthält, aber nicht nach Einträgen mit dem spezifischen Grund „FailedMount“.
+** Schließen Sie alle Einträge ein, die auch einen _metadata.namespace_ mit dem Wort „monitoring“ enthalten, schließen Sie jedoch die spezifischen Namespaces „cm-monitoring“ oder „eg-monitoring“ aus.
 +
-Beachten Sie, dass im obigen Fall, da sowohl "cm-Monitoring" als auch "EG-Monitoring" einen Bindestrich ("-") enthalten, die Strings in doppelte Anführungszeichen eingefügt werden müssen, oder ein Parsing-Fehler angezeigt wird. Zeichenfolgen, die keine Bindestriche, Leerzeichen usw. enthalten, müssen nicht in Anführungszeichen eingeschlossen werden. Im Zweifelsfall versuchen Sie, die Zeichenfolge in Anführungszeichen zu setzen.
+Beachten Sie, dass im obigen Fall sowohl „cm-monitoring“ als auch „eg-monitoring“ einen Bindestrich („-“) enthalten. Daher müssen die Zeichenfolgen in Anführungszeichen gesetzt werden, da sonst ein Analysefehler angezeigt wird.  Zeichenfolgen, die keine Bindestriche, Leerzeichen usw. enthalten, müssen nicht in Anführungszeichen gesetzt werden.  Versuchen Sie im Zweifelsfall, die Zeichenfolge in Anführungszeichen zu setzen.
 
 
 
-. Die Ergebnisse des aktuellen Filters, einschließlich aller „Filtern nach“-Werte UND des erweiterten Abfragefilters, werden in der Ergebnisliste angezeigt. Die Liste kann nach allen angezeigten Spalten sortiert werden. Um weitere Spalten anzuzeigen, wählen Sie das Zahnrad-Symbol.
-. Das Diagramm wurde vergrößert, um nur Protokollergebnisse anzuzeigen, die innerhalb eines bestimmten Zeitrahmens aufgetreten sind. Der hier angezeigte Zeitbereich entspricht dem aktuellen Zoomfaktor. Wählen Sie die Schaltfläche _Zoom zurücksetzen_, um den Zoomfaktor auf den aktuellen Dateninfrastrukturzeitbereich zurückzusetzen.
-. Die Diagrammergebnisse wurden nach dem Feld _source_ gruppiert. Das Diagramm zeigt die Ergebnisse in jeder Spalte, die in Farben gruppiert sind. Wenn Sie den Mauszeiger über eine Spalte im Diagramm bewegen, werden einige Details zu den spezifischen Einträgen angezeigt.
+. Die Ergebnisse des aktuellen Filters, einschließlich aller „Filtern nach“-Werte UND des erweiterten Abfragefilters, werden in der Ergebnisliste angezeigt.  Die Liste kann nach allen angezeigten Spalten sortiert werden.  Um zusätzliche Spalten anzuzeigen, wählen Sie das Zahnradsymbol aus.
+. Das Diagramm wurde vergrößert, um nur Protokollergebnisse anzuzeigen, die innerhalb eines bestimmten Zeitrahmens aufgetreten sind.  Der hier angezeigte Zeitbereich spiegelt die aktuelle Zoomstufe wider.  Wählen Sie die Schaltfläche _Zoom zurücksetzen_, um die Zoomstufe wieder auf den aktuellen Data Infrastructure Insights -Zeitbereich zurückzusetzen.
+. Die Diagrammergebnisse wurden nach dem Feld _Quelle_ gruppiert.  Das Diagramm zeigt die Ergebnisse in jeder Spalte, gruppiert nach Farben.  Wenn Sie mit der Maus über eine Spalte im Diagramm fahren, werden einige Details zu den jeweiligen Einträgen angezeigt.
 +
-image:Log_Advanced_Query_Group_Detail.png["Details Zum Gruppierten Hover"]
+image:Log_Advanced_Query_Group_Detail.png["Gruppierte Hover-Details"]
 
 
 
 
 
-==== Verfeinern Von Filtern
+==== Filter verfeinern
 
-Sie können den Filter wie folgt verfeinern:
+Sie können Ihren Filter folgendermaßen verfeinern:
 
 |===
 
 
-| Filtern | Das macht es 
+| Filter | Was es bewirkt 
 
 
-| * (Sternchen) | Ermöglicht Ihnen die Suche nach allem 
+| * (Sternchen) | ermöglicht Ihnen die Suche nach allem 
 
 
-| ? (Fragezeichen) | Ermöglicht die Suche nach einer bestimmten Anzahl von Zeichen 
+| ? (Fragezeichen) | ermöglicht die Suche nach einer bestimmten Anzahl von Zeichen 
 
 
-| ODER | Ermöglicht Ihnen die Angabe mehrerer Elemente 
+| ODER | ermöglicht Ihnen die Angabe mehrerer Entitäten 
 
 
-| NICHT | Ermöglicht das Ausschließen von Text aus den Suchergebnissen 
+| NICHT | ermöglicht es Ihnen, Text aus den Suchergebnissen auszuschließen 
 
 
-| _Keine_ | Sucht in allen Feldern nach Null-Werten 
+| _Keiner_ | sucht in allen Feldern nach NULL-Werten 
 
 
-| Nicht * | Sucht nach Null-Werten in Feldern _Text-only_ 
+| Nicht * | sucht nach NULL-Werten in _Nur-Text_-Feldern 
 |===
-Wenn Sie einen Filter in doppelte Anführungszeichen einschließen, behandelt Insight alles zwischen dem ersten und dem letzten Zitat als exakte Übereinstimmung. Alle Sonderzeichen oder Operatoren in den Angeboten werden als Literale behandelt. Wenn Sie beispielsweise nach „*“ filtern, erhalten Sie Ergebnisse, die ein wortwörtlicher Stern sind; das Sternchen wird in diesem Fall nicht als Platzhalter behandelt. Die Operatoren OR und NOT werden auch als Literalzeichenfolgen behandelt, wenn sie in doppelten Anführungszeichen eingeschlossen sind.
+Wenn Sie eine Filterzeichenfolge in doppelte Anführungszeichen setzen, behandelt Insight alles zwischen dem ersten und letzten Anführungszeichen als exakte Übereinstimmung.  Alle Sonderzeichen oder Operatoren innerhalb der Anführungszeichen werden als Literale behandelt.  Wenn Sie beispielsweise nach „*“ filtern, werden Ergebnisse zurückgegeben, die ein Sternchen sind. Das Sternchen wird in diesem Fall nicht als Platzhalter behandelt.  Die Operatoren OR und NOT werden auch als Literalzeichenfolgen behandelt, wenn sie in doppelte Anführungszeichen eingeschlossen sind.
 
-Sie können einen einfachen Filter mit einem erweiterten Abfragefilter kombinieren; der resultierende Filter ist ein "UND" der beiden.
+Sie können einen einfachen Filter mit einem erweiterten Abfragefilter kombinieren. Der resultierende Filter ist ein „UND“ der beiden.
 
 
 
-=== Die Diagrammlegende
+=== Die Chart-Legende
 
-Die _Legend_ unterhalb des Diagramms hat auch einige Überraschungen. Für jedes in der Legende angezeigte Ergebnis (basierend auf dem aktuellen Filter) haben Sie die Möglichkeit, nur Ergebnisse für diese Zeile anzuzeigen (Filter hinzufügen) oder Ergebnisse anzuzeigen, die NICHT für diese Zeile vorhanden sind (Filter hinzufügen). Das Diagramm und die Liste Protokolleinträge werden aktualisiert, um die Ergebnisse basierend auf Ihrer Auswahl anzuzeigen. Um diese Filterung zu entfernen, öffnen Sie die Legende erneut, und wählen Sie [X], um den Legendenfilter zu löschen.
+Auch die _Legende_ unter dem Diagramm hält einige Überraschungen bereit.  Für jedes in der Legende angezeigte Ergebnis (basierend auf dem aktuellen Filter) haben Sie die Möglichkeit, nur Ergebnisse für diese Zeile anzuzeigen (Filter hinzufügen) oder alle Ergebnisse anzuzeigen, die NICHT für diese Zeile gelten (Ausschlussfilter hinzufügen).  Das Diagramm und die Liste der Protokolleinträge werden aktualisiert, um die Ergebnisse basierend auf Ihrer Auswahl anzuzeigen.  Um diese Filterung zu entfernen, öffnen Sie die Legende erneut und wählen Sie das [X] aus, um den legendenbasierten Filter zu löschen.
 
-image:Log_Advanced_Query_Legend.png["Advanced Query Legen zeigt \"Filter hinzufügen\" für das erste Ergebnis"]
+image:Log_Advanced_Query_Legend.png["Erweiterte Abfragelegende zeigt „Filter hinzufügen“ für das erste Ergebnis"]
 
 
 
 == Protokolldetails
 
-Wenn Sie auf eine beliebige Stelle in einem Protokolleintrag in der Liste klicken, wird ein Detailfenster für diesen Eintrag geöffnet. Hier können Sie weitere Informationen zur Veranstaltung einsehen.
+Wenn Sie irgendwo in der Liste auf einen Protokolleintrag klicken, wird ein Detailbereich für diesen Eintrag geöffnet.  Hier können Sie weitere Informationen zur Veranstaltung finden.
 
-Klicken Sie auf „Filter hinzufügen“, um das ausgewählte Feld dem aktuellen Filter hinzuzufügen. Die Protokolleintragsliste wird basierend auf dem neuen Filter aktualisiert.
+Klicken Sie auf „Filter hinzufügen“, um das ausgewählte Feld zum aktuellen Filter hinzuzufügen.  Die Liste der Protokolleinträge wird basierend auf dem neuen Filter aktualisiert.
 
-Beachten Sie, dass einige Felder nicht als Filter hinzugefügt werden können; in diesen Fällen ist das _Filter hinzufügen_ -Symbol nicht verfügbar.
+Beachten Sie, dass einige Felder nicht als Filter hinzugefügt werden können. In diesen Fällen ist das Symbol „Filter hinzufügen“ nicht verfügbar.
 
-image:LogExplorer_DetailPane.png["Detailbereich Protokolleintrag"]
+image:LogExplorer_DetailPane.png["Detailbereich des Protokolleintrags"]
 
 
 
 == Fehlerbehebung
 
-Hier finden Sie Vorschläge zur Fehlerbehebung bei Protokollanfragen.
+Hier finden Sie Vorschläge zur Behebung von Problemen mit Protokollabfragen.
 
 |===
 
 
-| *Problem:* | *Teste das:* 
+| *Problem:* | *Versuchen Sie Folgendes:* 
 
 
-| Ich sehe keine „Debug“ Nachrichten in meiner Log-Abfrage | Debug-Protokollnachrichten werden nicht erfasst. Um die gewünschten Meldungen zu erfassen, ändern Sie den Schweregrad der betreffenden Nachricht in den Wert „_informative“, „Error“, „Alert“, „Emergency“ oder „Notice_“. 
+| Ich sehe keine „Debug“-Meldungen in meiner Protokollabfrage | Debug-Protokollnachrichten werden nicht erfasst.  Um die gewünschten Nachrichten zu erfassen, ändern Sie den Schweregrad der entsprechenden Nachricht auf die Ebene „Information“, „Fehler“, „Alarm“, „Notfall“ oder „Hinweis“. 
 |===

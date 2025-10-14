@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_cloud_connection.html 
-summary: Konfigurieren Sie NetApp Cloud Connection für ONTAP 9.9 oder höher Data Collector 
+summary: Konfigurieren Sie die NetApp Cloud-Verbindung für den ONTAP 9.9+-Datenkollektor 
 keywords: data collector, NetApp, Cloud agent, ONTAP 
 ---
-= NetApp Cloud Connection für ONTAP 9.9 oder höher
+= NetApp Cloud Connection für ONTAP 9.9+ Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler erstellt eine Cloud-Verbindung, um Daten aus ONTAP 9.9+ CVO, AFF und FAS zu erfassen.
+Dieser Datensammler erstellt eine Cloud-Verbindung, um die Datenerfassung von ONTAP 9.9+ CVO-, AFF und FAS Systemen zu unterstützen.
 
 
-NOTE: Der Datensammler kann ab 4. April 2023 nicht mehr in Data Infrastructure Insights installiert werden und wird ab Juli 2023 aus allen Installationen von Data Infrastructure Insights entfernt.
+NOTE: Dieser Datensammler kann ab dem 4. April 2023 nicht mehr in Data Infrastructure Insights installiert werden und wird im Juli 2023 aus allen Data Infrastructure Insights -Installationen entfernt.

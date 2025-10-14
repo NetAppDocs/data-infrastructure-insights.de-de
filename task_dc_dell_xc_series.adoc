@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_dc_dell_xc_series.html 
 keywords: data collector, Dell, EMC, xc 
-summary: Konfigurieren des Dell EMC XC-Datensammlers. 
+summary: Konfigurieren des Datenkollektors der Dell EMC XC-Serie. 
 ---
 = Datensammler der Dell EMC XC-Serie
 :hardbreaks:
@@ -10,7 +10,7 @@ summary: Konfigurieren des Dell EMC XC-Datensammlers.
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet diesen Datensammler, um Bestands- und Leistungsinformationen für die Dell Speicherarrays der EMC XC-Serie zu ermitteln.
+Data Infrastructure Insights verwendet diesen Datensammler, um Bestands- und Leistungsinformationen für die Speicher-Arrays der Dell EMC XC-Serie zu ermitteln.
 
 
 
@@ -21,7 +21,7 @@ Data Infrastructure Insights verwendet diesen Datensammler, um Bestands- und Lei
 | Feld | Beschreibung 
 
 
-| Externe IP-Adresse des Prism | IP-Adresse des XC-Servers 
+| Externe Prism-IP-Adresse | IP-Adresse des XC-Servers 
 
 
 | Benutzername | Benutzername für den XC-Server 
@@ -38,16 +38,16 @@ Data Infrastructure Insights verwendet diesen Datensammler, um Bestands- und Lei
 | Feld | Beschreibung 
 
 
-| TCP-Anschluss | Port, der für die TCP-Kommunikation mit dem XC-Server verwendet wird 
+| TCP-Port | Für die TCP-Kommunikation mit dem XC-Server verwendeter Port 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
 
 
-| Leistungsintervall (min) | Intervall zwischen Performance-Abstimmungen Die Standardeinstellung ist 300 Sekunden. 
+| Leistungsabfrageintervall (min) | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 300 Sekunden. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

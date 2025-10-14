@@ -4,7 +4,7 @@ permalink: task_create_annotation_rules.html
 summary: Sie erstellen Anmerkungsregeln, um Anmerkungen automatisch auf mehrere Assets anzuwenden. 
 keywords: annotate, annotation, rules 
 ---
-= Anmerkungsregeln werden erstellt
+= Erstellen von Anmerkungsregeln
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,34 +14,34 @@ keywords: annotate, annotation, rules
 
 
 [role="lead"]
-Mit Anmerkungsregeln können Sie Anmerkungen automatisch auf mehrere Assets anwenden, die auf den von Ihnen definierten Kriterien basieren. Data Infrastructure Insights weist Assets anhand dieser Regeln die Annotationen zu. Wenn Cloud Insight die Anmerkungsregeln auswertet, haben Annotationen, die manuell auf den Seiten einzelner Assets festgelegt wurden, Vorrang vor regelbasierten Annotationen.
+Mithilfe von Anmerkungsregeln können Sie Anmerkungen basierend auf den von Ihnen definierten Kriterien automatisch auf mehrere Assets anwenden.  Data Infrastructure Insights weist die Anmerkungen den Assets basierend auf diesen Regeln zu.  Manuell auf einzelnen Asset-Seiten festgelegte Anmerkungen haben Vorrang vor regelbasierten Anmerkungen, wenn Cloud Insight die Anmerkungsregeln auswertet.
 
 .Bevor Sie beginnen
 Sie müssen eine Abfrage für die Anmerkungsregel erstellt haben.
 
 .Schritte
-. Klicken Sie im Menü Data Infrastructure Insights auf *Verwalten > Anmerkungsregeln*.
+. Klicken Sie im Data Infrastructure Insights -Menü auf *Verwalten > Anmerkungsregeln*.
 . Klicken Sie auf *+ Regel*, um eine neue Anmerkungsregel hinzuzufügen.
 +
-Das Dialogfeld Regel hinzufügen wird angezeigt.
+Das Dialogfeld „Regel hinzufügen“ wird angezeigt.
 
-. Gehen Sie wie folgt vor:
+. Gehen Sie folgendermaßen vor:
 +
 .. Geben Sie im Feld *Name* einen eindeutigen Namen ein, der die Regel beschreibt.
 +
-Der Name wird auf der Seite Anmerkungsregeln angezeigt.
+Der Name wird auf der Seite „Anmerkungsregeln“ angezeigt.
 
-.. Klicken Sie auf *Query*, und wählen Sie die Abfrage aus, die Data Infrastructure Insights zur Identifizierung der Assets verwendet, für die die Anmerkung gilt.
-.. Klicken Sie auf *Anmerkung* und wählen Sie die Beschriftung aus, die Sie anwenden möchten.
+.. Klicken Sie auf *Abfrage* und wählen Sie die Abfrage aus, die Data Infrastructure Insights verwendet, um die Assets zu identifizieren, auf die sich die Anmerkung bezieht.
+.. Klicken Sie auf *Anmerkung* und wählen Sie die Anmerkung aus, die Sie anwenden möchten.
 .. Klicken Sie auf *Wert* und wählen Sie einen Wert für die Anmerkung aus.
 +
-Wenn Sie beispielsweise als Anmerkung Geburtstag auswählen, geben Sie ein Datum für den Wert an.
+Wenn Sie beispielsweise „Geburtstag“ als Anmerkung wählen, geben Sie ein Datum für den Wert an.
 
-.. Klicken Sie Auf *Speichern*
-.. Klicken Sie auf *Alle Regeln*, wenn Sie alle Regeln sofort ausführen möchten; andernfalls werden die Regeln in einem regelmäßigen geplanten Intervall ausgeführt.
+.. Klicken Sie auf *Speichern*
+.. Klicken Sie auf *Alle Regeln ausführen*, wenn Sie alle Regeln sofort ausführen möchten. Andernfalls werden die Regeln in regelmäßigen Abständen ausgeführt.
 +
 
-NOTE: In einer großen Data Infrastructure Insights-Umgebung können Sie bemerken, dass das Ausführen von Annotationsregeln eine Weile dauert. Dies liegt daran, dass der Indexer zuerst ausgeführt wird und vor der Ausführung der Regeln abgeschlossen werden muss. Mit dem Indexer können Data Infrastructure Insights nach neuen oder aktualisierten Objekten und Zählern in Ihren Daten suchen oder filtern. Die Regel-Engine wartet, bis der Indexer seine Aktualisierung abgeschlossen hat, bevor die Regeln angewendet werden.
+NOTE: In einer großen Data Infrastructure Insights -Umgebung stellen Sie möglicherweise fest, dass die Ausführung von Anmerkungsregeln eine Weile zu dauern scheint.  Dies liegt daran, dass der Indexer zuerst ausgeführt wird und vor der Ausführung der Regeln abgeschlossen sein muss.  Der Indexer gibt Data Infrastructure Insights die Möglichkeit, in Ihren Daten nach neuen oder aktualisierten Objekten und Zählern zu suchen oder diese zu filtern.  Die Regel-Engine wartet, bis der Indexer seine Aktualisierung abgeschlossen hat, bevor sie die Regeln anwendet.
 
 
 
@@ -49,57 +49,57 @@ NOTE: In einer großen Data Infrastructure Insights-Umgebung können Sie bemerke
 
 
 
-== Anmerkungsregeln ändern
+== Ändern von Anmerkungsregeln
 
 Sie können eine Anmerkungsregel ändern, um den Namen der Regel, ihre Anmerkung, den Wert der Anmerkung oder die mit der Regel verknüpfte Abfrage zu ändern.
 
 .Schritte
-. Klicken Sie im Menü Data Infrastructure Insights auf *Verwalten > Anmerkungsregeln*.
+. Klicken Sie im Data Infrastructure Insights -Menü auf *Verwalten > Anmerkungsregeln*.
 +
-Auf der Seite Anmerkungsregeln wird die Liste der vorhandenen Anmerkungsregeln angezeigt.
+Auf der Seite „Annotationsregeln“ wird die Liste der vorhandenen Annotationsregeln angezeigt.
 
 . Suchen Sie die Anmerkungsregel, die Sie ändern möchten.
 +
-Sie können die Anmerkungsregeln filtern, indem Sie einen Wert in das Filterfeld eingeben oder auf eine Seitenzahl klicken, um die Anmerkungsregeln nach Seite zu durchsuchen.
+Sie können die Anmerkungsregeln filtern, indem Sie einen Wert in das Filterfeld eingeben oder auf eine Seitenzahl klicken, um die Anmerkungsregeln seitenweise zu durchsuchen.
 
 . Klicken Sie auf das Menüsymbol für die Regel, die Sie ändern möchten.
-. Klicken Sie Auf *Bearbeiten*
+. Klicken Sie auf *Bearbeiten*
 +
-Das Dialogfeld Regel bearbeiten wird angezeigt.
+Das Dialogfeld „Regel bearbeiten“ wird angezeigt.
 
-. Ändern Sie den Namen, die Anmerkungen, den Wert oder die Abfrage der Anmerkungsregel.
-
-
+. Ändern Sie den Namen, die Anmerkung, den Wert oder die Abfrage der Anmerkungsregel.
 
 
-== Die Reihenfolge der Regeln ändern
 
-Anmerkungsregeln werden von oben in der Regelliste bis unten verarbeitet. Um die Reihenfolge zu ändern, in der eine Regel verarbeitet wird, gehen Sie wie folgt vor:
+
+== Ändern der Reihenfolge der Regeln
+
+Anmerkungsregeln werden von oben nach unten in der Regelliste verarbeitet.  Um die Reihenfolge zu ändern, in der eine Regel verarbeitet wird, gehen Sie wie folgt vor:
 
 .Schritte
 . Klicken Sie auf das Menüsymbol für die Regel, die Sie verschieben möchten.
-. Klicken Sie nach Bedarf auf *nach oben* oder *nach unten bewegen*, bis die Regel an dem gewünschten Ort angezeigt wird.
+. Klicken Sie je nach Bedarf auf *Nach oben verschieben* oder *Nach unten verschieben*, bis die Regel an der gewünschten Stelle angezeigt wird.
 
 
-Beachten Sie, dass beim Ausführen mehrerer Regeln, die dieselbe Anmerkung für ein Asset aktualisieren, die erste Regel (wie von oben nach unten ausgeführt) die Anmerkung anwendet und das Asset aktualisiert, dann gilt die zweite Regel, ändert aber keine Beschriftung, die bereits durch die vorherige Regel festgelegt wurde.
+Beachten Sie, dass beim Ausführen mehrerer Regeln, die dieselbe Anmerkung zu einem Asset aktualisieren, die erste Regel (von oben nach unten ausgeführt) die Anmerkung anwendet und das Asset aktualisiert. Anschließend wird die zweite Regel angewendet, ändert jedoch keine Anmerkungen, die bereits von der vorherigen Regel festgelegt wurden.
 
 
 
-== Anmerkungsregeln werden gelöscht
+== Löschen von Anmerkungsregeln
 
 Möglicherweise möchten Sie Anmerkungsregeln löschen, die nicht mehr verwendet werden.
 
 .Schritte
-. Klicken Sie im Menü Data Infrastructure Insights auf *Verwalten > Anmerkungsregeln*.
+. Klicken Sie im Data Infrastructure Insights -Menü auf *Verwalten > Anmerkungsregeln*.
 +
-Auf der Seite Anmerkungsregeln wird die Liste der vorhandenen Anmerkungsregeln angezeigt.
+Auf der Seite „Annotationsregeln“ wird die Liste der vorhandenen Annotationsregeln angezeigt.
 
-. Suchen Sie die Anmerkungsregel, die gelöscht werden soll.
+. Suchen Sie die Anmerkungsregel, die Sie löschen möchten.
 +
-Sie können die Anmerkungsregeln filtern, indem Sie einen Wert in das Filterfeld eingeben oder auf eine Seitenzahl klicken, um die Anmerkungsregeln nach Seite zu durchsuchen.
+Sie können die Anmerkungsregeln filtern, indem Sie einen Wert in das Filterfeld eingeben oder auf eine Seitenzahl klicken, um die Anmerkungsregeln seitenweise zu durchsuchen.
 
 . Klicken Sie auf das Menüsymbol für die Regel, die Sie löschen möchten.
-. Klicken Sie Auf *Löschen*
+. Klicken Sie auf *Löschen*
 +
 Es wird eine Bestätigungsmeldung angezeigt, in der Sie gefragt werden, ob Sie die Regel löschen möchten.
 

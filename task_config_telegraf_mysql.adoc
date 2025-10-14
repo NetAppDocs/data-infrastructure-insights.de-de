@@ -2,52 +2,52 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_mysql.html 
 keywords: telegraf, installation, install, mysql 
-summary: Konfiguration des MySQL-Datensammlers 
+summary: MySQL-Datensammlerkonfiguration 
 ---
-= MySQL Data Collector
+= MySQL-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet diesen Datensammler, um Kennzahlen aus MySQL zu sammeln.
+Data Infrastructure Insights verwendet diesen Datensammler, um Metriken aus MySQL zu sammeln.
 
 
 
 == Installation
 
-. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie MySQL.
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*.  Wählen Sie MySQL.
 +
-Wählen Sie das Betriebssystem oder die Plattform aus, auf dem der Telegraf-Agent installiert ist.
+Wählen Sie das Betriebssystem oder die Plattform aus, auf der der Telegraf-Agent installiert ist.
 
-. Wenn Sie noch keinen Agenten zur Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um die  Anweisungen zu erweiternlink:task_config_telegraf_agent.html["Agenten-Installation"].
-. Wählen Sie den Agent-Zugriffsschlüssel für diesen Datensammler aus. Sie können einen neuen Agent-Zugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agent Access Key* klicken. Best Practice: Verwenden Sie einen anderen Agent-Zugriffsschlüssel nur, wenn Sie Datensammler gruppieren möchten, zum Beispiel nach Betriebssystem/Plattform.
-. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+. Wenn Sie noch keinen Agenten für die Sammlung installiert haben oder einen Agenten für ein anderes Betriebssystem oder eine andere Plattform installieren möchten, klicken Sie auf _Anweisungen anzeigen_, um daslink:task_config_telegraf_agent.html["Agenteninstallation"] Anweisungen.
+. Wählen Sie den Agent-Zugriffsschlüssel zur Verwendung mit diesem Datensammler aus.  Sie können einen neuen Agentenzugriffsschlüssel hinzufügen, indem Sie auf die Schaltfläche *+ Agentenzugriffsschlüssel* klicken.  Best Practice: Verwenden Sie nur dann einen anderen Agent-Zugriffsschlüssel, wenn Sie Datensammler beispielsweise nach Betriebssystem/Plattform gruppieren möchten.
+. Befolgen Sie die Konfigurationsschritte, um den Datensammler zu konfigurieren.  Die Anweisungen variieren je nach Art des Betriebssystems oder der Plattform, die Sie zum Sammeln von Daten verwenden.
 
 
 image:MySQLDCConfigWindows.png["MySQL-Konfiguration"]
 
 
 
-== Einrichtung
+== Aufstellen
 
-Informationen finden Sie im link:https://dev.mysql.com/doc/["MySQL-Dokumentation"].
+Informationen finden Sie imlink:https://dev.mysql.com/doc/["MySQL-Dokumentation"] .
 
 
 
 == Objekte und Zähler
 
-Folgende Objekte und ihre Zähler werden gesammelt:
+Die folgenden Objekte und ihre Zähler werden gesammelt:
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+| Objekt: | Kennungen: | Merkmale: | Datenpunkte: 
 
 
-| MySQL | Namespace für MySQL Server | Node-IP-Node-Name | Abgebrochene Clients (pro s) abgebrochene Verbindungen (pro s) RX Byte (pro s) TX Bytes (pro Sek.) Befehle Admin (pro Sek.) Befehle Alter Ereignisbefehle Alter Funktion Befehle Alter Instanz Befehle Alter Prozedur Befehle Alter Server Befehle Alter Tabelle Befehle Alter Tablespace Befehle Alter Benutzer Befehle Analyse Befehle Zuweisen zu Keycache-Befehlen Begin-Befehle Binlog-Befehle Aufruf Procedure-Befehle DB-Befehle Change Master befiehlt Change Repl Filter Befehle Check Commands Prüfsummenbefehle Befehle Commit-Befehle DB-Befehle erstellen Ereignisbefehle erstellen Befehle erstellen Index-Befehle erstellen Maßnahmen-Befehle erstellen Serverbefehle erstellen Trigger-Befehle erstellen UDF-Befehle erstellen Benutzerbefehle erstellen Befehle anzeigen erstellen Dealloc SQL-Verbindungsfehler akzeptieren erstellte tmp-Disk-Tabellen verzögerte Fehler Flush-Befehle Handler Commit Innodb Buffer Pool Bytes Daten Schlüsselblöcke Nicht Gespült Schlüssel Leseanforderungen Schlüssel Schreib Schlüssel Schreibvorgänge Max Ausführungszeit Überschritten Max Verwendete Verbindungen Open Files Performance Schema Konten Lost Prepared Stmt Count Qcache Freie Blöcke Abfragen Fragen Full Join Select Full Range Join Select Range Check Wählen Sie Tabelle Sofort Scannen 
+| MySQL | Namespace MySQL-Server | Knoten-IP Knotenname | Abgebrochene Clients (pro Sek.) Abgebrochene Verbindungen (pro Sek.) RX-Bytes (pro Sek.) TX-Bytes (pro Sek.) Befehle Admin (pro Sek.) Befehle Ereignis ändern Befehle Funktion ändern Befehle Instanz ändern Befehle Prozedur ändern Befehle Server ändern Befehle Tabelle ändern Befehle Tablespace ändern Befehle Benutzer ändern Befehle Analysieren Befehle Zu Keycache zuweisen Befehle Beginnen Befehle Binlog Befehle Prozedur aufrufen Befehle DB ändern Befehle Master ändern Befehle Repl ändern Filterbefehle Prüfen Befehle Prüfsummenbefehle Commit Befehle DB erstellen Befehle Ereignis erstellen Befehle Funktion erstellen Befehle Index erstellen Befehle Prozedur erstellen Befehle Server erstellen Befehle Tabelle erstellen Befehle Trigger erstellen Befehle UDF erstellen Befehle Benutzer erstellen Befehle Ansicht erstellen Befehle Dealloc SQL-Verbindungsfehler Akzeptieren Erstellte temporäre Datenträgertabellen Verzögerte Fehler Befehle leeren Handler Commit InnoDB-Pufferpool Bytes Daten Schlüsselblöcke nicht geleert Schlüsselleseanforderungen Schlüsselschreibanforderungen Schlüsselschreibvorgänge Max. Ausführungszeit überschritten Max. verwendete Verbindungen Geöffnete Dateien Leistung Schemakonten verloren Vorbereitete Anweisungsanzahl Qcache Freie Blöcke Abfragen Fragen Vollständigen Join auswählen Vollständigen Bereichs-Join auswählen Bereichsprüfung auswählen Scan-Tabellensperren auswählen Sofort 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite.
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite.

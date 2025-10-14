@@ -1,31 +1,31 @@
 ---
 sidebar: sidebar 
 permalink: index.html 
-summary: Willkommen beim Dokumentationsportal zu Data Infrastructure Insights. 
+summary: Willkommen beim Dokumentationsportal für Data Infrastructure Insights. 
 keywords:  
 ---
-= Dokumentation zu Data Infrastructure Insights
+= Data Infrastructure Insights -Dokumentation
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-NetApp Data Infrastructure Insights (ehemals Cloud Insights) ist ein Cloud-Infrastruktur-Monitoring-Tool, mit dem Sie die gesamte Infrastruktur im Blick haben. Es überwacht nicht nur alle Ressourcen, die in Public Clouds und privaten Datacentern liegen, sondern hilft auch dabei, Fehler aufzuspüren und den Ressourceneinsatz zu optimieren.
+NetApp Data Infrastructure Insights (ehemals Cloud Insights) ist ein Tool zur Überwachung der Cloud-Infrastruktur, das Ihnen Einblick in Ihre gesamte Infrastruktur bietet. Mit Data Infrastructure Insights können Sie alle Ihre Ressourcen, einschließlich Ihrer öffentlichen Clouds und Ihrer privaten Rechenzentren, überwachen, Fehler beheben und optimieren.
 
 
 
-== Welche Vorteile bietet mir Dateninfrastruktur Insights?
+== Was kann Data Infrastructure Insights für mich tun?
 
-Data Infrastructure Insights ermöglicht das Monitoring in der Hybrid-Multi-Cloud, wodurch Sie Infrastruktur und Workloads vollständig beobachten können.
+Data Infrastructure Insights bietet hybrides Multicloud-Monitoring und verschafft Ihnen so vollständige Transparenz über Infrastruktur und Workloads.
 
-* Datensammler für heterogene Infrastrukturen und Workloads einschließlich Kubernetes
-* Offener Telegraf-Kollektor und offene APIs für eine einfache Integration
-* Umfassende Warn- und Benachrichtigungen
+* Datensammler für heterogene Infrastrukturen und Workloads, einschließlich Kubernetes
+* Offener Telegraf-Collector und offene APIs für einfache Integration
+* Umfassende Alarmierung und Benachrichtigungen
 * Maschinelles Lernen für intelligente Erkenntnisse
-* Optimierte Ressourcenauslastung
-* Integrierte oder anpassbare Dashboards mit erweiterten Filtern zur Reduzierung von Anzeigerauschen bei der Beantwortung von Fragen
-* Der Zustand Ihrer ONTAP Storage-Vorgänge erkennen 
-* Schutz Ihrer wertvollsten Geschäftsdaten – Daten – vor Ransomware oder Datenvernichtung
+* Optimieren Sie die Ressourcennutzung
+* Integrierte oder anpassbare Dashboards mit erweiterten Filtern zur Minimierung von Anzeigestörungen bei der Beantwortung von Fragen
+* Ermitteln Sie den Zustand Ihrer ONTAP Speichervorgänge 
+* Schützen Sie Ihr wertvollstes Geschäftsgut – Ihre Daten – vor Ransomware oder Datenzerstörungsangriffen
 
 
 '''
@@ -33,8 +33,8 @@ Data Infrastructure Insights ermöglicht das Monitoring in der Hybrid-Multi-Clou
 
 == Erste Schritte
 
-* link:task_cloud_insights_onboarding_1.html["*Start*"]Welche Vorteile bietet Dateninfrastruktur Insights?
-* Ich bin angemeldet. Was soll ich nun tun? link:task_getting_started_with_cloud_insights.html["Erfassen Von Daten"] link:concept_user_roles.html["Benutzer einrichten"]
-* Genial! Nächste Schritte link:task_defining_annotations.html["Vorbereiten Von Ressourcen: Anmerkungen"] link:concept_querying_assets.html["Suchen der gewünschten Assets: Abfragen"] link:concept_dashboards_overview.html["Anzeigen der gewünschten Daten: Dashboards"] link:task_create_monitor.html["Monitoring und Alarme"] link:task_cs_getting_started.html["Sicherheit Der Daten"]
-* Das ist tolle Sache! Ich bin bereitlink:concept_subscribing_to_cloud_insights.html["*Anmeldung*"].
+* Wie kann ichlink:task_cloud_insights_onboarding_1.html["*loslegen*"] mit Data Infrastructure Insights?
+* Ich bin angemeldet.  Was mache ich jetzt?link:task_getting_started_with_cloud_insights.html["Datenerfassung"] link:concept_user_roles.html["Einrichten von Benutzern"]
+* Eindrucksvoll!  Was kommt als Nächstes?link:task_defining_annotations.html["Vorbereiten von Assets: Kommentieren"] link:concept_querying_assets.html["Die gewünschten Assets finden: Abfragen"] link:concept_dashboards_overview.html["Die gewünschten Daten anzeigen: Dashboards"] link:task_create_monitor.html["Überwachung und Warnungen"] link:task_cs_getting_started.html["Daten sichern"]
+* Das ist tolles Zeug!  Ich bin bereitlink:concept_subscribing_to_cloud_insights.html["*abonnieren*"] .
 

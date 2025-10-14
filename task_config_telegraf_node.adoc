@@ -2,51 +2,51 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_node.html 
 keywords: telegraf, installation, install, node, host 
-summary: Konfiguration des Datensammlers Flik 
+summary: Konfiguration des Flink-Datensammlers 
 ---
-= Erfassung Von Node-Daten
+= Knotendatenerfassung
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights sammelt Kennzahlen aus dem Knoten, auf dem Sie einen Agenten installieren.
+Data Infrastructure Insights sammelt Metriken von dem Knoten, auf dem Sie einen Agenten installieren.
 
 
 
 == Installation
 
-. Wählen Sie unter *Observability > Collectors* ein Betriebssystem/eine Plattform aus. Beachten Sie, dass durch die Installation eines Datensammlers für die Integration (Kubernetes, Docker, Apache usw.) auch die Erfassung von Node-Daten konfiguriert wird.
-. Befolgen Sie die Anweisungen, um den Agenten zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
+. Wählen Sie unter *Observability > Collectors* ein Betriebssystem/eine Plattform aus.  Beachten Sie, dass durch die Installation eines beliebigen Integrationsdatensammlers (Kubernetes, Docker, Apache usw.) auch die Knotendatenerfassung konfiguriert wird.
+. Befolgen Sie die Anweisungen zum Konfigurieren des Agenten.  Die Anweisungen variieren je nach Art des Betriebssystems oder der Plattform, die Sie zum Sammeln von Daten verwenden.
 
 
 
 
 == Objekte und Zähler
 
-Die folgenden Objekte und ihre Zähler werden als Node-Kennzahlen erfasst:
+Die folgenden Objekte und ihre Zähler werden als Knotenmetriken erfasst:
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+| Objekt: | Kennungen: | Merkmale: | Datenpunkte: 
 
 
-| Knoten Dateisystem | Node-UUID-Gerätetyp | Node-IP Node-Name Node OS-Modus | Freie Inodes Free Inodes Total Inodes Used Total Used Total Used Total Used 
+| Knotendateisystem | Knoten-UUID-Gerätepfadtyp | Knoten-IP Knotenname Knoten-Betriebssystemmodus | Freie Inodes Freie Inodes Gesamtanzahl der verwendeten Inodes Gesamtanzahl der verwendeten Inodes Gesamtanzahl der verwendeten Inodes 
 
 
-| Node-Festplatte | Node-UUID-Festplatte | Node-IP Node-Name Node OS | I/O-Zeit insgesamt IOPS in Bearbeitung Lesen von Bytes (pro s) Lesezeit insgesamt Lesevorgänge (pro s) gewichtete I/O-Zeit insgesamt Schreibbyte (pro s) Schreibzeit Gesamtzahl Schreibvorgänge (pro s) Aktuelle Festplattenwarteschlange Länge Schreibzeit I/O-Zeit 
+| Knotendatenträger | Knoten-UUID-Datenträger | Knoten-IP Knotenname Knoten-Betriebssystem | IO-Zeit Laufende IOPS Gesamtanzahl gelesener Bytes (pro Sek.) Lesezeit Gesamtanzahl gelesener Bytes (pro Sek.) Gewichtete IO-Zeit Gesamtanzahl geschriebener Bytes (pro Sek.) Schreibzeit Gesamtanzahl geschriebener Bytes (pro Sek.) Aktuelle Warteschlangenlänge der Festplatte Schreibzeit Lesezeit IO-Zeit 
 
 
-| Node-CPU | Node-UUID-CPU | Node-IP Node-Name Node OS | System CPU Usage User CPU Usage Idle CPU Usage Prozessor CPU Usage Interrupt CPU Usage DPC CPU Usage 
+| Knoten-CPU | Knoten-UUID-CPU | Knoten-IP Knotenname Knoten-Betriebssystem | System-CPU-Auslastung Benutzer-CPU-Auslastung Leerlauf-CPU-Auslastung Prozessor-CPU-Auslastung Interrupt-CPU-Auslastung DPC-CPU-Auslastung 
 
 
-| Knoten | Node-UUID | Node-IP Node-Name Node OS | Kernel Boot Time Kernel Context Switches (per sec) Kernel Entropy Available Kernel Interrupts (per sec) Kernel processes Forked (per sec) Arbeitsspeicher Aktiver Speicher Verfügbar Gesamter Verfügbarer Speicher Gepufferter Speicher Im Cache Speicherlimit Speicher Speicher Bereitgestellt Als Speicher Schmutziger Speicher Freier Speicher Hoher Freier Speicher Hoher Gesamtspeicher Riesige Seitengröße Speicher Riesige Seiten Freier Speicher Riesige Seiten Gesamt Speicher Niedriger Freier Speicher Niedriger Speicher Gemappter Speicher Seitentabellen Speicher Gemeinsam Genutzter Speicher Slab Speicher Austausch Gecachten Speicher Austausch Freier Speicher Austausch Gesamt Speicher Verwendeter Gesamt-Speicher Verwendeter Speicher Vmalloc Chunk Speicher Vmalloc Gesamt-Speicher Vmalloc Verwendeter Speicher Wired Memory Writeback Total Memory Writeback Tmp Speicher Cache Fehler Speicheranforderung Null Fehler Speicherseiten Fehler Speicherseiten Fehler Speicherseiten-Speicher-Seiten-Speicher Nicht Gepageter Speicher Paged Memory Cache Core Memory Standby Cache Normaler Speicher Standby Cache Reserve Memory Transition Fehler Prozesse Blockierte Prozesse Dead Processes Irrprozess Paging Processes Laufende Prozesse Schlafprozesse Prozesse Angehalten Prozesse Insgesamt Threads Prozesse Unbekannte Prozesse Zombies Prozessor Queue Länge Swap Free Swap Total Swap Used Total Tausch verwendetes Swap im System Uptime System austauschen Num CPU System Num Users System calls 
+| Node | Knoten-UUID | Knoten-IP Knotenname Knoten-Betriebssystem | Kernel-Bootzeit Kernel-Kontextwechsel (pro Sek.) Verfügbare Kernel-Entropie Kernel-Interrupts (pro Sek.) Abgespaltene Kernel-Prozesse (pro Sek.) Aktiver Speicher Verfügbarer Gesamtspeicher Verfügbarer Speicher Gepufferter Speicher Zwischengespeicherter Speicher Commit-Limit Als Speicher festgeschriebener Speicher Dirty Memory Freier Speicher hoch Freier Speicher hoch Gesamtspeicher Größe großer Seiten Speicher Große Seiten Freier Speicher Große Seiten Gesamtspeicher niedrig Freier Speicher niedrig Gesamtspeicher Zugeordneter Speicher Seitentabellen Speicher Gemeinsam genutzter Speicher Slab-Speicher Swap Zwischengespeicherter Speicher Swap Freier Speicher Swap Gesamtspeicher Gesamt verwendeter Speicher Gesamt verwendeter Speicher Speicher Vmalloc-Chunk-Speicher Vmalloc Gesamtspeicher Vmalloc Verwendeter Speicher Verdrahteter Speicher Writeback Gesamter Speicher Writeback Temporärer Speicher Cache-Fehler Speicherbedarf Null-Fehler Speicherseitenfehler Speicherseiten Speicher Nicht ausgelagerter Speicher Ausgelagerter Speicher Cache-Kernspeicher Standby-Cache Normaler Speicher Standby-Cache Reservespeicher Übergangsfehler Prozesse Blockierte Prozesse Tote Prozesse Leerlaufprozesse Paging-Prozesse Laufende Prozesse Schlafende Prozesse Angehaltene Prozesse Gesamtprozesse Gesamtthreads Prozesse Unbekannte Prozesse Zombies Prozessorwarteschlange Länge Freier Swap Gesamter verwendeter Swap Gesamter verwendeter Swap Swap In Swap Out Systembetriebszeit Systemanzahl CPU Systemanzahl Benutzer Systemaufrufe 
 
 
-| Node-Netzwerk | UUID der Netzwerkschnittstelle-Node | Node Name Node-IP-Node-OS | Bytes Empfangene Bytes Gesendete Pakete Ausgehende Pakete Ausgehende Pakete Ausgehende Pakete Ausgehende Pakete Paketfehler Empfangen Pakete Empfangene Fehler Pakete Empfangene Pakete Empfangene Pakete Empfangen Pakete 
+| Knotennetzwerk | Netzwerkschnittstellenknoten-UUID | Knotenname Knoten-IP Knoten-Betriebssystem | Empfangene Bytes Gesendete Bytes Ausgehende Pakete Verworfene Pakete Ausgehende Fehler Empfangene Pakete Verworfene Pakete Empfangene Fehler Empfangene Pakete Gesendete Pakete 
 |===
 
 
-== Einrichtung
+== Aufstellen
 
-Informationen zur Einrichtung und Fehlerbehebung finden Sie auf der link:task_config_telegraf_agent.html["Konfigurieren eines Agenten"] Seite.
+Informationen zur Einrichtung und Fehlerbehebung finden Sie auf derlink:task_config_telegraf_agent.html["Konfigurieren eines Agenten"] Seite.

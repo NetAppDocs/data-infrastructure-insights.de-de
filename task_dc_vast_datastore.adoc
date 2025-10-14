@@ -2,34 +2,34 @@
 sidebar: sidebar 
 permalink: task_dc_vast_datastore.html 
 keywords: data collector, VAST storage, VAST data 
-summary: Konfigurieren des Datensammlers für den VAST-Datastore-Speicher. 
+summary: Konfigurieren des VAST Data DataStore-Speicherdatensammlers. 
 ---
-= Datensammler für RIESIGE Datastores
+= VAST DataStore-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights nutzt den UMFANGREICHEN Datensammler für den Datastore zur Erfassung von Bestands- und Performance-Daten.
+Data Infrastructure Insights verwendet den VAST DataStore-Datensammler, um Bestands- und Leistungsdaten zu erfassen.
 
 
 
 == Terminologie
 
-Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die gängigste Terminologie für die Ressource angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Für jeden von Data Infrastructure Insights erfassten Asset-Typ wird die am häufigsten verwendete Terminologie für das Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Fluggesellschaften | Festplatten (Platten-Shelf-Teil des Standortfelds) 
+| Frachtführer | Festplatten (Festplattenregalteil des Standortfelds) 
 
 
 | Cluster | Storage 
 
 
-| Knoten | StorageNode (Typ = Knoten) 
+| CNodes | StorageNode (Typ = cnode) 
 
 
 | DNodes | StorageNode (Typ = dnode) 
@@ -38,35 +38,35 @@ Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird 
 | NVRAMs | Festplatten 
 
 
-| Geschützte Pfade | Interne Volume-Synchronisierung 
+| Geschützte Pfade | Interne Lautstärkesynchronisierung 
 
 
-| QOS-Richtlinien | Internes Volume (QOS-Limits) 
+| QOS-Richtlinien | Internes Volumen (QOS-Grenzen) 
 
 
-| Kontingente | Kontingente 
+| Kontingente | Quote 
 
 
 | SSDs | Festplatten 
 
 
-| Mandanten | Storage Virtual Machine 
+| Mieter | Virtuelle Speichermaschine 
 
 
-| Richtlinien anzeigen | Dateifreigabe (für Berechtigungen) 
+| Richtlinien anzeigen | FileShare (für Berechtigungen) 
 
 
-| Aussicht | Internes Volumen 
+| Ansichten | Internes Volumen 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* IP-Adresse des VAST-Datastore-Systems oder vollständig qualifizierter Domänenname
+* IP-Adresse oder vollqualifizierter Domänenname des VAST DataStore-Systems
 * Benutzername/Passwort für den Zugriff auf das VAST-System
-* Port-Anforderungen: HTTPS 443
+* Portanforderung: HTTPs 443
 
 
 
@@ -78,13 +78,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| VAST Datastore Storage-IP/Hostname | IP-Adresse oder FQDN des Speichersystems 
+| VAST DataStore-Speicher-IP/Hostname | IP-Adresse oder FQDN des Speichersystems 
 
 
-| Benutzer | VAST Storage User Name 
+| Benutzer | VAST Storage-Benutzername 
 
 
-| Passwort | Passwort für VAST Storage 
+| Passwort | VAST-Speicherkennwort 
 |===
 
 
@@ -95,22 +95,22 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Verbindungstyp | Wählen Sie HTTP oder HTTPS. Zeigt auch den Standardport an. 
+| Anschlussart | Wählen Sie HTTP oder HTTPS.  Zeigt auch den Standardport an. 
 
 
-| TCP-Port überschreiben | Wenn Sie leer sind, verwenden Sie den Standardport im Feld Verbindungstyp. Andernfalls geben Sie den zu verwendenden Anschluss ein 
+| TCP-Port überschreiben | Wenn das Feld „Verbindungstyp“ leer ist, verwenden Sie den Standardport. Andernfalls geben Sie den zu verwendenden Verbindungsport ein. 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten 
+| Inventarabfrageintervall (min) | Der Standardwert beträgt 60 Minuten 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 300 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 300 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -118,9 +118,9 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| „Ungültige Anmeldeinformationen“ mit Fehlermeldungen „Richtlinie lässt nicht zu“ oder „Sie sind nicht autorisiert“ | Validierung des Pure Benutzerkontos und Passworts über die Pure http Schnittstelle 
+| „Ungültige Anmeldeinformationen“ mit den Fehlermeldungen „Richtlinie lässt dies nicht zu“ oder „Sie sind nicht autorisiert“ | Validieren Sie das Pure-Benutzerkonto und das Passwort über die Pure-HTTP-Schnittstelle 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

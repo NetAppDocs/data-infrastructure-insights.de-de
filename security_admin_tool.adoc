@@ -1,42 +1,42 @@
 ---
 sidebar: sidebar 
 permalink: security_admin_tool.html 
-summary: Data Infrastructure Insights befolgt während des gesamten Release-Lebenszyklus sicherheitstechnikrelevante Best Practices. 
+summary: Data Infrastructure Insights befolgt während des gesamten Release-Lebenszyklus bewährte Sicherheitspraktiken. 
 keywords: security, risk, protection 
 ---
-= Sicherheitstool
+= SecurityAdmin-Tool
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dateninfrastruktur Insights umfasst Sicherheitsfunktionen, mit denen Ihre Umgebung sicherer betrieben werden kann. Die Funktionen umfassen Verbesserungen bei der Verschlüsselung, Passwort-Hashing und die Fähigkeit, interne Benutzerpasswörter zu ändern sowie Schlüsselpaare, die Kennwörter verschlüsseln und entschlüsseln.
+Data Infrastructure Insights umfasst Sicherheitsfunktionen, die einen Betrieb Ihrer Umgebung mit erhöhter Sicherheit ermöglichen.  Zu den Funktionen gehören Verbesserungen bei der Verschlüsselung, beim Passwort-Hashing und die Möglichkeit, interne Benutzerpasswörter sowie Schlüsselpaare zum Ver- und Entschlüsseln von Passwörtern zu ändern.
 
-Zum Schutz sensibler Daten empfiehlt NetApp, nach einer Installation oder einem Upgrade die Standardschlüssel und das Benutzerpasswort „_Acquisition_“ zu ändern.
+Zum Schutz vertraulicher Daten empfiehlt NetApp , die Standardschlüssel und das _Acquisition_-Benutzerkennwort nach einer Installation oder einem Upgrade zu ändern.
 
-Verschlüsselte Passwörter der Datenquelle werden in Data Infrastructure Insights gespeichert, das einen öffentlichen Schlüssel verwendet, um Passwörter zu verschlüsseln, wenn ein Benutzer sie auf einer Konfigurationsseite für den Datensammler eingibt. Data Infrastructure Insights verfügt nicht über die privaten Schlüssel, die zum Entschlüsseln der Datensammlerkennwörter erforderlich sind. Nur Acquisition Units (aus) verfügen über den privaten Datensammlerschlüssel, der zum Entschlüsseln der Datensammlerkennwörter erforderlich ist.
+Verschlüsselte Passwörter von Datenquellen werden in Data Infrastructure Insights gespeichert. Dabei wird ein öffentlicher Schlüssel zum Verschlüsseln von Passwörtern verwendet, wenn ein Benutzer sie auf einer Konfigurationsseite eines Datensammlers eingibt.  Data Infrastructure Insights verfügt nicht über die privaten Schlüssel, die zum Entschlüsseln der Kennwörter des Datensammlers erforderlich sind. Nur Acquisition Units (AUs) verfügen über den privaten Schlüssel des Datensammlers, der zum Entschlüsseln der Kennwörter des Datensammlers erforderlich ist.
 
 
 
 == Überlegungen zu Upgrades und Installationen
 
-Wenn Ihr Insight-System nicht standardmäßige Sicherheitskonfigurationen enthält (d. h. Sie haben ein rekeyed Kennwort), müssen Sie Ihre Sicherheitskonfigurationen sichern. Durch die Installation neuer Software oder in einigen Fällen eines Software-Upgrades wird das System auf eine Standardsicherheitskonfiguration zurückgesetzt. Wenn Ihr System auf die Standardkonfiguration zurückgesetzt wird, müssen Sie die nicht voreingestellte Konfiguration wiederherstellen, damit das System ordnungsgemäß funktioniert.
+Wenn Ihr Insight-System nicht standardmäßige Sicherheitskonfigurationen enthält (d. h. Sie haben Passwörter neu verschlüsselt), müssen Sie Ihre Sicherheitskonfigurationen sichern.  Durch die Installation neuer Software oder in einigen Fällen durch ein Software-Upgrade wird Ihr System auf die Standardsicherheitskonfiguration zurückgesetzt.  Wenn Ihr System zur Standardkonfiguration zurückkehrt, müssen Sie die nicht standardmäßige Konfiguration wiederherstellen, damit das System ordnungsgemäß funktioniert.
 
 
 
-== Sicherheitsverwaltung auf der Akquisitionseinheit
+== Verwalten der Sicherheit auf der Erfassungseinheit
 
-Mit dem SecurityAdmin-Tool können Sie die Sicherheitsoptionen für Data Infrastructure Insights verwalten und wird auf dem Erfassungssystem ausgeführt. Die Sicherheitsverwaltung umfasst das Verwalten von Schlüsseln und Passwörtern, das Speichern und Wiederherstellen von Sicherheitskonfigurationen, die Sie erstellen oder auf die Standardeinstellungen wiederherstellen.
+Mit dem Tool SecurityAdmin können Sie Sicherheitsoptionen für Data Infrastructure Insights verwalten. Es wird auf dem System der Erfassungseinheit ausgeführt.  Zur Sicherheitsverwaltung gehört die Verwaltung von Schlüsseln und Passwörtern, das Speichern und Wiederherstellen der von Ihnen erstellten Sicherheitskonfigurationen oder das Zurücksetzen der Konfigurationen auf die Standardeinstellungen.
 
 
 
 == Bevor Sie beginnen
 
-* Sie müssen über Administratorrechte auf dem AU-System verfügen, um die Acquisition Unit-Software (die das SecurityAdmin-Tool enthält) installieren zu können.
-* Wenn Sie nicht-Admin-Benutzer haben, die anschließend auf das SecurityAdmin-Tool zugreifen müssen, müssen diese zur _cisys_-Gruppe hinzugefügt werden. Die _cisys_-Gruppe wird während der AU-Installation erstellt.
+* Sie müssen über Administratorrechte auf dem AU-System verfügen, um die Acquisition Unit-Software (einschließlich des SecurityAdmin-Tools) zu installieren.
+* Wenn Sie Benutzer ohne Administratorrechte haben, die später auf das SecurityAdmin-Tool zugreifen müssen, müssen diese der Gruppe _cisys_ hinzugefügt werden.  Die Gruppe _cisys_ wird während der AU-Installation erstellt.
 
 
-Nach der AU-Installation befindet sich das SecurityAdmin-Tool auf dem Erfassungseinheitssystem an einem der folgenden Standorte:
+Nach der AU-Installation befindet sich das SecurityAdmin-Tool auf dem Erfassungseinheitssystem an einem der folgenden Orte:
 
 ....
 Windows - <install_path>\Cloud Insights\Acquisition Unit\acq\securityadmin\bin\securityadmin.bat
@@ -49,15 +49,15 @@ Linux - /bin/oci-securityadmin.sh
 Starten Sie das SecurityAdmin-Tool im interaktiven Modus (-i).
 
 
-NOTE: Es wird empfohlen, das SecurityAdmin-Tool im interaktiven Modus zu verwenden, um das Übergeben von Geheimnissen in der Befehlszeile zu vermeiden, die in Protokollen erfasst werden können.
+NOTE: Es wird empfohlen, das SecurityAdmin-Tool im interaktiven Modus zu verwenden, um die Weitergabe von Geheimnissen über die Befehlszeile zu vermeiden, die in Protokollen erfasst werden können.
 
-Folgende Optionen werden angezeigt:
+Die folgenden Optionen werden angezeigt:
 
-image:SecurityAdminMenuChoices.png["Optionen für SecurityAdmin Tool (Linux)"]
+image:SecurityAdminMenuChoices.png["Optionen für das SecurityAdmin-Tool (Linux)"]
 
-. *Backup*
+. *Sicherung*
 +
-Erstellt eine Sicherungszip-Datei des Tresors, die alle Passwörter und Schlüssel enthält und legt die Datei an einem vom Benutzer angegebenen Speicherort oder an den folgenden Standardstandorten ab:
+Erstellt eine ZIP-Sicherungsdatei des Tresors mit allen Passwörtern und Schlüsseln und speichert die Datei an einem vom Benutzer angegebenen Speicherort oder an den folgenden Standardspeicherorten:
 
 +
 ....
@@ -65,16 +65,16 @@ Windows - <install_path>\Cloud Insights\Acquisition Unit\acq\securityadmin\backu
 Linux - /var/log/netapp/oci/backup/vault
 ....
 +
-Es wird empfohlen, Vault-Backups sicher zu halten, da sie vertrauliche Informationen enthalten.
+Es wird empfohlen, Tresor-Backups sicher aufzubewahren, da sie vertrauliche Informationen enthalten.
 
 . *Wiederherstellen*
 +
-Stellt die Zip-Sicherung des erstellten Tresors wieder her. Nach der Wiederherstellung werden alle Passwörter und Schlüssel zum Zeitpunkt der Backup-Erstellung auf die vorhandenen Werte zurückgesetzt.
+Stellt die erstellte ZIP-Sicherung des Tresors wieder her.  Nach der Wiederherstellung werden alle Passwörter und Schlüssel auf die Werte zurückgesetzt, die zum Zeitpunkt der Sicherungserstellung gültig waren.
 
 +
-Restore kann verwendet werden, um Passwörter und Schlüssel auf mehreren Servern zu synchronisieren, zum Beispiel mit den folgenden Schritten: 1) Ändern der Verschlüsselungsschlüssel auf der AU. 2) Erstellen Sie eine Sicherung des Tresors. 3) Stellen Sie die Vault-Sicherung auf jedem der aus wieder her.
+Mit „Wiederherstellen“ können Sie Passwörter und Schlüssel auf mehreren Servern synchronisieren, beispielsweise mit diesen Schritten: 1) Ändern Sie die Verschlüsselungsschlüssel auf der AU.  2) Erstellen Sie eine Sicherungskopie des Tresors.  3) Stellen Sie die Tresorsicherung auf jeder der AUs wieder her.
 
-. *Skript Zum Abrufen Des Externen Schlüssels Registrieren/Aktualisieren*
+. *Skript zum Abrufen externer Schlüssel registrieren/aktualisieren*
 +
 Verwenden Sie ein externes Skript, um die AU-Verschlüsselungsschlüssel zu registrieren oder zu ändern, die zum Verschlüsseln oder Entschlüsseln von Gerätekennwörtern verwendet werden.
 
@@ -85,72 +85,72 @@ Wenn Sie Verschlüsselungsschlüssel ändern, sollten Sie Ihre neue Sicherheitsk
 Beachten Sie, dass diese Option nur unter Linux verfügbar ist.
 
 +
-Wenn Sie Ihr eigenes Schlüsselabruf-Skript mit dem SecurityAdmin-Tool verwenden, beachten Sie Folgendes:
+Wenn Sie Ihr eigenes Schlüsselabrufskript mit dem SecurityAdmin-Tool verwenden, beachten Sie Folgendes:
 
 +
-** Der aktuell unterstützte Algorithmus ist RSA mit mindestens 2048 Bit.
-** Das Skript muss die privaten und öffentlichen Schlüssel im Klartext zurückgeben. Das Skript darf keine verschlüsselten privaten und öffentlichen Schlüssel zurückgeben.
-** Das Skript sollte rohe, codierte Inhalte zurückgeben (nur PEM-Format).
-** Das externe Skript muss über _execute_ Berechtigungen verfügen.
+** Der derzeit unterstützte Algorithmus ist RSA mit mindestens 2048 Bit.
+** Das Skript muss den privaten und öffentlichen Schlüssel im Klartext zurückgeben.  Das Skript darf keine verschlüsselten privaten und öffentlichen Schlüssel zurückgeben.
+** Das Skript sollte unverarbeitete, codierte Inhalte zurückgeben (nur PEM-Format).
+** Das externe Skript muss über Ausführungsberechtigungen verfügen.
 
 
-. *Verschlüsselungstasten Drehen*
+. *Rotierende Verschlüsselungsschlüssel*
 +
-Drehen Sie die Verschlüsselungsschlüssel (heben Sie die Registrierung der aktuellen Schlüssel auf und registrieren Sie neue Schlüssel). Um einen Schlüssel aus einem externen Schlüsselverwaltungssystem zu verwenden, müssen Sie die ID des öffentlichen Schlüssels und die ID des privaten Schlüssels angeben.
+Rotieren Sie Ihre Verschlüsselungsschlüssel (melden Sie aktuelle Schlüssel ab und registrieren Sie neue Schlüssel).  Um einen Schlüssel aus einem externen Schlüsselverwaltungssystem zu verwenden, müssen Sie die öffentliche und die private Schlüssel-ID angeben.
 
 
 
-. *Auf Standardschlüssel zurücksetzen*
+. *Auf Standardtasten zurücksetzen*
 +
-Setzt das Erfassungs-Benutzerpasswort und die Erfassungs-Benutzerverschlüsselungsschlüssel auf die Standardwerte zurück. Bei der Installation werden die Standardwerte angegeben.
+Setzt das Kennwort und die Verschlüsselungsschlüssel des Erwerbsbenutzers auf die Standardwerte zurück. Die Standardwerte sind diejenigen, die während der Installation bereitgestellt werden.
 
-. *Passwort Des Truststore Ändern*
+. *Truststore-Passwort ändern*
 +
-Ändern Sie das Passwort des Truststore.
+Ändern Sie das Passwort des Truststores.
 
-. *Passwort Des Keystore Ändern*
+. *Keystore-Passwort ändern*
 +
-Ändern Sie das Passwort des Keystore.
+Ändern Sie das Passwort des Schlüsselspeichers.
 
-. *Passwort Des Verschlüsselten Collectors*
+. *Collector-Passwort verschlüsseln*
 +
-Kennwort für den Datensammler verschlüsseln.
+Datensammlerkennwort verschlüsseln.
 
-. *Ausgang*
+. *Ausfahrt*
 +
 Beenden Sie das SecurityAdmin-Tool.
 
 
 
-Wählen Sie die Option, die Sie konfigurieren möchten, und befolgen Sie die Anweisungen.
+Wählen Sie die Option, die Sie konfigurieren möchten, und folgen Sie den Anweisungen.
 
 
 
-== Festlegen eines Benutzers, der das Tool ausführen soll
+== Festlegen eines Benutzers zum Ausführen des Tools
 
-Wenn Sie sich in einer kontrollierten, sicherheitsbewussten Umgebung befinden, verfügen Sie möglicherweise nicht über die _cisys_-Gruppe, möchten aber möglicherweise, dass bestimmte Benutzer das SecurityAdmin-Tool ausführen.
+Wenn Sie sich in einer kontrollierten, sicherheitsbewussten Umgebung befinden, verfügen Sie möglicherweise nicht über die Gruppe _cisys_, möchten aber dennoch, dass bestimmte Benutzer das Tool SecurityAdmin ausführen.
 
-Sie können dies erreichen, indem Sie die AU-Software manuell installieren und den Benutzer/die Gruppe angeben, für den Sie Zugriff haben möchten.
+Sie können dies erreichen, indem Sie die AU-Software manuell installieren und den Benutzer/die Gruppe angeben, für den/die Sie Zugriff wünschen.
 
-* Laden Sie den CI Installer mithilfe der API auf das AU-System herunter, und entpacken Sie ihn.
+* Laden Sie mithilfe der API das CI-Installationsprogramm auf das AU-System herunter und entpacken Sie es.
 +
-** Sie benötigen ein einmaliger Autorisierungstoken. Siehe API Swagger Dokumentation (_Admin > API Access_ und wählen Sie den Link _API Documentation_) und finden Sie den Abschnitt _GET /au/oneTimeToken_ API.
-** Sobald Sie das Token haben, verwenden Sie die _GET /au/Installers/{Platform}/{Version}_ API, um die Installer-Datei herunterzuladen. Sie müssen sowohl die Plattform (Linux oder Windows) als auch die Installer-Version bereitstellen.
+** Sie benötigen ein einmaliges Autorisierungstoken.  Sehen Sie sich die API Swagger-Dokumentation an (_Admin > API-Zugriff_ und wählen Sie den Link _API-Dokumentation_) und suchen Sie den API-Abschnitt _GET /au/oneTimeToken_.
+** Sobald Sie das Token haben, verwenden Sie die API _GET /au/installers/{platform}/{version}_, um die Installationsdatei herunterzuladen.  Sie müssen die Plattform (Linux oder Windows) sowie die Installationsversion angeben.
 
 
-* Kopieren Sie die heruntergeladene Installationsdatei auf das AU-System, und entpacken Sie sie.
-* Navigieren Sie zu dem Ordner, der die Dateien enthält, und führen Sie das Installationsprogramm als root aus. Geben Sie dabei den Benutzer und die Gruppe an:
+* Kopieren Sie die heruntergeladene Installationsdatei auf das AU-System und entpacken Sie sie.
+* Navigieren Sie zu dem Ordner, der die Dateien enthält, und führen Sie das Installationsprogramm als Root aus, wobei Sie den Benutzer und die Gruppe angeben:
 +
  ./cloudinsights-install.sh <User> <Group>
 
 
-Wenn der angegebene Benutzer und/oder die angegebene Gruppe nicht vorhanden ist, werden diese erstellt. Der Benutzer hat Zugriff auf das SecurityAdmin-Tool.
+Wenn der angegebene Benutzer und/oder die angegebene Gruppe nicht vorhanden sind, werden sie erstellt.  Der Benutzer hat Zugriff auf das SecurityAdmin-Tool.
 
 
 
-== Proxy wird aktualisiert oder entfernt
+== Aktualisieren oder Entfernen des Proxys
 
-Mit dem SecurityAdmin-Tool können Proxy-Informationen für die Acquisition Unit festgelegt oder entfernt werden, indem das Tool mit dem Parameter _-PR_ ausgeführt wird:
+Mit dem Tool SecurityAdmin können Sie Proxy-Informationen für die Erfassungseinheit festlegen oder entfernen, indem Sie das Tool mit dem Parameter _-pr_ ausführen:
 
 [listing]
 ----
@@ -184,10 +184,10 @@ Documentation.
                              Note: domain is required if the proxy auth
                              scheme is NTLM.)
 ----
-Um den Proxy beispielsweise zu entfernen, führen Sie folgenden Befehl aus:
+Um beispielsweise den Proxy zu entfernen, führen Sie diesen Befehl aus:
 
  [root@ci-eng-linau bin]# ./securityadmin -pr -rp
-Sie müssen die Erfassungseinheit neu starten, nachdem Sie den Befehl ausgeführt haben.
+Sie müssen die Erfassungseinheit nach der Ausführung des Befehls neu starten.
 
 Um einen Proxy zu aktualisieren, lautet der Befehl
 
@@ -196,58 +196,58 @@ Um einen Proxy zu aktualisieren, lautet der Befehl
 
 == Externer Schlüsselabruf
 
-Wenn Sie ein UNIX-Shell-Skript bereitstellen, kann es von der Erfassungseinheit ausgeführt werden, um den *privaten Schlüssel* und den *öffentlichen Schlüssel* von Ihrem Schlüsselverwaltungssystem abzurufen.
+Wenn Sie ein UNIX-Shell-Skript bereitstellen, kann es von der Erfassungseinheit ausgeführt werden, um den *privaten Schlüssel* und den *öffentlichen Schlüssel* aus Ihrem Schlüsselverwaltungssystem abzurufen.
 
-Um den Schlüssel abzurufen, führt Data Infrastructure Insights das Skript aus und gibt zwei Parameter an: _Key id_ und _key type_. _Key id_ kann verwendet werden, um den Schlüssel in Ihrem Key Management System zu identifizieren. _Schlüsseltyp_ ist entweder "öffentlich" oder "privat". Wenn der Schlüsseltyp „public“ ist, muss das Skript den öffentlichen Schlüssel zurückgeben. Wenn der Schlüsseltyp „privat“ ist, muss der private Schlüssel zurückgegeben werden.
+Um den Schlüssel abzurufen, führt Data Infrastructure Insights das Skript aus und übergibt zwei Parameter: _Schlüssel-ID_ und _Schlüsseltyp_.  Mit der _Schlüssel-ID_ können Sie den Schlüssel in Ihrem Schlüsselverwaltungssystem identifizieren.  _Schlüsseltyp_ ist entweder „öffentlich“ oder „privat“.  Wenn der Schlüsseltyp „öffentlich“ ist, muss das Skript den öffentlichen Schlüssel zurückgeben.  Wenn der Schlüsseltyp „privat“ ist, muss der private Schlüssel zurückgegeben werden.
 
-Um den Schlüssel an die Erfassungseinheit zurücksenden zu können, muss das Skript den Schlüssel auf die Standardausgabe drucken. Das Skript muss _only_ den Schlüssel zur Standardausgabe drucken; kein anderer Text muss in der Standardausgabe gedruckt werden. Sobald der angeforderte Schlüssel in die Standardausgabe gedruckt wurde, muss das Skript mit einem Exit-Code von 0 beendet werden. Jeder andere Rückgabewert wird als Fehler angesehen.
+Um den Schlüssel an die Erfassungseinheit zurückzusenden, muss das Skript den Schlüssel in der Standardausgabe drucken.  Das Skript darf _nur_ den Schlüssel in die Standardausgabe drucken. Es darf kein anderer Text in die Standardausgabe gedruckt werden.  Sobald der angeforderte Schlüssel in der Standardausgabe gedruckt wird, muss das Skript mit einem Exitcode von 0 beendet werden; jeder andere Rückgabecode wird als Fehler betrachtet.
 
-Das Skript muss mit der Erfassungseinheit mit dem SecurityAdmin-Tool registriert werden, das das Skript zusammen mit der Erfassungseinheit ausführt. Das Skript muss über _read_ und _execute_ Berechtigungen für den Root- und „cisys“-Benutzer verfügen. Wenn das Shell-Skript nach der Registrierung geändert wird, muss das geänderte Shell-Skript erneut bei der Erfassungseinheit registriert werden.
+Das Skript muss mithilfe des SecurityAdmin-Tools bei der Erfassungseinheit registriert werden, das das Skript zusammen mit der Erfassungseinheit ausführt.  Das Skript muss über Lese- und Ausführungsberechtigungen für den Root- und „cisys“-Benutzer verfügen.  Wenn das Shell-Skript nach der Registrierung geändert wird, muss das geänderte Shell-Skript erneut bei der Erfassungseinheit registriert werden.
 
 |===
 
 
-| Eingabeparameter: Schlüssel-id | Schlüsselkennung zur Identifizierung des Schlüssels im Verschlüsselungsmanagement-System des Kunden 
+| Eingabeparameter: Schlüssel-ID | Schlüsselkennung, die zur Identifizierung des Schlüssels im Schlüsselverwaltungssystem des Kunden verwendet wird. 
 
 
-| Eingabeparameter: Schlüsseltyp | Public oder Private Cloud. 
+| Eingabeparameter: Schlüsseltyp | öffentlich oder privat. 
 
 
-| Ausgang | Die angeforderte Taste muss in der Standardausgabe ausgedruckt werden. 2048-Bit RSA-Schlüssel wird derzeit unterstützt. Schlüssel müssen im folgenden Format kodiert und gedruckt werden - privates Schlüsselformat - PEM, DER-encoded PKCS8 PrivateKeyInfo RFC 5958 public key Format - PEM, DER-encoded X.509 SubjectPublicKeyInfo RFC 5280 
+| Ausgabe | Der angeforderte Schlüssel muss auf der Standardausgabe ausgegeben werden.  Derzeit wird ein 2048-Bit-RSA-Schlüssel unterstützt.  Schlüssel müssen im folgenden Format codiert und gedruckt werden: Privates Schlüsselformat – PEM, DER-codiert PKCS8 PrivateKeyInfo RFC 5958 Öffentliches Schlüsselformat – PEM, DER-codiert X.509 SubjectPublicKeyInfo RFC 5280 
 
 
-| Exit-Code | Der Exit-Code von Null wird erfolgreich ausgeführt. Alle anderen Exit-Werte gelten als fehlgeschlagen. 
+| Exitcode | Bei Erfolg ist der Exitcode Null.  Alle anderen Exit-Werte gelten als Fehlschlag. 
 
 
 | Skriptberechtigungen | Das Skript muss über Lese- und Ausführungsberechtigungen für den Root- und „cisys“-Benutzer verfügen. 
 
 
-| Protokolle | Skriptausführungen werden protokolliert. Protokolle finden Sie unter - /var/log/NetApp/cloudinsights/securityadmin/securityadmin.log /var/log/NetApp/cloudinsights/acq/acq.log 
+| Protokolle | Skriptausführungen werden protokolliert.  Protokolle finden Sie unter - /var/log/netapp/cloudinsights/securityadmin/securityadmin.log /var/log/netapp/cloudinsights/acq/acq.log 
 |===
 
 
-== Verschlüsseln eines Kennworts für die Verwendung in API
+== Verschlüsseln eines Passworts zur Verwendung in der API
 
-Mit Option 8 können Sie ein Passwort verschlüsseln, das Sie dann per API an einen Datensammler weiterleiten können.
+Option 8 ermöglicht Ihnen die Verschlüsselung eines Passworts, welches Sie dann per API an einen Datensammler weitergeben können.
 
-Starten Sie das SecurityAdmin-Tool im interaktiven Modus und wählen Sie Option 8: _Encrypt Password_.
+Starten Sie das SecurityAdmin-Tool im interaktiven Modus und wählen Sie Option 8: _Passwort verschlüsseln_.
 
  securityadmin.sh -i
-Sie werden aufgefordert, das Kennwort einzugeben, das Sie verschlüsseln möchten. Beachten Sie, dass die von Ihnen eingegebenen Zeichen nicht auf dem Bildschirm angezeigt werden. Geben Sie das Passwort erneut ein, wenn Sie dazu aufgefordert werden.
+Sie werden aufgefordert, das zu verschlüsselnde Kennwort einzugeben.  Beachten Sie, dass die von Ihnen eingegebenen Zeichen nicht auf dem Bildschirm angezeigt werden.  Geben Sie das Passwort erneut ein, wenn Sie dazu aufgefordert werden.
 
-Wenn Sie den Befehl in einem Skript verwenden, verwenden Sie alternativ auf einer Befehlszeile _securityadmin.sh_ mit dem Parameter "-enc" und geben Ihr unverschlüsseltes Passwort ein:
+Wenn Sie den Befehl alternativ in einem Skript verwenden möchten, verwenden Sie in einer Befehlszeile _securityadmin.sh_ mit dem Parameter „-enc“ und übergeben Sie Ihr unverschlüsseltes Kennwort:
 
  securityadmin -enc mypassword
-image:SecurityAdmin_Encrypt_Key_API_CLI_Example.png["Beispiel für CLI"]
+image:SecurityAdmin_Encrypt_Key_API_CLI_Example.png["CLI-Beispiel"]
 
-Das verschlüsselte Passwort wird auf dem Bildschirm angezeigt. Kopieren Sie die gesamte Zeichenfolge einschließlich aller führenden oder nachgestellten Symbole.
+Das verschlüsselte Passwort wird auf dem Bildschirm angezeigt.  Kopieren Sie die gesamte Zeichenfolge einschließlich aller führenden oder nachfolgenden Symbole.
 
-image:SecurityAdmin_Encrypt_Key_1.png["Interaktiver Modus Kennwort verschlüsseln, Breite=640"]
+image:SecurityAdmin_Encrypt_Key_1.png["Interaktiver Modus, Passwort verschlüsseln, Breite=640"]
 
-Um das verschlüsselte Passwort an einen Datensammler zu senden, können Sie die Data Collection API verwenden. Der Swagger für diese API ist unter *Admin > API Access* zu finden und auf den Link "API Documentation" zu klicken. Wählen Sie den API-Typ „Data Collection“ aus. Wählen Sie unter der Überschrift _Data_Collection.Data_Collector_ die API _/Collector/Datasources_ POST für dieses Beispiel aus.
+Um das verschlüsselte Passwort an einen Datensammler zu senden, können Sie die Datensammlungs-API verwenden.  Den Swagger für diese API finden Sie unter *Admin > API-Zugriff*. Klicken Sie auf den Link „API-Dokumentation“.  Wählen Sie den API-Typ „Datenerfassung“ aus.  Wählen Sie unter der Überschrift _data_collection.data_collector_ die POST-API _/collector/datasources_ für dieses Beispiel aus.
 
 image:SecurityAdmin_Encrypt_Key_Swagger_API.png["API zur Datenerfassung"]
 
-Wenn Sie die Option _preEncrypted_ auf _true_ setzen, wird jedes Passwort, das Sie über den API-Befehl übergeben, als *bereits verschlüsselt* behandelt; die API verschlüsselt das/die Passwort(e) nicht neu. Wenn Sie Ihre API erstellen, fügen Sie einfach das zuvor verschlüsselte Passwort an der entsprechenden Stelle ein.
+Wenn Sie die Option _preEncrypted_ auf _True_ setzen, wird jedes Kennwort, das Sie über den API-Befehl übergeben, als *bereits verschlüsselt* behandelt. Die API verschlüsselt das/die Kennwort(e) nicht erneut.  Fügen Sie beim Erstellen Ihrer API einfach das zuvor verschlüsselte Passwort an der entsprechenden Stelle ein.
 
-image:SecurityAdmin_Encrypt_Key_API_Example.png["API-Beispiel, width=600"]
+image:SecurityAdmin_Encrypt_Key_API_Example.png["API-Beispiel, Breite=600"]

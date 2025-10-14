@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: task_dc_infinidat_infinibox.html 
 keywords: data collector, infinidat, InfiniBox 
-summary: Konfigurieren von Infiniat InfiniBox Datensammler. 
+summary: Konfigurieren des Infinidat InfiniBox-Datensammlers. 
 ---
-= Infiniat InfiniBox Datensammler
+= Infinidat InfiniBox Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der Datensammler Infinibei InfiniBox (HTTP) wird verwendet, um Inventarinformationen vom Infiniat InfiniBox-Speichersystem zu sammeln.
+Der Infinidat InfiniBox (HTTP)-Datensammler wird zum Sammeln von Bestandsinformationen vom Infinidat InfiniBox-Speichersystem verwendet.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem Infinidat Infinibox Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Infinidat InfiniBox-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Storage-Pool | Storage-Pool 
+| Speicherpool | Speicherpool 
 
 
-| Knoten | Controller 
+| Node | Regler 
 
 
 | Dateisystem | Internes Volumen 
@@ -35,17 +35,17 @@ Data Infrastructure Insights erfasst die folgenden Bestandsinformationen aus dem
 | Dateisystem | Dateifreigabe 
 
 
-| Dateisystem-Exporte | Share 
+| Dateisystemexporte | Aktie 
 |===
 
 
 == Anforderungen
 
-Die folgenden Anforderungen gelten für die Konfiguration dieses Datensammlers.
+Im Folgenden sind die Anforderungen für die Konfiguration dieses Datensammlers aufgeführt.
 
-* IP-Adresse oder FQDN des InfiniBox-Managementknoten
-* Admin-Benutzer-ID und Passwort
-* Port 443 über REST API
+* IP-Adresse oder FQDN des InfiniBox-Verwaltungsknotens
+* Administrator-Benutzer-ID und -Passwort
+* Port 443 über REST-API
 
 
 
@@ -57,13 +57,13 @@ Die folgenden Anforderungen gelten für die Konfiguration dieses Datensammlers.
 | Feld | Beschreibung 
 
 
-| InfiniBox Host | IP-Adresse oder vollqualifizierter Domainname des InfiniBox Management Node 
+| InfiniBox-Host | IP-Adresse oder vollqualifizierter Domänenname des InfiniBox-Verwaltungsknotens 
 
 
-| Benutzername | Benutzername für InfiniBox Management Node 
+| Benutzername | Benutzername für den InfiniBox-Verwaltungsknoten 
 
 
-| Passwort | Passwort für den InfiniBox Management-Knoten 
+| Passwort | Passwort für den InfiniBox-Verwaltungsknoten 
 |===
 
 
@@ -74,13 +74,13 @@ Die folgenden Anforderungen gelten für die Konfiguration dieses Datensammlers.
 | Feld | Beschreibung 
 
 
-| TCP-Anschluss | TCP-Port zur Verbindung mit InfiniBox-Server. Der Standardwert ist 443. 
+| TCP-Port | TCP-Port, der für die Verbindung mit dem InfiniBox-Server verwendet wird.  Der Standardwert ist 443. 
 
 
-| Abfrageintervall Für Bestand | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+| Inventarabfrageintervall | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

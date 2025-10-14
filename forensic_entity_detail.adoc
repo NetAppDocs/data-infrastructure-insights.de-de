@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: forensic_entity_detail.html 
 keywords: Forensic, entity, entity overview, entity behavior, entities 
-summary: Seite mit forensischen Einheiten 
+summary: Seite „Forensische Entitäten“ 
 ---
-= Seite Mit Forensischen Einheiten
+= Seite „Forensische Entitäten“
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,18 +14,18 @@ summary: Seite mit forensischen Einheiten
 
 
 [role="lead"]
-Auf der Seite Forensics Entities finden Sie detaillierte Informationen über die Entitätstätigkeit auf Ihrem Mandanten.
+Die Seite „Forensik-Entitäten“ bietet detaillierte Informationen zur Entitätsaktivität auf Ihrem Mandanten.
 
 
 
-== Untersuchung Von Informationen Zur Einheit
+== Untersuchen von Entitätsinformationen
 
-Klicken Sie auf *Forensics > Vorgangsforensics*, und klicken Sie auf die Registerkarte _Entities_, um die Seite Entities aufzurufen.
+Klicken Sie auf *Forensik > Aktivitätsforensik* und dann auf die Registerkarte _Entitäten_, um auf die Seite „Entitäten“ zuzugreifen.
 
-Diese Seite bietet einen Überblick über die Entity-Aktivitäten auf Ihrem Mandanten, wobei folgende Informationen hervorgehoben werden: * Ein Diagramm mit _Unique Entities_ Zugriffe pro Minute * Ein Diagramm mit _Entity-Typen zugegriffen_ * Eine Aufschlüsselung der _Common Paths_ * Eine Liste der _Top 50 Entities_ aus der Gesamtzahl der Entities
+Diese Seite bietet einen Überblick über die Entitätsaktivität auf Ihrem Mandanten und hebt die folgenden Informationen hervor: * Ein Diagramm mit den pro Minute aufgerufenen _eindeutigen Entitäten_ * Ein Diagramm der _zugegriffenen Entitätstypen_ * Eine Aufschlüsselung der _gemeinsamen Pfade_ * Eine Liste der _Top 50 Entitäten_ aus der Gesamtzahl der Entitäten
 
-image:CS-Entities-Page.png["Seite „Entities“"]
+image:CS-Entities-Page.png["Entitätenseite"]
 
-Durch Klicken auf eine Entität in der Liste wird eine Übersichtsseite für die Entität geöffnet, auf der ein Profil der Entität mit Details wie Name, Typ, Gerätename, IP-Adresse und Pfad sowie das Entity-Verhalten wie Benutzer, IP, Und die Zeit, zu der das Unternehmen zuletzt aufgerufen wurde.
+Wenn Sie in der Liste auf eine Entität klicken, wird eine Übersichtsseite für die Entität geöffnet, auf der ein Profil der Entität mit Details wie Name, Typ, Gerätename, IP-Adresse und Pfad des am häufigsten aufgerufenen Standorts sowie das Entitätsverhalten wie Benutzer, IP-Adresse und Uhrzeit des letzten Zugriffs auf die Entität angezeigt wird.
 
-image:CS-entity-detail-page.png["Übersicht Der Einheit"]
+image:CS-entity-detail-page.png["Entitätsübersichtsseite"]

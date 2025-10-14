@@ -1,42 +1,42 @@
 ---
 sidebar: sidebar 
 permalink: reporting_managing_reports.html 
-summary: 'Anpassen der Berichtausgabe und -Ausgabe, Kopieren von Berichten in die Zwischenablage, Öffnen von Berichten (XML).' 
+summary: 'Anpassen der Berichtsausgabe und -übermittlung, Kopieren von Berichten in die Zwischenablage, Öffnen von Berichten (XML).' 
 keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying 
 ---
-= Verwalten Von Berichten
+= Berichte verwalten
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Sie können das Ausgabeformat und die Zustellung eines Berichts anpassen, Berichtseigenschaften oder Zeitpläne festlegen und E-Mail-Berichte versenden.
+Sie können das Ausgabeformat und die Bereitstellung eines Berichts anpassen, Berichtseigenschaften oder Zeitpläne festlegen und Berichte per E-Mail versenden.
 
 
-NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:concept_subscribing_to_cloud_insights.html["Premium Edition"] .
 
 
-IMPORTANT: Bevor Sie Änderungen an den Berichtsberechtigungen oder der Sicherheit vornehmen, müssen Sie „My Content“-Berichte in den Ordner „Team Content“ kopieren, um sicherzustellen, dass die Berichte gespeichert werden.
+IMPORTANT: Bevor Sie Änderungen an den Berichtsberechtigungen oder der Sicherheit vornehmen, müssen Sie die Berichte „Meine Inhalte“ in den Ordner „Teaminhalte“ kopieren, um sicherzustellen, dass die Berichte gespeichert werden.
 
 
 
 == Anpassen des Ausgabeformats und der Bereitstellung eines Berichts
 
-Sie können das Format und die Bereitstellungsmethode von Berichten anpassen.
+Sie können das Format und die Übermittlungsmethode von Berichten anpassen.
 
-. Gehen Sie im Data Infrastructure Insights Reporting Portal zu *Menü > Inhalt > My Content/Team Content*. Bewegen Sie die Maus über den Bericht, den Sie anpassen möchten, und öffnen Sie das Menü „drei Punkte“.
+. Gehen Sie im Data Infrastructure Insights Reporting Portal zu *Menü > Inhalt > Mein Inhalt/Teaminhalt*.  Bewegen Sie die Maus über den Bericht, den Sie anpassen möchten, und öffnen Sie das Menü mit den drei Punkten.
 
 
-image:Reporting_Output_and_Delivery.png["Berichtsausgabe und -Ausgabe"]
+image:Reporting_Output_and_Delivery.png["Berichtsausgabe und -übermittlung"]
 
-. Klicken Sie Auf *Eigenschaften > Zeitplan*
-. Sie können folgende Optionen festlegen:
+. Klicken Sie auf *Eigenschaften > Zeitplan*
+. Sie können die folgenden Optionen festlegen:
 +
-** *Zeitplan*, wenn Sie Berichte ausführen möchten.
-** Wählen Sie *Optionen* für Berichtformat und -Zustellung (Speichern, Drucken, E-Mail) und Sprachen für den Bericht.
+** *Planen* Sie, wann Berichte ausgeführt werden sollen.
+** Wählen Sie *Optionen* für Berichtsformat und -übermittlung (Speichern, Drucken, E-Mail) und Sprachen für den Bericht.
 
 
-. Klicken Sie auf *Speichern*, um den Bericht anhand der von Ihnen getroffenen Auswahl zu erstellen.
+. Klicken Sie auf *Speichern*, um den Bericht mit den von Ihnen getroffenen Auswahlen zu erstellen.
 
 
 
@@ -45,13 +45,13 @@ image:Reporting_Output_and_Delivery.png["Berichtsausgabe und -Ausgabe"]
 
 Verwenden Sie diesen Vorgang, um einen Bericht in die Zwischenablage zu kopieren.
 
-. Wählen Sie einen zu kopierenden Bericht aus (*Menü > Inhalt > Mein Inhalt oder Teaminhalt*)
-. Wählen Sie im Dropdown-Menü des Berichts die Option _Report bearbeiten_
+. Wählen Sie einen Bericht zum Kopieren aus (*Menü > Inhalt > Mein Inhalt oder Teaminhalt*)
+. Wählen Sie _Bericht bearbeiten_ aus dem Dropdown-Menü des Berichts
 +
 image:Reporting_Edit_Report.png["Bearbeiten eines Berichts"]
 
-. Öffnen Sie oben rechts auf dem Bildschirm das Menü „drei Punkte“ neben „Eigenschaften“.
-. Wählen Sie *Bericht in Zwischenablage kopieren*.
+. Öffnen Sie oben rechts auf dem Bildschirm das Menü mit den drei Punkten neben „Eigenschaften“.
+. Wählen Sie *Bericht in die Zwischenablage kopieren*.
 +
 image:Reporting_Copy_To_Clipboard.png["Kopieren eines Berichts in die Zwischenablage"]
 
@@ -63,10 +63,10 @@ image:Reporting_Copy_To_Clipboard.png["Kopieren eines Berichts in die Zwischenab
 
 Sie können eine Berichtsspezifikation öffnen, die zuvor in die Zwischenablage kopiert wurde.
 
-Über diese Aufgabe Erstellen Sie zunächst einen neuen Bericht oder öffnen Sie einen vorhandenen Bericht, den Sie durch den kopierten Bericht ersetzen möchten. Die folgenden Schritte gelten für einen neuen Bericht.
+Informationen zu diesem Vorgang: Erstellen Sie zunächst einen neuen Bericht oder öffnen Sie einen vorhandenen Bericht, den Sie durch den kopierten Bericht ersetzen möchten.  Die folgenden Schritte gelten für einen neuen Bericht.
 
 . Wählen Sie *Menü > +Neu > Bericht* und erstellen Sie einen leeren Bericht.
-. Öffnen Sie oben rechts auf dem Bildschirm das Menü „drei Punkte“ neben „Eigenschaften“.
+. Öffnen Sie oben rechts auf dem Bildschirm das Menü mit den drei Punkten neben „Eigenschaften“.
 . Wählen Sie *Bericht aus Zwischenablage öffnen*.
 
 
@@ -74,7 +74,7 @@ image:Reporting_Open_From_Clipboard.png["Öffnen eines Berichts aus der Zwischen
 
 . Fügen Sie den kopierten Code in das Fenster ein und wählen Sie *OK*.
 . Wählen Sie das Diskettensymbol, um den Bericht zu speichern.
-. Wählen Sie, wo der Bericht gespeichert werden soll (_My Content_, _Team Content_, oder erstellen Sie einen neuen Ordner).
+. Wählen Sie, wo der Bericht gespeichert werden soll (_Meine Inhalte_, _Teaminhalte_ oder erstellen Sie einen neuen Ordner).
 . Geben Sie dem neuen Bericht einen aussagekräftigen Namen und wählen Sie *Speichern*.
 
 
@@ -82,25 +82,25 @@ image:Reporting_Open_From_Clipboard.png["Öffnen eines Berichts aus der Zwischen
 
 == Bearbeiten eines vorhandenen Berichts
 
-Beachten Sie, dass die Bearbeitung von Dateien am Standardspeicherort das Risiko birgt, dass diese Berichte bei der nächsten Aktualisierung des Berichtkatalogs überschrieben werden. Es wird empfohlen, den bearbeiteten Bericht unter einem neuen Namen zu speichern oder an einem nicht standardmäßigen Speicherort zu speichern.
+Beachten Sie, dass beim Bearbeiten von Dateien an ihrem Standardspeicherort das Risiko besteht, dass diese Berichte bei der nächsten Aktualisierung des Berichtskatalogs überschrieben werden.  Es wird empfohlen, den bearbeiteten Bericht unter einem neuen Namen oder an einem anderen als dem Standardspeicherort zu speichern.
 
 
 
 == Fehlerbehebung
 
-Hier finden Sie Vorschläge zur Fehlerbehebung bei Problemen mit der Berichterstattung.
+Hier finden Sie Vorschläge zur Behebung von Problemen mit dem Reporting.
 
 |===
 
 
-| *Problem:* | *Teste das:* 
+| *Problem:* | *Versuchen Sie Folgendes:* 
 
 
-| Bei der Planung eines Berichts, der per E-Mail versendet werden soll, wird der Name des angemeldeten Benutzers im Feld „an“ der E-Mail vorausgefüllt. Der Name ist jedoch in der Form von "Vorname Nachname" (Vorname, Leerzeichen, Nachname). Da es sich hierbei nicht um eine gültige E-Mail-Adresse handelt, wird die E-Mail nicht gesendet, wenn der geplante Bericht ausgeführt wird. | Löschen Sie bei der Planung des zu sendenden Berichts per E-Mail den vorausgefüllten Namen und geben Sie eine gültige, korrekt formatierte E-Mail-Adresse in das Feld „To“ ein. 
+| Wenn Sie einen Bericht zum Senden per E-Mail planen, wird der Name des angemeldeten Benutzers bereits in das Feld „An“ der E-Mail eingetragen.  Der Name hat jedoch die Form „Vorname Nachname“ (Vorname, Leerzeichen, Nachname).  Da es sich hierbei nicht um eine gültige E-Mail-Adresse handelt, kann die E-Mail beim Ausführen des geplanten Berichts nicht gesendet werden. | Wenn Sie den Bericht per E-Mail versenden möchten, löschen Sie den voreingestellten Namen und geben Sie im Feld „An“ eine gültige, richtig formatierte E-Mail-Adresse ein. 
 
 
-| Mein geplanter Bericht wird per E-Mail gesendet, aber der Bericht kann nicht abgerufen werden, wenn der Ursprung aus dem Ordner „My Content“ stammt. | Um dies zu vermeiden, muss der Bericht oder die Berichtsansicht im Ordner „Team Content > Custom Reports - xxxxxx“ gespeichert und der Zeitplan aus dieser gespeicherten Version erstellt werden. Der Ordner „Custom Reports - xxxxxx“ ist für alle Benutzer auf dem Mandanten sichtbar. 
+| Mein geplanter Bericht wird per E-Mail versendet, aber auf den Bericht kann nicht zugegriffen werden, wenn er aus dem Ordner „Meine Inhalte“ stammt. | Um dies zu vermeiden, muss der Bericht oder die Berichtsansicht im Ordner „Teaminhalte > Benutzerdefinierte Berichte – xxxxxx“ gespeichert und der Zeitplan aus dieser gespeicherten Version erstellt werden.  Der Ordner „Benutzerdefinierte Berichte – xxxxxx“ ist für alle Benutzer des Mandanten sichtbar. 
 
 
-| Beim Speichern eines Jobs wird im Ordner möglicherweise „Team Content“ mit der Inhaltsliste aus „Custom Reports - xxxxxx“ angezeigt. Sie können den Job hier jedoch nicht speichern, da Cognos der Meinung ist, dass dies der Ordner „Team Content“ ist, in dem Sie keinen Schreibzugriff haben. | Die Umgehung besteht darin, einen neuen Ordner mit einem eindeutigen Namen (d. h. „NewFolder“) zu erstellen und dort zu speichern, oder in „My Content“ zu speichern und dann in „Custom Reports - xxxxxx“ zu kopieren/zu verschieben. 
+| Beim Speichern eines Jobs wird im Ordner möglicherweise „Teaminhalte“ mit der Inhaltsliste aus „Benutzerdefinierte Berichte – xxxxxx“ angezeigt. Sie können den Job hier jedoch nicht speichern, da Cognos davon ausgeht, dass dies der Ordner „Teaminhalte“ ist, für den Sie keinen Schreibzugriff haben. | Die Problemumgehung besteht darin, einen neuen Ordner mit einem eindeutigen Namen (z. B. „NewFolder“) zu erstellen und dort zu speichern oder in „Meine Inhalte“ zu speichern und dann nach „Benutzerdefinierte Berichte – xxxxxx“ zu kopieren/verschieben. 
 |===

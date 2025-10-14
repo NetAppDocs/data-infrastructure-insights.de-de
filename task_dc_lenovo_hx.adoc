@@ -2,54 +2,54 @@
 sidebar: sidebar 
 permalink: task_dc_lenovo_hx.html 
 keywords: data collector, Lenovo, HX 
-summary: Konfigurieren des Lenovo HX-Datensammlers. 
+summary: Lenovo HX-Datenkollektor konfigurieren. 
 ---
-= Lenovo HX Datensammler
+= Lenovo HX-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der Lenovo HX-Datensammler erfasst Bestands- und Leistungsinformationen von Lenovo HX-Speichersystemen.
+Der Lenovo HX-Datenkollektor erfasst Bestands- und Leistungsinformationen von Lenovo HX-Speichersystemen.
 
 
 
 == Anforderungen
 
-Zur Konfiguration dieses Datensammlers sind folgende Informationen erforderlich:
+Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
 
 * Ein eindeutiger Name für den Datensammler
 * Die mit dem Datensammler verbundene Erfassungseinheit
-* TCP-Portanforderung 9440
+* TCP-Port-Anforderung 9440
 
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Bestands- und Leistungsinformationen aus dem Lenovo HX-Datensammler. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestands- und Leistungsinformationen vom Lenovo HX-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Storage-Pool | Storage-Pool 
+| Speicherpool | Speicherpool 
 
 
 | Container | Internes Volumen 
 
 
-| Knoten | Controller 
+| Node | Regler 
 
 
-| Share | Dateifreigabe 
+| Aktie | Dateifreigabe 
 
 
-| Nutanix Distributed File System (NDFS) | Share 
+| Nutanix Distributed File System (NDFS) | Aktie 
 
 
-| Volume-Gruppe | Back-End LUN 
+| Volumengruppe | Backend-LUN 
 |===
 
 
@@ -60,13 +60,13 @@ Data Infrastructure Insights erfasst die folgenden Bestands- und Leistungsinform
 | Feld | Beschreibung 
 
 
-| Externe IP-Adresse des Prism | IP-Adresse für die Verbindung mit dem Speichersystem 
+| Externe Prism-IP-Adresse | IP-Adresse, die für die Verbindung mit dem Speichersystem verwendet wird 
 
 
-| Benutzername | User naame zur Anmeldung beim Storage System. Der Standardwert ist admin. 
+| Benutzername | Benutzername zum Anmelden beim Speichersystem.  Der Standardwert ist „admin“. 
 
 
-| Passwort | Passwort für das Lenovo HX-Speichersystem 
+| Passwort | Kennwort für das Lenovo HX-Speichersystem 
 |===
 
 
@@ -77,8 +77,8 @@ Data Infrastructure Insights erfasst die folgenden Bestands- und Leistungsinform
 | Feld | Beschreibung 
 
 
-| TCP-Anschluss | TCP-Port zur Verbindung mit Lenovo HX. Der Standardwert ist 9440. 
+| TCP-Port | TCP-Port, der für die Verbindung mit Lenovo HX verwendet wird.  Der Standardwert ist 9440. 
 
 
-| Abfrageintervall Für Bestand | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 60 Minuten. 
+| Inventarabfrageintervall | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
 |===

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept_about_applications.html 
 keywords: applications, asset, cost 
-summary: Wenn Sie sich über die Applikationen in der Umgebung Ihres Unternehmens informieren, können Sie die Nutzung und die Kosten Ihrer Ressourcen nachverfolgen. 
+summary: Wenn Sie wissen, welche Anwendungen in der Umgebung Ihres Unternehmens verwendet werden, können Sie die Nutzung und Kosten Ihrer Anlagen besser im Auge behalten. 
 ---
-= Nachverfolgung der Asset-Nutzung nach Applikation
+= Nachverfolgen der Asset-Nutzung nach Anwendung
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,35 +14,35 @@ summary: Wenn Sie sich über die Applikationen in der Umgebung Ihres Unternehmen
 
 
 [role="lead"]
-Wenn Sie sich über die Applikationen in der Umgebung Ihres Unternehmens informieren, können Sie die Nutzung und die Kosten Ihrer Ressourcen nachverfolgen.
+Wenn Sie wissen, welche Anwendungen in der Umgebung Ihres Unternehmens verwendet werden, können Sie die Nutzung und Kosten Ihrer Anlagen besser im Auge behalten.
 
-Bevor Sie die Daten verfolgen können, die mit den auf Ihrem Mandanten ausgeführten Anwendungen verknüpft sind, müssen Sie zunächst diese Anwendungen definieren und sie den entsprechenden Anlagen zuordnen. Applikationen können folgenden Assets zugewiesen werden: Hosts, virtuelle Maschinen, Volumes, interne Volumes, qtrees, Freigaben und Hypervisoren:
+Bevor Sie Daten zu den auf Ihrem Mandanten ausgeführten Anwendungen verfolgen können, müssen Sie diese Anwendungen zunächst definieren und sie den entsprechenden Assets zuordnen.  Sie können Anwendungen mit den folgenden Assets verknüpfen: Hosts, virtuelle Maschinen, Volumes, interne Volumes, Qtrees, Freigaben und Hypervisoren.
 
-Dieses Thema enthält ein Beispiel für die Verfolgung der Verwendung virtueller Maschinen, die das Marketingteam für seine Exchange-E-Mail verwendet.
+Dieses Thema bietet ein Beispiel für die Verfolgung der Nutzung virtueller Maschinen, die das Marketingteam für seine Exchange-E-Mails verwendet.
 
-Möglicherweise möchten Sie eine Tabelle ähnlich der folgenden erstellen, um Applikationen zu identifizieren, die auf dem Mandanten verwendet werden, und um sich die Gruppe oder Geschäftseinheit, die die einzelnen Applikationen verwendet, notieren.
+Sie können eine Tabelle ähnlich der folgenden erstellen, um die auf Ihrem Mandanten verwendeten Anwendungen zu identifizieren und die Gruppe oder Geschäftseinheit zu notieren, die die einzelnen Anwendungen verwendet.
 
 [cols="5*"]
 |===
 
 
-| Mandant | Geschäftsbereich | Geschäftsbereich | Projekt | Applikationen Unterstützt 
+| Mieter | Geschäftszweig | Geschäftseinheit | Projekt | Anwendungen 
 
 
-| NetApp | Datenspeicher | Legal | Patente | Oracle Identity Manager, Oracle On Demand, PatentWiz 
+| NetApp | Datenspeicherung | Rechtliches | Patente | Oracle Identity Manager, Oracle On Demand, PatentWiz 
 
 
-| NetApp | Datenspeicher | Marketing | Verkaufsveranstaltungen | Exchange, gemeinsam genutzte Oracle-Datenbank, BlastOff Event Planner 
+| NetApp | Datenspeicherung | Marketing | Verkaufsveranstaltungen | Exchange, Oracle Shared DataBase, BlastOff-Eventplaner 
 |===
-Diese Tabelle zeigt, dass das Marketing Team die Exchange-Applikation verwendet. Wir möchten die Auslastung ihrer Virtual Machines in Exchange nachverfolgen, damit wir vorhersagen können, wann wir mehr Storage hinzufügen müssen. Wir können die Exchange-Anwendung mit allen virtuellen Maschinen des Marketings verknüpfen:
+Die Tabelle zeigt, dass das Marketingteam die Exchange-Anwendung verwendet.  Wir möchten die Auslastung ihrer virtuellen Maschinen für Exchange verfolgen, damit wir vorhersagen können, wann wir mehr Speicher hinzufügen müssen.  Wir können die Exchange-Anwendung mit allen virtuellen Maschinen von Marketing verknüpfen:
 
 . Erstellen Sie eine Anwendung mit dem Namen _Exchange_
 . Gehen Sie zu *Abfragen > +Neue Abfrage*, um eine neue Abfrage für virtuelle Maschinen zu erstellen (oder wählen Sie ggf. eine vorhandene VM-Abfrage aus).
 +
-Wenn die VMs des Marketingteams alle einen Namen haben, der den String „*mkt*“ enthält, erstellen Sie Ihre Anfrage, um den VM-Namen für „mkt“ zu filtern.
+Angenommen, alle VMs des Marketingteams haben einen Namen, der die Zeichenfolge „*mkt*“ enthält, erstellen Sie Ihre Abfrage, um den VM-Namen nach „mkt“ zu filtern.
 
 . Wählen Sie die VMs aus.
-. Verknüpfen Sie die VMs mit der Anwendung _Exchange_ unter Verwendung von *Massenaktionen > Anwendungen hinzufügen*.
+. Verknüpfen Sie die VMs mit der _Exchange_-Anwendung mithilfe von *Massenaktionen > Anwendungen hinzufügen*.
 . Wählen Sie die gewünschte Anwendung aus und klicken Sie auf *Speichern*.
-. Wenn Sie fertig sind, *Speichern* die Abfrage.
+. Wenn Sie fertig sind, *Speichern* Sie die Abfrage.
 

@@ -2,57 +2,57 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_powervm.html 
 keywords: IBM, powerVM, 
-summary: Konfigurieren des IBM PowerVM-Datensammlers. 
+summary: Konfigurieren des IBM PowerVM-Datenkollektors. 
 ---
-= Konfigurieren des IBM PowerVM-Datensammlers
+= Konfigurieren des IBM PowerVM-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Der IBM PowerVM (SSH) Datensammler wird verwendet, um Informationen über virtuelle Partitionen zu sammeln, die auf IBM POWER Hardware-Instanzen ausgeführt werden, die von einer Hardware Management Console (HMC) verwaltet werden.
+Der IBM PowerVM (SSH)-Datenkollektor wird zum Sammeln von Informationen über virtuelle Partitionen verwendet, die auf IBM POWER-Hardwareinstanzen ausgeführt werden, die von einer Hardware Management Console (HMC) verwaltet werden.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst Bestandsinformationen von den virtuellen Partitionen, die auf IBM POWER Hardware-Instanzen ausgeführt werden. Für jeden erworbenen Asset-Typ wird die am häufigsten für das Asset verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erfasst Bestandsinformationen von den virtuellen Partitionen, die auf IBM POWER-Hardwareinstanzen ausgeführt werden.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für den Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Hdisk | Virtuelles Laufwerk 
+| Festplatte | Virtuelle Festplatte 
 
 
-| Managed System | Host 
+| Verwaltetes System | Gastgeber 
 
 
-| LPAR, VIO Server | Virtual Machine 
+| LPAR, VIO-Server | Virtuelle Maschine 
 
 
-| Volume-Gruppe | Datastore 
+| Volumengruppe | Datenspeicher 
 
 
-| Physisches Volume | LUN 
+| Physisches Volumen | LUN 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-Zur Konfiguration und Nutzung dieses Datensammlers müssen die folgenden Anforderungen erfüllt sein:
+Zur Konfiguration und Nutzung dieses Datensammlers müssen folgende Voraussetzungen erfüllt sein:
 
 * IP-Adresse der Hardware Management Console (HMC)
-* Benutzername und Passwort, die Zugriff auf die Hardware Management Console (HMC) über SSH ermöglichen
-* Port-Anforderung SSH-22
-* Zeigen Sie Berechtigungen auf allen Verwaltungssystemen und Sicherheitsdomänen logischer Partitionen an
+* Benutzername und Kennwort, die den Zugriff auf die Hardware Management Console (HMC) über SSH ermöglichen
+* Portanforderung SSH-22
+* Anzeigeberechtigung für alle Verwaltungssysteme und Sicherheitsdomänen logischer Partitionen
 +
-Der Benutzer muss darüber hinaus über die Berechtigung View für HMC-Konfigurationen und die Möglichkeit verfügen, VPD-Informationen für die Sicherheitsgruppierung der HMC-Konsole zu sammeln. Der Benutzer muss außerdem den Zugriff auf den virtuellen IO-Server-Befehl unter der Sicherheitsgruppierung der logischen Partition zulassen. Es ist eine bewährte Vorgehensweise, von einer Rolle eines Bedieners zu beginnen und dann alle Rollen zu entfernen. Schreibgeschützte Benutzer auf dem HMC haben keine Berechtigungen zum Ausführen von Proxed-Befehlen auf AIX-Hosts.
+Der Benutzer muss außerdem über die Berechtigung zum Anzeigen von HMC-Konfigurationen und zum Sammeln von VPD-Informationen für die Sicherheitsgruppierung der HMC-Konsole verfügen.  Dem Benutzer muss außerdem der Zugriff auf Virtual IO Server Commands unter der Sicherheitsgruppierung „Logische Partition“ gestattet sein.  Es empfiehlt sich, mit der Rolle eines Operators zu beginnen und dann alle Rollen zu entfernen.  Nur-Lese-Benutzer auf der HMC haben keine Berechtigung zum Ausführen von Proxy-Befehlen auf AIX-Hosts.
 
-* Die Best Practice von IBM besteht darin, dass die Geräte von zwei oder mehr HMCs überwacht werden. Beachten Sie, dass dies dazu führen kann, dass OnCommand Insight doppelte Geräte meldet. Daher wird dringend empfohlen, redundante Geräte zur Liste „Geräte ausschließen“ in der erweiterten Konfiguration für diesen Datensammler hinzuzufügen.
+* Die bewährte Vorgehensweise von IBM besteht darin, die Geräte von zwei oder mehr HMCs überwachen zu lassen.  Beachten Sie, dass dies dazu führen kann, dass OnCommand Insight doppelte Geräte meldet. Daher wird dringend empfohlen, redundante Geräte zur Liste „Geräte ausschließen“ in der erweiterten Konfiguration für diesen Datensammler hinzuzufügen.
 
 
 
@@ -64,13 +64,13 @@ Der Benutzer muss darüber hinaus über die Berechtigung View für HMC-Konfigura
 | Feld | Beschreibung 
 
 
-| IP-Adresse für Hardware Management Console (HMC) | IP-Adresse oder vollqualifizierter Domänenname der PowerVM Hardware Management Console 
+| IP-Adresse der Hardware Management Console (HMC) | IP-Adresse oder vollqualifizierter Domänenname der PowerVM Hardware Management Console 
 
 
 | HMC-Benutzer | Benutzername für die Hardware Management Console 
 
 
-| Passwort | Kennwort, das für die Hardware-Verwaltungskonsole verwendet wird 
+| Passwort | Für die Hardware Management Console verwendetes Kennwort 
 |===
 
 
@@ -81,22 +81,22 @@ Der Benutzer muss darüber hinaus über die Berechtigung View für HMC-Konfigura
 | Feld | Beschreibung 
 
 
-| Abfrageintervall für Bestand (min) | Intervall zwischen Bestandsabstimmungen Die Standardeinstellung ist 20 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 20 Minuten. 
 
 
-| SSH-Anschluss | Port, der für SSH zu PowerVM verwendet wird 
+| SSH-Port | Für SSH zur PowerVM verwendeter Port 
 
 
-| Passwort | Kennwort, das für die Hardware-Verwaltungskonsole verwendet wird 
+| Passwort | Für die Hardware Management Console verwendetes Kennwort 
 
 
-| Anzahl Wiederholungen | Anzahl der Versuche für einen erneuten Versuch in der Bestandsaufnahme 
+| Anzahl der Wiederholungsversuche | Anzahl der Inventarisierungswiederholungsversuche 
 
 
-| Geräte Ausschließen | Kommagetrennte Liste von Geräte-IDs oder zu schließenden Anzeigenamen 
+| Geräte ausschließen | Durch Kommas getrennte Liste der auszuschließenden Geräte-IDs oder Anzeigenamen 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen zu diesem Data Collector finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

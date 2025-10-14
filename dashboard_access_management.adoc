@@ -4,23 +4,23 @@ permalink: dashboard_access_management.html
 summary: Sie bestimmen, ob ein von Ihnen erstelltes Dashboard öffentlich oder privat ist. 
 keywords: dashboard, public, shared, private 
 ---
-= Dashboard-Zugriffsmanagement
+= Dashboard-Zugriffsverwaltung
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-Mit Data Infrastructure Insights haben Sie jetzt mehr Kontrolle über den Zugriff auf von Ihnen erstellte Dashboards. Sie können festlegen, wer Ihre Diagramme ändern kann. Sie steuern die Exposition gegenüber potenziell sensiblen Informationen. Wenn Sie ein Dashboard „Privat“ halten, können Sie Ihre Visualisierungen so lange abschließen, bis sie von anderen in Ihrem Unternehmen verwendet werden können.
+Data Infrastructure Insights gibt Ihnen jetzt mehr Kontrolle über den Zugriff auf die von Ihnen erstellten Dashboards.  Sie entscheiden, wer Ihre Diagramme ändern kann.  Sie kontrollieren die Offenlegung potenziell sensibler Informationen.  Wenn Sie ein Dashboard privat halten, können Sie Ihre Visualisierungen fertigstellen, bis sie für die Nutzung durch andere in Ihrer Organisation bereit sind.
 
-image:Dashboard_Sharing_Options.png["Optionen zur gemeinsamen Nutzung des Dashboards, Breite=300"]
+image:Dashboard_Sharing_Options.png["Dashboard-Freigabeoptionen, Breite=300"]
 
-Wenn Sie ein neues Dashboard erstellen, ist dieses Dashboard standardmäßig nur für Sie, den Ersteller, sichtbar. Kein anderer Benutzer kann das Dashboard sehen oder ändern.
+Wenn Sie ein neues Dashboard erstellen, ist dieses Dashboard standardmäßig nur für Sie als Ersteller sichtbar.  Kein anderer Benutzer kann das Dashboard sehen oder ändern.
 
-Wenn Sie Ihr Dashboard fertig gestellt haben, können Sie anderen Personen in Ihrem Unternehmen die Anzeige erlauben. Um ein Dashboard gemeinsam zu nutzen, wählen Sie in der Dashboard-Liste im rechten Menü die Option „_Share_“ aus.
+Wenn Sie Ihr Dashboard fertiggestellt haben, können Sie es auch anderen Personen in Ihrer Organisation zur Anzeige gestatten.  Um ein Dashboard freizugeben, wählen Sie in der Dashboard-Liste im rechten Menü die Option „Freigeben“ aus.
 
-image:dashboard_access_share_menu.png["Dashboard-Zugriff auf Share über das Menü"]
+image:dashboard_access_share_menu.png["Dashboard-Zugriff teilen über das Menü"]
 
-Sie können das Dashboard für alle Benutzer freigeben oder Benutzer auswählen, die über die Berechtigung Bearbeiten oder nur Lesen verfügen.
+Sie können das Dashboard für alle oder für ausgewählte Benutzer freigeben, entweder mit Bearbeitungs- oder Nur-Lese-Berechtigungen.
 
-image:dashboard_access_share_drop-down.png["Dropdown-Listen zum Freigeben eines Dashboards mit der Berechtigung Bearbeiten oder Lesen"]
+image:dashboard_access_share_drop-down.png["Dropdown-Menüs zum Freigeben eines Dashboards mit Bearbeitungs- oder Leseberechtigung"]

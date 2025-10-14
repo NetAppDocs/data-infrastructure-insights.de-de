@@ -4,49 +4,49 @@ permalink: task_config_telegraf_consul.html
 keywords: telegraf, installation, install, consul 
 summary: Konfiguration des Consul-Datensammlers 
 ---
-= Consul Data Collector
+= Konsul-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von Consul zu erfassen.
+Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von Consul zu sammeln.
 
 
 
 == Installation
 
-. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*. Wählen Sie Konsul.
+. Klicken Sie unter *Observability > Collectors* auf *+Data Collector*.  Wählen Sie Konsul.
 +
-Wenn Sie keinen Agenten für die Sammlung konfiguriert haben, werden Sie auf Ihrem Mandanten zu aufgefordertlink:task_config_telegraf_agent.html["Installieren Sie einen Agenten"].
+Wenn Sie keinen Agenten für die Sammlung konfiguriert haben, werden Sie aufgefordert,link:task_config_telegraf_agent.html["Installieren eines Agenten"] auf Ihrem Mieter.
 
 +
-Wenn Sie bereits einen Agenten konfiguriert haben, wählen Sie das entsprechende Betriebssystem oder die entsprechende Plattform aus, und klicken Sie auf *Weiter*.
+Wenn Sie bereits einen Agenten konfiguriert haben, wählen Sie das entsprechende Betriebssystem oder die entsprechende Plattform aus und klicken Sie auf *Weiter*.
 
-. Befolgen Sie die Anweisungen auf dem Bildschirm Consul Configuration, um den Datensammler zu konfigurieren. Die Anweisungen hängen vom Betriebssystem oder der Plattform ab, die Sie zur Datenerfassung verwenden.
-
-
+. Befolgen Sie die Anweisungen im Consul-Konfigurationsbildschirm, um den Datensammler zu konfigurieren.  Die Anweisungen variieren je nach Art des Betriebssystems oder der Plattform, die Sie zum Sammeln von Daten verwenden.
 
 
-== Einrichtung
 
-Informationen finden Sie im link:https://www.consul.io/docs/index.html["Dokumentation für Konsul"].
+
+== Aufstellen
+
+Informationen finden Sie imlink:https://www.consul.io/docs/index.html["Konsuldokumentation"] .
 
 
 
 == Objekte und Zähler für Konsul
 
-Folgende Objekte und ihre Zähler werden gesammelt:
+Die folgenden Objekte und ihre Zähler werden gesammelt:
 
 [cols="<.<,<.<,<.<,<.<"]
 |===
-| Objekt: | Kennungen: | Attribute: | Datenpunkte: 
+| Objekt: | Kennungen: | Merkmale: | Datenpunkte: 
 
 
-| Konsul | Namespace-ID-Service-Node prüfen | Node-IP Node OS Node UUID Node Name Service Name Check Name Service Service ID Status | Warnung Bei Kritischem Durchgang 
+| Konsul | Namespace-Check-ID-Dienstknoten | Knoten-IP Knoten-Betriebssystem Knoten-UUID Knotenname Dienstname Name prüfen Dienst-ID Status | Warnung vor kritischem Überholen 
 |===
 
 
 == Fehlerbehebung
 
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite.
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite.

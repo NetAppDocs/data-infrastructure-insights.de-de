@@ -2,77 +2,77 @@
 sidebar: sidebar 
 permalink: task_dc_na_amazon_fsx.html 
 keywords: 'data collector, stout, fsx, fsx-netapp, Amazon, AWS, cluster, volume, share, LUN"' 
-summary: Amazon FSX für NetApp ONTAP Data Collector 
+summary: Amazon FSx for NetApp ONTAP Data Collector 
 ---
-= Amazon FSX für NetApp ONTAP Datensammler
+= Amazon FSx for NetApp ONTAP Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dieser Datensammler erfasst Bestands- und Performance-Daten von Amazon FSX für NetApp ONTAP. Dieser Datensammler wird in den gesamten Serviceregionen von Data Infrastructure Insights inkrementell zur Verfügung gestellt. Wenden Sie sich an Ihren Vertriebsmitarbeiter, wenn das Symbol für diesen Collector in Ihrer Data Infrastructure Insights Environment nicht angezeigt wird.
+Dieser Datensammler erfasst Bestands- und Leistungsdaten von Amazon FSx for NetApp ONTAP.  Dieser Datensammler wird schrittweise in allen Serviceregionen von Data Infrastructure Insights verfügbar gemacht.  Wenden Sie sich an Ihren Vertriebsmitarbeiter, wenn Sie das Symbol für diesen Collector in Ihrer Data Infrastructure Insights -Umgebung nicht sehen.
 
 
-NOTE: Für diesen Dateninfrastrukturüberblick ist ein ONTAP-Benutzer mit einer Rolle _Filesystem-scoped_ erforderlich. In der AWS link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/roles-and-users.html["Rollen und Regeln"] Dokumentation finden Sie weitere Informationen zu verfügbaren Optionen. AWS unterstützt derzeit nur eine Art Benutzerrolle mit Filesystem Scope, nämlich _fsxadmin_. Dies ist die geeignete Rolle für den Data Infrastructure Insights Collector. Dem Benutzer sollten auch alle drei dieser Anwendungen zugewiesen sein: http, ontapi, ssh.
+NOTE: Dieser Data Infrastructure Insights Collector erfordert einen ONTAP Benutzer mit einer _Filesystem-Scoped_-Rolle.  Bitte überprüfen Sie die AWSlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/roles-and-users.html["Rollen und Regeln"] Informationen zu verfügbaren Optionen finden Sie in der Dokumentation.  Derzeit unterstützt AWS nur eine Art von Benutzerrolle mit Dateisystembereich, nämlich _fsxadmin_.  Dies ist die geeignete Rolle für den Data Infrastructure Insights -Collector.  Dem Benutzer sollten außerdem alle drei dieser Anwendungen zugewiesen sein: http, ontapi, ssh.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst Inventar- und Performance-Daten aus dem FSX-NetApp-Datensammler. Für jeden erworbenen Asset-Typ wird die am häufigsten für das Asset verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erfasst Bestands- und Leistungsdaten vom FSx- NetApp Datenkollektor.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für den Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
 | Cluster | Storage 
 
 
-| LUN | Datenmenge 
+| LUN | Volumen 
 
 
-| Datenmenge | Internes Volumen 
+| Volumen | Internes Volumen 
 |===
 
 
-== FSX-NetApp – Terminologie
+== FSx- NetApp -Terminologie
 
-Die folgenden Begriffe gelten für Objekte oder Referenzen, die Sie auf den FSX-NetApp Storage Asset Landing Pages finden können. Viele dieser Bedingungen gelten auch für andere Datensammler.
+Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie möglicherweise auf den Zielseiten der FSx- NetApp Speicherressourcen finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
 
 
 
 === Storage
 
-* Modell – Eine durch Komma getrennte Liste der eindeutigen, diskreten Modellnamen in diesem Cluster.
+* Modell – Eine durch Kommas getrennte Liste der eindeutigen, diskreten Modellnamen innerhalb dieses Clusters.
 * Anbieter – AWS
-* Seriennummer: Die Seriennummer des Arrays.
-* IP: In der Regel werden die in der Datenquelle konfigurierten IP(s) oder Hostnamen(s) verwendet.
-* Rohkapazität: Die Summe aus 2 des gesamten SSD-Speichers, der dem FSX-Dateisystem zugewiesen ist
-* Latenz – eine Darstellung der Workloads, die sich auf dem Host auslasten, sowohl bei Lese- als auch bei Schreibzugriffen. Idealerweise bezieht Data Infrastructure Insights diesen Wert direkt ein, ist dies jedoch häufig nicht der Fall. Statt dieses Array in Betracht zu ziehen, führt Data Infrastructure Insights in der Regel eine IOPS-gewichtete Berechnung aus den Statistiken der einzelnen internen Volumes durch.
-* Durchsatz: Aggregiert aus internen Volumes. Verwaltung – dieser kann einen Hyperlink für die Verwaltungsschnittstelle des Geräts enthalten. Programmgesteuert erstellt von der Datenquelle „Data Infrastructure Insights“ als Teil der Bestandsberichterstattung.
+* Seriennummer – Die Seriennummer des Arrays.
+* IP – im Allgemeinen handelt es sich dabei um die in der Datenquelle konfigurierten IPs oder Hostnamen.
+* Rohkapazität – Basis-2-Summe des gesamten dem FSx-Dateisystem zugewiesenen SSD-Speichers.
+* Latenz – eine Darstellung der Arbeitslasten, die der Host sowohl beim Lesen als auch beim Schreiben erfährt.  Im Idealfall bezieht Data Infrastructure Insights diesen Wert direkt, dies ist jedoch häufig nicht der Fall.  Anstelle des Arrays, das dies anbietet, führt Data Infrastructure Insights im Allgemeinen eine IOP-gewichtete Berechnung durch, die aus den Statistiken der einzelnen internen Volumes abgeleitet wird.
+* Durchsatz – aggregiert aus internen Volumes.  Verwaltung – dies kann einen Hyperlink zur Verwaltungsschnittstelle des Geräts enthalten.  Programmgesteuert von der Data Infrastructure Insights Datenquelle als Teil der Bestandsberichterstattung erstellt.
 
 
 
 
-=== Storage-Pool
+=== Speicherpool
 
-* Storage – auf welchem Storage-Array dieser Pool lebt. Obligatorisch.
-* Typ – ein beschreibenden Wert aus einer Liste mit einer Aufzählung der Möglichkeiten. Am häufigsten wird „Aggregat“ oder „RAID-Gruppe“ sein.
-* Kapazität – die Werte hier sind die logische genutzte, nutzbare Kapazität und die logische Gesamtkapazität sowie der dafür genutzte Prozentsatz.
-* IOPS – die Summe der IOPS aller Volumes, die in diesem Storage-Pool zugewiesen sind.
-* Durchsatz – der Gesamtdurchsatz aller Volumes, die in diesem Storage-Pool zugewiesen sind.
+* Speicher – auf welchem Speicher-Array dieser Pool lebt.  Obligatorisch.
+* Typ – ein beschreibender Wert aus einer Liste mit aufgezählten Möglichkeiten.  Am häufigsten wird „Aggregat“ oder „RAID-Gruppe“ verwendet.
+* Kapazität – die Werte hier sind die logisch genutzte, nutzbare Kapazität und die logische Gesamtkapazität sowie der davon genutzte Prozentsatz.
+* IOPS – die Summe der IOPs aller diesem Speicherpool zugewiesenen Volumes.
+* Durchsatz – der Gesamtdurchsatz aller diesem Speicherpool zugewiesenen Volumes.
 
 
 
 
 == Anforderungen
 
-Die folgenden Anforderungen gelten für die Konfiguration und Verwendung dieses Datensammlers:
+Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden Voraussetzungen:
 
-* Sie müssen Zugriff auf ein Konto mit der Rolle „fsxadmin“ haben, wobei drei Anwendungen zugewiesen sind - ssh, ontapi, http
+* Sie müssen Zugriff auf ein Konto mit der Rolle „fsxadmin“ haben, dem drei Anwendungen zugewiesen sind – ssh, ontapi, http
 * Zu den Kontodetails gehören Benutzername und Passwort.
-* Anforderungen an den Hafen: 443
+* Portanforderungen: 443
 
 
 
@@ -84,40 +84,40 @@ Die folgenden Anforderungen gelten für die Konfiguration und Verwendung dieses 
 | Feld | Beschreibung 
 
 
-| NetApp Management IP | IP-Adresse oder vollqualifizierter Domain-Name des NetApp Clusters 
+| NetApp Management IP | IP-Adresse oder vollqualifizierter Domänenname des NetApp -Clusters 
 
 
 | Benutzername | Benutzername für NetApp Cluster 
 
 
-| Passwort | Passwort für NetApp Cluster 
+| Passwort | Passwort für NetApp -Cluster 
 |===
 
 
-== Erweiterte Kennzahlen
+== Erweiterte Metriken
 
-Dieser Datensammler sammelt die folgenden erweiterten Metriken aus dem FSX für NetApp ONTAP Storage:
+Dieser Datensammler sammelt die folgenden erweiterten Metriken aus dem FSx für NetApp ONTAP -Speicher:
 
 * fpolicy
 * nfsv3
-* nfsv3:Node
+* nfsv3:Knoten
 * nfsv4
 * nfsv4_1
-* nfsv4_1:Node
-* nfsv4:Node
-* Policy_Group
-* Qtree
-* Datenmenge
-* Workload_Volume
+* nfsv4_1:Knoten
+* nfsv4:Knoten
+* Richtliniengruppe
+* qtree
+* Volumen
+* Arbeitslastvolumen
 
 
-Beachten Sie, dass FSX CLI- und API-Befehle einige Kapazitätswerte abrufen, die Data Infrastructure Insights ZAPI nicht sammelt, so dass bestimmte Kapazitätswerte (z. B. für Speicherpools) in Data Infrastructure Insights anders sein können als sie auf dem FSX selbst sind.
+Beachten Sie, dass FSx CLI- und API-Befehle einige Kapazitätswerte abrufen, die Data Infrastructure Insights ZAPI nicht erfasst. Daher können bestimmte Kapazitätswerte (z. B. für Speicherpools) in Data Infrastructure Insights anders sein als auf dem FSx selbst.
 
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -125,24 +125,24 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Erhalten Sie 401 HTTP-Antwort oder 13003 ZAPI-Fehlercode und ZAPI gibt „unzureichende Berechtigungen“ oder „nicht autorisiert für diesen Befehl“ zurück | Benutzernamen und Kennwort sowie Benutzerrechte/Berechtigungen überprüfen. 
+| Erhalten Sie die HTTP-Antwort 401 oder den ZAPI-Fehlercode 13003 und ZAPI gibt „Unzureichende Berechtigungen“ oder „Nicht für diesen Befehl autorisiert“ zurück. | Überprüfen Sie Benutzernamen und Passwort sowie Benutzerrechte/Berechtigungen. 
 
 
-| ZAPI gibt zurück „Cluster-Rolle ist keine Cluster_Mgmt LIF“ | AU muss mit Cluster Management IP sprechen. Überprüfen Sie die IP und wechseln Sie ggf. auf eine andere IP 
+| ZAPI gibt „Clusterrolle ist nicht cluster_mgmt LIF“ zurück. | AU muss mit der Cluster-Management-IP kommunizieren.  Überprüfen Sie die IP und wechseln Sie gegebenenfalls zu einer anderen IP 
 
 
-| ZAPI-Befehl schlägt nach dem erneuten Versuch fehl | AU hat ein Kommunikationsproblem mit dem Cluster. Überprüfen Sie Netzwerk, Port-Nummer und IP-Adresse. Der Benutzer sollte auch versuchen, einen Befehl von der Befehlszeile aus dem AU-Rechner auszuführen. 
+| ZAPI-Befehl schlägt nach erneutem Versuch fehl | AU hat ein Kommunikationsproblem mit dem Cluster.  Überprüfen Sie Netzwerk, Portnummer und IP-Adresse.  Der Benutzer sollte auch versuchen, einen Befehl über die Befehlszeile der AU-Maschine auszuführen. 
 
 
-| AU konnte über HTTP keine Verbindung mit ZAPI herstellen | Prüfen Sie, ob der ZAPI-Port Klartext akzeptiert. Wenn AU versucht, Klartext an einen SSL-Socket zu senden, schlägt die Kommunikation fehl. 
+| AU konnte keine Verbindung zu ZAPI über HTTP herstellen | Überprüfen Sie, ob der ZAPI-Port Klartext akzeptiert.  Wenn AU versucht, Klartext an einen SSL-Socket zu senden, schlägt die Kommunikation fehl. 
 
 
-| Die Kommunikation schlägt mit SSLException fehl | AU versucht, SSL an einen Klartext Port auf einem Filer zu senden. Überprüfen Sie, ob der ZAPI-Port SSL akzeptiert, oder verwenden Sie einen anderen Port. 
+| Die Kommunikation schlägt mit SSLException fehl | AU versucht, SSL an einen Klartext-Port auf einem Filer zu senden.  Überprüfen Sie, ob der ZAPI-Port SSL akzeptiert, oder verwenden Sie einen anderen Port. 
 
 
-| Weitere Verbindungsfehler: ZAPI-Antwort hat Fehlercode 13001, „Datenbank ist nicht geöffnet“ ZAPI-Fehlercode ist 60 und die Antwort enthält „API hat nicht auf Zeit beendet“ ZAPI-Antwort enthält „initialize_Session() zurückgegebene Null-Umgebung“ ZAPI-Fehlercode ist 14007 und die Antwort enthält „Knoten ist nicht gesund“ | Überprüfen Sie Netzwerk, Port-Nummer und IP-Adresse. Der Benutzer sollte auch versuchen, einen Befehl von der Befehlszeile aus dem AU-Rechner auszuführen. 
+| Weitere Verbindungsfehler: Die ZAPI-Antwort hat den Fehlercode 13001, „Datenbank ist nicht geöffnet“. Der ZAPI-Fehlercode ist 60 und die Antwort enthält „API wurde nicht rechtzeitig beendet“. Die ZAPI-Antwort enthält „initialize_session() hat eine NULL-Umgebung zurückgegeben“. Der ZAPI-Fehlercode ist 14007 und die Antwort enthält „Knoten ist nicht fehlerfrei“. | Überprüfen Sie Netzwerk, Portnummer und IP-Adresse.  Der Benutzer sollte auch versuchen, einen Befehl über die Befehlszeile der AU-Maschine auszuführen. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

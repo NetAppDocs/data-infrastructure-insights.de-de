@@ -2,72 +2,72 @@
 sidebar: sidebar 
 permalink: insights_shared_resources_under_stress.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: Sie erfahren, wie sich Ressourcen auf andere Ressourcen Ihres Mandanten auswirken. 
+summary: Mithilfe von Insights erhalten Sie einen Einblick, wie sich Ressourcen auf andere Ressourcen Ihres Mandanten auswirken. 
 ---
-= Einblicke: Shared Ressourcen Unter Stress
+= Einblicke: Gemeinsam genutzte Ressourcen unter Druck
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Durch Workloads mit hohen Auswirkungen kann die Performance anderer Workloads in einer gemeinsamen Ressource reduziert werden. Dadurch wird die gemeinsam genutzte Ressource unter Druck. Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und Auswirkungen auf Ihre Mandanten untersuchen können.
+Workloads mit hoher Auswirkung können die Leistung anderer Workloads in einer gemeinsam genutzten Ressource beeinträchtigen.  Dadurch wird die gemeinsam genutzte Ressource belastet.  Data Infrastructure Insights bietet Tools, mit denen Sie die Ressourcensättigung und die Auswirkungen auf Ihren Mandanten untersuchen können.
 
 
 
 == Terminologie
 
-Wenn wir über Workload- oder Ressourcenauswirkungen sprechen, sind die folgenden Definitionen hilfreich.
+Wenn es um Arbeitsbelastung oder Ressourcenauswirkungen geht, sind die folgenden Definitionen hilfreich.
 
-Ein *anspruchsvoller Workload* ist ein Workload, der derzeit als Auswirkungen auf andere Ressourcen im Shared Storage Pool identifiziert wird. Diese Workloads führen zu höheren IOPS (zum Beispiel) und reduzieren somit die IOPS für die betroffenen Workloads. Anspruchsvolle Workloads werden manchmal „_High-verbrauchende Workloads_“ genannt.
+Eine *anspruchsvolle Arbeitslast* ist eine Arbeitslast, die sich derzeit auf andere Ressourcen im gemeinsam genutzten Speicherpool auswirkt.  Diese Workloads führen beispielsweise zu höheren IOPS und reduzieren so die IOPS in den betroffenen Workloads.  Anspruchsvolle Arbeitslasten werden manchmal als _arbeitsintensive Arbeitslasten_ bezeichnet.
 
-Ein *betroffener Workload* ist ein Workload, der von einer hohen Auslastung im Shared Storage Pool beeinflusst wird. Diese Workloads verzeichnen aufgrund anspruchsvoller Workloads einen geringeren IOPS-Wert und/oder eine höhere Latenz.
+Eine *betroffene Arbeitslast* ist eine Arbeitslast, die von einer Arbeitslast mit hohem Verbrauch im gemeinsam genutzten Speicherpool betroffen ist.  Bei diesen Workloads kommt es aufgrund der anspruchsvollen Workloads zu reduzierten IOPS und/oder einer höheren Latenz.
 
-Beachten Sie, dass das Volume oder das interne Volume selbst als Workload erkannt wird, falls Data Infrastructure Insights den führenden Computing-Workload nicht erkannt hat. Dies gilt sowohl für anspruchsvolle als auch für betroffene Workloads.
+Beachten Sie: Wenn Data Infrastructure Insights die führende Rechenarbeitslast nicht ermittelt hat, wird das Volume oder das interne Volume selbst als Arbeitslast erkannt.  Dies gilt sowohl für anspruchsvolle als auch für beeinträchtigte Arbeitslasten.
 
-*Shared Resource Sättigung* ist das Verhältnis der IOPS-Auswirkung zu _Baseline_.
+*Shared Resource Saturation* ist das Verhältnis der beeinflussenden IOPS zum _Basiswert_.
 
-*Baseline* wird als der maximal gemeldete Datenpunkt für jeden Workload in der Stunde definiert, die unmittelbar vor der erkannten Sättigung liegt.
+*Baseline* wird als der maximal gemeldete Datenpunkt für jede Arbeitslast in der Stunde unmittelbar vor der erkannten Sättigung definiert.
 
-Ein *Konflikt* oder *Sättigung* tritt auf, wenn sich die IOPS auf andere Ressourcen oder Workloads im Shared Storage Pool auswirken.
-
-
-
-== Anspruchsvolle Workloads
-
-Wenn Sie sich mit anspruchsvollen und beeinträchtigten Workloads in Ihren gemeinsam genutzten Ressourcen vertraut machen möchten, klicken Sie auf *Dashboards > Insights* und wählen Sie die Option *Shared Resources under Stress* Insight aus.
-
-image:InsightsMenu.png["Menü „Insights“"]
-
-Data Infrastructure Insights zeigt eine Liste aller Workloads an, bei denen eine Sättigung erkannt wurde. Beachten Sie, dass Data Infrastructure Insights Workloads zeigt, bei denen mindestens eine _anspruchsvolle Ressource_ *oder* _betroffene Ressource_ erkannt wurde.
-
-Klicken Sie auf einen Workload, um die Detailseite anzuzeigen. Das obere Diagramm zeigt den Vorgang auf der gemeinsam genutzten Ressource (z. B. einen Storage-Pool), über den Konflikte/Sättigung stattfinden.
-
-image:ResourceInsightShared.png["Gemeinsam genutzte Ressourcen mit Konflikten"]
-
-Im Folgenden werden die beiden Diagramme mit den _anspruchsvollen_ Workloads und den Workloads angezeigt, die _durch diese anspruchsvollen Workloads beeinträchtigt sind.
-
-image:ResourceInsightDemanding.png["Diagramm mit anspruchsvollen Workloads"] image:ResourceInsightImpacted-a.png["Betroffene Workload-Grafik"]
-
-Unter den einzelnen Tabellen finden Sie eine Liste mit Workloads und/oder Ressourcen, die von den Engpässen betroffen sind oder die von diesen Konflikten betroffen sind. Wenn Sie auf eine Ressource klicken (z. B. auf eine VM), wird eine Detailseite für diese Ressource geöffnet. Wenn Sie auf einen Workload klicken, wird eine Abfrageseite geöffnet, auf der die beteiligten Pods angezeigt werden. Beachten Sie, dass, wenn der Link eine leere Abfrage öffnet, es sein kann, dass der betroffene Pod nicht mehr Teil der aktiven Konflikte ist. Sie können den Zeitbereich der Abfrage ändern, um die Pod-Liste in einem größeren oder stärker fokussierten Zeitbereich anzuzeigen.
+Eine *Konfliktsituation* oder *Sättigung* tritt auf, wenn festgestellt wird, dass IOPS andere Ressourcen oder Arbeitslasten im gemeinsam genutzten Speicherpool beeinträchtigen.
 
 
 
-== Was muss ich tun, um Sättigung zu lösen?
+== Anspruchsvolle Arbeitslasten
 
-Es gibt eine Reihe von Maßnahmen, die Sie ergreifen können, um die Wahrscheinlichkeit der Sättigung auf Ihrem Mieter zu verringern oder zu beseitigen. Diese werden durch erweitern des Links *+Empfehlungen anzeigen* auf der Seite angezeigt. Hier sind ein paar Dinge, die Sie versuchen können.
+Um anspruchsvolle und beeinträchtigte Arbeitslasten in Ihren gemeinsam genutzten Ressourcen zu untersuchen, klicken Sie auf *Dashboards > Einblicke* und wählen Sie den Einblick *Gemeinsam genutzte Ressourcen unter Stress* aus.
 
-* Kunden mit hohen IOPS-Werten bewegen
+image:InsightsMenu.png["Insights-Menü"]
+
+Data Infrastructure Insights zeigt eine Liste aller Workloads an, bei denen eine Sättigung erkannt wurde.  Beachten Sie, dass Data Infrastructure Insights Workloads anzeigt, bei denen mindestens eine _anspruchsvolle Ressource_ *oder* _beeinträchtigte Ressource_ erkannt wurde.
+
+Klicken Sie auf eine Arbeitslast, um die Detailseite dazu anzuzeigen.  Das obere Diagramm zeigt die Aktivität auf der gemeinsam genutzten Ressource (z. B. einem Speicherpool), auf der die Konflikte/Sättigungen auftreten.
+
+image:ResourceInsightShared.png["Gemeinsam genutzte Ressource zeigt Konflikte"]
+
+Darunter befinden sich zwei Diagramme, die die _anspruchsvollen_ Arbeitslasten und die Arbeitslasten zeigen, die von diesen anspruchsvollen Arbeitslasten _beeinflusst_ werden.
+
+image:ResourceInsightDemanding.png["Anspruchsvolles Arbeitspensum-Diagramm"] image:ResourceInsightImpacted-a.png["Diagramm der beeinträchtigten Arbeitslast"]
+
+Unter jeder Tabelle befindet sich eine Liste der Arbeitslasten und/oder Ressourcen, die den Konflikt beeinflussen oder davon betroffen sind.  Wenn Sie auf eine Ressource (z. B. eine VM) klicken, wird eine Detailseite für diese Ressource geöffnet.  Durch Klicken auf eine Arbeitslast wird eine Abfrageseite geöffnet, auf der die beteiligten Pods angezeigt werden.  Beachten Sie: Wenn der Link eine leere Abfrage öffnet, kann dies daran liegen, dass der betroffene Pod nicht mehr Teil der aktiven Konkurrenz ist.  Sie können den Zeitbereich der Abfrage ändern, um die Pod-Liste in einem größeren oder fokussierteren Zeitbereich anzuzeigen.
+
+
+
+== Was kann ich tun, um die Sättigung zu beheben?
+
+Sie können eine Reihe von Schritten unternehmen, um die Gefahr einer Überlastung Ihres Mieters zu verringern oder auszuschließen.  Diese werden durch Erweitern des Links *+Empfehlungen anzeigen* auf der Seite angezeigt.  Hier sind ein paar Dinge, die Sie ausprobieren können.
+
+* Verschieben von Verbrauchern mit hohem IOPS-Aufkommen
 +
-Verschieben Sie die „gierigen“ Workloads in weniger gesättigte Storage-Pools. Es wird empfohlen, die Ebene und die Kapazität dieser Pools vor der Verschiebung der Workloads zu bewerten, um unnötige Kosten oder zusätzliche Konflikte zu vermeiden.
+Verschieben Sie die „gierigen“ Workloads in weniger gesättigte Speicherpools.  Es wird empfohlen, die Ebene und Kapazität dieser Pools zu bewerten, bevor Sie die Workloads verschieben, um unnötige Kosten oder zusätzliche Konflikte zu vermeiden.
 
-* Implementierung einer QoS-Richtlinie (Quality of Service
+* Implementieren Sie eine Quality of Service (QoS)-Richtlinie
 +
-Implementierung einer QoS-Richtlinie pro Workload, um sicherzustellen, dass genügend freie Ressourcen verfügbar sind, um die Sättigung des Storage-Pools zu verringern. Das ist eine langfristige Lösung.
+Durch die Implementierung einer QoS-Richtlinie pro Arbeitslast, um sicherzustellen, dass genügend freie Ressourcen verfügbar sind, wird die Sättigung des Speicherpools verringert.  Dies ist eine langfristige Lösung.
 
-* Fügen Sie weitere Ressourcen hinzu
+* Hinzufügen zusätzlicher Ressourcen
 +
-Wenn die gemeinsam genutzte Ressource (zum Beispiel Storage Pool) den IOPS-Sättigungspunkt erreicht hat, stellt das Hinzufügen von mehr oder schnelleren Festplatten zum Pool sicher, dass genügend freie Ressourcen zur Verfügung stehen, um die Sättigung zu verringern.
+Wenn die gemeinsam genutzte Ressource (z. B. der Speicherpool) den IOPS-Sättigungspunkt erreicht hat, können Sie durch Hinzufügen weiterer oder schnellerer Festplatten zum Pool sicherstellen, dass genügend freie Ressourcen zur Verfügung stehen, um die Sättigung zu verringern.
 
 
 
-Zum Schluss können Sie auf den *Insight-Link kopieren* klicken, um die Seiten-url in die Zwischenablage zu kopieren, um sie leichter mit Kollegen zu teilen.
+Abschließend können Sie auf *Insight-Link kopieren* klicken, um die Seiten-URL in die Zwischenablage zu kopieren und sie einfacher mit Kollegen zu teilen.

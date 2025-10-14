@@ -4,34 +4,34 @@ permalink: task_dc_rubrik_cdm.html
 keywords: data collector, Rubrik, 
 summary: Konfigurieren des Rubrik CDM-Datensammlers. 
 ---
-= Rubrik CDM Data Collector
+= Rubrik CDM-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights erfasst mithilfe des Rubrik Datensammlers Inventar- und Performance-Daten von Rubrik Storage Appliances.
+Data Infrastructure Insights verwendet den Rubrik-Datensammler, um Bestands- und Leistungsdaten von Rubrik-Speichergeräten zu erfassen.
 
 
 
 == Terminologie
 
-Data Infrastructure Insights erfasst die folgenden Inventarinformationen aus dem Datensammler Rubrik. Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die für diese Ressource am häufigsten verwendete Terminologie angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Rubrik-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Cluster | Storage, Storage-Pool 
+| Cluster | Speicher, Speicherpool 
 
 
-| Knoten | Storage-Node 
+| Node | Speicherknoten 
 
 
-| Festplatte | Festplatte 
+| Scheibe | Scheibe 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In dieser Datenquelle fallen möglicherweise nicht alle Fälle an.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diese Datenquelle darstellen.
 
 
 
@@ -39,12 +39,12 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. In d
 
 Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlich:
 
-* Die Data Infrastructure Insights Acquisition Unit initiiert Verbindungen zum TCP-Port 443 zum Cluster Rubrik. Ein Collector pro Cluster.
-* IP-Adresse des Rubrik Clusters.
-* Benutzername und Passwort für das Cluster.
-* Rubrik Cluster IP-Adresse oder Hostname.
-* Für die Basisauthentifizierung müssen ein Benutzername und ein Passwort für das Cluster eingegeben werden. Wenn Sie die Service Account-basierte Authentifizierung bevorzugen, benötigen Sie ein Dienstkonto, einen geheimen Schlüssel und eine Unternehmens-ID
-* Port-Anforderung: HTTPS 443
+* Die Data Infrastructure Insights Acquisition Unit initiiert Verbindungen zum TCP-Port 443 zum Rubrik-Cluster.  Ein Kollektor pro Cluster.
+* IP-Adresse des Rubrik-Clusters.
+* Benutzername und Passwort für den Cluster.
+* IP-Adresse oder Hostname des Rubrik-Clusters.
+* Für die Basisauthentifizierung ein Benutzername und ein Kennwort für den Cluster.  Wenn Sie die Authentifizierung auf Basis eines Dienstkontos bevorzugen, benötigen Sie ein Dienstkonto, ein Geheimnis und eine Organisations-ID
+* Portanforderung: HTTPS 443
 
 
 
@@ -56,16 +56,16 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 | Feld | Beschreibung 
 
 
-| IP | IP-Adresse des Clusters Rubrik 
+| IP | IP-Adresse des Rubrik-Clusters 
 
 
-| Benutzername / Dienstkonto | Benutzername für das Cluster 
+| Benutzername / Dienstkonto | Benutzername für den Cluster 
 
 
-| Passwort / Geheimnis | Passwort für das Cluster 
+| Passwort / Geheimnis | Kennwort für den Cluster 
 
 
-| Organisations-ID für das Service-Konto | Dies muss die vollständige Zeichenfolge sein, etwa „Organization:::nnnnnn-nnnn....“ 
+| Organisations-ID für das Service-Konto | Dies muss die vollständige Zeichenfolge sein, z. B. „Organization:::nnnnnn-nnnn....“ 
 |===
 
 
@@ -73,16 +73,16 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 
 [cols="2*"]
 |===
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 
+| Inventarabfrageintervall (min) | Der Standardwert ist 60 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 300 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 300 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -90,12 +90,12 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| Ich erhielt die Nachricht, dass mehr als ein Speicher erstellt wird. | Überprüfen Sie, ob das Cluster ordnungsgemäß konfiguriert ist und der Collector auf ein einzelnes Cluster verweist. 
+| Ich habe eine Nachricht erhalten, dass mehr als ein Speicher erstellt wurde. | Überprüfen Sie, ob der Cluster richtig konfiguriert ist und der Collector auf einen einzelnen Cluster verweist. 
 
 
-| Umfrage schlägt mit 400 [Ungültige Anfrage] fehl. Ungültige ManagedId.... | Sie haben das Feld „Organisations-ID“ mit einem Wert ausgefüllt, aber der Rubrik-Cluster glaubt NICHT, dass es sich um eine gültige Organisations-ID handelt, obwohl die Fehlermeldung von Rubrik darauf verweist, dass es sich um eine „ManagedId“ handelt. 
+| Umfrage schlägt mit 400 [Ungültige Anfrage] fehl. ... Ungültige ManagedId.... | Sie haben das Feld „Organisations-ID“ mit einem Wert ausgefüllt, aber der Rubrik-Cluster glaubt NICHT, dass es sich um eine gültige Organisations-ID handelt, obwohl die Fehlermeldung von Rubrik darauf als „ManagedId“ verweist. 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

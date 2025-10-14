@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: troubleshooting_collector_svm.html 
 keywords: data collector, ONTAP, NetApp, SVM, cloud ontap, firewall 
-summary: Fehlerbehebung bei der Datensammler für Workload Security 
+summary: Fehlerbehebung bei Workload Security-Datenkollektoren 
 ---
-= Fehlerbehebung für den ONTAP SVM Data Collector
+= Fehlerbehebung beim ONTAP SVM Data Collector
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,174 +14,174 @@ summary: Fehlerbehebung bei der Datensammler für Workload Security
 
 
 [role="lead"]
-Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen. Hier finden Sie Tipps zur Fehlerbehebung bei Problemen mit diesem Collector.
+Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen.  Hier finden Sie Tipps zur Behebung von Problemen mit diesem Collector.
 
-Anweisungen zum Konfigurieren dieses Collectors finden Sie auf der link:task_add_collector_svm.html["Konfigurieren des SVM Collectors"] Seite.
+Siehe dielink:task_add_collector_svm.html["Konfigurieren des SVM-Collectors"] Seite für Anweisungen zum Konfigurieren dieses Collectors.
 
-Im Fehlerfall können Sie in der Spalte _Status_ der Seite Installed Data Collectors auf _more Detail_ klicken, um mehr über den Fehler zu erfahren.
+Im Falle eines Fehlers können Sie auf der Seite „Installierte Datensammler“ in der Spalte „Status“ auf „Weitere Details“ klicken, um Einzelheiten zum Fehler anzuzeigen.
 
-image:CS_Data_Collector_Error.png["Workload Security Collector Error Mehr Detail Link"]
+image:CS_Data_Collector_Error.png["Workload Security Collector-Fehler – Link mit weiteren Details"]
 
-Bekannte Probleme und deren Lösungen werden im Folgenden beschrieben.
+Bekannte Probleme und deren Lösungen werden unten beschrieben.
 
 ****
-*Problem:* Data Collector läuft einige Zeit lang und stoppt nach einer zufälligen Zeit und schlägt fehl mit: "Fehlermeldung: Connector befindet sich im Fehlerzustand. Dienstname: Audit. Grund für Fehler: Externer fpolicy-Server überlastet.“
+*Problem:* Der Datensammler läuft eine Zeit lang und stoppt nach einer zufälligen Zeit mit der Fehlermeldung: „Fehlermeldung: Connector befindet sich im Fehlerzustand.“  Dienstname: Audit.  Grund für den Fehler: Externer fpolicy-Server überlastet."
 
-*Probieren Sie dieses:* die Ereignisrate von ONTAP war viel höher als die Agentenbox verarbeiten kann. Damit wurde die Verbindung beendet.
+*Versuchen Sie Folgendes:* Die Ereignisrate von ONTAP war viel höher als das, was die Agent-Box verarbeiten kann.  Daher wurde die Verbindung beendet.
 
-Überprüfen Sie den Peak Traffic in CloudSecure, wenn die Verbindung unterbrochen wurde. Dies können Sie auf der Seite *CloudSecure > Aktivitätsforensics > Alle Aktivitäten* überprüfen.
+Überprüfen Sie den Spitzenverkehr in CloudSecure, als die Verbindung getrennt wurde.  Dies können Sie auf der Seite *CloudSecure > Aktivitätsforensik > Alle Aktivitäten* überprüfen.
 
-Wenn der maximale aggregierte Datenverkehr höher ist als der, was die Agent Box verarbeiten kann, lesen Sie die Seite Event Rate Checker zur Dimensionierung der Collector-Bereitstellung in einer Agent-Box.
+Wenn der aggregierte Spitzenverkehr höher ist als das, was die Agent Box verarbeiten kann, lesen Sie auf der Seite „Event Rate Checker“ nach, wie Sie die Größe für die Collector-Bereitstellung in einer Agent Box festlegen.
 
-Wenn der Agent vor dem 4. März 2021 im Feld Agent installiert wurde, führen Sie die folgenden Befehle im Feld Agent aus:
+Wenn der Agent vor dem 4. März 2021 in der Agent-Box installiert wurde, führen Sie die folgenden Befehle in der Agent-Box aus:
 
 ....
 echo 'net.core.rmem_max=8388608' >> /etc/sysctl.conf
 echo 'net.ipv4.tcp_rmem = 4096 2097152 8388608' >> /etc/sysctl.conf
 sysctl -p
 ....
-Starten Sie den Collector nach der Größenänderung von der Benutzeroberfläche neu.
+Starten Sie den Collector nach der Größenänderung über die Benutzeroberfläche neu.
 
 ****
 ****
-*Problem:* Collector meldet Fehlermeldung: "Keine lokale IP-Adresse auf dem Konnektor gefunden, der die Datenschnittstellen der SVM erreichen kann". *Probieren Sie dieses:* Dies ist wahrscheinlich aufgrund eines Netzwerkproblems auf der ONTAP-Seite. Bitte befolgen Sie diese Schritte:
+*Problem:* Der Collector meldet die Fehlermeldung: „Auf dem Connector wurde keine lokale IP-Adresse gefunden, die die Datenschnittstellen der SVM erreichen kann.“  *Versuchen Sie Folgendes:* Dies liegt höchstwahrscheinlich an einem Netzwerkproblem auf der ONTAP Seite.  Bitte befolgen Sie diese Schritte:
 
-. Stellen Sie sicher, dass es keine Firewalls auf der SVM-Datenlüf oder dem Management- l gibt, welche die Verbindung von der SVM blockieren.
-. Wenn Sie eine SVM über eine Cluster-Management-IP hinzufügen, stellen Sie bitte sicher, dass die Daten-LIF und Management-LIF der SVM von der Agent-VM pingfähig sind. Bei Problemen prüfen Sie Gateway, Netzmaske und Routen für den Lif.
+. Stellen Sie sicher, dass auf der SVM-Daten- oder Verwaltungsebene keine Firewalls vorhanden sind, die die Verbindung von der SVM blockieren.
+. Wenn Sie eine SVM über eine Cluster-Management-IP hinzufügen, stellen Sie sicher, dass die Datenlebensdauer und die Managementlebensdauer der SVM von der Agent-VM aus pingbar sind.  Überprüfen Sie bei Problemen das Gateway, die Netzmaske und die Routen für das Leben.
 +
-Sie können auch versuchen, sich mithilfe von ssh unter Verwendung der Cluster-Management-IP beim Cluster anzumelden und die Agent-IP zu pingen. Stellen Sie sicher, dass die Agent-IP pingfähig ist:
+Sie können auch versuchen, sich über SSH mit der Cluster-Verwaltungs-IP beim Cluster anzumelden und die Agent-IP anzupingen.  Stellen Sie sicher, dass die Agent-IP pingbar ist:
 
 +
  network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail
 +
-Wenn nicht pingfähig, stellen Sie sicher, dass die Netzwerkeinstellungen in ONTAP korrekt sind, so dass der Agent-Rechner pingfähig ist.
+Wenn kein Ping möglich ist, stellen Sie sicher, dass die Netzwerkeinstellungen in ONTAP korrekt sind, sodass der Agent-Computer pingbar ist.
 
-. Wenn Sie versucht haben, eine Verbindung über Cluster IP herzustellen und diese nicht funktioniert, versuchen Sie, eine direkte Verbindung über SVM IP herzustellen. Die Schritte zur Verbindung über SVM IP finden Sie oben.
-. Prüfen Sie beim Hinzufügen des Collectors über SVM IP- und vsadmin-Anmeldeinformationen, ob auf dem SVM-Lif die Rolle „Data plus Mgmt“ aktiviert ist. In diesem Fall funktioniert der Ping an die SVM Lif, allerdings funktioniert SSH an die SVM Lif nicht. Wenn ja, erstellen Sie ein SVM Management-only-Lif und versuchen Sie, eine Verbindung über diese SVM-Management-only-Lizenz herzustellen.
-. Wenn es noch nicht funktioniert, erstellen Sie eine neue SVM-Lif und versuchen Sie, eine Verbindung über diese Lif herzustellen. Stellen Sie sicher, dass die Subnetzmaske richtig eingestellt ist.
-. Erweitertes Debugging:
+. Wenn Sie versucht haben, eine Verbindung über die Cluster-IP herzustellen, und dies nicht funktioniert hat, versuchen Sie, eine direkte Verbindung über die SVM-IP herzustellen.  Die Schritte zum Herstellen einer Verbindung über die SVM-IP finden Sie oben.
+. Überprüfen Sie beim Hinzufügen des Collectors über die SVM-IP und die VSadmin-Anmeldeinformationen, ob für SVM Lif die Rolle „Data plus Mgmt“ aktiviert ist.  In diesem Fall funktioniert ein Ping zum SVM Lif, ein SSH zum SVM Lif funktioniert jedoch nicht.  Wenn ja, erstellen Sie ein SVM Mgmt Only Lif und versuchen Sie, über dieses SVM Management Only Lif eine Verbindung herzustellen.
+. Wenn es immer noch nicht funktioniert, erstellen Sie ein neues SVM-Lif und versuchen Sie, über dieses Lif eine Verbindung herzustellen.  Stellen Sie sicher, dass die Subnetzmaske richtig eingestellt ist.
+. Erweitertes Debuggen:
 +
 .. Starten Sie eine Paketverfolgung in ONTAP.
-.. Versuchen Sie, über die CloudSecure UI eine Verbindung zwischen dem Datensammler und der SVM herzustellen.
-.. Warten Sie, bis der Fehler angezeigt wird. Stoppen Sie die Paketverfolgung in ONTAP.
-.. Öffnen Sie die Paketverfolgung von ONTAP. Sie ist an diesem Standort verfügbar
+.. Versuchen Sie, einen Datensammler über die CloudSecure-Benutzeroberfläche mit dem SVM zu verbinden.
+.. Warten Sie, bis der Fehler auftritt.  Stoppen Sie die Paketverfolgung in ONTAP.
+.. Öffnen Sie die Paketverfolgung von ONTAP.  Es ist an diesem Standort verfügbar
 +
  https://<cluster_mgmt_ip>/spi/<clustername>/etc/log/packet_traces/
-.. Stellen Sie sicher, dass ein SYN von ONTAP zum Feld „Agent“ vorhanden ist.
-.. Wenn es kein SYN von ONTAP gibt, dann ist es ein Problem mit Firewall in ONTAP.
-.. Öffnen Sie die Firewall in ONTAP, sodass ONTAP die Agent Box verbinden kann.
+.. Stellen Sie sicher, dass ein SYN von ONTAP zur Agent-Box vorhanden ist.
+.. Wenn kein SYN von ONTAP vorhanden ist, liegt ein Problem mit der Firewall in ONTAP vor.
+.. Öffnen Sie die Firewall in ONTAP, damit ONTAP eine Verbindung zur Agent-Box herstellen kann.
 
 
-. Wenn es immer noch nicht funktioniert, wenden Sie sich an das Netzwerkteam, um sicherzustellen, dass keine externe Firewall die Verbindung zwischen ONTAP und dem Feld „Agent“ blockiert.
-. Wenn keines der oben genannten Probleme löst, öffnen Sie einen Fall mitlink:concept_requesting_support.html["Netapp Support"], um weitere Unterstützung zu erhalten.
-
-
-****
-****
-*Problem:* Nachricht: "ONTAP-Typ für [Hostname: <IP Address> konnte nicht ermittelt werden. Grund: Verbindungsfehler zum Speichersystem-<IP Address>: Host ist nicht erreichbar (Host nicht erreichbar)" *Versuchen Sie dies:*
-
-. Überprüfen Sie, ob die richtige SVM-IP-Managementadresse oder Cluster-Management-IP angegeben wurde.
-. SSH auf die SVM oder den Cluster, mit dem Sie eine Verbindung herstellen möchten. Sobald Sie eine Verbindung hergestellt haben, stellen Sie sicher, dass der SVM oder der Cluster-Name korrekt ist.
+. Wenn es immer noch nicht funktioniert, wenden Sie sich bitte an das Netzwerkteam, um sicherzustellen, dass keine externe Firewall die Verbindung von ONTAP zur Agent-Box blockiert.
+. Wenn keine der oben genannten Maßnahmen das Problem löst, eröffnen Sie einen Fall beilink:concept_requesting_support.html["Netapp-Support"] für weitere Unterstützung.
 
 
 ****
 ****
-*Problem:* Fehlermeldung: "Connector ist im Fehlerzustand. Service.name: Audit. Grund für Fehlschlag: Externer fpolicy-Server beendet.“ *Teste das:*
+*Problem:* Meldung: „ ONTAP -Typ für [Hostname: <IP-Adresse>] konnte nicht ermittelt werden.  Grund: Verbindungsfehler zum Speichersystem <IP-Adresse>: Host ist nicht erreichbar (Host nicht erreichbar)" *Versuchen Sie Folgendes:*
 
-. Es ist sehr wahrscheinlich, dass eine Firewall die erforderlichen Ports im Agent-Rechner blockiert. Überprüfen Sie, ob der Port-Bereich 35000-55000/tcp geöffnet ist, damit der Agent-Rechner eine Verbindung von der SVM herstellen kann. Stellen Sie außerdem sicher, dass keine Firewalls von der ONTAP-Seite aus aktiviert sind, die die Kommunikation mit dem Agenten-Rechner blockieren.
-. Geben Sie den folgenden Befehl in das Feld Agent ein, und stellen Sie sicher, dass der Portbereich geöffnet ist.
+. Überprüfen Sie, ob die richtige SVM-IP-Verwaltungsadresse oder Cluster-Verwaltungs-IP angegeben wurde.
+. Stellen Sie per SSH eine Verbindung zum SVM oder Cluster her, zu dem Sie eine Verbindung herstellen möchten.  Sobald Sie verbunden sind, stellen Sie sicher, dass der SVM- oder Clustername korrekt ist.
+
+
+****
+****
+*Problem:* Fehlermeldung: „Connector befindet sich im Fehlerzustand.  Dienstname: Audit.  Grund für den Fehler: Externer fpolicy-Server beendet."  *Versuchen Sie Folgendes:*
+
+. Höchstwahrscheinlich blockiert eine Firewall die erforderlichen Ports auf dem Agent-Computer.  Überprüfen Sie, ob der Portbereich 35000–55000/TCP für die Agent-Maschine geöffnet ist, damit sie eine Verbindung vom SVM herstellen kann.  Stellen Sie außerdem sicher, dass auf der ONTAP -Seite keine Firewalls aktiviert sind, die die Kommunikation mit dem Agent-Computer blockieren.
+. Geben Sie den folgenden Befehl in das Agent-Feld ein und stellen Sie sicher, dass der Portbereich geöffnet ist.
 +
  sudo iptables-save | grep 3500*
 +
-Die Beispielausgabe sollte wie folgt aussehen:
+Die Beispielausgabe sollte folgendermaßen aussehen:
 
 +
  -A IN_public_allow -p tcp -m tcp --dport 35000 -m conntrack -ctstate NEW -j ACCEPT
-. Melden Sie sich bei SVM an, geben Sie die folgenden Befehle ein und überprüfen Sie, ob für die Kommunikation mit ONTAP keine Firewall eingerichtet ist.
+. Melden Sie sich bei SVM an, geben Sie die folgenden Befehle ein und überprüfen Sie, dass keine Firewall eingerichtet ist, die die Kommunikation mit ONTAP blockiert.
 +
 ....
 system services firewall show
 system services firewall policy show
 ....
 +
-link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nmg%2FGUID-969851BB-4302-4645-8DAC-1B059D81C5B2.html["Überprüfen Sie die Firewall-Befehle"] Auf der ONTAP-Seite.
+link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nmg%2FGUID-969851BB-4302-4645-8DAC-1B059D81C5B2.html["Firewall-Befehle prüfen"]auf der ONTAP -Seite.
 
-. SSH zum SVM/Cluster, den Sie überwachen möchten. Pingen Sie die Agent-Box über die SVM-Daten-LIF (mit CIFS, Unterstützung von NFS-Protokollen) und stellen Sie sicher, dass Ping funktioniert:
+. Stellen Sie per SSH eine Verbindung zum SVM/Cluster her, den Sie überwachen möchten.  Pingen Sie die Agent-Box vom SVM-Datenlebenszyklus aus (mit Unterstützung für CIFS- und NFS-Protokolle) und stellen Sie sicher, dass der Ping funktioniert:
 +
  network ping -vserver <vserver name> -destination <Agent IP> -lif <Lif Name> -show-detail
 +
-Wenn nicht pingfähig, stellen Sie sicher, dass die Netzwerkeinstellungen in ONTAP korrekt sind, so dass der Agent-Rechner pingfähig ist.
+Wenn kein Ping möglich ist, stellen Sie sicher, dass die Netzwerkeinstellungen in ONTAP korrekt sind, sodass der Agent-Computer pingbar ist.
 
-. Wenn eine einzelne SVM über 2 Datensammler zweimal zu einem Mandanten hinzugefügt wird, wird dieser Fehler angezeigt. Löschen Sie einen der Datensammler über die UI. Starten Sie dann den anderen Datensammler über die UI neu. Dann wird der Data Collector den Status „RUNNING“ anzeigen und beginnt, Ereignisse von der SVM zu empfangen.
+. Wenn ein einzelner SVM über zwei Datensammler zweimal zu einem Mandanten hinzugefügt wird, wird dieser Fehler angezeigt.  Löschen Sie einen der Datensammler über die Benutzeroberfläche.  Starten Sie dann den anderen Datensammler über die Benutzeroberfläche neu.  Anschließend zeigt der Datensammler den Status „RUNNING“ an und beginnt mit dem Empfang von Ereignissen vom SVM.
 +
-Im Prinzip sollte in einem Mandanten nur eine SVM über 1 Datensammler hinzugefügt werden. 1 SVM sollte nicht zweimal über 2 Datensammler hinzugefügt werden.
+Grundsätzlich sollte in einem Mandanten 1 SVM nur einmal über 1 Datensammler hinzugefügt werden.  1 SVM sollte nicht zweimal über 2 Datensammler hinzugefügt werden.
 
-. Wenn dieselbe SVM in zwei verschiedenen Workload Security-Umgebungen (Mandanten) hinzugefügt wurde, wird die letzte immer erfolgreich sein. Der zweite Collector konfiguriert fpolicy mit seiner eigenen IP-Adresse und startet die erste. So wird der Sammler in der ersten aufhören, Ereignisse zu empfangen, und sein "Audit"-Service wird in Fehlerzustand. Um dies zu verhindern, konfigurieren Sie jede SVM in einer einzigen Umgebung.
-. Dieser Fehler kann auch auftreten, wenn die Service-Richtlinien nicht korrekt konfiguriert sind. Mit ONTAP 9.8 oder höher ist zur Verbindung mit dem Data Source Collector der datenrichtlinienclient-Dienst zusammen mit dem Datenservice Data-nfs und/oder Data-cifs erforderlich. Darüber hinaus muss der datenrichtlinienclient-Service den Daten-Lif(s) für die überwachte SVM zugeordnet werden.
+. In Fällen, in denen dieselbe SVM in zwei verschiedenen Workload Security-Umgebungen (Mandanten) hinzugefügt wurde, ist die letzte immer erfolgreich.  Der zweite Collector konfiguriert fpolicy mit seiner eigenen IP-Adresse und wirft den ersten raus.  Der Collector im ersten empfängt also keine Ereignisse mehr und sein „Audit“-Dienst wechselt in einen Fehlerzustand.  Um dies zu verhindern, konfigurieren Sie jede SVM in einer einzelnen Umgebung.
+. Dieser Fehler kann auch auftreten, wenn die Servicerichtlinien nicht richtig konfiguriert sind.  Um bei ONTAP 9.8 oder höher eine Verbindung zum Data Source Collector herzustellen, ist der Dienst data-fpolicy-client zusammen mit dem Datendienst data-nfs und/oder data-cifs erforderlich.  Darüber hinaus muss der Dienst „data-fpolicy-client“ mit den Datenlebensdauern für die überwachte SVM verknüpft werden.
 
 
 ****
 ****
-*Problem:* Keine Ereignisse auf der Aktivitäts-Seite gesehen. *Teste das:*
+*Problem:* Auf der Aktivitätsseite wurden keine Ereignisse angezeigt.  *Versuchen Sie Folgendes:*
 
-. Überprüfen Sie, ob sich der ONTAP-Collector im Status „LÄUFT“ befindet. Wenn ja, stellen Sie sicher, dass einige cifs-Ereignisse auf den cifs-Client-VMs durch das Öffnen einiger Dateien generiert werden.
-. Wenn keine Aktivitäten angezeigt werden, melden Sie sich bei der SVM an, und geben Sie den folgenden Befehl ein.
+. Überprüfen Sie, ob sich der ONTAP Collector im Status „RUNNING“ befindet.  Wenn ja, stellen Sie sicher, dass einige CIFS-Ereignisse auf den CIFS-Client-VMs generiert werden, indem Sie einige Dateien öffnen.
+. Wenn keine Aktivitäten angezeigt werden, melden Sie sich bitte beim SVM an und geben Sie den folgenden Befehl ein.
 +
  <SVM>event log show -source fpolicy
 +
-Stellen Sie sicher, dass keine Fehler im Zusammenhang mit fpolicy vorliegen.
+Bitte stellen Sie sicher, dass keine Fehler im Zusammenhang mit fpolicy vorliegen.
 
-. Wenn keine Aktivitäten angezeigt werden, melden Sie sich bei der SVM an. Geben Sie den folgenden Befehl ein:
+. Wenn keine Aktivitäten angezeigt werden, melden Sie sich bitte beim SVM an. Geben Sie den folgenden Befehl ein:
 +
  <SVM>fpolicy show
 +
-Überprüfen Sie, ob die fpolicy-Richtlinie mit dem Präfix „CloudSecure_“ gesetzt wurde und der Status „ein“ lautet. Ist er nicht eingestellt, kann der Agent die Befehle in der SVM höchstwahrscheinlich nicht ausführen. Stellen Sie sicher, dass alle Voraussetzungen, die am Anfang der Seite beschrieben sind, eingehalten wurden.
+Überprüfen Sie, ob die fpolicy-Richtlinie mit dem Präfix „cloudsecure_“ festgelegt wurde und der Status „Ein“ ist.  Wenn nicht festgelegt, kann der Agent die Befehle im SVM höchstwahrscheinlich nicht ausführen.  Bitte stellen Sie sicher, dass alle Voraussetzungen, wie am Anfang der Seite beschrieben, erfüllt sind.
 
 
 
 ****
 ****
-*Problem:* der SVM Data Collector befindet sich im Fehlerzustand und die Fehlermeldung „der Agent konnte keine Verbindung zum Collector herstellen“ * Versuchen Sie es:*
+*Problem:* Der SVM-Datensammler befindet sich im Fehlerzustand und die Fehlermeldung lautet „Der Agent konnte keine Verbindung zum Sammler herstellen.“ *Versuchen Sie Folgendes:*
 
-. Höchstwahrscheinlich ist der Agent überlastet und kann keine Verbindung zu den Datenquellsammlern herstellen.
-. Prüfen Sie, wie viele Datenquellsammler mit dem Agent verbunden sind.
-. Überprüfen Sie auch die Datenflussrate auf der Seite „Alle Aktivitäten“ in der UI.
-. Wenn die Anzahl der Vorgänge pro Sekunde erheblich hoch ist, installieren Sie einen anderen Agenten und verschieben Sie einige der Datenquellen-Collectors auf den neuen Agenten.
+. Höchstwahrscheinlich ist der Agent überlastet und kann keine Verbindung zu den Datenquellen-Sammlern herstellen.
+. Überprüfen Sie, wie viele Datenquellensammler mit dem Agenten verbunden sind.
+. Überprüfen Sie auch die Datenflussrate auf der Seite „Alle Aktivitäten“ in der Benutzeroberfläche.
+. Wenn die Anzahl der Aktivitäten pro Sekunde sehr hoch ist, installieren Sie einen anderen Agenten und verschieben Sie einige der Datenquellensammler auf den neuen Agenten.
 
 
 ****
 ****
-*Problem:* SVM Data Collector zeigt die Fehlermeldung "fpolicy.server.connectError: Node konnte keine Verbindung mit dem FPolicy-Server "12.195.15.146" herstellen ( Grund: "Select Timed Out")" *Versuchen Sie es:* Firewall ist in SVM/Cluster aktiviert. fpolicy Engine kann also keine Verbindung zum fpolicy-Server herstellen. CLIs in ONTAP, mit denen weitere Informationen abgerufen werden können, sind:
+*Problem:* SVM Data Collector zeigt die Fehlermeldung „fpolicy.server.connectError: Knoten konnte keine Verbindung mit dem FPolicy-Server „12.195.15.146“ herstellen (Grund: „Select Timed out“)“ an. *Versuchen Sie Folgendes:* Die Firewall ist in SVM/Cluster aktiviert.  Daher kann die fpolicy-Engine keine Verbindung zum fpolicy-Server herstellen.  CLIs in ONTAP , die zum Abrufen weiterer Informationen verwendet werden können, sind:
 
 ....
 event log show -source fpolicy which shows the error
 event log show -source fpolicy -fields event,action,description which shows more details.
 ....
-link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nmg%2FGUID-969851BB-4302-4645-8DAC-1B059D81C5B2.html["Überprüfen Sie die Firewall-Befehle"] Auf der ONTAP-Seite.
+link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nmg%2FGUID-969851BB-4302-4645-8DAC-1B059D81C5B2.html["Firewall-Befehle prüfen"]auf der ONTAP -Seite.
 
 ****
 ****
-*Problem:* Fehlermeldung: “Connector ist im Fehlerzustand. Dienstname:Audit. Grund für Fehler: Keine gültige Datenschnittstelle (Rolle: Daten, Datenprotokolle: NFS oder CIFS oder beides, Status: Up) auf der SVM gefunden.“ *Probieren Sie dies aus:* Stellen Sie sicher, dass es eine Betriebsschnittstelle gibt (die als Daten- und Datenprotokoll als CIFS/NFS genutzt wird.
+*Problem:* Fehlermeldung: „Der Connector befindet sich im Fehlerzustand.  Dienstname: Audit.  Grund für den Fehler: Auf der SVM wurde keine gültige Datenschnittstelle (Rolle: Daten, Datenprotokolle: NFS oder CIFS oder beide, Status: aktiv) gefunden.“  *Versuchen Sie Folgendes:* Stellen Sie sicher, dass eine funktionsfähige Schnittstelle vorhanden ist (mit der Rolle „Daten“ und dem Datenprotokoll „CIFS/NFS“).
 
 ****
 ****
-*Problem:* der Datensammler wechselt in den Fehlerzustand und geht dann nach einiger Zeit in den LAUFENDEN Zustand zurück, dann wieder zurück zu Fehler. Dieser Zyklus wiederholt sich. *Probieren Sie dies aus:* Dies geschieht typischerweise im folgenden Szenario:
+*Problem:* Der Datensammler wechselt in den Fehlerzustand und nach einiger Zeit in den RUNNING-Zustand und dann wieder zurück in den Fehlerzustand.  Dieser Zyklus wiederholt sich.  *Versuchen Sie Folgendes:* Dies geschieht normalerweise im folgenden Szenario:
 
-. Es werden mehrere Datensammler hinzugefügt.
-. Die Datensammler, die diese Art von Verhalten zeigen, haben 1 SVM zu diesen Datensammlern hinzugefügt. Das bedeutet, dass 2 oder mehr Datensammler mit 1 SVM verbunden sind.
-. Stellen Sie sicher, dass 1 Datensammler eine Verbindung mit nur 1 SVM herstellt.
+. Es wurden mehrere Datensammler hinzugefügt.
+. Den Datensammlern, die dieses Verhalten zeigen, wird 1 SVM hinzugefügt.  Das bedeutet, dass zwei oder mehr Datensammler mit einem SVM verbunden sind.
+. Stellen Sie sicher, dass 1 Datensammler nur mit 1 SVM verbunden ist.
 . Löschen Sie die anderen Datensammler, die mit derselben SVM verbunden sind.
 
 
 ****
 ****
-*Problem:* der Connector befindet sich im Fehlerzustand. Dienstname: Audit. Grund für Fehler: Konnte nicht konfiguriert werden (Richtlinie auf SVM svmname. Grund: Ungültiger Wert für das Element 'shares-to-include' in 'fpolicy.Policy.scope-modify: "Federal' *Probieren Sie dieses:* *die Freigabenamen müssen ohne Anführungszeichen angegeben werden. Bearbeiten Sie die DSC-Konfiguration der ONTAP SVM, um die Freigabennamen zu korrigieren.
+*Problem:* Der Connector befindet sich im Fehlerzustand.  Dienstname: Audit.  Grund für den Fehler: Fehler beim Konfigurieren (Richtlinie auf SVM svmname).  Grund: Ungültiger Wert für das Element „shares-to-include“ in „fpolicy.policy.scope-modify: „Federal“ angegeben. *Versuchen Sie Folgendes:* *Die Freigabenamen müssen ohne Anführungszeichen angegeben werden.  Bearbeiten Sie die ONTAP SVM DSC-Konfiguration, um die Freigabenamen zu korrigieren.
 
-_Aktien einschließen und ausschließen_ ist nicht für eine lange Liste von Share-Namen gedacht. Verwenden Sie stattdessen Filtern nach Volume, wenn eine große Anzahl an Shares enthalten oder ausschließen muss.
+_Freigaben einschließen und ausschließen_ ist nicht für eine lange Liste von Freigabenamen vorgesehen.  Verwenden Sie stattdessen die Filterung nach Volumen, wenn Sie eine große Anzahl von Aktien ein- oder ausschließen möchten.
 
 ****
 ****
-*Problem:* Es gibt im Cluster existierende fPolicies, die nicht verwendet werden. Was sollte vor der Installation von Workload Security getan werden? *Versuchen Sie dies:* Es wird empfohlen, alle bestehenden unbenutzten fpolicy-Einstellungen zu löschen, selbst wenn sie sich im getrennten Zustand befinden. Workload Security erstellt fpolicy mit dem Präfix „cloudSecure_“. Alle anderen nicht verwendeten fpolicy-Konfigurationen können gelöscht werden.
+*Problem:* Es gibt im Cluster vorhandene fpolicies, die nicht verwendet werden.  Was sollte vor der Installation von Workload Security damit geschehen?  *Versuchen Sie Folgendes:* Es wird empfohlen, alle vorhandenen, nicht verwendeten fpolicy-Einstellungen zu löschen, auch wenn sie getrennt sind.  Workload Security erstellt fpolicy mit dem Präfix „cloudsecure_“.  Alle anderen nicht verwendeten fpolicy-Konfigurationen können gelöscht werden.
 
 CLI-Befehl zum Anzeigen der fpolicy-Liste:
 
@@ -195,36 +195,36 @@ fpolicy policy delete -vserver <svmname> -policy-name <policy_name>
 fpolicy policy event delete -vserver <svmname> -event-name <event_list>
 fpolicy policy external-engine delete -vserver <svmname> -engine-name <engine_name>
 ....
-Durch Aktivierung der Workload-Sicherheit wird die ONTAP-Performance beeinträchtigt: Die Latenz wird sporadisch hoch, die IOPS werden sporadisch niedrig. Bei der Verwendung von ONTAP mit Workload-Sicherheit kann es manchmal zu Latenzproblemen in ONTAP kommen. Es gibt eine Reihe von möglichen Gründen für diese, wie im Folgenden erwähnt: link:https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1372994["1372994"], https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1415152["1415152"], , https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1438207["1438207"] https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1479704["1479704"] https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1354659["1354659"] . Alle diese Probleme wurden in ONTAP 9.13.1 und höher behoben. Es wird dringend empfohlen, eine dieser neueren Versionen zu verwenden.
+|Nach der Aktivierung der Workload-Sicherheit wird die ONTAP Leistung beeinträchtigt: Die Latenz wird sporadisch hoch, die IOPs werden sporadisch niedrig.  |Bei der Verwendung von ONTAP mit Workload Security können manchmal Latenzprobleme in ONTAP auftreten.  Hierfür gibt es eine Reihe möglicher Gründe, die im Folgenden aufgeführt sind:link:https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1372994["1372994"] , https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1415152["1415152"] , https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1438207["1438207"] , https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1479704["1479704"] , https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1354659["1354659"] .  Alle diese Probleme wurden in ONTAP 9.13.1 und höher behoben. Es wird dringend empfohlen, eine dieser neueren Versionen zu verwenden.
 
 ****
 ****
-*Problem:* Datensammler ist fehlerhaft, zeigt diese Fehlermeldung an. „Fehler: Der Connector befindet sich im Fehlerzustand. Dienstname: Audit. Grund für Fehler: Richtlinie konnte nicht für SVM svm_Test konfiguriert werden. Grund: Fehlender Wert für zapi Feld: Ereignisse. „ *Probieren Sie dieses:*
+*Problem:* Beim Datensammler liegt ein Fehler vor, diese Fehlermeldung wird angezeigt.  „Fehler: Connector befindet sich im Fehlerzustand.  Dienstname: Audit.  Grund für den Fehler: Die Richtlinie konnte auf SVM svm_test nicht konfiguriert werden.  Grund: Fehlender Wert für Zapi-Feld: Ereignisse.  „ *Versuchen Sie Folgendes:*
 
-. Beginnen Sie mit einer neuen SVM, wobei nur ein NFS-Service konfiguriert ist.
-. Hinzufügen eines ONTAP SVM-Datensammlers zur Workload-Sicherheit CIFS ist als zulässiges Protokoll für die SVM konfiguriert und fügt den ONTAP SVM Data Collector zur Workload-Sicherheit hinzu.
+. Beginnen Sie mit einer neuen SVM, auf der nur der NFS-Dienst konfiguriert ist.
+. Fügen Sie in Workload Security einen ONTAP SVM-Datensammler hinzu.  CIFS wird als zulässiges Protokoll für die SVM konfiguriert, während der ONTAP SVM Data Collector in Workload Security hinzugefügt wird.
 . Warten Sie, bis der Datensammler in Workload Security einen Fehler anzeigt.
-. Da der CIFS-Server NICHT auf der SVM konfiguriert ist, wird dieser Fehler, wie in der linken Seite dargestellt, durch Workload Security angezeigt.
-. Bearbeiten Sie den ONTAP SVM Data Collector und deaktivieren Sie die Prüfung CIFS als zulässiges Protokoll. Speichern Sie den Datensammler. Er wird erst ausgeführt, wenn das NFS-Protokoll aktiviert ist.
+. Da der CIFS-Server NICHT auf der SVM konfiguriert ist, wird dieser links angezeigte Fehler von Workload Security angezeigt.
+. Bearbeiten Sie den ONTAP SVM-Datensammler und deaktivieren Sie CIFs als zulässiges Protokoll.  Speichern Sie den Datensammler.  Es wird nur mit aktiviertem NFS-Protokoll ausgeführt.
 
 
 ****
 ****
-*Problem:* Data Collector zeigt die Fehlermeldung: "Fehler: Konnte den Zustand des Collectors innerhalb von 2 Wiederholungen nicht ermitteln, versuchen Sie den Collector erneut zu starten (Fehlercode: AGENT008)". *Teste das:*
+*Problem:* Der Datensammler zeigt die Fehlermeldung an: „Fehler: Der Zustand des Sammlers konnte innerhalb von 2 Versuchen nicht ermittelt werden. Versuchen Sie, den Sammler erneut neu zu starten (Fehlercode: AGENT008)“.  *Versuchen Sie Folgendes:*
 
-. Scrollen Sie auf der Seite Data Collectors rechts neben dem Datensammler, der den Fehler zeigt, und klicken Sie auf das Menü mit 3 Punkten. Wählen Sie _Bearbeiten_. Geben Sie das Passwort des Datensammlers erneut ein. Speichern Sie den Datensammler, indem Sie auf die Schaltfläche _Save_ drücken. Der Data Collector wird neu gestartet, und der Fehler sollte behoben werden.
-. Der Agent-Rechner kann möglicherweise nicht genug CPU- oder RAM-Reserve haben, weshalb die DSCs ausfallen. Überprüfen Sie die Anzahl der Datensammler, die dem Agenten auf dem Computer hinzugefügt werden. Wenn es mehr als 20 ist, erhöhen Sie die CPU- und RAM-Kapazität des Agent-Rechners. Sobald die CPU und der RAM erhöht sind, werden die DSCs in die Initialisierung und dann automatisch in den laufenden Zustand versetzt. Schauen Sie sich den Größenberater auf anlink:concept_cs_event_rate_checker.html["Auf dieser Seite"].
+. Scrollen Sie auf der Seite „Datensammler“ nach rechts neben den Datensammler, der den Fehler ausgibt, und klicken Sie auf das Menü mit den drei Punkten.  Wählen Sie _Bearbeiten_.  Geben Sie das Passwort des Datensammlers erneut ein.  Speichern Sie den Datensammler, indem Sie auf die Schaltfläche _Speichern_ klicken.  Data Collector wird neu gestartet und der Fehler sollte behoben sein.
+. Die Agent-Maschine verfügt möglicherweise nicht über genügend CPU- oder RAM-Reserve, weshalb die DSCs ausfallen.  Bitte überprüfen Sie die Anzahl der Datensammler, die dem Agenten auf der Maschine hinzugefügt wurden.  Wenn es mehr als 20 sind, erhöhen Sie bitte die CPU- und RAM-Kapazität der Agent-Maschine.  Sobald die CPU und der RAM erhöht werden, wechseln die DSCs automatisch in den Initialisierungs- und dann in den Ausführungszustand.  Schauen Sie in die Größentabelle auflink:concept_cs_event_rate_checker.html["diese Seite"] .
 
-
-****
-****
-*Problem:* der Data Collector wird beim Auswählen des SVM-Modus fehlgestellt. *Probieren Sie dies:* während der Verbindung im SVM-Modus, Wenn Cluster-Management-IP verwendet wird, um eine Verbindung anstelle der SVM-Management-IP herzustellen, dann wird die Verbindung fehlerhaft. Stellen Sie sicher, dass die richtige SVM-IP verwendet wird.
 
 ****
 ****
-*Problem:* Data Collector zeigt eine Fehlermeldung an, wenn Access Denied Feature aktiviert ist: "Connector befindet sich im Fehlerzustand. Dienstname: Audit. Grund für den Fehler: Konfiguration von fpolicy auf SVM Test_svm fehlgeschlagen. Grund: Benutzer ist nicht autorisiert.“ *Versuchen Sie dies:* der Benutzer könnte die REST-Berechtigungen für die Access Denied-Funktion fehlen. Befolgen Sie die Anweisungen auflink:concept_ws_integration_with_ontap_access_denied.html["Auf dieser Seite"], um die Berechtigungen festzulegen.
-
-Starten Sie den Collector neu, sobald die Berechtigungen festgelegt wurden.
+*Problem:* Der Datensammler gibt einen Fehler aus, wenn der SVM-Modus ausgewählt ist.  *Versuchen Sie Folgendes:* Wenn beim Verbinden im SVM-Modus die Cluster-Management-IP anstelle der SVM-Management-IP zum Verbinden verwendet wird, tritt ein Verbindungsfehler auf.  Stellen Sie sicher, dass die richtige SVM-IP verwendet wird.
 
 ****
-Wenn Sie immer noch Probleme haben, wenden Sie sich an die auf der Seite * Hilfe > Support* genannten Support-Links.
+****
+*Problem:* Der Datensammler zeigt eine Fehlermeldung an, wenn die Funktion „Zugriff verweigert“ aktiviert ist: „Connector befindet sich im Fehlerzustand.  Dienstname: Audit.  Grund für den Fehler: Fehler beim Konfigurieren von fpolicy auf SVM test_svm.  Grund: Der Benutzer ist nicht autorisiert."  *Versuchen Sie Folgendes:* Dem Benutzer fehlen möglicherweise die REST-Berechtigungen, die für die Funktion „Zugriff verweigert“ erforderlich sind.  Bitte folgen Sie den Anweisungen auflink:concept_ws_integration_with_ontap_access_denied.html["diese Seite"] um die Berechtigungen festzulegen.
+
+Starten Sie den Collector neu, sobald die Berechtigungen festgelegt sind.
+
+****
+Wenn weiterhin Probleme auftreten, verwenden Sie die Support-Links auf der Seite *Hilfe > Support*.

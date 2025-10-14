@@ -2,53 +2,53 @@
 sidebar: sidebar 
 permalink: task_dc_pure_flasharray.html 
 keywords: data collector, Pure Storage, pure 
-summary: Pure Storage Data Collector wird konfiguriert. 
+summary: Konfigurieren des Pure Storage-Datensammlers. 
 ---
-= Datensammler Pure Storage FlashArray
+= Pure Storage FlashArray-Datensammler
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Pure Storage FlashArray Datensammler zur Erfassung von Bestands- und Performance-Daten.
+Data Infrastructure Insights verwendet den Pure Storage FlashArray-Datensammler, um Bestands- und Leistungsdaten zu erfassen.
 
 
 
 == Terminologie
 
-Für jeden Asset-Typ, der von Data Infrastructure Insights erworben wurde, wird die gängigste Terminologie für die Ressource angezeigt. Beachten Sie bei der Anzeige oder Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Für jeden von Data Infrastructure Insights erfassten Asset-Typ wird die am häufigsten verwendete Terminologie für das Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===
-| Anbieter-/Modelllaufzeit | Einblicke Aus Der Dateninfrastruktur 
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
 
-| Laufwerk (SSD) | Festplatte 
+| Laufwerk (SSD) | Scheibe 
 
 
-| Array Erledigen | Storage 
+| Anordnung | Storage 
 
 
-| Controller | Storage-Node 
+| Regler | Speicherknoten 
 
 
-| Datenmenge | Datenmenge 
+| Volumen | Volumen 
 
 
-| LUN-Zuordnung | Volume-Zuordnung 
+| LUN-Karte | Volumenkarte 
 
 
-| Initiator, Ziel | Volume-Maske 
+| Initiator, Ziel | Volumenmaske 
 |===
-Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Diese stellen für diesen Datensammler möglicherweise nicht alle Fälle dar.
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
 
 
 == Anforderungen
 
-* IP-Adresse des Storage-Systems
-* Benutzername und Kennwort für das Administratorkonto des Pure Storage-Systems.
-* Port-Anforderung: HTTP/HTTPS 80/443
+* IP-Adresse des Speichersystems
+* Benutzername und Passwort für das Administratorkonto des Pure-Speichersystems.
+* Portanforderung: HTTP/HTTPS 80/443
 
 
 
@@ -60,13 +60,13 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| FlashArray Host-IP-Adresse | IP-Adresse des Storage-Systems 
+| FlashArray-Host-IP-Adresse | IP-Adresse des Speichersystems 
 
 
 | Benutzername | Benutzername mit Administratorrechten 
 
 
-| Passwort für das Administratorkonto | Passwort 
+| Kennwort für das Administratorkonto | Passwort 
 |===
 
 
@@ -77,22 +77,22 @@ Hinweis: Es handelt sich hierbei nur um allgemeine Terminologiezuordnungen. Dies
 | Feld | Beschreibung 
 
 
-| Verbindungstyp | Wählen Sie HTTP oder HTTPS. Zeigt auch den Standardport an. 
+| Anschlussart | Wählen Sie HTTP oder HTTPS.  Zeigt auch den Standardport an. 
 
 
-| TCP-Port überschreiben | Wenn Sie leer sind, verwenden Sie den Standardport im Feld Verbindungstyp. Andernfalls geben Sie den zu verwendenden Anschluss ein 
+| TCP-Port überschreiben | Wenn das Feld „Verbindungstyp“ leer ist, verwenden Sie den Standardport. Andernfalls geben Sie den zu verwendenden Verbindungsport ein. 
 
 
-| Abfrageintervall für Bestand (min) | Der Standardwert ist 60 Minuten 
+| Inventarabfrageintervall (min) | Der Standardwert beträgt 60 Minuten 
 
 
-| Leistungsintervall (Sek.) | Der Standardwert ist 300 
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 300 
 |===
 
 
 == Fehlerbehebung
 
-Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
@@ -100,9 +100,9 @@ Einige Dinge zu versuchen, wenn Sie Probleme mit diesem Datensammler stoßen:
 
 [cols="2*"]
 |===
-| Problem: | Versuchen Sie dies: 
+| Problem: | Versuchen Sie Folgendes: 
 
 
-| „Ungültige Anmeldeinformationen“ mit Fehlermeldungen „Richtlinie lässt nicht zu“ oder „Sie sind nicht autorisiert“ | Validierung des Pure Benutzerkontos und Passworts über die Pure http Schnittstelle 
+| „Ungültige Anmeldeinformationen“ mit den Fehlermeldungen „Richtlinie lässt dies nicht zu“ oder „Sie sind nicht autorisiert“ | Validieren Sie das Pure-Benutzerkonto und das Passwort über die Pure-HTTP-Schnittstelle 
 |===
-Weitere Informationen finden Sie auf der link:concept_requesting_support.html["Support"] Seite oder im link:reference_data_collector_support_matrix.html["Data Collector Supportmatrix"].
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

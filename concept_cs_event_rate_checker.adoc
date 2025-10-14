@@ -1,63 +1,63 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_event_rate_checker.html 
-summary: Dieses Skript kann ausgeführt werden, um die Ereignisrate in der SVM zu prüfen, bevor eine ONTAP SVM DSC installiert wird 
+summary: Dieses Skript kann ausgeführt werden, um die Ereignisrate im SVM zu überprüfen, bevor ein ONTAP SVM DSC installiert wird 
 keywords: event, checker, rate, sizing, cloud secure 
 ---
-= SVM Event Rate Checker (Agent Sizing Guide)
+= SVM-Ereignisratenprüfer (Leitfaden zur Agentendimensionierung)
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Das Event Rate Checker wird verwendet, um die kombinierte Ereignisrate von NFS/SMB in der SVM zu prüfen, bevor Sie einen ONTAP SVM Data Collector installieren, um zu ermitteln, wie viele SVMs ein Agent Machine überwachen können. Verwenden Sie den Event Rate Checker als Leitfaden zur Größenbestimmung, um Ihre Sicherheitsumgebung zu planen.
+Mit dem Event Rate Checker wird die kombinierte NFS/SMB-Ereignisrate im SVM überprüft, bevor ein ONTAP SVM-Datensammler installiert wird, um zu sehen, wie viele SVMs eine Agentenmaschine überwachen kann.  Verwenden Sie den Event Rate Checker als Größenleitfaden zur Planung Ihrer Sicherheitsumgebung.
 
-Ein Agent kann bis zu 50 Datensammler unterstützen.
+Ein Agent kann bis zu maximal 50 Datensammler unterstützen.
 
 
 
-== Voraussetzungen:
+== Anforderungen:
 
 * Cluster-IP
-* Benutzername und Passwort für den Cluster-Admin
+* Benutzername und Kennwort des Clusteradministrators
 
 
 
-NOTE: Wenn dieses Skript ausgeführt wird, sollte kein ONTAP SVM Data Collector für die SVM ausgeführt werden, für die die Ereignisrate ermittelt wird.
+NOTE: Beim Ausführen dieses Skripts sollte kein ONTAP SVM Data Collector für die SVM ausgeführt werden, für die die Ereignisrate bestimmt wird.
 
-Schritte
+Schritte:
 
-. Installieren Sie den Agent, indem Sie die Anweisungen in CloudSecure befolgen.
-. Führen Sie nach der Installation des Agent das Skript _Server_Data_Rate_Checker.sh_ als Sudo-Benutzer aus:
+. Installieren Sie den Agenten, indem Sie den Anweisungen in CloudSecure folgen.
+. Sobald der Agent installiert ist, führen Sie das Skript _server_data_rate_checker.sh_ als Sudo-Benutzer aus:
 +
  /opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh
-. Dieses Skript erfordert die Installation von _sshapass_ auf dem linux-Rechner. Es gibt zwei Möglichkeiten, es zu installieren:
+. Für dieses Skript muss _sshpass_ auf der Linux-Maschine installiert sein.  Es gibt zwei Möglichkeiten, es zu installieren:
 +
 .. Führen Sie den folgenden Befehl aus:
 +
  linux_prompt> yum install sshpass
-.. Wenn das nicht funktioniert, laden Sie _sshapass_ aus dem Internet auf den linux-Rechner herunter, und führen Sie den folgenden Befehl aus:
+.. Wenn das nicht funktioniert, laden Sie _sshpass_ aus dem Internet auf die Linux-Maschine herunter und führen Sie den folgenden Befehl aus:
 +
  linux_prompt> rpm -i sshpass
 
 
-. Geben Sie die richtigen Werte ein, wenn Sie dazu aufgefordert werden. Ein Beispiel hierfür finden Sie unten.
-. Das Skript dauert etwa 5 Minuten.
-. Nach Abschluss des Durchlaufs wird die Ereignisrate vom SVM gedruckt. Sie können die Ereignisrate pro SVM in der Konsolenausgabe überprüfen:
+. Geben Sie die richtigen Werte ein, wenn Sie dazu aufgefordert werden.  Ein Beispiel finden Sie unten.
+. Die Ausführung des Skripts dauert ungefähr 5 Minuten.
+. Nach Abschluss des Laufs druckt das Skript die Ereignisrate vom SVM.  Sie können die Ereignisrate pro SVM in der Konsolenausgabe überprüfen:
 +
  “Svm svm_rate is generating 100 events/sec”.
 
 
-Jeder ONTAP SVM Data Collector kann einer einzelnen SVM zugeordnet werden. Dies bedeutet, dass jeder Data Collector die Anzahl der von einer einzelnen SVM generierten Ereignisse erhalten kann.
+Jeder Ontap SVM-Datensammler kann mit einem einzelnen SVM verknüpft werden, was bedeutet, dass jeder Datensammler die Anzahl der Ereignisse empfangen kann, die ein einzelnes SVM generiert.
 
 Beachten Sie Folgendes:
 
-A) Verwenden Sie diese Tabelle als allgemeinen Leitfaden zur Größenbemessung. Sie können die Anzahl der Kerne und/oder des Speichers erhöhen, um die Anzahl der unterstützten Datensammler zu erhöhen, bis zu maximal 50 Datensammler:
+A) Verwenden Sie diese Tabelle als allgemeine Größenrichtlinie.  Sie können die Anzahl der Kerne und/oder den Speicher erhöhen, um die Anzahl der unterstützten Datensammler auf bis zu 50 Datensammler zu erhöhen:
 
 |===
 
 
-| Agent-Gerätekonfiguration | Anzahl der SVM Data Collectors | Max. Ereignisrate, die der Agent-Rechner verarbeiten kann 
+| Agent-Computerkonfiguration | Anzahl der SVM-Datensammler | Maximale Ereignisrate, die der Agent-Computer verarbeiten kann 
 
 
 | 4 Kerne, 16 GB | 10 Datensammler | 20.000 Ereignisse/Sek. 
@@ -65,39 +65,39 @@ A) Verwenden Sie diese Tabelle als allgemeinen Leitfaden zur Größenbemessung. 
 
 | 4 Kerne, 32 GB | 20 Datensammler | 20.000 Ereignisse/Sek. 
 |===
-B) um Ihre gesamten Ereignisse zu berechnen, fügen Sie die für alle SVMs erzeugten Ereignisse für diesen Agenten hinzu.
+B) Um Ihre Gesamtereignisse zu berechnen, addieren Sie die für alle SVMs für diesen Agenten generierten Ereignisse.
 
-C) Wenn das Skript nicht während der Stoßzeiten ausgeführt wird oder der Spitzenverkehr schwer vorherzusagen ist, dann einen Ereignissatz-Puffer von 30 % behalten.
+C) Wenn das Skript nicht während der Spitzenzeiten ausgeführt wird oder wenn der Spitzenverkehr schwer vorherzusagen ist, halten Sie einen Ereignisratenpuffer von 30 % ein.
 
-B + C sollte kleiner Als A sein, andernfalls kann der Agent-Rechner nicht überwacht werden.
+B + C sollte kleiner als A sein, sonst schlägt die Überwachung durch die Agent-Maschine fehl.
 
-Mit anderen Worten, die Anzahl der Datensammler, die einem einzelnen Agenten-Rechner hinzugefügt werden können, sollte der folgenden Formel entsprechen:
+Mit anderen Worten: Die Anzahl der Datensammler, die einer einzelnen Agentenmaschine hinzugefügt werden können, sollte der folgenden Formel entsprechen:
 
  Sum of all Event rate of all Data Source Collectors + Buffer Event rate of 30% < 20000 events/second
-Weitere Voraussetzungen und Anforderungen finden Sie auf der link:concept_cs_agent_requirements.html["Anforderungen An Den Agenten"] Seite.
+Siehe dielink:concept_cs_agent_requirements.html["Agentenanforderungen"] Seite für zusätzliche Voraussetzungen und Anforderungen.
 
 
 
 == Beispiel
 
-Lassen Sie uns sagen, wir haben drei SVMS mit Ereignissätzen von 100, 200 und 300 Ereignissen pro Sekunde.
+Nehmen wir an, wir haben drei SVMS, die Ereignisraten von 100, 200 bzw. 300 Ereignissen pro Sekunde generieren.
 
-Wir verwenden die Formel:
+Wir wenden die Formel an:
 
 ....
  (100+200+300) + [(100+200+300)*30%] = 600+180 = 780events/sec
 780 events/second is < 20000 events/second, so the 3 SVMs can be monitored via one agent box.
 ....
-Die Konsolenausgabe ist auf dem Agent-Rechner im Dateinamen __fpolicy_stat_<SVM Name>.log_ im vorliegenden Arbeitsverzeichnis verfügbar.
+Die Konsolenausgabe ist auf der Agent-Maschine unter dem Dateinamen __fpolicy_stat_<SVM-Name>.log__ im aktuellen Arbeitsverzeichnis verfügbar.
 
 Das Skript kann in den folgenden Fällen fehlerhafte Ergebnisse liefern:
 
-* Falsche Anmeldedaten, IP oder SVM-Name werden angegeben.
-* Eine bereits vorhandene fpolicy mit demselben Namen, der gleichen Sequenznummer usw. gibt einen Fehler.
-* Das Skript wird während des Laufs abrupt unterbrochen.
+* Es wurden falsche Anmeldeinformationen, IP-Adressen oder SVM-Namen angegeben.
+* Eine bereits vorhandene fpolicy mit demselben Namen, derselben Sequenznummer usw. führt zu einem Fehler.
+* Das Skript wird während der Ausführung abrupt gestoppt.
 
 
-Ein Beispiel für einen Skriptdurchlauf ist unten dargestellt:
+Ein Beispiel für die Ausführung eines Skripts wird unten angezeigt:
 
  [root@ci-cs-data agent]# /opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh
 ....
@@ -147,20 +147,20 @@ Overall svm audit_svm is generating 300 events/sec
 | Frage | Antwort 
 
 
-| Wenn ich dieses Skript auf einer SVM ausführe, die bereits für die Workload-Sicherheit konfiguriert ist, verwendet es einfach die bestehende fpolicy-Konfiguration auf der SVM oder richtet es eine temporäre ein und führt den Prozess aus? | Der Event Rate Checker kann auch für eine bereits für Workload Security konfigurierte SVM einwandfrei ausgeführt werden. Es sollte keine Auswirkungen geben. 
+| Wenn ich dieses Skript auf einer SVM ausführe, die bereits für Workload Security konfiguriert ist, verwendet es dann einfach die vorhandene fpolicy-Konfiguration auf der SVM oder richtet es eine temporäre ein und führt den Prozess aus? | Der Event Rate Checker kann auch für eine SVM, die bereits für Workload Security konfiguriert ist, einwandfrei ausgeführt werden.  Es sollte keine Auswirkungen geben. 
 
 
-| Kann ich die Anzahl der SVMs erhöhen, auf denen das Skript ausgeführt werden kann? | Ja. Bearbeiten Sie einfach das Skript und ändern Sie die maximale Anzahl der SVMs von 5 in eine beliebige Zahl. 
+| Kann ich die Anzahl der SVMs erhöhen, auf denen das Skript ausgeführt werden kann? | Ja. Bearbeiten Sie einfach das Skript und ändern Sie die maximale Anzahl von SVMs von 5 auf eine beliebige Zahl. 
 
 
-| Wenn ich die Anzahl der SVMs vergrössern möchte, wird sich damit die Ausführung des Skripts verlängern? | Nein. Das Skript läuft für maximal 5 Minuten, auch wenn sich die Anzahl der SVMs erhöht. 
+| Wenn ich die Anzahl der SVMs erhöhe, verlängert sich dann die Ausführungszeit des Skripts? | Nein. Das Skript wird maximal 5 Minuten lang ausgeführt, auch wenn die Anzahl der SVMs erhöht wird. 
 
 
-| Kann ich die Anzahl der SVMs erhöhen, auf denen das Skript ausgeführt werden kann? | Ja. Sie müssen das Skript bearbeiten und die maximale Anzahl an SVMs von 5 in eine beliebige andere Maximalzahl ändern. 
+| Kann ich die Anzahl der SVMs erhöhen, auf denen das Skript ausgeführt werden kann? | Ja. Sie müssen das Skript bearbeiten und die maximale Anzahl von SVMs von 5 auf eine beliebige Zahl ändern. 
 
 
-| Wenn ich die Anzahl der SVMs vergrössern möchte, wird sich damit die Ausführung des Skripts verlängern? | Nein. Das Skript läuft für maximal 5 Minuten, auch wenn die Anzahl der SVMs erhöht wird. 
+| Wenn ich die Anzahl der SVMs erhöhe, verlängert sich dann die Ausführungszeit des Skripts? | Nein. Das Skript wird maximal 5 Minuten lang ausgeführt, auch wenn die Anzahl der SVMs erhöht wird. 
 
 
-| Was passiert, wenn ich die Ereignisratsprüfung mit einem vorhandenen Agenten durchführe? | Wenn Sie die Ereignisratenprüfung für einen bereits vorhandenen Agenten ausführen, kann dies zu einer Erhöhung der Latenz auf der SVM führen. Diese Erhöhung ist temporär, während die Ereignisratenprüfung ausgeführt wird. 
+| Was passiert, wenn ich den Event Rate Checker mit einem vorhandenen Agenten ausführe? | Das Ausführen des Event Rate Checker für einen bereits vorhandenen Agenten kann zu einer Erhöhung der Latenz auf der SVM führen.  Diese Erhöhung ist vorübergehender Natur, während der Event Rate Checker ausgeführt wird. 
 |===

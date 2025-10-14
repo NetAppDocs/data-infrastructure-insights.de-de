@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: concept_troubleshooting_overview.html 
-summary: In diesem Abschnitt finden Sie Tipps und Tricks zur Fehlerbehebung in Ihrer Data Infrastructure Insights Umgebung. 
+summary: In diesem Abschnitt finden Sie Tipps und Tricks zur Behebung von Problemen in Ihrer Data Infrastructure Insights Umgebung. 
 keywords:  
 ---
-= Fehlerbehebung Bei Problemen Mit Dateninfrastruktur Insights
+= Fehlerbehebung bei Problemen mit Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Die Themen in diesem Abschnitt bieten Tipps zur Fehlerbehebung bei Problemen mit Ihrer Data Infrastructure Insights Umgebung.
+Die Themen in diesem Abschnitt bieten Ratschläge zur Fehlerbehebung bei Problemen mit Ihrer Data Infrastructure Insights -Umgebung.
 
 Klicken Sie im Menü links auf eine Kategorie, um Informationen zur Fehlerbehebung für diese Kategorie anzuzeigen.
 
-Weitere link:concept_requesting_support.html["Support"]Informationen zur Fehlerbehebung und weitere  Informationen finden Sie auf der Seite Data Infrastructure Insights *Hilfe > Support*.
+Weitere Informationen zur Fehlerbehebung und anderelink:concept_requesting_support.html["Unterstützung"] Informationen finden Sie auf der Seite *Hilfe > Support* von Data Infrastructure Insights .

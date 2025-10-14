@@ -1,39 +1,39 @@
 ---
 sidebar: sidebar 
 permalink: task_create_query.html 
-summary: Abfragen ermöglichen die schnelle und einfache Identifikation von Ressourcen und Metriken von Interesse. 
+summary: Mithilfe von Abfragen können Sie schnell und einfach relevante Assets und Kennzahlen identifizieren. 
 keywords: query, queries 
 ---
-= Abfragen Werden Erstellt
+= Erstellen von Abfragen
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Mithilfe von Abfragen können Sie die Assets Ihres Mandanten auf granularer Ebene durchsuchen, so dass Sie nach den gewünschten Daten filtern und die Ergebnisse nach Ihren Wünschen sortieren können.
+Mithilfe von Abfragen können Sie die Assets Ihres Mandanten auf granularer Ebene durchsuchen, die gewünschten Daten filtern und die Ergebnisse nach Ihren Wünschen sortieren.
 
-Sie können z. B. eine Abfrage für _Volumes_ erstellen, einen Filter hinzufügen, um bestimmte _Storage_ zu den ausgewählten Volumes zu finden, einen weiteren Filter hinzufügen, um eine bestimmte _Annotation_ zu finden, z. B. „Tier 1“ auf den ausgewählten Speichern, Und schließlich noch einen Filter hinzufügen, um alle Speicher mit _IOPS - Read (IO/s)_ größer als 25 zu finden. Wenn die Ergebnisse angezeigt werden, können Sie die mit der Abfrage verknüpften Datenspalten in aufsteigender oder absteigender Reihenfolge sortieren.
+Sie können beispielsweise eine Abfrage für _Volumes_ erstellen, einen Filter hinzufügen, um bestimmte _Speicher_ zu finden, die mit den ausgewählten Volumes verknüpft sind, einen weiteren Filter hinzufügen, um eine bestimmte _Annotation_ wie „Tier 1“ auf den ausgewählten Speichern zu finden, und schließlich einen weiteren Filter hinzufügen, um alle Speicher mit _IOPS – Lesen (IO/s)_ größer als 25 zu finden.  Wenn die Ergebnisse angezeigt werden, können Sie die mit der Abfrage verknüpften Informationsspalten in aufsteigender oder absteigender Reihenfolge sortieren.
 
-Hinweis: Wenn ein neuer Datensammler hinzugefügt wird, der Assets erfasst oder Anmerkungen oder Anwendungszuweisungen vorgenommen werden, können Sie diese neuen Assets, Anmerkungen oder Anwendungen erst nach der Indizierung der Abfragen abfragen. Die Indizierung erfolgt in regelmäßigen Abständen oder während bestimmter Ereignisse, z. B. bei der Ausführung von Anmerkungsregeln.
+Hinweis: Wenn ein neuer Datensammler hinzugefügt wird, der Assets erfasst, oder wenn Anmerkungen oder Anwendungszuweisungen vorgenommen werden, können Sie diese neuen Assets, Anmerkungen oder Anwendungen erst abfragen, nachdem die Abfragen indiziert wurden.  Die Indizierung erfolgt in regelmäßigen Abständen oder während bestimmter Ereignisse, beispielsweise beim Ausführen von Anmerkungsregeln.
 
-.Das Erstellen einer Abfrage ist sehr einfach:
+.Das Erstellen einer Abfrage ist ganz einfach:
 . Navigieren Sie zu *Abfragen > *+Neue Abfrage*.
-. Wählen Sie in der Liste „Auswählen...“ den Objekttyp aus, nach dem Sie abfragen möchten. Sie können durch die Liste blättern oder Sie können mit der Eingabe beginnen, um schneller zu finden, wonach Sie suchen.
+. Wählen Sie aus der Liste „Auswählen …“ den Objekttyp aus, nach dem Sie suchen möchten.  Sie können durch die Liste scrollen oder mit der Eingabe beginnen, um schneller zu finden, wonach Sie suchen.
 
 
-.Bildlaufliste:
-image:QueryDrop-DownList.png["Abfrage Dropdown"]
+.Scrollliste:
+image:QueryDrop-DownList.png["Dropdown-Menü „Abfrage“"]
 
-.Typ-zu-Suche:
-image:QueryPageFilter.png["Eingabe zum Suchen"]
+.Zum Suchen eingeben:
+image:QueryPageFilter.png["Tippen zum Suchen"]
 
-Sie können Filter hinzufügen, um Ihre Anfrage weiter einzuschränken, indem Sie im Feld *Filtern nach* auf die Schaltfläche *+* klicken. Zeilen nach Objekt oder Attribut gruppieren. Bei der Arbeit mit Integrationsdaten (Kubernetes, ONTAP Advanced Metrics usw.) können Sie, falls gewünscht, mehrere Attribute gruppieren.
+Sie können Filter hinzufügen, um Ihre Abfrage weiter einzugrenzen, indem Sie im Feld *Filtern nach* auf die Schaltfläche *+* klicken.  Gruppieren Sie Zeilen nach Objekt oder Attribut.  Wenn Sie mit Integrationsdaten (Kubernetes, ONTAP Advanced Metrics usw.) arbeiten, können Sie bei Bedarf nach mehreren Attributen gruppieren.
 
-image:QueryFilterExample.png["Abfrage Filtern und Gruppierung"]
+image:QueryFilterExample.png["Abfragefilterung und -gruppierung"]
 
-Die Liste der Abfrageergebnisse zeigt je nach dem gesuchten Objekttyp eine Reihe von Standardspalten an. Um die Spalten hinzuzufügen, zu entfernen oder zu ändern, klicken Sie auf das Zahnradsymbol rechts neben der Tabelle. Die verfügbaren Spalten variieren je nach Asset/metrischem Typ.
+Die Abfrageergebnisliste zeigt je nach gesuchtem Objekttyp eine Reihe von Standardspalten.  Um Spalten hinzuzufügen, zu entfernen oder zu ändern, klicken Sie auf das Zahnradsymbol rechts neben der Tabelle.  Die verfügbaren Spalten variieren je nach Asset-/Metriktyp.
 
-image:QuerySelectColumns.png["Wählen Sie Spalten Aus"]
+image:QuerySelectColumns.png["Spalten auswählen"]
 
 
 
@@ -43,53 +43,53 @@ link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/
 
 
 
-== Wählen Sie „Aggregation“, „Einheiten“, „Bedingte Formatierung“
+== Auswählen von Aggregation, Einheiten und bedingter Formatierung
 
 
 
 === Aggregation und Einheiten
 
-Bei „Wert“-Spalten können Sie Ihre Abfrageergebnisse weiter verfeinern, indem Sie auswählen, wie die angezeigten Werte aggregiert werden, und die Einheiten auswählen, in denen diese Werte angezeigt werden. Diese Optionen finden Sie, indem Sie das Menü „drei Punkte“ in der oberen Ecke einer Spalte auswählen.
+Bei „Wert“-Spalten können Sie Ihre Abfrageergebnisse weiter verfeinern, indem Sie auswählen, wie die angezeigten Werte aggregiert werden, und indem Sie die Einheiten auswählen, in denen diese Werte angezeigt werden.  Diese Optionen finden Sie, indem Sie das Menü mit den drei Punkten in der oberen Ecke einer Spalte auswählen.
 
-image:Query_Page_Aggregation_etc.png["Ergebnisse der Abfrageseite mit Aggregation, bedingter Formatierung, Einheitenanzeige und Spaltenumbenennung"]
+image:Query_Page_Aggregation_etc.png["Abfrageseitenergebnisse mit Aggregation, bedingter Formatierung, Einheitenanzeige und Spaltenumbenennung"]
 
 
 
 ==== Einheiten
 
-Sie können die Einheiten auswählen, in denen die Werte angezeigt werden sollen. Wenn z. B. in der Spalte „ausgewählt“ die Bruttokapazität angezeigt wird und die Werte in gib angezeigt werden, sie jedoch lieber als tib angezeigt werden, wählen Sie aus dem Dropdown-Menü „Geräteanzeige“ einfach „tib“ aus.
+Sie können die Einheiten auswählen, in denen die Werte angezeigt werden sollen.  Wenn die ausgewählte Spalte beispielsweise die Rohkapazität anzeigt und die Werte in GiB angezeigt werden, Sie sie aber lieber als TiB anzeigen möchten, wählen Sie einfach TiB aus der Dropdown-Liste „Einheitenanzeige“ aus.
 
 
 
 ==== Aggregation
 
-Wenn die angezeigten Werte aus den zugrunde liegenden Daten als „Durchschnitt“ aggregiert werden, Aber Sie möchten die Summe aller Werte anzeigen, wählen Sie "Summe" entweder aus der Dropdown-Liste _Group by_ (wenn Sie die Summen in Gruppen anzeigen möchten) oder aus der Dropdown-Liste _time Aggregate by_ (wenn die Zeilenwerte Summen der zugrunde liegenden Daten anzeigen sollen).
+Wenn die angezeigten Werte aus den zugrunde liegenden Daten als „Durchschnitt“ aggregiert werden, Sie aber lieber die Summe aller Werte anzeigen möchten, wählen Sie „Summe“ entweder aus der Dropdown-Liste „Gruppieren nach“ (wenn Sie möchten, dass alle gruppierten Werte die Summen anzeigen) oder aus der Dropdown-Liste „Zeitaggregieren nach“ (wenn Sie möchten, dass die Zeilenwerte Summen der zugrunde liegenden Daten anzeigen).
 
-Sie können gruppierte Datenpunkte nach _AVG, Max, Min oder Sum_ aggregieren.
+Sie können gruppierte Datenpunkte nach _Durchschnitt, Maximum, Minimum oder Summe_ aggregieren.
 
-Sie können einzelne Zeilendaten nach _Average, Last Data Point Acquired, Maximum, Minimum oder Sum_ aggregieren.
+Sie können einzelne Zeilendaten nach _Durchschnitt, zuletzt erfasstem Datenpunkt, Maximum, Minimum oder Summe_ aggregieren.
 
 
 
 ==== Bedingte Formatierung
 
-Mit der bedingten Formatierung können Sie in der Liste der Abfrageergebnisse Schwellenwerte für die Warn- und kritische Ebene hervorheben und so Ausreißer und außergewöhnliche Datenpunkte sofort sichtbar machen.
+Mit der bedingten Formatierung können Sie Schwellenwerte der Warn- und kritischen Stufen in der Liste der Abfrageergebnisse hervorheben, sodass Ausreißer und außergewöhnliche Datenpunkte sofort sichtbar werden.
 
-image:Query_Page_Conditional_Formatting.png["Bedingte Formatierung auf Abfrageseite"]
+image:Query_Page_Conditional_Formatting.png["Bedingte Formatierung auf der Abfrageseite"]
 
-Bedingte Formatierung wird für jede Spalte separat festgelegt. Sie können beispielsweise einen Satz Schwellenwerte für eine Spalte Kapazität und einen weiteren Satz für eine Spalte Durchsatz auswählen.
+Die bedingte Formatierung wird für jede Spalte separat festgelegt.  Sie können beispielsweise einen Schwellenwertsatz für eine Kapazitätsspalte und einen anderen Satz für eine Durchsatzspalte auswählen.
 
 
 
-==== Spalte Umbenennen
+==== Spalte umbenennen
 
-Durch das Umbenennen einer Spalte wird der angezeigte Name in der Liste der Abfrageergebnisse geändert. Der neue Spaltenname wird auch in der resultierenden Datei angezeigt, wenn Sie die Abfrageliste in .CSV exportieren.
+Durch das Umbenennen einer Spalte wird der angezeigte Name in der Abfrageergebnisliste geändert.  Der neue Spaltenname wird auch in der resultierenden Datei angezeigt, wenn Sie die Abfrageliste in das CSV-Format exportieren.
 
 
 
 === Speichern
 
-Nachdem Sie Ihre Anfrage so konfiguriert haben, dass Sie die gewünschten Ergebnisse anzeigen, können Sie auf die Schaltfläche *Speichern* klicken, um die Abfrage für die zukünftige Verwendung zu speichern. Geben Sie ihm einen aussagekräftigen und eindeutigen Namen.
+Nachdem Sie Ihre Abfrage so konfiguriert haben, dass die gewünschten Ergebnisse angezeigt werden, können Sie auf die Schaltfläche *Speichern* klicken, um die Abfrage für die zukünftige Verwendung zu speichern.  Geben Sie ihm einen aussagekräftigen und eindeutigen Namen.
 
 
 
@@ -99,46 +99,46 @@ Nachdem Sie Ihre Anfrage so konfiguriert haben, dass Sie die gewünschten Ergebn
 
 === Platzhalter und Ausdrücke
 
-Wenn Sie in Abfragen oder Dashboard-Widgets nach Text- oder Listenwerten filtern, werden Sie beim Eingeben mit der Option angezeigt, basierend auf dem aktuellen Text einen *Platzhalter-Filter* zu erstellen. Wenn Sie diese Option auswählen, werden alle Ergebnisse angezeigt, die dem Platzhalterausdruck entsprechen. Sie können auch *Expressions* mit NOT oder ODER erstellen, oder Sie können die Option "Keine" auswählen, um nach Null-Werten im Feld zu filtern.
+Wenn Sie in Abfragen oder Dashboard-Widgets nach Text oder Listenwerten filtern, wird Ihnen beim Eintippen die Option angezeigt, einen *Platzhalterfilter* basierend auf dem aktuellen Text zu erstellen.  Wenn Sie diese Option auswählen, werden alle Ergebnisse zurückgegeben, die mit dem Platzhalterausdruck übereinstimmen.  Sie können *Ausdrücke* auch mit NOT oder OR erstellen oder die Option „Keine“ auswählen, um nach Nullwerten im Feld zu filtern.
 
-image:Type-Ahead-Example-ingest.png["Platzhalter-Filter"]
+image:Type-Ahead-Example-ingest.png["Platzhalterfilter"]
 
-Filter basierend auf Wildcards oder Ausdrücken (z. B. NICHT, ODER, „Keine“ usw.) werden im Filterfeld dunkelblau angezeigt. Elemente, die Sie direkt aus der Liste auswählen, werden hellblau angezeigt.
+Filter, die auf Platzhaltern oder Ausdrücken basieren (z. B. NICHT, ODER, „Keine“ usw.), werden im Filterfeld dunkelblau angezeigt.  Elemente, die Sie direkt aus der Liste auswählen, werden hellblau angezeigt.
 
-image:Type-Ahead-Example-Wildcard-DirectSelect.png["Ergebnisse Des Platzhalterfilters"]
+image:Type-Ahead-Example-Wildcard-DirectSelect.png["Platzhalterfilterergebnisse"]
 
-Beachten Sie, dass die Platzhalter- und Ausdrucksfilterung mit Text oder Listen funktioniert, jedoch nicht mit numerischen Werten, Daten oder Booleanen.
+Beachten Sie, dass die Platzhalter- und Ausdrucksfilterung mit Text oder Listen funktioniert, jedoch nicht mit Zahlen, Datumsangaben oder Booleschen Werten.
 
 
 
-=== Verfeinern Von Filtern
+=== Filter verfeinern
 
-Sie können den Filter wie folgt verfeinern:
+Sie können Ihren Filter folgendermaßen verfeinern:
 
 |===
 
 
-| Filtern | Das macht es | Beispiel | Ergebnis 
+| Filter | Was es bewirkt | Beispiel | Ergebnis 
 
 
-| * (Sternchen) | Ermöglicht Ihnen die Suche nach allem | vol. | Gibt alle Ressourcen zurück, die mit „vol“ beginnen und mit „RHEL“ enden 
+| * (Sternchen) | ermöglicht Ihnen die Suche nach allem | vol*rhel | gibt alle Ressourcen zurück, die mit „vol“ beginnen und mit „rhel“ enden 
 
 
-| ? (Fragezeichen) | Ermöglicht die Suche nach einer bestimmten Anzahl von Zeichen | BOS-PRD??-S12 | Gibt BOS-PRD zurück**__12_**-S12, BOS-PRD**__23_**-S12 und so weiter 
+| ? (Fragezeichen) | ermöglicht die Suche nach einer bestimmten Anzahl von Zeichen | BOS-PRD??-S12 | gibt BOS-PRD**__12__**-S12, BOS-PRD**__23__**-S12 usw. zurück 
 
 
-| ODER | Ermöglicht Ihnen die Angabe mehrerer Elemente | FAS2240, CX600 ODER FAS3270 | Gibt eine beliebige von FAS2440, CX600 oder FAS3270 zurück 
+| ODER | ermöglicht Ihnen die Angabe mehrerer Entitäten | FAS2240 ODER CX600 ODER FAS3270 | gibt einen der folgenden Werte zurück: FAS2440, CX600 oder FAS3270 
 
 
-| NICHT | Ermöglicht das Ausschließen von Text aus den Suchergebnissen | NICHT EMC* | Liefert alles zurück, was nicht mit „EMC“ beginnt 
+| NICHT | ermöglicht es Ihnen, Text aus den Suchergebnissen auszuschließen | NICHT EMV* | gibt alles zurück, was nicht mit "EMC" beginnt 
 
 
-| _Keine_ | Sucht in allen Feldern nach Null-Werten | _Keine_ | Gibt Ergebnisse an, bei denen das Zielfeld leer ist 
+| _Keiner_ | sucht in allen Feldern nach NULL-Werten | _Keiner_ | gibt Ergebnisse zurück, bei denen das Zielfeld leer ist 
 
 
-| Nicht * | Sucht nach Null-Werten in Feldern _Text-only_ | Nicht * | Gibt Ergebnisse an, bei denen das Zielfeld leer ist 
+| Nicht * | sucht nach NULL-Werten in _Nur-Text_-Feldern | Nicht * | gibt Ergebnisse zurück, bei denen das Zielfeld leer ist 
 |===
-Wenn Sie einen Filter in doppelte Anführungszeichen einschließen, behandelt Insight alles zwischen dem ersten und dem letzten Zitat als exakte Übereinstimmung. Alle Sonderzeichen oder Operatoren in den Angeboten werden als Literale behandelt. Wenn Sie beispielsweise nach „*“ filtern, erhalten Sie Ergebnisse, die ein wortwörtlicher Stern sind; das Sternchen wird in diesem Fall nicht als Platzhalter behandelt. Die Operatoren OR und NOT werden auch als Literalzeichenfolgen behandelt, wenn sie in doppelten Anführungszeichen eingeschlossen sind.
+Wenn Sie eine Filterzeichenfolge in doppelte Anführungszeichen setzen, behandelt Insight alles zwischen dem ersten und letzten Anführungszeichen als exakte Übereinstimmung.  Alle Sonderzeichen oder Operatoren innerhalb der Anführungszeichen werden als Literale behandelt.  Wenn Sie beispielsweise nach „*“ filtern, werden Ergebnisse zurückgegeben, die ein Sternchen sind. Das Sternchen wird in diesem Fall nicht als Platzhalter behandelt.  Die Operatoren OR und NOT werden auch als Literalzeichenfolgen behandelt, wenn sie in doppelte Anführungszeichen eingeschlossen sind.
 
 
 
@@ -147,23 +147,23 @@ Wenn Sie einen Filter in doppelte Anführungszeichen einschließen, behandelt In
 Beim Filtern nach einem Booleschen Wert werden Ihnen möglicherweise die folgenden Filteroptionen angezeigt:
 
 * *Beliebig*: Dies gibt _alle_ Ergebnisse zurück, einschließlich der Ergebnisse, die auf „Ja“, „Nein“ oder gar nicht festgelegt sind.
-* *Ja*: Gibt nur „Ja“-Ergebnisse zurück.  Beachten Sie, dass DII in den meisten Tabellen „Ja“ als Häkchen anzeigt.  Die Werte können auf „True“, „On“ usw. gesetzt werden; DII behandelt alle diese Werte als „Yes“.
-* *Nein*: Gibt nur „Nein“-Ergebnisse zurück.  Beachten Sie, dass DII in den meisten Tabellen „Nein“ als „X“ anzeigt.  Die Werte können auf „Falsch“, „Aus“ usw. gesetzt werden; DII behandelt alle diese Werte als „Nein“.
-* *Keine*: Gibt nur Ergebnisse zurück, bei denen der Wert überhaupt nicht festgelegt wurde.  Auch als „Null“-Werte bezeichnet.
+* *Ja*: Gibt nur „Ja“-Ergebnisse zurück. Beachten Sie, dass DII in den meisten Tabellen „Ja“ als Häkchen anzeigt. Die Werte können auf „True“, „On“ usw. gesetzt werden; DII behandelt alle diese Werte als „Yes“.
+* *Nein*: Gibt nur „Nein“-Ergebnisse zurück. Beachten Sie, dass DII in den meisten Tabellen „Nein“ als „X“ anzeigt. Die Werte können auf „Falsch“, „Aus“ usw. gesetzt werden; DII behandelt alle diese Werte als „Nein“.
+* *Keine*: Gibt nur Ergebnisse zurück, bei denen der Wert überhaupt nicht festgelegt wurde. Auch als „Null“-Werte bezeichnet.
 
 
 
 
-== Was mache ich jetzt, wenn ich Abfrageergebnisse habe?
+== Was mache ich jetzt, da ich Abfrageergebnisse habe?
 
-Durch Abfragen können Sie einfach Anmerkungen hinzufügen oder Anwendungen zu Assets zuweisen. Beachten Sie, dass Sie Ihren Bestandsbeständen (Festplatte, Speicher usw.) nur Anwendungen oder Anmerkungen zuweisen können. Integrationsmetriken können keine Anmerkungen oder Anwendungszuweisungen übernehmen.
+Durch Abfragen können auf einfache Weise Anmerkungen hinzugefügt oder Anwendungen Assets zugewiesen werden.  Beachten Sie, dass Sie Ihren Inventarressourcen (Festplatte, Speicher usw.) nur Anwendungen oder Anmerkungen zuweisen können.  Integrationsmetriken können keine Anmerkungen oder Anwendungszuweisungen übernehmen.
 
-Um den Anlagen, die sich aus Ihrer Abfrage ergeben, eine Anmerkung oder Anwendung zuzuweisen, wählen Sie die Anlage(en) mithilfe der Checkbox-Spalte links in der Ergebnistabelle aus. Klicken Sie dann rechts auf die Schaltfläche *Massenaktionen*. Wählen Sie die gewünschte Aktion aus, die auf die ausgewählten Assets angewendet werden soll.
+Um den aus Ihrer Abfrage resultierenden Assets eine Anmerkung oder Anwendung zuzuweisen, wählen Sie einfach das/die Asset(s) mithilfe der Kontrollkästchenspalte links in der Ergebnistabelle aus und klicken Sie dann rechts auf die Schaltfläche *Massenaktionen*.  Wählen Sie die gewünschte Aktion aus, die auf die ausgewählten Assets angewendet werden soll.
 
-image:QueryVolumeBulkActions.png["Beispiel Für Massenaktionen Abfragen"]
+image:QueryVolumeBulkActions.png["Beispiel für Abfrage-Massenaktionen"]
 
 
 
-== Abfrage zu Anmerkungsregeln erforderlich
+== Anmerkungsregeln erfordern eine Abfrage
 
-Wenn Sie konfigurierenlink:task_create_annotation_rules.html["Anmerkungsregeln"], muss jede Regel eine zugrunde liegende Abfrage haben, um mit zu arbeiten. Aber wie Sie oben gesehen haben, können Abfragen so breit oder so eng gemacht werden, wie Sie benötigen.
+Wenn Sie konfigurierenlink:task_create_annotation_rules.html["Anmerkungsregeln"] , jeder Regel muss eine zugrunde liegende Abfrage zugrunde liegen, mit der gearbeitet werden kann.  Aber wie Sie oben gesehen haben, können Abfragen so weit oder so eng gefasst werden, wie Sie es benötigen.

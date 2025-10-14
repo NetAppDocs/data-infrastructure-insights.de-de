@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_feature_tutorials.html 
-summary: Data Infrastructure Insights bietet Tutorials, die Ihnen zeigen, wie Sie viele Aufgaben erledigen können. 
+summary: Data Infrastructure Insights bietet Tutorials, die Ihnen die Durchführung vieler Aufgaben zeigen. 
 keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
 ---
-= Lernprogramme Zu Funktionen
+= Funktions-Tutorials
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,27 +14,27 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Data Infrastructure Insights enthält wertvolle Funktionen, mit denen Sie Probleme schnell und einfach beheben und Einblicke in Ihre Unternehmensumgebung erhalten. Nutzen Sie leistungsstarke Abfragen, visualisieren Sie Daten in Dashboards und senden Sie E-Mail-Benachrichtigungen für die von Ihnen festgelegten Datenschwellenwerte.
+Data Infrastructure Insights ist mit zahlreichen nützlichen Funktionen ausgestattet, mit denen Sie Probleme schnell und einfach beheben und Einblicke in Ihre Unternehmensumgebung erhalten können.  Finden Sie Daten einfach mit leistungsstarken Abfragen, visualisieren Sie Daten in Dashboards und senden Sie E-Mail-Benachrichtigungen bei von Ihnen festgelegten Datenschwellenwerten.
 
 
 
-== Checkliste und Video Tutorials
+== Checkliste und Video-Tutorials
 
-Die *Startup Checklist* auf Ihrem Data Infrastructure Insights Mandanten enthält eine Liste mit mehreren nützlichen Aufgaben und Konzepten. Durch Auswahl eines Elements in der Checkliste gelangen Sie zur entsprechenden Seite „Einblicke in die Dateninfrastruktur“ für dieses Konzept. Wenn Sie beispielsweise auf das Element _Create a Dashboard_ klicken, wird die Seite Data Infrastructure Insights *Dashboards* geöffnet.
+Die auf Ihrem Data Infrastructure Insights Mandanten angezeigte *Startup-Checkliste* enthält eine Liste mit mehreren nützlichen Aufgaben und Konzepten.  Wenn Sie ein Element in der Checkliste auswählen, gelangen Sie zur entsprechenden Data Infrastructure Insights -Seite für dieses Konzept.  Wenn Sie beispielsweise auf das Element „Dashboard erstellen“ klicken, wird die Seite „Data Infrastructure Insights *Dashboards*“ geöffnet.
 
-image:OnboardingChecklist.png["Lernprogramm – Checkliste – Fortschritt"]
+image:OnboardingChecklist.png["Tutorial-Checkliste – Fortschritt"]
 
-Oben auf der Seite befindet sich ein Link zu einem Video-Tutorial, das zeigt, wie ein Dashboard erstellt wird. Sie können das Video so oft ansehen, wie Sie möchten, bis Sie auf das _Got klicken! Diesen Link nicht mehr anzeigen_ für dieses Video. Das Video ist jedes Mal verfügbar, wenn Sie die Seite Dashboards aufrufen, bis Sie es verwerfen.
+Oben auf der Seite befindet sich ein Link zu einem Video-Tutorial, das zeigt, wie man ein Dashboard erstellt.  Sie können das Video beliebig oft ansehen, bis Sie auf „_Verstanden!“ klicken.  Link „Nicht mehr anzeigen“ für dieses Video.  Das Video ist jedes Mal verfügbar, wenn Sie die Dashboards-Seite aufrufen, bis Sie es schließen.
 
-image:Startup-DashboardWatchVideo.png["Video-Link Ansehen"]
+image:Startup-DashboardWatchVideo.png["Videolink ansehen"]
 
-Nachdem Sie sich das Video mindestens einmal angesehen haben, wird die Option _Dashboard erstellen_ in der Checkliste deaktiviert, was darauf hinweist, dass Sie das Tutorial abgeschlossen haben. Sie können dann mit dem nächsten Tutorial fortfahren.
-
-
-NOTE: Sie können die Tutorials in jeder beliebigen Reihenfolge anzeigen, die Sie mögen, so oft wie Sie mögen, bis Sie entlassen.
+Nachdem Sie das Video mindestens einmal angesehen haben, wird der Punkt _Dashboard erstellen_ in der Checkliste abgehakt, was bedeutet, dass Sie das Lernprogramm abgeschlossen haben.  Anschließend können Sie mit dem nächsten Tutorial fortfahren.
 
 
+NOTE: Sie können die Tutorials in beliebiger Reihenfolge und so oft Sie möchten ansehen, bis sie geschlossen werden.
 
-=== Die Checkliste nicht ausfüllen
 
-Die Checkliste für den Systemstart wird angezeigt, bis Sie unten in der Checkliste auf den Link „_Do't Show This Again_“ klicken. Selbst wenn Sie die Checkliste nicht mehr verwenden, sind die Tutorials immer noch auf jeder entsprechenden Seite „Data Infrastructure Insights“ verfügbar, bis Sie sie in der Kopfzeile der Nachricht verwerfen.
+
+=== Verwerfen der Checkliste
+
+Die Start-Checkliste wird angezeigt, bis Sie unten in der Checkliste auf den Link „Nicht mehr anzeigen“ klicken.  Auch nach dem Schließen der Checkliste sind die Tutorials weiterhin auf jeder entsprechenden Data Infrastructure Insights -Seite verfügbar, bis Sie jedes einzelne aus der Nachrichtenkopfzeile schließen.
