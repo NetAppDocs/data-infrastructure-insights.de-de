@@ -7,6 +7,10 @@ summary: Data Infrastructure Insights verfolgt Änderungen in der Infrastruktur,
 = Analyse von Infrastrukturänderungen
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -37,6 +41,12 @@ image:infraChange_filter_dropdown.png["Dropdown-Liste „Infrastrukturänderungs
 Sie können auch direkt vom Statusbereich unter den Filtereinstellungen zu wichtigen Warnungen oder Änderungen gehen, einschließlich der drei aktuellen Ressourcen mit den meisten Warnungen.
 
 image:Change_Analysis_filters_and_status.png["Status und Schnelllinks zu Warnungen und Änderungen"]
+
+
+
+== Ein Hinweis zu Langzeitwarnungen
+
+Beachten Sie, dass Warnungen, die länger als 24 Stunden aktiv bleiben, alle 24 Stunden in der Liste „Warnungen und Änderungen“ angezeigt werden. Daher kann es sein, dass dieselbe Warnung mehrmals aufgeführt wird. Jede dieser Warnungen hat dieselbe Warnungs-ID, dieselbe Startzeit usw. und den Status „Warnung läuft“, bis die Warnung behoben ist.
 
 
 

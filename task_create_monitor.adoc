@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_create_monitor.html 
 keywords: monitors, alerts, log, metric, system-defined, system, metric, 
-summary: Erstellen Sie Monitore, um bei Leistungs- oder Bestandsschwellenwerten sowie bei Metrik- oder Protokollbedingungen Warnmeldungen auszugeben. 
+summary: Erstellen Sie benutzerdefinierte Metrik- und Protokollmonitore, um die Infrastrukturleistung, Kapazitätsschwellenwerte und kritische Ereignisse mit automatisierten Warnmeldungen und Benachrichtigungen proaktiv zu verfolgen. 
 ---
 = Alarmierung mit Monitoren
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Erstellen Sie Monitore, um bei Leistungs- oder Bestandsschwellenwerten 
 
 
 [role="lead"]
-Konfigurieren Sie Monitore, um Leistungsschwellenwerte, Protokollereignisse und Anomalien in Ihren Infrastrukturressourcen zu verfolgen. Erstellen Sie benutzerdefinierte Warnungen für Kennzahlen wie Schreiblatenz des Knotens, Speicherkapazität oder Anwendungsleistung und erhalten Sie Benachrichtigungen, wenn diese Bedingungen erfüllt sind.
+Konfigurieren Sie Monitore, um Leistungsschwellenwerte, Protokollereignisse und Anomalien in Ihren Infrastrukturressourcen zu verfolgen. Erstellen Sie benutzerdefinierte Warnungen für Metriken wie Knotenschreiblatenz, Speicherkapazität oder Anwendungsleistung und erhalten Sie Benachrichtigungen, wenn diese Bedingungen erfüllt sind.
 
 Mithilfe von Monitoren können Sie Schwellenwerte für Metriken festlegen, die von „Infrastruktur“-Objekten wie Speicher, VM, EC2 und Ports generiert werden, sowie für „Integration“-Daten, wie sie beispielsweise für Kubernetes, erweiterte ONTAP -Metriken und Telegraf-Plugins erfasst werden.  Diese _metrischen_ Monitore warnen Sie, wenn Warnschwellen oder kritische Schwellenwerte überschritten werden.
 
@@ -67,8 +67,19 @@ image:MonitorMetricFilter.png["Metrikfilterung"]
 
 Beim Arbeiten mit Integrationsdaten (Kubernetes, ONTAP Advanced Data usw.) entfernt die Metrikfilterung die einzelnen/nicht übereinstimmenden Datenpunkte aus der dargestellten Datenreihe. Bei Infrastrukturdaten (Speicher, VM, Ports usw.) hingegen arbeiten Filter mit dem aggregierten Wert der Datenreihe und entfernen möglicherweise das gesamte Objekt aus dem Diagramm.
 
+Metrikmonitore gelten für Inventarobjekte wie Speicher, Switch, Host, VM usw. sowie für Integrationsmetriken wie ONTAP Advanced oder Kubernetes-Daten. Beachten Sie beim Überwachen von Inventarobjekten, dass Sie keine „Gruppieren nach“-Methode auswählen können. Bei der Überwachung von Integrationsdaten ist jedoch eine Gruppierung zulässig.
 
-TIP: Um einen Monitor mit mehreren Bedingungen zu erstellen (z. B. IOPS > X und Latenz > Y), definieren Sie die erste Bedingung als Schwellenwert und die zweite Bedingung als Filter.
+
+
+==== Multi-Condition-Monitore
+
+Sie können Ihren Metrikmonitor durch Hinzufügen einer zweiten Bedingung weiter verfeinern. Erweitern Sie einfach die Eingabeaufforderung „+Sekundäre Metrikbedingung hinzufügen“ und konfigurieren Sie die zusätzliche Bedingung.
+
+image:multi-condition_monitor_second_condition.png["Legen Sie die zweite Bedingung fest"]
+
+Der Monitor gibt einen Alarm aus, wenn beide Bedingungen erfüllt sind.
+
+Beachten Sie, dass Sie eine zweite Bedingung nur mit einem „UND“ verknüpfen können. Sie können nicht wählen, ob Sie bei der einen ODER der anderen Bedingung eine Warnung erhalten möchten.
 
 
 

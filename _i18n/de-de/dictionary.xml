@@ -5577,7 +5577,6 @@
   <block id="6a0fb4ccd9df37a4928d666f900fc111" category="list-text">9.11.1P7</block>
   <block id="ee297c3ee4d46f935bc45d0d064be8f4" category="list-text">9.11.1P8</block>
   <block id="ac844c749ee94b582ae244c828b00311" category="list-text">9.11.1P9</block>
-  <block id="b50ef0c82f2cb86e10106d6dcf4be872" category="list-text">9.11.1X12</block>
   <block id="eba1f3287bdc33dfa25c084b5e15a4c5" category="list-text">9.12.1</block>
   <block id="b5c4301816e6af2bf88c788518733eb7" category="list-text">9.12.1P1</block>
   <block id="8f54fbf368765fd506959c0f94135922" category="list-text">9.12.1P10</block>
@@ -5630,9 +5629,6 @@
   <block id="ebbe4cbae17517c84e54eba083c8da4b" category="list-text">9.14.1P8</block>
   <block id="d73363717d834d4a2ab99eeb68453131" category="list-text">9.14.1P8D5</block>
   <block id="f8a8cd0923816d5b6d78f88100eeeb74" category="list-text">9.14.1P9</block>
-  <block id="86259c42e39aca9d604557fc0df7cdfd" category="list-text">9.14.1X14</block>
-  <block id="e2a6950e117d892956cab85ead3b8f5f" category="list-text">9.14.1X20</block>
-  <block id="2f550d4ca52f3cf0205b3dc3813685a1" category="list-text">9.14.1X24</block>
   <block id="d9df468f7ec059062fe27406e7e15237" category="list-text">9.15.0P1</block>
   <block id="d8fde17f7482290d3fc56b981fe6e5f3" category="list-text">9.15.0P2</block>
   <block id="120ae360daecd24b580b71f9f2766bbc" category="list-text">9.15.1</block>
@@ -5646,15 +5642,9 @@
   <block id="a94def7bd8645fffeb7856a0b730acfb" category="list-text">9.15.1P7</block>
   <block id="cc1e51f6714a9a4de877bfe5d6abc663" category="list-text">9.15.1P7D4</block>
   <block id="fd43304224fcabc307d59c5ec05b2dec" category="list-text">9.15.1P8</block>
-  <block id="988a2f8f75724c92369ef7cf6c1af9c3" category="list-text">9.15.1X19</block>
-  <block id="398a2f5fbfe6d752b77067052fc148f5" category="list-text">9.15.1X27</block>
   <block id="0bd0e673df4c14cae45a11fac30c530b" category="list-text">9.16.1</block>
   <block id="5329b0514f6808bed8f7ea91aa5dfffe" category="list-text">9.16.1P1</block>
-  <block id="38581ea3df1d6327e2ef6aa30a992d3d" category="list-text">9.16.1X16</block>
-  <block id="309cc4b6e6becf1dabfbf424307d63a3" category="list-text">9.16.1X26</block>
-  <block id="abcfd7456fda735d64d7072f1f14b7a9" category="list-text">9.16.1X29</block>
   <block id="81e76ca235a16e1d875f94529d326de0" category="list-text">9.17.1</block>
-  <block id="c4e97bb93085dd52655d04ae6039f80d" category="list-text">9.17.1X7</block>
   <block id="ede0f5d55262ef3a8fefabdc493d497d" category="list-text">9.2.0P3</block>
   <block id="db3defc5982e5a3ab1c7c23c3b9bd186" category="list-text">9.2.0P4</block>
   <block id="b7cc677864a8a148a8f6712077c927d6" category="list-text">9.3.0P15</block>
@@ -5707,7 +5697,6 @@
   <block id="300af83339932c117e40a26058e99342" category="list-text">9.7.0P7</block>
   <block id="7bf36aff015b9cae71de886282513b8d" category="list-text">9.7.0P8</block>
   <block id="ce901682465ebe915d94307190f673c8" category="list-text">9.7.0P9</block>
-  <block id="3944340f50ba82bd002202199d7abe5e" category="list-text">9.7.0X17</block>
   <block id="b986ed6de4db8c07091d6f0b537ea702" category="list-text">9.8.0</block>
   <block id="da6f3108688381d819a41aa913cf1e19" category="list-text">9.8.0P1</block>
   <block id="deb8a9119a167f8fa049b82613624fbc" category="list-text">9.8.0P10</block>
@@ -5715,7 +5704,6 @@
   <block id="85c61f496ad4ea3c959fecea506ac58e" category="list-text">9.8.0P12</block>
   <block id="3c92472032750ed4a2c0e27d1800b25e" category="list-text">9.8.0P13</block>
   <block id="7f9b4710e7cd1de83b1d2aacebadcc53" category="list-text">9.8.0P14</block>
-  <block id="0125e3652c60c88a180594ab60564bba" category="list-text">9.8.0P14X5</block>
   <block id="8c5f541323d4aa6813a524fbf9dd59a8" category="list-text">9.8.0P15</block>
   <block id="4a6dae456f8b918b4c60072a72969636" category="list-text">9.8.0P16</block>
   <block id="8a3155dbb9a7e427a5aefa328145b791" category="list-text">9.8.0P17</block>
@@ -5745,7 +5733,6 @@
   <block id="f42881361c9c6865d49fd05bf347146a" category="list-text">9.9.1P2</block>
   <block id="d4960421bee21c61ebf8d27b38d6080a" category="list-text">9.9.1P20</block>
   <block id="7d6a08d11ebcd453bf13060310fcfeeb" category="list-text">9.9.1P3</block>
-  <block id="f9d157259fbe48b272c368d76bb54049" category="list-text">9.9.1P5X2</block>
   <block id="baf935f699cf2fba569f01e21467a7d7" category="list-text">9.9.1P6</block>
   <block id="5c5ab1439f6ac62d53efee3758d3c999" category="list-text">9.9.1P7</block>
   <block id="f6d334c5abfc986211c0472ba79714a7" category="list-text">9.9.1P9</block>
@@ -5787,9 +5774,6 @@
   <block id="7fdbd16e1ff751fad04600d723d8011d" category="list-text">NetApp Release 9.16.1: Sa., 18. Januar 2025, 19:31:15 UTC</block>
   <block id="88021ecf50f7541d3d24492a191e471b" category="list-text">NetApp -Version 9.16.1P1: Fr., 14. Feb., 03:53:50 UTC 2025</block>
   <block id="652755e90249a76ef63d7204d6ab39ec" category="list-text">NetApp Release 9.16.1RC1: Montag, 4. November 2024, 10:39:46 UTC</block>
-  <block id="e47d8be37475d6721d2595b43299102a" category="list-text">NetApp Release 9.16.1X26: Montag, 9. Dezember 2024, 10:27:42 UTC</block>
-  <block id="7faf1c14f22abc4af287a0938e0e11d4" category="list-text">NetApp Release 9.16.1X29: So., 12. Januar 2025, 11:18:25 UTC</block>
-  <block id="047366cbe3a752b392b76ee3de5a0693" category="list-text">NetApp -Version 9.17.1X7: Fr., 14. Feb., 11:21:52 UTC 2025</block>
   <block id="7012035b5539239acce1eeb19262a908" category="list-text">NetApp Release Clawhammer__9.14.1: Sa., 18. Mai 2024, 09:23:49 UTC</block>
   <block id="85d028d27872290fedf829049ad47f51" category="list-text">NetApp -Release Cloudstream__9.16.1: Montag, 4. November 2024, 05:51:46 UTC</block>
   <block id="efb74c609c847e1c896c8b72027c2404" category="list-text">NetApp Release Cloudstream__9.16.1: Do., 13. März 2025, 20:55:54 UTC</block>
@@ -8235,7 +8219,6 @@
   <block id="46152eb4e0d7febe5ed5ec5aa51b068f" category="admonition">In Umgebungen mit einer großen Menge verwandter Assets kann die Vererbung von Anwendungszuweisungen zu diesen Assets mehrere Minuten dauern.  Bitte rechnen Sie mit einer längeren Vererbungszeit, wenn Sie über viele zusammenhängende Vermögenswerte verfügen.</block>
   <block id="f64880272c45a077dc9152ab7dd2f24a" category="paragraph">Nachdem Sie der Anwendung den Host zugewiesen haben, können Sie der Anwendung die restlichen Assets zuweisen.  Um auf die Zielseite der Anwendung zuzugreifen, klicken Sie auf *Verwalten &gt; Anwendung* und wählen Sie die von Ihnen erstellte Anwendung aus.</block>
   <block id="91771bf0d5be307a250d706e57df1eb1" category="summary">Erstellen Sie Monitore, um bei Leistungs- oder Bestandsschwellenwerten sowie bei Metrik- oder Protokollbedingungen Warnmeldungen auszugeben.</block>
-  <block id="3c86c080f12d925b5a5ec1ad14563f65" category="paragraph">Konfigurieren Sie Monitore, um Leistungsschwellenwerte, Protokollereignisse und Anomalien in Ihren Infrastrukturressourcen zu verfolgen. Erstellen Sie benutzerdefinierte Warnungen für Kennzahlen wie Schreiblatenz des Knotens, Speicherkapazität oder Anwendungsleistung und erhalten Sie Benachrichtigungen, wenn diese Bedingungen erfüllt sind.</block>
   <block id="3f5fb2a45a144339f9591a104342f79b" category="paragraph">Mithilfe von Monitoren können Sie Schwellenwerte für Metriken festlegen, die von „Infrastruktur“-Objekten wie Speicher, VM, EC2 und Ports generiert werden, sowie für „Integration“-Daten, wie sie beispielsweise für Kubernetes, erweiterte ONTAP -Metriken und Telegraf-Plugins erfasst werden.  Diese _metrischen_ Monitore warnen Sie, wenn Warnschwellen oder kritische Schwellenwerte überschritten werden.</block>
   <block id="e730b9c349889018dc9deaccaa5a438b" category="paragraph">Sie können auch Monitore erstellen, um Warnungen auf Warn-, kritischer oder informativer Ebene auszulösen, wenn bestimmte _Protokollereignisse_ erkannt werden.</block>
   <block id="b18c8095ec7b7cd0c63a4e28b715f6c1" category="inline-link-macro">Systemdefinierte Monitore</block>
@@ -8257,13 +8240,11 @@
   <block id="313acdf9633421e44aea4a9be12b5071" category="list-text">Suchen Sie in der Dropdown-Liste nach einem zu überwachenden Objekttyp und einer Metrik und wählen Sie diese aus.</block>
   <block id="0afd1ac0e8283e24d8739752316dccba" category="paragraph">Sie können Filter festlegen, um einzugrenzen, welche Objektattribute oder Metriken überwacht werden sollen.</block>
   <block id="02421e310193c48e3a305e97cbba58c2" category="paragraph"><block ref="02421e310193c48e3a305e97cbba58c2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8ce06b1a529052723e1fb36a1c2f1a25" category="admonition">Um einen Monitor mit mehreren Bedingungen zu erstellen (z. B. IOPS &gt; X und Latenz &gt; Y), definieren Sie die erste Bedingung als Schwellenwert und die zweite Bedingung als Filter.</block>
   <block id="9ef1d5830a24b9e150ec53e978038289" category="section-title">Definieren Sie die Bedingungen des Monitors.</block>
   <block id="2e75e9aa28dbca090ee157cf8d539e66" category="list-text">Nachdem Sie das zu überwachende Objekt und die Metrik ausgewählt haben, legen Sie die Schwellenwerte für die Warnstufe und/oder die kritische Stufe fest.</block>
   <block id="734f668bd72716899c84bbaedc8d2564" category="list-text">Geben Sie für die Warnstufe in unserem Beispiel 200 ein.  Die gestrichelte Linie, die diese Warnstufe anzeigt, wird im Beispieldiagramm angezeigt.</block>
   <block id="a86a316c20ed3c30474a8a9bcbca7f2f" category="list-text">Geben Sie für die Stufe _Kritisch_ den Wert 400 ein.  Die gestrichelte Linie, die diesen kritischen Pegel anzeigt, wird im Beispieldiagramm angezeigt.</block>
   <block id="d00ff899ed7e3bcc490e418870ed0ce4" category="paragraph">Das Diagramm zeigt historische Daten.  Die Warn- und Kritisch-Level-Linien im Diagramm sind eine visuelle Darstellung des Monitors, sodass Sie leicht erkennen können, wann der Monitor in jedem Fall eine Warnung auslösen könnte.</block>
-  <block id="390f4b7f0b6066d4e61aa66cd61b3e6c" category="list-text">Wählen Sie für das Auftretensintervall _Kontinuierlich_ für einen Zeitraum von _15 Minuten_.</block>
   <block id="750f553c0f9776809a020b980f3dc25a" category="paragraph">Sie können wählen, ob Sie einen Alarm auslösen möchten, sobald ein Schwellenwert überschritten wird, oder ob Sie warten möchten, bis der Schwellenwert über einen bestimmten Zeitraum hinweg kontinuierlich überschritten wurde.  In unserem Beispiel möchten wir nicht jedes Mal benachrichtigt werden, wenn die Gesamt-IOPS den Warn- oder kritischen Wert überschreiten, sondern nur, wenn ein überwachtes Objekt mindestens 15 Minuten lang kontinuierlich einen dieser Werte überschreitet.</block>
   <block id="812faed524486085f300f8e0bdba77fe" category="inline-image-macro">Definieren Sie die Bedingungen des Monitors</block>
   <block id="be0ee88944c0674ffaad4c460224553f" category="paragraph"><block ref="be0ee88944c0674ffaad4c460224553f" category="inline-image-macro-rx" type="image"></block></block>
@@ -12791,4 +12772,18 @@
   <block id="399bd1ee587245ecac6f39beaa99886f" category="sidebar">PostgreSQL</block>
   <block id="14590850b4107a6f92feb1af739b82eb" category="sidebar">Marionette</block>
   <block id="15ec8934d96530d4c5f4a3b0f701f745" category="sidebar">RethinkDB</block>
+  <block id="b6c4679bc199e5db8f88b60803f5ca85" category="section-title">Ein Hinweis zu Langzeitwarnungen</block>
+  <block id="83e49813b50f1fc5e03ffde57c985102" category="paragraph">Beachten Sie, dass Warnungen, die länger als 24 Stunden aktiv bleiben, alle 24 Stunden in der Liste „Warnungen und Änderungen“ angezeigt werden. Daher kann es sein, dass dieselbe Warnung mehrmals aufgeführt wird. Jede dieser Warnungen hat dieselbe Warnungs-ID, dieselbe Startzeit usw. und den Status „Warnung läuft“, bis die Warnung behoben ist.</block>
+  <block id="079090a1dc96bbd4e45426ceeedd592f" category="summary">Erstellen Sie benutzerdefinierte Metrik- und Protokollmonitore, um die Infrastrukturleistung, Kapazitätsschwellenwerte und kritische Ereignisse mit automatisierten Warnmeldungen und Benachrichtigungen proaktiv zu verfolgen.</block>
+  <block id="883d09869adb0b8fae6c4387af23b6d4" category="paragraph">Konfigurieren Sie Monitore, um Leistungsschwellenwerte, Protokollereignisse und Anomalien in Ihren Infrastrukturressourcen zu verfolgen. Erstellen Sie benutzerdefinierte Warnungen für Metriken wie Knotenschreiblatenz, Speicherkapazität oder Anwendungsleistung und erhalten Sie Benachrichtigungen, wenn diese Bedingungen erfüllt sind.</block>
+  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">Metrikmonitore gelten für Inventarobjekte wie Speicher, Switch, Host, VM usw. sowie für Integrationsmetriken wie ONTAP Advanced oder Kubernetes-Daten. Beachten Sie beim Überwachen von Inventarobjekten, dass Sie keine „Gruppieren nach“-Methode auswählen können. Bei der Überwachung von Integrationsdaten ist jedoch eine Gruppierung zulässig.</block>
+  <block id="70b37ea4cf45e401178bb71faa1e50fe" category="section-title">Multi-Condition-Monitore</block>
+  <block id="6e8d7620a4a0bc7614ae9936242cc79e" category="paragraph">Sie können Ihren Metrikmonitor durch Hinzufügen einer zweiten Bedingung weiter verfeinern. Erweitern Sie einfach die Eingabeaufforderung „+Sekundäre Metrikbedingung hinzufügen“ und konfigurieren Sie die zusätzliche Bedingung.</block>
+  <block id="c7c9e436435c4770e86c98098336f9a2" category="inline-image-macro">Legen Sie die zweite Bedingung fest</block>
+  <block id="8047e4ba43998007d5db74d70e51011b" category="paragraph"><block ref="8047e4ba43998007d5db74d70e51011b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="53cd31c5f3906e17dd7f8643c332ec08" category="paragraph">Der Monitor gibt einen Alarm aus, wenn beide Bedingungen erfüllt sind.</block>
+  <block id="440695f7e9d74e3d3294a5cd9405bf75" category="paragraph">Beachten Sie, dass Sie eine zweite Bedingung nur mit einem „UND“ verknüpfen können. Sie können nicht wählen, ob Sie bei der einen ODER der anderen Bedingung eine Warnung erhalten möchten.</block>
+  <block id="f5efcf93de96054f67b29d58662ad5c6" category="list-text">Wählen Sie für das Auftretensintervall _Kontinuierlich_ für einen Zeitraum von _15 Minuten_.</block>
+  <block id="95e94216ef8b85a76727809c3dfcbcc0" category="inline-link-macro">ONTAP Datenmanagement</block>
+  <block id="2520cfbb37bc8bbd2fc91278c73eb838" category="list-text">Beachten Sie, dass Fpolicy-Metriken im ONTAP REST-Collector nicht unterstützt werden (Workload Security-Datenkollektoren verwenden FPolicy-Server und FPolicy-Metriken ermöglichen Ihnen die Überwachung der Workload Security-Datenerfassungsaktivität). Um Fpolicy-Metriken zu unterstützen, verwenden Sie die <block ref="5887f651a571af9233df120cb7d32347" category="inline-link-macro-rx"></block> Kollektor.</block>
 </blocks>

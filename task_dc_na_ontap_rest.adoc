@@ -32,6 +32,7 @@ Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden 
 
 * ONTAP Version 9.14.1 oder höher.
 * Portanforderungen: 443
+* Beachten Sie, dass Fpolicy-Metriken im ONTAP REST-Collector nicht unterstützt werden (Workload Security-Datenkollektoren verwenden FPolicy-Server und FPolicy-Metriken ermöglichen Ihnen die Überwachung der Workload Security-Datenerfassungsaktivität). Um Fpolicy-Metriken zu unterstützen, verwenden Sie die link:task_dc_na_cdot.html["ONTAP Datenmanagement"] Kollektor.
 
 
 
