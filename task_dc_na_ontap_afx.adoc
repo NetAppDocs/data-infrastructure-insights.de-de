@@ -1,0 +1,259 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_ontap_afx.html 
+keywords: data collector, ontap, afx 
+summary: ONTAP AFX Collector 
+---
+= NetApp ONTAP AFX-Datenkollektor
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Dieser Datensammler erfasst mithilfe von REST-API-Aufrufen Inventar-, EMS-Protokoll- und Leistungsdaten von Speichersystemen mit ONTAP 9.16.0 und höher.
+
+
+
+== Anforderungen
+
+Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden Voraussetzungen:
+
+* Sie müssen Zugriff auf ein Benutzerkonto mit der erforderlichen Zugriffsebene haben.  Beachten Sie, dass zum Erstellen eines neuen REST-Benutzers/einer neuen REST-Rolle Administratorberechtigungen erforderlich sind.
++
+** Funktional stellt Data Infrastructure Insights in erster Linie Leseanforderungen, für die Registrierung von Data Infrastructure Insights beim ONTAP Array sind jedoch einige Schreibberechtigungen erforderlich.  Siehe den _Hinweis zu Berechtigungen_ direkt unten.
+
+
+* ONTAP Version 9.16.0 oder höher.
+* Portanforderungen: 443
+
+
+
+
+== Ein Hinweis zu Berechtigungen
+
+Da eine Reihe von ONTAP -Dashboards von Data Infrastructure Insights auf erweiterten ONTAP Zählern basieren, sollten Sie im Abschnitt „Erweiterte Konfiguration“ des Datensammlers die Option „Erweiterte Zählerdatenerfassung aktivieren“ aktiviert lassen.
+
+Um ein lokales Konto für Data Infrastructure Insights auf Clusterebene zu erstellen, melden Sie sich bei ONTAP mit dem Benutzernamen/Passwort des Clusterverwaltungsadministrators an und führen Sie die folgenden Befehle auf dem ONTAP -Server aus:
+
+. Bevor Sie beginnen, müssen Sie mit einem _Administrator_-Konto bei ONTAP angemeldet sein und _Befehle auf Diagnoseebene_ müssen aktiviert sein.
+. Rufen Sie den Namen des virtuellen Servers vom Typ _admin_ ab.  Sie werden diesen Namen in nachfolgenden Befehlen verwenden.
++
+ vserver show -type admin
+. Erstellen Sie eine Rolle mit den folgenden Befehlen:
++
+....
+security login rest-role create -role {role name} -api /api -access readonly
+security login rest-role create -role {role name} -api /api/cluster/agents -access all
+vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
+security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
+....
+. Erstellen Sie den schreibgeschützten Benutzer mit dem folgenden Befehl.  Nachdem Sie den Befehl „Erstellen“ ausgeführt haben, werden Sie aufgefordert, ein Kennwort für diesen Benutzer einzugeben.
++
+ security login create -username ci_user -application http -authentication-method password -role ci_readonly
+
+
+Wenn ein AD/LDAP-Konto verwendet wird, sollte der Befehl
+
+ security login create -user-or-group-name DOMAIN\aduser/adgroup -application http -authentication-method domain -role ci_readonly
+Die resultierende Rolle und Benutzeranmeldung werden etwa wie folgt aussehen.  Ihre tatsächliche Ausgabe kann abweichen:
+
+[listing]
+----
+security login rest-role show -vserver <vserver name> -role restRole
+
+               Role                                    Access
+Vserver        Name            API                     Level
+----------     -------------   -------------------     ------
+<vserver name> restRole        /api                    readonly
+                               /api/cluster/agents     all
+2 entries were displayed.
+
+security login show -vserver <vserver name> -user-or-group-name restUser
+
+Vserver: <vserver name>
+                                                                 Second
+User/Group                 Authentication                 Acct   Authentication
+Name           Application Method        Role Name        Locked Method
+-------------- ----------- ------------- ---------------- ------ --------------
+restUser       http        password      restRole         no     none
+----
+
+
+== Migration
+
+Um von einem früheren ONTAP Datensammler (ontapi) zum neueren ONTAP REST-Sammler zu migrieren, gehen Sie wie folgt vor:
+
+. Fügen Sie den REST-Collector hinzu.  Es wird empfohlen, die Informationen für einen anderen Benutzer einzugeben als den, der für den vorherigen Collector konfiguriert wurde.  Verwenden Sie beispielsweise den im Abschnitt „Berechtigungen“ oben angegebenen Benutzer.
+. Halten Sie den vorherigen Collector an, damit er nicht weiter Daten sammelt.
+. Lassen Sie den neuen REST-Collector mindestens 30 Minuten lang Daten erfassen.  Ignorieren Sie während dieser Zeit alle Daten, die nicht „normal“ erscheinen.
+. Nach der Ruhephase sollten sich Ihre Daten stabilisieren, da der REST-Collector weiterhin Daten erfasst.
+
+
+Mit demselben Verfahren können Sie bei Bedarf zum vorherigen Collector zurückkehren.
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| ONTAP -Verwaltungs-IP-Adresse | IP-Adresse oder vollqualifizierter Domänenname des NetApp Clusters.  Muss eine Cluster-Verwaltungs-IP/ein FQDN sein. 
+
+
+| ONTAP REST-Benutzername | Benutzername für NetApp Cluster 
+
+
+| ONTAP REST-Passwort | Passwort für NetApp -Cluster 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Inventarabfrageintervall (min) | Der Standardwert ist 60 Minuten. 
+
+
+| Leistungsabfrageintervall (Sek.) | Der Standardwert ist 60 Sekunden. 
+
+
+| Erweiterte Zählerdatenerfassung | Wählen Sie diese Option aus, um ONTAP Advanced Counter-Daten in Umfragen einzubeziehen. Standardmäßig aktiviert. 
+
+
+| EMS-Ereigniserfassung aktivieren | Wählen Sie diese Option aus, um ONTAP EMS-Protokollereignisdaten einzuschließen. Standardmäßig aktiviert. 
+
+
+| EMS-Abfrageintervall (Sek.) | Der Standardwert ist 60 Sekunden. 
+|===
+
+
+== Terminologie
+
+Data Infrastructure Insights erfasst Inventar-, Protokoll- und Leistungsdaten vom ONTAP Datensammler.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für den Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
+
+
+| Cluster | Storage 
+
+
+| Node | Speicherknoten 
+
+
+| Volumen/ FlexVol/ FlexGroup | Internes Volumen 
+
+
+| Qtree/FlexTree | Qtree (Typ: Explixit/Standard) 
+
+
+| S3-Bucket | Qtree (Typ: Bucket) 
+
+
+| StoragePod/StorageAvailabilityZone | Speicherpool 
+
+
+| Aktie | Aktie 
+
+
+| Quote | Quote 
+
+
+| SVM (Storage Virtual Machine) | Virtuelle Speichermaschine 
+|===
+
+
+== ONTAP Datenmanagement-Terminologie
+
+Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherweise auf den Zielseiten der ONTAP Data Management-Speicherressourcen finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
+
+
+
+=== Storage
+
+* Modell – Eine durch Kommas getrennte Liste der eindeutigen, diskreten Knotenmodellnamen innerhalb dieses Clusters.  Wenn alle Knoten in den Clustern vom gleichen Modelltyp sind, wird nur ein Modellname angezeigt.
+* Anbieter – derselbe Anbietername, den Sie sehen würden, wenn Sie eine neue Datenquelle konfigurieren würden.
+* Seriennummer – Die Array-UUID
+* IP – im Allgemeinen handelt es sich dabei um die in der Datenquelle konfigurierten IPs oder Hostnamen.
+* Mikrocode-Version – Firmware.
+* Rohkapazität – Summe aller physischen Festplatten im System zur Basis 2, unabhängig von ihrer Rolle.
+* Latenz – eine Darstellung der Arbeitslasten, die der Host sowohl beim Lesen als auch beim Schreiben erfährt.  Im Idealfall bezieht Data Infrastructure Insights diesen Wert direkt, dies ist jedoch häufig nicht der Fall.  Anstelle des Arrays, das dies anbietet, führt Data Infrastructure Insights im Allgemeinen eine IOP-gewichtete Berechnung durch, die aus den Statistiken der einzelnen internen Volumes abgeleitet wird.
+* Durchsatz – aggregiert aus internen Volumes.  Verwaltung – dies kann einen Hyperlink zur Verwaltungsschnittstelle des Geräts enthalten.  Programmgesteuert von der Data Infrastructure Insights Datenquelle als Teil der Bestandsberichterstattung erstellt.
+
+
+
+
+=== Speicherpool
+
+* Speicher – auf welchem Speicher-Array dieser Pool lebt.  Obligatorisch.
+* Typ – ein beschreibender Wert aus einer Liste mit aufgezählten Möglichkeiten.  Am häufigsten wird „Aggregat“ oder „RAID-Gruppe“ verwendet.
+* Knoten – Wenn die Architektur dieses Speicherarrays so ist, dass Pools zu einem bestimmten Speicherknoten gehören, wird sein Name hier als Hyperlink zu seiner eigenen Zielseite angezeigt.
+* Verwendet Flash-Pool – Ja/Nein-Wert – verfügt dieser SATA/SAS-basierte Pool über SSDs, die zur Caching-Beschleunigung verwendet werden?
+* Redundanz – RAID-Level oder Schutzschema.  RAID_DP ist doppelte Parität, RAID_TP ist dreifache Parität.
+* Kapazität – die Werte hier sind die logisch genutzte, nutzbare Kapazität und die logische Gesamtkapazität sowie der davon genutzte Prozentsatz.
+* Überbelegte Kapazität – Wenn Sie durch den Einsatz von Effizienztechnologien eine Gesamtsumme an Volume- oder internen Volume-Kapazitäten zugewiesen haben, die größer ist als die logische Kapazität des Speicherpools, ist der Prozentwert hier größer als 0 %.
+* Snapshot – verwendete und gesamte Snapshot-Kapazitäten, wenn Ihre Speicherpoolarchitektur einen Teil ihrer Kapazität Segmentbereichen ausschließlich für Snapshots zuweist.  Bei ONTAP in MetroCluster -Konfigurationen ist dies wahrscheinlich, bei anderen ONTAP Konfigurationen ist dies weniger der Fall.
+* Auslastung – ein Prozentwert, der den höchsten Prozentsatz der Festplattenauslastung aller Festplatten anzeigt, die Kapazität zu diesem Speicherpool beitragen.  Die Festplattenauslastung weist nicht unbedingt eine starke Korrelation mit der Array-Leistung auf. Die Auslastung kann aufgrund von Festplattenneuaufbauten, Deduplizierungsaktivitäten usw. hoch sein, wenn keine vom Host gesteuerten Workloads vorliegen.  Darüber hinaus können Replikationsimplementierungen vieler Arrays die Festplattenauslastung erhöhen, ohne dass dies als internes Volume oder Volume-Workload angezeigt wird.
+* IOPS – die Summe der IOPs aller Festplatten, die Kapazität zu diesem Speicherpool beitragen.  Durchsatz – der Gesamtdurchsatz aller Festplatten, die Kapazität zu diesem Speicherpool beitragen.
+
+
+
+
+=== Speicherknoten
+
+* Speicher – zu welchem Speicherarray dieser Knoten gehört.  Obligatorisch.
+* HA-Partner – auf Plattformen, auf denen ein Knoten auf einen und nur einen anderen Knoten umgeschaltet wird, wird er im Allgemeinen hier angezeigt.
+* Status – Integrität des Knotens.  Nur verfügbar, wenn das Array fehlerfrei genug ist, um von einer Datenquelle inventarisiert zu werden.
+* Modell – Modellname des Knotens.
+* Version – Versionsname des Geräts.
+* Seriennummer – Die Seriennummer des Knotens.
+* Speicher – Basis-2-Speicher, falls verfügbar.
+* Auslastung – Bei ONTAP ist dies ein Controller-Stressindex aus einem proprietären Algorithmus.  Bei jeder Leistungsabfrage wird eine Zahl zwischen 0 und 100 % gemeldet, die entweder der höheren WAFL Festplattenkonflikt- oder der durchschnittlichen CPU-Auslastung entspricht.  Wenn Sie anhaltende Werte > 50 % beobachten, deutet dies auf eine Unterdimensionierung hin – möglicherweise ist ein Controller/Knoten nicht groß genug oder es sind nicht genügend rotierende Festplatten vorhanden, um die Schreibarbeitslast aufzunehmen.
+* IOPS – Direkt abgeleitet von ONTAP REST-Aufrufen des Knotenobjekts.
+* Latenz – Wird direkt aus ONTAP REST-Aufrufen des Knotenobjekts abgeleitet.
+* Durchsatz – Direkt abgeleitet von ONTAP REST-Aufrufen des Knotenobjekts.
+* Prozessoren – CPU-Anzahl.
+
+
+
+
+== ONTAP Leistungsmetriken
+
+Mehrere ONTAP -Modelle bieten Leistungsmetriken für Data Infrastructure Insights , die zur Überwachung oder für Warnmeldungen verwendet werden können.  Die unten stehenden Listen unterstützter und nicht unterstützter Modelle sind nicht vollständig, sollen aber als Orientierung dienen. Im Allgemeinen gilt: Wenn ein Modell zur selben Familie gehört wie eines auf der Liste, sollte auch die Unterstützung dieselbe sein.
+
+Unterstützte Modelle:
+
+A200 A220 A250 A300 A320 A400 A700 A700s A800 A900 C190 FAS2240-4 FAS2552 FAS2650 FAS2720 FAS2750 FAS8200 FAS8300 FAS8700 FAS9000
+
+Nicht unterstützte Modelle:
+
+FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 8060 FAS/ AFF 8080
+
+
+
+== Fehlerbehebung
+
+Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
+
+[cols="2*"]
+|===
+| Problem: | Versuchen Sie Folgendes: 
+
+
+| Beim Versuch, einen ONTAP REST-Datensammler zu erstellen, wird ein Fehler wie der folgende angezeigt: Konfiguration: 10.193.70.14: ONTAP Rest-API unter 10.193.70.14 ist nicht verfügbar: 10.193.70.14 konnte /api/cluster nicht abrufen: 400 Ungültige Anforderung | Dies liegt wahrscheinlich an einem älteren ONTAP Array (z. B. ONTAP 9.6), das über keine REST-API-Funktionen verfügt.  ONTAP 9.14.1 ist die minimale ONTAP Version, die vom ONTAP REST Collector unterstützt wird.  Bei Versionen vor REST ONTAP sind Antworten vom Typ „400 Bad Request“ zu erwarten.  Bei ONTAP Versionen, die REST unterstützen, aber nicht 9.14.1 oder höher sind, wird möglicherweise die folgende ähnliche Meldung angezeigt: Konfiguration: 10.193.98.84: ONTAP Rest-API unter 10.193.98.84 ist nicht verfügbar: 10.193.98.84: ONTAP Rest-API unter 10.193.98.84 ist verfügbar: cheryl5-cluster-2 9.10.1 a3cb3247-3d3c-11ee-8ff3-005056b364a7, hat aber nicht mindestens die Version 9.14.1. 
+
+
+| Ich sehe leere oder „0“-Metriken, wo der ONTAP ontapi-Collector Daten anzeigt. | ONTAP REST meldet keine Metriken, die nur intern auf dem ONTAP -System verwendet werden.  Beispielsweise werden von ONTAP REST keine Systemaggregate erfasst, sondern nur SVMs vom Typ „Daten“.  Weitere Beispiele für ONTAP REST-Metriken, die möglicherweise Null- oder leere Daten melden: InternalVolumes: REST meldet nicht mehr vol0.  Aggregate: REST meldet nicht mehr aggr0.  Speicher: Die meisten Metriken sind eine Zusammenfassung der Metriken des internen Volumes und werden von den oben genannten Faktoren beeinflusst.  Speicher-Virtual Machines: REST meldet keine SVMs mehr vom Typ „Daten“ (z. B. „Cluster“, „MGM“, „Knoten“).  Möglicherweise stellen Sie auch eine Änderung im Erscheinungsbild von Diagrammen fest, die Daten enthalten. Grund hierfür ist die Änderung des Standardabfragezeitraums für die Leistung von 15 Minuten auf 5 Minuten.  Häufigere Abfragen bedeuten mehr Datenpunkte zum Aufzeichnen. 
+|===
+Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

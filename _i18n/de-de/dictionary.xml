@@ -12776,7 +12776,6 @@
   <block id="83e49813b50f1fc5e03ffde57c985102" category="paragraph">Beachten Sie, dass Warnungen, die länger als 24 Stunden aktiv bleiben, alle 24 Stunden in der Liste „Warnungen und Änderungen“ angezeigt werden. Daher kann es sein, dass dieselbe Warnung mehrmals aufgeführt wird. Jede dieser Warnungen hat dieselbe Warnungs-ID, dieselbe Startzeit usw. und den Status „Warnung läuft“, bis die Warnung behoben ist.</block>
   <block id="079090a1dc96bbd4e45426ceeedd592f" category="summary">Erstellen Sie benutzerdefinierte Metrik- und Protokollmonitore, um die Infrastrukturleistung, Kapazitätsschwellenwerte und kritische Ereignisse mit automatisierten Warnmeldungen und Benachrichtigungen proaktiv zu verfolgen.</block>
   <block id="883d09869adb0b8fae6c4387af23b6d4" category="paragraph">Konfigurieren Sie Monitore, um Leistungsschwellenwerte, Protokollereignisse und Anomalien in Ihren Infrastrukturressourcen zu verfolgen. Erstellen Sie benutzerdefinierte Warnungen für Metriken wie Knotenschreiblatenz, Speicherkapazität oder Anwendungsleistung und erhalten Sie Benachrichtigungen, wenn diese Bedingungen erfüllt sind.</block>
-  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">Metrikmonitore gelten für Inventarobjekte wie Speicher, Switch, Host, VM usw. sowie für Integrationsmetriken wie ONTAP Advanced oder Kubernetes-Daten. Beachten Sie beim Überwachen von Inventarobjekten, dass Sie keine „Gruppieren nach“-Methode auswählen können. Bei der Überwachung von Integrationsdaten ist jedoch eine Gruppierung zulässig.</block>
   <block id="70b37ea4cf45e401178bb71faa1e50fe" category="section-title">Multi-Condition-Monitore</block>
   <block id="6e8d7620a4a0bc7614ae9936242cc79e" category="paragraph">Sie können Ihren Metrikmonitor durch Hinzufügen einer zweiten Bedingung weiter verfeinern. Erweitern Sie einfach die Eingabeaufforderung „+Sekundäre Metrikbedingung hinzufügen“ und konfigurieren Sie die zusätzliche Bedingung.</block>
   <block id="c7c9e436435c4770e86c98098336f9a2" category="inline-image-macro">Legen Sie die zweite Bedingung fest</block>
@@ -12786,4 +12785,16 @@
   <block id="f5efcf93de96054f67b29d58662ad5c6" category="list-text">Wählen Sie für das Auftretensintervall _Kontinuierlich_ für einen Zeitraum von _15 Minuten_.</block>
   <block id="95e94216ef8b85a76727809c3dfcbcc0" category="inline-link-macro">ONTAP Datenmanagement</block>
   <block id="2520cfbb37bc8bbd2fc91278c73eb838" category="list-text">Beachten Sie, dass Fpolicy-Metriken im ONTAP REST-Collector nicht unterstützt werden (Workload Security-Datenkollektoren verwenden FPolicy-Server und FPolicy-Metriken ermöglichen Ihnen die Überwachung der Workload Security-Datenerfassungsaktivität). Um Fpolicy-Metriken zu unterstützen, verwenden Sie die <block ref="5887f651a571af9233df120cb7d32347" category="inline-link-macro-rx"></block> Kollektor.</block>
+  <block id="b2422fa602be830d9f1a2469dd70ca20" category="inline-link-macro">NetApp ONTAP AFX</block>
+  <block id="83cd27100a931554f0e05219011edf39" category="cell"><block ref="83cd27100a931554f0e05219011edf39" category="inline-link-macro-rx"></block></block>
+  <block id="14ec544dd26342f2315dc51923b34e66" category="summary">ONTAP AFX Collector</block>
+  <block id="aaab7580be4232835e9f12e5691f118f" category="doc">NetApp ONTAP AFX-Datenkollektor</block>
+  <block id="e395c9addcba424f5bda562994dfecbe" category="cell">Volumen/ FlexVol/ FlexGroup</block>
+  <block id="1574b47ca9477a3fc7635017b8f4ca0b" category="cell">Qtree/FlexTree</block>
+  <block id="16aac8a4d65f63c39da98362e32e250d" category="cell">Qtree (Typ: Explixit/Standard)</block>
+  <block id="84ace9fb8e132c96d1dfcd31447efedc" category="cell">S3-Bucket</block>
+  <block id="1143dbaa613581e6f7e9245d88a5a30d" category="cell">Qtree (Typ: Bucket)</block>
+  <block id="26beb8e28a6498b161cc513e4d05c9f5" category="cell">StoragePod/StorageAvailabilityZone</block>
+  <block id="474d2ef9225b003245e9f5a40297e1e8" category="cell">SVM (Storage Virtual Machine)</block>
+  <block id="07ab2cfb4a15dea7a3c4679e886966f3" category="sidebar">ONTAP AFX</block>
 </blocks>

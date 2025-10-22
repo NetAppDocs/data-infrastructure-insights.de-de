@@ -247,6 +247,9 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 | link:task_dc_na_ontap_rest.html["NetApp ONTAP REST-Kollektor"] | Infrastruktur 
 
 
+| link:task_dc_na_ontap_afx.html["NetApp ONTAP AFX"] | Infrastruktur 
+
+
 | link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP ASA r2 (All-SAN Array)-Kollektor"] | Infrastruktur 
 
 
