@@ -3882,8 +3882,6 @@
   <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">Sie können das Dashboard für alle oder für ausgewählte Benutzer freigeben, entweder mit Bearbeitungs- oder Nur-Lese-Berechtigungen.</block>
   <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">Dropdown-Menüs zum Freigeben eines Dashboards mit Bearbeitungs- oder Leseberechtigung</block>
   <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3305ac26b15ec00c4372c85a08bb7042" category="summary">Liste der unterstützten Datensammler.</block>
-  <block id="3a6b9b02361ff37889bb4453f5ce5933" category="doc">Data Infrastructure Insights Datensammlerliste</block>
   <block id="4a67aaff87a4b62a93d49b26e8eab486" category="paragraph">Data Infrastructure Insights unterstützt eine Vielzahl von Datensammlern von vielen Anbietern und Diensten.</block>
   <block id="247727b698ccc6204ad7466cac97b566" category="paragraph">Datensammler werden nach diesen Typen kategorisiert:</block>
   <block id="3688337d7dae83e1ae45c29303993fc2" category="list-text">Infrastruktur: Von Anbietern erworbene Geräte wie Speicher-Arrays, Switches, Hypervisoren oder Backup-Geräte.</block>
@@ -4022,8 +4020,6 @@
   <block id="4d9746bceefe2b6bd2586d1c3e4d2733" category="cell"><block ref="4d9746bceefe2b6bd2586d1c3e4d2733" category="inline-link-macro-rx"></block></block>
   <block id="b988e43525055930d8d214d3116d4c04" category="inline-link-macro">NetApp Cloud Volumes ONTAP</block>
   <block id="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="cell"><block ref="ecf8390ebf4bfbf85b7308b7ca58aaa1" category="inline-link-macro-rx"></block></block>
-  <block id="91cd47436c04c106182959241ee93b9d" category="inline-link-macro">NetApp Cloud Volumes Services für AWS</block>
-  <block id="3d569988d784be7b4a432df70e13153d" category="cell"><block ref="3d569988d784be7b4a432df70e13153d" category="inline-link-macro-rx"></block></block>
   <block id="acb242e4a47b7f1537825e1c4eacc87a" category="inline-link-macro">NetApp Cloud Connection für ONTAP 9.9+</block>
   <block id="32b322f0c18e116c5d878598d8fedae2" category="cell"><block ref="32b322f0c18e116c5d878598d8fedae2" category="inline-link-macro-rx"></block></block>
   <block id="995d9995da501d3734932d95524f1a35" category="inline-link-macro">NetApp Data ONTAP 7-Mode</block>
@@ -10162,17 +10158,6 @@
   <block id="34727dd01aaa3e0d53fd68d429bbff53" category="doc">NetApp Cloud Connection für ONTAP 9.9+ Datenkollektor</block>
   <block id="0803ffc49bb5d009027ad578d29858b8" category="paragraph">Dieser Datensammler erstellt eine Cloud-Verbindung, um die Datenerfassung von ONTAP 9.9+ CVO-, AFF und FAS Systemen zu unterstützen.</block>
   <block id="fb915b764f3baecfa629ff22686e14ee" category="admonition">Dieser Datensammler kann ab dem 4. April 2023 nicht mehr in Data Infrastructure Insights installiert werden und wird im Juli 2023 aus allen Data Infrastructure Insights -Installationen entfernt.</block>
-  <block id="aa660f33d4c20ae2b92aa73acb4c5828" category="summary">Konfigurieren Sie NetApp Cloud Volumes Services für den AWS-Datensammler</block>
-  <block id="6d719c7976115879cdcafb7922e7e5fd" category="doc">NetApp Cloud Volumes Services für AWS-Datensammler</block>
-  <block id="85930060216df642a21fd8c262d1cc6c" category="paragraph">Dieser Datensammler unterstützt die Bestandserfassung von NetApp Cloud Volumes Services für AWS-Konfigurationen.</block>
-  <block id="4aacf3bc449dad1d249c2fd81ea2e532" category="cell">Cloud Volumes-Region</block>
-  <block id="4378310503f4a4c4ba83139f38afb7b2" category="cell">Region der NetApp Cloud Volumes Services für AWS</block>
-  <block id="d876ff8da67c3731ae25d8335a4168b4" category="cell">API-Schlüssel</block>
-  <block id="66859c6a7a598a12f20c8244126d4b34" category="cell">Cloud Volumes API-Schlüssel</block>
-  <block id="5eb6bb157528b365f84c27bb4784031b" category="cell">Geheimschlüssel</block>
-  <block id="9447267c06cce84dba179c481872fb16" category="cell">Geheimer Schlüssel für Cloud Volumes</block>
-  <block id="36d35d8bdb33f254c1406a404bc7c125" category="cell">Ich habe einen ähnlichen Fehler wie diesen erhalten: „Fehler beim Ausführen der Anforderung: Verbindung zu &lt;AWS-Region-Endpunkt&gt;:8080 [&lt;AWS-Region-Endpunkt&gt;/AWS-Region-Endpunkt-IP&gt;] fehlgeschlagen: Verbindungs-Timeout: GET \https://&lt;AWS-Region-Endpunkt-FQDN&gt;:8080/v1/Storage/IPRanges HTTP/1.1“</block>
-  <block id="f51fb2108c9628f317aa92174475a004" category="cell">Der<block ref="588cebdad26ee4a9a3bb08c290310eb7" category="inline-link-macro-rx"></block> Wird von Data Infrastructure Insights zur Kommunikation mit der Erfassungseinheit verwendet, erfolgt keine Kommunikation zwischen Data Infrastructure Insights und dem Datensammler selbst.  Hier sind einige Dinge, die Sie versuchen können: Stellen Sie sicher, dass die Erfassungseinheit den FQDN auflösen und den erforderlichen Port erreichen kann.  Bestätigen Sie, dass kein Proxy erforderlich ist, um den in der Fehlermeldung angegebenen Endpunkt zu erreichen.  Mit Curl kann die Kommunikation zwischen der Erfassungseinheit und dem Endpunkt getestet werden.  Stellen Sie sicher, dass Sie für diesen Test *keinen* Proxy verwenden.  Beispiel: root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:&lt;in den Anmeldeinformationen des Datensammlers verwendeter API-Schlüssel -H secret-key:&lt;in den Anmeldeinformationen des Datensammlers verwendeter geheimer Schlüssel&gt; -X GET \https://&lt;Regionaler AWS-Endpunkt&gt;:8080/v1/Storage/IPRanges</block>
   <block id="47407ceeb441f7c5d1eac8ca6060c4b7" category="summary">Konfigurieren des NetApp Cloud Volumes ONTAP Datenkollektors</block>
   <block id="a7544b3f9e0cc7c642c8b55af45cc192" category="doc">NetApp Cloud Volumes ONTAP Datenkollektor</block>
   <block id="2285e08ef18a1a3f2e02b335409147d7" category="paragraph">Dieser Datensammler unterstützt die Bestandserfassung von Cloud Volumes ONTAP -Konfigurationen.</block>
@@ -10391,8 +10376,6 @@
   <block id="bca66716b9ca2d13a4c28be69b276777" category="cell">3,3</block>
   <block id="caab88a7f89273838ab79f84c1c8a49d" category="summary">Konfigurieren des REST-Datenkollektors der NetApp E-Serie.</block>
   <block id="7d9a2bf43caef4a2c2ccab31b58ad1fb" category="doc">NetApp E-Series REST-Datenkollektor</block>
-  <block id="02bbac9de1d6cf62350e13b0ebc66279" category="paragraph">Der REST-Datenkollektor der NetApp E-Serie sammelt Inventar- und Leistungsdaten.  Der Collector unterstützt Firmware 7.x+ mit denselben Konfigurationen und meldet dieselben Daten.  Der REST-Collector überwacht den Verschlüsselungsstatus von Speicherpools sowie den Verschlüsselungsstatus zugehöriger Festplatten und Volumes und bietet die CPU-Auslastung des Speicherknotens als Leistungsindikator – eine Funktion, die im älteren SANtricity E-Series-Collector nicht verfügbar ist.</block>
-  <block id="06026757f9dde1467a9d040a8e0ca5e8" category="paragraph">Cloud Insight erfasst mithilfe von REST die folgenden Bestandsinformationen von der NetApp E-Serie.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:</block>
   <block id="199cdaad4b2e2da65f3c12904a570c15" category="inline-link-macro">E-Serie SANtricity API</block>
   <block id="025b66c3feb7622d3e2d83b097539fc0" category="list-text">Dieser Collector unterstützt nur E-Series-Modell-Arrays mit *nativen REST-API-Funktionen*.  Die E-Series-Organisation liefert eine außerhalb des Arrays installierbare REST-API-Distribution für ältere E-Series-Arrays: Dieser Collector unterstützt dieses Szenario nicht.  Benutzer mit älteren Arrays sollten weiterhin Data Infrastructure Insights verwenden.<block ref="1e9e2e04984e423436b9d1423e41c8ce" category="inline-link-macro-rx"></block> Kollektor.</block>
   <block id="1dec37be48852b1e80d1d4ddd48a1698" category="list-text">Das Feld „IP-Adressen des E-Series-Controllers“ unterstützt eine durch Kommas getrennte Zeichenfolge mit zwei IP-/Hostnamen. Der Collector versucht automatisch, den zweiten IP-/Hostnamen zu verwenden, wenn auf den ersten nicht zugegriffen werden kann.</block>
@@ -12743,7 +12726,6 @@
   <block id="140864078aeca1c7c35b4beb33c53c34" category="sidebar">Microsoft</block>
   <block id="c5865855c43d734069987786177edd98" category="sidebar">Hyper-V</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="b81efc5684c71c82d1f7592812e5af66" category="sidebar">Cloud Volumes Services für AWS</block>
   <block id="d97291003c6a6e6615571bf02531ca30" category="sidebar">ONTAP ASA (All-SAN-Array) r2</block>
   <block id="9c58e11f96200548fd2f5932b391509a" category="sidebar">ONTAP Datenmanagement-Software</block>
   <block id="bf9973f393dbc9824e3e96f831e12c25" category="sidebar">ONTAP REST-Kollektor</block>
@@ -12797,4 +12779,9 @@
   <block id="26beb8e28a6498b161cc513e4d05c9f5" category="cell">StoragePod/StorageAvailabilityZone</block>
   <block id="474d2ef9225b003245e9f5a40297e1e8" category="cell">SVM (Storage Virtual Machine)</block>
   <block id="07ab2cfb4a15dea7a3c4679e886966f3" category="sidebar">ONTAP AFX</block>
+  <block id="8a3c7a91b37c85b11fcedc99bf01705d" category="summary">Alphabetische Referenzliste aller von Data Infrastructure Insights unterstützten Datensammler, geordnet nach Infrastruktur- und Servicetypen.</block>
+  <block id="3f98097ad0f17344bf7bd5127344ba03" category="doc">Data Infrastructure Insights Datensammler-Referenzliste</block>
+  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">Metrikmonitore gelten für Inventarobjekte wie Speicher, Switch, Host, VM usw. sowie für Integrationsmetriken wie ONTAP Advanced oder Kubernetes-Daten. Beachten Sie beim Überwachen von Inventarobjekten, dass Sie keine „Gruppieren nach“-Methode auswählen können. Bei der Überwachung von Integrationsdaten ist jedoch eine Gruppierung zulässig.</block>
+  <block id="c712dc09bb9c9243894a5127306517ba" category="paragraph">Der REST-Datensammler der NetApp E-Serie sammelt Inventar-, Protokoll- und Leistungsdaten. Der Collector unterstützt Firmware 7.x+ mit denselben Konfigurationen und meldet dieselben Daten.  Der REST-Collector überwacht den Verschlüsselungsstatus von Speicherpools, Festplatten und Volumes, die CPU-Auslastung des Speicherknotens sowie Protokollfunktionen, die im älteren SANtricity E-Series-Collector nicht bereitgestellt werden.</block>
+  <block id="e997ccbcc3dc041951b04d1a57ba2999" category="paragraph">Data Infrastructure Insights erfasst mithilfe von REST die folgenden Bestandsinformationen von der NetApp E-Serie. Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt. Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:</block>
 </blocks>

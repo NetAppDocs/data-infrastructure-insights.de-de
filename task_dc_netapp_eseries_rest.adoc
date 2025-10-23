@@ -10,13 +10,13 @@ summary: Konfigurieren des REST-Datenkollektors der NetApp E-Serie.
 
 
 [role="lead"]
-Der REST-Datenkollektor der NetApp E-Serie sammelt Inventar- und Leistungsdaten.  Der Collector unterstützt Firmware 7.x+ mit denselben Konfigurationen und meldet dieselben Daten.  Der REST-Collector überwacht den Verschlüsselungsstatus von Speicherpools sowie den Verschlüsselungsstatus zugehöriger Festplatten und Volumes und bietet die CPU-Auslastung des Speicherknotens als Leistungsindikator – eine Funktion, die im älteren SANtricity E-Series-Collector nicht verfügbar ist.
+Der REST-Datensammler der NetApp E-Serie sammelt Inventar-, Protokoll- und Leistungsdaten. Der Collector unterstützt Firmware 7.x+ mit denselben Konfigurationen und meldet dieselben Daten.  Der REST-Collector überwacht den Verschlüsselungsstatus von Speicherpools, Festplatten und Volumes, die CPU-Auslastung des Speicherknotens sowie Protokollfunktionen, die im älteren SANtricity E-Series-Collector nicht bereitgestellt werden.
 
 
 
 == Terminologie
 
-Cloud Insight erfasst mithilfe von REST die folgenden Bestandsinformationen von der NetApp E-Serie.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+Data Infrastructure Insights erfasst mithilfe von REST die folgenden Bestandsinformationen von der NetApp E-Serie. Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt. Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
 [cols="2*"]
 |===

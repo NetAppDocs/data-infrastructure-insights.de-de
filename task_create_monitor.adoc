@@ -67,6 +67,8 @@ image:MonitorMetricFilter.png["Metrikfilterung"]
 
 Beim Arbeiten mit Integrationsdaten (Kubernetes, ONTAP Advanced Data usw.) entfernt die Metrikfilterung die einzelnen/nicht übereinstimmenden Datenpunkte aus der dargestellten Datenreihe. Bei Infrastrukturdaten (Speicher, VM, Ports usw.) hingegen arbeiten Filter mit dem aggregierten Wert der Datenreihe und entfernen möglicherweise das gesamte Objekt aus dem Diagramm.
 
+Metrikmonitore gelten für Inventarobjekte wie Speicher, Switch, Host, VM usw. sowie für Integrationsmetriken wie ONTAP Advanced oder Kubernetes-Daten. Beachten Sie beim Überwachen von Inventarobjekten, dass Sie keine „Gruppieren nach“-Methode auswählen können. Bei der Überwachung von Integrationsdaten ist jedoch eine Gruppierung zulässig.
+
 
 
 ==== Multi-Condition-Monitore

@@ -1,12 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: data_collector_list.html 
-summary: Liste der unterstützten Datensammler. 
+summary: Alphabetische Referenzliste aller von Data Infrastructure Insights unterstützten Datensammler, geordnet nach Infrastruktur- und Servicetypen. 
 keywords: data collector, vendor, infrastructure, integration, service 
 ---
-= Data Infrastructure Insights Datensammlerliste
+= Data Infrastructure Insights Datensammler-Referenzliste
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -218,9 +222,6 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 
 
 | link:task_dc_na_cloud_volumes_ontap.html["NetApp Cloud Volumes ONTAP"] | Infrastruktur 
-
-
-| link:task_dc_na_cloud_volumes.html["NetApp Cloud Volumes Services für AWS"] | Infrastruktur 
 
 
 | link:task_dc_na_cloud_connection.html["NetApp Cloud Connection für ONTAP 9.9+"] | Infrastruktur 
