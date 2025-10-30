@@ -18,6 +18,27 @@ NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hie
 
 
 
+== November 2025
+
+
+
+=== Legen Sie Ihre personalisierte Startseite fest
+
+Optimieren Sie Ihren täglichen Überwachungs-Workflow, indem Sie _eine beliebige_ Seite von Data Infrastructure Insights als Ihre personalisierte Startseite festlegen. Jeder Benutzer kann eine andere Startseite auswählen, um sich auf das zu konzentrieren, was ihm wichtig ist: ein wichtiges Dashboard, Warnmeldungen, Infrastrukturzustand, Workload-Sicherheit oder mehr.
+
+image:home_page_set.png["Startseite festlegen, Breite=300"]
+
+
+
+=== Bleiben Sie organisiert mit automatischer Dashboard-Gruppierung
+
+Optimieren Sie Ihr Dashboard-Erlebnis mit intelligenter Gruppierung, die importierte Galerie-Dashboards automatisch in logische Kategorien einordnet. Die neue Gruppierungsfunktion macht den Import von Dashboards zum Kinderspiel und ordnet jedes Dashboard der entsprechenden Gruppe zu, basierend auf seiner Funktion und Relevanz für Ihre Umgebung.
+
+image:dashboard_gallery_groups.png["Galeriegruppen beim Import, Breite=500"]
+
+'''
+
+
 == Oktober 2025
 
 
