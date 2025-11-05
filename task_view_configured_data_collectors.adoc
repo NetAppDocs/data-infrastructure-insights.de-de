@@ -7,6 +7,10 @@ summary: Eine Zusammenfassung.
 = Verwalten konfigurierter Datenkollektoren
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
