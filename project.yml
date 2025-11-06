@@ -31,6 +31,8 @@ sidebar:
       entries:
       - title: Überblick
         url: "/task_getting_started_with_cloud_insights.html"
+      - title: Funktions-Tutorials
+        url: "/concept_feature_tutorials.html"
       - title: Anforderungen an die Erfassungseinheit
         url: "/concept_acquisition_unit_requirements.html"
       - title: Konfigurieren einer Erfassungseinheit

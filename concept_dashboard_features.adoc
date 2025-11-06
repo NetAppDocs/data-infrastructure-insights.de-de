@@ -216,48 +216,43 @@ image:ObjectsReturnedByFilters.png["Von Filtern zurückgegebene Objekte"]
 
 
 
-== Gruppierung und Aggregation
+== Gruppieren, Identifizieren und Aggregieren
 
 
 
 === Gruppierung (Aufrollen)
 
-Die in einem Widget angezeigten Daten werden aus den während der Erfassung gesammelten zugrunde liegenden Datenpunkten gruppiert (manchmal auch als zusammengefasst bezeichnet).  Wenn Sie beispielsweise über ein Liniendiagramm-Widget verfügen, das die Speicher-IOPS im Zeitverlauf anzeigt, möchten Sie möglicherweise für jedes Ihrer Rechenzentren eine separate Linie anzeigen, um einen schnellen Vergleich zu ermöglichen.  Sie können diese Daten auf verschiedene Arten gruppieren:
+Die in einem Widget angezeigten Daten werden aus den während der Erfassung gesammelten zugrunde liegenden Datenpunkten gruppiert (manchmal auch als zusammengefasst bezeichnet). Wenn Sie beispielsweise über ein Liniendiagramm-Widget verfügen, das die Speicher-IOPS im Zeitverlauf anzeigt, möchten Sie möglicherweise für jedes Ihrer Rechenzentren eine separate Linie anzeigen, um einen schnellen Vergleich zu ermöglichen. Im Feld „Gruppieren nach“ wählen Sie den Objekttyp selbst aus, um einzelne Linien, Bereiche, Balken, Spalten usw. (abhängig vom Widget-Typ) für jedes Objekt anzuzeigen.  Sie können die Objekte nach jedem in der Liste verfügbaren Attribut gruppieren.  Wenn Sie beispielsweise Daten für ein internes Volume anzeigen, möchten Sie die Daten möglicherweise nach dem Speichernamen gruppieren.
+
+Um die konsolidierten Daten anzuzeigen, entfernen Sie alle Gruppierungsattribute. Standardmäßig wird dann nach „Alle“ gruppiert.
+
+Sie können diese Daten auf verschiedene Arten aggregieren:
 
 * *Durchschnitt*: zeigt jede Zeile als _Durchschnitt_ der zugrunde liegenden Daten an.
 * *Maximum*: zeigt jede Zeile als _Maximum_ der zugrunde liegenden Daten an.
 * *Minimum*: zeigt jede Zeile als _Minimum_ der zugrunde liegenden Daten an.
 * *Summe*: zeigt jede Zeile als _Summe_ der zugrunde liegenden Daten an.
-* *Anzahl*: Zeigt eine _Anzahl_ von Objekten an, die innerhalb des angegebenen Zeitraums Daten gemeldet haben.  Sie können das _Gesamte Zeitfenster_ entsprechend dem Zeitbereich des Dashboards auswählen.
 
 
-.Schritte
-Gehen Sie wie folgt vor, um die Gruppierungsmethode festzulegen.
-
-. Wählen Sie in der Abfrage Ihres Widgets einen Asset-Typ und eine Metrik (z. B. _Speicher_) und eine Metrik (z. B. _Performance IOPS Total_) aus.
-. Wählen Sie für *Gruppe* eine Rollup-Methode (z. B. _Durchschnitt_) und wählen Sie die Attribute oder Metriken aus, nach denen die Daten zusammengefasst werden sollen (z. B. _Rechenzentrum_).
-+
-Das Widget wird automatisch aktualisiert und zeigt Daten für jedes Ihrer Rechenzentren an.
-
-
-
-Sie können auch _alle_ zugrunde liegenden Daten im Diagramm oder in der Tabelle gruppieren.  In diesem Fall erhalten Sie für jede Abfrage im Widget eine einzelne Zeile, die den Durchschnitt, das Minimum, das Maximum, die Summe oder die Anzahl der ausgewählten Metrik(en) für alle zugrunde liegenden Assets anzeigt.
-
-Wenn Sie auf die Legende eines Widgets klicken, dessen Daten nach „Alle“ gruppiert sind, wird eine Abfrageseite geöffnet, auf der die Ergebnisse der ersten im Widget verwendeten Abfrage angezeigt werden.
+Beim Betrachten des Dashboards öffnet die Auswahl der Legende für ein beliebiges Widget, dessen Daten nach „Alle“ gruppiert sind, eine Abfrageseite, die die Ergebnisse der ersten im Widget verwendeten Abfrage anzeigt.
 
 Wenn Sie einen Filter für die Abfrage festgelegt haben, werden die Daten basierend auf den gefilterten Daten gruppiert.
 
-Beachten Sie, dass Sie, wenn Sie ein Widget nach einem beliebigen Feld (z. B. _Modell_) gruppieren, dennoch nach diesem Feld filtern müssen, um die Daten für dieses Feld im Diagramm oder in der Tabelle richtig anzuzeigen.
+
+
+=== Identifizierung kundenspezifischer Daten
+
+Wenn Sie ein Widget erstellen oder ändern, das auf Ihren eigenen benutzerdefinierten Daten basiert, werden Ihre Daten im Widget möglicherweise nicht korrekt dargestellt, wenn kein identifizierendes Attribut vorhanden ist.  Falls DII das von Ihnen für Ihr Widget ausgewählte Objekt nicht identifizieren kann, wird Ihnen im Bereich „Gruppieren nach“ ein Link zur _Erweiterten Konfiguration_ angezeigt.  Erweitern Sie diese Option, um das Attribut auszuwählen, anhand dessen Sie Ihre Daten identifizieren möchten.
+
+image:unmodeled_data_identify_by.png["Unbekannte Daten über Dropdown-Menü identifizieren"]
 
 
 
 === Daten aggregieren
 
-Sie können Ihre Zeitreihendiagramme (Linie, Fläche usw.) weiter ausrichten, indem Sie Datenpunkte in Minuten-, Stunden- oder Tagesintervalle aggregieren, bevor diese Daten anschließend nach Attributen zusammengefasst werden (falls ausgewählt).  Sie können Datenpunkte nach ihrem _Durchschnitt, Maximum, Minimum, ihrer Summe oder ihrer _Anzahl_ aggregieren.
+Sie können Ihre Diagramme noch besser ausrichten, indem Sie Datenpunkte in Minuten-, Stunden- oder Tagesintervalle aggregieren, bevor diese Daten anschließend nach Attributen zusammengefasst werden (falls ausgewählt). Sie können Datenpunkte nach ihrem _Durchschnitt, Maximum, Minimum, ihrer Summe oder ihrer _Anzahl_ aggregieren.
 
 Ein kleines Intervall in Kombination mit einem langen Zeitbereich kann zu der Warnung „Aggregationsintervall ergab zu viele Datenpunkte.“ führen.  Dies wird möglicherweise angezeigt, wenn Sie ein kleines Intervall haben und den Zeitrahmen des Dashboards auf 7 Tage erhöhen.  In diesem Fall erhöht Insight vorübergehend das Aggregationsintervall, bis Sie einen kleineren Zeitrahmen auswählen.
-
-Sie können Daten auch im Balkendiagramm-Widget und im Einzelwert-Widget aggregieren.
 
 Die meisten Asset-Zähler ergeben standardmäßig den _Durchschnitt_.  Einige Zähler werden standardmäßig zu _Max, Min_ oder _Sum_ aggregiert.  Beispielsweise werden Portfehler standardmäßig zu _Summe_ aggregiert, während Speicher-IOPS zu _Durchschnitt_ aggregiert werden.
 
