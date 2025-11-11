@@ -173,9 +173,6 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 | link:task_dc_ibm_cs.html["IBM CS-Serie"] | Infrastruktur 
 
 
-| link:task_dc_ibm_powervm.html["IBM PowerVM"] | Infrastruktur 
-
-
 | link:task_dc_ibm_svc.html["IBM SAN Volume Controller (SVC)"] | Infrastruktur 
 
 
