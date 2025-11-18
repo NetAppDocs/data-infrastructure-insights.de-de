@@ -3972,8 +3972,6 @@
   <block id="8ead9b1e3d8a8ae6dd97994254f22aef" category="cell"><block ref="8ead9b1e3d8a8ae6dd97994254f22aef" category="inline-link-macro-rx"></block></block>
   <block id="f4fd42a4467b5d1ddf8fdc417a705f73" category="inline-link-macro">IBM CS-Serie</block>
   <block id="6d68ae79b933142e523ce27606072862" category="cell"><block ref="6d68ae79b933142e523ce27606072862" category="inline-link-macro-rx"></block></block>
-  <block id="a28db741133d18e1d32e35bca1c7f7e4" category="inline-link-macro">IBM PowerVM</block>
-  <block id="8e0ab8fae77934642062640f9035c178" category="cell"><block ref="8e0ab8fae77934642062640f9035c178" category="inline-link-macro-rx"></block></block>
   <block id="eab41551e85a734b8fcd8f21fd17280d" category="inline-link-macro">IBM SAN Volume Controller (SVC)</block>
   <block id="335af56c3dfc9c59b9251b7197f10bf1" category="cell"><block ref="335af56c3dfc9c59b9251b7197f10bf1" category="inline-link-macro-rx"></block></block>
   <block id="8a3bb12d5107ef2125a14b505446d6ee" category="inline-link-macro">IBM System Storage DS8000-Serie</block>
@@ -6774,7 +6772,6 @@
   <block id="eaf8ac7783e69f8aba13d1bece2acbd5" category="paragraph">Sie können die verfügbaren Sicherheitshinweise von NetApp einsehen<block ref="c748e422d42ad69f84a6f8d804551466" category="inline-link-macro-rx"></block> .</block>
   <block id="16d7c89b47f259f2ff68b2ae7532fad6" category="summary">Hinzufügen von Workload Security-Datenkollektoren</block>
   <block id="babe60c38b9af7eae2a65400f72c52c7" category="paragraph">Der ONTAP SVM Data Collector ermöglicht Workload Security die Überwachung von Datei- und Benutzerzugriffsaktivitäten auf NetApp ONTAP Storage Virtual Machines (SVMs). Dieses Handbuch führt Sie durch die Konfiguration und Verwaltung des SVM-Datensammlers, um eine umfassende Sicherheitsüberwachung Ihrer ONTAP Umgebung zu gewährleisten.</block>
-  <block id="097b5088c2a3d7584f939f2bcd00152f" category="admonition">Globale Änderungen können sich möglicherweise auf Ihre ONTAP Systeme auswirken. Es wird dringend empfohlen, Änderungen, die eine große Anzahl von Datensammlern betreffen, außerhalb der Spitzenzeiten vorzunehmen.</block>
   <block id="6b6a5e540baae01020db6abcb69752a2" category="list-text">Dieser Datensammler wird mit Folgendem unterstützt:</block>
   <block id="b497cf0f1b1568d837947f6ad7ece7af" category="list-text">Data ONTAP 9.2 und spätere Versionen.  Verwenden Sie für optimale Leistung eine Data ONTAP Version höher als 9.13.1.</block>
   <block id="343a405f2f06197f662e42373c7fb059" category="list-text">SMB-Protokollversion 3.1 und früher.</block>
@@ -8418,9 +8415,6 @@
   <block id="1fe1b6cf4f52930c301b03e5a69c42c2" category="inline-link-macro">Teams</block>
   <block id="8f5cc6430613f1c12f36965050bb7197" category="inline-link-macro">Zwietracht</block>
   <block id="d277b1caec042177f4e38daf4ba9c735" category="paragraph">Webhooks für<block ref="d38416df564b8fab0d5bf94bcee43e7f" category="inline-link-macro-rx"></block> Webhooks für<block ref="95ac5170c5012e9551d08ea594650d6e" category="inline-link-macro-rx"></block> Webhooks für<block ref="973c3eb9f830c62535e232e5f5d9c6dc" category="inline-link-macro-rx"></block> Webhooks für<block ref="864c30ce6045ed450c74103c83df4646" category="inline-link-macro-rx"></block></block>
-  <block id="a70d68072b5d5451925d557ed5fc3b10" category="summary">Hinzufügen von Workload Security-Agenten</block>
-  <block id="b68323a5af32b2326c99a99a76c02d39" category="doc">Installation des Workload Security Agent</block>
-  <block id="254c60df709b81dd397a7f53fffca95c" category="paragraph">Workload Security (früher Cloud Secure) sammelt Benutzeraktivitätsdaten mithilfe eines oder mehrerer Agenten.  Agenten stellen eine Verbindung zu Geräten auf Ihrem Mandanten her und erfassen Daten, die zur Analyse an die Workload Security SaaS-Schicht gesendet werden.  Sehen<block ref="7db04bd496cdb9ab394c662c3f00f7ed" category="inline-link-macro-rx"></block> um eine Agent-VM zu konfigurieren.</block>
   <block id="2ccb9ffac0ed017ddb6e68683bb0b7d5" category="list-text">Für die Installation, das Ausführen von Skripts und die Deinstallation ist das Sudo-Privileg erforderlich.</block>
   <block id="a00b5aaaee55b7761231c3b425e0aebd" category="list-text">Während der Installation des Agenten werden auf dem Computer ein lokaler Benutzer _cssys_ und eine lokale Gruppe _cssys_ erstellt.  Wenn die Berechtigungseinstellungen die Erstellung eines lokalen Benutzers nicht zulassen und stattdessen Active Directory erfordern, muss auf dem Active Directory-Server ein Benutzer mit dem Benutzernamen _cssys_ erstellt werden.</block>
   <block id="bac72f43adf1b3cc10ff0028305b93cf" category="list-text">Sie können mehr über die Sicherheit von Data Infrastructure Insights lesen<block ref="543da5bd260d801b98cf781252e71d7c" category="inline-link-macro-rx"></block> .</block>
@@ -8429,7 +8423,6 @@
   <block id="d6f8e9ba9cfb77dee7f1eacdddd32143" category="list-text">Wählen Sie *Sammler &gt; Agenten &gt; +Agent*</block>
   <block id="f9eb6ee79f8b49445d9d7860e9a080c0" category="paragraph">Das System zeigt die Seite „Agent hinzufügen“ an:</block>
   <block id="732ce6294370d77834ecc9c30e5bfc82" category="inline-image-macro">Hinzufügen eines Workload Security Agent</block>
-  <block id="d2b98171b3e920dab4bb3e92ccf4e89a" category="paragraph"><block ref="d2b98171b3e920dab4bb3e92ccf4e89a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="212db90a8b360d05f82119713ca87853" category="list-text">Stellen Sie sicher, dass der Agent-Server die Mindestsystemanforderungen erfüllt.</block>
   <block id="3214e3b147ee224c2ddc92c7445e5bd4" category="list-text">Um zu überprüfen, ob auf dem Agent-Server eine unterstützte Linux-Version ausgeführt wird, klicken Sie auf _Unterstützte Versionen (i)_.</block>
   <block id="8bb9382589d54088894314b485b4650a" category="list-text">Wenn Ihr Netzwerk einen Proxyserver verwendet, legen Sie die Proxyserverdetails fest, indem Sie den Anweisungen im Abschnitt „Proxy“ folgen.</block>
@@ -8439,7 +8432,6 @@
   <block id="635c6559744a9cbe13ef48ca6179175e" category="list-text">Führen Sie den Installationsbefehl in einem Terminalfenster aus.</block>
   <block id="80f1bbe9e042c14f0ea154b144e49635" category="list-text">Wenn die Installation erfolgreich abgeschlossen ist, zeigt das System die folgende Meldung an:</block>
   <block id="f488844908bcd6752dde5e2291a4a5b8" category="inline-image-macro">Meldung bei erfolgreicher Agenteninstallation</block>
-  <block id="feacd3cef81abfcdbf59bda9ba5b97fd" category="paragraph"><block ref="feacd3cef81abfcdbf59bda9ba5b97fd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="580afeaa1b1ac5a8f6d1db7819e9a5df" category="list-title">Nach Abschluss</block>
   <block id="04d29c3c4604f72fc55618d9d893779a" category="inline-link-macro">Benutzerverzeichnis-Sammler</block>
   <block id="efb42161e6d534718356bdb292677612" category="list-text">Sie müssen eine<block ref="a207b7d2a96200a9b4b411f4896b3d1d" category="inline-link-macro-rx"></block> .</block>
@@ -9769,29 +9761,7 @@
   <block id="f9cba995b86ac6c96d9d30c9ced7c828" category="cell">IP-Adressen und/oder vollqualifizierte Domänennamen für die Array-Controller</block>
   <block id="123823c1c5909eba4c00c4d8585c250f" category="cell">Der Standardwert ist 30 Minuten</block>
   <block id="28d14a9ee241f7011a6670c176790bf0" category="cell">Leistungsabfrageintervall bis zu 3600 Sekunden</block>
-  <block id="95af42a33b3caafac3bc1a54d266a2d2" category="summary">Konfigurieren des IBM PowerVM-Datenkollektors.</block>
-  <block id="ba18c7f6265d13c449068915ad8f4e96" category="doc">Konfigurieren des IBM PowerVM-Datenkollektors</block>
-  <block id="b089f5adc7d97f0c62b9c4b3186b03c7" category="paragraph">Der IBM PowerVM (SSH)-Datenkollektor wird zum Sammeln von Informationen über virtuelle Partitionen verwendet, die auf IBM POWER-Hardwareinstanzen ausgeführt werden, die von einer Hardware Management Console (HMC) verwaltet werden.</block>
-  <block id="73fe4a9a6561934965036eaccbb0fac9" category="paragraph">Data Infrastructure Insights erfasst Bestandsinformationen von den virtuellen Partitionen, die auf IBM POWER-Hardwareinstanzen ausgeführt werden.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für den Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:</block>
-  <block id="b7cc91287fc99a8937a55e79376c6f54" category="cell">Festplatte</block>
-  <block id="b6956df0fe7b37d880928f7246bb98a0" category="cell">Verwaltetes System</block>
-  <block id="8d10e7fe4e3123daebe23a6310469d3b" category="cell">LPAR, VIO-Server</block>
-  <block id="abe36030da27edb3be135fd2451fa9fa" category="cell">Physisches Volumen</block>
   <block id="ffa6e58bcf969ef54c7666445b079b36" category="paragraph">Zur Konfiguration und Nutzung dieses Datensammlers müssen folgende Voraussetzungen erfüllt sein:</block>
-  <block id="6634ba62ecd606708eafb141593e4653" category="list-text">IP-Adresse der Hardware Management Console (HMC)</block>
-  <block id="1436a67f32b067c32fbe5c92814a32f7" category="list-text">Benutzername und Kennwort, die den Zugriff auf die Hardware Management Console (HMC) über SSH ermöglichen</block>
-  <block id="5e87ac896dc78fd77e4ab546560bdd8f" category="list-text">Portanforderung SSH-22</block>
-  <block id="13f24af9e083061f6926a7409ab6941e" category="list-text">Anzeigeberechtigung für alle Verwaltungssysteme und Sicherheitsdomänen logischer Partitionen</block>
-  <block id="3f9f03ffb7edb45ef6c15a07ef5c9901" category="paragraph">Der Benutzer muss außerdem über die Berechtigung zum Anzeigen von HMC-Konfigurationen und zum Sammeln von VPD-Informationen für die Sicherheitsgruppierung der HMC-Konsole verfügen.  Dem Benutzer muss außerdem der Zugriff auf Virtual IO Server Commands unter der Sicherheitsgruppierung „Logische Partition“ gestattet sein.  Es empfiehlt sich, mit der Rolle eines Operators zu beginnen und dann alle Rollen zu entfernen.  Nur-Lese-Benutzer auf der HMC haben keine Berechtigung zum Ausführen von Proxy-Befehlen auf AIX-Hosts.</block>
-  <block id="7e6e02e14b7de7333dd485d3abef050a" category="list-text">Die bewährte Vorgehensweise von IBM besteht darin, die Geräte von zwei oder mehr HMCs überwachen zu lassen.  Beachten Sie, dass dies dazu führen kann, dass OnCommand Insight doppelte Geräte meldet. Daher wird dringend empfohlen, redundante Geräte zur Liste „Geräte ausschließen“ in der erweiterten Konfiguration für diesen Datensammler hinzuzufügen.</block>
-  <block id="5d8107e43f3d12a73db8fdf144a472e8" category="cell">IP-Adresse der Hardware Management Console (HMC)</block>
-  <block id="836b85d6ec6b5e11fdafcbc07c5e2680" category="cell">IP-Adresse oder vollqualifizierter Domänenname der PowerVM Hardware Management Console</block>
-  <block id="1e45d14260d1a97392408643e8e3b747" category="cell">HMC-Benutzer</block>
-  <block id="b3901b38c85524bdf39d3e5dc096631d" category="cell">Benutzername für die Hardware Management Console</block>
-  <block id="9f5731b9b367d86426518b5495518bed" category="cell">Für die Hardware Management Console verwendetes Kennwort</block>
-  <block id="ec1d1ddf9ba1be27926f61b61d8ec74e" category="cell">Für SSH zur PowerVM verwendeter Port</block>
-  <block id="096c5fdd65d5b1ca85c28357788d6e36" category="cell">Anzahl der Inventarisierungswiederholungsversuche</block>
-  <block id="f898c70cb805b23cff78a911fac16f85" category="cell">Durch Kommas getrennte Liste der auszuschließenden Geräte-IDs oder Anzeigenamen</block>
   <block id="0aa04a5b5b1e3ffc8303b00b5128b15e" category="summary">Konfigurieren des IBM SAN Volume Controller-Datenkollektors.</block>
   <block id="270f27e942c8d1359faa87daf859de63" category="doc">Konfigurieren des IBM SAN Volume Controller-Datenkollektors</block>
   <block id="3583830a94579c1af37135c5c0b6f6c2" category="paragraph">Der IBM SAN Volume Controller (SVC)-Datenkollektor sammelt Inventar- und Leistungsdaten mithilfe von SSH und unterstützt eine Vielzahl von Geräten, auf denen das SVC-Betriebssystem ausgeführt wird.</block>
@@ -12689,7 +12659,6 @@
   <block id="032fb03337b916400761cd8770bff8bf" category="sidebar">Cleversafe</block>
   <block id="13fdad6ee27b8d46394c880e4c299601" category="sidebar">CS-Serie</block>
   <block id="51918e1822f2d98b7fb7e4f2e035cb69" category="sidebar">Systemspeicher DS8000-Serie</block>
-  <block id="c791b15d48a2be7d8c6a9c0b2badc362" category="sidebar">PowerVM</block>
   <block id="439f81d6181ac93c0f0cbfd7ff44a5d3" category="sidebar">San Volume Controller (SVC)</block>
   <block id="087aee354d68fbd7eaebf3271c0615e1" category="sidebar">XIV/A9000</block>
   <block id="57040fe2fe7a0a1e9ab043ae1f5d9845" category="sidebar">Lenovo</block>
@@ -12792,4 +12761,16 @@
   <block id="f6bd61a684c7e1301e78da3db50d1837" category="paragraph">Workload Security hilft Ihnen, die Benutzeraktivität zu überwachen und potenzielle Sicherheitsbedrohungen in Ihrer Speicherumgebung zu erkennen.  Bevor Sie mit der Überwachung beginnen können, müssen Sie Agenten, Datensammler und Verzeichnisdienste konfigurieren, um die Grundlage für eine umfassende Sicherheitsüberwachung zu schaffen.</block>
   <block id="d49a8da0de1eee7dc793284699bb0bab" category="cell"><block ref="d49a8da0de1eee7dc793284699bb0bab" category="inline-link-macro-rx"></block></block>
   <block id="adf5d1319b5bafa4d304b195ab11a3ac" category="cell">Klicken Sie auf *Workload-Sicherheit &gt; Collector*. Klicken Sie auf den Datensammler, den Sie konfigurieren möchten. Informationen zu den Datensammlern finden Sie im Abschnitt „Referenz der Datensammler-Anbieter“ der Dokumentation.</block>
+  <block id="a893b5195474a4c9b110269be2b309ef" category="summary">Workload Security-Agenten überwachen die Benutzeraktivität und erkennen Sicherheitsbedrohungen in Ihrer Speicherumgebung.</block>
+  <block id="9997d0de04e698d72bb27c409e5255ee" category="doc">Workload-Sicherheitsagenten bereitstellen</block>
+  <block id="c3c0e3736c092f9f194505694468ca8b" category="inline-link-macro">Systemanforderungen</block>
+  <block id="9d604ddbc2f20e3c4cd0e75c950e6c53" category="paragraph">Workload Security-Agenten sind unerlässlich, um die Benutzeraktivitäten zu überwachen und potenzielle Sicherheitsbedrohungen in Ihrer Speicherinfrastruktur zu erkennen. Dieser Leitfaden enthält eine Schritt-für-Schritt-Anleitung zur Bereitstellung von Agenten in Ihrer Umgebung. Bevor Sie beginnen, stellen Sie sicher, dass Ihr Agentenserver die folgenden Anforderungen erfüllt: <block ref="e9ae60f62ad52c07bed4d959ac93cbbc" category="inline-link-macro-rx"></block>Die</block>
+  <block id="cd47dd01745339787e4c7300389401f2" category="section-title">Bewährte Verfahren</block>
+  <block id="5f1d8e43e03545d4e832f35d2653f7ff" category="paragraph">Beachten Sie Folgendes, bevor Sie Ihren Workload Security-Agenten konfigurieren.</block>
+  <block id="1d0bcc6be95579ec1173901dc82ecc6d" category="cell">Pause und Fortsetzung</block>
+  <block id="d8b609992e3e10356da66aeda51a629f" category="cell">Pause: Entfernt fpolicies aus ONTAP. Wird typischerweise verwendet, wenn Kunden umfangreiche Wartungsarbeiten durchführen, die viel Zeit in Anspruch nehmen können, wie z. B. Neustarts von Agenten-VMs oder den Austausch von Speichermedien. Zusammenfassung: Fügt fpolicies wieder zu ONTAP hinzu.</block>
+  <block id="641ecca688e4bd0c010c1c93fd129f35" category="cell">Anheften und Lösen</block>
+  <block id="0fecddcef7cb9bf719d20552ae0cfc62" category="cell">Unpin ruft sofort die neueste Version ab (sofern verfügbar) und aktualisiert Agent und Collector. Während dieses Upgrades werden die fpolicies-Verbindungen getrennt und wiederhergestellt. Diese Funktion ist für Kunden gedacht, die den Zeitpunkt automatischer Aktualisierungen selbst bestimmen möchten.</block>
+  <block id="4dbd8dc2117b7cd83dcfbfa371f664d8" category="cell">Empfohlene Vorgehensweise</block>
+  <block id="436a369022361cd01a3accb909d81ab5" category="cell">Bei großen Konfigurationen empfiehlt es sich, Pin und Unpin anstelle von pausierenden Kollektoren zu verwenden. Beim Aufheben und Aufheben ist kein Pausieren und Fortsetzen erforderlich. Kunden können ihre Agenten und Sammler beibehalten und haben nach Erhalt einer E-Mail-Benachrichtigung über eine neue Version 30 Tage Zeit, die Agenten einzeln zu aktualisieren. Dieser Ansatz minimiert die Latenzauswirkungen auf fpolicies und ermöglicht eine bessere Kontrolle über den Upgrade-Prozess.</block>
 </blocks>
