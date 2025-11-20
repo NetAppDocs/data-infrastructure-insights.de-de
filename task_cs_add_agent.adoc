@@ -38,10 +38,10 @@ Beachten Sie Folgendes, bevor Sie Ihren Workload Security-Agenten konfigurieren.
 | Pause und Fortsetzung | Pause: Entfernt fpolicies aus ONTAP. Wird typischerweise verwendet, wenn Kunden umfangreiche Wartungsarbeiten durchführen, die viel Zeit in Anspruch nehmen können, wie z. B. Neustarts von Agenten-VMs oder den Austausch von Speichermedien. Zusammenfassung: Fügt fpolicies wieder zu ONTAP hinzu. 
 
 
-| Anheften und Lösen | Unpin ruft sofort die neueste Version ab (sofern verfügbar) und aktualisiert Agent und Collector. Während dieses Upgrades werden die fpolicies-Verbindungen getrennt und wiederhergestellt. Diese Funktion ist für Kunden gedacht, die den Zeitpunkt automatischer Aktualisierungen selbst bestimmen möchten. 
+| Anheften und Lösen | Unpin ruft sofort die neueste Version ab (sofern verfügbar) und aktualisiert Agent und Collector. Während dieses Upgrades werden die fpolicies-Verbindungen getrennt und wiederhergestellt. Diese Funktion ist für Kunden gedacht, die den Zeitpunkt automatischer Aktualisierungen selbst bestimmen möchten. Siehe unten für<<pinning-an-agent-at-the-current-version,Anleitung zum Einstecken/Entfernen der Stifte>> Die 
 
 
-| Empfohlene Vorgehensweise | Bei großen Konfigurationen empfiehlt es sich, Pin und Unpin anstelle von pausierenden Kollektoren zu verwenden. Beim Aufheben und Aufheben ist kein Pausieren und Fortsetzen erforderlich. Kunden können ihre Agenten und Sammler beibehalten und haben nach Erhalt einer E-Mail-Benachrichtigung über eine neue Version 30 Tage Zeit, die Agenten einzeln zu aktualisieren. Dieser Ansatz minimiert die Latenzauswirkungen auf fpolicies und ermöglicht eine bessere Kontrolle über den Upgrade-Prozess. 
+| Empfohlene Vorgehensweise | Bei großen Konfigurationen empfiehlt es sich, Pin und Unpin anstelle von pausierenden Kollektoren zu verwenden. Beim Anheften und Aufheben der Fixierung ist kein Pausieren und Fortsetzen erforderlich. Kunden können ihre Agenten und Sammler beibehalten und haben nach Erhalt einer E-Mail-Benachrichtigung über eine neue Version 30 Tage Zeit, die Agenten einzeln zu aktualisieren. Dieser Ansatz minimiert die Latenzauswirkungen auf fpolicies und ermöglicht eine bessere Kontrolle über den Upgrade-Prozess. 
 |===
 
 
