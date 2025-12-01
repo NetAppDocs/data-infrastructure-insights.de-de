@@ -5,8 +5,17 @@ summary: Der Server oder die VM, die Sie als Erfassungseinheit verwenden, muss M
 keywords: AU, acquisition unit, requirements, sizing 
 ---
 = Anforderungen an die Erfassungseinheit
+:toc: macro
 :hardbreaks:
+:toclevels: 1
 :allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
 
 
 [role="lead"]
@@ -22,7 +31,7 @@ Sie müssen eine Acquisition Unit (AU) installieren, um Informationen von Ihren 
 | Komponente | Linux-Anforderungen | Windows-Anforderung 
 
 
-| Betriebssystem | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Betriebssysteme ausgeführt wird: * AlmaLinux 9.3 bis 9.5 * Centos (64-Bit): 7.2 bis 7.9, 8.1 bis 8.4, Stream 8, Stream 9 * Debian (64-Bit): 9 bis 12 * OpenSUSE Leap 15.1 bis 15.6 * Oracle Enterprise Linux (64-Bit): 7.5 bis 7.9, 8.1 bis 8.10, 9.3 bis 9.6 * Red Hat (64-Bit): 7.2 bis 7.9, 8.1 bis 8.10, 9.1 bis 9.6 * Rocky 9.0 bis 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 bis 15 SP6 * Ubuntu Server: 18.04, 20.04, 22.04, 24.04 LTS * SELinux auf dem über Plattformen Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Ein dedizierter Server wird empfohlen.  Wenn Sie mit SELinux arbeiten, wird empfohlen, die folgenden Befehle auf dem Erfassungseinheitssystem auszuführen: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Programme ausgeführt wird: * Microsoft Windows 10 64-Bit * Microsoft Windows 11 * Microsoft Windows Server 2012 * Microsoft Windows Server 2012 R2 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Ein dedizierter Server wird empfohlen. 
+| Betriebssystem | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Betriebssysteme ausgeführt wird: * AlmaLinux 9.3 bis 9.5 * Centos (64-Bit): 7.2 bis 7.9, 8.1 bis 8.4, Stream 8, Stream 9 * Debian (64-Bit): 9 bis 12 * OpenSUSE Leap 15.1 bis 15.6 * Oracle Enterprise Linux (64-Bit): 7.5 bis 7.9, 8.1 bis 8.10, 9.3 bis 9.6 * Red Hat (64-Bit): 7.2 bis 7.9, 8.1 bis 8.10, 9.1 bis 9.6 * Rocky 9.0 bis 9.5 * SUSE Linux Enterprise Server 15, 15 SP2 bis 15 SP6 * Ubuntu Server: 18.04, 20.04, 22.04, 24.04 LTS * SELinux auf dem über Plattformen Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Ein dedizierter Server wird empfohlen.  Wenn Sie mit SELinux arbeiten, wird empfohlen, die folgenden Befehle auf dem Erfassungseinheitssystem auszuführen: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | Ein Computer, auf dem eine lizenzierte Version einer der folgenden Windows-Versionen ausgeführt wird: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 Auf diesem Computer darf keine andere Anwendungssoftware ausgeführt werden. Ein dedizierter Server wird empfohlen. 
 
 
 | CPU | 2 CPU-Kerne | Dasselbe 
@@ -34,7 +43,7 @@ Sie müssen eine Acquisition Unit (AU) installieren, um Informationen von Ihren 
 | Verfügbarer Speicherplatz | 50 GB (100 GB empfohlen) Für Linux sollte der Speicherplatz folgendermaßen zugewiesen werden: /opt/netapp 10 GB (20 GB für große Umgebungen) /var/log/netapp 40 GB (80 GB für große Umgebungen) /tmp mindestens 1 GB während der Installation verfügbar | 50 GB 
 
 
-| Netzwerk | Erforderlich sind eine Ethernet-Verbindung mit 100 Mbit/s/1 Gbit/s, eine statische IP-Adresse und Port 80 oder 443 (ausgehend) für die Konnektivität von der Erfassungseinheit zu *.cloudinsights.netapp.com oder Ihrem Data Infrastructure Insights Mandanten (d. h. \https://<tenant_id>.c01.cloudinsights.netapp.com).  Informationen zu den Anforderungen zwischen der Erfassungseinheit und den einzelnen Datensammlern finden Sie in den Anweisungen für dielink:data_collector_list.html["Datensammler"] .  Wenn Ihre Organisation die Verwendung eines Proxys für den Internetzugang erfordert, müssen Sie möglicherweise das Proxy-Verhalten Ihrer Organisation verstehen und nach bestimmten Ausnahmen suchen, damit Data Infrastructure Insights funktioniert.  Blockiert Ihre Organisation beispielsweise standardmäßig den Zugriff und erlaubt den Zugriff auf bestimmte Websites/Domänen nur ausnahmsweise?  In diesem Fall müssen Sie die folgende Domäne zur Ausnahmeliste hinzufügen: *.cloudinsights.netapp.com. Weitere Informationen finden Sie unter Proxies.link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["hier (Linux)"] oderlink:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["hier (Windows)"] .  Beachten Sie, dass Port 443 von der AU zu Data Infrastructure Insights„ausgehend“ geöffnet sein muss. | Dasselbe 
+| Netzwerk | Erforderlich sind eine 100-Mbit/s-/1-Gbit/s-Ethernet-Verbindung, eine statische IP-Adresse und eine Port-80- oder Port-443-Konnektivität (ausgehend) von der Akquisitionseinheit zu *.cloudinsights.netapp.com oder Ihrem Data Infrastructure Insights Mandanten (z. B. https://<tenant_id>.c01.cloudinsights.netapp.com).  Die Anforderungen an die Verbindung zwischen der Erfassungseinheit und den einzelnen Datensammlern entnehmen Sie bitte der Anleitung für dielink:data_collector_list.html["Datensammler"] Die Wenn Ihre Organisation die Verwendung eines Proxys für den Internetzugang erfordert, müssen Sie möglicherweise das Proxy-Verhalten Ihrer Organisation verstehen und nach bestimmten Ausnahmen suchen, damit Data Infrastructure Insights funktioniert. Blockiert Ihre Organisation beispielsweise standardmäßig den Zugriff und erlaubt den Zugriff auf bestimmte Websites/Domänen nur ausnahmsweise?  In diesem Fall müssen Sie die folgende Domain zur Ausnahmeliste hinzufügen lassen: *.cloudinsights.netapp.com. Weitere Informationen finden Sie unter „Proxys“.link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["hier (Linux)"] oderlink:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["hier (Windows)"] Die | Dasselbe 
 
 
 | Berechtigungen | Sudo-Berechtigungen auf dem Acquisition Unit-Server.  /tmp muss mit Exec-Funktionen gemountet werden. | Administratorberechtigungen auf dem Acquisition Unit-Server 
