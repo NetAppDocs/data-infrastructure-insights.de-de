@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: reporting_publishing_annotations.html 
+summary: Erfahren Sie, wie Sie Anmerkungen für die Verwendung in Berichten veröffentlichen und deren Veröffentlichung aufheben. 
+keywords: reporting, annotations, publish, unpublish, data warehouse, dwh 
+---
+= Veröffentlichung und Aufhebung der Veröffentlichung von Anmerkungen für Berichte
+:allow-uri-read: 
+
+
+
+
+== Veröffentlichung und Aufhebung der Veröffentlichung von Anmerkungen für Berichte
+
+[role="lead"]
+Erfahren Sie, wie Sie Anmerkungen zur Verwendung in Berichten und im Data Warehouse veröffentlichen und wie Sie Anmerkungen ordnungsgemäß wieder entfernen, wenn sie nicht mehr benötigt werden.
+
+
+
+== Veröffentlichung von Anmerkungen für Berichte
+
+Nachdem Sie in Data Infrastructure Insights Annotationen erstellt haben, können Sie diese zur Verwendung in der Berichterstellung veröffentlichen.
+
+
+
+=== Schritte zum Veröffentlichen von Anmerkungen
+
+. Navigieren Sie zur Seite *Observability > Enrich > Annotations* und wählen Sie die Registerkarte _Annotations for Reporting_ aus.
+. Suchen Sie die Anmerkung, die Sie veröffentlichen möchten.
+. Wählen Sie die Anmerkung aus und wählen Sie _In Berichten veröffentlichen_.  Sie können die Annotation auch auf historische Daten anwenden, sodass sie beim Ausführen von Verlaufsberichten verwendet werden kann.
+. Nach der Veröffentlichung steht die Annotation für die Verwendung in Berichten zur Verfügung.
+. Die Annotationen werden nach dem nächsten ETL-Lauf zur Verwendung in der Berichterstellung veröffentlicht.
+
+
+[NOTE]
+====
+Alle Berichte, die auf die Annotation Bezug nehmen, verwenden die veröffentlichten Werte.  Wenn Sie eine Anmerkung nach der Veröffentlichung ändern, müssen Sie sie möglicherweise erneut veröffentlichen, damit diese Änderungen in den Berichten wirksam werden.
+
+====
+
+
+== Veröffentlichung von Anmerkungen für die Berichterstellung aufheben
+
+Es kann vorkommen, dass Sie Anmerkungen entfernen oder deren Veröffentlichung aufheben müssen, damit sie in der Berichterstellung nicht mehr verwendet werden.  Beispielsweise kann eine Anmerkung nicht mehr benötigt werden oder veraltete Informationen enthalten, die nicht in Berichten erscheinen sollten.
+
+
+
+=== Schritte zum Aufheben der Veröffentlichung von Anmerkungen
+
+Bevor Sie eine Anmerkung entfernen, beachten Sie bitte, dass diese Aktion Auswirkungen auf alle bestehenden Berichte hat, die diese Anmerkung verwenden.  Berichte müssen gegebenenfalls redaktionell bearbeitet oder durch professionelle Dienstleistungen unterstützt werden, um die Anmerkungsverweise zu entfernen.
+
+. Navigieren Sie in der Benutzeroberfläche von Data Infrastructure Insights zur Registerkarte _Anmerkungen für die Berichterstellung_.
+. Suchen Sie die Anmerkung, die Sie entfernen möchten.
+. Für jedes Objekt, bei dem die Annotation veröffentlicht ist, deaktivieren Sie die Annotation und wählen Sie _Speichern_.
+. Entfernen Sie alle Abfragen oder Regeln, die noch auf die Annotation verweisen, um sicherzustellen, dass sie nicht als „in Verwendung“ markiert ist.
+. Die Annotationen werden nach dem nächsten ETL-Lauf wieder entfernt.
+. Nach Abschluss des ETL-Prozesses kann die Annotation aus der Liste der Annotationen gelöscht werden, wenn sie auf Mandantenseite nicht mehr benötigt wird.
+
+
+[IMPORTANT]
+====
+Annotationen werden so lange im Data Warehouse angezeigt, bis sie ordnungsgemäß entfernt werden.  Wenn man eine Anmerkung einfach von der Seite „Anmerkungen“ löscht, ohne sie vorher zu deaktivieren, bleiben veraltete Daten zurück, die möglicherweise in bestehenden Berichten erscheinen.  Um eine vollständige Entfernung zu gewährleisten, befolgen Sie die oben beschriebenen Schritte zum Aufheben der Veröffentlichung.
+
+====
+
+
+== Auswirkungen auf bestehende Berichte
+
+Das Entfernen oder Aufheben der Veröffentlichung von Anmerkungen kann Änderungen an bestehenden Berichten erfordern, die auf diese Anmerkungen Bezug nehmen. Beachten Sie Folgendes:
+
+* Berichte, die die Annotation als Filter oder Dimension verwenden, müssen aktualisiert werden.
+* Wird eine Annotation entfernt, ohne die abhängigen Berichte zu aktualisieren, können diese Berichte Fehler oder unerwartete Ergebnisse liefern.
+* Bei komplexen Szenarien können professionelle Dienstleistungen zur Unterstützung bei der Behebung von Mängeln im Bericht erforderlich sein.
+
+
+Es wird empfohlen, alle Berichte, die auf einer Anmerkung basieren, vor der Deaktivierung zu überprüfen.
