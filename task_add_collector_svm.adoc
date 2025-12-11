@@ -35,8 +35,12 @@ Der ONTAP SVM Data Collector ermöglicht Workload Security die Überwachung von 
 * SVM hat mehrere Untertypen.  Davon werden nur _default_, _sync_source_ und _sync_destination_ unterstützt.
 * Ein Agentlink:task_cs_add_agent.html["muss konfiguriert werden"] bevor Sie Datensammler konfigurieren können.
 * Stellen Sie sicher, dass Sie über einen ordnungsgemäß konfigurierten Benutzerverzeichnis-Connector verfügen. Andernfalls werden auf der Seite „Aktivitätsforensik“ verschlüsselte Benutzernamen und nicht der tatsächliche Name des Benutzers (wie in Active Directory gespeichert) angezeigt.
-* • ONTAP Persistent Store wird ab 9.14.1 unterstützt.
+* ONTAP Persistent Store wird ab Version 9.14.1 unterstützt.
 * Für eine optimale Leistung sollten Sie den FPolicy-Server so konfigurieren, dass er sich im selben Subnetz wie das Speichersystem befindet.
+
+
+[[fpolicy-best-practices]]
+* Ausführliche Best Practices und Empfehlungen zur Konfiguration der Workload Security FPolicy finden Sie unterlink:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/DII_Storage_Workload_Security__Fpolicy_Best_Practice_and_Recommendations["KB-Artikel zu Best Practices für FPolice"^] Die
 * Sie müssen eine SVM mit einer der folgenden beiden Methoden hinzufügen:
 +
 ** Durch Verwendung der Cluster-IP, des SVM-Namens sowie des Benutzernamens und Kennworts für die Clusterverwaltung.  *_Dies ist die empfohlene Methode._*
@@ -47,7 +51,7 @@ Der ONTAP SVM Data Collector ermöglicht Workload Security die Überwachung von 
 ** Durch Verwendung von SVM Vserver Management IP, Benutzername und Passwort
 ** Wenn Sie den vollständigen Benutzernamen und das Kennwort für die Cluster-/SVM-Verwaltung des Administrators nicht verwenden können oder möchten, können Sie einen benutzerdefinierten Benutzer mit geringeren Berechtigungen erstellen, wie im Abschnitt<<a-note-about-permissions,„Ein Hinweis zu Berechtigungen“>> Abschnitt unten.  Dieser benutzerdefinierte Benutzer kann entweder für den SVM- oder Cluster-Zugriff erstellt werden.
 +
-*** o Sie können auch einen AD-Benutzer mit einer Rolle verwenden, die mindestens über die Berechtigungen von csrole verfügt, wie im Abschnitt „Hinweis zu Berechtigungen“ weiter unten erwähnt.  Siehe auch dielink:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["ONTAP-Dokumentation"] .
+*** Alternativ können Sie einen AD-Benutzer mit einer Rolle verwenden, die mindestens die Berechtigungen der Rolle „csrole“ besitzt, wie im Abschnitt „Hinweis zu Berechtigungen“ weiter unten beschrieben.  Siehe auch dielink:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["ONTAP-Dokumentation"] Die
 
 
 
