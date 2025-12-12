@@ -43,9 +43,9 @@ Navigieren Sie zu *Analyse und Kontrolle > Beobachtbarkeit*, um mehr über Data 
 
 == Starten Sie Ihre kostenlose Testversion von Data Infrastructure Insights
 
-Wenn Sie sich zum ersten Mal bei Data Infrastructure Insights anmelden, klicken Sie unter dem Angebot von Data Infrastructure Insights auf *Kostenlose Testversion starten*.  Data Infrastructure Insights führt Sie durch die Erstellung des Mandanten Ihres Unternehmens und wählt dabei auch die Region aus, in der sich Ihr Mandant befinden soll.
+Wenn Sie sich zum ersten Mal bei Data Infrastructure Insights anmelden, lesen Sie sich über alle Funktionen von Data Infrastructure Insights durch. Wenn Sie bereit sind, loszulegen, klicken Sie auf „Testversion anfordern“ und geben Sie Ihre Daten ein.
 
-image:trial_region_selector.png["Auswählen der Region, in der Ihr Data Infrastructure Insights Mandant gehostet werden soll"]
+Im Rahmen der Einrichtung Ihres Testmandanten wählen Sie die Region, in der Ihr Mandant gehostet werden soll, und ob Sie Ihren Mandanten auf AWS oder Azure betreiben möchten.
 
 Sobald die Erstellung Ihres Mandanten abgeschlossen ist, melden Sie sich mit Ihren Konsolenanmeldeinformationen an und starten Sie Ihre kostenlose 30-Tage-Testversion von Data Infrastructure Insights.  Während dieser Testphase können Sie die Funktionen erkunden, die Data Infrastructure Insights zu bieten hat.
 
