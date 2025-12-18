@@ -18,6 +18,35 @@ NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hie
 
 
 
+== Dezember 2025
+
+
+
+=== Zugriff auf Abfragen mit freigegebenen Abfragen steuern
+
+Teilen Sie Ihre erstellten Abfragen mit fein abgestuften Berechtigungssteuerungen. Wählen Sie den schreibgeschützten Anzeigemodus, um Änderungen zu verhindern, oder den Bearbeitungsmodus, um Änderungen zu ermöglichen. Private Abfragen sind nur für die Ersteller zugänglich, während gemeinsam genutzte Abfragen in Annotationsregeln verwendet oder für spezielle Anwendungsfälle dupliziert werden können. Dadurch haben Sie die volle Kontrolle darüber, wie Abfragen in Ihrer Organisation verwendet und geändert werden.
+
+image:query_sharing_dialog.png["Berechtigungen für eine Abfrage festlegen, Breite=200"]
+
+Darüber hinaus können Benutzer mit der Rolle „Gast“ nun ihre eigenen privaten Abfragen erstellen und verwalten.
+
+
+
+=== Verbesserte Filterung bei der Monitorverwaltung
+
+Die Filterung von Monitorlisten und -gruppen wurde verbessert und bietet nun Unterstützung für Platzhalter, mehrere Filter, Ein-/Ausschlussfunktionen und mehr.
+
+image:monitor_list_filters.png["Neue Monitorfilterung, Breite=500"]
+
+
+
+=== Übersichtlichere Dashboard-Visualisierungen
+
+Das verbesserte Dashboard-Design hilft Ihnen, das Wichtigste im Blick zu behalten. Verbesserte visuelle Klarheit durch Schlagschattenränder, die Widgets voneinander trennen, und entfernte Trennlinien, um Unordnung zu vermeiden, damit Sie sich auf Ihre Dateneinblicke konzentrieren können. Diese Verbesserungen schaffen ein übersichtlicheres und intuitiveres Dashboard-Erlebnis, das das Erkennen von Trends und Anomalien schneller und einfacher macht.
+
+'''
+
+
 == November 2025
 
 
