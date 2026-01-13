@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: cs_alert_data.html 
-keywords: alert, attack, ransomware, activity, security, abnormal 
+keywords: alert, attack, ransomware, activity, security, abnormal, tampering 
 summary: Workload Security erstellt Warnungen im Falle einer ungewöhnlichen Benutzeraktivität oder eines potenziellen Angriffs.  Auf der Seite „Warnungen“ werden diese Aktivitäten aufgelistet, damit Sie sie schnell und einfach untersuchen können. 
 ---
 = Warnungen
@@ -14,7 +14,7 @@ summary: Workload Security erstellt Warnungen im Falle einer ungewöhnlichen Ben
 
 
 [role="lead"]
-Auf der Seite „Workload-Sicherheitswarnungen“ wird eine Zeitleiste der jüngsten Angriffe und/oder Warnungen angezeigt und Sie können Details zu jedem Problem anzeigen.
+Die Seite „Workload-Sicherheitswarnungen“ bietet eine umfassende Zeitleiste der erkannten Bedrohungen und Warnungen sowie detaillierte Untersuchungswerkzeuge. Alarmdetails einsehen, Statusaktualisierungen verwalten, nach Kriterien filtern und Benutzeraktivitäten verfolgen, um Sicherheitsvorfälle effizient zu untersuchen und darauf zu reagieren.
 
 image:CloudSecureAlertsListPage.png["Liste der Warnungen"]
 
@@ -102,9 +102,9 @@ Sie können auf der Seite mit der Warnmeldungsliste auf einen Warnmeldungslink k
 
 Dieser Abschnitt zeigt Details zum Benutzer, der an dem potenziellen Angriff beteiligt war, einschließlich eines Diagramms der Top-Aktivitäten des Benutzers.
 
-Warnseite (dieses Beispiel zeigt einen potenziellen Ransomware-Angriff):image:RansomwareAlertExample.png["Beispiel für eine Ransomware-Warnung"]
+Warnseite (dieses Beispiel zeigt einen möglichen Angriff zur Manipulation von Dateien): image:RansomwareAlertExample.png["Beispiel für eine Warnung vor Dateimanipulation"]
 
-Detailseite (dieses Beispiel zeigt einen potenziellen Ransomware-Angriff):image:RansomwareDetailPageExample.png["Beispiel einer Ransomware-Detailseite"]
+Detailseite (dieses Beispiel zeigt einen möglichen Angriff zur Dateimanipulation): image:RansomwareDetailPageExample.png["Beispielseite für Dateimanipulation"]
 
 
 
@@ -112,7 +112,7 @@ Detailseite (dieses Beispiel zeigt einen potenziellen Ransomware-Angriff):image:
 
 Workload Security schützt Ihre Daten, indem es automatisch einen Snapshot erstellt, wenn böswillige Aktivitäten erkannt werden, und so gewährleistet, dass Ihre Daten sicher gesichert werden.
 
-Sie können definierenlink:cs_automated_response_policies.html["Richtlinien für automatisierte Antworten"] die einen Schnappschuss erstellen, wenn ein Ransomware-Angriff oder andere ungewöhnliche Benutzeraktivitäten erkannt werden.  Sie können auch manuell einen Schnappschuss von der Warnseite aus erstellen.
+Sie können definieren link:cs_automated_response_policies.html["Richtlinien für automatisierte Antworten"] die einen Snapshot erstellen, wenn ein Dateimanipulationsangriff oder eine andere ungewöhnliche Benutzeraktivität erkannt wird. Sie können auch manuell einen Screenshot von der Benachrichtigungsseite erstellen.
 
 Automatischer Schnappschuss erstellt:image:AlertActionsAutomaticExample.png["Alarmaktionsbildschirm, 1000"]
 

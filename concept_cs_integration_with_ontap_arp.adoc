@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_integration_with_ontap_arp.html 
-summary: Workload Security lässt sich in ONTAP Autonomous Ransomware Protection integrieren, um die Ransomware-Erkennung zu verbessern. 
+summary: Verbessern Sie die Angriffserkennung durch die Integration von Workload Security mit ONTAP Autonomous Protection für korrelierte Analysen, automatisierte Reaktionen und forensische Untersuchungsfunktionen. 
 keywords: ransomware, ARP, Protection, Security 
 ---
 = Integration mit ONTAP Autonomous Ransomware Protection
@@ -10,7 +10,7 @@ keywords: ransomware, ARP, Protection, Security
 
 
 [role="lead"]
-Die Funktion ONTAP Autonomous Ransomware Protection (ARP) nutzt Workload-Analysen in NAS-Umgebungen (NFS und SMB), um proaktiv ungewöhnliche Aktivitäten in Dateien zu erkennen und davor zu warnen, die auf einen Ransomware-Angriff hindeuten könnten.
+Die ONTAP Funktion Autonomous Protection nutzt die Workload-Analyse in NAS-Umgebungen (NFS und SMB), um proaktiv ungewöhnliche Aktivitäten in Dateien zu erkennen und davor zu warnen, die auf böswillige Angriffe oder unautorisierte Datenänderungen hindeuten könnten.
 
 Weitere Details und Lizenzanforderungen zu ARP finden Sielink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["hier,"] .
 
@@ -62,7 +62,7 @@ Nachfolgend sehen Sie ein Beispiel für eine Warnung, die aufgrund eines ARP-Ere
 
 image:CS_Ransomware_Example_1.png["Ransomware-Alarm – oberer Abschnitt"] image:CS_Ransomware_Example_2.png["Ransomware-Alarm – oberer Abschnitt"] image:CS_Ransomware_Example_3.png["Ransomware-Alarm – oberer Abschnitt"]
 
-Ein Banner mit hoher Vertrauenswürdigkeit weist darauf hin, dass der Angriff neben Dateiverschlüsselungsaktivitäten auch Ransomware-Verhalten gezeigt hat.  Das Diagramm der verschlüsselten Dateien zeigt den Zeitstempel an, zu dem die Volume-Verschlüsselungsaktivität von der ARP-Lösung erkannt wurde.
+Ein Banner mit hoher Konfidenz kennzeichnet Aktivitäten, bei denen der Angriff neben Dateiverschlüsselung auch Dateimanipulationen aufwies. Die Grafik der verschlüsselten Dateien zeigt den Zeitstempel an, zu dem die Aktivität der Datenträgerverschlüsselung von der ARP-Lösung erkannt wurde.
 
 
 

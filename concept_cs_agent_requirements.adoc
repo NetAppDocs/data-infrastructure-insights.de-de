@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: Der Server oder die VM, die Sie als Agent verwenden, muss die Mindestanforderungen erfüllen 
+summary: Stellen Sie sicher, dass Ihre Bereitstellungsumgebung für den Workload Security Agent die Mindestanforderungen an Betriebssystem, CPU, Arbeitsspeicher und Festplattenspeicher erfüllt, um eine optimale Leistung und Datenerfassung zu gewährleisten. 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = Anforderungen für den Workload Security Agent

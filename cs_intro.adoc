@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: cs_intro.html 
 keywords: CloudSecure, Cloud Secure 
-summary: Überblick 
+summary: Schützen Sie Ihre Daten mit Storage Workload Securitys Funktionen zur Erkennung von Insiderbedrohungen, zentralisierter Transparenz in hybriden Umgebungen und fortschrittlichem maschinellem Lernen zur Anomalieerkennung und Compliance. 
 ---
 = Informationen zur Speicher-Workload-Sicherheit
 :hardbreaks:

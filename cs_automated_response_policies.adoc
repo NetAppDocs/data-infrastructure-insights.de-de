@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: cs_automated_response_policies.html 
-keywords: alert, snapshot, ransomware, attack 
-summary: 'Sie können automatisierte Reaktionsrichtlinien für potenzielle Angriffe (wie Ransomware) und/oder Aktivitätswarnungen festlegen' 
+keywords: alert, snapshot, ransomware, attack, tampering 
+summary: Konfigurieren Sie automatisierte Reaktionsrichtlinien, um bei Sicherheitsvorfällen sofort Maßnahmen zu ergreifen, einschließlich Snapshots, Einschränkung des Benutzerzugriffs und Webhook-Benachrichtigungen bei Bedrohungen und verdächtigem Verhalten. 
 ---
 = Richtlinien für automatisierte Antworten
 :hardbreaks:

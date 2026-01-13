@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_cs_api.html 
 keywords: api, access, token, swagger 
-summary: Workload Security umfasst eine leistungsstarke API für die Integration mit anderen Anwendungen wie CMDBs. 
+summary: Greifen Sie über eine REST-API mit sicherer tokenbasierter Authentifizierung auf Workload-Sicherheitsdaten zu, um die Integration mit CMDBs, Ticketsystemen und anderen Unternehmensanwendungen zu ermöglichen. 
 ---
 = Workload-Sicherheits-API
 :hardbreaks:

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: ws_allowed_file_types.html 
-keywords: workload security, cloud secure, include list, allowed, file types, ransomware 
+keywords: workload security, cloud secure, include list, allowed, file types, ransomware, tampering 
 summary: Fügen Sie einer Liste zulässiger Dateitypen Dateierweiterungen hinzu, um die Anzahl der Warnmeldungen zu reduzieren. 
 ---
 = Richtlinien für zulässige Dateitypen
@@ -9,14 +9,14 @@ summary: Fügen Sie einer Liste zulässiger Dateitypen Dateierweiterungen hinzu,
 
 
 [role="lead"]
-Wenn ein Ransomware-Angriff für eine bekannte Dateierweiterung erkannt wird und auf dem Bildschirm „Warnungen“ Warnungen generiert werden, kann diese Dateierweiterung einer Liste _zulässiger Dateitypen_ hinzugefügt werden, um unnötige Warnungen zu vermeiden.
+Wird ein Angriff auf eine Dateimanipulation bei einer bekannten Dateierweiterung festgestellt und werden Warnungen auf dem Warnbildschirm generiert, kann diese Dateierweiterung einer Liste _zulässiger Dateitypen_ hinzugefügt werden, um unnötige Warnungen zu vermeiden.
 
 Navigieren Sie zu *Workload-Sicherheit > Richtlinien* und wechseln Sie zur Registerkarte _Richtlinien für zulässige Dateitypen_.
 
 image:WS_Allowed_File_Type_Policies.png["Richtlinien für zulässige Dateitypen"]
 
-Sobald der zulässige Dateityp zur Liste der _zulässigen Dateitypen_ hinzugefügt wurde, wird für ihn kein Alarm mehr vor einem Ransomware-Angriff generiert.  Beachten Sie, dass die Richtlinie „Zulässige Dateitypen“ nur für die Ransomware-Erkennung gilt.
+Sobald ein Dateityp zur Liste der zulässigen Dateitypen hinzugefügt wurde, wird für diesen zulässigen Dateityp keine Warnung vor Dateimanipulationsangriffen mehr generiert. Beachten Sie, dass die Richtlinie _Zulässige Dateitypen_ nur für die Erkennung von Dateimanipulationen gilt.
 
-Wenn beispielsweise eine Datei mit dem Namen _test.txt_ in _test.txt.abc_ umbenannt wird und Workload Security aufgrund der Erweiterung _.abc_ einen Ransomware-Angriff erkennt, kann die Erweiterung _.abc_ zur Liste der _zulässigen Dateitypen_ hinzugefügt werden.  Nach der Aufnahme in die Liste werden keine Ransomware-Angriffe mehr gegen Dateien mit der Erweiterung _.abc_ ausgeführt.
+Wenn beispielsweise eine Datei mit dem Namen _test.txt_ in _test.txt.abc_ umbenannt wird und Workload Security aufgrund der Dateiendung _.abc_ einen Angriff auf Dateimanipulation feststellt, kann die Dateiendung _.abc_ zur Liste der _zulässigen Dateitypen_ hinzugefügt werden. Nach der Aufnahme in die Liste werden keine Dateimanipulationsangriffe mehr gegen Dateien mit der Erweiterung _.abc_ generiert.
 
 Zulässige Dateitypen können exakte Übereinstimmungen (z. B. „.abc“) oder Ausdrücke (z. B. „.*Typ“, „.Typ*“ oder „*Typ*“) sein.  Ausdrücke der Typen „.a*c“, „.p*f“ werden nicht unterstützt.

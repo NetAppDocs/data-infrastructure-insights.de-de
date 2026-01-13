@@ -2,15 +2,19 @@
 sidebar: sidebar 
 permalink: task_config_cs_incloud.html 
 keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet,  cloud secure 
-summary: Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen. 
+summary: Richten Sie Workload Security-Datensammler für Cloud Volumes ONTAP und Amazon FSx for NetApp ONTAP ein, um den Dateizugriff und die Benutzeraktivität zu überwachen sowie Bedrohungen in Ihrer Cloud-Speicherinfrastruktur zu erkennen. 
 ---
 = Konfigurieren des Cloud Volumes ONTAP und Amazon FSx for NetApp ONTAP
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Workload Security verwendet Datensammler, um Datei- und Benutzerzugriffsdaten von Geräten zu erfassen.
+Überwachen Sie den Datei- und Benutzerzugriff in Ihrer Cloud-Speicherinfrastruktur, indem Sie Workload Security-Datensammler für Cloud Volumes ONTAP und Amazon FSx for NetApp ONTAP konfigurieren. Dieser Leitfaden bietet eine Schritt-für-Schritt-Anleitung zum Bereitstellen von Agents in AWS und zum Verbinden dieser Agents mit Ihren Cloud-Speicherinstanzen.
 
 
 

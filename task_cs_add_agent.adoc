@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_cs_add_agent.html 
 keywords: agent, Workload Security, installation, Cloud Secure 
-summary: Workload Security-Agenten überwachen die Benutzeraktivität und erkennen Sicherheitsbedrohungen in Ihrer Speicherumgebung. 
+summary: Setzen Sie Workload Security-Agenten ein, um die Benutzeraktivität zu überwachen, Sicherheitsbedrohungen zu erkennen und Ihre Speicherinfrastruktur zu schützen. 
 ---
 = Workload-Sicherheitsagenten bereitstellen
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Workload Security-Agenten überwachen die Benutzeraktivität und erkenn
 
 
 [role="lead"]
-Workload Security-Agenten sind unerlässlich, um die Benutzeraktivitäten zu überwachen und potenzielle Sicherheitsbedrohungen in Ihrer Speicherinfrastruktur zu erkennen. Dieser Leitfaden enthält eine Schritt-für-Schritt-Anleitung zur Bereitstellung von Agenten in Ihrer Umgebung. Bevor Sie beginnen, stellen Sie sicher, dass Ihr Agentenserver die folgenden Anforderungen erfüllt: link:concept_cs_agent_requirements.html["Systemanforderungen"]Die
+Workload Security-Agenten sind unerlässlich, um die Benutzeraktivitäten zu überwachen und potenzielle Sicherheitsbedrohungen in Ihrer Speicherinfrastruktur zu erkennen. Dieser Leitfaden enthält eine schrittweise Installationsanleitung, Best Practices für die Agentenverwaltung (einschließlich Pause-/Fortsetzungs- und Anheft-/Entfernungsfunktionen) sowie Konfigurationsanforderungen nach der Bereitstellung. Bevor Sie beginnen, stellen Sie sicher, dass Ihr Agentenserver die folgenden Anforderungen erfüllt: link:concept_cs_agent_requirements.html["Systemanforderungen"]Die
 
 
 

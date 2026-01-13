@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: cs_notifications_email.html 
-summary: Hinzufügen von E-Mail-Adressen für Benachrichtigungen zu Workload-Sicherheitswarnungen. 
+summary: Konfigurieren Sie E-Mail-Benachrichtigungen, um Warnungen vor potenziellen Angriffen, Sicherheitswarnungen und den Status des Agenten/Datensammlers in Echtzeit zu erhalten. 
 keywords: email, notifications, alerts, warnings, attacks 
 ---
 = Konfigurieren von E-Mail-Benachrichtigungen für Alarme, Warnungen und den Zustand von Agenten/Datenquellen-Sammlern
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Um die Empfänger von Workload Security-Warnmeldungen zu konfigurieren, klicken Sie auf *Admin > Benachrichtigungen* und geben Sie in den entsprechenden Abschnitten für jeden Empfänger eine E-Mail-Adresse ein.
+E-Mail-Benachrichtigungen ermöglichen es Ihnen, über potenzielle Angriffe, Sicherheitswarnungen und Probleme mit der Infrastruktur auf dem Laufenden zu bleiben, sobald diese auftreten. Konfigurieren Sie die E-Mail-Adressen der Empfänger unter Admin > Benachrichtigungen, um Echtzeit-Benachrichtigungen zu erhalten, die auf die jeweiligen Verantwortlichkeiten der Empfänger zugeschnitten sind.
 
 
 
@@ -33,7 +37,7 @@ Beachten Sie Folgendes:
 * Gesundheitswarnungen werden erst gesendet, wenn der Agent/Sammler mindestens eine Stunde lang keine Berichte mehr sendet.
 * Innerhalb eines Zeitraums von 24 Stunden wird nur eine E-Mail-Benachrichtigung an die vorgesehenen Empfänger gesendet, selbst wenn die Verbindung zum Agenten oder Datensammler für einen längeren Zeitraum unterbrochen ist.
 * Im Falle eines Agentenfehlers wird eine Warnung gesendet (nicht eine pro Collector).  Die E-Mail enthält eine Liste aller betroffenen SVMs.
-* Ein Fehler bei der Active Directory-Sammlung wird als Warnung gemeldet und hat keinen Einfluss auf die Ransomware-Erkennung.
+* Ein Fehler bei der Active Directory-Datenerfassung wird als Warnung gemeldet; er hat keinen Einfluss auf die Bedrohungserkennung.
 * Die Setup-Liste „Erste Schritte“ enthält jetzt eine neue Phase „E-Mail-Benachrichtigungen konfigurieren“.
 
 

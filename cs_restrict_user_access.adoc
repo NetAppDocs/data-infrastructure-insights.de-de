@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: cs_restrict_user_access.html 
 keywords: alert, snapshot,  attack 
-summary: Mit Workload Security können Sie den Benutzerzugriff bei Verdacht auf Sabotage einschränken 
+summary: Erkannte Angriffe werden sofort gestoppt, indem der Zugriff kompromittierter Benutzer automatisch oder manuell eingeschränkt wird, um weiteren Schaden an Dateisystemen über mehrere Speichervolumes hinweg zu verhindern. 
 ---
-= Blockieren des Benutzerzugriffs
+= Sperrung des Benutzerzugriffs zur Verhinderung von Angriffen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,7 @@ summary: Mit Workload Security können Sie den Benutzerzugriff bei Verdacht auf 
 
 
 [role="lead"]
-Sobald ein Angriff erkannt wird, kann Workload Security den Angriff stoppen, indem es den Benutzerzugriff auf das Dateisystem blockiert.  Der Zugriff kann automatisch mithilfe automatisierter Antwortrichtlinien oder manuell über die Warn- oder Benutzerdetailseiten blockiert werden.
-
-Beim Sperren des Benutzerzugriffs sollten Sie einen Sperrzeitraum festlegen.  Nach Ablauf des ausgewählten Zeitraums wird der Benutzerzugriff automatisch wiederhergestellt.  Die Zugriffsblockierung wird sowohl für SMB- als auch für NFS-Protokolle unterstützt.
+Um weitere Datenbeschädigung oder Datenexfiltration zu verhindern, müssen erkannte Angriffe umgehend gestoppt werden, indem der Zugriff kompromittierter Benutzer gesperrt wird. Die Workload-Sicherheit ermöglicht sowohl die automatische Blockierung durch automatisierte Reaktionsrichtlinien als auch das manuelle Eingreifen über Warnmeldungs- oder Benutzerdetailseiten und gibt Ihnen so eine flexible Kontrolle über Ihre Sicherheitsreaktion. Zugriffsbeschränkungen gelten automatisch für alle überwachten Speichervolumes und sind zeitlich begrenzt für die automatische Wiederherstellung.
 
 Der Benutzer wird direkt für SMB blockiert und die IP-Adresse der Host-Computer, die den Angriff verursachen, wird für NFS blockiert.  Den IP-Adressen dieser Maschinen wird der Zugriff auf alle von Workload Security überwachten Storage Virtual Machines (SVMs) verweigert.
 
