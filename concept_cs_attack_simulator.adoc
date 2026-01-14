@@ -4,7 +4,7 @@ permalink: concept_cs_attack_simulator.html
 keywords: ransomware, simulation, simulator, restrict, attack 
 summary: Testen und validieren Sie die Erkennungsfunktionen für Workload-Sicherheit, indem Sie Angriffe mithilfe des mitgelieferten Simulationsskripts simulieren, um die Richtlinien zur Alarmgenerierung und -reaktion zu überprüfen. 
 ---
-= Workload-Sicherheit: Simulation abnormaler Dateimanipulationen
+= Workload-Sicherheit: Simulation von Dateimanipulationen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -28,7 +28,7 @@ Für jeden Alarm wird Folgendes angezeigt:
 
 *Potenzielle Angriffe:*
 
-* Der _Potenzielle Angriffstyp_ (z. B. Ransomware oder Sabotage)
+* Die Art des _potenziellen Angriffs_ (z. B. Dateimanipulation oder Sabotage)
 * Datum und Uhrzeit der _Erkennung_ des potenziellen Angriffs
 * Der _Status_ der Warnung:
 +
@@ -75,13 +75,13 @@ Sie können Warnungen nach Folgendem filtern:
 
 == Die Seite „Warnungsdetails“
 
-Sie können auf der Seite mit der Warnmeldungsliste auf einen Warnmeldungslink klicken, um eine Detailseite für die Warnmeldung zu öffnen.  Die Alarmdetails können je nach Art des Angriffs oder Alarms variieren.  Beispielsweise kann eine Detailseite zu einem Ransomware-Angriff die folgenden Informationen anzeigen:
+Sie können auf der Seite „Warnungen“ auf einen Warnhinweis klicken, um eine Detailseite für die jeweilige Warnung zu öffnen. Die Details der Warnung können je nach Art des Angriffs oder der Warnung variieren. Eine Detailseite zu einem Dateimanipulationsangriff könnte beispielsweise folgende Informationen enthalten:
 
 
 
 === Abschnitt „Zusammenfassung“:
 
-* Angriffstyp (Ransomware, Sabotage) und Warnmeldungs-ID (zugewiesen von Workload Security)
+* Angriffsart (Dateimanipulation, Sabotage) und Warn-ID (vergeben von Workload Security)
 * Datum und Uhrzeit der Erkennung des Angriffs
 * Durchgeführte Aktion (z. B. wurde ein automatischer Schnappschuss erstellt).  Die Uhrzeit des Schnappschusses wird direkt unter dem Abschnitt „Zusammenfassung“ angezeigt.))
 * Status (Neu, In Bearbeitung usw.)
