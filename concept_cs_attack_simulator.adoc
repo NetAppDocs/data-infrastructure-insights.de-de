@@ -67,7 +67,7 @@ mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o u
 ----
 
 
-==== Aktivieren Sie den autonomen ONTAP Ransomware-Schutz (optional):
+==== ONTAP Autonomous Ransomware Protection aktivieren (Optional):
 
 Wenn Ihre ONTAP Clusterversion 9.11.1 oder höher ist, können Sie den ONTAP Ransomware Protection-Dienst aktivieren, indem Sie den folgenden Befehl auf der ONTAP Befehlskonsole ausführen.
 

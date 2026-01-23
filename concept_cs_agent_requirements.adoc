@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: Stellen Sie sicher, dass Ihre Bereitstellungsumgebung für den Workload Security Agent die Mindestanforderungen an Betriebssystem, CPU, Arbeitsspeicher und Festplattenspeicher erfüllt, um eine optimale Leistung und Datenerfassung zu gewährleisten. 
+summary: Workload Security Agents benötigen spezifische Spezifikationen hinsichtlich Betriebssystem, CPU, Arbeitsspeicher und Festplattenspeicher, um den Dateizugriff effektiv zu überwachen und Sicherheitsbedrohungen in Ihrer Speicherinfrastruktur zu erkennen. 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = Anforderungen für den Workload Security Agent
@@ -14,7 +14,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 [role="lead"]
-Sie müssenlink:task_cs_add_agent.html["Installieren Sie einen Workload Security Agent"] um Informationen von Ihren Datensammlern zu erhalten. Stellen Sie vor der Installation des Agenten sicher, dass Ihre Umgebung die Anforderungen an Betriebssystem, CPU, Arbeitsspeicher und Festplattenspeicher erfüllt.
+Setzen Sie Workload Security Agents auf dedizierten Servern ein, die die Mindestanforderungen an Betriebssystem, CPU, Arbeitsspeicher und Festplattenspeicher erfüllen, um eine optimale Überwachung und Bedrohungserkennung zu gewährleisten. Dieser Leitfaden beschreibt die Hardware- und Netzwerkvoraussetzungen, die vor link:task_cs_add_agent.html["Installation Ihres Workload Security Agent"] erforderlich sind, einschließlich unterstützter Linux-Distributionen, Netzwerkverbindungsregeln und Hinweise zur Systemdimensionierung.
 
 [cols="36,60"]
 |===

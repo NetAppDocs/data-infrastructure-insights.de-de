@@ -7,6 +7,10 @@ keywords: dashboard, widget, ontap, overview, insight
 = ONTAP Essentials
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -72,9 +76,9 @@ image:DataProtectionDashboard_ClusterList.png["Liste der Datenschutzcluster"]
 
 == Sicherheit
 
-Das Sicherheits-Dashboard bietet Ihnen einen sofortigen Überblick über Ihre aktuelle Sicherheitslage und zeigt Diagramme zur Hardware- und Software-Volume-Verschlüsselung, zum Anti-Ransomware-Status und zu Cluster-Authentifizierungsmethoden.  Die Sicherheitskriterien werden auf Grundlage der Empfehlungen bewertet, die in derlink:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* NetApp Security Hardening Guide für ONTAP 9*"] .
+Das Security Dashboard bietet Ihnen einen sofortigen Überblick über Ihre aktuelle Sicherheitslage und zeigt Diagramme zur Hardware- und Software-Volumenverschlüsselung, zum Status der Anti-Dateimanipulation und zu den Cluster-Authentifizierungsmethoden. Sicherheitskriterien werden anhand von Empfehlungen bewertet, die in der link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["* NetApp Security Hardening Guide für ONTAP 9*"] definiert sind.
 
-Wählen Sie eine der Verschlüsselungs- oder Anti-Ransomware-Funktionen aus, um Ihre Umgebung genauer zu untersuchen.
+Wählen Sie eine der Verschlüsselungs- oder Anti-Dateimanipulations-Zählungen aus, um tiefer in Ihre Umgebung einzutauchen.
 
 image:OE_SecurityDashboard.png["ONTAP Essentials Sicherheits-Dashboard"]
 

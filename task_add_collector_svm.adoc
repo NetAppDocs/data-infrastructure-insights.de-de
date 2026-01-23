@@ -112,6 +112,23 @@ image:ws_test_connection_success_example.png["Erfolgsmeldung „Verbindung teste
 
 
 
+== Wichtige Hinweise zu ONTAP Multi Admin Verify (MAV)
+
+Einige Funktionen, wie das Erstellen und Löschen von Snapshots oder das Blockieren von Benutzern (SMB), funktionieren möglicherweise nicht basierend auf den in Ihrer Version von ONTAP hinzugefügten MAV-Befehlen.
+
+Führen Sie die folgenden Schritte aus, um Ausnahmen zu Ihren MAV-Befehlen hinzuzufügen, die es Workload Security ermöglichen, Snapshots zu erstellen oder zu löschen und Benutzer zu blockieren.
+
+Befehle zum Erstellen und Löschen von Snapshots:
+
+....
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !*cloudsecure_*"
+multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !*cloudsecure_*"
+....
+Befehl, um das Blockieren von Benutzern zu erlauben:
+
+ multi-admin-verify rule delete -operation set
+
+
 == Voraussetzungen für die Benutzerzugriffssperre
 
 Beachten Sie Folgendes fürlink:cs_restrict_user_access.html["Sperrung des Benutzerzugriffs"] :
@@ -318,7 +335,7 @@ NOTE: Ein Collector kann nicht angehalten werden, wenn er über eingeschränkte 
 Beachten Sie Folgendes:
 
 * Gemäß den für einen angehaltenen Collector konfigurierten Einstellungen wird keine Snapshot-Bereinigung durchgeführt.
-* EMS-Ereignisse (wie ONTAP ARP) werden auf einem angehaltenen Collector nicht verarbeitet.  Das bedeutet, dass Data Infrastructure Insights Workload Security dieses Ereignis nicht erfassen kann, wenn ONTAP einen Ransomware-Angriff erkennt.
+* EMS-Ereignisse (wie ONTAP ARP) werden auf einem pausierten Collector nicht verarbeitet. Das bedeutet, wenn ONTAP einen Dateimanipulationsangriff erkennt, kann Data Infrastructure Insights Workload Security dieses Ereignis nicht erfassen.
 * Für einen pausierten Collector werden KEINE E-Mails mit Gesundheitsbenachrichtigungen gesendet.
 * Manuelle oder automatische Aktionen (wie Snapshot oder Benutzerblockierung) werden bei einem angehaltenen Collector nicht unterstützt.
 * Bei Agent- oder Collector-Upgrades, Neustarts/Neustarts der Agent-VM oder Neustarts des Agent-Dienstes bleibt ein angehaltener Collector im Status _Angehalten_.

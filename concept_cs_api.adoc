@@ -14,7 +14,7 @@ summary: Greifen Sie über eine REST-API mit sicherer tokenbasierter Authentifiz
 
 
 [role="lead"]
-Die Workload Security API ermöglicht es NetApp Kunden und unabhängigen Softwareanbietern (ISVs), Workload Security in andere Anwendungen wie CMDBs oder andere Ticketsysteme zu integrieren.
+Integrieren Sie Workload Security in Ihr Unternehmensökosystem mithilfe einer REST-API, die durch sichere tokenbasierte Authentifizierung geschützt ist. Rufen Sie forensische Aktivitätsdaten ab, verwalten Sie API-Zugriffstoken und entwickeln Sie benutzerdefinierte Integrationen mit CMDBs, Ticketing-Systemen und anderen Anwendungen. Interaktive Swagger-Dokumentation bietet vollständige API-Spezifikationen und ermöglicht es Ihnen, Endpunkte direkt zu testen.
 
 Voraussetzungen für den API-Zugriff:
 

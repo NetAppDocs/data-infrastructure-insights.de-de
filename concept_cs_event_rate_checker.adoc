@@ -4,7 +4,7 @@ permalink: concept_cs_event_rate_checker.html
 summary: Verwenden Sie den SVM Event Rate Checker, um die NFS/SMB-Ereignisraten zu messen und die optimale Agentengröße zu bestimmen, bevor Sie Workload Security-Datensammler bereitstellen. 
 keywords: event, checker, rate, sizing, cloud secure 
 ---
-= SVM-Ereignisratenprüfer (Leitfaden zur Agentendimensionierung)
+= Event Rate Checker: Leitfaden zur Agentengröße
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,7 @@ keywords: event, checker, rate, sizing, cloud secure
 
 
 [role="lead"]
-Mit dem Event Rate Checker wird die kombinierte NFS/SMB-Ereignisrate im SVM überprüft, bevor ein ONTAP SVM-Datensammler installiert wird, um zu sehen, wie viele SVMs eine Agentenmaschine überwachen kann.  Verwenden Sie den Event Rate Checker als Größenleitfaden zur Planung Ihrer Sicherheitsumgebung.
-
-Ein Agent kann bis zu maximal 50 Datensammler unterstützen.
+Ermitteln Sie die optimale Größe der Agentenmaschinen, indem Sie die von Ihren SVMs generierten NFS- und SMB-Ereignisraten vor der Bereitstellung der Datensammler messen. Das Skript zur Überprüfung der Ereignisrate hilft Ihnen, die Kapazitätsgrenzen (maximal 50 Datensammler pro Agent) zu verstehen und sicherzustellen, dass Ihre Agenteninfrastruktur das erwartete Ereignisvolumen für eine zuverlässige Bedrohungserkennung bewältigen kann.
 
 
 

@@ -1,18 +1,22 @@
 ---
 sidebar: sidebar 
 permalink: concept_querying_assets.html 
-summary: Abfrageübersicht 
+summary: Inventarressourcen und Integrationsmetriken abfragen, um die Leistung Ihrer gesamten Infrastruktur, einschließlich Speicher-, Rechen- und Netzwerkressourcen, zu überwachen, Fehler zu beheben und zu analysieren. 
 keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
 ---
-= In Abfragen verwendete Assets
+= Abfragen von Assets und Metriken
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Mithilfe von Abfragen können Sie Ihr Netzwerk überwachen und Fehler beheben, indem Sie die Assets und Metriken Ihres Mandanten auf granularer Ebene anhand vom Benutzer ausgewählter Kriterien (z. B. Anmerkungen) durchsuchen.
+Fragen Sie die physischen und virtuellen Assets Ihrer Infrastruktur ab, um die Leistung zu überwachen, Probleme zu beheben und granulare Suchen anhand benutzerdefinierter Kriterien wie Annotationen durchzuführen. Data Infrastructure Insights ermöglicht Abfragen über verschiedene Asset-Typen hinweg – von Storage-Arrays und Hosts bis hin zu Anwendungen und virtuellen Maschinen – zusammen mit Integrationsmetriken von Kubernetes, Docker und ONTAP Advanced Data für umfassende Sichtbarkeit.
 
-Beachten Sie, dass Anmerkungsregeln, die Anmerkungen automatisch Assets zuweisen, eine Abfrage _erfordern_.
+Beachten Sie, dass Annotationsregeln, die automatisch Annotationen Assets zuweisen, eine Abfrage erfordern, die für alle freigegeben wurde. Weitere Informationen zum Freigeben von Abfragen finden Sie unten.
 
 Sie können die physischen oder virtuellen Inventarressourcen (und die zugehörigen Metriken) Ihres Mandanten oder die mit der Integration bereitgestellten Metriken wie Kubernetes oder ONTAP Advanced Data abfragen.
 
@@ -20,34 +24,7 @@ Sie können die physischen oder virtuellen Inventarressourcen (und die zugehöri
 
 == Inventarvermögen
 
-Die folgenden Asset-Typen können in Abfragen, Dashboard-Widgets und benutzerdefinierten Asset-Landingpages verwendet werden.  Die für Filter, Ausdrücke und Anzeigen verfügbaren Felder und Zähler variieren je nach Asset-Typ.  Nicht alle Assets können in allen Widget-Typen verwendet werden.
-
-* Anwendung
-* Datenspeicher
-* Scheibe
-* Stoff
-* Generisches Gerät
-* Gastgeber
-* Internes Volumen
-* iSCSI-Sitzung
-* iSCSI-Netzwerkportal
-* Weg
-* Hafen
-* Qtree
-* Quote
-* Aktie
-* Storage
-* Speicherknoten
-* Speicherpool
-* Virtuelle Speichermaschine (SVM)
-* Schalten
-* Band
-* VMDK
-* Virtuelle Maschine
-* Volumen
-* Zone
-* Zonenmitglied
-
+Alle Inventar- (auch Infrastruktur-) Asset-Typen (Storage, Switch, VM, Application usw.) können in Abfragen, Dashboard-Widgets und benutzerdefinierten Asset-Landingpages verwendet werden. Die für Filter, Ausdrücke und Anzeige verfügbaren Felder und Zähler variieren je nach Asset-Typ.
 
 
 
@@ -56,3 +33,14 @@ Die folgenden Asset-Typen können in Abfragen, Dashboard-Widgets und benutzerdef
 Zusätzlich zur Abfrage von Inventarressourcen und den zugehörigen Leistungsmetriken können Sie auch *Integrationsdaten*-Metriken abfragen, wie sie beispielsweise von Kubernetes oder Docker generiert oder mit ONTAP Advanced Metrics bereitgestellt werden.
 
 image:QueryPageFilter.png["Beispiel für einen Integrationsabfragefilter"]
+
+
+
+== Abfragen freigeben
+
+Steuern Sie den Zugriff auf Ihre Abfragen, indem Sie festlegen, wer sie anzeigen und bearbeiten darf. Standardmäßig sind neue Abfragen privat und nur für Sie sichtbar, und Sie können sie mit bestimmten Benutzern oder Ihrer gesamten Organisation mit flexiblen Berechtigungsstufen (Nur Lesen oder Bearbeiten) teilen.
+
+Sie können wählen, die Abfrage für alle oder für ausgewählte Benutzer freizugeben, mit entweder Bearbeitungs- oder Nur-Lese-Berechtigungen.
+
+
+NOTE: Benutzer mit der Berechtigung „Account Owner“ können alle Anfragen sehen, unabhängig von der Datenschutzeinstellung.
