@@ -15,8 +15,6 @@ sidebar:
     url: "/index.html"
   - title: Neuerungen
     url: "/concept_whats_new.html"
-  - title: Anmeldung für Data Infrastructure Insights
-    url: "/task_cloud_insights_onboarding_1.html"
   - title: Sicherheit
     entries:
     - title: Sicherheitspraktiken

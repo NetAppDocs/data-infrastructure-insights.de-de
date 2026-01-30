@@ -6929,32 +6929,6 @@
   <block id="28bfcc900291ea8fe66d8be36f439a1b" category="summary">Registrieren Sie sich für Data Infrastructure Insights und erstellen Sie Ihren Mandanten.</block>
   <block id="9be58f2fc8b11ec837406376ca6b3e2a" category="doc">Onboarding von Data Infrastructure Insights</block>
   <block id="549ae8b6dea4926a2af206c5d7300fc5" category="paragraph">Bevor Sie mit der Arbeit mit Data Infrastructure Insights beginnen können, müssen Sie sich beim * NetApp Console*-Portal anmelden.  Wenn Sie bereits über ein NetApp Console -Login verfügen, können Sie in wenigen Schritten eine kostenlose Testversion von Data Infrastructure Insights starten.</block>
-  <block id="bb793de9cdfd6b52adc5dea5b6228679" category="section-title">Erstellen Ihres NetApp Console</block>
-  <block id="b4e0df93660adc2e97f2f5484451c415" category="paragraph">Um mit den Cloud-Diensten von NetApp zu beginnen, gehen Sie zu<block ref="5b0deb840231d6f2646d7cf25956c35a" category="inline-link-macro-rx"></block> und klicken Sie auf *Erste Schritte*.</block>
-  <block id="1e26781b207fa848ce81c7268cf016a7" category="list-text">Wenn Sie sich noch nicht angemeldet haben, wählen Sie *Anmelden*</block>
-  <block id="05d2a837df7692f0d65e4466b2fb05bd" category="list-text">Geben Sie eine gültige geschäftliche E-Mail-Adresse ein und wählen Sie ein Passwort.</block>
-  <block id="ad66d403ef43ddd58a7b527874c51878" category="list-text">Geben Sie Ihren Firmennamen und Ihren vollständigen Namen ein.</block>
-  <block id="895a961645c5f6456e2cc43102e1de8a" category="list-text">Akzeptieren Sie die Allgemeinen Geschäftsbedingungen und wählen Sie *Weiter*.</block>
-  <block id="d127182d44408d014798631913d1e97f" category="list-text">Die Konsole führt Sie durch die ersten Schritte.</block>
-  <block id="f691976da142019af74f673d9e988d66" category="section-title">Was ist, wenn ich bereits über eine NetApp Console verfüge?</block>
-  <block id="2a76d74bf06e79d6a8243138ab8d0572" category="paragraph">Sobald Sie ein NetApp Console -Konto haben, wählen Sie einfach *Anmelden* auf der<block ref="5b0deb840231d6f2646d7cf25956c35a" category="inline-link-macro-rx"></block> Portalseite.</block>
-  <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">Geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein.  Sie werden dann zur Seite mit den Cloud-Angeboten von NetApp weitergeleitet.</block>
-  <block id="4ec4e4954d48db50650c5ec49007cf27" category="paragraph">Navigieren Sie zu *Analyse und Kontrolle &gt; Beobachtbarkeit*, um mehr über Data Infrastructure Insights zu erfahren und/oder eine Demo anzufordern.</block>
-  <block id="eeecd13aa136e65aaedc64374c7415bc" category="section-title">Starten Sie Ihre kostenlose Testversion von Data Infrastructure Insights</block>
-  <block id="3b1f676d06286548e11b332567f42bbd" category="inline-link-macro">Starten Sie Ihr Abonnement</block>
-  <block id="b48d78927dd619cab2e6b7fde5ffb6b1" category="paragraph">Während der kostenlosen Testphase können Sie<block ref="822a67eb96671d13fff372a75b259713" category="inline-link-macro-rx"></block> zu Data Infrastructure Insights jederzeit.  Wenn Sie abonniert sind, können Sie die Data Infrastructure Insights -Funktionen basierend auf Ihrem aktuellen Abonnement nutzen.</block>
-  <block id="2c4bb88652ba26d23266d851053ba465" category="section-title">Sign in und los gehts</block>
-  <block id="27e0956311428740c19b40a7a971c7ef" category="inline-link-macro">Cloud-Dienste</block>
-  <block id="206cb1224c200bbbd73cfa4118ad7c1e" category="paragraph">Sie können auch einen Browser direkt mit der URL Ihres Data Infrastructure Insights Mandanten öffnen, zum Beispiel:</block>
-  <block id="9834a50024d1c9eb92d1d75e4f1fc3fa" category="paragraph">Die URL wird außerdem in die Einladungs-E-Mail jedes Benutzers aufgenommen, um einen einfachen Zugriff und die Speicherung als Lesezeichen zu ermöglichen.  Wenn der Benutzer noch nicht bei der Konsole angemeldet ist, wird er aufgefordert, sich anzumelden.</block>
-  <block id="955402d5e1e7fb2ed3dc9cdbbcb35826" category="admonition">Neue Benutzer müssen sich noch für den Zugriff auf die Konsole anmelden, bevor sie auf ihre Mandanten-URL zugreifen können.</block>
-  <block id="da115c4fc9cae6fc87764395ef9ff331" category="inline-link-macro">*Beginne mit der Datenerfassung*</block>
-  <block id="587f396a83dde1056c9bf606ffc535f7" category="paragraph">Wenn Sie sich zum ersten Mal bei einem neuen Mandanten anmelden, werden Sie durch die Einrichtung geführt, um<block ref="2949f1254245e371c2d697f481723a7e" category="inline-link-macro-rx"></block> .</block>
-  <block id="cc580c5eecd9c28053db6de1830561ee" category="section-title">Abmelden</block>
-  <block id="21360340baae34a3a426d1ff1dbc116f" category="paragraph">Um sich von Data Infrastructure Insights abzumelden, klicken Sie auf Ihren *Benutzernamen* und wählen Sie *Abmelden*.  Sie werden zum Anmeldebildschirm der Konsole zurückgeleitet.</block>
-  <block id="c4207c205277b5cad1577163a6bae022" category="admonition">Wenn Sie sich von Data Infrastructure Insights abmelden, werden Sie auch von der Konsole abgemeldet.  Sie werden auch von anderen NetApp Cloud-Diensten abgemeldet, die die Konsolenanmeldung verwenden.</block>
-  <block id="8463a61dd94ff5934036d4c8a8936e32" category="section-title">Inaktivitäts-Timeout</block>
-  <block id="db8ff6a5dfcebcb4f9f3077c3acd8c0a" category="paragraph">Standardmäßig meldet die Konsole einen Benutzer ab, wenn sechs Stunden (360 Minuten) lang keine Aktivität stattfindet.  Unabhängig von der Aktivität werden Benutzer nach sieben Tagen abgemeldet.</block>
   <block id="fde8afa3fd65a9f38d9b11377453846e" category="doc">Konfigurieren des Cloud Volumes ONTAP und Amazon FSx for NetApp ONTAP</block>
   <block id="c45671a9389f697917f0b33d12822c51" category="section-title">Cloud Volumes ONTAP Speicherkonfiguration</block>
   <block id="2ffc6472f9d6abaf761bbe2e6a0385ce" category="paragraph">Informationen zum Konfigurieren einer AWS-Instanz mit einem einzelnen Knoten/HA zum Hosten des Workload Security Agent finden Sie in der OnCommand Cloud Volumes ONTAP Dokumentation:<block ref="caca64b8e9927e0ea8e8b0158b9e47cd" category="inline-link-rx"></block></block>
@@ -12340,7 +12314,6 @@
   <block id="69f2e3246807adb3f4d29d9480ac71fd" category="inline-image-macro">Dialogfeld „Angriffsrichtlinie“ hinzufügen, das Webhook anzeigt</block>
   <block id="149360851d3e95c4b6af6d5b468af365" category="paragraph"><block ref="149360851d3e95c4b6af6d5b468af365" category="inline-image-macro-rx" type="image"></block></block>
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Neuerungen</block>
-  <block id="ab5cb6794af58d6cd4132b44aa3d3d04" category="sidebar">Anmeldung für Data Infrastructure Insights</block>
   <block id="c3f4c9cd8970b25325783f3caeab9867" category="sidebar">Sicherheitspraktiken</block>
   <block id="87c6157f200d5f2c85eeda2dc68852f6" category="sidebar">Was wir speichern und wo</block>
   <block id="55b171ae91c4f30690df081e54631deb" category="sidebar">Daten sammeln</block>
@@ -12622,8 +12595,6 @@
   <block id="c77b295eb8d3480880ff044a7823cdd9" category="list-text">Wird eine Annotation entfernt, ohne die abhängigen Berichte zu aktualisieren, können diese Berichte Fehler oder unerwartete Ergebnisse liefern.</block>
   <block id="3da85052d2ffffd1cb6352186fe0393a" category="list-text">Bei komplexen Szenarien können professionelle Dienstleistungen zur Unterstützung bei der Behebung von Mängeln im Bericht erforderlich sein.</block>
   <block id="4f9b9c5804f57ab98a1eb0bbdc93ee28" category="paragraph">Es wird empfohlen, alle Berichte, die auf einer Anmerkung basieren, vor der Deaktivierung zu überprüfen.</block>
-  <block id="84782b0fddf642f36f6d0ca7585d8709" category="paragraph">Wenn Sie sich zum ersten Mal bei Data Infrastructure Insights anmelden, lesen Sie sich über alle Funktionen von Data Infrastructure Insights durch. Wenn Sie bereit sind, loszulegen, klicken Sie auf „Testversion anfordern“ und geben Sie Ihre Daten ein.</block>
-  <block id="513dc3996a984c81efa261ee7da82ea7" category="paragraph">Im Rahmen der Einrichtung Ihres Testmandanten wählen Sie die Region, in der Ihr Mandant gehostet werden soll, und ob Sie Ihren Mandanten auf AWS oder Azure betreiben möchten.</block>
   <block id="29ecb4e96ebb9048c6e2055bd8edfec9" category="paragraph">Nachfolgend finden Sie eine Beispiel-AgentConfiguration-Datei mit Beschreibungen für jede Option.</block>
   <block id="0a511b85d77f15f39fbbd23442b32001" category="section-title">Dezember 2025</block>
   <block id="02c6c8e70973eaa6f06450fcaad33a5f" category="section-title">Zugriff auf Abfragen mit freigegebenen Abfragen steuern</block>
@@ -12637,8 +12608,6 @@
   <block id="7bf60aa4367d13bdf4be42c9055afecc" category="paragraph"><block ref="7bf60aa4367d13bdf4be42c9055afecc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f3dd02ae7c2c35817a35bc27eb8af50f" category="section-title">Übersichtlichere Dashboard-Visualisierungen</block>
   <block id="6838668755c364765b40cf38648de55f" category="paragraph">Das verbesserte Dashboard-Design hilft Ihnen, das Wichtigste im Blick zu behalten. Verbesserte visuelle Klarheit durch Schlagschattenränder, die Widgets voneinander trennen, und entfernte Trennlinien, um Unordnung zu vermeiden, damit Sie sich auf Ihre Dateneinblicke konzentrieren können. Diese Verbesserungen schaffen ein übersichtlicheres und intuitiveres Dashboard-Erlebnis, das das Erkennen von Trends und Anomalien schneller und einfacher macht.</block>
-  <block id="d388ca982366ad7a8a7a165d21919f84" category="paragraph">Sobald die Erstellung Ihres Mandanten abgeschlossen ist, melden Sie sich mit Ihren Konsolenanmeldeinformationen an und starten Sie Ihre kostenlose 30-Tage-Testversion von Data Infrastructure Insights. Während dieser Testphase können Sie die Funktionen erkunden, die Data Infrastructure Insights zu bieten hat.</block>
-  <block id="a361d4c5b26cab224e5aad972ef9f92f" category="paragraph">Sobald Ihr Mandant erstellt wurde, können Sie sich jederzeit einfach im NetApp BlueXP Portal anmelden und zu folgendem navigieren: <block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> Seite und wählen Sie *Zu Data Infrastructure Insights wechseln*.</block>
   <block id="ed35afa558b996b37265533db9af5399" category="sidebar">Veröffentlichung von Anmerkungen zu Berichten</block>
   <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">Greifen Sie über eine REST-API mit sicherer tokenbasierter Authentifizierung auf Workload-Sicherheitsdaten zu, um die Integration mit CMDBs, Ticketsystemen und anderen Unternehmensanwendungen zu ermöglichen.</block>
   <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">Testen und validieren Sie die Erkennungsfunktionen für Workload-Sicherheit, indem Sie Angriffe mithilfe des mitgelieferten Simulationsskripts simulieren, um die Richtlinien zur Alarmgenerierung und -reaktion zu überprüfen.</block>
@@ -12705,4 +12674,5 @@
   <block id="7842bb93d1b19afc39c751d0dddcf4ac" category="paragraph">Befehl, um das Blockieren von Benutzern zu erlauben:</block>
   <block id="6a1af23a5137b0b5dbe87d4b59b0deeb" category="list-text">EMS-Ereignisse (wie ONTAP ARP) werden auf einem pausierten Collector nicht verarbeitet. Das bedeutet, wenn ONTAP einen Dateimanipulationsangriff erkennt, kann Data Infrastructure Insights Workload Security dieses Ereignis nicht erfassen.</block>
   <block id="ad616b1714b32991576ec7cd2b8832a8" category="sidebar">Verwaltung des Dashboard-Zugriffs</block>
+  <block id="1a69a00931f550995a9d19745f714169" category="paragraph">Diese Anleitung wird derzeit aktualisiert. Bitte schauen Sie später noch einmal vorbei.</block>
 </blocks>
