@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: task_cloud_insights_onboarding_1.html 
+summary: Registrieren Sie sich für Data Infrastructure Insights und erstellen Sie Ihren Mandanten. 
+keywords: onboarding, new user 
+---
+= Onboarding von Data Infrastructure Insights
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bevor Sie mit der Arbeit mit Data Infrastructure Insights beginnen können, müssen Sie sich beim * NetApp Console*-Portal anmelden.  Wenn Sie bereits über ein NetApp Console -Login verfügen, können Sie in wenigen Schritten eine kostenlose Testversion von Data Infrastructure Insights starten.
+
+Diese Anleitung wird derzeit aktualisiert. Bitte schauen Sie später noch einmal vorbei.

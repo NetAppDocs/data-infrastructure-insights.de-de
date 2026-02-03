@@ -12675,4 +12675,5 @@
   <block id="6a1af23a5137b0b5dbe87d4b59b0deeb" category="list-text">EMS-Ereignisse (wie ONTAP ARP) werden auf einem pausierten Collector nicht verarbeitet. Das bedeutet, wenn ONTAP einen Dateimanipulationsangriff erkennt, kann Data Infrastructure Insights Workload Security dieses Ereignis nicht erfassen.</block>
   <block id="ad616b1714b32991576ec7cd2b8832a8" category="sidebar">Verwaltung des Dashboard-Zugriffs</block>
   <block id="1a69a00931f550995a9d19745f714169" category="paragraph">Diese Anleitung wird derzeit aktualisiert. Bitte schauen Sie später noch einmal vorbei.</block>
+  <block id="ab5cb6794af58d6cd4132b44aa3d3d04" category="sidebar">Registrierung für Data Infrastructure Insights</block>
 </blocks>
