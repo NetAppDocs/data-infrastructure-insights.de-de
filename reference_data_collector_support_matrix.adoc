@@ -26,7 +26,72 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| HPE Alletra 9080 HPE_3PAR 20450 HPE_3PAR 20800 HPE_3PAR 20850 HPE_3PAR 7200 HPE_3PAR 7200c HPE_3PAR 7400 HPE_3PAR 7400c HPE_3PAR 7440c HPE_3PAR 7450c HPE_3PAR 8200 HPE_3PAR 8400 HPE_3PAR 8440 HPE_3PAR 8450 HPE_3PAR 9450 HPE_3PAR A630 HPE_3PAR A650 HPE_3PAR A670 HP_3PAR 20800 HP_3PAR 7200 HP_3PAR 7200c HP_3PAR 7400 HP_3PAR 7400c HP_3PAR 7440c HP_3PAR 7450c HP_3PAR 8200 HP_3PAR 8400 HP_3PAR 8440 InServ F200 InServ F400 InServ T400 InServ T800 InServ V400 InServ V800 | 3.1.1 (MU1) 3.1.2 (MU3) 3.1.3 (MU1) 3.1.3 (MU2) 3.2.1 (MU2) 3.2.1 (MU3) 3.2.1 (MU5) 3.2.2 (MU4) 3.2.2 (MU6) 3.3.1 3.3.1 (MU1) 3.3.1 (MU2) 3.3.1 (MU3) 3.3.1 (MU5) 3.3.2 (MU1) 4.3.1 4.3.3 4.4.1 Versionstyp: Version mit Standardsupport 4.5.15 Versionstyp: Version mit erweitertem Support 4.5.18 Versionstyp: Version mit erweitertem Support 4.5.21 Versionstyp: Version mit erweitertem Support 4.5.24 Versionstyp: Version mit erweitertem Support 4.5.7 Versionstyp: Version mit erweitertem Support 4.6.1 Version Typ: Erweiterter Support Release 9.5.15 Release-Typ: Erweiterter Support Release 9.5.8 Release-Typ: Erweiterter Support Release 9.6.1 Release-Typ: Erweiterter Support Release 
+ a| 
+* HPE Alletra 9080
+* HPE_3PAR 20450
+* HPE 3PAR 20800
+* HPE_3PAR 20850
+* HPE 3PAR 7200
+* HPE_3PAR 7200c
+* HPE 3PAR 7400
+* HPE 3PAR 7400c
+* HPE 3PAR 7440c
+* HPE_3PAR 7450c
+* HPE 3PAR 8200
+* HPE 3PAR 8400
+* HPE 3PAR 8440
+* HPE 3PAR 8450
+* HPE 3PAR 9450
+* HPE 3PAR A630
+* HPE_3PAR A650
+* HPE 3PAR A670
+* HP_3PAR 20800
+* HP_3PAR 7200
+* HP_3PAR 7200c
+* HP_3PAR 7400
+* HP_3PAR 7400c
+* HP_3PAR 7440c
+* HP_3PAR 7450c
+* HP_3PAR 8200
+* HP_3PAR 8400
+* HP_3PAR 8440
+* InServ F200
+* InServ F400
+* InServ T400
+* InServ T800
+* InServ V400
+* InServ V800
+
+ a| 
+* 3.1.1 (MU1)
+* 3.1.2 (MU3)
+* 3.1.3 (MU1)
+* 3.1.3 (MU2)
+* 3.2.1 (MU2)
+* 3.2.1 (MU3)
+* 3.2.1 (MU5)
+* 3.2.2 (MU4)
+* 3.2.2 (MU6)
+* 3.3.1
+* 3.3.1 (MU1)
+* 3.3.1 (MU2)
+* 3.3.1 (MU3)
+* 3.3.1 (MU5)
+* 3.3.2 (MU1)
+* 4.3.1
+* 4.3.3
+* 4.4.1 Release-Typ: Standard Support Release
+* 4.5.15 Veröffentlichungstyp: Extended Support Release
+* 4.5.18 Veröffentlichungstyp: Extended Support Release
+* 4.5.21 Veröffentlichungstyp: Extended Support Release
+* 4.5.24 Veröffentlichungstyp: Extended Support Release
+* 4.5.7 Release Type: Version mit erweitertem Support
+* 4.6.1 Release Type: Version mit erweitertem Support
+* 9.5.15 Veröffentlichungstyp: Extended Support Release
+* 9.5.8 Veröffentlichungstyp: Extended Support Release
+* 9.6.1 Release Type: Version mit erweitertem Support
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -142,7 +207,7 @@ Von diesem Datensammler unterstützte Produkte:
 .5+| Info | API-Name | Implementiert | SSH |  
 
 
-| API-Version | Implementiert | SSH | Google 
+| API-Version | Implementiert | SSH |  
 
 
 | Datenquellenname | Implementiert | SSH | Info 
@@ -1530,7 +1595,152 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 176,51 183,0 Brocade 200E Brocade 300E Brocade 4024 Eingebettet Brocade 5000 Brocade 5100 Brocade 5300 Brocade 5480 Eingebettet Brocade 6505 Brocade 6510 Brocade 6520 Brocade Brocade Eingebettet Brocade 6548 Brocade 6558 Brocade 7800 Brocade 7810 Erweiterungsschalter Brocade 7840 Brocade DCX Brocade DCX-4S Backbone Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G720 Brocade G730 Brocade M5424 Eingebettet Brocade VA-40FC Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v6.2.2b v6.2.2f v6.2.2g v6.4.1b v6.4.2a v6.4.3 v6.4.3d v6.4.3f3 v7.0.1 v7.0.1b v7.0.2 v7.0.2b1 v7.0.2c v7.0.2e v7.0.2e1 v7.1.0a v7.1.0b v7.2.0a v7.2.0d v7.2.1 v7.2.1c v7.2.1c1 v7.2.1d v7.3.0a v7.3.0c v7.3.1 v7.3.1c v7.3.1d v7.3.2a v7.4.0a v7.4.1 v7.4.1d v7.4.1e v7.4.2 v7.4.2a v7.4.2a4 v7.4.2c v7.4.2d v7.4.2e v7.4.2f v7.4.2g v7.4.2g_cvr_824494_01 v7.4.2h v7.4.2j1 v8.0.2c v8.0.2d v8.0.2f v8.1.0b v8.1.1a v8.1.2a v8.1.2d v8.1.2f v8.1.2g v8.1.2h v8.1.2j v8.1.2k v8.2.0 v8.2.0a v8.2.0a1 v8.2.0b v8.2.1 v8.2.1a v8.2.1c v8.2.1d v8.2.2a v8.2.2b v8.2.2c v8.2.2d v8.2.2d4 v8.2.3 v8.2.3a v8.2.3a1 v8.2.3a_cvr_855776_01 v8.2.3b v8.2.3c v8.2.3c1 v8.2.3d v8.2.3e v8.2.3e1 v8.2.3e2 v9.0.0a v9.0.1a v9.0.1b v9.0.1b4 v9.0.1c v9.0.1d v9.0.1e v9.0.1e1 v9.1.0b v9.1.1 v9.1.1a v9.1.1b v9.1.1b_lw v9.1.1c v9.1.1d v9.1.1d1 v9.1.1d2 v9.1.1d2_lw v9.1.1d5 v9.2.0a v9.2.0b v9.2.0b1_lw v9.2.0c v9.2.0c1 v9.2.1a v9.2.1a1 v9.2.2 
+ a| 
+* 176,51
+* 183,0
+* Brocade 200E
+* Brocade 300E
+* Brocade 4024 Embedded
+* Brocade 5000
+* Brocade 5100
+* Brocade 5300
+* Brocade 5480 Embedded
+* Brocade 6505
+* Brocade 6510
+* Brocade 6520
+* Brocade 6546
+* Brocade 6547 Embedded
+* Brocade 6548
+* Brocade 6558
+* Brocade 7800
+* Brocade 7810 Extension Switch
+* Brocade 7840
+* Brocade DCX
+* Brocade DCX-4S Backbone
+* Brocade DCX8510-4
+* Brocade DCX8510-8
+* Brocade G610
+* Brocade G620
+* Brocade G630
+* Brocade G720
+* Brocade G730
+* Brocade M5424 Embedded
+* Brocade VA-40FC
+* Brocade X6-4
+* Brocade X6-8
+* Brocade X7-4
+* Brocade X7-8
+
+ a| 
+* v6.2.2b
+* v6.2.2f
+* v6.2.2g
+* v6.4.1b
+* v6.4.2a
+* v6.4.3
+* v6.4.3d
+* v6.4.3f3
+* v7.0.1
+* v7.0.1b
+* v7.0.2
+* v7.0.2b1
+* v7.0.2c
+* v7.0.2e
+* v7.0.2e1
+* v7.1.0a
+* v7.1.0b
+* v7.2.0a
+* v7.2.0d
+* v7.2.1
+* v7.2.1c
+* v7.2.1c1
+* v7.2.1d
+* v7.3.0a
+* v7.3.0c
+* v7.3.1
+* v7.3.1c
+* v7.3.1d
+* v7.3.2a
+* v7.4.0a
+* v7.4.1
+* v7.4.1d
+* v7.4.1e
+* v7.4.2
+* v7.4.2a
+* v7.4.2a4
+* v7.4.2c
+* v7.4.2d
+* v7.4.2e
+* v7.4.2f
+* v7.4.2g
+* v7.4.2g_cvr_824494_01
+* v7.4.2h
+* v7.4.2j1
+* v8.0.2c
+* v8.0.2d
+* v8.0.2f
+* v8.1.0b
+* v8.1.1a
+* v8.1.2a
+* v8.1.2d
+* v8.1.2f
+* v8.1.2g
+* v8.1.2h
+* v8.1.2j
+* v8.1.2k
+* v8.2.0
+* v8.2.0a
+* v8.2.0a1
+* v8.2.0b
+* v8.2.1
+* v8.2.1a
+* v8.2.1c
+* v8.2.1d
+* v8.2.2a
+* v8.2.2b
+* v8.2.2c
+* v8.2.2d
+* v8.2.2d4
+* v8.2.3
+* v8.2.3a
+* v8.2.3a1
+* v8.2.3a_cvr_855776_01
+* v8.2.3b
+* v8.2.3c
+* v8.2.3c1
+* v8.2.3d
+* v8.2.3e
+* v8.2.3e1
+* v8.2.3e2
+* v9.0.0a
+* v9.0.1a
+* v9.0.1b
+* v9.0.1b4
+* v9.0.1c
+* v9.0.1d
+* v9.0.1e
+* v9.0.1e1
+* v9.1.0b
+* v9.1.1
+* v9.1.1a
+* v9.1.1b
+* v9.1.1b_lw
+* v9.1.1c
+* v9.1.1d
+* v9.1.1d1
+* v9.1.1d2
+* v9.1.1d2_lw
+* v9.1.1d5
+* v9.2.0a
+* v9.2.0b
+* v9.2.0b1_lw
+* v9.2.0c
+* v9.2.0c1
+* v9.2.1a
+* v9.2.1a1
+* v9.2.2
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -2216,7 +2426,69 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 183,0 184,0 190,0 Brocade 6505 Brocade 6510 Brocade 6520 Brocade 7810 Erweiterungsschalter Brocade 7840 Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G720 Brocade G730 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v8.2.2a v8.2.2d v8.2.2d4 v8.2.3 v8.2.3a v8.2.3b v8.2.3c v8.2.3c1 v8.2.3d v8.2.3e v8.2.3e1 v9.0.0b v9.0.1a v9.0.1b v9.0.1b4 v9.0.1c v9.0.1d v9.0.1e v9.0.1e1 v9.1.0b v9.1.1a v9.1.1b v9.1.1c v9.1.1c3 v9.1.1d v9.1.1d1 v9.1.1d1_lw v9.1.1d2 v9.1.1d3_cvr_861742_01 v9.2.0a v9.2.0b v9.2.0b1 v9.2.0b_cvr_857687_01 v9.2.0c v9.2.0c3 v9.2.1 v9.2.1a v9.2.1b v9.2.2 
+ a| 
+* 183,0
+* 184,0
+* 190,0
+* Brocade 6505
+* Brocade 6510
+* Brocade 6520
+* Brocade 7810 Extension Switch
+* Brocade 7840
+* Brocade DCX8510-4
+* Brocade DCX8510-8
+* Brocade G610
+* Brocade G620
+* Brocade G630
+* Brocade G720
+* Brocade G730
+* Brocade X6-4
+* Brocade X6-8
+* Brocade X7-4
+* Brocade X7-8
+
+ a| 
+* v8.2.2a
+* v8.2.2d
+* v8.2.2d4
+* v8.2.3
+* v8.2.3a
+* v8.2.3b
+* v8.2.3c
+* v8.2.3c1
+* v8.2.3d
+* v8.2.3e
+* v8.2.3e1
+* v9.0.0b
+* v9.0.1a
+* v9.0.1b
+* v9.0.1b4
+* v9.0.1c
+* v9.0.1d
+* v9.0.1e
+* v9.0.1e1
+* v9.1.0b
+* v9.1.1a
+* v9.1.1b
+* v9.1.1c
+* v9.1.1c3
+* v9.1.1d
+* v9.1.1d1
+* v9.1.1d1_lw
+* v9.1.1d2
+* v9.1.1d3_cvr_861742_01
+* v9.2.0a
+* v9.2.0b
+* v9.2.0b1
+* v9.2.0b_cvr_857687_01
+* v9.2.0c
+* v9.2.0c3
+* v9.2.1
+* v9.2.1a
+* v9.2.1b
+* v9.2.2
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -2634,7 +2906,127 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| DS-C9124-2-K9 DS-C9124-K9 DS-C9132T-K9 DS-C9148-16P-K9 DS-C9148-32P-K9 DS-C9148-48P-K9 DS-C9148S-K9 DS-C9148T-K9 DS-C9148V-K9 DS-C9220I-K9 DS-C9222I-K9 DS-C9250I-K9 DS-C9396S-K9 DS-C9396T-K9 DS-C9396V-K9 DS-C9506 DS-C9509 DS-C9513 DS-C9706 DS-C9710 DS-C9718 DS-HP-8GFC-K9 DS-HP-FC-K9 N5K-C5548UP N5K-C5596UP N5K-C5696Q UCS-FI-6248UP UCS-FI-6296UP UCS-FI-6332 UCS-FI-6332-16UP UCS-FI-64108 UCS-FI-6454 | 3.3(1c) 4.1(3a) 4.2(1a) 5.0(1a) 5.0(3)N2(3.11e) 5.0(3)N2(4.01d) 5.0(3)N2(4.13i) 5.0(3)N2(4.21e) 5.0(3)N2(4.21j) 5.0(3)N2(4.21k) 5.0(3)N2(4.22c) 5.0(3)N2(4.23f) 5.0(3)N2(4.23g) 5.0(3)N2(4.34a) 5.0(8) 5.2(2d) 5.2(8) 5.2(8a) 5.2(8b) 5.2(8c) 5.2(8d) 5.2(8f) 5.2(8g) 5.2(8h) 5.2(8i) 6.2(11) 6.2(11b) 6.2(11c) 6.2(13) 6.2(13a) 6.2(15) 6.2(17) 6.2(19) 6.2(21) 6.2(23) 6.2(25) 6.2(27) 6.2(29) 6.2(31) 6.2(33) 6.2(5a) 6.2(7) 6.2(9) 6.2(9a) 6.2(9b) 7.0(3)N2(4.04e) 7.0(3)N2(4.13b) 7,0(3)N2(4,13g) 7.3(0)D1(1) 7.3(1)DY(1) 7.3(13)N1(1) 7.3(8)N1(1) 8.1(1) 8.1(1a) 8.2(1) 8.2(2) 8.3(1) 8.3(2) 8.4(1) 8.4(1a) 8.4(2) 8.4(2a) 8.4(2b) 8.4(2c) 8.4(2d) 8.4(2e) 8.4(2f) 8.5(1) 9.2(1a) 9.2(2) 9.3(1) 9.3(2) 9.3(2a) 9.3(5)I42(1b) 9,3(5)I42(1g) 9.3(5)I42(1j) 9.3(5)I42(1k) 9.3(5)I42(3f) 9.3(5)I43(4b) 9.4(1) 9.4(1a) 9.4(2) 9.4(2a) 9.4(3) 
+ a| 
+* DS-C9124-2-K9
+* DS-C9124-K9
+* DS-C9132T-K9
+* DS-C9148-16P-K9
+* DS-C9148-32P-K9
+* DS-C9148-48P-K9
+* DS-C9148S-K9
+* DS-C9148T-K9
+* DS-C9148V-K9
+* DS-C9220I-K9
+* DS-C9222I-K9
+* DS-C9250I-K9
+* DS-C9396S-K9
+* DS-C9396T-K9
+* DS-C9396V-K9
+* DS-C9506
+* DS-C9509
+* DS-C9513
+* DS-C9706
+* DS-C9710
+* DS-C9718
+* DS-HP-8GFC-K9
+* DS-HP-FC-K9
+* N5K-C5548UP
+* N5K-C5596UP
+* N5K-C5696Q
+* UCS-FI-6248UP
+* UCS-FI-6296UP
+* UCS-FI-6332
+* UCS-FI-6332-16UP
+* UCS-FI-64108
+* UCS-FI-6454
+
+ a| 
+* 3.3(1c)
+* 4.1(3a)
+* 4.2(1a)
+* 5.0(1a)
+* 5.0(3)N2(3.11e)
+* 5.0(3)N2(4.01d)
+* 5.0(3)N2(4.13i)
+* 5.0(3)N2(4.21e)
+* 5.0(3)N2(4.21j)
+* 5.0(3)N2(4.21k)
+* 5.0(3)N2(4.22c)
+* 5.0(3)N2(4.23f)
+* 5.0(3)N2(4.23g)
+* 5.0(3)N2(4.34a)
+* 5.0(8)
+* 5.2(2d)
+* 5.2(8)
+* 5.2(8a)
+* 5.2(8b)
+* 5.2(8c)
+* 5.2(8d)
+* 5.2(8f)
+* 5.2(8g)
+* 5.2(8h)
+* 5.2(8i)
+* 6.2(11)
+* 6.2(11b)
+* 6.2(11c)
+* 6.2(13)
+* 6.2(13a)
+* 6.2(15)
+* 6.2(17)
+* 6.2(19)
+* 6.2(21)
+* 6.2(23)
+* 6.2(25)
+* 6.2(27)
+* 6.2(29)
+* 6.2(31)
+* 6.2(33)
+* 6.2(5a)
+* 6.2(7)
+* 6.2(9)
+* 6.2(9a)
+* 6.2(9b)
+* 7.0(3)N2(4.04e)
+* 7.0(3)N2(4.13b)
+* 7.0(3)N2(4.13g)
+* 7.3(0)D1(1)
+* 7.3(1)DY(1)
+* 7.3(13)N1(1)
+* 7.3(8)N1(1)
+* 8.1(1)
+* 8.1(1a)
+* 8.2(1)
+* 8.2(2)
+* 8.3(1)
+* 8.3(2)
+* 8.4(1)
+* 8.4(1a)
+* 8.4(2)
+* 8.4(2a)
+* 8.4(2b)
+* 8.4(2c)
+* 8.4(2d)
+* 8.4(2e)
+* 8.4(2f)
+* 8.5(1)
+* 9.2(1a)
+* 9.2(2)
+* 9.3(1)
+* 9.3(2)
+* 9.3(2a)
+* 9.3(5)I42(1b)
+* 9.3(5)I42(1g)
+* 9.3(5)I42(1j)
+* 9.3(5)I42(1k)
+* 9.3(5)I42(3f)
+* 9.3(5)I43(4b)
+* 9.4(1)
+* 9.4(1a)
+* 9.4(2)
+* 9.4(2a)
+* 9.4(3)
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -3579,7 +3971,46 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| 6,26 6,28 7,32 7,33 | CX3-40f CX4-480 VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX5700 VNX5800 VNX7600 | 04.28.000.5.710 05.32.000.5.206 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.32.000.5.249 05.33.000.5.074 05.33.008.5.119 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.231 05.33.009.5.238 05.33.021.5.256 05.33.021.5.266 05.33.021.5.322 3.26.40.5.029 
+ a| 
+* 6,26
+* 6,28
+* 7,32
+* 7,33
+
+ a| 
+* CX3-40f
+* CX4-480
+* VNX5100
+* VNX5200
+* VNX5300
+* VNX5400
+* VNX5500
+* VNX5600
+* VNX5700
+* VNX5800
+* VNX7600
+
+ a| 
+* 04.28.000.5.710
+* 05.32.000.5.206
+* 05.32.000.5.218
+* 05.32.000.5.219
+* 05.32.000.5.221
+* 05.32.000.5.225
+* 05.32.000.5.249
+* 05.33.000.5.074
+* 05.33.008.5.119
+* 05.33.009.5.155
+* 05.33.009.5.184
+* 05.33.009.5.186
+* 05.33.009.5.231
+* 05.33.009.5.238
+* 05.33.021.5.256
+* 05.33.021.5.266
+* 05.33.021.5.322
+* 3.26.40.5.029
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -4153,7 +4584,56 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| DD VE DD2500 DD3300 DD4200 DD6300 DD6400 DD6800 DD6900 DD7200 DD9300 DD9400 DD9410 DD9500 DD9800 DD990 DD9900 DD9910 | 6.0.2.30-606339 6.1.2.051-633576 6.1.2.20-606786 6.2.1.30-663869 6.2.1.40-671977 6.2.1.60-686365 7.10.0.20-1023227 7.10.1.0-1042928 7.10.1.1-1049892 7.10.1.10-1068159 7.10.1.15-1078832 7.10.1.20-1090468 7.10.1.30-1105324 7.10.1.40-1126469 7.10.1.50-1146826 7.11.0.0-1035502 7.13.0.20-1082704 7.2.0.20-658029 7.2.0.60-682124 7.2.0.70-686759 7.2.0.90-692270 7.7.4.0-1017976 7.7.5.1-1040473 7.7.5.11-1046187 7.7.5.25-1078970 7.7.5.30-1091295 8.0.0.10-1097914 8.1.0.10-1127744 
+ a| 
+* DD VE
+* DD2500
+* DD3300
+* DD4200
+* DD6300
+* DD6400
+* DD6800
+* DD6900
+* DD7200
+* DD9300
+* DD9400
+* DD9410
+* DD9500
+* DD9800
+* DD990
+* DD9900
+* DD9910
+
+ a| 
+* 6.0.2.30-606339
+* 6.1.2.051-633576
+* 6.1.2.20-606786
+* 6.2.1.30-663869
+* 6.2.1.40-671977
+* 6.2.1.60-686365
+* 7.10.0.20-1023227
+* 7.10.1.0-1042928
+* 7.10.1.1-1049892
+* 7.10.1.10-1068159
+* 7.10.1.15-1078832
+* 7.10.1.20-1090468
+* 7.10.1.30-1105324
+* 7.10.1.40-1126469
+* 7.10.1.50-1146826
+* 7.11.0.0-1035502
+* 7.13.0.20-1082704
+* 7.2.0.20-658029
+* 7.2.0.60-682124
+* 7.2.0.70-686759
+* 7.2.0.90-692270
+* 7.7.4.0-1017976
+* 7.7.5.1-1040473
+* 7.7.5.11-1046187
+* 7.7.5.25-1078970
+* 7.7.5.30-1091295
+* 8.0.0.10-1097914
+* 8.1.0.10-1127744
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -4788,7 +5268,65 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| A100 A200 A2000 A300 A3000 F200 F600 F800 F900 H400 H500 H5600 H600 H700 NL410 S210 X210 X410 | 9.1.0.10 9.1.0.6 9.1.0.9 9.2.1.10 9.2.1.11 9.2.1.12 9.2.1.13 9.2.1.19 9.2.1.4 9.2.1.9 9.4.0.11 9.4.0.13 9.4.0.14 9.4.0.15 9.4.0.16 9.4.0.17 9.4.0.18 9.5.0.3 9.5.0.5 9.5.0.6 9.5.0.7 9.5.0.8 9.5.1.0 9.5.1.1 9.5.1.2 9.7.1.0 9.7.1.2 9.7.1.3 9.7.1.4 9.7.1.5 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.1.0.4 v8.1.2.0 v9.0.0.0 
+ a| 
+* A100
+* A200
+* A2000
+* A300
+* A3000
+* F200
+* F600
+* F800
+* F900
+* H400
+* H500
+* H5600
+* H600
+* H700
+* NL410
+* S210
+* X210
+* X410
+
+ a| 
+* 9.1.0.10
+* 9.1.0.6
+* 9.1.0.9
+* 9.2.1.10
+* 9.2.1.11
+* 9.2.1.12
+* 9.2.1.13
+* 9.2.1.19
+* 9.2.1.4
+* 9.2.1.9
+* 9.4.0.11
+* 9.4.0.13
+* 9.4.0.14
+* 9.4.0.15
+* 9.4.0.16
+* 9.4.0.17
+* 9.4.0.18
+* 9.5.0.3
+* 9.5.0.5
+* 9.5.0.6
+* 9.5.0.7
+* 9.5.0.8
+* 9.5.1.0
+* 9.5.1.1
+* 9.5.1.2
+* 9.7.1.0
+* 9.7.1.2
+* 9.7.1.3
+* 9.7.1.4
+* 9.7.1.5
+* v8.0.0.4
+* v8.0.0.6
+* v8.0.0.7
+* v8.1.0.4
+* v8.1.2.0
+* v9.0.0.0
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -5452,7 +5990,39 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| A200 H400 H500 NL400 NL410 S210 Traceback (letzter Anruf zuletzt): X200 X400 X410 | 9.1.0.18 9.1.0.19 9.2.1.12 9.2.1.13 9.2.1.15 9.4.0.17 9.5.0.3 9.5.0.6 9.5.0.8 9.7.1.2 9.8.0.2 v7.2.0.5 v7.2.1.3 v7.2.1.6 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.0.1.1 v8.1.2.0 
+ a| 
+* A200
+* H400
+* H500
+* NL400
+* NL410
+* S210
+* X200
+* X400
+* X410
+
+ a| 
+* 9.1.0.18
+* 9.1.0.19
+* 9.2.1.12
+* 9.2.1.13
+* 9.2.1.15
+* 9.4.0.17
+* 9.5.0.3
+* 9.5.0.6
+* 9.5.0.8
+* 9.7.1.2
+* 9.8.0.2
+* v7.2.0.5
+* v7.2.1.3
+* v7.2.1.6
+* v8.0.0.4
+* v8.0.0.6
+* v8.0.0.7
+* v8.0.1.1
+* v8.1.2.0
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -5987,7 +6557,35 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 5200T PowerStore 9000T PowerStore 9200T | 2.1.0.1 2.1.1.0 3.2.0.1 3.2.1.0 3.2.1.1 3.5.0.1 3.5.0.2 3.6.0.0 3.6.1.0 3.6.1.1 3.6.1.2 3.6.1.3 3.6.1.4 4.0.0.1 4.0.0.2 4.0.1.0 
+ a| 
+* PowerStore 1000T
+* PowerStore 1200T
+* PowerStore 3000T
+* PowerStore 3200T
+* PowerStore 5000T
+* PowerStore 5200T
+* PowerStore 9000T
+* PowerStore 9200T
+
+ a| 
+* 2.1.0.1
+* 2.1.1.0
+* 3.2.0.1
+* 3.2.1.0
+* 3.2.1.1
+* 3.5.0.1
+* 3.5.0.2
+* 3.6.0.0
+* 3.6.1.0
+* 3.6.1.1
+* 3.6.1.2
+* 3.6.1.3
+* 3.6.1.4
+* 4.0.0.1
+* 4.0.0.2
+* 4.0.1.0
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -6935,7 +7533,77 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| V10.0.0.0 V10.0.1.1 V10.1.0.0 V10.1.0.1 V10.1.0.3 V10.1.0.5 V10.2.0.0 V8.3.0.6 V8.4.0.7 V8.4.0.9 V9.1.0.5 V9.1.0.6 V9.2.1.0 V9.2.2.0 V9.2.3.0 V9.2.3.1 V9.2.3.4 V9.2.3.6 V9.2.4.1 V9.2.4.2 V9.2.4.3 V9.2.4.6 V9.2.4.7 V9.2.4.8 | PMax8000 PowerMax_2000 PowerMax_8000 VMAX-1 VMAX100K VMAX10K VMAX200K VMAX250F VMAX400K VMAX40K VMAX450F VMAX850F VMAX950F | 5876.286.194(16F40000) Build 115 5876.309.196(16F40000) Build 153 5876.309.196(16F40000) Build 162 5876.309.196(16F40000) Build 94 5977.1151.1151(17590000) Build 45 5977.1151.1151(17590000) Build 60 5977.1151.1151(17590000) Build 9 5978.711.711(175A0000) Build 320 5978.711.711(175A0000) Baujahr 335 5978.711.711(175A0000) Baujahr 365 5978.711.711(175A0000) Baujahr 416 5978.711.711(175A0000) Baujahr 436 5978.711.711(175A0000) Baujahr 438 5978.711.711(175A0000) Baujahr 448 5978.711.711(175A0000) Baujahr 484 5978.711.711(175A0000) Baujahr 542 5978.711.711(175A0000) Baujahr 581 5978.714.714(175A0000) Baujahr 1 5978.714.714(175A0000) Baujahr 101 5978.714.714(175A0000) Baujahr 108 5978.714.714(175A0000) Baujahr 117 5978.714.714(175A0000) Baujahr 137 5978.714.714(175A0000) Baujahr 145 5978.714.714(175A0000) Baujahr 34 5978.714.714(175A0000) Baujahr 49 5978.714.714(175A0000) Build 53 5978.714.714(175A0000) Build 79 
+ a| 
+* V10.0.0.0
+* V10.0.1.1
+* V10.1.0.0
+* V10.1.0.1
+* V10.1.0.3
+* V10.1.0.5
+* V10.2.0.0
+* V8.3.0.6
+* V8.4.0.7
+* V8.4.0.9
+* V9.1.0.5
+* V9.1.0.6
+* V9.2.1.0
+* V9.2.2.0
+* V9.2.3.0
+* V9.2.3.1
+* V9.2.3.4
+* V9.2.3.6
+* V9.2.4.1
+* V9.2.4.2
+* V9.2.4.3
+* V9.2.4.6
+* V9.2.4.7
+* V9.2.4.8
+
+ a| 
+* PMax8000
+* PowerMax_2000
+* PowerMax_8000
+* VMAX-1
+* VMAX100K
+* VMAX10K
+* VMAX200K
+* VMAX250F
+* VMAX400K
+* VMAX40K
+* VMAX450F
+* VMAX850F
+* VMAX950F
+
+ a| 
+* 5876.286.194(16F40000) build 115
+* 5876.309.196(16F40000) build 153
+* 5876.309.196(16F40000) build 162
+* 5876.309.196(16F40000) build 94
+* 5977.1151.1151(17590000) build 45
+* 5977.1151.1151(17590000) build 60
+* 5977.1151.1151(17590000) build 9
+* 5978.711.711(175A0000) build 320
+* 5978.711.711(175A0000) build 335
+* 5978.711.711(175A0000) build 365
+* 5978.711.711(175A0000) build 416
+* 5978.711.711(175A0000) build 436
+* 5978.711.711(175A0000) build 438
+* 5978.711.711(175A0000) build 448
+* 5978.711.711(175A0000) build 484
+* 5978.711.711(175A0000) build 542
+* 5978.711.711(175A0000) build 581
+* 5978.714.714(175A0000) build 1
+* 5978.714.714(175A0000) build 101
+* 5978.714.714(175A0000) build 108
+* 5978.714.714(175A0000) build 117
+* 5978.714.714(175A0000) build 137
+* 5978.714.714(175A0000) build 145
+* 5978.714.714(175A0000) build 34
+* 5978.714.714(175A0000) build 49
+* 5978.714.714(175A0000) build 53
+* 5978.714.714(175A0000) build 79
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -7728,7 +8396,84 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| V10.0.0.5 V10.0.1.5 V10.1.0.1 V10.1.0.5 V10.1.0.6 V10.1.0.8 V10.2.0.1 V10.2.0.2 V9.2.3.15 V9.2.3.20 V9.2.3.22 V9.2.3.4 V9.2.4.1 V9.2.4.10 V9.2.4.11 V9.2.4.12 V9.2.4.3 V9.2.4.6 V9.2.4.7 V9.2.4.9 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX200K VMAX250F VMAX400K VMAX450F VMAX950F | 5977.1131.1131 Bau 615 5977.1151.1151 Bau 60 Bau 60 5978.711.711 Bau 205 5978.711.711 Bau 335 Bau 335 5978.711.711 Bau 365 5978.711.711 Bau 416 5978.711.711 Bau 436 Bau 436 5978.711.711 Bau 438 5978.711.711 Bau 448 5978.711.711 Bau 471 5978.711.711 Bau 484 5978.711.711 Bau 484 Bau 484 5978.711.711 Build 542 5978.711.711 Build 542 Build 542 5978.711.711 Build 581 5978.711.711 Build 75 5978.711.711 Build 8 Build 8 5978.714.711 Build 49 5978.714.714 Build 1 Build 1 5978.714.714 Build 101 Build 101 5978.714.714 Build 108 5978.714.714 Build 117 5978.714.714 Build 117 Build 117 5978.714.714 Build 131 Build 131 5978.714.714 Build 137 5978.714.714 Build 137 Build 137 5978.714.714 Build 145 5978.714.714 Build 149 Build 149 5978.714.714 Build 34 5978.714.714 Build 49 5978.714.714 Build 49 Build 49 5978.714.714 Build 79 5978.714.714 Build 79 Build 79 6079.175.0 Build 161 Build 161 6079.175.0 Build 259 Build 259 6079.225.0 Build 127 Build 127 6079.225.0 Build 216 Build 216 6079.225.0 Build 218 Build 218 6079.225.0 Build 291 Build 291 6079.225.0 Build 331 Build 331 6079.225.0 Build 86 Build 86 6079.275.0 Build 221 Build 221 
+ a| 
+* V10.0.0.5
+* V10.0.1.5
+* V10.1.0.1
+* V10.1.0.5
+* V10.1.0.6
+* V10.1.0.8
+* V10.2.0.1
+* V10.2.0.2
+* V9.2.3.15
+* V9.2.3.20
+* V9.2.3.22
+* V9.2.3.4
+* V9.2.4.1
+* V9.2.4.10
+* V9.2.4.11
+* V9.2.4.12
+* V9.2.4.3
+* V9.2.4.6
+* V9.2.4.7
+* V9.2.4.9
+
+ a| 
+* PowerMax_2000
+* PowerMax_2500
+* PowerMax_8000
+* PowerMax_8500
+* VMAX200K
+* VMAX250F
+* VMAX400K
+* VMAX450F
+* VMAX950F
+
+ a| 
+* 5977.1131.1131 build 615
+* 5977.1151.1151 build 60 build 60
+* 5978.711.711 build 205
+* 5978.711.711 Build 335 Build 335
+* 5978.711.711 build 365
+* 5978.711.711 build 416
+* 5978.711.711 build 436 build 436
+* 5978.711.711 build 438
+* 5978.711.711 build 448
+* 5978.711.711 build 471
+* 5978.711.711 build 484
+* 5978.711.711 Build 484 Build 484
+* 5978.711.711 build 542
+* 5978.711.711 Build 542 Build 542
+* 5978.711.711 build 581
+* 5978.711.711 build 75
+* 5978.711.711 build 8 build 8
+* 5978.714.711 build 49
+* 5978.714.714 build 1 build 1
+* 5978.714.714 build 101 build 101
+* 5978.714.714 build 108
+* 5978.714.714 build 117
+* 5978.714.714 build 117 build 117
+* 5978.714.714 build 131 build 131
+* 5978.714.714 build 137
+* 5978.714.714 build 137 build 137
+* 5978.714.714 build 145
+* 5978.714.714 build 149 build 149
+* 5978.714.714 build 34
+* 5978.714.714 build 49
+* 5978.714.714 build 49 build 49
+* 5978.714.714 build 79
+* 5978.714.714 build 79 build 79
+* 6079.175.0 build 161 build 161
+* 6079.175.0 build 259 build 259
+* 6079.225.0 build 127 build 127
+* 6079.225.0 build 216 build 216
+* 6079.225.0 build 218 build 218
+* 6079.225.0 build 291 build 291
+* 6079.225.0 build 331 build 331
+* 6079.225.0 build 86 build 86
+* 6079.275.0 build 221 build 221
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -7736,10 +8481,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.86+| Stiftung .9+| Scheibe | Kapazität (GB) | Implementiert | HTTPS | Genutzte Kapazität 
+.86+| Stiftung .9+| Scheibe | Kapazität (GB) | Implementiert | HTTPS |  
 
 
-| Datenträger-ID | Implementiert | HTTPS | Identifiziert diese Festplatte eindeutig im Array 
+| Datenträger-ID | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
@@ -7748,16 +8493,16 @@ Von diesem Datensammler unterstützte Produkte:
 | Rolle | Implementiert | HTTPS |  
 
 
-| Rollenaufzählung | Implementiert | HTTPS | Enumeration für Datenträgerrolle 
+| Rollenaufzählung | Implementiert | HTTPS |  
 
 
 | Status | Implementiert | HTTPS |  
 
 
-| Statusaufzählung | Implementiert | HTTPS | Enumeration für den Festplattenstatus 
+| Statusaufzählung | Implementiert | HTTPS |  
 
 
-| Typ Enum | Implementiert | HTTPS | Enumeration für Datenträgertyp 
+| Typ Enum | Implementiert | HTTPS |  
 
 
 | Verkäufer | Implementiert | HTTPS |  
@@ -7781,7 +8526,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Client-API-Version | Implementiert | HTTPS |  
 
 
-| Datenquellenname | Implementiert | HTTPS | Info 
+| Datenquellenname | Implementiert | HTTPS |  
 
 
 | Datum | Implementiert | HTTPS |  
@@ -7796,10 +8541,10 @@ Von diesem Datensammler unterstützte Produkte:
 .13+| Storage | IP anzeigen | Implementiert | HTTPS |  
 
 
-| Fehlgeschlagene Rohkapazität | Implementiert | HTTPS | Rohkapazität ausgefallener Festplatten (Summe aller ausgefallenen Festplatten) 
+| Fehlgeschlagene Rohkapazität | Implementiert | HTTPS |  
 
 
-| Familie | Implementiert | HTTPS | Die Speicherfamilie könnte Clariion, Symmetrix usw. sein 
+| Familie | Implementiert | HTTPS |  
 
 
 | IP | Implementiert | HTTPS |  
@@ -7820,16 +8565,16 @@ Von diesem Datensammler unterstützte Produkte:
 | Name | Implementiert | HTTPS |  
 
 
-| Gesamte Rohkapazität | Implementiert | HTTPS | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
+| Gesamte Rohkapazität | Implementiert | HTTPS |  
 
 
 | Seriennummer | Implementiert | HTTPS |  
 
 
-| Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität der Ersatzfestplatten (Summe aller Ersatzfestplatten) 
+| Freie Rohkapazität | Implementiert | HTTPS |  
 
 
-| Virtuell | Implementiert | HTTPS | Ist dies ein Gerät zur Speichervirtualisierung? 
+| Virtuell | Implementiert | HTTPS |  
 
 
 .2+| Speicherknoten | Name | Implementiert | HTTPS |  
@@ -7838,40 +8583,40 @@ Von diesem Datensammler unterstützte Produkte:
 | UUID | Implementiert | HTTPS |  
 
 
-.13+| Speicherpool | In DWH-Kapazität einschließen | Implementiert | HTTPS | Eine Möglichkeit von ACQ, zu steuern, welche Speicherpools in der DWH-Kapazität interessant sind 
+.13+| Speicherpool | In DWH-Kapazität einschließen | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
 
 
-| Physische Festplattenkapazität (MB) | Implementiert | HTTPS | wird als Rohkapazität für Speicherpools verwendet 
+| Physische Festplattenkapazität (MB) | Implementiert | HTTPS |  
 
 
-| Raid-Gruppe | Implementiert | HTTPS | gibt an, ob dieser Speicherpool eine RAID-Gruppe ist 
+| Raid-Gruppe | Implementiert | HTTPS |  
 
 
-| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert | HTTPS | Verhältnis zur Umrechnung von nutzbarer Kapazität in Rohkapazität 
+| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert | HTTPS |  
 
 
-| Redundanz | Implementiert | HTTPS | Redundanzstufe 
+| Redundanz | Implementiert | HTTPS |  
 
 
 | Speicherpool-ID | Implementiert | HTTPS |  
 
 
-| Thin Provisioning wird unterstützt | Implementiert | HTTPS | Ob dieses interne Volume Thin Provisioning für die darüber liegende Volume-Schicht unterstützt 
+| Thin Provisioning wird unterstützt | Implementiert | HTTPS |  
 
 
 | Gesamtzugewiesene Kapazität | Implementiert | HTTPS |  
 
 
-| Gesamte genutzte Kapazität | Implementiert | HTTPS | Gesamtkapazität in MB 
+| Gesamte genutzte Kapazität | Implementiert | HTTPS |  
 
 
 | Typ | Lücke | HTTPS |  
 
 
-| Virtuell | Implementiert | HTTPS | Ist dies ein Gerät zur Speichervirtualisierung? 
+| Virtuell | Implementiert | HTTPS |  
 
 
 | Effektiv genutzte Kapazität in Prozent | Implementiert | HTTPS |  
@@ -7889,7 +8634,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Quellvolumen | Implementiert | HTTPS |  
 
 
-| Status | Implementiert | HTTPS | Freitext zur Beschreibung des Gerätezustands 
+| Status | Implementiert | HTTPS |  
 
 
 | Statusaufzählung | Implementiert | HTTPS |  
@@ -7901,16 +8646,16 @@ Von diesem Datensammler unterstützte Produkte:
 | Zielvolumen | Implementiert | HTTPS |  
 
 
-| Technologie | Implementiert | HTTPS | Technologie, die die Speichereffizienz verändert 
+| Technologie | Implementiert | HTTPS |  
 
 
-.18+| Volumen | AutoTier-Richtlinienkennung | Implementiert | HTTPS | Dynamische Ebenenrichtlinienkennung 
+.18+| Volumen | AutoTier-Richtlinienkennung | Implementiert | HTTPS |  
 
 
-| Automatisches Tiering | Implementiert | HTTPS | gibt an, ob dieser Speicherpool am Auto-Tiering mit anderen Pools teilnimmt 
+| Automatisches Tiering | Implementiert | HTTPS |  
 
 
-| Kapazität | Implementiert | HTTPS | Snapshot Verwendete Kapazität in MB 
+| Kapazität | Implementiert | HTTPS |  
 
 
 | Datenträgertyp | Nicht verfügbar | HTTPS |  
@@ -7922,10 +8667,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Name | Implementiert | HTTPS |  
 
 
-| Gesamte Rohkapazität | Implementiert | HTTPS | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
+| Gesamte Rohkapazität | Implementiert | HTTPS |  
 
 
-| Redundanz | Implementiert | HTTPS | Redundanzstufe 
+| Redundanz | Implementiert | HTTPS |  
 
 
 | Speicherpool-ID | Implementiert | HTTPS |  
@@ -7943,10 +8688,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Verwendete Kapazität | Implementiert | HTTPS |  
 
 
-| Virtuell | Implementiert | HTTPS | Ist dies ein Gerät zur Speichervirtualisierung? 
+| Virtuell | Implementiert | HTTPS |  
 
 
-| Schriftliche Kapazität | Implementiert | HTTPS | Gesamtkapazität, die von einem Host auf dieses Volume geschrieben wurde, in MB 
+| Schriftliche Kapazität | Implementiert | HTTPS |  
 
 
 | Effektiv genutzte Kapazität in Prozent | Implementiert | HTTPS |  
@@ -7958,7 +8703,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Speichergruppen | Implementiert | HTTPS |  
 
 
-.4+| Volumenkarte | LUN | Implementiert | HTTPS | Name der Backend-LUN 
+.4+| Volumenkarte | LUN | Implementiert | HTTPS |  
 
 
 | Protokoll-Controller | Implementiert | HTTPS |  
@@ -9059,7 +9804,42 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| Unity 300 Unity 300F Unity 350F Unity 380 Unity 380F Unity 400 Unity 400F Unity 450F Unity 480 Unity 480F Unity 500 Unity 550F Unity 600F Unity 650F Unity 680F Unity 880 Unity 880F UnityVSA VNXe3200 | 3.1.17.10229825 4.1.2.9257522 5.0.6.0.5.008 5.0.8.0.5.007 5.1.2.0.5.007 5.2.1.0.5.013 5.2.2.0.5.004 5.3.0.0.5.120 5.3.1.0.5.008 5.3.1.0.6.028 5.4.0.0.5.094 5.4.1.0.5.006 
+ a| 
+* Unity 300
+* Unity 300F
+* Unity 350F
+* Unity 380
+* Unity 380F
+* Unity 400
+* Unity 400F
+* Unity 450F
+* Unity 480
+* Unity 480F
+* Unity 500
+* Unity 550F
+* Unity 600F
+* Unity 650F
+* Unity 680F
+* Unity 880
+* Unity 880F
+* UnityVSA
+* VNXe3200
+
+ a| 
+* 3.1.17.10229825
+* 4.1.2.9257522
+* 5.0.6.0.5.008
+* 5.0.8.0.5.007
+* 5.1.2.0.5.007
+* 5.2.1.0.5.013
+* 5.2.2.0.5.004
+* 5.3.0.0.5.120
+* 5.3.1.0.5.008
+* 5.3.1.0.6.028
+* 5.4.0.0.5.094
+* 5.4.1.0.5.006
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -9612,13 +10392,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 
 == EMC VPLEX
 
-Von diesem Datensammler unterstützte Modelle und Versionen:
-
 |===
-| Modelle | Firmware-Versionen 
-
-
-| VPLEX | 6.2.0.04.00.07 6.2.0.07.00.02 6.2.1.0.0.519 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -9626,7 +10400,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.51+| Stiftung .4+| Info | Datenquellenname | Implementiert | HTTP/S | Info 
+.4+| Stiftung .4+| Info | Datenquellenname | Implementiert | HTTP/S | Info 
 
 
 | Datum | Implementiert | HTTP/S |  
@@ -9638,289 +10412,16 @@ Von diesem Datensammler unterstützte Produkte:
 | Urheberschlüssel | Implementiert | HTTP/S |  
 
 
-.13+| Storage | IP anzeigen | Implementiert | HTTP/S |  
-
-
-| Fehlgeschlagene Rohkapazität | Implementiert | HTTP/S | Rohkapazität ausgefallener Festplatten (Summe aller ausgefallenen Festplatten) 
-
-
-| Familie | Implementiert | HTTP/S | Die Speicherfamilie könnte Clariion, Symmetrix usw. sein 
-
-
-| IP | Implementiert | HTTP/S |  
-
-
-| URL verwalten | Implementiert | HTTP/S |  
-
-
-| Hersteller | Implementiert | HTTP/S |  
-
-
-| Mikrocode-Version | Implementiert | HTTP/S |  
-
-
-| Modell | Implementiert | HTTP/S |  
-
-
-| Name | Implementiert | HTTP/S |  
-
-
-| Gesamte Rohkapazität | Implementiert | HTTP/S | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
-
-
-| Seriennummer | Implementiert | HTTP/S |  
-
-
-| Freie Rohkapazität | Implementiert | HTTP/S | Rohkapazität der Ersatzfestplatten (Summe aller Ersatzfestplatten) 
-
-
-| Virtuell | Implementiert | HTTP/S | Ist dies ein Gerät zur Speichervirtualisierung? 
-
-
-.4+| Speicherknoten | Name | Implementiert | HTTP/S |  
-
-
-| Seriennummer | Implementiert | HTTP/S |  
-
-
-| Status | Implementiert | HTTP/S | Freitext zur Beschreibung des Gerätezustands 
-
-
-| UUID | Implementiert | HTTP/S |  
-
-
-.14+| Speicherpool | Deduplizierung aktiviert | Implementiert | HTTP/S | Ist die Deduplizierung im Speicherpool aktiviert? 
-
-
-| Name | Implementiert | HTTP/S |  
-
-
-| Andere zugewiesene Kapazität | Lücke | HTTP/S | Für andere Zwecke zugewiesene Kapazität (keine Daten und keine Momentaufnahme) 
-
-
-| Andere genutzte Kapazität (MB) | Implementiert | HTTP/S | Jede andere Kapazität als Daten und Snapshots 
-
-
-| Raid-Gruppe | Implementiert | HTTP/S | gibt an, ob dieser Speicherpool eine RAID-Gruppe ist 
-
-
-| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert | HTTP/S | Verhältnis zur Umrechnung von nutzbarer Kapazität in Rohkapazität 
-
-
-| Redundanz | Implementiert | HTTP/S | Redundanzstufe 
-
-
-| Status | Implementiert | HTTP/S |  
-
-
-| Speicherpool-ID | Implementiert | HTTP/S |  
-
-
-| Thin Provisioning wird unterstützt | Implementiert | HTTP/S | Ob dieses interne Volume Thin Provisioning für die darüber liegende Volume-Schicht unterstützt 
-
-
-| Gesamtzugewiesene Kapazität | Implementiert | HTTP/S |  
-
-
-| Gesamte genutzte Kapazität | Implementiert | HTTP/S | Gesamtkapazität in MB 
-
-
-| Typ | Lücke | HTTP/S |  
-
-
-| Virtuell | Implementiert | HTTP/S | Ist dies ein Gerät zur Speichervirtualisierung? 
-
-
-.8+| Volumen | Kapazität | Implementiert | HTTP/S | Snapshot Verwendete Kapazität in MB 
-
-
-| Name | Implementiert | HTTP/S |  
-
-
-| Gesamte Rohkapazität | Implementiert | HTTP/S | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
-
-
-| Redundanz | Implementiert | HTTP/S | Redundanzstufe 
-
-
-| Speicherpool-ID | Implementiert | HTTP/S |  
-
-
-| Thin Provisioning | Implementiert | HTTP/S |  
-
-
-| UUID | Implementiert | HTTP/S |  
-
-
-| Virtuell | Implementiert | HTTP/S | Ist dies ein Gerät zur Speichervirtualisierung? 
-
-
-.4+| Volumenkarte | LUN | Implementiert | HTTP/S | Name der Backend-LUN 
-
-
-| Protokoll-Controller | Implementiert | HTTP/S |  
-
-
-| Speicherport | Implementiert | HTTP/S |  
-
-
-| Typ | Lücke | HTTP/S |  
-
-
-.4+| Volumenmaske | Initiator | Implementiert | HTTP/S |  
-
-
-| Protokoll-Controller | Implementiert | HTTP/S |  
-
-
-| Speicherport | Implementiert | HTTP/S |  
-
-
-| Typ | Lücke | HTTP/S |  
-
-
-.59+| Leistung .13+| Storage | Fehlgeschlagene Rohkapazität | Implementiert | SSH |  
-
-
-| Rohkapazität | Implementiert | SSH |  
-
-
-| Freie Rohkapazität | Implementiert | SSH | Rohkapazität der Ersatzfestplatten (Summe aller Ersatzfestplatten) 
-
-
-| Speicherpool-Kapazität | Implementiert | SSH |  
-
-
-| IOPs gesamt | Implementiert | SSH |  
+.15+| Leistung .4+| Speicherknotendaten | Cache-Trefferquote gesamt | Implementiert | SSH |  
 
 
 | Schlüssel | Implementiert | SSH |  
 
 
-| Latenz beim Lesen | Implementiert | SSH |  
-
-
-| Latenz gesamt | Implementiert | SSH |  
-
-
-| Latenz beim Schreiben | Implementiert | SSH |  
-
-
 | Server-ID | Implementiert | SSH |  
-
-
-| Durchsatz beim Lesen | Implementiert | SSH |  
-
-
-| Durchsatz gesamt | Implementiert | SSH | Durchschnittliche Gesamtrate der Festplatte (Lesen und Schreiben auf allen Festplatten) in MB/s 
-
-
-| Durchsatz beim Schreiben | Implementiert | SSH |  
-
-
-.13+| Speicherknoten | Cache-Trefferquote gesamt | Implementiert | SSH |  
-
-
-| IOPs gelesen | Implementiert | SSH | Anzahl der gelesenen IOPs auf der Festplatte 
-
-
-| IOPs gesamt | Implementiert | SSH |  
-
-
-| IOPs Schreiben | Implementiert | SSH |  
-
-
-| Schlüssel | Implementiert | SSH |  
-
-
-| Latenz beim Lesen | Implementiert | SSH |  
-
-
-| Latenz gesamt | Implementiert | SSH |  
-
-
-| Latenz beim Schreiben | Implementiert | SSH |  
-
-
-| Server-ID | Implementiert | SSH |  
-
-
-| Durchsatz beim Lesen | Implementiert | SSH |  
-
-
-| Durchsatz gesamt | Implementiert | SSH | Durchschnittliche Gesamtrate der Festplatte (Lesen und Schreiben auf allen Festplatten) in MB/s 
-
-
-| Durchsatz beim Schreiben | Implementiert | SSH |  
 
 
 | Auslastung gesamt | Implementiert | SSH |  
-
-
-.4+| Speicherknotendaten | Schlüssel | Implementiert | SSH |  
-
-
-| Server-ID | Implementiert | SSH |  
-
-
-| Cache-Trefferquote gesamt | Implementiert | SSH |  
-
-
-| Auslastung gesamt | Implementiert | SSH |  
-
-
-.7+| StoragePool-Datenträger | Bereitgestellte Kapazität | Implementiert | SSH |  
-
-
-| Gesamtkapazität | Implementiert | SSH |  
-
-
-| Verwendete Kapazität | Implementiert | SSH |  
-
-
-| Verhältnis der Überbelegungskapazität | Implementiert | SSH | Als Zeitreihe gemeldet 
-
-
-| Verhältnis der genutzten Kapazität | Implementiert | SSH |  
-
-
-| Sonstige Gesamtkapazität | Implementiert | SSH |  
-
-
-| Andere genutzte Kapazität | Implementiert | SSH |  
-
-
-.11+| Volumen | Rohkapazität | Implementiert | SSH |  
-
-
-| Gesamtkapazität | Implementiert | SSH |  
-
-
-| IOPs gesamt | Implementiert | SSH |  
-
-
-| Schlüssel | Implementiert | SSH |  
-
-
-| Latenz beim Lesen | Implementiert | SSH |  
-
-
-| Latenz gesamt | Implementiert | SSH |  
-
-
-| Latenz beim Schreiben | Implementiert | SSH |  
-
-
-| Server-ID | Implementiert | SSH |  
-
-
-| Durchsatz beim Lesen | Implementiert | SSH |  
-
-
-| Durchsatz gesamt | Implementiert | SSH | Durchschnittliche Gesamtrate der Festplatte (Lesen und Schreiben auf allen Festplatten) in MB/s 
-
-
-| Durchsatz beim Schreiben | Implementiert | SSH |  
 
 
 .11+| Volumen | Rohkapazität | Implementiert | SSH |  
@@ -9976,7 +10477,38 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| 6.2.1 6.3.2 6.3.3 6.4.0 6.4.1 6.4.2 | 1 Brick & 125 TB 1 Brick & 24 TB 1 Brick & 31 TB 1 Brick & 8 TB 1 x 10 TB 1 x 20 TB 1 x 40 TB 2 Bricks & 83 TB 3 Bricks & 146 TB 3 Bricks & 251 TB 3 Bricks & 283 TB 4 Bricks & 628 TB 4 Bricks & 754 TB 4 x 20 TB 6 x 40 TB | 4.0.27-1 4.0.31-11 6.3.3-8_X2 6.4.0-36_hotfix_2_X2 
+ a| 
+* 6.2.1
+* 6.3.2
+* 6.3.3
+* 6.4.0
+* 6.4.1
+* 6.4.2
+
+ a| 
+* 1 Bricks & 125TB
+* 1 Bricks & 24TB
+* 1 Bricks & 31TB
+* 1 Bricks & 8TB
+* 1X10TB
+* 1X20TB
+* 1X40TB
+* 2 Bricks & 83TB
+* 3 Ziegelsteine & 146TB
+* 3 Bricks & 251TB
+* 3 Bricks & 283TB
+* 4 Ziegelsteine & 628TB
+* 4 Ziegelsteine & 754TB
+* 4X20TB
+* 6X40TB
+
+ a| 
+* 4.0.27-1
+* 4.0.31-11
+* 6.3.3-8_X2
+* 6.4.0-36_hotfix_2_X2
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -10502,7 +11034,76 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 2660 2680 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5504 5564 5600 5700 5700B 6000 7999 | 08.40.60.01 08.80.00.00 7.84.46.0 8.20.16.0 8.20.27.0 8.20.30.0 8.20.8.0 8.25.14.0 8.25.6.0 8.40.0.1 8.40.20.0 8.40.30.4 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.40.60.3 8.42.30.5 8.50.0.4 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.1 8.53.0.4 8.62.0.0 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.73.0.0 8.74.0.0 8.74.1.0 8.74.2.0 8.74.3.0 8.75.0.0 8.75.0.1 8.75.1.0 8.80.0.0 8.80.1.0 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.90.0.0 
+ a| 
+* 2660
+* 2680
+* 2702
+* 2704
+* 2800B
+* 2804
+* 2806
+* 3000
+* 4000
+* 5486
+* 5488
+* 5504
+* 5564
+* 5600
+* 5700
+* 5700B
+* 6000
+* 7999
+
+ a| 
+* 08.40.60.01
+* 08.80.00.00
+* 7.84.46.0
+* 8.20.16.0
+* 8.20.27.0
+* 8.20.30.0
+* 8.20.8.0
+* 8.25.14.0
+* 8.25.6.0
+* 8.40.0.1
+* 8.40.20.0
+* 8.40.30.4
+* 8.40.40.0
+* 8.40.50.0
+* 8.40.60.1
+* 8.40.60.2
+* 8.40.60.3
+* 8.42.30.5
+* 8.50.0.4
+* 8.51.0.0
+* 8.52.0.0
+* 8.52.0.1
+* 8.53.0.1
+* 8.53.0.4
+* 8.62.0.0
+* 8.62.0.2
+* 8.63.0.2
+* 8.70.0.2
+* 8.70.0.3
+* 8.71.2.0
+* 8.71.3.0
+* 8.72.0.0
+* 8.73.0.0
+* 8.74.0.0
+* 8.74.1.0
+* 8.74.2.0
+* 8.74.3.0
+* 8.75.0.0
+* 8.75.0.1
+* 8.75.1.0
+* 8.80.0.0
+* 8.80.1.0
+* 8.81.0.3
+* 8.81.1.0
+* 8.81.2.0
+* 8.81.3.0
+* 8.90.0.0
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -11676,392 +12277,6 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
-== Google Cloud Netapp Volumes
-
-Von diesem Datensammler unterstützte Produkte:
-
-|===
-| Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
-
-
-.71+| Stiftung .7+| Dateifreigabe | Name | Implementiert | HTTPS |  
-
-
-| Weg | Implementiert | HTTPS | Pfad der Dateifreigabe 
-
-
-| Qtree-ID | Implementiert | HTTPS | eindeutige ID des Qtree 
-
-
-| Ist InternalVolume | Implementiert | HTTPS | ob die Dateifreigabe ein internes Volume (NetApp-Volume) darstellt oder ob es sich um einen Qtree/Ordner innerhalb des internen Volumes handelt 
-
-
-| Wird geteilt | Implementiert | HTTPS | ob mit dieser Dateifreigabe Freigaben verknüpft sind 
-
-
-| Status | Implementiert | HTTPS |  
-
-
-| Sicherheitstyp | Implementiert | HTTPS |  
-
-
-.3+| Info | Datenquellenname | Implementiert | HTTPS | Info 
-
-
-| Absender-ID | Implementiert | HTTPS |  
-
-
-| Datum | Implementiert | HTTPS |  
-
-
-.24+| Internes Volumen | Interne Volume-ID | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| Speicherpool-ID | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-| Thin Provisioning | Implementiert | HTTPS |  
-
-
-| Thin Provisioning wird unterstützt | Implementiert | HTTPS | Ob dieses interne Volume Thin Provisioning für die darüber liegende Volume-Schicht unterstützt 
-
-
-| Deduplizierung aktiviert | Implementiert | HTTPS | Ist die Deduplizierung im Speicherpool aktiviert? 
-
-
-| Komprimierung aktiviert | Implementiert | HTTPS | Ist die Komprimierung im Speicherpool aktiviert? 
-
-
-| Uhrzeit des letzten Snapshots | Implementiert | HTTPS | Zeitpunkt des letzten Schnappschusses 
-
-
-| Snapshot-Anzahl | Implementiert | HTTPS | Anzahl der Snapshots auf den internen Volumes 
-
-
-| Status | Implementiert | HTTPS |  
-
-
-| Schutzart | Implementiert | HTTPS |  
-
-
-| Snapshot der genutzten Kapazität | Implementiert | HTTPS |  
-
-
-| Snapshot-zugewiesene Kapazität | Lücke | HTTPS | Zugewiesene Kapazität der Snapshots in MB 
-
-
-| Verwendete Datenkapazität | Implementiert | HTTPS |  
-
-
-| Zugewiesene Datenkapazität | Lücke | HTTPS | für Daten zugewiesene Kapazität 
-
-
-| Gesamte genutzte Kapazität | Implementiert | HTTPS | Gesamtkapazität in MB 
-
-
-| Gesamtzugewiesene Kapazität | Implementiert | HTTPS |  
-
-
-| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert | HTTPS | Verhältnis zur Umrechnung von nutzbarer Kapazität in Rohkapazität 
-
-
-| Staffelung der Mindestkühltage | Implementiert | HTTPS |  
-
-
-| QoS – Richtlinie | Implementiert | HTTPS |  
-
-
-|  | Implementiert | HTTPS |  
-
-
-| Kommentar | Lücke | HTTPS | Status: Freitextkommentar, der das SVM beschreibt 
-
-
-| QoS-Limit Raw | Implementiert | HTTPS |  
-
-
-.5+| QTree | Qtree-ID | Implementiert | HTTPS | eindeutige ID des Qtree 
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| Sicherheitsstil | Implementiert | HTTPS | Sicherheitsstil des Verzeichnisses: Unix, NTFS oder gemischt 
-
-
-| Status | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-.3+| Aktie | Name | Implementiert | HTTPS |  
-
-
-| Protokoll | Implementiert | HTTPS | Enumeration für Share-Protokoll 
-
-
-| IP-Schnittstellen | Implementiert | HTTPS | durch Kommas getrennte Liste von IP-Adressen, auf denen diese Freigabe verfügbar ist 
-
-
-.2+| Initiator der Freigabe | Initiator | Implementiert | HTTPS |  
-
-
-| Erlaubnis | Implementiert | HTTPS | Berechtigungen für diese bestimmte Freigabe 
-
-
-.10+| Storage | IP | Implementiert | HTTPS |  
-
-
-| IP anzeigen | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| Hersteller | Implementiert | HTTPS |  
-
-
-| Familie | Implementiert | HTTPS | Die Speicherfamilie könnte Clariion, Symmetrix usw. sein 
-
-
-| Virtuell | Implementiert | HTTPS | Ist dies ein Gerät zur Speichervirtualisierung? 
-
-
-| URL verwalten | Implementiert | HTTPS |  
-
-
-| Gesamte Rohkapazität | Implementiert | HTTPS | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
-
-
-| Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität der Ersatzfestplatten (Summe aller Ersatzfestplatten) 
-
-
-| Fehlgeschlagene Rohkapazität | Implementiert | HTTPS | Rohkapazität ausgefallener Festplatten (Summe aller ausgefallenen Festplatten) 
-
-
-.17+| Speicherpool | Speicherpool-ID | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-| Status | Implementiert | HTTPS |  
-
-
-| Thin Provisioning wird unterstützt | Implementiert | HTTPS | Ob dieses interne Volume Thin Provisioning für die darüber liegende Volume-Schicht unterstützt 
-
-
-| In DWH-Kapazität einschließen | Implementiert | HTTPS | Eine Möglichkeit von ACQ, zu steuern, welche Speicherpools in der DWH-Kapazität interessant sind 
-
-
-| Anbieterstufe | Implementiert | HTTPS | Anbieterspezifischer Stufenname 
-
-
-| Deduplizierung aktiviert | Implementiert | HTTPS | Ist die Deduplizierung im Speicherpool aktiviert? 
-
-
-| Komprimierung aktiviert | Implementiert | HTTPS | Ist die Komprimierung im Speicherpool aktiviert? 
-
-
-| Virtuell | Implementiert | HTTPS | Ist dies ein Gerät zur Speichervirtualisierung? 
-
-
-| Raid-Gruppe | Implementiert | HTTPS | gibt an, ob dieser Speicherpool eine RAID-Gruppe ist 
-
-
-| Verwendete Datenkapazität | Implementiert | HTTPS |  
-
-
-| Zugewiesene Datenkapazität | Lücke | HTTPS | für Daten zugewiesene Kapazität 
-
-
-| Gesamtzugewiesene Kapazität | Implementiert | HTTPS |  
-
-
-| Physische Festplattenkapazität (MB) | Implementiert | HTTPS | wird als Rohkapazität für Speicherpools verwendet 
-
-
-| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert | HTTPS | Verhältnis zur Umrechnung von nutzbarer Kapazität in Rohkapazität 
-
-
-|  | Implementiert | HTTPS |  
-
-
-.52+| Leistung .21+| Internes Volumen | Latenz gesamt | Implementiert | HTTPS |  
-
-
-| Verwendeter Objektspeicherplatz | Implementiert | HTTPS |  
-
-
-| Gesamtkapazität | Implementiert | HTTPS |  
-
-
-| Latenz beim Lesen | Implementiert | HTTPS |  
-
-
-| IOPs andere | Implementiert | HTTPS |  
-
-
-| IOPs Schreiben | Implementiert | HTTPS |  
-
-
-| Verwendete Kapazität | Implementiert | HTTPS |  
-
-
-| Durchsatz beim Lesen | Implementiert | HTTPS |  
-
-
-| Server-ID | Implementiert | HTTPS |  
-
-
-| IOPs gesamt | Implementiert | HTTPS |  
-
-
-| Snapshot-Verhältnis der genutzten Kapazität | Implementiert | HTTPS | Als Zeitreihe gemeldet 
-
-
-| Latenz beim Schreiben | Implementiert | HTTPS |  
-
-
-| IOPs gelesen | Implementiert | HTTPS | Anzahl der gelesenen IOPs auf der Festplatte 
-
-
-| Verhältnis der genutzten Kapazität | Implementiert | HTTPS |  
-
-
-| Gesamtdatenkapazität | Implementiert | HTTPS |  
-
-
-| Verwendete Datenkapazität | Implementiert | HTTPS |  
-
-
-| Durchsatz beim Schreiben | Implementiert | HTTPS |  
-
-
-| Durchsatz gesamt | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lesen und Schreiben auf allen Festplatten) in MB/s 
-
-
-| Snapshot der genutzten Kapazität | Implementiert | HTTPS |  
-
-
-| Schlüssel | Implementiert | HTTPS |  
-
-
-| Snapshot-reservierte Kapazität | Implementiert | HTTPS |  
-
-
-.16+| Storage | Latenz gesamt | Implementiert | HTTPS |  
-
-
-| Fehlgeschlagene Rohkapazität | Implementiert | HTTPS |  
-
-
-| Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität der Ersatzfestplatten (Summe aller Ersatzfestplatten) 
-
-
-| Latenz beim Lesen | Implementiert | HTTPS |  
-
-
-| IOPs andere | Implementiert | HTTPS |  
-
-
-| IOPs Schreiben | Implementiert | HTTPS |  
-
-
-| Rohkapazität | Implementiert | HTTPS |  
-
-
-| Durchsatz beim Lesen | Implementiert | HTTPS |  
-
-
-| Server-ID | Implementiert | HTTPS |  
-
-
-| IOPs gesamt | Implementiert | HTTPS |  
-
-
-| Latenz beim Schreiben | Implementiert | HTTPS |  
-
-
-| IOPs gelesen | Implementiert | HTTPS | Anzahl der gelesenen IOPs auf der Festplatte 
-
-
-| Speicherpool-Kapazität | Implementiert | HTTPS |  
-
-
-| Durchsatz beim Schreiben | Implementiert | HTTPS |  
-
-
-| Durchsatz gesamt | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lesen und Schreiben auf allen Festplatten) in MB/s 
-
-
-| Schlüssel | Implementiert | HTTPS |  
-
-
-.15+| StoragePool-Datenträger | Verwendeter Objektspeicherplatz | Implementiert | HTTPS |  
-
-
-| Gesamtkapazität | Implementiert | HTTPS |  
-
-
-| IOPs Schreiben | Implementiert | HTTPS |  
-
-
-| Verwendete Kapazität | Implementiert | HTTPS |  
-
-
-| Rohkapazität | Implementiert | HTTPS |  
-
-
-| Durchsatz beim Lesen | Implementiert | HTTPS |  
-
-
-| IOPs gesamt | Implementiert | HTTPS |  
-
-
-| IOPs gelesen | Implementiert | HTTPS | Anzahl der gelesenen IOPs auf der Festplatte 
-
-
-| Verhältnis der genutzten Kapazität | Implementiert | HTTPS |  
-
-
-| Gesamtdatenkapazität | Implementiert | HTTPS |  
-
-
-| Bereitgestellte Kapazität | Implementiert | HTTPS |  
-
-
-| Verwendete Datenkapazität | Implementiert | HTTPS |  
-
-
-| Durchsatz beim Schreiben | Implementiert | HTTPS |  
-
-
-| Durchsatz gesamt | Implementiert | HTTPS | Durchschnittliche Gesamtrate der Festplatte (Lesen und Schreiben auf allen Festplatten) in MB/s 
-
-
-| Verhältnis der Überbelegungskapazität | Implementiert | HTTPS | Als Zeitreihe gemeldet 
-|===
-Von diesem Datensammler verwendete Verwaltungs-APIs:
-
-|===
-| API | Verwendetes Protokoll | Verwendetes Transportschichtprotokoll | Verwendete eingehende Ports | Verwendete ausgehende Ports | Unterstützt Authentifizierung | Erfordert nur schreibgeschützte Anmeldeinformationen | Unterstützt Verschlüsselung | Firewall-freundlich (statische Ports) 
-
-
-| Google Compute Platform REST API | HTTPS |  | 443 |  | true | true | true | true 
-|===
-
-
 == HDS HCP (HTTPS)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -12254,7 +12469,71 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| 7.6.1 8.0 8.7.1 8.7.3 8.7.6 8.8.3 | DF850MH DF850S HM800 HM850 P9500 RAID800 VSP5000 XP24000 XP8 | 0983/AH 0984/BH 0985/BS 0986/AH 0988/HS DKC:60-08-22 DKC:60-08-65 DKC:70-06-43 DKC:80-06-80-00/02 DKC:80-06-91-00/00 DKC:80-06-96-00/00 DKC:83-05-46-60/00 DKC:83-05-50-60/00 DKC:83-05-53-60/00 DKC:88-08-08-60/00 DKC:88-08-10-60/00 DKC:88-08-12-60/00 DKC:88-08-13-60/00 DKC:88-08-13-60/01 DKC:90-08-81-00/00 DKC:90-09-21-00/00 DKC:90-09-23-00/00 DKC:90-09-24-00/00 DKC:90-09-24-00/01 DKC:90-09-25 SVP:60-08-21/00 SVP:60-08-54/00 SVP:70-06-30/00 SVP:80-06-76/02 SVP:80-06-86/00 SVP:80-06-91/00 SVP:83-05-50-60/00 SVP:83-05-54-60/00 SVP:83-05-57-60/00 SVP:88-08-10-60/00 SVP:88-08-12-60/00 SVP:88-08-14-60/00 SVP:88-08-15-60/00 SVP:90-08-81/00 SVP:90-09-21/00 SVP:90-09-23/00 SVP:90-09-24/00 SVP:90-09-25/00 
+ a| 
+* 7.6.1
+* 8,0
+* 8.7.1
+* 8.7.3
+* 8.7.6
+* 8.8.3
+
+ a| 
+* DF850MH
+* DF850S
+* HM800
+* HM850
+* P9500
+* RAID800
+* VSP5000
+* XP24000
+* XP8
+
+ a| 
+* 0983/A-H
+* 0984/B-H
+* 0985/B-S
+* 0986/A-H
+* 0988/H-S
+* DKC:60-08-22
+* DKC:60-08-65
+* DKC:70-06-43
+* DKC:80-06-80-00/02
+* DKC:80-06-91-00/00
+* DKC:80-06-96-00/00
+* DKC:83-05-46-60/00
+* DKC:83-05-50-60/00
+* DKC:83-05-53-60/00
+* DKC:88-08-08-60/00
+* DKC:88-08-10-60/00
+* DKC:88-08-12-60/00
+* DKC:88-08-13-60/00
+* DKC:88-08-13-60/01
+* DKC:90-08-81-00/00
+* DKC:90-09-21-00/00
+* DKC:90-09-23-00/00
+* DKC:90-09-24-00/00
+* DKC:90-09-24-00/01
+* DKC:90-09-25
+* SVP:60-08-21/00
+* SVP:60-08-54/00
+* SVP:70-06-30/00
+* SVP:80-06-76/02
+* SVP:80-06-86/00
+* SVP:80-06-91/00
+* SVP:83-05-50-60/00
+* SVP:83-05-54-60/00
+* SVP:83-05-57-60/00
+* SVP:88-08-10-60/00
+* SVP:88-08-12-60/00
+* SVP:88-08-14-60/00
+* SVP:88-08-15-60/00
+* SVP:90-08-81/00
+* SVP:90-09-21/00
+* SVP:90-09-23/00
+* SVP:90-09-24/00
+* SVP:90-09-25/00
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -12864,7 +13143,72 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| VSP 5100 VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E590 VSP E790 VSP E790H VSP F1500 VSP F400 VSP F900 VSP G1000 VSP G1500 VSP G600 VSP G800 VSP G900 XP8 | 80-06-91-00/00:01-71-03/02 80-06-94-00/00:01-70-03/04 80-06-96-00/00:01-71-03/02 80-06-96-00/00:01-76-03/03 83-05-49-40/01:01-69-03/02 83-05-49-60/01:01-65-03/05 83-05-49-60/01:01-69-03/02 83-05-51-40/00:01-70-03/04 83-05-51-40/00:01-71-03/02 83-05-51-40/00:01-76-03/03 88-08-08-60/00:01-65-03/05 88-08-08-60/00:01-70-03/04 88-08-11-60/00:01-65-03/05 88-08-11-60/00:01-70-03/04 88-08-13-60/00:01-65-03/05 88-08-13-60/01:01-65-03/05 88-08-13-60/01:01-70-03/04 88-08-13-60/01:01-71-03/02 88-08-13-60/01:01-76-03/03 90-08-82-00/00:01-65-03/05 90-08-82:01.70.04 90-09-01-00/01:01-65-03/05 90-09-22-00/00:01-65-03/05 90-09-22-00/00:01-70-03/04 90-09-22-00/00:01-71-03/02 90-09-24-00/01:01-65-03/05 90-09-24-00/01:01-71-03/02 90-09-24-00/01:01-76-03/03 90-09-24:01.65.05 90-09-25-00/00:01-76-03/03 90-09-25:01.70.04 90-09-26-00/00:01-65-03/05 90-09-26-00/00:01-71-03/02 90-09-26-00/00:01-76-03/03 93-07-01-80/00:01-70-03/04 93-07-22-40/00:01-65-03/05 93-07-22-40/00:01-69-03/02 93-07-22-80/00:01-70-03/04 93-07-22-80/00:01-71-03/02 93-07-23-80/00:01-71-03/02 93-07-23-80/01:01-71-03/02 93-07-24-40/00:01-76-03/03 93-07-24-80/00:01-70-03/04 null:null 
+ a| 
+* VSP 5100
+* VSP 5500
+* VSP 5600
+* VSP 5600H
+* VSP E1090
+* VSP E590
+* VSP E790
+* VSP E790H
+* VSP F1500
+* VSP F400
+* VSP F900
+* VSP G1000
+* VSP G1500
+* VSP G600
+* VSP G800
+* VSP G900
+* XP8
+
+ a| 
+* 80-06-91-00/00:01-71-03/02
+* 80-06-94-00/00:01-70-03/04
+* 80-06-96-00/00:01-71-03/02
+* 80-06-96-00/00:01-76-03/03
+* 83-05-49-40/01:01-69-03/02
+* 83-05-49-60/01:01-65-03/05
+* 83-05-49-60/01:01-69-03/02
+* 83-05-51-40/00:01-70-03/04
+* 83-05-51-40/00:01-71-03/02
+* 83-05-51-40/00:01-76-03/03
+* 88-08-08-60/00:01-65-03/05
+* 88-08-08-60/00:01-70-03/04
+* 88-08-11-60/00:01-65-03/05
+* 88-08-11-60/00:01-70-03/04
+* 88-08-13-60/00:01-65-03/05
+* 88-08-13-60/01:01-65-03/05
+* 88-08-13-60/01:01-70-03/04
+* 88-08-13-60/01:01-71-03/02
+* 88-08-13-60/01:01-76-03/03
+* 90-08-82-00/00:01-65-03/05
+* 90-08-82:01.70.04
+* 90-09-01-00/01:01-65-03/05
+* 90-09-22-00/00:01-65-03/05
+* 90-09-22-00/00:01-70-03/04
+* 90-09-22-00/00:01-71-03/02
+* 90-09-24-00/01:01-65-03/05
+* 90-09-24-00/01:01-71-03/02
+* 90-09-24-00/01:01-76-03/03
+* 90-09-24:01.65.05
+* 90-09-25-00/00:01-76-03/03
+* 90-09-25:01.70.04
+* 90-09-26-00/00:01-65-03/05
+* 90-09-26-00/00:01-71-03/02
+* 90-09-26-00/00:01-76-03/03
+* 93-07-01-80/00:01-70-03/04
+* 93-07-22-40/00:01-65-03/05
+* 93-07-22-40/00:01-69-03/02
+* 93-07-22-80/00:01-70-03/04
+* 93-07-22-80/00:01-71-03/02
+* 93-07-23-80/00:01-71-03/02
+* 93-07-23-80/01:01-71-03/02
+* 93-07-24-40/00:01-76-03/03
+* 93-07-24-80/00:01-70-03/04
+* null:null
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -12872,16 +13216,16 @@ Von diesem Datensammler unterstützte Produkte:
 | Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
 
 
-.110+| Stiftung .15+| Scheibe | Kapazität (GB) | Implementiert |  | Genutzte Kapazität 
+.110+| Stiftung .15+| Scheibe | Kapazität (GB) | Implementiert |  |  
 
 
-| Datenträger-ID | Implementiert |  | Identifiziert diese Festplatte eindeutig im Array 
+| Datenträger-ID | Implementiert |  |  
 
 
 | Gruppe | Implementiert |  |  
 
 
-| Standort | Lücke |  | Wo sich diese Festplatte physisch im Array befindet 
+| Standort | Lücke |  |  
 
 
 | Modell | Implementiert |  |  
@@ -12896,7 +13240,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Rolle | Implementiert |  |  
 
 
-| Rollenaufzählung | Implementiert |  | Enumeration für Datenträgerrolle 
+| Rollenaufzählung | Implementiert |  |  
 
 
 | Suchzeit | Implementiert |  |  
@@ -12905,22 +13249,22 @@ Von diesem Datensammler unterstützte Produkte:
 | Seriennummer | Implementiert |  |  
 
 
-| Geschwindigkeit | Implementiert |  | Geschwindigkeit der Festplatte (U/min) 
+| Geschwindigkeit | Implementiert |  |  
 
 
-| Statusaufzählung | Implementiert |  | Enumeration für den Festplattenstatus 
+| Statusaufzählung | Implementiert |  |  
 
 
-| Typ Enum | Implementiert |  | Enumeration für Datenträgertyp 
+| Typ Enum | Implementiert |  |  
 
 
 | Verkäufer | Implementiert |  |  
 
 
-.10+| Datenträgergruppe | Kapazität | Implementiert |  | Snapshot Verwendete Kapazität in MB 
+.10+| Datenträgergruppe | Kapazität | Implementiert |  |  
 
 
-| DiskGroup-ID | Implementiert |  | eindeutige ID der Datenträgergruppe 
+| DiskGroup-ID | Implementiert |  |  
 
 
 | Datenträgertyp | Nicht verfügbar |  |  
@@ -12929,10 +13273,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Name | Implementiert |  |  
 
 
-| Physische Festplattenkapazität (MB) | Implementiert |  | wird als Rohkapazität für Speicherpools verwendet 
+| Physische Festplattenkapazität (MB) | Implementiert |  |  
 
 
-| Redundanz | Implementiert |  | Redundanzstufe 
+| Redundanz | Implementiert |  |  
 
 
 | Status | Implementiert |  |  
@@ -12941,10 +13285,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Verwendete Kapazität | Implementiert |  |  
 
 
-| Anbieter-DiskGroup-Typ | Implementiert |  | Herstellerbezeichnung des Datenträgergruppentyps 
+| Anbieter-DiskGroup-Typ | Implementiert |  |  
 
 
-| Virtuell | Implementiert |  | Ist dies ein Gerät zur Speichervirtualisierung? 
+| Virtuell | Implementiert |  |  
 
 
 .4+| ISCSI-Netzwerkportal | IP | Implementiert |  |  
@@ -13004,7 +13348,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Sicherheit | Implementiert |  |  
 
 
-.4+| Info | Datenquellenname | Implementiert |  | Info 
+.4+| Info | Datenquellenname | Implementiert |  |  
 
 
 | Datum | Implementiert |  |  
@@ -13019,10 +13363,10 @@ Von diesem Datensammler unterstützte Produkte:
 .14+| Storage | IP anzeigen | Implementiert |  |  
 
 
-| Fehlgeschlagene Rohkapazität | Implementiert |  | Rohkapazität ausgefallener Festplatten (Summe aller ausgefallenen Festplatten) 
+| Fehlgeschlagene Rohkapazität | Implementiert |  |  
 
 
-| Familie | Implementiert |  | Die Speicherfamilie könnte Clariion, Symmetrix usw. sein 
+| Familie | Implementiert |  |  
 
 
 | IP | Implementiert |  |  
@@ -13043,19 +13387,19 @@ Von diesem Datensammler unterstützte Produkte:
 | Name | Implementiert |  |  
 
 
-| Gesamte Rohkapazität | Implementiert |  | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
+| Gesamte Rohkapazität | Implementiert |  |  
 
 
 | Seriennummer | Implementiert |  |  
 
 
-| Freie Rohkapazität | Implementiert |  | Rohkapazität der Ersatzfestplatten (Summe aller Ersatzfestplatten) 
+| Freie Rohkapazität | Implementiert |  |  
 
 
-| SupportActive Aktiv | Implementiert |  | Angegeben, wenn der Speicher Aktiv-Aktiv-Konfigurationen unterstützt 
+| SupportActive Aktiv | Implementiert |  |  
 
 
-| Virtuell | Implementiert |  | Ist dies ein Gerät zur Speichervirtualisierung? 
+| Virtuell | Implementiert |  |  
 
 
 .2+| Speicherknoten | Name | Implementiert |  |  
@@ -13064,34 +13408,34 @@ Von diesem Datensammler unterstützte Produkte:
 | UUID | Implementiert |  |  
 
 
-.18+| Speicherpool | Komprimierung aktiviert | Implementiert |  | Ist die Komprimierung im Speicherpool aktiviert? 
+.18+| Speicherpool | Komprimierung aktiviert | Implementiert |  |  
 
 
-| Kompressionseinsparungen | Implementiert |  | Verhältnis der Kompressionseinsparungen in Prozent 
+| Kompressionseinsparungen | Implementiert |  |  
 
 
-| Deduplizierung aktiviert | Implementiert |  | Ist die Deduplizierung im Speicherpool aktiviert? 
+| Deduplizierung aktiviert | Implementiert |  |  
 
 
-| In DWH-Kapazität einschließen | Implementiert |  | Eine Möglichkeit von ACQ, zu steuern, welche Speicherpools in der DWH-Kapazität interessant sind 
+| In DWH-Kapazität einschließen | Implementiert |  |  
 
 
 | Name | Implementiert |  |  
 
 
-| Physische Festplattenkapazität (MB) | Implementiert |  | wird als Rohkapazität für Speicherpools verwendet 
+| Physische Festplattenkapazität (MB) | Implementiert |  |  
 
 
-| Raid-Gruppe | Implementiert |  | gibt an, ob dieser Speicherpool eine RAID-Gruppe ist 
+| Raid-Gruppe | Implementiert |  |  
 
 
-| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert |  | Verhältnis zur Umrechnung von nutzbarer Kapazität in Rohkapazität 
+| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert |  |  
 
 
-| Redundanz | Implementiert |  | Redundanzstufe 
+| Redundanz | Implementiert |  |  
 
 
-| Weiches Limit (MB) | Implementiert |  | Größe des logischen Datenträgers, die während der Erstellung oder Größenänderung des Datenträgers definiert wird 
+| Weiches Limit (MB) | Implementiert |  |  
 
 
 | Status | Implementiert |  |  
@@ -13100,19 +13444,19 @@ Von diesem Datensammler unterstützte Produkte:
 | Speicherpool-ID | Implementiert |  |  
 
 
-| Thin Provisioning wird unterstützt | Implementiert |  | Ob dieses interne Volume Thin Provisioning für die darüber liegende Volume-Schicht unterstützt 
+| Thin Provisioning wird unterstützt | Implementiert |  |  
 
 
 | Gesamtzugewiesene Kapazität | Implementiert |  |  
 
 
-| Gesamte genutzte Kapazität | Implementiert |  | Gesamtkapazität in MB 
+| Gesamte genutzte Kapazität | Implementiert |  |  
 
 
 | Typ | Lücke |  |  
 
 
-| Virtuell | Implementiert |  | Ist dies ein Gerät zur Speichervirtualisierung? 
+| Virtuell | Implementiert |  |  
 
 
 | Verschlüsselt | Implementiert |  |  
@@ -13130,7 +13474,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Quellvolumen | Implementiert |  |  
 
 
-| Status | Implementiert |  | Freitext zur Beschreibung des Gerätezustands 
+| Status | Implementiert |  |  
 
 
 | Statusaufzählung | Implementiert |  |  
@@ -13142,10 +13486,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Zielvolumen | Implementiert |  |  
 
 
-| Technologie | Implementiert |  | Technologie, die die Speichereffizienz verändert 
+| Technologie | Implementiert |  |  
 
 
-.10+| Volumen | Kapazität | Implementiert |  | Snapshot Verwendete Kapazität in MB 
+.10+| Volumen | Kapazität | Implementiert |  |  
 
 
 | Kreuzungspfad | Implementiert |  |  
@@ -13157,7 +13501,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Schutzart | Implementiert |  |  
 
 
-| Gesamte Rohkapazität | Implementiert |  | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
+| Gesamte Rohkapazität | Implementiert |  |  
 
 
 | Speicherpool-ID | Implementiert |  |  
@@ -13175,7 +13519,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Komprimierung aktiviert | Implementiert |  |  
 
 
-.5+| Volumenkarte | LUN | Implementiert |  | Name der Backend-LUN 
+.5+| Volumenkarte | LUN | Implementiert |  |  
 
 
 | Maskierung erforderlich | Implementiert |  |  
@@ -15176,7 +15520,7 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | - 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.132 7.9.33.95 7.9.40.251 7.9.41.65 
+| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.132 7.9.33.95 7.9.40.251 7.9.41.65 
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -15856,7 +16200,123 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| 2072-12F 2072-12G 2072-224 2072-24C 2072-24E 2072-24F 2072-24G 2072-2N4 2072-324 2072-3H4 2072-3N2 2072-3N4 2072-92F 2072-92G 2076-124 2076-12F 2076-224 2076-24F 2076-24G 2076-524 2076-624 2076-724 2076-824 2076-AF6 2076- AFF 2077-24F 2077-24G 2077-424 2077-4H4 2078-12F 2078-12G 2078-224 2078-24C 2078-24F 2078-24G 2078-324 2078-424 2078-4H4 2078-92G 2078-AF3 4657-24G 4657-924 4662-12G 4662-24G 4662-6H2 4666-AH8 4666-UH8 4680-24H 4680-2P4 4680-3P4 4680-92H 4983-AH8 9843-AE2 9843-AE3 9846-AG8 9848-AF7 9848-AF8 9848-AG8 9848-UG8 SVC | 1.5.2.7 1.6.1.2 1.6.1.4 1.6.1.5 7.7.1.8 7.8.1.11 7.8.1.12 7.8.1.13 7.8.1.14 7.8.1.16 7.8.1.5 7.8.1.6 7.8.1.7 7.8.1.8 8.2.1.10 8.2.1.8 8.2.1.9 8.3.1.10 8.3.1.2 8.3.1.5 8.3.1.6 8.3.1.7 8.3.1.8 8.3.1.9 8.4.0.10 8.4.0.11 8.4.0.13 8.4.0.15 8.4.0.2 8.4.0.5 8.4.0.6 8.4.0.9 8.4.2.0 8.5.0.10 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.14 8.5.0.5 8.5.0.6 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.0 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.7.0.0 8.7.0.1 8.7.0.2 8.7.0.3 
+ a| 
+* 2072-12F
+* 2072-12G
+* 2072-224
+* 2072-24C
+* 2072-24E
+* 2072-24F
+* 2072-24G
+* 2072-2N4
+* 2072-324
+* 2072-3H4
+* 2072-3N2
+* 2072-3N4
+* 2072-92F
+* 2072-92G
+* 2076-124
+* 2076-12F
+* 2076-224
+* 2076-24F
+* 2076-24G
+* 2076-524
+* 2076-624
+* 2076-724
+* 2076-824
+* 2076-AF6
+* 2076-AFF
+* 2077-24F
+* 2077-24G
+* 2077-424
+* 2077-4H4
+* 2078-12F
+* 2078-12G
+* 2078-224
+* 2078-24C
+* 2078-24F
+* 2078-24G
+* 2078-324
+* 2078-424
+* 2078-4H4
+* 2078-92G
+* 2078-AF3
+* 4657-24G
+* 4657-924
+* 4662-12G
+* 4662-24G
+* 4662-6H2
+* 4666-AH8
+* 4666-UH8
+* 4680-24H
+* 4680-2P4
+* 4680-3P4
+* 4680-92H
+* 4983-AH8
+* 9843-AE2
+* 9843-AE3
+* 9846-AG8
+* 9848-AF7
+* 9848-AF8
+* 9848-AG8
+* 9848-UG8
+* Switched Virtual Connection
+
+ a| 
+* 1.5.2.7
+* 1.6.1.2
+* 1.6.1.4
+* 1.6.1.5
+* 7.7.1.8
+* 7.8.1.11
+* 7.8.1.12
+* 7.8.1.13
+* 7.8.1.14
+* 7.8.1.16
+* 7.8.1.5
+* 7.8.1.6
+* 7.8.1.7
+* 7.8.1.8
+* 8.2.1.10
+* 8.2.1.8
+* 8.2.1.9
+* 8.3.1.10
+* 8.3.1.2
+* 8.3.1.5
+* 8.3.1.6
+* 8.3.1.7
+* 8.3.1.8
+* 8.3.1.9
+* 8.4.0.10
+* 8.4.0.11
+* 8.4.0.13
+* 8.4.0.15
+* 8.4.0.2
+* 8.4.0.5
+* 8.4.0.6
+* 8.4.0.9
+* 8.4.2.0
+* 8.5.0.10
+* 8.5.0.11
+* 8.5.0.12
+* 8.5.0.13
+* 8.5.0.14
+* 8.5.0.5
+* 8.5.0.6
+* 8.5.0.7
+* 8.5.0.8
+* 8.5.0.9
+* 8.6.0.0
+* 8.6.0.2
+* 8.6.0.3
+* 8.6.0.4
+* 8.6.0.5
+* 8.7.0.0
+* 8.7.0.1
+* 8.7.0.2
+* 8.7.0.3
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -19177,40 +19637,40 @@ Von diesem Datensammler unterstützte Produkte:
 | Gebraucht | Implementiert | HTTPS |  
 
 
-.6+| Datenträgergruppe | Kapazität | Implementiert | HTTPS | Snapshot Verwendete Kapazität in MB 
+.6+| Datenträgergruppe | Kapazität | Implementiert | HTTPS |  
 
 
-| DiskGroup-ID | Implementiert | HTTPS | eindeutige ID der Datenträgergruppe 
+| DiskGroup-ID | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
 
 
-| Physische Festplattenkapazität (MB) | Implementiert | HTTPS | wird als Rohkapazität für Speicherpools verwendet 
+| Physische Festplattenkapazität (MB) | Implementiert | HTTPS |  
 
 
 | Verwendete Kapazität | Implementiert | HTTPS |  
 
 
-| Virtuell | Implementiert | HTTPS | Ist dies ein Gerät zur Speichervirtualisierung? 
+| Virtuell | Implementiert | HTTPS |  
 
 
-.8+| Dateifreigabe | Ist InternalVolume | Implementiert | HTTPS | ob die Dateifreigabe ein internes Volume (NetApp-Volume) darstellt oder ob es sich um einen Qtree/Ordner innerhalb des internen Volumes handelt 
+.8+| Dateifreigabe | Ist InternalVolume | Implementiert | HTTPS |  
 
 
-| Sind Oplocks aktiviert? | Implementiert | HTTPS | ob opportunistische Sperren auf dem FileShare aktiviert sind 
+| Sind Oplocks aktiviert? | Implementiert | HTTPS |  
 
 
-| Wird geteilt | Implementiert | HTTPS | ob mit dieser Dateifreigabe Freigaben verknüpft sind 
+| Wird geteilt | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
 
 
-| Weg | Implementiert | HTTPS | Pfad der Dateifreigabe 
+| Weg | Implementiert | HTTPS |  
 
 
-| Qtree-ID | Implementiert | HTTPS | eindeutige ID des Qtree 
+| Qtree-ID | Implementiert | HTTPS |  
 
 
 | Sicherheitstyp | Implementiert | HTTPS |  
@@ -19309,7 +19769,7 @@ Von diesem Datensammler unterstützte Produkte:
 | API-Version | Implementiert | HTTPS |  
 
 
-| Datenquellenname | Implementiert | HTTPS | Info 
+| Datenquellenname | Implementiert | HTTPS |  
 
 
 | Datum | Implementiert | HTTPS |  
@@ -19321,34 +19781,34 @@ Von diesem Datensammler unterstützte Produkte:
 | Urheberschlüssel | Implementiert | HTTPS |  
 
 
-.41+| Internes Volumen | Komprimierung aktiviert | Implementiert | HTTPS | Ist die Komprimierung im Speicherpool aktiviert? 
+.41+| Internes Volumen | Komprimierung aktiviert | Implementiert | HTTPS |  
 
 
-| Kompressionseinsparungen | Implementiert | HTTPS | Verhältnis der Kompressionseinsparungen in Prozent 
+| Kompressionseinsparungen | Implementiert | HTTPS |  
 
 
-| Zugewiesene Datenkapazität | Lücke | HTTPS | für Daten zugewiesene Kapazität 
+| Zugewiesene Datenkapazität | Lücke | HTTPS |  
 
 
 | Verwendete Datenkapazität | Implementiert | HTTPS |  
 
 
-| Deduplizierung aktiviert | Implementiert | HTTPS | Ist die Deduplizierung im Speicherpool aktiviert? 
+| Deduplizierung aktiviert | Implementiert | HTTPS |  
 
 
-| Deduplizierungseinsparungen | Implementiert | HTTPS | Verhältnis der Deduplizierungseinsparungen in Prozent 
+| Deduplizierungseinsparungen | Implementiert | HTTPS |  
 
 
-| GuidKey 1 | Implementiert | HTTPS | GuidKey1 ist implizit für alle Objekte, deren GUID-Schlüssel sich seit OCI-Version 7.3.5 nicht geändert hat. 
+| GuidKey 1 | Implementiert | HTTPS |  
 
 
-| GuidKey 2 | Implementiert | HTTPS | GuidKey2 ist implizit für alle Objekte, deren GUID-Schlüssel sich seit OCI-Version 7.3.5 nicht geändert hat. 
+| GuidKey 2 | Implementiert | HTTPS |  
 
 
 | Interne Volume-ID | Implementiert | HTTPS |  
 
 
-| Letzter bekannter Zugriffszeitpunkt | Implementiert | HTTPS | Letzter bekannter Zugriff auf das Volume 
+| Letzter bekannter Zugriffszeitpunkt | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
@@ -19357,19 +19817,19 @@ Von diesem Datensammler unterstützte Produkte:
 | Schutzart | Implementiert | HTTPS |  
 
 
-| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert | HTTPS | Verhältnis zur Umrechnung von nutzbarer Kapazität in Rohkapazität 
+| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert | HTTPS |  
 
 
-| Snapshot-zugewiesene Kapazität | Lücke | HTTPS | Zugewiesene Kapazität der Snapshots in MB 
+| Snapshot-zugewiesene Kapazität | Lücke | HTTPS |  
 
 
-| Snapshot-Anzahl | Implementiert | HTTPS | Anzahl der Snapshots auf den internen Volumes 
+| Snapshot-Anzahl | Implementiert | HTTPS |  
 
 
 | Snapshot der genutzten Kapazität | Implementiert | HTTPS |  
 
 
-| Platzgarantie | Implementiert | HTTPS | Platzgarantierichtlinie (Datei, Datenträger oder keine) 
+| Platzgarantie | Implementiert | HTTPS |  
 
 
 | Status | Implementiert | HTTPS |  
@@ -19381,7 +19841,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Thin Provisioning | Implementiert | HTTPS |  
 
 
-| Thin Provisioning wird unterstützt | Implementiert | HTTPS | Ob dieses interne Volume Thin Provisioning für die darüber liegende Volume-Schicht unterstützt 
+| Thin Provisioning wird unterstützt | Implementiert | HTTPS |  
 
 
 | Gesamtzugewiesene Kapazität | Implementiert | HTTPS |  
@@ -19390,10 +19850,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Gesamte durch Klonen eingesparte Kapazität in MB | Implementiert | HTTPS |  
 
 
-| Gesamte genutzte Kapazität | Implementiert | HTTPS | Gesamtkapazität in MB 
+| Gesamte genutzte Kapazität | Implementiert | HTTPS |  
 
 
-| Gesamte genutzte Kapazität (MB) | Implementiert | HTTPS | Platzhalter für die vom Gerät ausgelesene verbrauchte Kapazität 
+| Gesamte genutzte Kapazität (MB) | Implementiert | HTTPS |  
 
 
 | Typ | Lücke | HTTPS |  
@@ -19402,13 +19862,13 @@ Von diesem Datensammler unterstützte Produkte:
 | UUID | Implementiert | HTTPS |  
 
 
-| Virtueller Speicher | Implementiert | HTTPS | Besitz von virtuellem Speicher (vfiler) 
+| Virtueller Speicher | Implementiert | HTTPS |  
 
 
 | Adaptive QoS-Richtlinie | Implementiert | HTTPS |  
 
 
-| Kommentar | Lücke | HTTPS | Status: Freitextkommentar, der das SVM beschreibt 
+| Kommentar | Lücke | HTTPS |  
 
 
 | Gruppen-ID | Implementiert | HTTPS |  
@@ -19450,37 +19910,37 @@ Von diesem Datensammler unterstützte Produkte:
 | Internes Zielvolumen | Implementiert | HTTPS |  
 
 
-| Technologie | Implementiert | HTTPS | Technologie, die die Speichereffizienz verändert 
+| Technologie | Implementiert | HTTPS |  
 
 
-.12+| QTree | GuidKey 1 | Implementiert | HTTPS | GuidKey1 ist implizit für alle Objekte, deren GUID-Schlüssel sich seit OCI-Version 7.3.5 nicht geändert hat. 
+.12+| QTree | GuidKey 1 | Implementiert | HTTPS |  
 
 
-| GuidKey 2 | Implementiert | HTTPS | GuidKey2 ist implizit für alle Objekte, deren GUID-Schlüssel sich seit OCI-Version 7.3.5 nicht geändert hat. 
+| GuidKey 2 | Implementiert | HTTPS |  
 
 
-| GuidKey 3 | Implementiert | HTTPS | GuidKey3 ist implizit für alle Objekte, deren GUID-Schlüssel sich seit OCI-Version 7.3.5 nicht geändert hat. 
+| GuidKey 3 | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
 
 
-| Oplocks | Implementiert | HTTPS | Gibt an, ob opportunistische Sperren auf dem Qtree aktiviert sind 
+| Oplocks | Implementiert | HTTPS |  
 
 
-| Qtree-ID | Implementiert | HTTPS | eindeutige ID des Qtree 
+| Qtree-ID | Implementiert | HTTPS |  
 
 
-| Kontingent-HardCapacity-Limit (MB) | Implementiert | HTTPS | Maximal zulässiger Speicherplatz für das Kontingentziel 
+| Kontingent-HardCapacity-Limit (MB) | Implementiert | HTTPS |  
 
 
-| Kontingent SoftCapacity-Limit (MB) | Implementiert | HTTPS | Maximal zulässiger Speicherplatz für das Kontingentziel 
+| Kontingent SoftCapacity-Limit (MB) | Implementiert | HTTPS |  
 
 
-| Kontingent Verwendete Kapazität | Implementiert | HTTPS | Aktuell belegter Speicherplatz in MB 
+| Kontingent Verwendete Kapazität | Implementiert | HTTPS |  
 
 
-| Sicherheitsstil | Implementiert | HTTPS | Sicherheitsstil des Verzeichnisses: Unix, NTFS oder gemischt 
+| Sicherheitsstil | Implementiert | HTTPS |  
 
 
 | Status | Implementiert | HTTPS |  
@@ -19489,37 +19949,37 @@ Von diesem Datensammler unterstützte Produkte:
 | Typ | Lücke | HTTPS |  
 
 
-.15+| Quote | GuidKey 1 | Implementiert | HTTPS | GuidKey1 ist implizit für alle Objekte, deren GUID-Schlüssel sich seit OCI-Version 7.3.5 nicht geändert hat. 
+.15+| Quote | GuidKey 1 | Implementiert | HTTPS |  
 
 
-| GuidKey 2 | Implementiert | HTTPS | GuidKey2 ist implizit für alle Objekte, deren GUID-Schlüssel sich seit OCI-Version 7.3.5 nicht geändert hat. 
+| GuidKey 2 | Implementiert | HTTPS |  
 
 
-| GuidKey 3 | Implementiert | HTTPS | GuidKey3 ist implizit für alle Objekte, deren GUID-Schlüssel sich seit OCI-Version 7.3.5 nicht geändert hat. 
+| GuidKey 3 | Implementiert | HTTPS |  
 
 
-| Feste Kapazitätsgrenze (MB) | Implementiert | HTTPS | maximal zulässiger Speicherplatz für das Kontingentziel (hartes Limit) 
+| Feste Kapazitätsgrenze (MB) | Implementiert | HTTPS |  
 
 
-| Festes Dateilimit | Implementiert | HTTPS | Maximale Anzahl der für das Kontingentziel zulässigen Dateien 
+| Festes Dateilimit | Implementiert | HTTPS |  
 
 
 | Interne Volume-ID | Implementiert | HTTPS |  
 
 
-| Qtree-ID | Implementiert | HTTPS | eindeutige ID des Qtree 
+| Qtree-ID | Implementiert | HTTPS |  
 
 
-| Kontingent-ID | Implementiert | HTTPS | eindeutige ID des Kontingents 
+| Kontingent-ID | Implementiert | HTTPS |  
 
 
-| Weiche Kapazitätsgrenze (MB) | Implementiert | HTTPS | Maximal zulässiger Speicherplatz für das Kontingentziel 
+| Weiche Kapazitätsgrenze (MB) | Implementiert | HTTPS |  
 
 
-| Soft-File-Limit | Implementiert | HTTPS | Maximal zulässige Anzahl von Dateien für das Kontingentziel 
+| Soft-File-Limit | Implementiert | HTTPS |  
 
 
-| Schwellenwert (MB) | Implementiert | HTTPS | Festplattenspeicherschwelle für das Kontingentziel 
+| Schwellenwert (MB) | Implementiert | HTTPS |  
 
 
 | Typ | Lücke | HTTPS |  
@@ -19528,43 +19988,43 @@ Von diesem Datensammler unterstützte Produkte:
 | Verwendete Kapazität | Implementiert | HTTPS |  
 
 
-| Verwendete Dateien | Implementiert | HTTPS | Anzahl der aktuell verwendeten Dateien 
+| Verwendete Dateien | Implementiert | HTTPS |  
 
 
-| Benutzer-/Gruppenziel | Implementiert | HTTPS | Benutzer-/Gruppenziel, auf das sich dieses Kontingent bezieht 
+| Benutzer-/Gruppenziel | Implementiert | HTTPS |  
 
 
 .4+| Aktie | Beschreibung | Implementiert | HTTPS |  
 
 
-| IP-Schnittstellen | Implementiert | HTTPS | durch Kommas getrennte Liste von IP-Adressen, auf denen diese Freigabe verfügbar ist 
+| IP-Schnittstellen | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
 
 
-| Protokoll | Implementiert | HTTPS | Enumeration für Share-Protokoll 
+| Protokoll | Implementiert | HTTPS |  
 
 
 .2+| Initiator der Freigabe | Initiator | Implementiert | HTTPS |  
 
 
-| Erlaubnis | Implementiert | HTTPS | Berechtigungen für diese bestimmte Freigabe 
+| Erlaubnis | Implementiert | HTTPS |  
 
 
-.18+| Storage | Cluster | Nicht verfügbar | HTTPS | Ob dieser Speicher ein Cluster ist 
+.18+| Storage | Cluster | Nicht verfügbar | HTTPS |  
 
 
-| CPU-Anzahl | Implementiert | HTTPS | CPU-Anzahl des Speichers 
+| CPU-Anzahl | Implementiert | HTTPS |  
 
 
 | IP anzeigen | Implementiert | HTTPS |  
 
 
-| Fehlgeschlagene Rohkapazität | Implementiert | HTTPS | Rohkapazität ausgefallener Festplatten (Summe aller ausgefallenen Festplatten) 
+| Fehlgeschlagene Rohkapazität | Implementiert | HTTPS |  
 
 
-| Familie | Implementiert | HTTPS | Die Speicherfamilie könnte Clariion, Symmetrix usw. sein 
+| Familie | Implementiert | HTTPS |  
 
 
 | IP | Implementiert | HTTPS |  
@@ -19588,25 +20048,25 @@ Von diesem Datensammler unterstützte Produkte:
 | Name | Implementiert | HTTPS |  
 
 
-| Gesamte Rohkapazität | Implementiert | HTTPS | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
+| Gesamte Rohkapazität | Implementiert | HTTPS |  
 
 
 | Seriennummer | Implementiert | HTTPS |  
 
 
-| Freie Rohkapazität | Implementiert | HTTPS | Rohkapazität der Ersatzfestplatten (Summe aller Ersatzfestplatten) 
+| Freie Rohkapazität | Implementiert | HTTPS |  
 
 
-| SupportActive Aktiv | Implementiert | HTTPS | Angegeben, wenn der Speicher Aktiv-Aktiv-Konfigurationen unterstützt 
+| SupportActive Aktiv | Implementiert | HTTPS |  
 
 
-| Virtuell | Implementiert | HTTPS | Ist dies ein Gerät zur Speichervirtualisierung? 
+| Virtuell | Implementiert | HTTPS |  
 
 
 | UUID | Implementiert | HTTPS |  
 
 
-.7+| Speicherknoten | Cache-Größe | Implementiert | HTTPS | Gerätecachegröße in MB 
+.7+| Speicherknoten | Cache-Größe | Implementiert | HTTPS |  
 
 
 | Modell | Implementiert | HTTPS |  
@@ -19615,58 +20075,58 @@ Von diesem Datensammler unterstützte Produkte:
 | Name | Implementiert | HTTPS |  
 
 
-| Status | Implementiert | HTTPS | Freitext zur Beschreibung des Gerätezustands 
+| Status | Implementiert | HTTPS |  
 
 
 | UUID | Implementiert | HTTPS |  
 
 
-| Version | Implementiert | HTTPS | Softwareversion 
+| Version | Implementiert | HTTPS |  
 
 
 | Management-IP-Adressen | Implementiert | HTTPS |  
 
 
-.29+| Speicherpool | Komprimierung aktiviert | Implementiert | HTTPS | Ist die Komprimierung im Speicherpool aktiviert? 
+.29+| Speicherpool | Komprimierung aktiviert | Implementiert | HTTPS |  
 
 
-| Kompressionseinsparungen | Implementiert | HTTPS | Verhältnis der Kompressionseinsparungen in Prozent 
+| Kompressionseinsparungen | Implementiert | HTTPS |  
 
 
-| Zugewiesene Datenkapazität | Lücke | HTTPS | für Daten zugewiesene Kapazität 
+| Zugewiesene Datenkapazität | Lücke | HTTPS |  
 
 
 | Verwendete Datenkapazität | Implementiert | HTTPS |  
 
 
-| Deduplizierung aktiviert | Implementiert | HTTPS | Ist die Deduplizierung im Speicherpool aktiviert? 
+| Deduplizierung aktiviert | Implementiert | HTTPS |  
 
 
-| Deduplizierungseinsparungen | Implementiert | HTTPS | Verhältnis der Deduplizierungseinsparungen in Prozent 
+| Deduplizierungseinsparungen | Implementiert | HTTPS |  
 
 
-| In DWH-Kapazität einschließen | Implementiert | HTTPS | Eine Möglichkeit von ACQ, zu steuern, welche Speicherpools in der DWH-Kapazität interessant sind 
+| In DWH-Kapazität einschließen | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
 
 
-| Physische Festplattenkapazität (MB) | Implementiert | HTTPS | wird als Rohkapazität für Speicherpools verwendet 
+| Physische Festplattenkapazität (MB) | Implementiert | HTTPS |  
 
 
-| Raid-Gruppe | Implementiert | HTTPS | gibt an, ob dieser Speicherpool eine RAID-Gruppe ist 
+| Raid-Gruppe | Implementiert | HTTPS |  
 
 
-| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert | HTTPS | Verhältnis zur Umrechnung von nutzbarer Kapazität in Rohkapazität 
+| Verhältnis von Rohmaterial zu Nutzmaterial | Implementiert | HTTPS |  
 
 
-| Redundanz | Implementiert | HTTPS | Redundanzstufe 
+| Redundanz | Implementiert | HTTPS |  
 
 
-| Reservierte Kapazität | Implementiert | HTTPS | Reservierte Kapazität in MB 
+| Reservierte Kapazität | Implementiert | HTTPS |  
 
 
-| Snapshot-zugewiesene Kapazität | Lücke | HTTPS | Zugewiesene Kapazität der Snapshots in MB 
+| Snapshot-zugewiesene Kapazität | Lücke | HTTPS |  
 
 
 | Snapshot der genutzten Kapazität | Implementiert | HTTPS |  
@@ -19678,22 +20138,22 @@ Von diesem Datensammler unterstützte Produkte:
 | Speicherpool-ID | Implementiert | HTTPS |  
 
 
-| Thin Provisioning wird unterstützt | Implementiert | HTTPS | Ob dieses interne Volume Thin Provisioning für die darüber liegende Volume-Schicht unterstützt 
+| Thin Provisioning wird unterstützt | Implementiert | HTTPS |  
 
 
 | Gesamtzugewiesene Kapazität | Implementiert | HTTPS |  
 
 
-| Gesamte genutzte Kapazität | Implementiert | HTTPS | Gesamtkapazität in MB 
+| Gesamte genutzte Kapazität | Implementiert | HTTPS |  
 
 
 | Typ | Lücke | HTTPS |  
 
 
-| Verwendet FlashPools | Implementiert | HTTPS | Geben Sie an, ob dieser Speicherpool Flash Pools verwendet (NetApp spezifisch). 
+| Verwendet FlashPools | Implementiert | HTTPS |  
 
 
-| Virtuell | Implementiert | HTTPS | Ist dies ein Gerät zur Speichervirtualisierung? 
+| Virtuell | Implementiert | HTTPS |  
 
 
 |  | Implementiert | HTTPS |  
@@ -19714,19 +20174,19 @@ Von diesem Datensammler unterstützte Produkte:
 | UUID | Implementiert | HTTPS |  
 
 
-.13+| Speicher-VirtualMachine | Zugewiesene Kapazität (MB) | Implementiert | HTTPS | Zugewiesene Kapazität der Snapshots 
+.13+| Speicher-VirtualMachine | Zugewiesene Kapazität (MB) | Implementiert | HTTPS |  
 
 
 | Kommentar | Implementiert | HTTPS |  
 
 
-| Kompressionseinsparungen | Implementiert | HTTPS | Verhältnis der Kompressionseinsparungen in Prozent 
+| Kompressionseinsparungen | Implementiert | HTTPS |  
 
 
-| Deduplizierungseinsparungen | Implementiert | HTTPS | Verhältnis der Deduplizierungseinsparungen in Prozent 
+| Deduplizierungseinsparungen | Implementiert | HTTPS |  
 
 
-| Guid-Schlüssel | Implementiert | HTTPS | Global eindeutiger Schlüssel der virtuellen Speichermaschine 
+| Guid-Schlüssel | Implementiert | HTTPS |  
 
 
 | IP-Bereich | Implementiert | HTTPS |  
@@ -19738,10 +20198,10 @@ Von diesem Datensammler unterstützte Produkte:
 | Name | Implementiert | HTTPS |  
 
 
-| Protokolle | Implementiert | HTTPS | CSV von SVM-fähigen Protokollen (FCP, ISCSI, NFS, CIFS …) 
+| Protokolle | Implementiert | HTTPS |  
 
 
-| Status | Implementiert | HTTPS | Freitext zur Beschreibung des Gerätezustands 
+| Status | Implementiert | HTTPS |  
 
 
 | Typ | Lücke | HTTPS |  
@@ -19762,25 +20222,25 @@ Von diesem Datensammler unterstützte Produkte:
 | VirtualMachine-Volume-Referenz | Datenträgername | Implementiert | HTTPS |  
 
 
-.13+| Volumen | Kapazität | Implementiert | HTTPS | Snapshot Verwendete Kapazität in MB 
+.13+| Volumen | Kapazität | Implementiert | HTTPS |  
 
 
-| Datenträgergruppe | Implementiert | HTTPS | Datenträgergruppentyp 
+| Datenträgergruppe | Implementiert | HTTPS |  
 
 
 | Kreuzungspfad | Implementiert | HTTPS |  
 
 
-| Letzter bekannter Zugriffszeitpunkt | Implementiert | HTTPS | Letzter bekannter Zugriff auf das Volume 
+| Letzter bekannter Zugriffszeitpunkt | Implementiert | HTTPS |  
 
 
 | Name | Implementiert | HTTPS |  
 
 
-| Qtree-ID | Implementiert | HTTPS | eindeutige ID des Qtree 
+| Qtree-ID | Implementiert | HTTPS |  
 
 
-| Gesamte Rohkapazität | Implementiert | HTTPS | Gesamte Rohkapazität (Summe aller Festplatten im Array) 
+| Gesamte Rohkapazität | Implementiert | HTTPS |  
 
 
 | Speicherpool-ID | Implementiert | HTTPS |  
@@ -19801,7 +20261,7 @@ Von diesem Datensammler unterstützte Produkte:
 | Verschlüsselt | Implementiert | HTTPS |  
 
 
-.4+| Volumenkarte | LUN | Implementiert | HTTPS | Name der Backend-LUN 
+.4+| Volumenkarte | LUN | Implementiert | HTTPS |  
 
 
 | Protokoll-Controller | Implementiert | HTTPS |  
@@ -20082,7 +20542,71 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| AFF-A150 AFF-A1K AFF-A20 AFF-A200 AFF-A220 AFF -A250 AFF-A300 AFF-A320 AFF-A400 AFF-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C60 AFF-C80 AFF-C800 AFF AFF8040 AFF8060 AFF8080 ASA-A250 ASA-A400 ASA-A800 ASA-A900 ASA-C250 ASA-C400 ASA-C800 CDvM100 CDvM200 DM5000H DM7100F FAS2240-2 FAS2520 FAS2552 FAS2554 FAS2620 FAS2650 FAS2720 FAS2750 FAS2820 FAS3220 FAS3250 FAS3270 FAS500f FAS6210 FAS8020 FAS8040 FAS8060 FAS8080 FAS8200 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX  a| 
+ a| 
+* AFF-A150
+* AFF-A1K
+* AFF-A20
+* AFF-A200
+* AFF-A220
+* AFF-A250
+* AFF-A300
+* AFF-A320
+* AFF-A400
+* AFF-A70
+* AFF-A700
+* AFF-A700s
+* AFF-A800
+* AFF-A90
+* AFF-A900
+* AFF-C190
+* AFF-C250
+* AFF-C400
+* AFF-C60
+* AFF-C80
+* AFF-C800
+* AFF8020
+* AFF8040
+* AFF8060
+* AFF8080
+* ASA-A250
+* ASA-A400
+* ASA-A800
+* ASA-A900
+* ASA-C250
+* ASA-C400
+* ASA-C800
+* CDvM100
+* CDvM200
+* DM5000H
+* DM7100F
+* FAS2240-2
+* FAS2520
+* FAS2552
+* FAS2554
+* FAS2620
+* FAS2650
+* FAS2720
+* FAS2750
+* FAS2820
+* FAS3220
+* FAS3250
+* FAS3270
+* FAS500f
+* FAS6210
+* FAS8020
+* FAS8040
+* FAS8060
+* FAS8080
+* FAS8200
+* FAS8300
+* FAS8700
+* FAS90
+* FAS9000
+* FAS9500
+* FASDvM300
+* SIMBOX
+
+ a| 
 * 8.2.3P4
 * 8.2.3P5
 * 8.3.1P2
@@ -20286,8 +20810,8 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 * 9.8.0P7
 * 9.8.0P8
 * 9.8.0P9
-* 9,0
-* 9,1
+* 9.9.0
+* 9.9.1
 * 9.9.1P10
 * 9.9.1P11
 * 9.9.1P12
@@ -22401,7 +22925,40 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| AFF-A150 AFF-A220 AFF-A250 AFF-A300 AFF -A400 AFF-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C800 AFF-A250 ASA-A400 ASA-A800 ASA-C250 ASA-C800 ASA FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX  a| 
+ a| 
+* AFF-A150
+* AFF-A220
+* AFF-A250
+* AFF-A300
+* AFF-A400
+* AFF-A70
+* AFF-A700
+* AFF-A700s
+* AFF-A800
+* AFF-A90
+* AFF-A900
+* AFF-C190
+* AFF-C250
+* AFF-C400
+* AFF-C800
+* ASA-A250
+* ASA-A400
+* ASA-A800
+* ASA-C250
+* ASA-C800
+* CDvM200
+* FAS2720
+* FAS2750
+* FAS2820
+* FAS8200
+* FAS8300
+* FAS8700
+* FAS9000
+* FAS9500
+* FASDvM300
+* SIMBOX
+
+ a| 
 * NetApp Release 9.14.1P10: Do., 28. Nov. 2024, 12:32:16 UTC
 * NetApp Release 9.14.1P11: Mi., 22. Januar 2025, 11:55:28 UTC
 * NetApp Release 9.14.1P1: Do., 15. Feb. 2024, 00:45:21 UTC
@@ -23226,7 +23783,34 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| H410S-2 H610S-2 H610S-4 SF19210 SF2405 SF4805 SF9605 SF9608 H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9605 SF9608 | 11.1.0.72 11.7.0.76 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380 
+ a| 
+* H410S-0
+* H410S-1
+* H410S-2
+* H500S
+* H610S-1
+* H610S-2
+* H610S-4
+* SF19210
+* SF2405
+* SF38410
+* SF4805
+* SF9605
+* SF9608
+
+ a| 
+* 11.1.0.72
+* 11.7.0.76
+* 12.0.0.333
+* 12.2.0.777
+* 12.3.0.958
+* 12.3.1.103
+* 12.3.1.165
+* 12.3.2.3
+* 12.5.0.897
+* 12.7.0.380
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -23944,7 +24528,62 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | API-Versionen | Modelle | Firmware-Versionen 
 
 
-| 3,2 3,3 3,4 3,5 4,0 4,1 | Webscale | 11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.5 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0 11.7.0.11 11.7.0.12 11.7.0.13 11.7.0.3 11.7.0.4 11.7.0.5 11.7.0.6 11.7.0.8 11.7.0.9 11.8.0 11.8.0.1 11.8.0.2 11.8.0.3 11.8.0.5 11.8.0.6 11.8.0.7 11.8.0.8 11.8.0.9 11.9.0 11.9.0.1 11.9.0.2 11.9.0.3 11.9.0.4 
+ a| 
+* 3,2
+* 3,3
+* 3,4
+* 3,5
+* 4,0
+* 4,1
+
+ a| 
+* Webscale
+
+ a| 
+* 11.4.0
+* 11.5.0.11
+* 11.5.0.6
+* 11.5.0.7
+* 11.5.0.9
+* 11.6.0
+* 11.6.0.10
+* 11.6.0.11
+* 11.6.0.12
+* 11.6.0.13
+* 11.6.0.14
+* 11.6.0.15
+* 11.6.0.16
+* 11.6.0.4
+* 11.6.0.5
+* 11.6.0.7
+* 11.6.0.8
+* 11.6.0.9
+* 11.7.0
+* 11.7.0.11
+* 11.7.0.12
+* 11.7.0.13
+* 11.7.0.3
+* 11.7.0.4
+* 11.7.0.5
+* 11.7.0.6
+* 11.7.0.8
+* 11.7.0.9
+* 11.8.0
+* 11.8.0.1
+* 11.8.0.2
+* 11.8.0.3
+* 11.8.0.5
+* 11.8.0.6
+* 11.8.0.7
+* 11.8.0.8
+* 11.8.0.9
+* 11.9.0
+* 11.9.0.1
+* 11.9.0.2
+* 11.9.0.3
+* 11.9.0.4
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -24775,268 +25414,6 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
-== OpenStack (REST-API / SSH)
-
-|===
-|===
-Von diesem Datensammler unterstützte Produkte:
-
-|===
-| Produkt | Kategorie | Funktion/Attribut | Status | Verwendetes Protokoll | Weitere Informationen 
-
-
-.76+| Stiftung .7+| Datenspeicher | Kapazität | Implementiert | HTTPS | Snapshot Verwendete Kapazität in MB 
-
-
-| MOID | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Bereitgestellte Kapazität | Implementiert | HTTPS |  
-
-
-| Verwendete Kapazität | Implementiert | HTTPS |  
-
-
-| Virtuelles Center IP | Implementiert | HTTPS |  
-
-
-.3+| NasShare-Datenspeicher | DataStore-OID | Implementiert | HTTPS |  
-
-
-| Nas-Freigabe-OID | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-.4+| NasShare-Host | Nas-Freigabe-OID | Implementiert | HTTPS |  
-
-
-| Host-OID | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Schreibgeschützt | Implementiert | HTTPS |  
-
-
-.6+| LUN | OID | Implementiert | HTTPS |  
-
-
-| Anzahl | Implementiert | HTTPS |  
-
-
-| DataStore-OID | Implementiert | HTTPS |  
-
-
-| Host-OID | Implementiert | HTTPS |  
-
-
-| Datenträgername | Implementiert | HTTPS |  
-
-
-| TID | Implementiert | HTTPS |  
-
-
-.6+| NAS-Freigabe | Kapazität | Implementiert | HTTPS | Zugewiesene Kapazität in MB 
-
-
-| Filer-IP | Implementiert | HTTPS |  
-
-
-| Filer-Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Pfad teilen | Implementiert | HTTPS | Damit ein HvNasShare einem Share zugeordnet werden kann 
-
-
-| Typ | Lücke | HTTPS |  
-
-
-.6+| Weg | OID | Implementiert | HTTPS |  
-
-
-| Lun-OID | Implementiert | HTTPS |  
-
-
-| Host-Port-WWPN | Implementiert | HTTPS |  
-
-
-| Speicherport-WWPN | Implementiert | HTTPS |  
-
-
-| Aktiv | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-.6+| Server | Cluster | Implementiert | HTTPS | Clustername 
-
-
-| Name des Rechenzentrums | Implementiert | HTTPS |  
-
-
-| Host-OID | Implementiert | HTTPS |  
-
-
-| MOID | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Virtuelles Center IP | Implementiert | HTTPS |  
-
-
-.7+| Virtuelle Festplatte | Kapazität | Implementiert | HTTPS | Snapshot Verwendete Kapazität in MB 
-
-
-| DataStore-OID | Implementiert | HTTPS |  
-
-
-| Lun-OID | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-| Verwendete Kapazität | Implementiert | HTTPS |  
-
-
-.13+| Virtuelle Maschine | Gaststaat | Implementiert | HTTPS |  
-
-
-| DataStore-OID | Implementiert | HTTPS |  
-
-
-| Host-OID | Implementiert | HTTPS |  
-
-
-| IP-Adressen | Implementiert | HTTPS |  
-
-
-| MOID | Implementiert | HTTPS |  
-
-
-| Erinnerung | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Energiezustand | Implementiert | HTTPS |  
-
-
-| Zustandsänderungszeit | Implementiert | HTTPS |  
-
-
-| Prozessoren | Implementiert | HTTPS |  
-
-
-| Bereitgestellte Kapazität | Implementiert | HTTPS |  
-
-
-| Verwendete Kapazität | Implementiert | HTTPS |  
-
-
-.3+| VirtualMachine-Festplatte | OID | Implementiert | HTTPS |  
-
-
-| VirtualDisk-OID | Implementiert | HTTPS |  
-
-
-| VirtualMachine-OID | Implementiert | HTTPS |  
-
-
-.7+| Gastgeber | Host-CPU-Anzahl | Implementiert | HTTPS |  
-
-
-| Hostdomäne | Implementiert | HTTPS |  
-
-
-| Vom Host installierter Speicher | Implementiert | HTTPS |  
-
-
-| Host-Betriebssystem | Implementiert | HTTPS |  
-
-
-| IP-Adressen | Implementiert | HTTPS |  
-
-
-| Name | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-.4+| ISCSI-Knoten | Host-Aliase | Implementiert | HTTPS |  
-
-
-| Knotenname | Implementiert | HTTPS |  
-
-
-| OID | Implementiert | HTTPS |  
-
-
-| Typ | Lücke | HTTPS |  
-
-
-.4+| Info | Datenquellenname | Implementiert | HTTPS | Info 
-
-
-| Datum | Implementiert | HTTPS |  
-
-
-| Absender-ID | Implementiert | HTTPS |  
-
-
-| Urheberschlüssel | Implementiert | HTTPS |  
-
-
-.4+| Leistung .4+| Gastgeber | Gesamte CPU-Auslastung | Implementiert |  |  
-
-
-| Schlüssel | Implementiert |  |  
-
-
-| Gesamtspeicherauslastung | Implementiert |  |  
-
-
-| Server-ID | Implementiert |  |  
-|===
-Von diesem Datensammler verwendete Verwaltungs-APIs:
-
-|===
-| API | Verwendetes Protokoll | Verwendetes Transportschichtprotokoll | Verwendete eingehende Ports | Verwendete ausgehende Ports | Unterstützt Authentifizierung | Erfordert nur schreibgeschützte Anmeldeinformationen | Unterstützt Verschlüsselung | Firewall-freundlich (statische Ports) 
-
-
-| OpenStack REST API | HTTPS | HTTPS | 443 |  | true | FALSCH | true | true 
-
-
-| OpenStack SSH | SSH | SSH | 22 |  | true | FALSCH | true | true 
-|===
-
-
 == Oracle ZFS (HTTPS)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -25045,7 +25422,46 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| Sun ZFS-Speicher 7120 Sun ZFS-Speicher 7320 Sun ZFS-Speicher 7330 Sun ZFS-Speicher 7335 Sun ZFS-Speicher 7350 Sun ZFS-Speicher 7370 Sun ZFS-Speicher 7390 Sun ZFS-Speicher 7420 | 1-1.1 1-1.2 1-1.3 1-1.34 1-1.4 2013.06.05.6.12 2013.06.05.6.15 2013.06.05.7.21 2013.06.05.7.24 2013.06.05.7.25 2013.06.05.7.26 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.26 2013.06.05.8.29 2013.06.05.8.37 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.53 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.61 2013.06.05.8.65 2013.06.05.8.7 2013.06.05.8.72 2013.06.05.8.74 2013.06.05.8.76 
+ a| 
+* Sun ZFS Storage 7120
+* Sun ZFS Storage 7320
+* Sun ZFS Storage 7330
+* Sun ZFS Storage 7335
+* Sun ZFS Storage 7350
+* Sun ZFS Storage 7370
+* Sun ZFS Storage 7390
+* Sun ZFS Storage 7420
+
+ a| 
+* 1-1,1
+* 1-1,2
+* 1-1,3
+* 1-1,34
+* 1-1,4
+* 2013.06.05.6.12
+* 2013.06.05.6.15
+* 2013.06.05.7.21
+* 2013.06.05.7.24
+* 2013.06.05.7.25
+* 2013.06.05.7.26
+* 2013.06.05.7.29
+* 2013.06.05.8.0
+* 2013.06.05.8.26
+* 2013.06.05.8.29
+* 2013.06.05.8.37
+* 2013.06.05.8.44
+* 2013.06.05.8.50
+* 2013.06.05.8.53
+* 2013.06.05.8.56
+* 2013.06.05.8.6
+* 2013.06.05.8.61
+* 2013.06.05.8.65
+* 2013.06.05.8.7
+* 2013.06.05.8.72
+* 2013.06.05.8.74
+* 2013.06.05.8.76
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
@@ -25556,7 +25972,90 @@ Von diesem Datensammler unterstützte Modelle und Versionen:
 | Modelle | Firmware-Versionen 
 
 
-| DFSC1 FA-450 FA-C40R3 FA-C50R4 FA-C60 FA-C60R3 FA-C70R4 FA-C90R4 FA-X10R2 FA-X10R3 FA-X20R2 FA-X20R3 FA-X20R4 FA-X50R2 FA-X50R3 FA-X50R4 FA-X70R2 FA-X70R3 FA-X70R4 FA-X90R2 FA-X90R3 FA-X90R4 FA-XL130 FA-XL170 FA-m20 FA-m20r2 FA-m50 FA-m70 FA-m70r2 SAUERSTOFF | 5.3.14 5.3.20 6.1.10 6.1.14 6.1.18 6.1.19 6.1.21 6.1.22 6.1.23 6.2.10 6.3.10 6.3.11 6.3.12 6.3.13 6.3.14 6.3.15 6.3.16 6.3.17 6.3.18 6.3.3 6.3.6 6.3.7 6.3.9 6.4.10 6.4.2 6.4.3 6.4.7 6.4.8 6.4.9 6.5.0 6.5.1 6.5.2 6.5.3 6.5.4 6.5.5 6.5.6 6.5.7 6.5.8 6.5.9 6.6.10 6.6.11 6.6.5 6.6.6 6.6.7 6.7.0 6.7.1 6.8.1 6.8.2 6.8.3 
+ a| 
+* DFSC1
+* FA-450
+* FA-C40R3
+* FA-C50R4
+* FA-C60
+* FA-C60R3
+* FA-C70R4
+* FA-C90R4
+* FA-X10R2
+* FA-X10R3
+* FA-X20R2
+* FA-X20R3
+* FA-X20R4
+* FA-X50R2
+* FA-X50R3
+* FA-X50R4
+* FA-X70R2
+* FA-X70R3
+* FA-X70R4
+* FA-X90R2
+* FA-X90R3
+* FA-X90R4
+* FA-XL130
+* FA-XL170
+* FA-m20
+* FA-m20r2
+* FA-m50
+* FA-m70
+* FA-m70r2
+* SAUERSTOFF
+
+ a| 
+* 5.3.14
+* 5.3.20
+* 6.1.10
+* 6.1.14
+* 6.1.18
+* 6.1.19
+* 6.1.21
+* 6.1.22
+* 6.1.23
+* 6.2.10
+* 6.3.10
+* 6.3.11
+* 6.3.12
+* 6.3.13
+* 6.3.14
+* 6.3.15
+* 6.3.16
+* 6.3.17
+* 6.3.18
+* 6.3.3
+* 6.3.6
+* 6.3.7
+* 6.3.9
+* 6.4.10
+* 6.4.2
+* 6.4.3
+* 6.4.7
+* 6.4.8
+* 6.4.9
+* 6.5.0
+* 6.5.1
+* 6.5.2
+* 6.5.3
+* 6.5.4
+* 6.5.5
+* 6.5.6
+* 6.5.7
+* 6.5.8
+* 6.5.9
+* 6.6.10
+* 6.6.11
+* 6.6.5
+* 6.6.6
+* 6.6.7
+* 6.7.0
+* 6.7.1
+* 6.8.1
+* 6.8.2
+* 6.8.3
+
+
 |===
 Von diesem Datensammler unterstützte Produkte:
 
