@@ -47,6 +47,4 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 Hinweisdateien enthalten Informationen zu Urheberrechten und Lizenzen Dritter, die in der NetApp -Software verwendet werden.
 
-link:media/DII_ON-PREM_Notice_Nov2025.pdf["Hinweis für Data Infrastructure Insights (ehemals Cloud Insights), Fenster=_blank"]
-
-link:media/DII_WS_Notice_Nov2025.pdf["Hinweis zur Workload-Sicherheit (ehemals Cloud Secure), Fenster=_blank"]
+link:media/DII_Notice_Feb_2026.pdf["Hinweis für Data Infrastructure Insights (einschließlich Workload Security), window=_blank"]
