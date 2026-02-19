@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: ai_for_dii_overview.html 
+keywords: ai, 
+summary: Sie können den KI-Assistenten von DII verwenden, um Ihre Daten zusammenzufassen, Einblicke zu gewinnen, Probleme zu beheben und Ihre Ressourcen zu planen. 
+---
+= Data Infrastructure Insights AI Assistant
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Der *Data Infrastructure Insights AI Assistant* wurde entwickelt, um Sie bei der effizienteren Arbeit mit Ihren Infrastrukturdaten zu unterstützen. Er kann Ihnen helfen, Informationen zu analysieren, Erkenntnisse zu gewinnen, operative Herausforderungen zu meistern und fundierte Entscheidungen über Ihre Ressourcen zu treffen.
+
+[NOTE]
+====
+Der DII KI-Assistent ist als Limited Preview verfügbar. link:/concept_preview_features.html["Mehr erfahren"] über die Data Infrastructure Insights Preview-Funktionen.
+
+Der KI-Assistent ist nur für DII-Mandanten verfügbar, die auf AWS bereitgestellt werden.
+
+====
+image:ai_assistant_sample_question.png["Beispielfrage für KI-Assistent"]
+
+
+
+== Lernen Sie den neuen intelligenten Partner Ihrer Infrastruktur kennen
+
+Der KI-Assistent revolutioniert die Interaktion mit Ihren Daten und verwandelt komplexe Abfragen in einfache Dialoge. Entdecken Sie sofort verborgene Muster, beschleunigen Sie die Fehlersuche und treffen Sie datenbasierte Entscheidungen mit Zuversicht. Erhalten Sie sofort Antworten auf Fragen wie:
+
+* Wie kann ich einen Monitor so konfigurieren, dass er bei anhaltend unakzeptabler Latenz eine Warnung ausgibt?
+* Welche Speicherpools weisen die höchste Auslastung in der Umgebung auf?
+* Wie viele Warnmeldungen wurden in der letzten Stunde generiert?
+* Was sind die am häufigsten gesammelten Protokolltypen?
+* Welche Hosts weisen die höchste CPU-Auslastung auf?
+* Welche Asset-Typen stehen für die Überwachung in der Umgebung zur Verfügung?
+* Gibt es derzeit kritische Warnmeldungen?
+* Wie ist der allgemeine Gesundheitszustand der Speichersysteme?
+* Welche virtuellen Maschinen verbrauchen am meisten Arbeitsspeicher?
+* Wie viele Monitore sind im System konfiguriert?
+
+
+
+
+== Bevor Sie den KI-Assistenten verwenden
+
+* Der KI-Assistent ist dazu konzipiert, Sie zu unterstützen. Obwohl er auf Genauigkeit bedacht ist, wird dringend empfohlen, seine Ausgaben mit menschlicher Aufsicht zu überprüfen, um die besten Ergebnisse zu erzielen.
+* Zu Ihrer eigenen Sicherheit und zum Schutz der Privatsphäre von Ihnen und Ihren Kollegen geben Sie bitte keine personenbezogenen Daten (PII) ein.
+* Um die Sicherheit Ihrer Daten zu gewährleisten, geben Sie bitte keine sensiblen oder vertraulichen Informationen ein.
+* Lesen Sie das link:https://www.netapp.com/pdf.html?item=/media/71584-netapp-data-processing-addendum.pdf["NetApp Data Processing Nachtrag"] und das link:https://www.netapp.com/company/legal/privacy-policy/["NetApp Datenschutzrichtlinie"].
+
+
+
+
+== Der KI-Assistent arbeitet mit Ihnen zusammen
+
+Der DII AI Assistant kann Ihnen helfen, Fragen zu den Daten Ihrer IT-Infrastruktur zu beantworten. Um dies effektiv zu tun, muss er Ihre Anfrage verstehen sowie wissen, welche spezifischen Daten erforderlich sind, um auf Ihre Anfrage zu antworten.
+
+Das DII-System enthält verschiedene Datentypen, darunter:
+
+* Asset-Telemetrie (Hosts, Storage, VMs, etc.)
+* Datalake-Metriken (Kubernetes, NetApp Storage, VMware)
+* Protokolle von verschiedenen Systemen
+* Warnmeldungen, die auf Anomalien hinweisen können
+
+
+Für das beste Erlebnis geben Sie dem Assistenten spezifische Informationen zu:
+
+* Die Art der Daten, die Sie analysieren möchten (z. B. spezifische Assets, Metriken oder Systeme),
+* Der Zeitraum, der Sie interessiert, und
+* Gibt es bestimmte Problemtypen, über die Sie sich Sorgen machen (Leistungsprobleme, Kapazitätsprobleme, Fehler usw.)
+
+
+
+
+== Zugriff auf den Assistenten
+
+Um den DII AI Assistant aufzurufen, wählen Sie einfach das Eulensymbol in der unteren Ecke des Bildschirms aus. Ein Benutzer mit der Rolle „Owner“ muss den Nutzungsbedingungen zustimmen, bevor ein Benutzer den AI Assistant in Ihrem Mandanten verwenden kann.
+
+image:ai_assistant_icon.png["dii_ai_assistant_icon"]
