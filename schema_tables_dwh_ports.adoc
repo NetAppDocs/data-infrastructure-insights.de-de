@@ -1,0 +1,351 @@
+---
+sidebar: sidebar 
+permalink: schema_tables_dwh_ports.html 
+summary: Schematabellen und Beziehungen für die dwh_ports Datenbank 
+keywords: dwh, data warehouse, schema, reporting 
+---
+= Datenbank-Schema-Referenz für dwh_ports
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Diese Referenz enthält detaillierte Schemainformationen für die dwh_ports Datenbank, einschließlich Tabellenstrukturen, Felddefinitionen, Datentypen und Beziehungen.
+
+
+
+== Tabellen und Ansichten
+
+
+
+=== Kardinäle
+
+[cols="1,1,2"]
+|===
+| Feld | Typ | Beschreibung 
+
+
+| Ziffer | Ganzzahl | Eine Zahl zwischen 0 und 99 
+|===
+'''
+
+
+=== connected_device_dimension
+
+*Primärschlüssel:* tk
+
+[cols="1,1,2"]
+|===
+| Feld | Typ | Beschreibung 
+
+
+| tk | Ganzzahl | Technischer Schlüssel 
+
+
+| Name | Zeichenkette | Name des Geräts 
+
+
+| Hersteller | Zeichenkette | Hersteller des Geräts 
+
+
+| Modell | Zeichenkette | Modell des Geräts 
+
+
+| Typ | Zeichenkette | Gerätetyp 
+
+
+| Firmware | Zeichenkette | Firmware-Version, die auf dem Gerät ausgeführt wird 
+
+
+| ID | Lang | Die ID des Geräts 
+
+
+| neueste | Zeichenkette | Letzte Flagge 
+|===
+*Beziehungen:*
+
+* ports_fact (eins-zu-viele)
+
+
+'''
+
+
+=== Datumsdimension
+
+[cols="1,1,2"]
+|===
+| Feld | Typ | Beschreibung 
+
+
+| tk | Ganzzahl | Technischer Schlüssel 
+
+
+| fullDate | DateTimeOffset | Vollständiges Datum 
+
+
+| dayInMonth | Byte | Tag im Monat 
+
+
+| dayInYear | Ganzzahl | Tag im Jahr 
+
+
+| dateYear | Ganzzahl | Jahr 
+
+
+| yearLabel | Zeichenkette | Jahresangabe 
+
+
+| monthNum | Byte | Monatsnummer 
+
+
+| monthLabel | Zeichenkette | Monatsbezeichnung 
+
+
+| dayInWeekNum | Byte | Wochentagsnummer 
+
+
+| Quartal | Byte | Quartal 
+
+
+| quarterLabel | Zeichenkette | Quartalsbezeichnung 
+
+
+| dayInQuarter | Ganzzahl | Tag im Quartal 
+
+
+| repQuarter | Byte | Repräsentatives Quartal 
+
+
+| repMonth | Byte | Repräsentativer Monat 
+
+
+| repWeek | Byte | Repräsentative Woche 
+
+
+| repDay | Byte | Repräsentativer Tag 
+
+
+| repMonthOrLatest | Byte | Repräsentativer Monat oder aktuellster 
+
+
+| sspFlag | Byte | SSP-Flag 
+
+
+| neueste | Zeichenkette | Letzte Flagge 
+
+
+| Zukunft | Zeichenkette | Zukunfts-Flagge 
+|===
+*Beziehungen:*
+
+* ports_fact (eins-zu-viele)
+
+
+'''
+
+
+=== port_dimension
+
+[cols="1,1,2"]
+|===
+| Feld | Typ | Beschreibung 
+
+
+| tk | Ganzzahl | Technischer Schlüssel 
+
+
+| wwn | Zeichenkette | World Wide Name 
+
+
+| Name | Zeichenkette | Portname 
+
+
+| gbicType | Zeichenkette | GBIC-Typ 
+
+
+| Typ | Zeichenkette | Porttyp 
+
+
+| Geschwindigkeit | Zeichenkette | Portgeschwindigkeit 
+
+
+| isGenerated | Zeichenkette | Generiertes Flag 
+
+
+| URL | Zeichenkette | Referenz-URL 
+
+
+| ID | Lang | Eindeutiger Identifikator 
+
+
+| neueste | Zeichenkette | Letzte Flagge 
+
+
+| dateTk | Ganzzahl | Technischer Datumsschlüssel 
+|===
+*Beziehungen:*
+
+* ports_fact (eins-zu-viele)
+
+
+'''
+
+
+=== ports_fact
+
+*Primärschlüssel:* tk
+
+[cols="1,1,2"]
+|===
+| Feld | Typ | Beschreibung 
+
+
+| tk | Ganzzahl | Technischer Schlüssel 
+
+
+| dateTk | Ganzzahl | Technischer Datumsschlüssel 
+
+
+| switchTk | Ganzzahl | Technischen Schlüssel wechseln 
+
+
+| connectedDeviceTk | Ganzzahl | Technischer Schlüssel des verbundenen Geräts 
+
+
+| portTk | Ganzzahl | Technischer Portschlüssel 
+
+
+| Fabric | Zeichenkette | Fabric-Name oder WWN 
+
+
+| Geschwindigkeit | Zeichenkette | Portgeschwindigkeit 
+
+
+| connectivityType | Zeichenkette | Verbindungstyp 
+
+
+| Typ | Zeichenkette | Porttyp 
+
+
+| Status | Zeichenkette | Portstatus 
+|===
+*Beziehungen:*
+
+* connected_device_dimension (Viele-zu-Eins)
+* port_dimension (Viele-zu-Eins)
+* date_dimension (Viele-zu-Eins)
+* switch_dimension (many-to-one)
+
+
+'''
+
+
+=== ports_fact_current
+
+[cols="1,1,2"]
+|===
+| Feld | Typ | Beschreibung 
+
+
+| tk | Ganzzahl | Technischer Schlüssel 
+
+
+| dateTk | Ganzzahl | Technischer Datumsschlüssel 
+
+
+| switchTk | Ganzzahl | Technischen Schlüssel wechseln 
+
+
+| connectedDeviceTk | Ganzzahl | Technischer Schlüssel des verbundenen Geräts 
+
+
+| portTk | Ganzzahl | Technischer Portschlüssel 
+
+
+| Fabric | Zeichenkette | Fabric-Name oder WWN 
+
+
+| Geschwindigkeit | Zeichenkette | Portgeschwindigkeit 
+
+
+| connectivityType | Zeichenkette | Verbindungstyp 
+
+
+| Typ | Zeichenkette | Porttyp 
+
+
+| Status | Zeichenkette | Portstatus 
+|===
+'''
+
+
+=== switch_dimension
+
+[cols="1,1,2"]
+|===
+| Feld | Typ | Beschreibung 
+
+
+| tk | Ganzzahl | Technischer Schlüssel 
+
+
+| wwn | Zeichenkette | World Wide Name 
+
+
+| Name | Zeichenkette | Switch-Name 
+
+
+| Kennung | Zeichenkette | Switch-Kennung 
+
+
+| ip | Zeichenkette | IP-Adresse 
+
+
+| Modell | Zeichenkette | Switch-Modell 
+
+
+| Hersteller | Zeichenkette | Hersteller 
+
+
+| Firmware | Zeichenkette | Firmware-Version 
+
+
+| serialNumber | Zeichenkette | Seriennummer 
+
+
+| npv | Zeichenkette | NPV-Modus-Flag 
+
+
+| isGenerated | Zeichenkette | Generiertes Flag 
+
+
+| Typ | Zeichenkette | Schaltertyp 
+
+
+| URL | Zeichenkette | Referenz-URL 
+
+
+| ID | Lang | Eindeutiger Identifikator 
+
+
+| neueste | Zeichenkette | Letzte Flagge 
+
+
+| dateTk | Ganzzahl | Technischer Datumsschlüssel 
+
+
+| dataCenter | Zeichenkette | Standort des Rechenzentrums 
+
+
+| switchLevel | Zeichenkette | Switch-Ebene 
+|===
+*Beziehungen:*
+
+* ports_fact (eins-zu-viele)
+
+
+'''

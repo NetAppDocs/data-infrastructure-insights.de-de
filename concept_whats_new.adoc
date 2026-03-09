@@ -24,14 +24,16 @@ NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hie
 
 === Sofort intelligente Antworten zu Ihrer Infrastruktur
 
-Lernen Sie den neuen intelligenten Partner Ihrer Infrastruktur kennen: Der *Data Infrastructure Insights AI Assistant* revolutioniert die Interaktion mit Ihren Daten und macht aus komplexen Abfragen einfache Dialoge. Entdecken Sie sofort verborgene Muster, beschleunigen Sie die Fehlerbehebung und treffen Sie datenbasierte Entscheidungen mit Vertrauen. Erhalten Sie sofort Antworten auf Fragen wie:
+Lernen Sie den neuen intelligenten Partner Ihrer Infrastruktur kennen: Die link:ai_for_dii_overview.html["*Data Infrastructure Insights KI-Assistent*"] transformiert die Interaktion mit Ihren Daten und macht aus komplexen Abfragen einfache Gespräche. Entdecken Sie sofort verborgene Muster, beschleunigen Sie die Fehlersuche und treffen Sie datenbasierte Entscheidungen mit Vertrauen. Erhalten Sie sofort Antworten auf Fragen wie:
 
 * Wie kann ich einen Monitor so konfigurieren, dass er bei anhaltend unakzeptabler Latenz eine Warnung ausgibt?
 * Welche Speicherpools weisen die höchste Auslastung in der Umgebung auf?
 * Wie viele Warnmeldungen wurden in der letzten Stunde generiert?
 
 
-Die DII AI Assistant Preview ist ab sofort für die meisten Kunden mit in AWS-Regionen gehosteten Diensten verfügbar; die Azure-Region folgt in Kürze. link:concept_preview_features.html["Mehr erfahren"] über Data Infrastructure Insights Preview-Funktionen. image:ai_assistant_icon.png["KI-Assistent-Symbol"]
+Die DII AI Assistant Preview ist ab sofort für die meisten Kunden mit in AWS-Regionen gehosteten Diensten verfügbar; die Azure-Region folgt in Kürze. link:concept_preview_features.html["Mehr erfahren"] über die Data Infrastructure Insights Preview-Funktionen.
+
+image:ai_assistant_icon.png["KI-Assistent-Symbol"]
 
 
 
