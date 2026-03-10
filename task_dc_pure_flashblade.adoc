@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_pure_flashblade.html 
-keywords: data collector, Pure Storage, pure, FlashBlade 
-summary: Konfigurieren des Pure Storage-Datensammlers. 
+keywords: data collector, Pure Storage, pure, FlashBlade, flashblade 
+summary: Konfiguration des Pure FlashBlade Storage-Datensammlers 
 ---
 = Pure Storage FlashBlade-Datensammler
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights verwendet den Pure Storage FlashBlade-Datensammler, um Bestands- und Leistungsdaten von FlashBlade-Clustern zu sammeln, die Version 2 ihrer REST-API bereitstellen.
+Data Infrastructure Insights verwendet den Pure Storage FlashBlade Datenkollektor, um Inventar- und Leistungsdaten von FlashBlade Clustern zu erfassen, die Version 2 ihrer REST API bereitstellen.
 
 
 
@@ -18,7 +22,7 @@ Data Infrastructure Insights verwendet den Pure Storage FlashBlade-Datensammler,
 
 Für jeden von Data Infrastructure Insights erfassten Asset-Typ wird die am häufigsten verwendete Terminologie für das Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -55,7 +59,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -72,7 +76,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -98,7 +102,7 @@ Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen
 
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

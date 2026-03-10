@@ -7,6 +7,10 @@ summary: Konfigurieren des Red Hat Virtualization-Datenkollektors.
 = Red Hat Virtualization-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

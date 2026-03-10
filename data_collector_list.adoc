@@ -47,9 +47,6 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 | link:task_dc_ms_azure.html["Azure-VMs und VHD"] | Infrastruktur 
 
 
-| link:task_dc_brocade_bna.html["Brocade Network Advisor (BNA)"] | Infrastruktur 
-
-
 | link:task_dc_brocade_fc_switch.html["Brocade Fibre Channel Switches"] | Infrastruktur 
 
 
@@ -126,9 +123,6 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 
 
 | link:task_config_telegraf_flink.html["Flink"] | Service 
-
-
-| link:task_dc_fujitsu_eternus.html["Fujitsu ETERNUS DX"] | Infrastruktur 
 
 
 | link:task_dc_google_cloud.html["Google Compute und Storage"] | Infrastruktur 
@@ -221,12 +215,6 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 | link:task_dc_na_cloud_volumes_ontap.html["NetApp Cloud Volumes ONTAP"] | Infrastruktur 
 
 
-| link:task_dc_na_cloud_connection.html["NetApp Cloud Connection für ONTAP 9.9+"] | Infrastruktur 
-
-
-| link:task_dc_na_7mode.html["NetApp Data ONTAP 7-Mode"] | Infrastruktur 
-
-
 | link:task_dc_na_eseries.html["NetApp E-Serie"] | Infrastruktur 
 
 
@@ -282,6 +270,9 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 
 
 | link:task_config_telegraf_puppetagent.html["Puppenagent"] | Service 
+
+
+| link:task_dc_pure_flashblade.html["Pure FlashBlade"] | Infrastruktur 
 
 
 | link:task_dc_pure_flasharray.html["Pure Storage FlashArray"] | Infrastruktur 

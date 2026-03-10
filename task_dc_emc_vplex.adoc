@@ -1,19 +1,23 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_emc_vplex.html 
-keywords: data collector, VPLEX, EMC 
+keywords: data collector, VPLEX, EMC, vplex, 
 summary: Konfigurieren des VPLEX-Datenkollektors. 
 ---
 = Konfigurieren des EMC VPLEX-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Dieser Datensammler erfasst Bestands- und Leistungsdaten von EMC VPLEX-Speichersystemen.  Zur Konfiguration benötigt der Datensammler eine IP-Adresse des VPLEX-Servers und ein Domänenkonto auf Administratorebene.
 
 
-NOTE: Für die Leistungserfassung von Data Infrastructure Insights aus Vplex-Clustern muss der Leistungsarchivdienst betriebsbereit sein, um die CSV-Dateien und Protokolle zu füllen, die Data Infrastructure Insights über SCP-basierte Dateikopien abruft.  NetApp hat festgestellt, dass diese Funktionalität bei vielen Vplex-Firmware-Upgrades/Management-Station-Updates nicht mehr funktioniert.  Kunden, die solche Upgrades planen, möchten Dell/EMC möglicherweise proaktiv fragen, ob diese Funktionalität durch das geplante Upgrade nicht mehr funktionsfähig ist, und wenn ja, wie sie sie wieder aktivieren können, um Lücken in der Leistungstransparenz zu minimieren.  Der Vplex-Leistungscode von Cloud Insight prüft bei jeder Abfrage, ob alle erwarteten Dateien vorhanden sind und ob sie ordnungsgemäß aktualisiert werden. Wenn sie fehlen oder veraltet sind, protokolliert Data Infrastructure Insights Leistungserfassungsfehler.
+NOTE: Die Leistungserfassung von Data Infrastructure Insights bei VPLEX-Clustern erfordert, dass der Performance-Archivierungsdienst betriebsbereit ist, um die .CSV-Dateien und Protokolle zu füllen, die Data Infrastructure Insights über SCP-basierte Dateikopien abruft. NetApp hat beobachtet, dass viele VPLEX-Firmware-Upgrades/Management-Station-Updates diese Funktionalität außer Betrieb setzen. Kunden, die solche Upgrades planen, sollten Dell/EMC proaktiv fragen, ob ihr geplantes Upgrade diese Funktionalität außer Betrieb setzt und, falls ja, wie sie diese wieder aktivieren können, um Lücken in der Performance-Transparenz zu minimieren. Der VPLEX-Performance-Code von Cloud Insights prüft bei jeder Abfrage, ob alle erwarteten Dateien vorhanden sind und ob sie ordnungsgemäß aktualisiert werden; falls sie fehlen oder veraltet sind, protokolliert Data Infrastructure Insights Fehler bei der Leistungserfassung.
 
 
 
