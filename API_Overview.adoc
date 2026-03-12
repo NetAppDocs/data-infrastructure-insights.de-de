@@ -7,6 +7,10 @@ summary: Die Data Infrastructure Insights API ermöglicht die Integration mit an
 = API für Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -77,7 +81,7 @@ Auf den Swagger-Seiten finden Sie Beispiele speziell für die API, die Sie verwe
 
 Die Data Infrastructure Insights API ist kategoriebasiert und enthält derzeit die folgenden Typen:
 
-* Der Typ ASSETS enthält Asset-, Abfrage- und Such-APIs.
+* Der Typ ASSETS enthält Asset-, Query- und Search-APIs. DII-Asset-Attribute und -Metriken werden manchmal als „odata“ bezeichnet. Die APIs hierfür sind typischerweise über /rest/v1/asset oder /rest/v1/query zugänglich. Siehe die <<api-documentation-swagger,API Swagger-Dokumentation>> für weitere Informationen.
 +
 ** Assets: Listen Sie Objekte der obersten Ebene auf und rufen Sie ein bestimmtes Objekt oder eine Objekthierarchie ab.
 ** Abfrage: Rufen Sie Data Infrastructure Insights -Abfragen ab und verwalten Sie sie.
@@ -86,13 +90,13 @@ Die Data Infrastructure Insights API ist kategoriebasiert und enthält derzeit d
 
 
 * Der Typ DATA COLLECTION wird zum Abrufen und Verwalten von Datensammlern verwendet.
-* Der Typ DATA INGESTION wird zum Abrufen und Verwalten von Aufnahmedaten und benutzerdefinierten Metriken verwendet, beispielsweise von Telegraf-Agenten
+* DATA INGESTION-Typ wird verwendet, um Ingestion-Daten und benutzerdefinierte Metriken abzurufen und zu verwalten, wie z. B. von Telegraf-Agenten. Diese werden manchmal als "Datalake"- oder "Lake"-Metriken bezeichnet. Die APIs dafür werden normalerweise über /rest/v1/lake aufgerufen. Siehe <<api-documentation-swagger,API Swagger-Dokumentation>> für weitere Informationen.
 * LOG INGESTION dient zum Abrufen und Verwalten von Protokolldaten
 
 
 Im Laufe der Zeit werden möglicherweise weitere Typen und/oder APIs verfügbar.  Die aktuellsten API-Informationen finden Sie imlink:#api-documentation-swagger["API Swagger-Dokumentation"] .
 
-Beachten Sie, dass die API-Typen, auf die ein Benutzer Zugriff hat, auch von derlink:concept_user_roles.html["Benutzerrolle"] Sie verfügen über jeden Data Infrastructure Insights Funktionssatz (Überwachung, Workload-Sicherheit, Berichterstellung).
+Beachten Sie, dass die API-Typen, auf die ein Benutzer Zugriff hat, auch von der link:concept_user_roles.html["Benutzerrolle"] abhängen, die er in jedem Data Infrastructure Insights Funktionssatz (Observability, Workload Security, Reporting) hat.
 
 
 
