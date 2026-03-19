@@ -22,15 +22,18 @@ NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hie
 
 
 
-=== Der AI Assistant von DII ist für alle verfügbar!
+=== AI Assistant ist jetzt allgemein verfügbar
 
-Der Data Infrastructure Insights AI Assistant ist als Vorschauversion verfügbar und beinhaltet nun die folgenden Verbesserungen:
+Der Data Infrastructure Insights AI Assistant ist jetzt allgemein für alle Kunden für DII-Sites, die auf AWS gehostet werden, verfügbar.
 
-* Azure region availability: Für Kunden, deren DII-Site in Azure gehostet wird, steht Ihnen jetzt der DII Assistant zur Verfügung.
-* Bis zu 7 Tage an Daten: Der Assistent kann jetzt auf bis zu 7 Tage hochauflösender Metriken zugreifen, was eine umfassendere Datenanalyse und Einblicke ermöglicht.
+Bitte beachten Sie, dass sich der KI-Assistent auf Azure sites noch in der Vorschauphase befindet. Beobachten Sie diesen Bereich für die Ankündigung der allgemeinen Verfügbarkeit.
 
 
-'''
+
+=== Infrastructure Insights-Funktionen entfernt
+
+Die „Infrastructure Insights“-Funktionen von DII _Shared Resources Under Stress_, _Kubernetes Namespaces Running out of Space_ und _Reclaiming ONTAP Cold Storage_ sind in DII nicht mehr verfügbar.
+
 
 
 == Februar 2026

@@ -1,0 +1,588 @@
+---
+sidebar: sidebar 
+permalink: whats_new_archive_2020.html 
+summary: Neue Funktionen und Features, die ab 2020 in Data Infrastructure Insights verfügbar sind 
+keywords: features 
+---
+= Was ist neu bei Data Infrastructure Insights - Archive 2020
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hier sind einige der neuesten Features und Funktionen, die in Data Infrastructure Insights (ehemals Cloud Insights) verfügbar sind.
+
+
+
+== Dezember 2020
+
+
+
+=== Einfachere Kubernetes-Installation
+
+Die Installation des Kubernetes-Agenten wurde optimiert, sodass weniger Benutzerinteraktionen erforderlich sind. link:task_config_telegraf_agent_k8s.html["Installieren des Kubernetes-Agenten"] umfasst jetzt die Kubernetes-Datenerfassung.
+
+'''
+
+
+== November 2020
+
+
+
+=== Zusätzliche Dashboards
+
+Die folgenden neuen ONTAP-fokussierten Dashboards wurden der Galerie hinzugefügt und stehen zum Importieren zur Verfügung:
+
+* ONTAP: Gesamtleistung und -kapazität
+* ONTAP FAS/ AFF – Kapazitätsauslastung
+* ONTAP FAS/ AFF – Clusterkapazität
+* ONTAP FAS/ AFF – Effizienz
+* ONTAP FAS/ AFF – FlexVol -Leistung
+* ONTAP FAS/ AFF – Knotenbetriebs-/Optimalpunkte
+* ONTAP FAS/ AFF – PrePost-Kapazitätseffizienz
+* ONTAP: Netzwerkportaktivität
+* ONTAP: Leistung der Knotenprotokolle
+* ONTAP: Knoten-Workload-Leistung (Frontend)
+* ONTAP: Prozessor
+* ONTAP: SVM-Workload-Leistung (Frontend)
+* ONTAP: Leistung bei Volumen-Workloads (Frontend)
+
+
+
+
+=== Spaltenumbenennung in Tabellen-Widgets
+
+Sie können Spalten im Abschnitt „Metriken und Attribute“ eines Tabellen-Widgets umbenennen, indem Sie das Widget im Bearbeitungsmodus öffnen und auf das Menü oben in der Spalte klicken.  Geben Sie den neuen Namen ein und klicken Sie auf _Speichern_ oder klicken Sie auf _Zurücksetzen_, um die Spalte wieder auf den ursprünglichen Namen zurückzusetzen.
+
+Beachten Sie, dass dies nur den Anzeigenamen der Spalte im Tabellen-Widget betrifft; der Metrik-/Attributname in den zugrunde liegenden Daten selbst ändert sich nicht.
+
+image:Table_Widget_Column_Rename.png["Tabellen-Widget – Spalte umbenennen"]
+
+'''
+
+
+== Oktober 2020
+
+
+
+=== Standarderweiterung von Integrationsdaten
+
+Die Gruppierung von Tabellen-Widgets ermöglicht jetzt Standarderweiterungen von Kubernetes-, ONTAP Advanced Data- und Agent Node-Metriken.  Wenn Sie beispielsweise Kubernetes-_Knoten_ nach _Cluster_ gruppieren, wird in der Tabelle für jeden Cluster eine Zeile angezeigt.  Sie können dann jede Clusterzeile erweitern, um eine Liste der Knotenobjekte anzuzeigen.
+
+
+
+=== Technischer Support für die Basic Edition
+
+Technischer Support ist jetzt zusätzlich zu den Standard- und Premium-Editionen auch für Abonnenten der Cloud Insights Basic Edition verfügbar.  Darüber hinaus hat Cloud Insights den Workflow zum Erstellen eines NetApp Supporttickets vereinfacht.
+
+
+
+=== Cloud Secure -API
+
+Cloud Secure unterstütztlink:concept_cs_api.html["REST-APIs"] für den Zugriff auf Aktivitäts- und Alarminformationen.  Dies wird durch die Verwendung von API-Zugriffstoken erreicht, die über die Cloud Secure Admin-Benutzeroberfläche erstellt und dann für den Zugriff auf die REST-APIs verwendet werden.  Die Swagger-Dokumentation für diese REST-APIs ist in Cloud Secure integriert.
+
+'''
+
+
+== September 2020
+
+
+
+=== Abfrageseite mit Integrationsdaten
+
+Die Cloud Insights -Abfrageseite unterstützt Integrationsdaten (z. B. von Kubernetes, ONTAP Advanced Metrics usw.).  Beim Arbeiten mit Integrationsdaten wird in der Abfrageergebnistabelle eine „Split-Screen“-Ansicht angezeigt, mit Objekt/Gruppierung auf der linken Seite und Objektdaten (Attribute/Metriken) auf der rechten Seite.  Sie können auch mehrere Attribute zum Gruppieren von Integrationsdaten auswählen.
+
+image:QueryPageIntegrationData.png["Abfrage mit Integrationsdaten"]
+
+
+
+=== Formatierung der Einheitenanzeige im Tabellen-Widget
+
+Die Formatierung der Einheitenanzeige ist jetzt in Tabellen-Widgets für Spalten verfügbar, die Metrik-/Zählerdaten anzeigen (z. B. Gigabyte, MB/Sekunde usw.).  Um die Anzeigeeinheit einer Metrik zu ändern, klicken Sie auf das Menü mit den drei Punkten in der Spaltenüberschrift und wählen Sie „Einheitenanzeige“.  Sie können aus allen verfügbaren Einheiten wählen.  Die verfügbaren Einheiten variieren je nach Art der metrischen Daten in der Anzeigespalte.
+
+image:TableWidgetUnitManagement1.png["Tabellen-Widget-Einheitenverwaltung"]
+
+
+
+=== Detailseite der Erfassungseinheit
+
+Akquisitionseinheiten verfügen jetzt über eine eigene Zielseite, die nützliche Details zu jeder AU sowie Informationen zur Fehlerbehebung bietet.  Derlink:task_configure_acquisition_unit.html#viewing-au-details["AU-Detailseite"] bietet Links zu den Datensammlern der AU sowie hilfreiche Statusinformationen.
+
+
+
+=== Cloud Secure Docker-Abhängigkeit entfernt
+
+Die Abhängigkeit von Cloud Secure von Docker wurde entfernt.  Docker ist für die Installation des Cloud Secure -Agenten nicht mehr erforderlich.
+
+
+
+=== Berichterstellung für Benutzerrollen
+
+Wenn Sie über Cloud Insights Premium Edition mit Reporting verfügen, verfügt jeder Cloud Insights Benutzer in Ihrer Umgebung auch über eine Single Sign-On (SSO)-Anmeldung bei der Reporting-Anwendung (z. B. Cognos). Durch Klicken auf den Link *Berichte* im Menü werden sie automatisch bei Reporting angemeldet.
+
+Ihre Benutzerrolle in Cloud Insights bestimmt ihrelink:reporting_user_roles.html["Berichterstellungsbenutzerrolle"] :
+
+|===
+
+
+| Cloud Insights -Rolle | Berichtsrolle | Berichtsberechtigungen 
+
+
+| Gast | Verbraucher | Kann Berichte anzeigen, planen und ausführen und persönliche Einstellungen wie Sprachen und Zeitzonen festlegen.  Verbraucher können keine Berichte erstellen oder Verwaltungsaufgaben ausführen. 
+
+
+| Benutzer | Autor | Kann alle Verbraucherfunktionen ausführen sowie Berichte und Dashboards erstellen und verwalten. 
+
+
+| Administrator | Administrator | Kann alle Autorenfunktionen sowie alle Verwaltungsaufgaben ausführen, z. B. die Konfiguration von Berichten und das Herunterfahren und Neustarten von Berichtsaufgaben. 
+|===
+
+NOTE: Cloud Insights Reporting ist für Umgebungen mit 500 MUs oder mehr verfügbar.
+
+
+IMPORTANT: Wenn Sie bereits Premium Edition-Kunde sind und Ihre Berichte behalten möchten, lesen Sie dieslink:reporting_user_roles.html["Wichtiger Hinweis für Bestandskunden"] .
+
+
+
+=== Neue API-Kategorie für die Datenaufnahme
+
+Cloud Insights hat eine API-Kategorie *Data Ingestion* hinzugefügt, die Ihnen mehr Kontrolle über benutzerdefinierte Daten und Agenten gibt.  Eine ausführliche Dokumentation zu dieser und anderen API-Kategorien finden Sie in Cloud Insights , indem Sie zu *Admin > API-Zugriff* navigieren und auf den Link _API-Dokumentation_ klicken.  Sie können der AU auch einen Kommentar im Feld „Notiz“ hinzufügen, der auf der AU-Detailseite sowie der AU-Listenseite angezeigt wird.
+
+'''
+
+
+== August 2020
+
+
+
+=== Überwachung und Alarmierung
+
+Zusätzlich zur aktuellen Möglichkeit, Leistungsrichtlinien für Speicherobjekte, VMs, EC2 und Ports festzulegen, bietet die Cloud Insights Standard Edition jetzt die Möglichkeit,link:task_create_monitor.html["Monitore konfigurieren"] für Schwellenwerte für Integrationsdaten für Kubernetes, erweiterte ONTAP -Metriken und Telegraf-Plugins.  Sie erstellen einfach einen Monitor für jede Objektmetrik, für die Sie Warnungen auslösen möchten, legen die Bedingungen für Schwellenwerte auf Warn- oder kritischer Ebene fest und geben den/die gewünschten E-Mail-Empfänger für jede Ebene an.  Sie können dannlink:task_view_and_manage_alerts.html["Anzeigen und Verwalten von Warnungen"] um Trends zu verfolgen oder Probleme zu beheben.
+
+image:define_monitor_conditions_2.png["Bedingungen überwachen"]
+
+'''
+
+
+== Juli 2020
+
+
+
+=== Cloud Secure _Snapshot erstellen_ Aktion
+
+Cloud Secure schützt Ihre Daten, indem es automatisch einen Snapshot erstellt, wenn böswillige Aktivitäten erkannt werden, und so gewährleistet, dass Ihre Daten sicher gesichert werden.
+
+Sie können automatisierte Reaktionsrichtlinien definieren, die einen Snapshot erstellen, wenn ein Ransomware-Angriff oder andere ungewöhnliche Benutzeraktivitäten erkannt werden.  Sie können auch manuell einen Schnappschuss von der Warnseite aus erstellen.
+
+Automatischer Schnappschuss erstellt:image:AlertActionsAutomaticExample.png["Alarmaktionsbildschirm, 1000"]
+
+Manueller Schnappschuss:image:AlertActionsExample.png["Alarmaktionsbildschirm, 1000"]
+
+
+
+=== Metrik-/Zähleraktualisierungen
+
+Die folgenden Kapazitätszähler stehen zur Verwendung in der Cloud Insights -Benutzeroberfläche und der REST-API zur Verfügung.  Bisher waren diese Zähler nur für das Data Warehouse/Reporting verfügbar.
+
+[cols="2*"]
+|===
+| Objekttyp | Schalter 
+
+
+| Storage | Kapazität – freie Rohkapazität Kapazität – fehlgeschlagene Rohkapazität 
+
+
+| Speicherpool | Datenkapazität – Verwendete Datenkapazität – Gesamte sonstige Kapazität – Verwendete sonstige Kapazität – Gesamtkapazität – Rohkapazität – Weiches Limit 
+
+
+| Internes Volumen | Datenkapazität – Verwendete Datenkapazität – Gesamt Andere Kapazität – Verwendete Andere Kapazität – Gesamt Gespeicherte Klonkapazität – Gesamt 
+|===
+
+
+=== Cloud Secure – Erkennung potenzieller Angriffe
+
+Cloud Secure erkennt jetzt potenzielle Angriffe wie Ransomware.  Klicken Sie auf der Seite mit der Liste der Warnungen auf eine Warnung, um eine Detailseite mit folgendem Inhalt zu öffnen:
+
+* Zeitpunkt des Angriffs
+* Zugehörige Benutzer- und Dateiaktivität
+* Ergriffene Maßnahmen
+* Zusätzliche Informationen zur Unterstützung bei der Aufspürung möglicher Sicherheitsverletzungen
+
+
+Warnseite mit Hinweis auf einen möglichen Ransomware-Angriff:image:RansomwareAlertExample.png["Beispiel für eine Ransomware-Warnung"]
+
+Detailseite zum potenziellen Ransomware-Angriff:image:RansomwareDetailPageExample.png["Beispiel einer Ransomware-Detailseite"]
+
+
+
+=== Abonnieren Sie die Premium Edition über AWS
+
+Während Ihrer Testphase von Cloud Insights können Sielink:concept_subscribing_to_cloud_insights.html["Selbstabonnement"] über AWS Marketplace entweder zur Cloud Insights Standard Edition oder Premium Edition.  Bisher konnten Sie über AWS Marketplace nur ein Selbstabonnement für die Standard Edition abschließen.
+
+
+
+=== Erweitertes Tabellen-Widget
+
+Das Tabellen-Widget der Dashboard-/Asset-Seite enthält die folgenden Verbesserungen:
+
+* „Split-Screen“-Ansicht: Tabellen-Widgets zeigen das Objekt/die Gruppierung auf der linken Seite und die Objektdaten (Attribute/Metriken) auf der rechten Seite an.
++
+image:TableWidgetLeftRightPanes.png["Tabellen-Widget mit linken und rechten Fenstern"]
+
+* Gruppierung mehrerer Attribute: Für Integrationsdaten (Kubernetes, ONTAP Advanced Metrics, Docker usw.) können Sie mehrere Attribute zur Gruppierung auswählen.  Die Daten werden entsprechend den von Ihnen gewählten Gruppierungsattributen angezeigt.
++
+Gruppierung mit Integrationsdaten (im Bearbeitungsmodus angezeigt):image:TableWidgetIntegrationEditMode.png["Integrationsdatengruppierung im Tabellen-Widget"]
+
+* Die Gruppierung von Infrastrukturdaten (Speicher, EC2, VM, Ports usw.) erfolgt wie zuvor über ein einzelnes Attribut.  Beim Gruppieren nach einem Attribut, das nicht das Objekt ist, können Sie in der Tabelle die Gruppenzeile erweitern, um alle Objekte innerhalb der Gruppe anzuzeigen.
++
+Gruppierung mit Infrastrukturdaten (im Anzeigemodus angezeigt):image:TableWidgetPerformanceData.png["Gruppierung von Infrastrukturdaten im Tabellen-Widget"]
+
+
+
+
+
+=== Metrikfilterung
+
+Zusätzlich zum Filtern nach den Attributen eines Objekts in einem Widget können Sie jetzt auch nach Metriken filtern.
+
+image:MetricsFiltering.png["Metrikfilterung"]
+
+Beim Arbeiten mit Integrationsdaten (Kubernetes, ONTAP Advanced Data usw.) entfernt die Metrikfilterung die einzelnen/nicht übereinstimmenden Datenpunkte aus der dargestellten Datenreihe. Bei Infrastrukturdaten (Speicher, VM, Ports usw.) hingegen arbeiten Filter mit dem aggregierten Wert der Datenreihe und entfernen möglicherweise das gesamte Objekt aus dem Diagramm.
+
+image:IntegrationMetricFilterExample.png["Integrationsmetrikfilterung"]
+
+
+
+=== ONTAP Advanced Counter-Daten
+
+Cloud Insights nutzt die ONTAP-spezifischen *Advanced Counter Data* von NetApp, die eine Vielzahl von Zählern und Metriken bereitstellen, die von ONTAP -Geräten erfasst wurden.  ONTAP Advanced Counter Data ist für alle NetApp ONTAP -Kunden verfügbar.  Diese Metriken ermöglichen eine benutzerdefinierte und umfassende Visualisierung in Cloud Insights -Widgets und Dashboards.
+
+Sie können die erweiterten ONTAP -Zähler finden, indem Sie in der Abfrage des Widgets nach „netapp_ontap“ suchen und einen der Zähler auswählen.
+
+image:netapp_ontap counters.png["Suche nach ONTAP Advanced Counters"]
+
+Sie können Ihre Suche verfeinern, indem Sie zusätzliche Teile des Zählernamens eingeben. Beispiel:
+
+* _Leben_
+* _Aggregat_
+* _offbox_vscan_server_
+* und mehr
+
+
+image:ONTAP_Widget_Example2.png["ONTAP Widget-Beispiel – WAFL"] image:ONTAP_Widget_Example1.png["ONTAP Widget-Beispiel – Cp-Lesevorgänge"]
+
+Bitte beachten Sie Folgendes:
+
+* Die erweiterte Datenerfassung wird für neue ONTAP Datensammler standardmäßig aktiviert.  Um die erweiterte Datenerfassung für Ihre vorhandenen ONTAP Datensammler zu aktivieren, bearbeiten Sie den Datensammler und erweitern Sie den Abschnitt „Erweiterte Konfiguration“.
+* Die erweiterte Datenerfassung ist für 7-Mode ONTAP nicht verfügbar.
+
+
+
+
+=== Erweiterte Zähler-Dashboards
+
+Cloud Insights enthält eine Vielzahl vorgefertigter Dashboards, die Ihnen den Einstieg in die Visualisierung von ONTAP Advanced Counters für Themen wie _Aggregate Performance_, _Volume Workload_, _Prozessoraktivität_ und mehr erleichtern.  Wenn Sie mindestens einen ONTAP Datensammler konfiguriert haben, können diese aus der Dashboard-Galerie auf jeder Dashboard-Listenseite importiert werden.
+
+
+
+=== Weitere Informationen
+
+Weitere Informationen zu ONTAP Advanced Data finden Sie unter den folgenden Links:
+
+* https://mysupport.netapp.com/site/tools/tool-eula/netapp-harvest[](Hinweis: Sie müssen sich beim NetApp -Support anmelden)
+* https://nabox.org/faq/[]
+
+
+
+
+=== Menü „Richtlinien und Verstöße“
+
+Leistungsrichtlinien und -verstöße finden Sie jetzt im Menü *Warnungen*.  Die Richtlinien- und Verstoßfunktionen bleiben unverändert.
+
+image:PoliciesMenuChange.png["Menü „Richtlinien und Verstöße“"]
+
+
+
+=== Aktualisierter Telegraf-Agent
+
+Der Agent für die Aufnahme von Telegraf-Integrationsdaten wurde aktualisiert auflink:https://docs.influxdata.com/telegraf/v1.14/["Version 1.14"] , das Fehlerbehebungen, Sicherheitsfixes und neue Plugins enthält.
+
+Hinweis: Beim Konfigurieren eines Kubernetes-Datensammlers auf der Kubernetes-Plattform wird im Protokoll möglicherweise der Fehler „HTTP-Status 403 Verboten“ angezeigt, da im Attribut „clusterrole“ keine ausreichenden Berechtigungen vorhanden sind.
+
+Um dieses Problem zu umgehen, fügen Sie dem Abschnitt „_rules:_“ der Clusterrolle „Endpoint-Access“ die folgenden hervorgehobenen Zeilen hinzu und starten Sie dann die Telegraf-Pods neu.
+
+[listing]
+----
+rules:
+- apiGroups:
+  - ""
+  - apps
+  - autoscaling
+  - batch
+  - extensions
+  - policy
+  - rbac.authorization.k8s.io
+  attributeRestrictions: null
+  resources:
+  - nodes/metrics
+  - nodes/proxy     <== Add this line
+  - nodes/stats
+  - pods            <== Add this line
+  verbs:
+  - get
+  - list            <== Add this line
+----
+'''
+
+
+== Juni 2020
+
+
+
+=== Vereinfachte Fehlerberichterstattung des Datensammlers
+
+Das Melden eines Datensammlerfehlers ist mit der Schaltfläche _Fehlerbericht senden_ auf der Datensammlerseite einfacher.  Durch Klicken auf die Schaltfläche werden grundlegende Informationen zum Fehler an NetApp gesendet und eine Untersuchung des Problems veranlasst.  Nach dem Drücken bestätigt Cloud Insights , dass NetApp benachrichtigt wurde, und die Schaltfläche „Fehlerbericht“ wird deaktiviert, um anzuzeigen, dass ein Fehlerbericht für diesen Datensammler gesendet wurde.  Die Schaltfläche bleibt deaktiviert, bis die Browserseite aktualisiert wird.
+
+image:DCErrorReportButton.png["Schaltfläche „Fehlerbericht“"]
+
+
+
+=== Widget-Verbesserungen
+
+Die folgenden Verbesserungen wurden an Dashboard-Widgets vorgenommen.  Diese Verbesserungen gelten als Vorschaufunktionen und sind möglicherweise nicht für alle Cloud Insights -Umgebungen verfügbar.
+
+* Neue Objekt-/Metrikauswahl: Objekte (Speicher, Festplatte, Ports, Knoten usw.) und die zugehörigen Metriken (IOPS, Latenz, CPU-Anzahl usw.) sind jetzt in Widgets in einem einzigen umfassenden Dropdown-Menü mit leistungsstarker Suchfunktion verfügbar.  Sie können mehrere Teilbegriffe in die Dropdown-Liste eingeben und Cloud Insights listet alle Objektmetriken auf, die diesen Begriffen entsprechen.
+
+
+image:Object_Metric_Chooser.png["Objekt-/Metrikauswahl"]
+
+* Gruppierung mehrerer Tags: Wenn Sie mit Integrationsdaten (Kubernetes usw.) arbeiten, können Sie die Daten nach mehreren Tags/Attributen gruppieren.  Beispiel: Summieren Sie die Speichernutzung nach Kubernetes-Namespace und Containername.
+
+
+image:MultipleGroupsIntegrationLineChart.png["Mehrfachgruppierung bei der Anzeige von Integrationsdaten"]
+
+'''
+
+
+== Mai 2020
+
+
+
+=== Berichterstellung für Benutzerrollen
+
+Für die Berichterstattung wurden die folgenden Rollen hinzugefügt:
+
+* Cloud Insights -Verbraucher: können Berichte ausführen und anzeigen
+* Cloud Insights -Autoren: können die Consumer-Funktionen ausführen sowie Berichte und Dashboards erstellen und verwalten
+* Cloud Insights -Administratoren: können die Autorenfunktionen sowie alle administrativen Aufgaben ausführen
+
+
+
+
+=== Cloud Secure -Sicherheitsupdates
+
+Cloud Insights umfasst die folgenden aktuellen Cloud Secure -Änderungen.
+
+Auf der Seite „Forensik > Aktivitätsforensik“ bieten wir zwei Ansichten zum Analysieren und Untersuchen der Benutzeraktivität:
+
+* Aktivitätsansicht, konzentriert sich auf die Benutzeraktivität (Welche Operation?  Wo wird es aufgeführt?)
+* Entitätsansicht, mit Fokus auf den Dateien, auf die der Benutzer zugegriffen hat.
+
+
+image:CSActivityForensicsExample.png["Beispiel für eine Entitätenseite"]
+
+Darüber hinaus enthält die E-Mail-Benachrichtigung jetzt einen direkten Link zur Warnseite.
+
+
+
+=== Dashboard-Gruppierung
+
+Dashboard-Gruppierung ermöglicht eine besserelink:concept_dashboard_features.html#dashboard-groups["Verwaltung von Dashboards"] die für Sie relevant sind.  Sie können einer Gruppe verwandte Dashboards hinzufügen, um beispielsweise Ihren Speicher oder Ihre virtuellen Maschinen aus einer Hand zu verwalten.
+
+Gruppen werden pro Benutzer individuell angepasst, sodass die Gruppen einer Person sich von denen einer anderen Person unterscheiden können.  Sie können so viele Gruppen haben, wie Sie benötigen, mit so wenigen oder so vielen Dashboards in jeder Gruppe, wie Sie möchten.
+
+image:DashboardGroupNoPin.png["Dashboard-Gruppen"]
+
+
+
+=== Dashboard-Pinnung
+
+Sie können Dashboards anheften, sodass Favoriten immer oben in der Liste angezeigt werden.
+
+image:DashboardPin.png["Dashboard-Pins"]
+
+
+
+=== TV-Modus und automatische Aktualisierung
+
+link:concept_dashboard_features.html#tv-mode-and-auto-refresh["TV-Modus und automatische Aktualisierung"]ermöglichen die Anzeige von Daten nahezu in Echtzeit auf einem Dashboard oder einer Asset-Seite:
+
+* Der *TV-Modus* bietet eine übersichtliche Anzeige; das Navigationsmenü ist ausgeblendet, sodass mehr Platz auf dem Bildschirm für die Anzeige Ihrer Daten zur Verfügung steht.
+* Daten in Widgets auf Dashboards und Asset-Landingpages werden gemäß einem Aktualisierungsintervall (mindestens alle 10 Sekunden) *automatisch aktualisiert*, das durch den ausgewählten Dashboard-Zeitbereich (oder den Widget-Zeitbereich, wenn dieser so eingestellt ist, dass er die Dashboard-Zeit überschreibt) bestimmt wird.
+
+
+In Kombination bieten der TV-Modus und die automatische Aktualisierung eine Live-Ansicht Ihrer Cloud Insights -Daten, perfekt für nahtlose Demonstrationen oder die interne Überwachung.
+
+'''
+
+
+== April 2020
+
+
+
+=== Neue Zeitbereichsauswahl im Dashboard
+
+Die Zeitbereichsauswahl für Dashboards und andere Cloud Insights-Seiten umfasst jetzt _Letzte 1 Stunde_ und _Letzte 15 Minuten_.
+
+
+
+=== Cloud Secure -Sicherheitsupdates
+
+Cloud Insights umfasst die folgenden aktuellen Cloud Secure -Änderungen.
+
+* Bessere Erkennung von Änderungen an Datei- und Ordnermetadaten, um festzustellen, ob der Benutzer die Berechtigung, den Eigentümer oder die Gruppeneigentümerschaft geändert hat.
+* Exportieren Sie den Benutzeraktivitätsbericht in CSV.
+
+
+Cloud Secure überwacht und prüft alle Benutzerzugriffe auf Dateien und Ordner.  Mithilfe der Aktivitätsüberwachung können Sie interne Sicherheitsrichtlinien einhalten, externe Compliance-Anforderungen wie PCI, DSGVO und HIPAA erfüllen und Untersuchungen zu Datenschutzverletzungen und Sicherheitsvorfällen durchführen.
+
+
+
+=== Standard-Dashboard-Zeit
+
+Der Standardzeitraum für Dashboards beträgt jetzt 3 Stunden statt 24 Stunden.
+
+
+
+=== Optimierte Aggregationszeiten
+
+Optimiertlink:concept_dashboard_features.html#aggregating-data["Zeitaggregation"] Intervalle in Zeitreihen-Widgets (Linien-, Spline-, Flächen- und gestapelte Flächendiagramme) sind für 3-Stunden- und 24-Stunden-Dashboard-/Widget-Zeiträume häufiger, was eine schnellere Diagrammerstellung der Daten ermöglicht.
+
+* Der 3-Stunden-Zeitraum wird auf ein 1-Minuten-Aggregationsintervall optimiert.  Zuvor waren dies 5 Minuten.
+* Der 24-Stunden-Zeitraum wird auf ein 30-Minuten-Aggregationsintervall optimiert.  Zuvor war dies 1 Stunde.
+
+
+Sie können die optimierte Aggregation weiterhin überschreiben, indem Sie ein benutzerdefiniertes Intervall festlegen.
+
+
+
+=== Automatische Formatierung der Anzeigeeinheit
+
+In den meisten Widgets kennt Cloud Insights die Basiseinheit, in der Werte angezeigt werden, zum Beispiel _Megabyte_, _Tausende_, _Prozent_, _Millisekunden (ms)_ usw., und jetztlink:concept_dashboard_features.html#choosing-the-unit-for-displaying-data["formatiert automatisch"] das Widget auf die am besten lesbare Einheit.  Beispielsweise würde ein Datenwert von 1.234.567.890 Bytes automatisch auf 1,23 Gibibyte formatiert.  In vielen Fällen kennt Cloud Insights das beste Format für die erfassten Daten.  In Fällen, in denen das beste Format nicht bekannt ist, oder in Widgets, bei denen Sie die automatische Formatierung überschreiben möchten, können Sie das gewünschte Format auswählen.
+
+image:used_memory_in_bytes_gb.png["Automatisches Format in Widgets, Breite = 480"]
+
+
+
+=== Anmerkungen mithilfe der API importieren
+
+Mit der leistungsstarken API der Cloud Insights Premium Edition können Sie jetztlink:task_annotation_import.html["Anmerkungen importieren"] und weisen Sie sie mithilfe einer CSV-Datei Objekten zu.  Auf die gleiche Weise können Sie auch Anwendungen importieren und Geschäftseinheiten zuweisen.
+
+image:api_assets_import.png["Anmerkungen importieren"]
+
+
+
+=== Einfacherer Widget-Selektor
+
+Das Hinzufügen von Widgets zu Dashboards und Asset-Landingpages wird durch einen neuen Widget-Selektor vereinfacht, der alle Widget-Typen in einer einzigen Übersicht anzeigt. Der Benutzer muss also nicht mehr durch eine Liste von Widget-Typen scrollen, um den gewünschten Typ zu finden. Zusammengehörige Widgets werden im neuen Selektor farblich koordiniert und nach Nähe gruppiert.
+
+image:NewWidgetPicker.png["Neuer Widget-Selektor"]
+
+'''
+
+
+== Februar 2020
+
+
+
+=== API mit Premium Edition
+
+Cloud Insights Premium Edition enthält einelink:API_Overview.html["leistungsstarke API"] die zur Integration von Cloud Insights in andere Anwendungen wie CMDBs oder andere Ticketsysteme verwendet werden können.
+
+Detaillierte, Swagger-basierte Informationen finden Sie unter *Admin > API-Zugriff* unter dem Link *API-Dokumentation*.  Swagger bietet eine kurze Beschreibung und Nutzungsinformationen für die API und ermöglicht Ihnen, jede API in Ihrer Umgebung auszuprobieren.
+
+Die Cloud Insights -API verwendet Zugriffstoken, um berechtigungsbasierten Zugriff auf API-Kategorien wie ASSETS oder COLLECTION bereitzustellen.
+
+image:API_Documentation.png["API-Dokumentation"]
+
+
+
+=== Erste Abfrage nach dem Hinzufügen eines Datensammlers
+
+Zuvor hat Cloud Insights nach der Konfiguration eines neuen Datensammlers den Datensammler sofort abgefragt, um _Inventar_daten zu sammeln, hat jedoch bis zum konfigurierten Leistungsabfrageintervall (normalerweise 15 Minuten) gewartet, um erste _Leistungs_daten zu sammeln.  Anschließend wurde ein weiteres Intervall abgewartet, bevor die zweite Leistungsabfrage gestartet wurde. Dies bedeutete, dass es bis zu _30 Minuten_ dauern würde, bis aussagekräftige Daten von einem neuen Datensammler abgerufen wurden.
+
+Datensammlerlink:task_configure_data_collectors.html["Umfrage"] wurde erheblich verbessert, sodass die erste Leistungsabfrage unmittelbar nach der Inventarabfrage erfolgt und die zweite Leistungsabfrage innerhalb weniger Sekunden nach Abschluss der ersten Leistungsabfrage.  Dadurch kann Cloud Insights innerhalb kürzester Zeit nützliche Daten auf Dashboards und Diagrammen anzeigen.
+
+Dieses Polling-Verhalten tritt auch nach der Bearbeitung der Konfiguration eines vorhandenen Datensammlers auf.
+
+
+
+=== Einfachere Widget-Duplizierung
+
+Es ist einfacher denn je, eine Kopie eines Widgets auf einem Dashboard oder einer Zielseite zu erstellen.  Klicken Sie im Dashboard-Bearbeitungsmodus auf das Menü im Widget und wählen Sie *Duplizieren*.  Der Widget-Editor wird gestartet und ist bereits mit der Konfiguration des Original-Widgets und dem Suffix „Kopie“ im Widget-Namen ausgefüllt.  Sie können problemlos alle erforderlichen Änderungen vornehmen und das neue Widget speichern.  Das Widget wird unten in Ihrem Dashboard platziert und Sie können es nach Bedarf positionieren.  Denken Sie daran, Ihr Dashboard zu speichern, wenn alle Änderungen abgeschlossen sind.
+
+image:DuplicateWidget.png["Duplizieren eines Widgets"]
+
+
+
+=== Einmaliges Anmelden (SSO)
+
+Mit Cloud Insights Premium Edition können Administratoren Folgendes aktivieren: *link:concept_user_roles.html#what-is-identity-federation["Einmaliges Anmelden"] * (SSO) Zugriff auf Cloud Insights für alle Benutzer in ihrer Unternehmensdomäne, ohne sie einzeln einladen zu müssen.  Wenn SSO aktiviert ist, kann sich jeder Benutzer mit derselben Domänen-E-Mail-Adresse mit seinen Unternehmensanmeldeinformationen bei Cloud Insights anmelden.
+
+
+NOTE: SSO ist nur in der Cloud Insights Premium Edition verfügbar und muss konfiguriert werden, bevor es für Cloud Insights aktiviert werden kann.  Die SSO-Konfiguration umfasstlink:https://services.cloud.netapp.com/misc/federation-support["Identitätsföderation"] über NetApp Cloud Central.  Durch die Föderation können Single-Sign-On-Benutzer mit Anmeldeinformationen aus Ihrem Unternehmensverzeichnis auf Ihre NetApp Cloud Central-Konten zugreifen.
+
+'''
+
+
+== Januar 2020
+
+
+
+=== Swagger-Dokumentation für REST-API
+
+Swagger erklärt jede verfügbare REST-API in Cloud Insights sowie deren Verwendung und Syntax.  Informationen zu Cloud Insights APIs finden Sie inlink:http://docs.netapp.com/us-en/cloudinsights/API_Overview.html["Dokumentation"] .
+
+
+
+=== Fortschrittsbalken für Feature-Tutorials
+
+Die Checkliste für die Funktions-Tutorials wurde in das obere Banner verschoben und verfügt jetzt über eine Fortschrittsanzeige.  Tutorials stehen jedem Benutzer zur Verfügung, bis sie geschlossen werden, und sind immer in Cloud Insights verfügbar.link:concept_feature_tutorials.html["Dokumentation"] .
+
+image:TutorialProgress.png["Tutorial-Checkliste – Fortschritt"]
+
+
+
+=== Änderungen an der Erfassungseinheit
+
+Wenn Sie eine Acquisition Unit (AU) auf einem Host oder einer VM installieren, die denselben Namen wie eine bereits installierte AU hat, stellt Cloud Insights einen eindeutigen Namen sicher, indem an den AU-Namen „_1“, „_2“ usw. angehängt wird. Dies ist auch der Fall, wenn Sie eine AU von derselben VM deinstallieren und neu installieren, ohne sie zuerst aus Cloud Insights zu entfernen.  Möchten Sie einen ganz anderen AU-Namen?  Kein Problem; AUs können nach der Installation umbenannt werden.
+
+
+
+=== Optimierte Zeitaggregation in Widgets
+
+In Widgets können Sie zwischen einem _optimierten_ Zeitaggregationsintervall oder einem von Ihnen festgelegten _benutzerdefinierten_ Intervall wählen.  Durch die optimierte Aggregation wird automatisch das richtige Zeitintervall basierend auf dem ausgewählten Dashboard-Zeitbereich (oder Widget-Zeitbereich, wenn die Dashboard-Zeit überschrieben wird) ausgewählt.  Das Intervall ändert sich dynamisch, wenn der Zeitbereich des Dashboards oder Widgets geändert wird.
+
+
+
+=== Vereinfachter Prozess „Erste Schritte mit Cloud Insights“
+
+Der Prozess für den Einstieg in die Verwendung von Cloud Insights wurde vereinfacht, um Ihre Ersteinrichtung reibungsloser und einfacher zu gestalten.  Wählen Sie einfach einen ersten Datensammler aus und folgen Sie den Anweisungen.  Cloud Insights führt Sie durch die Konfiguration des Datensammlers und aller erforderlichen Agenten oder Erfassungseinheiten.  In den meisten Fällen werden sogar ein oder mehrere erste Dashboards importiert, sodass Sie schnell Einblicke in Ihre Umgebung gewinnen können (bitte rechnen Sie jedoch mit bis zu 30 Minuten, bis Cloud Insights aussagekräftige Daten erfasst hat).
+
+Weitere Verbesserungen:
+
+* Die Installation der Erfassungseinheit ist einfacher und läuft schneller.
+* Die alphabetische Auswahl der Datensammler erleichtert Ihnen das Auffinden des gesuchten Datensammlers.
+* Die Einrichtungsanweisungen für den verbesserten Datensammler sind leichter zu befolgen.
+* Erfahrene Benutzer können den Einstiegsprozess mit einem Mausklick überspringen.
+* Ein neuer Fortschrittsbalken zeigt Ihnen, wo Sie sich im Prozess befinden.
++
+image:Onboarding_Progress.png["Fortschrittsbalken"]
+
+
+
+'''

@@ -284,9 +284,6 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 | link:task_config_telegraf_redis.html["Redis"] | Service 
 
 
-| link:task_dc_redhat_openshift virtualization.html[Red Hat OpenShift Virtualisierung ] | Infrastruktur 
-
-
 | link:task_config_telegraf_rethinkdb.html["RethinkDB"] | Service 
 
 
