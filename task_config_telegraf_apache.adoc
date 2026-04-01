@@ -7,10 +7,17 @@ summary: Apache-Datensammlerkonfiguration
 = Apache-Datensammler
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Dieser Datensammler ermöglicht das Sammeln von Daten von Apache-Servern auf Ihrem Mandanten.
+
+
+NOTE: Dieser Collector ist veraltet. Er wird ab Januar 2027 nicht mehr verfügbar sein.
 
 .Voraussetzungen
 * Sie müssen Ihren Apache HTTP-Server eingerichtet und ordnungsgemäß ausgeführt haben

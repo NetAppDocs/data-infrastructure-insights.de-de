@@ -233,9 +233,6 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 | link:task_dc_na_ontap_rest.html["NetApp ONTAP REST-Kollektor"] | Infrastruktur 
 
 
-| link:task_dc_na_ontap_afx.html["NetApp ONTAP AFX"] | Infrastruktur 
-
-
 | link:task_dc_na_ontap_all_san_array.html["NetApp ONTAP ASA r2 (All-SAN Array)-Kollektor"] | Infrastruktur 
 
 
@@ -272,13 +269,16 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 | link:task_config_telegraf_puppetagent.html["Puppenagent"] | Service 
 
 
-| link:task_dc_pure_flashblade.html["Pure FlashBlade"] | Infrastruktur 
-
-
 | link:task_dc_pure_flasharray.html["Pure Storage FlashArray"] | Infrastruktur 
 
 
+| link:task_dc_pure_flashblade.html["Pure Storage FlashBlade"] | Infrastruktur 
+
+
 | link:task_dc_redhat_virtualization.html["Red Hat Virtualisierung"] | Infrastruktur 
+
+
+| link:task_dc_redhat_openshift_virtualization.html["Red Hat OpenShift Virtualisierung"] | Infrastruktur 
 
 
 | link:task_config_telegraf_redis.html["Redis"] | Service 

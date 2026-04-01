@@ -7,10 +7,17 @@ summary: Konfiguration des Docker-Datensammlers
 = Docker-Datensammler
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von Docker zu sammeln.
+
+
+NOTE: Dieser Collector ist veraltet. Er wird ab Januar 2027 nicht mehr verfügbar sein.
 
 
 

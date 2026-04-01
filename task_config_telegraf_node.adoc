@@ -7,10 +7,17 @@ summary: Konfiguration des Flink-Datensammlers
 = Knotendatenerfassung
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights sammelt Metriken von dem Knoten, auf dem Sie einen Agenten installieren.
+
+
+NOTE: Dieser Collector ist veraltet. Er wird ab Januar 2027 nicht mehr verfügbar sein.
 
 
 

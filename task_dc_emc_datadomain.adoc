@@ -7,10 +7,14 @@ summary: Konfigurieren des DELL EMC Data Domain-Datenkollektors.
 = DELL EMC Data Domain-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Dieser Datensammler sammelt Bestands- und Leistungsinformationen von DELL EMC Data Domain-Deduplizierungsspeichersystemen.  Zum Konfigurieren dieses Datensammlers müssen Sie bestimmte Konfigurationsanweisungen und Verwendungsempfehlungen befolgen.
+Dieser Datensammler erfasst Inventarinformationen von DELL EMC Data Domain Deduplizierungsspeichersystemen. Für die Konfiguration dieses Datensammlers müssen Sie spezifische Konfigurationsanweisungen und Nutzungsempfehlungen befolgen.
 
 
 

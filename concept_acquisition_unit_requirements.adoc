@@ -26,7 +26,40 @@ Sie müssen eine Acquisition Unit (AU) installieren, um Informationen von Ihren 
 | Komponente | Linux-Anforderungen | Windows-Anforderung 
 
 
-| Betriebssystem | Ein Computer mit einer lizenzierten Version eines der folgenden: * AlmaLinux 9.5, 10 * Centos (64-bit): Stream 9 * Debian (64-bit): 11 bis 13 * OpenSUSE Leap 15.2 bis 15.6, 16 * Oracle Enterprise Linux (64-bit): 8.10, 9.2, 9.4, 9.6, 10 * Red Hat (64-bit): 8.10, 9.2, 9.4, 9.6, 10 * Rocky 9.2 bis 9.6 * SUSE Linux Enterprise Server 15 SP4 bis 15 SP7, 16 * Ubuntu Server: 20.04, 22.04, 24.04 LTS * SELinux auf den oben genannten Plattformen Dieser Computer sollte keine weitere Anwendungssoftware ausführen. Ein dedizierter Server wird empfohlen. Wenn Sie SELinux verwenden, wird empfohlen, die folgenden Befehle auf dem System der Datenerfassungseinheit auszuführen: sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?" sudo restorecon -R /opt/netapp/cloudinsights | Ein Computer, auf dem eine lizenzierte Version einer der folgenden Windows-Versionen ausgeführt wird: * Microsoft Windows 11 * Microsoft Windows Server 2016 * Microsoft Windows Server 2019 * Microsoft Windows Server 2022 * Microsoft Windows Server 2025 Auf diesem Computer darf keine andere Anwendungssoftware ausgeführt werden. Ein dedizierter Server wird empfohlen. 
+| Betriebssystem  a| 
+Ein Computer, auf dem eine lizenzierte Version einer der folgenden läuft:
+
+* AlmaLinux 9.5, 10
+* Centos (64-Bit): Stream 9
+* Debian (64-bit): 11 bis 13
+* OpenSUSE Leap 15.2 bis 15.6, 16
+* Oracle Enterprise Linux (64-bit): 8.10, 9.2, 9.4, 9.6, 10
+* Red Hat (64-bit): 8.10, 9.2, 9.4, 9.6, 10
+* Rocky 9.2 bis 9.6
+* SUSE Linux Enterprise Server 15 SP4 bis 15 SP7, 16
+* Ubuntu Server: 20.04, 22.04, 24.04 LTS
+* SELinux auf den oben genannten Plattformen
+
+
+Auf diesem Computer sollte keine andere Anwendungssoftware laufen. Ein dedizierter Server wird empfohlen.
+
+Wenn Sie SELinux verwenden, wird empfohlen, die folgenden Befehle auf dem Datenerfassungssystem auszuführen:
+
+....
+sudo semanage fcontext -a -t usr_t "/opt/netapp/cloudinsights(/.*)?"
+sudo restorecon -R /opt/netapp/cloudinsights
+.... a| 
+Ein Computer, auf dem eine lizenzierte Version einer der folgenden läuft:
+
+* Microsoft Windows 11
+* Microsoft Windows Server 2016
+* Microsoft Windows Server 2019
+* Microsoft Windows Server 2022
+* Microsoft Windows Server 2025
+
+
+Auf diesem Computer sollte keine andere Anwendungssoftware laufen. Ein dedizierter Server wird empfohlen.
+
 
 
 | CPU | 2 CPU-Kerne | Dasselbe 
@@ -35,7 +68,18 @@ Sie müssen eine Acquisition Unit (AU) installieren, um Informationen von Ihren 
 | Erinnerung | 8 GB RAM | Dasselbe 
 
 
-| Verfügbarer Speicherplatz | 50 GB (100 GB empfohlen) Für Linux sollte der Speicherplatz folgendermaßen zugewiesen werden: /opt/netapp 10 GB (20 GB für große Umgebungen) /var/log/netapp 40 GB (80 GB für große Umgebungen) /tmp mindestens 1 GB während der Installation verfügbar | 50 GB 
+| Verfügbarer Speicherplatz  a| 
+50 GB (100 GB empfohlen)
+
+Unter Linux sollte der Speicherplatz folgendermaßen zugewiesen werden:
+
+* /opt/netapp 10 GB (20 GB für große Umgebungen)
+* /var/log/netapp 40 GB (80 GB für große Umgebungen)
+* Im Verzeichnis /tmp muss während der Installation mindestens 1 GB verfügbar sein.
+
+
+Ihr Dateisystem verwendet möglicherweise etwas Speicherplatz für seinen Overhead. Dies sind die Mindestspeicherplätze, die vor der Installation  sein sollten.
+| 50 GB 
 
 
 | Netzwerk | Erforderlich sind eine 100-Mbit/s-/1-Gbit/s-Ethernet-Verbindung, eine statische IP-Adresse und eine Port-80- oder Port-443-Konnektivität (ausgehend) von der Akquisitionseinheit zu *.cloudinsights.netapp.com oder Ihrem Data Infrastructure Insights Mandanten (z. B. https://<tenant_id>.c01.cloudinsights.netapp.com).  Die Anforderungen an die Verbindung zwischen der Erfassungseinheit und den einzelnen Datensammlern entnehmen Sie bitte der Anleitung für dielink:data_collector_list.html["Datensammler"] Die Wenn Ihre Organisation die Verwendung eines Proxys für den Internetzugang erfordert, müssen Sie möglicherweise das Proxy-Verhalten Ihrer Organisation verstehen und nach bestimmten Ausnahmen suchen, damit Data Infrastructure Insights funktioniert. Blockiert Ihre Organisation beispielsweise standardmäßig den Zugriff und erlaubt den Zugriff auf bestimmte Websites/Domänen nur ausnahmsweise?  In diesem Fall müssen Sie die folgende Domain zur Ausnahmeliste hinzufügen lassen: *.cloudinsights.netapp.com. Weitere Informationen finden Sie unter „Proxys“.link:task_troubleshooting_linux_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["hier (Linux)"] oderlink:task_troubleshooting_windows_acquisition_unit_problems.html#considerations-about-proxies-and-firewalls["hier (Windows)"] Die | Dasselbe 

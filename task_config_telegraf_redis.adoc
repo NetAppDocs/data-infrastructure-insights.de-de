@@ -7,10 +7,17 @@ summary: Redis-Datensammlerkonfiguration
 = Redis-Datensammler
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von Redis zu sammeln.  Redis ist ein Open-Source-Datenstrukturspeicher im Arbeitsspeicher, der als Datenbank, Cache und Nachrichtenbroker verwendet wird und die folgenden Datenstrukturen unterstützt: Zeichenfolgen, Hashes, Listen, Sets und mehr.
+
+
+NOTE: Dieser Collector ist veraltet. Er wird ab Januar 2027 nicht mehr verfügbar sein.
 
 
 

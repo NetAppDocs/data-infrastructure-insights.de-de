@@ -7,6 +7,10 @@ summary: Konfigurieren des VAST Data DataStore-Speicherdatensammlers.
 = VAST DataStore-Datenkollektor
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

@@ -7,6 +7,10 @@ summary: Konfigurieren des VMware-Datenkollektors.
 = Konfigurieren des VMware VSphere-Datenkollektors
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
