@@ -9,16 +9,31 @@ summary: Fügen Sie Dateierweiterungen zu einer Ausnahmeliste für Benachrichtig
 
 
 [role="lead"]
-Wird ein Manipulationsangriff auf eine bekannte Dateierweiterung erkannt und werden entsprechende Warnungen im Warnbildschirm angezeigt, kann diese Dateierweiterung einer -Liste hinzugefügt werden, um unnötige Warnungen zu vermeiden. Diese Liste kann auch als eine  betrachtet werden, da Workload Security diesen Dateien erlaubt, Warnungen vor Manipulation zu umgehen.
+Mit der Alarmausschlussfunktion können Sie die Alarmgenerierung für bestimmte Dateitypen, Benutzer und Verzeichnispfade unterdrücken. Nutzen Sie diese Funktion, um Fehlalarme zu reduzieren, indem Sie bekannte, erwartete Aktivitäten ausschließen, die andernfalls Alarmmustern entsprechen könnten.
 
-Navigieren Sie zu *Workload Security > Policies* und wechseln Sie zur Registerkarte _Alert Exclusions_.
+Der Alarmausschluss wird pro Mandant konfiguriert und umfasst Folgendes:
 
-image:ws_alert_exclusions_list.png["Zulässige Dateitypen, die von Benachrichtigungen ausgeschlossen werden sollen"]
+. Dateitypen: Warnungen vor Dateimanipulation bei bestimmten link:ws_allowed_file_types.html["Dateierweiterungen"] Dateitypen unterdrücken
+. Benutzer: Warnmeldungen, die von ausgewählten Benutzern ausgelöst werden, unterdrücken.
+. Pfade: Warnmeldungen für Aktivitäten auf ausgewählten Verzeichnispfaden unterdrücken (bis zu vier Verzeichnisebenen, beginnend am Verbindungspfad).
 
-Sobald ein Dateityp zur Liste der zulässigen Dateitypen hinzugefügt wurde, wird für diesen Dateityp keine Warnung wegen Dateimanipulationen ausgelöst. Beachten Sie, dass die Richtlinie zum Ausschluss von Warnungen nur für die Erkennung von Dateimanipulation gilt.
 
-Wenn beispielsweise eine Datei namens _test.txt_ in _test.txt.abc_ umbenannt wird und Workload Security aufgrund der Dateiendung _.abc_ einen Manipulationsangriff erkennt, kann die Dateiendung _.abc_ zur Liste der zulässigen Dateitypen hinzugefügt werden. Nach der Aufnahme in die Liste werden keine Manipulationsangriffe mehr auf Dateien mit der Dateiendung _.abc_ ausgelöst.
+Die Dateitypausschlüsse (auch bekannt als „Richtlinien für zulässige Dateitypen“) wurden aktualisiert und in link:ws_allowed_file_types.html["Zulässige Dateitypen"] beschrieben.
 
-Zulässige Dateitypen können exakte Übereinstimmungen (z. B. ".abc") oder Ausdrücke (z. B. "*.type", ".type*" oder ".*type*") sein. Ausdrücke der Typen ".a*c", ".p*f" werden nicht unterstützt.
+Die Benutzerausschlussliste wird durch eine automatische Vervollständigung unterstützt, bei der Administratoren Benutzer auswählen können, die von Benachrichtigungen ausgeschlossen werden sollen.
 
-Zusätzliche Attribute „Festgelegt von“ und „Festgelegtes Datum“ wurden für die Überprüfung eingeführt. Bestehende Dateitypen werden in das neue Format migriert, wobei die Werte beider Attribute auf „migriert“ gesetzt werden.
+Der Ausschluss von Verzeichnissen unterstützt bis zu vier Ebenen von Verzeichnispfaden, beginnend mit dem Verbindungspfad.
+
+Einzelne Benutzer und Verzeichnispfade können der jeweiligen Ausschlussliste hinzugefügt oder daraus entfernt werden. Jeder Eintrag in jeder Liste enthält die Information, wann und von wem er zur Liste hinzugefügt wurde, und diese Information wird zu Prüfzwecken verwendet.
+
+
+
+== Ausschlüsse und Prüfungen verwalten
+
+* Administratoren können jederzeit Dateierweiterungen, einzelne Benutzer oder Pfade hinzufügen oder entfernen.
+* Jeder Ausschlusseintrag enthält den Namen des Administrators, der ihn festgelegt hat, und das Datum der Festlegung. Diese Informationen werden zu Prüfungszwecken aufbewahrt.
+
+
+image:ws_alert_exclusions_users.png[""]
+
+image:ws_alert_exclusions_paths.png[""]
