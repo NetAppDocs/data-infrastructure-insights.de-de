@@ -11,6 +11,8 @@ summary: Fügen Sie Dateierweiterungen zu einer Ausnahmeliste für Benachrichtig
 [role="lead"]
 Mit der Alarmausschlussfunktion können Sie die Alarmgenerierung für bestimmte Dateitypen, Benutzer und Verzeichnispfade unterdrücken. Nutzen Sie diese Funktion, um Fehlalarme zu reduzieren, indem Sie bekannte, erwartete Aktivitäten ausschließen, die andernfalls Alarmmustern entsprechen könnten.
 
+Beachten Sie, dass lediglich die Benachrichtigung über das Ereignis unterdrückt wird; die Ereignisse selbst werden weiterhin erfasst und können überprüft werden.
+
 Navigieren Sie zu *Workload Security > Policies* und wählen Sie die Registerkarte *Alert Exclusions* aus.
 
 Der Alarmausschluss wird pro Mandant konfiguriert und umfasst Folgendes:
@@ -20,36 +22,38 @@ Der Alarmausschluss wird pro Mandant konfiguriert und umfasst Folgendes:
 . Pfade: Warnmeldungen für Aktivitäten auf ausgewählten Verzeichnispfaden unterdrücken (bis zu vier Verzeichnisebenen, beginnend am Verbindungspfad).
 
 
-Die Benutzerausschlussliste wird durch eine automatische Vervollständigung unterstützt, bei der Administratoren Benutzer auswählen können, die von Benachrichtigungen ausgeschlossen werden sollen.
-
-Der Ausschluss von Verzeichnissen unterstützt bis zu vier Ebenen von Verzeichnispfaden, beginnend mit dem Verbindungspfad.
-
-Einzelne Benutzer und Verzeichnispfade können der jeweiligen Ausschlussliste hinzugefügt oder daraus entfernt werden. Jeder Eintrag in jeder Liste enthält die Information, wann und von wem er zur Liste hinzugefügt wurde, und diese Information wird zu Prüfzwecken verwendet.
-
 
 
 == Ausschlüsse und Prüfungen verwalten
 
 * Administratoren können jederzeit Dateierweiterungen, einzelne Benutzer oder Pfade hinzufügen oder entfernen.
-* Jeder Ausschlusseintrag enthält den Namen des Administrators, der ihn festgelegt hat, und das Datum der Festlegung. Diese Informationen werden zu Prüfungszwecken aufbewahrt.
+* Jeder Ausschlusseintrag enthält den Namen des Administrators, der ihn vorgenommen hat, und das Datum der Festlegung. Diese Informationen werden zu Prüfungszwecken aufbewahrt.
+
+
+
+
+== Benutzer und Pfade
+
+* Benutzer-Ausschlussliste: Fügen Sie Benutzer hinzu, die von Benachrichtigungen ausgeschlossen werden sollen.
+* Verzeichnisausschlussliste: Unterstützt bis zu vier Ebenen von Verzeichnispfaden, beginnend mit dem Verbindungspfad.
 
 
 image:ws_alert_exclusions_users.png[""]
 
 image:ws_alert_exclusions_paths.png[""]
 
+Einzelne Benutzer und Verzeichnispfade können der jeweiligen Ausschlussliste hinzugefügt oder daraus entfernt werden. Jeder Eintrag in jeder Liste enthält die Information, wann und von wem er zur Liste hinzugefügt wurde, und diese Information wird zu Prüfzwecken verwendet.
 
 
-== Zulässige Dateitypen
 
-Dateierweiterungen können einer Liste _zulässiger Dateitypen_ hinzugefügt werden, um unnötige Warnmeldungen zu vermeiden.
+== Dateitypen
 
-Wählen Sie *+Dateityp*, um Dateitypen zur Liste der in der Warnung zulässigen Dateitypen hinzuzufügen.
+Sobald ein Dateityp zur Liste der zulässigen Dateitypen hinzugefügt wurde, wird für diesen Dateityp keine Warnung vor Dateimanipulationsangriffen generiert. Beachten Sie, dass die Richtlinie für Dateitypen nur für die Erkennung von Dateimanipulationen gilt.
 
-image:ws_allowed_file_types.png["Zulässige Dateitypen hinzufügen"]
-
-Sobald ein Dateityp zur Liste der zulässigen Dateitypen hinzugefügt wurde, wird für diesen zulässigen Dateityp keine Warnung vor Dateimanipulationsangriffen mehr generiert. Beachten Sie, dass die Richtlinie _Zulässige Dateitypen_ nur für die Erkennung von Dateimanipulationen gilt.
+image:ws_file_types_list.png["Liste der Dateitypen"]
 
 Wenn beispielsweise eine Datei namens _test.txt_ in _test.txt.abc_ umbenannt wird und Workload Security aufgrund der Dateiendung _.abc_ einen Ransomware-Angriff erkennt, kann die Dateiendung _.abc_ zur Liste der _zulässigen Dateitypen_ hinzugefügt werden. Nach der Aufnahme in die Liste werden keine Ransomware-Angriffe mehr auf Dateien mit der Dateiendung _.abc_ generiert.
 
 Zulässige Dateitypen können exakte Übereinstimmungen (z. B. ".abc") oder Ausdrücke (z. B. ++.*type++, ++.type*++ oder ++.*type*++) sein. Ausdrücke der Typen .a*c, .p*f werden nicht unterstützt.
+
+Zusätzliche Attribute „Festgelegt von“ und „Festgelegtes Datum“ wurden für die Überprüfung eingeführt. Bestehende Dateitypen werden in das neue Format migriert, wobei die Werte beider Attribute auf „migriert“ gesetzt werden.
