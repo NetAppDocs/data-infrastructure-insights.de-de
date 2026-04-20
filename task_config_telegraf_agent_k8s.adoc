@@ -72,6 +72,9 @@ image:KubernetesModifyDeploymentScreen.png["Bereitstellungsoptionen ändern, Bre
 Sie können den Kubernetes Monitoring Operator über die DII Kubernetes Collectors-Seite aktualisieren.  Klicken Sie auf das Menü neben dem Cluster, den Sie aktualisieren möchten, und wählen Sie _Upgrade_.  Der Betreiber überprüft die Bildsignaturen, erstellt einen Snapshot Ihrer aktuellen Installation und führt das Upgrade durch.  Innerhalb weniger Minuten sollte der Status des Operators von „Upgrade läuft“ bis „Neueste“ fortschreiten.  Wenn ein Fehler auftritt, können Sie für weitere Einzelheiten den Fehlerstatus auswählen und die Tabelle zur Fehlerbehebung bei Push-Button-Upgrades weiter unten zu Rate ziehen.
 
 
+NOTE: Für Bedienerversionen vor 1.2057.0 sind keine Aktualisierungen per Knopfdruck möglich. Bitte befolgen Sie die unten stehenden Anweisungen für die manuelle Aktualisierung, um auf die neueste Version zu aktualisieren. Anschließend können zukünftige Aktualisierungen per Knopfdruck durchgeführt werden.
+
+
 
 ==== Push-Button-Upgrades mit privaten Repositories
 
