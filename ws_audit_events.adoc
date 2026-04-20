@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: ws_audit_events.html 
+summary: Überwachungsereignisse in Workload Security 
+keywords: workload security, audit, events 
+---
+= Sicherheitsereignisse der Workload-Prüfung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Identifizieren Sie sowohl erwartete (zur Nachverfolgung) als auch unerwartete (zur Fehlerbehebung) Änderungen. Sehen Sie sich eine Audit-Trail der Workload Security-Systemereignisse und Benutzeraktivitäten an.
+
+
+
+== Anzeigen überwachter Ereignisse
+
+Um die Seite „Audit“ anzuzeigen, klicken Sie im Menü auf „Admin“ > „Audit“. Die Seite „Audit“ wird angezeigt und enthält die folgenden Details zu jedem Audit-Eintrag:
+
+* Zeit – Datum und Uhrzeit des Ereignisses oder der Aktivität
+* Nutzer – Der Nutzer, der die Aktivität initiiert hat
+* Rolle – Die Rolle des Benutzers in Workload Security (Gast, Benutzer, Administrator)
+* IP – Die mit dem Ereignis verknüpfte IP-Adresse
+* Aktion – Art der Aktivität, zum Beispiel Anmelden, Erstellen, Aktualisieren
+* Kategorie – Die Kategorie der Aktivität.
+* Details – Einzelheiten zur Aktivität
+* Anwendungstyp – Art der geprüften Anwendung: Observability ODER Workload Security. Verwenden Sie es, um nur Workload Security Audits zu filtern.
+
+
+Zu den überwachten Workload-Sicherheitsereignissen gehören unter anderem die folgenden:
+
+* Änderungen der Workload Security-Richtlinien.
+* Erstellung neuer Data Source Collectors (DSCs).
+* Modifizierung von DSCs.
+* Erstellung von Agenten.
+* Aufgaben der Benutzerverwaltung.
+* API-Token-Aufgaben.
+
+
+
+
+== Anzeigen von Auditeinträgen
+
+Es gibt verschiedene Möglichkeiten, Auditeinträge anzuzeigen:
+
+* Sie können Auditeinträge anzeigen, indem Sie einen bestimmten Zeitraum auswählen (1 Stunde, 24 Stunden, 3 Tage usw.).
+* Sie können die Sortierreihenfolge der Einträge ändern, indem Sie auf den Pfeil in der Spaltenüberschrift klicken – entweder aufsteigend (Pfeil nach oben) oder absteigend (Pfeil nach unten). Standardmäßig zeigt die Tabelle die Einträge in absteigender zeitlicher Reihenfolge an.
+* Mithilfe der Filterfelder können Sie sich in der Tabelle nur die gewünschten Einträge anzeigen lassen.  Klicken Sie auf die Schaltfläche [+], um weitere Filter hinzuzufügen.
+
+
+
+
+== Mehr zum Filtern
+
+Sie können Ihren Filter mit den folgenden Optionen verfeinern:
+
+|===
+
+
+| Filter | Was es bewirkt | Beispiel | Ergebnis 
+
+
+| * (Sternchen) | ermöglicht Ihnen die Suche nach allem | vol*rhel | gibt alle Ressourcen zurück, die mit „vol“ beginnen und mit „rhel“ enden 
+
+
+| ? (Fragezeichen) | ermöglicht die Suche nach einer bestimmten Anzahl von Zeichen | BOS-PRD??-S12 | gibt BOS-PRD12-S12, BOS-PRD23-S12 usw. zurück 
+
+
+| ODER | ermöglicht Ihnen die Angabe mehrerer Entitäten | FAS2240 ODER CX600 ODER FAS3270 | gibt einen der folgenden Werte zurück: FAS2440, CX600 oder FAS3270 
+
+
+| NICHT | ermöglicht es Ihnen, Text aus den Suchergebnissen auszuschließen | NICHT EMV* | gibt alles zurück, was nicht mit "EMC" beginnt 
+
+
+| Keine | sucht nach Leerzeichen/NULL/Keine in jedem ausgewählten Feld | Keine | gibt Ergebnisse zurück, bei denen das Zielfeld nicht leer ist 
+
+
+| Nicht * | Wie bei None oben, können Sie dieses Formular auch verwenden, um in reinen Textfeldern nach NULL-Werten zu suchen. | Nicht * | gibt Ergebnisse zurück, bei denen das Zielfeld nicht leer ist. 
+
+
+| "" | sucht nach einer genauen Übereinstimmung | "NetApp*" | Gibt Ergebnisse zurück, die die exakte Zeichenkette NetApp* enthalten 
+|===
+Wenn Sie eine Filterzeichenfolge in doppelte Anführungszeichen setzen, behandelt Insight alles zwischen dem ersten und letzten Anführungszeichen als exakte Übereinstimmung.  Alle Sonderzeichen oder Operatoren innerhalb der Anführungszeichen werden als Literale behandelt.  Wenn Sie beispielsweise nach „*“ filtern, werden Ergebnisse zurückgegeben, die ein Sternchen sind. Das Sternchen wird in diesem Fall nicht als Platzhalter behandelt.  Die Operatoren OR und NOT werden auch als Literalzeichenfolgen behandelt, wenn sie in doppelte Anführungszeichen eingeschlossen sind.
+
+
+
+== Überwachte Ereignisse und Aktionen
+
+Die von Workload Security geprüften Ereignisse und Aktionen lassen sich in folgende Hauptkategorien einteilen:
+
+* Benutzerkonto: Anmelden, ausloggen, Rollenwechsel usw.
+* Agent: erstellen, löschen, aktualisieren, anheften, lösen usw.
++
+Beispiele: _Agent Agent-Boston-1 wurde gelöscht._ _Agent upgrade auf Version 1.760.0 durch Massenoperation initiiert._
+
+* Daten-/Benutzerverzeichnis-Collector: Hinzufügen, Entfernen, Ändern, Aktualisieren, Verschieben/Fortsetzen, Agentenwechsel, Neustart usw.
++
+Beispiele: _Datensammler Collector-Boston1 entfernt, Typ ONTAP SVM_ _Agent: Agent-Boston-1, Cluster IP 10.193.88.36, SVM demoGroupShares2_ _Collector ONTAP SVM Upgrade auf Version 1.417.0 durch Massenoperation initiiert_
+
+* Automatisierte Antwortrichtlinien: hinzufügen, aktualisieren, entfernen, aktivieren, deaktivieren usw.
++
+Beispiel: _Automatisierte Angriffsrichtlinie Policy-Boston1 aktualisiert. Eigenschaften Geräte aktualisiert, alter Wert: [Device(name=svm_boston1, dataSourceId=39fb3b9c-9dd4-4961-bc27-23eb0b6f9ab7)], neuer Wert: [Device(name=demoGroupShares2, dataSourceId=5b9f5b74-4533-4852-909d-8886582a4359)]_
+
+* Benutzerblockierung/Entblockierung: Automatische oder manuelle Benutzerblockierung und -entblockierung.
++
+Beispiel: _Sperre für Benutzer Safwan Langley im Rahmen einer automatisierten Reaktion für einen Zeitraum von 2 Stunden eingeleitet_
+
+* API-Schlüssel: hinzufügen, entfernen usw.
++
+Beispiel: _Workload Security API access token JPick-SWS wurde erstellt_
+
+* Benachrichtigung: E-Mail-Adresse ändern usw.
++
+Beispiel: _Empfänger ci-alerts-notifications-dl erstellt_
+
+
+
+
+
+== Exportieren von Audit-Ereignissen
+
+Sie können die Ergebnisse Ihrer Audit-Anzeige in eine .CSV-Datei exportieren, um die Daten zu analysieren oder in eine andere Anwendung zu importieren. Schritte 1. Legen Sie auf der Audit-Seite den gewünschten Zeitraum und alle gewünschten Filter fest. Workload Security exportiert nur die Audit-Einträge, die den von Ihnen festgelegten Filtern und dem Zeitraum entsprechen. 2. Klicken Sie oben rechts in der Tabelle auf die Schaltfläche Export. Die angezeigten Audit-Ereignisse werden in eine .CSV-Datei exportiert, bis zu maximal 10.000 Zeilen.
+
+
+
+== Aufbewahrung von Prüfdaten
+
+Die Speicherdauer der Audit-Daten durch Workload Security richtet sich nach Ihrem Abonnement:
+
+* Testumgebungen: Auditdaten werden 30 Tage lang aufbewahrt
+* Abonnierte Umgebungen: Auditdaten werden 1 Jahr plus 1 Tag aufbewahrt
+
+
+Prüfeinträge, die älter als die Aufbewahrungsdauer sind, werden automatisch gelöscht.  Es ist keine Benutzerinteraktion erforderlich.

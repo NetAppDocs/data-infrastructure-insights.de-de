@@ -105,7 +105,9 @@ Wenn Sie über ein Data Infrastructure Insights Abonnement oder kostenpflichtige
 
 NOTE: Sie müssen sich registrieren, um<<activating-support-entitlement,Support aktivieren>> für NetApp Cloud-Produkte.  Um sich zu registrieren, gehen Sie zu NetApp'slink:https://register.netapp.com["Registrierung für den Support von Cloud Data Services"] .
 
-Es wird dringend empfohlen, das Kontrollkästchen zu aktivieren, um einem NetApp -Supporttechniker während Ihrer Supportsitzung Zugriff auf Ihren Data Infrastructure Insights Mandanten zu gewähren.  Dadurch kann der Techniker das Problem beheben und Ihnen helfen, es schnell zu lösen.  Wenn Ihr Problem gelöst oder Ihre Support-Sitzung beendet ist, können Sie das Kontrollkästchen deaktivieren.
+Es wird dringend empfohlen, das Kontrollkästchen zu aktivieren, um einem NetApp Support Engineer während Ihrer Support-Sitzung Zugriff auf Ihre Data Infrastructure Insights-Website zu gewähren. Dadurch kann der Engineer das Problem beheben und Ihnen helfen, es schnell zu lösen. Solange der Support Engineer Zugriff auf Ihre Website hat, kann er alle Admin-Funktionen ausführen.
+
+Wenn Ihr Problem gelöst ist oder Ihre Support-Sitzung beendet ist, können Sie das Kontrollkästchen deaktivieren.
 
 Sie können mit einer der folgenden Methoden Support anfordern.  Sie müssen über ein aktives Data Infrastructure Insights -Abonnement verfügen, um diese Supportoptionen nutzen zu können:
 
