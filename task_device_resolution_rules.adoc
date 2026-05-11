@@ -7,6 +7,10 @@ summary: Mithilfe der Geräteauflösung können Sie die Leistung und den Bestand
 = Regeln zur Geräteauflösung
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -33,7 +37,7 @@ Wenn Sie Regeln erstellen, identifizieren Sie zunächst die Informationsquelle, 
 Sie erstellen Regeln auf der Registerkarte „Regeln für die automatische Auflösung“.  Die folgenden Schritte beschreiben den Regelerstellungsprozess.
 
 .Verfahren
-. Klicken Sie auf *Verwalten > Geräteauflösung*
+. Klicken Sie auf *Beobachtbarkeit > Anreichern > Geräteauflösung*
 . Klicken Sie auf der Registerkarte *Regeln zur automatischen Auflösung* auf *+ Host-Regel* oder *+ Bandregel*.
 +
 Der Bildschirm *Auflösungsregel* wird angezeigt.
@@ -105,13 +109,19 @@ Die Ergebnisse des Regellaufs werden auf der Registerkarte *FC-Identifizierung* 
 
 
 
+=== Regeln zum Pausieren und Fortsetzen
+
+Um die Ausführung einer Regel zu verhindern, wählen Sie im Menü auf der rechten Seite der Regel „Pause“ oder wählen Sie mehrere Regeln aus und wählen Sie dann im Dropdown-Menü „Massenaktionen“ die Option „Pause“. Sie können die Ausführung der Regel auf dieselbe Weise fortsetzen.
+
+
+
 == Starten einer automatischen Aktualisierung der Geräteauflösung
 
 Bei einer Aktualisierung der Geräteauflösung werden manuelle Änderungen übernommen, die seit dem letzten vollautomatischen Geräteauflösungslauf hinzugefügt wurden.  Durch Ausführen eines Updates können nur die neuen manuellen Einträge in der Geräteauflösungskonfiguration übernommen und ausgeführt werden.  Es wird kein vollständiger Geräteauflösungslauf durchgeführt.
 
 .Verfahren
 . Melden Sie sich bei der Web-Benutzeroberfläche von Data Infrastructure Insights an.
-. Klicken Sie auf *Verwalten > Geräteauflösung*
+. Klicken Sie auf *Beobachtbarkeit > Anreichern > Geräteauflösung*
 . Klicken Sie im Bildschirm *Geräteauflösung* auf den Abwärtspfeil in der Schaltfläche *AR ausführen*.
 . Klicken Sie auf *Aktualisieren*, um das Update zu starten.
 
@@ -130,7 +140,7 @@ NOTE: Wenn Ihre Quelle nur einen Teil eines Host- oder Gerätenamens enthält, v
 
 .Verfahren
 . Melden Sie sich bei der Web-Benutzeroberfläche von Data Infrastructure Insights an.
-. Klicken Sie auf *Verwalten > Geräteauflösung*
+. Klicken Sie auf *Beobachtbarkeit > Anreichern > Geräteauflösung*
 . Klicken Sie auf die Registerkarte *Fibre Channel Identify*.
 +
 Das System zeigt die Geräte zusammen mit ihrem Auflösungsstatus an.
