@@ -14030,7 +14030,6 @@
   <block id="d01a003326568eee4579a0b14096808a" category="list-text">Jeder Ausschlusseintrag enthält den Namen des Administrators, der ihn vorgenommen hat, und das Datum der Festlegung. Diese Informationen werden zu Prüfungszwecken aufbewahrt.</block>
   <block id="502a3077dba0d1ad6f92723157947eb2" category="section-title">Benutzer und Pfade</block>
   <block id="fbe64a9bdbefe7d8e246dbe4db973fd6" category="list-text">Benutzer-Ausschlussliste: Fügen Sie Benutzer hinzu, die von Benachrichtigungen ausgeschlossen werden sollen.</block>
-  <block id="7f21f675f8b42bfe63a9f7bf4d897cb0" category="list-text">Verzeichnisausschlussliste: Unterstützt bis zu vier Ebenen von Verzeichnispfaden, beginnend mit dem Verbindungspfad.</block>
   <block id="f12b42eece54a56ffab836a42eb37488" category="section-title">Dateitypen</block>
   <block id="137e136f6b4d96d6452fec8d0ed99197" category="paragraph">Sobald ein Dateityp zur Liste der zulässigen Dateitypen hinzugefügt wurde, wird für diesen Dateityp keine Warnung vor Dateimanipulationsangriffen generiert. Beachten Sie, dass die Richtlinie für Dateitypen nur für die Erkennung von Dateimanipulationen gilt.</block>
   <block id="b3e41e2fae7745b697dbed9b6f854aa1" category="inline-image-macro">Liste der Dateitypen</block>
@@ -14094,4 +14093,5 @@
   <block id="7ecd430509607d1a2c2f3ffad808df91" category="list-text">Regeln, die reguläre Ausdrücke verwenden, erfordern einen regulären Ausdruck, das Format und die Auswahl der Groß-/Kleinschreibung.</block>
   <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">Regeln zum Pausieren und Fortsetzen</block>
   <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">Um die Ausführung einer Regel zu verhindern, wählen Sie im Menü auf der rechten Seite der Regel „Pause“ oder wählen Sie mehrere Regeln aus und wählen Sie dann im Dropdown-Menü „Massenaktionen“ die Option „Pause“. Sie können die Ausführung der Regel auf dieselbe Weise fortsetzen.</block>
+  <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">Verzeichnisausschlussliste: Unterstützt bis zu vier Ebenen von Verzeichnispfaden, beginnend mit dem Verbindungspfad. Alle Unterverzeichnisse und Dateien unter diesem Pfad werden von der Alarmgenerierung ausgeschlossen. Platzhalter in Verzeichnispfaden werden nicht unterstützt.</block>
 </blocks>

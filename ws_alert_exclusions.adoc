@@ -35,7 +35,7 @@ Der Alarmausschluss wird pro Mandant konfiguriert und umfasst Folgendes:
 == Benutzer und Pfade
 
 * Benutzer-Ausschlussliste: Fügen Sie Benutzer hinzu, die von Benachrichtigungen ausgeschlossen werden sollen.
-* Verzeichnisausschlussliste: Unterstützt bis zu vier Ebenen von Verzeichnispfaden, beginnend mit dem Verbindungspfad.
+* Verzeichnisausschlussliste: Unterstützt bis zu vier Ebenen von Verzeichnispfaden, beginnend mit dem Verbindungspfad. Alle Unterverzeichnisse und Dateien unter diesem Pfad werden von der Alarmgenerierung ausgeschlossen. Platzhalter in Verzeichnispfaden werden nicht unterstützt.
 
 
 image:ws_alert_exclusions_users.png[""]
