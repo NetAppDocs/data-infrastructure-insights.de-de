@@ -18,7 +18,7 @@ Reaktionsrichtlinien lösen im Falle eines Angriffs oder abnormalen Benutzerverh
 
 Sie können Richtlinien für bestimmte oder alle Geräte festlegen.  Um eine Antwortrichtlinie festzulegen, wählen Sie *Admin > Automatisierte Antwortrichtlinien* und klicken Sie auf die entsprechende Schaltfläche *+Richtlinie*.  Sie können Richtlinien für Angriffe oder Warnungen erstellen.
 
-image:ws_add_attack_policy.png["Fügen Sie ein Dialogfeld „Angriffsrichtlinie“ mit der Dropdown-Liste „Webhook“ hinzu"]
+image:ws_add_attack_policy.png["Fügen Sie einen Dialog zur Angriffsrichtlinie hinzu, der ein Webhook-Dropdown-Menü anzeigt, Breite=300"]
 
 Sie müssen die Richtlinie unter einem eindeutigen Namen speichern.
 

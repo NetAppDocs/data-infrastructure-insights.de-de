@@ -3706,8 +3706,6 @@
   <block id="df6a21f670066b82b5409a049dec0efe" category="doc">Richtlinien für automatisierte Antworten</block>
   <block id="e5da02c738b911c42fb0a45a5b76c8d9" category="paragraph">Reaktionsrichtlinien lösen im Falle eines Angriffs oder abnormalen Benutzerverhaltens Aktionen aus, beispielsweise das Erstellen eines Snapshots oder die Einschränkung des Benutzerzugriffs.</block>
   <block id="8816114441548a7f4d390de764f25ad9" category="paragraph">Sie können Richtlinien für bestimmte oder alle Geräte festlegen.  Um eine Antwortrichtlinie festzulegen, wählen Sie *Admin &gt; Automatisierte Antwortrichtlinien* und klicken Sie auf die entsprechende Schaltfläche *+Richtlinie*.  Sie können Richtlinien für Angriffe oder Warnungen erstellen.</block>
-  <block id="29d142bb0759eaeb3b47bf1809087cc7" category="inline-image-macro">Fügen Sie ein Dialogfeld „Angriffsrichtlinie“ mit der Dropdown-Liste „Webhook“ hinzu</block>
-  <block id="9c3cfe368d37e834800103686eba11c1" category="paragraph"><block ref="9c3cfe368d37e834800103686eba11c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10519a96ebde07deba902eb606bf97ff" category="paragraph">Sie müssen die Richtlinie unter einem eindeutigen Namen speichern.</block>
   <block id="168e31fead9fc72274b5723b0c86d27f" category="paragraph">Um eine automatisierte Antwortaktion (z. B. „Snapshot erstellen“) zu deaktivieren, deaktivieren Sie einfach die Aktion und speichern Sie die Richtlinie.</block>
   <block id="3218ac0e5f26253bd8724ab98d8f5e02" category="inline-link-macro">Seite mit den Alarmdetails</block>
@@ -14094,4 +14092,6 @@
   <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">Regeln zum Pausieren und Fortsetzen</block>
   <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">Um die Ausführung einer Regel zu verhindern, wählen Sie im Menü auf der rechten Seite der Regel „Pause“ oder wählen Sie mehrere Regeln aus und wählen Sie dann im Dropdown-Menü „Massenaktionen“ die Option „Pause“. Sie können die Ausführung der Regel auf dieselbe Weise fortsetzen.</block>
   <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">Verzeichnisausschlussliste: Unterstützt bis zu vier Ebenen von Verzeichnispfaden, beginnend mit dem Verbindungspfad. Alle Unterverzeichnisse und Dateien unter diesem Pfad werden von der Alarmgenerierung ausgeschlossen. Platzhalter in Verzeichnispfaden werden nicht unterstützt.</block>
+  <block id="fc6be75876bcdad138173b62e9ab5c17" category="inline-image-macro">Fügen Sie einen Dialog zur Angriffsrichtlinie hinzu, der ein Webhook-Dropdown-Menü anzeigt, Breite=300</block>
+  <block id="7cb01fa627551da61643f2eab2af39fb" category="paragraph"><block ref="7cb01fa627551da61643f2eab2af39fb" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
