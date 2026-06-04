@@ -18,6 +18,33 @@ NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hie
 
 
 
+== Juni 2026
+
+
+
+=== Ein intelligenterer KI-Assistent für globale Teams
+
+Der KI-Assistent unterstützt jetzt über ein Dutzend Sprachen und ermöglicht Ihrem Team so die natürliche Kommunikation in der jeweiligen Muttersprache. Die vollständige Liste finden Sie hier link:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["hier,"^].
+
+
+
+=== Neue Überwachungsfunktionen für Änderungen der Infrastrukturattribute
+
+Attributmonitore sind jetzt verfügbar, um Ihr Team automatisch zu benachrichtigen, wenn Assets zwischen Rechenzentren verschoben werden, ein Speicherpool nicht verschlüsselt ist oder Attributänderungen vorgenommen werden. Dies trägt zur Einhaltung der Konfigurationsbaselines bei und hilft sicherzustellen, dass bei neuen Bereitstellungen oder Änderungen nichts übersehen wird.
+
+image:attribute_monitor_in_list.png["Attributmonitore werden zu Monitortypen hinzugefügt"]
+
+
+
+=== Erstellen Sie intelligentere Benachrichtigungen und Webhooks mit dynamischen, kontextreichen Nachrichten
+
+Beim Erstellen eines Monitors oder Webhooks geben Sie einfach „%“ in der Alarmbeschreibung, der Webhook-URL, im Header oder im Body ein, um aus einer dynamisch gefüllten Liste verfügbarer Objektattribute und Annotationen auszuwählen. Geben Sie Ihren Alarmen den richtigen Kontext, um die Verständlichkeit zu verbessern, die Webhook-Integration zu verbessern und die Reaktionszeiten zu verkürzen.
+
+image:attribute_list_example.png["Attributliste in einer Monitorbeschreibung, Breite=400"]
+
+'''
+
+
 == April 2026
 
 

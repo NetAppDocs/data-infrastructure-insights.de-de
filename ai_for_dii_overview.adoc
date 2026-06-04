@@ -16,13 +16,6 @@ summary: Sie können den KI-Assistenten von DII verwenden, um Ihre Daten zusamme
 [role="lead"]
 Der *Data Infrastructure Insights AI Assistant* wurde entwickelt, um Sie bei der effizienteren Arbeit mit Ihren Infrastrukturdaten zu unterstützen. Er kann Ihnen helfen, Informationen zu analysieren, Erkenntnisse zu gewinnen, operative Herausforderungen zu meistern und fundierte Entscheidungen über Ihre Ressourcen zu treffen.
 
-[NOTE]
-====
-Der DII KI-Assistent ist als Limited Preview verfügbar. link:concept_preview_features.html["Mehr erfahren"] über die Data Infrastructure Insights Preview-Funktionen.
-
-Der KI-Assistent ist nur für DII-Mandanten verfügbar, die auf AWS bereitgestellt werden.
-
-====
 image:ai_assistant_sample_question.png["Beispielfrage für KI-Assistent"]
 
 
@@ -76,8 +69,14 @@ Für das beste Erlebnis geben Sie dem Assistenten spezifische Informationen zu:
 
 
 
+== Chatten Sie ganz natürlich
+
+Der KI-Assistent unterstützt jetzt über ein Dutzend Sprachen und ermöglicht Ihrem Team so die natürliche Kommunikation in der jeweiligen Muttersprache. Die vollständige Liste finden Sie hier link:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["hier,"].
+
+
+
 == Zugriff auf den Assistenten
 
-Um den DII AI Assistant aufzurufen, wählen Sie einfach das Eulensymbol in der unteren Ecke des Bildschirms aus. Ein Benutzer mit der Rolle „Owner“ muss den Nutzungsbedingungen zustimmen, bevor ein Benutzer den AI Assistant in Ihrem Mandanten verwenden kann.
+Um den DII KI-Assistenten aufzurufen, wählen Sie einfach das Eulensymbol in der unteren Ecke des Bildschirms aus. Ein Benutzer mit der Rolle „Owner“ oder „Admin“ muss den Nutzungsbedingungen zustimmen, bevor ein Benutzer den KI-Assistenten in Ihrem Mandanten nutzen kann.
 
 image:ai_assistant_icon.png["dii_ai_assistant_icon"]
