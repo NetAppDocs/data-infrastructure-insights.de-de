@@ -209,6 +209,9 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 | link:task_dc_pure_flashblade.html["Pure Storage FlashBlade"] | Infrastruktur 
 
 
+| link:task_dc_qumulo_rest.html["Qumulo REST"] | Infrastruktur 
+
+
 | link:task_dc_redhat_virtualization.html["Red Hat Virtualisierung"] | Infrastruktur 
 
 

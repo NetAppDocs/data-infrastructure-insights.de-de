@@ -7,6 +7,10 @@ summary: Konfigurieren des Dell EMC Isilon/PowerScale REST-Datensammlers.
 = Dell EMC Isilon/PowerScale REST-Datensammler
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
