@@ -34,15 +34,6 @@ Data Infrastructure Insights erhält von diesem Datensammler die folgenden Besta
 
 
 | Node | Speicherknoten 
-
-
-| OneFS-Dateisystem | Internes Volumen 
-
-
-| OneFS-Dateisystem | Speicherpool 
-
-
-| Qtree | Qtree 
 |===
 Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
 
@@ -54,7 +45,7 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 
 * Ein Benutzerkonto und ein Passwort.  Dieses Konto muss NICHT admin/root sein, aber Sie MÜSSEN Ihrem Dienstkonto eine beträchtliche Anzahl von Leseberechtigungen erteilen – siehe Tabelle unten
 * IP-Adresse / Vollqualifizierter Domänenname des Qumulo-Clusters
-* HTTPS-Zugriff auf Port 8080
+* HTTPS-Zugriff auf Port 8000
 
 
 
@@ -83,7 +74,7 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 | Feld | Beschreibung 
 
 
-| HTTPS-Port | Der Standardwert ist 8080. 
+| HTTPS-Port | Der Standardwert ist 8000. 
 
 
 | Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert ist 30. 
