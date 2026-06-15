@@ -43,7 +43,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 
-* Ein Benutzerkonto und ein Passwort.  Dieses Konto muss NICHT admin/root sein, aber Sie MÜSSEN Ihrem Dienstkonto eine beträchtliche Anzahl von Leseberechtigungen erteilen – siehe Tabelle unten
+* Ein Benutzerkonto und ein Passwort mit mindestens Leseberechtigung.
 * IP-Adresse / Vollqualifizierter Domänenname des Qumulo-Clusters
 * HTTPS-Zugriff auf Port 8000
 
