@@ -22,6 +22,12 @@ NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hie
 
 
 
+=== Wichtige Aktualisierungen mit Anmeldenachrichten teilen
+
+Das Team bleibt mit anpassbaren Anmeldenachrichten informiert und abgestimmt. Wichtige Ankündigungen, Wartungspläne oder Richtlinienaktualisierungen werden direkt bei der Anmeldung an die Benutzer kommuniziert. Mit Markdown-Unterstützung lassen sich Nachrichten übersichtlich formatieren, sodass kritische Informationen jeden DII-Benutzer erreichen. Konten mit Administratorrechten finden die Konfiguration im Admin-Menü unter Benachrichtigungen.
+
+
+
 === Mehr Arbeitsfläche, weniger Unordnung
 
 Das DII-Navigationsmenü präsentiert sich in einem neuen Look, der farblich und funktional an die Console angepasst ist und so für ein einheitlicheres Benutzererlebnis sorgt. Das bisher statische Hauptmenü ist standardmäßig ausgeblendet, um einen übersichtlicheren Arbeitsbereich und eine effizientere Nutzung des Bildschirmplatzes zu ermöglichen. Klicken Sie einfach auf das Hamburger-Symbol (☰) oben links, um es aufzurufen.

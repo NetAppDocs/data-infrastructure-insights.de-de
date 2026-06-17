@@ -14124,4 +14124,6 @@
   <block id="90e0071503be9324e2266cfd3368d18a" category="list-text">HTTPS-Zugriff auf Port 8000</block>
   <block id="bdda6785fe5c26b462fa0a87d4327560" category="cell">Der Standardwert ist 8000.</block>
   <block id="606930ccd6550cc24fe845f69572c586" category="list-text">Ein Benutzerkonto und ein Passwort mit mindestens Leseberechtigung.</block>
+  <block id="38fbce916138020848ac3b594a6648d0" category="section-title">Wichtige Aktualisierungen mit Anmeldenachrichten teilen</block>
+  <block id="7260908f665e8b3c02f0fce13c7ea541" category="paragraph">Das Team bleibt mit anpassbaren Anmeldenachrichten informiert und abgestimmt. Wichtige Ankündigungen, Wartungspläne oder Richtlinienaktualisierungen werden direkt bei der Anmeldung an die Benutzer kommuniziert. Mit Markdown-Unterstützung lassen sich Nachrichten übersichtlich formatieren, sodass kritische Informationen jeden DII-Benutzer erreichen. Konten mit Administratorrechten finden die Konfiguration im Admin-Menü unter Benachrichtigungen.</block>
 </blocks>
