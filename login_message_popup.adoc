@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: login_message_popup.html 
+summary: Eine Pop-up-Nachricht des Tages für alle Benutzer festlegen. 
+keywords: notifications, pop-up, banner, motd, message, login 
+---
+= Konfigurieren einer Anmeldenachricht
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können eine Nachricht konfigurieren, die allen Benutzern beim Anmelden als Pop-up angezeigt wird. Es kann ausgewählt werden, ob die Anzeige nur beim nächsten Anmelden oder bei allen nachfolgenden Anmeldungen erfolgt.
+
+Ein Administrator kann die Nachricht unter Admin > Benachrichtigungen auf der Registerkarte "Login-Banner" festlegen.
+
+Die Nachricht unterstützt grundlegendes Markdown, sodass Formatierungen wie Fettdruck, Kursivschrift, Tabellen usw. angewendet werden können.
+
+Es kann festgelegt werden, ob die Benutzer die Nachricht nur bei ihrer nächsten Anmeldung oder bei jeder weiteren Anmeldung sehen.
+
+image:login_banner_settings.png["Einstellungen für das Anmeldebanner"]
+
+Beachten Sie, dass der Benutzer die Anmeldemeldung bestätigen muss, um sie zu schließen. Nach dem Schließen werden alle weiteren Pop-ups (z. B. What's New-Updates, Terms-of-Service-Updates usw.) angezeigt.

@@ -17,7 +17,7 @@ Navigieren Sie zu *Workload Security > Policies* und wählen Sie die Registerkar
 
 Der Alarmausschluss wird pro Mandant konfiguriert und umfasst Folgendes:
 
-. Dateitypen: Warnungen vor Dateimanipulation bei bestimmten <<allowed-file-types,Zulässige Dateitypen>> Dateitypen unterdrücken
+. Dateitypen: Warnungen vor Dateimanipulation bei bestimmten <<file-types,Zulässige Dateitypen>> Dateitypen unterdrücken
 . Benutzer: Warnmeldungen, die von ausgewählten Benutzern ausgelöst werden, unterdrücken.
 . Pfade: Warnmeldungen für Aktivitäten auf ausgewählten Verzeichnispfaden unterdrücken (bis zu vier Verzeichnisebenen, beginnend am Verbindungspfad).
 
@@ -38,9 +38,9 @@ Der Alarmausschluss wird pro Mandant konfiguriert und umfasst Folgendes:
 * Verzeichnisausschlussliste: Unterstützt bis zu vier Ebenen von Verzeichnispfaden, beginnend mit dem Verbindungspfad. Alle Unterverzeichnisse und Dateien unter diesem Pfad werden von der Alarmgenerierung ausgeschlossen. Platzhalter in Verzeichnispfaden werden nicht unterstützt.
 
 
-image:ws_alert_exclusions_users.png[""]
+image:ws_alert_exclusions_users.png["Benutzer, die von Warnungen ausgeschlossen sind"]
 
-image:ws_alert_exclusions_paths.png[""]
+image:ws_alert_exclusions_paths.png["Pfade für Alarmausschlüsse"]
 
 Einzelne Benutzer und Verzeichnispfade können der jeweiligen Ausschlussliste hinzugefügt oder daraus entfernt werden. Jeder Eintrag in jeder Liste enthält die Information, wann und von wem er zur Liste hinzugefügt wurde, und diese Information wird zu Prüfzwecken verwendet.
 

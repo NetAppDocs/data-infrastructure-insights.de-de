@@ -296,7 +296,7 @@ Bearbeiten Sie die _AgentConfiguration_ in _operator-config.yaml_, um den neuen 
 agent:
   ...
   # An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
-  # Please see documentation link here: link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository
+  # Please see documentation link here: link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository[Using a custom or private docker repository]
   dockerRepo: your.docker.repo/long/path/to/test
   # Optional: A docker image pull secret that maybe needed for your private docker registry
   dockerImagePullSecret: docker-secret-name
@@ -426,7 +426,7 @@ Wenn beim Einrichten des Kubernetes Monitoring Operators Probleme auftreten, kö
 | Beim Versuch, den Operator bereitzustellen, sind mir Probleme begegnet, und ich verwende PSP/PSA. | 1. Bearbeiten Sie den Agenten mit dem folgenden Befehl: kubectl -n <name-space> edit agent 2.  Markieren Sie „security-policy-enabled“ als „false“.  Dadurch werden die Pod-Sicherheitsrichtlinien und die Pod-Sicherheitszulassung deaktiviert und dem Operator die Bereitstellung ermöglicht.  Bestätigen Sie mit den folgenden Befehlen: kubectl get psp (sollte anzeigen, dass die Pod-Sicherheitsrichtlinie entfernt wurde) kubectl get all -n <namespace> | grep -i psp (sollte anzeigen, dass nichts gefunden wurde) 
 
 
-| „ImagePullBackoff“-Fehler aufgetreten | Diese Fehler können auftreten, wenn Sie über ein benutzerdefiniertes oder privates Docker-Repository verfügen und den Kubernetes Monitoring Operator noch nicht so konfiguriert haben, dass es ordnungsgemäß erkannt wird. <<using-a-custom-or-private-docker-repository,Mehr lesen>> Informationen zur Konfiguration für benutzerdefinierte/private Repos. 
+| „ImagePullBackoff“-Fehler aufgetreten | Diese Fehler können auftreten, wenn Sie ein benutzerdefiniertes oder privates Docker-Repository verwenden und den Kubernetes Monitoring Operator noch nicht so konfiguriert haben, dass er dieses korrekt erkennt. <<Verwenden eines benutzerdefinierten oder privaten Docker-Repositorys,Mehr lesen>> Informationen zur Konfiguration für benutzerdefinierte/private Repositories. 
 
 
 | Ich habe ein Problem mit der Bereitstellung meines Überwachungsoperators und die aktuelle Dokumentation hilft mir nicht bei der Lösung.  a| 

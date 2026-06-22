@@ -44,7 +44,7 @@ Um einen Agenten zu installieren, müssen Sie unabhängig von der verwendeten Pl
 NOTE: Nachdem Sie einen Agenten auf einem Host installiert haben, müssen Sie auf diesem Host keinen weiteren Agenten installieren.
 
 
-TIP: Sobald Sie einen Agenten auf einem Server/einer VM installiert haben, sammelt Data Infrastructure Insights zusätzlich zu den von Ihnen konfigurierten Datensammlern auch Metriken von diesem System.  Diese Kennzahlen werden wie folgt erfasst:link:task_config_telegraf_node.html["„Knoten“-Metriken"] .
+TIP: Sobald ein Agent auf einem Server oder einer VM installiert ist, sammelt Data Infrastructure Insights Metriken von diesem System sowie von allen konfigurierten Datensammlern. Diese Metriken werden als „Node“-Metriken erfasst.
 
 
 NOTE: Wenn Sie einen Proxy verwenden, lesen Sie die Proxy-Anweisungen für Ihre Plattform, bevor Sie den Telegraf-Agenten installieren.

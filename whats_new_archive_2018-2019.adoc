@@ -771,7 +771,7 @@ Beachten Sie, dass der HCI-Datensammler nur vom HCI Virtual Center abruft.  Um D
 
 === Neuer Service-Datensammler: Kapacitor
 
-* link:task_config_telegraf_kapacitor.html["Kondensator"]wurde als Datensammler für Dienste hinzugefügt.
+* Kapacitor wurde als Data Collector für Services hinzugefügt.
 
 
 

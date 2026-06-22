@@ -1,12 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_io_density_report_no_root.html 
-summary: Wenn Sie nach einer hohen E/A-Dichte suchen, möchten Sie Stammvolumes ausschließen. 
-keywords: NetApp, root volume, high I/O, 
+summary: Bei Abfragen nach hoher IO-Dichte sollen Root-Volumes ausgeschlossen werden. 
+keywords: NetApp, root volume, high IO, 
 ---
 = Sicherstellen, dass IO-Dichteberichte nur interne Datenmengen beschreiben
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

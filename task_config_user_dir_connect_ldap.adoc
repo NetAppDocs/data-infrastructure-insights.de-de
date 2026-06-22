@@ -7,6 +7,10 @@ summary: Konfigurieren des Workload Security LDAP User Directory Collector
 = Konfigurieren eines LDAP-Verzeichnisserver-Collectors
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -126,7 +130,7 @@ Sie können LDAP-Benutzerberechtigungen und Attributdefinitionen mithilfe der fo
  ldapsearch -D "uid=john ,cn=users,cn=accounts,dc=dorp,dc=company,dc=com" -W -x -LLL -o ldif-wrap=no -b "cn=accounts,dc=dorp,dc=company,dc=com" -H ldap://vmwipaapp08.dorp.company.com
 * Verwenden Sie den LDAP Explorer, um in einer LDAP-Datenbank zu navigieren, Objekteigenschaften und -attribute anzuzeigen, Berechtigungen anzuzeigen, das Schema eines Objekts anzuzeigen und komplexe Suchvorgänge auszuführen, die Sie speichern und erneut ausführen können.
 +
-** Installieren Sie den LDAP Explorer(http://ldaptool.sourceforge.net/[] ) oder Java LDAP Explorer(http://jxplorer.org/[] ) auf jedem Windows-Computer, der eine Verbindung zum LDAP-Server herstellen kann.
+** Installieren Sie link:http://ldaptool.sourceforge.net/["LDAP Explorer"] oder link:http://jxplorer.org/["Java LDAP Explorer"] auf einem beliebigen Windows-Rechner, der eine Verbindung zum LDAP-Server herstellen kann.
 ** Stellen Sie mit dem Benutzernamen/Passwort des LDAP-Verzeichnisservers eine Verbindung zum LDAP-Server her.
 
 

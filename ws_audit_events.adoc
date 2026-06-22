@@ -13,6 +13,7 @@ keywords: workload security, audit, events
 :imagesdir: ./media/
 
 
+[role="lead"]
 Identifizieren Sie sowohl erwartete (zur Nachverfolgung) als auch unerwartete (zur Fehlerbehebung) Änderungen. Sehen Sie sich eine Audit-Trail der Workload Security-Systemereignisse und Benutzeraktivitäten an.
 
 

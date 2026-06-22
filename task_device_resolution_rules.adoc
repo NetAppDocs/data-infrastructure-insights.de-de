@@ -161,4 +161,48 @@ Data Infrastructure Insights führt den Hostauflösungsprozess in der Reihenfolg
 
 Wenn zutreffende Regeln gefunden werden, werden die Regelnamen in der Spalte „Regeln“ angezeigt und als „manuell“ gekennzeichnet.
 
-Verwandt:link:task_device_resolution_fibre_channel.html["Fibre Channel-Geräteauflösung"] link:task_device_resolution_ip.html["IP-Geräteauflösung"] link:task_device_resolution_preferences.html["Festlegen der Geräteauflösungseinstellungen"]
+
+
+== KI-gestützte Regelgenerierung
+
+Alternativ lässt sich das Rätselraten mit KI-gestützter Geräteidentifizierung vermeiden, sodass Regeln schnell und einfach erstellt werden können. Mit dem KI-gestützten Rule Generator wird die Umgebung analysiert und es werden Vorschläge für Device Resolution-Regeln gemacht, wodurch mehr Geräte schnell identifiziert und verwaltet werden können.
+
+
+
+=== Los geht's
+
+Um KI zur Generierung von Auflösungsregeln zu nutzen, muss ein Administrator zunächst AI Generated Rules aktivieren.
+
+image:ahr_ai_get_started.png["Erste Schritte zur Generierung von KI-Regeln, width=400"]
+
+Der KI-Assistent zeigt Ihnen an, wie viel Prozent Ihrer Fibre-Channel-Geräte nicht identifiziert sind, und fordert Sie auf, die Generierung von Regeln zu erlauben. „Los geht’s!“ auswählen.
+
+image:ahr_ai_lets_go.png["„Los geht’s“ auswählen, um Regeln zu generieren, width=400"]
+
+Sie werden aufgefordert, Ihre Domainnamen zu bestätigen, bevor KI-generierte Regeln aktiviert werden. Alle Ihre Domains müssen einbezogen werden, damit eine effektive Identifizierung möglich ist.
+
+
+
+=== Fortschritt prüfen
+
+DII erstellt regelmäßig eine Benachrichtigung, wenn zusätzliche Geräte zur möglichen Identifizierung verfügbar sind. Ist oben rechts auf der Seite ein grüner Punkt auf dem Glockensymbol zu sehen, kann darüber die Benachrichtigung angezeigt werden.
+
+image:ahr_ai_notification.png["Benachrichtigungsglocke, Breite=400"]
+
+Über das Glockensymbol lässt sich auch der Status der Regelgenerierung prüfen, was je nach Komplexität Ihrer Umgebung von einigen Sekunden bis zu mehreren Minuten dauern kann.
+
+Von der KI generierte Regeln werden in der Liste mit dem Symbol „AI Generated“ gekennzeichnet.
+
+image:ahr_ai_badge.png["KI-generiertes Regelabzeichen, Breite=400"]
+
+
+
+=== Fortsetzen und fortfahren
+
+KI-generierte Regeln befinden sich standardmäßig im Status _Pausiert_. Jede Regel muss überprüft und auf _Fortsetzen_ gesetzt werden, bevor sie Geräte identifizieren kann.
+
+
+
+== Verwandt:
+
+link:task_device_resolution_fibre_channel.html["Fibre Channel-Geräteauflösung"] link:task_device_resolution_ip.html["IP-Geräteauflösung"] link:task_device_resolution_preferences.html["Festlegen der Geräteauflösungseinstellungen"]
