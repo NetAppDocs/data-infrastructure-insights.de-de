@@ -281,6 +281,11 @@ Netzwerkleistung und Karte
 * ci-net-observer
 
 
+Änderungsanalyse
+
+* ci-k8s-change-observer
+
+
 Übertragen Sie das Operator-Docker-Image gemäß Ihren Unternehmensrichtlinien in Ihr privates/lokales/Unternehmens-Docker-Repository.  Stellen Sie sicher, dass die Bild-Tags und Verzeichnispfade zu diesen Bildern in Ihrem Repository mit denen im Data Infrastructure Insights -Repository übereinstimmen.
 
 Bearbeiten Sie die Bereitstellung des Überwachungsoperators in operator-deployment.yaml und ändern Sie alle Bildreferenzen, um Ihr privates Docker-Repository zu verwenden.
@@ -534,5 +539,8 @@ Hinweis: Um diese Einstellungen auch nach einem Neustart des Knotens dauerhaft z
 
 
 | Ich erhalte den folgenden Fehler in den Fluent-bit-Pods und der Pod kann nicht gestartet werden: 026/01/12 20:20:32] [error] [sqldb] error=unable to open database file [2026/01/12 20:20:32] [error] [input:tail:tail.0] db: could not create 'in_tail_files' table [2026/01/12 20:20:32] [error] [input:tail:tail.0] could not open/create database [2026/01/12 20:20:32] [error] failed initialize input tail.0 [2026/01/12 20:20:32] [error] [engine] input initialization failed | Stellen Sie sicher, dass das Hostverzeichnis, in dem sich die DB-Datei befindet, die richtigen lesen/schreiben-Berechtigungen hat. Genauer gesagt sollte das Hostverzeichnis lesen/schreiben-Berechtigungen für Nicht-Root-Benutzer gewähren. Der Standardpfad für die DB-Datei ist /var/log/, sofern er nicht durch die fluent-bit-dbFile _agentconfiguration_-Option überschrieben wird. Wenn SELinux aktiviert ist, versuchen Sie, die fluent-bit-seLinuxOptionsType agentconfiguration-Option auf 'spc_t' zu setzen. 
+
+
+| Ich erhalte Fehlermeldungen von Telegraf, die der folgenden ähneln, aber Telegraf startet und läuft trotzdem: E! [inputs.kubernetes] Fehler im Plugin: https://<IP>>:<port>>/pods[] returned HTTP status 403 Forbidden | Diese Meldungen können auftreten, wenn Sie Kubernetes-Versionen unter 1.33 verwenden. Die von telegraf verwendete RBAC-Ressource „nodes/pods“ ist in diesen Versionen nicht vorhanden. Im Abschnitt „For Kubernetes versions < 1.33“ der Datei operator-additional-permissions.yaml sind die für ältere Versionen erforderlichen RBAC-Ressourcen aufgeführt. 
 |===
 Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .
