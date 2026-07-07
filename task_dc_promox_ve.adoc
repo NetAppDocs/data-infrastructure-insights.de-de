@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task_dc_promox_ve.html 
+keywords: data collector, Promox VirtVirtual Environmentalization 
+summary: Konfiguration des Promox Virtual Environment Datensammlers. 
+---
+= Red Hat OpenShift Virtualisierungs-Datensammler
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Der DII Promox Virtual Environment Collector erfasst Inventardaten. Dies ist ein auf HTTPS REST API basierender Collector.
+
+
+
+== Terminologie
+
+Für jeden von Data Infrastructure Insights erfassten Asset-Typ wird die am häufigsten verwendete Terminologie für das Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="2*"]
+|===
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
+
+
+| Scheibe | Virtuelle Festplatte 
+
+
+| Gastgeber | Gastgeber 
+
+
+| Virtuelle Maschine | Virtuelle Maschine 
+
+
+| Speicherdomäne | Datenspeicher 
+
+
+| Logische Einheit | LUN 
+|===
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
+
+
+
+== Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| Hostname oder IP-Adresse | Hostname-IP-Adresse des Storage-Systems 
+
+
+| API-Token-ID | API-Token für Zugriff erforderlich 
+
+
+| API-Token-Secret | Geheimnis für das oben genannte Token 
+|===
+
+
+== Erweiterte Konfiguration
+
+[cols="2*"]
+|===
+| Feld | Beschreibung 
+
+
+| HTTPS-Kommunikationsport | Port für die HTTPS-Kommunikation (Standard 8006) 
+
+
+| Inventarabfrageintervall (min) | Der Standardwert beträgt 20 Minuten. 
+|===
+
+
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

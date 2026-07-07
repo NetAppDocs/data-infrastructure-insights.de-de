@@ -203,6 +203,9 @@ Alphabetische Liste der von Data Infrastructure Insights unterstützten Datensam
 | link:task_dc_oracle_zfs.html["Oracle ZFS-Speichergerät"] | Infrastruktur 
 
 
+| link:task_dc_promox_ve.html["Promox Virtual Environment"] | Infrastruktur 
+
+
 | link:task_dc_pure_flasharray.html["Pure Storage FlashArray"] | Infrastruktur 
 
 
