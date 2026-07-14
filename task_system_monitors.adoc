@@ -15,10 +15,12 @@ Data Infrastructure Insights umfasst eine Reihe systemdefinierter Monitore für 
 
 NOTE: Viele Systemmonitore befinden sich standardmäßig im Status _Pausiert_.  Sie können einen Systemmonitor aktivieren, indem Sie die Option _Fortsetzen_ für den Monitor auswählen.  Stellen Sie sicher, dass „Erweiterte Zählerdatenerfassung“ und „ONTAP EMS-Protokollerfassung aktivieren“ im Datensammler aktiviert sind.  Diese Optionen finden Sie im ONTAP Data Collector unter _Erweiterte Konfiguration_:image:Enable_Log_Monitor_Collection.png["Aktivieren der erweiterten Zähler- und EMS-Protokollsammlung für ONTAP"]
 
+[[top]]
 Inhaltsverzeichnis:[]
 
 
 
+[[monitor-descriptions]]
 == Monitorbeschreibungen
 
 Systemdefinierte Monitore bestehen aus vordefinierten Metriken und Bedingungen sowie Standardbeschreibungen und Korrekturmaßnahmen, die nicht geändert werden können.  Sie _können_ die Benachrichtigungsempfängerliste für systemdefinierte Monitore ändern.  Um die Kennzahlen, Bedingungen, Beschreibungen und Korrekturmaßnahmen anzuzeigen oder die Empfängerliste zu ändern, öffnen Sie eine systemdefinierte Monitorgruppe und klicken Sie in der Liste auf den Monitornamen.
@@ -36,6 +38,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[metric-monitors]]
 === Metrische Monitore
 
 |===
@@ -122,6 +125,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[log-monitors]]
 === Protokollmonitore
 
 |===
@@ -292,6 +296,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[anti-ransomware-log-monitors]]
 === Anti-Ransomware-Protokollmonitore
 
 |===
@@ -330,6 +335,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[fsx-for-netapp-ontap-monitors]]
 === FSx für NetApp ONTAP -Monitore
 
 |===
@@ -359,6 +365,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[k8s-monitors]]
 === K8s-Monitore
 
 |===
@@ -484,6 +491,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[change-log-monitors]]
 === Änderungsprotokoll-Monitore
 
 |===
@@ -516,6 +524,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[data-collection-monitors]]
 === Datenerfassungsmonitore
 
 |===
@@ -536,6 +545,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[security-monitors]]
 === Sicherheitsmonitore
 
 |===
@@ -592,6 +602,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[data-protection-monitors]]
 === Datenschutzmonitore
 
 |===
@@ -609,6 +620,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[cloud-volume-cvo-monitors]]
 === Cloud Volume (CVO)-Monitore
 
 |===
@@ -689,6 +701,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[snapmirror-for-business-continuity-smbc-mediator-log-monitors]]
 === SnapMirror für Business Continuity (SMBC) Mediator Log Monitors
 
 |===
@@ -733,6 +746,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[additional-power-heartbeat-and-miscellaneous-system-monitors]]
 === Zusätzliche Strom-, Heartbeat- und sonstige Systemmonitore
 
 |===
@@ -808,6 +822,7 @@ Nachfolgend sind die Systemmonitore aufgeführt, die derzeit in Data Infrastruct
 
 
 
+[[more-information]]
 == Weitere Informationen
 
 * link:task_view_and_manage_alerts.html["Anzeigen und Verwerfen von Warnungen"]

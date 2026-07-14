@@ -18,6 +18,7 @@ Sie erstellen Anmerkungen und weisen sie den von Ihnen überwachten Assets zu.  
 
 
 
+[[defining-annotations]]
 == Anmerkungen definieren
 
 Mithilfe von Anmerkungen können Sie den Assets benutzerdefinierte, geschäftsspezifische Daten hinzufügen, die Ihren Geschäftsanforderungen entsprechen.  Obwohl Data Infrastructure Insights eine Reihe von Standardanmerkungen bereitstellt, wie etwa den Lebenszyklus der Anlage (Geburtstag oder Ende der Lebensdauer), den Standort des Gebäudes oder Rechenzentrums und die Ebene, möchten Sie die Daten möglicherweise auf andere Weise anzeigen.
@@ -50,6 +51,7 @@ Geben Sie beispielsweise Folgendes ein, um eine Textanmerkung zu erstellen, die 
 
 
 
+[[manually-assigning-annotations-to-assets]]
 == Manuelles Zuweisen von Anmerkungen zu Assets
 
 Durch die Zuweisung von Anmerkungen zu Anlagen können Sie Anlagen auf für Ihr Unternehmen relevante Weise sortieren, gruppieren und darüber berichten.  Obwohl Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen zu Assets eines bestimmten Typs zuweisen können, können Sie Anmerkungen zu einem einzelnen Asset über die Asset-Seite zuweisen.
@@ -81,12 +83,14 @@ Wenn Sie den Wert der Anmerkung nach der Zuweisung ändern möchten, klicken Sie
 
 
 
+[[assigning-annotations-using-annotation-rules]]
 == Zuweisen von Anmerkungen mithilfe von Anmerkungsregeln
 
 Um Assets basierend auf von Ihnen definierten Kriterien automatisch Anmerkungen zuzuweisen, konfigurieren Sie Anmerkungsregeln.  Data Infrastructure Insights weist die Anmerkungen den Assets basierend auf diesen Regeln zu.  Data Infrastructure Insights bietet außerdem zwei Standardanmerkungsregeln, die Sie Ihren Anforderungen entsprechend ändern oder entfernen können, wenn Sie sie nicht verwenden möchten.
 
 
 
+[[creating-annotation-rules]]
 === Erstellen von Anmerkungsregeln
 
 Als Alternative zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden.  Manuell auf einzelnen Asset-Seiten festgelegte Anmerkungen haben Vorrang vor regelbasierten Anmerkungen, wenn Insight die Anmerkungsregeln auswertet.

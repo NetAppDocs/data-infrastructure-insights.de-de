@@ -14,15 +14,17 @@ Dieser Datensammler erfasst Inventar
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erwirbt Inventar von diesem Collector.
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -43,9 +45,10 @@ Data Infrastructure Insights erwirbt Inventar von diesem Collector.
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 

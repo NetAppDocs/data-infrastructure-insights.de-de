@@ -16,11 +16,12 @@ Die Liste der unterstützten Geräte umfasst Modelle wie SVC, v7000, v5000 und v
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom IBM SVC-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -46,6 +47,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[inventory-requirements]]
 === Inventaranforderungen
 
 * IP-Adresse jedes SVC-Clusters
@@ -55,6 +57,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[performance-requirements]]
 === Leistungsanforderungen
 
 * SVC-Konsole, die für jeden SVC-Cluster obligatorisch und für das SVC Discovery Foundation-Paket erforderlich ist.
@@ -67,9 +70,10 @@ Hinweis: Alternativ können Sie die Datenerfassung über die SVC-Verwaltungsbenu
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -84,9 +88,10 @@ Hinweis: Alternativ können Sie die Datenerfassung über die SVC-Verwaltungsbenu
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -101,11 +106,12 @@ Hinweis: Alternativ können Sie die Datenerfassung über die SVC-Verwaltungsbenu
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 
@@ -114,7 +120,7 @@ Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen
 |===
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

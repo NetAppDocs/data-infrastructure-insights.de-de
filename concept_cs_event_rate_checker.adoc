@@ -18,6 +18,7 @@ Ermitteln Sie die optimale Größe der Agentenmaschinen, indem Sie die von Ihren
 
 
 
+[[requirements]]
 == Anforderungen:
 
 * Cluster-IP
@@ -80,6 +81,7 @@ Siehe dielink:concept_cs_agent_requirements.html["Agentenanforderungen"] Seite f
 
 
 
+[[example]]
 == Beispiel
 
 Nehmen wir an, wir haben drei SVMS, die Ereignisraten von 100, 200 bzw. 300 Ereignissen pro Sekunde generieren.
@@ -141,6 +143,7 @@ Overall svm audit_svm is generating 300 events/sec
  [root@ci-cs-data agent]#
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 |===

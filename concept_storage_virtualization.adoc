@@ -14,6 +14,7 @@ Data Infrastructure Insights kann zwischen einem Speicherarray mit lokalem Speic
 
 
 
+[[virtualization-in-a-table-widget]]
 === Virtualisierung in einem Tabellen-Widget
 
 Eine der einfachsten Möglichkeiten, sich mit der Virtualisierung Ihres Speichers zu befassen, besteht darin, ein Dashboard-Tabellen-Widget zu erstellen, das den Typ „Virtualisiert“ anzeigt.  Fügen Sie beim Erstellen der Abfrage für das Widget einfach „virtualizedType“ zu Ihrer Gruppierung oder Ihrem Filter hinzu.
@@ -26,6 +27,7 @@ image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tabelle mit 
 
 
 
+[[landing-pages-show-virtualized-information]]
 === Landing Pages zeigen virtualisierte Informationen
 
 Auf der Zielseite zu Speicher, Volume, internem Volume oder Datenträger können Sie relevante Virtualisierungsinformationen sehen.  Wenn Sie sich beispielsweise die Speicher-Landingpage unten ansehen, können Sie erkennen, dass es sich um einen virtuellen Speicher handelt und welches Backend-Speichersystem gilt.  In allen relevanten Tabellen auf den Zielseiten werden gegebenenfalls auch Virtualisierungsinformationen angezeigt.
@@ -34,6 +36,7 @@ image:StorageVirtualization_StorageSummary.png["Speicher-Landingpage mit Informa
 
 
 
+[[existing-landing-pages-and-dashboards]]
 === Vorhandene Landingpages und Dashboards
 
 Beachten Sie, dass, wenn Sie derzeit benutzerdefinierte Zielseiten oder Dashboards auf Ihrem Mandanten haben, diese standardmäßig nicht automatisch alle Virtualisierungsinformationen anzeigen.  Sie können jedoch jedes benutzerdefinierte Dashboard oder jede benutzerdefinierte Zielseite auf die Standardeinstellungen zurücksetzen (Sie müssen Ihre Anpassungen erneut implementieren) oder die entsprechenden Widgets ändern, um die gewünschten Virtualisierungsattribute oder -metriken einzuschließen.

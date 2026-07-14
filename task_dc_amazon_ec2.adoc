@@ -14,6 +14,7 @@ Data Infrastructure Insights verwendet den Amazon EC2-Datensammler, um Bestands-
 
 
 
+[[requirements]]
 == Anforderungen
 
 Um Daten von Amazon EC2-Geräten zu erfassen, benötigen Sie die folgenden Informationen:
@@ -33,11 +34,12 @@ Zugriffsschlüssel bestehen aus einer Zugriffsschlüssel-ID (z. B. AKIAIOSFODNN7
 
 
 
+[[configuration]]
 == Konfiguration
 
 Geben Sie die Daten in die Felder des Datensammlers gemäß der folgenden Tabelle ein:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -58,9 +60,10 @@ Geben Sie die Daten in die Felder des Datensammlers gemäß der folgenden Tabell
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -87,6 +90,7 @@ Geben Sie die Daten in die Felder des Datensammlers gemäß der folgenden Tabell
 |===
 
 
+[[iam-access-key]]
 == IAM-Zugriffsschlüssel
 
 Zugriffsschlüssel sind langfristige Anmeldeinformationen für einen IAM-Benutzer oder den Stammbenutzer des AWS-Kontos.  Zugriffsschlüssel werden verwendet, um programmgesteuerte Anfragen an die AWS CLI oder AWS API zu signieren (direkt oder mithilfe des AWS SDK).
@@ -95,6 +99,7 @@ Zugriffsschlüssel bestehen aus zwei Teilen: einer Zugriffsschlüssel-ID und ein
 
 
 
+[[iam-role]]
 == IAM-Rolle
 
 Wenn Sie die Authentifizierung mit _IAM-Rolle_ verwenden (im Gegensatz zur Authentifizierung mit IAM-Zugriffsschlüssel), müssen Sie sicherstellen, dass die von Ihnen erstellte oder angegebene Rolle über die entsprechenden Berechtigungen für den Zugriff auf Ihre Ressourcen verfügt.
@@ -111,6 +116,7 @@ Hinweis: Die IAM-Rolle kann nur verwendet werden, wenn die Acquisition Unit in e
 
 
 
+[[mapping-amazon-tags-to-data-infrastructure-insights-annotations]]
 == Zuordnen von Amazon-Tags zu Data Infrastructure Insights -Anmerkungen
 
 Der Amazon EC2-Datensammler enthält eine Option, mit der Sie Data Infrastructure Insights -Anmerkungen mit auf EC2 konfigurierten Tags füllen können.  Die Anmerkungen müssen genau wie die EC2-Tags benannt sein.  Data Infrastructure Insights füllt immer gleichnamige Textanmerkungen aus und unternimmt den bestmöglichen Versuch, Anmerkungen anderer Typen (Zahl, Boolescher Wert usw.) auszufüllen.  Wenn Ihre Anmerkung einen anderen Typ hat und der Datensammler sie nicht ausfüllen kann, kann es erforderlich sein, die Anmerkung zu entfernen und als Texttyp neu zu erstellen.
@@ -119,12 +125,14 @@ Beachten Sie, dass bei AWS die Groß- und Kleinschreibung beachtet wird, währen
 
 
 
+[[include-extra-regions]]
 == Zusätzliche Regionen einschließen
 
 Im Abschnitt *Erweiterte Konfiguration* des AWS Data Collector können Sie das Feld *Zusätzliche Regionen einschließen* so festlegen, dass zusätzliche Regionen eingeschlossen werden, getrennt durch Komma oder Semikolon.  Standardmäßig ist dieses Feld auf *_us-.*_* eingestellt, wodurch alle US-amerikanischen AWS-Regionen erfasst werden.  Um in _allen_ Regionen zu sammeln, setzen Sie dieses Feld auf *_.*_*.  Wenn das Feld *Zusätzliche Regionen einschließen* leer ist, sammelt der Datensammler Daten für die im Feld *AWS-Region* angegebenen Assets, wie im Abschnitt *Konfiguration* angegeben.
 
 
 
+[[collecting-from-aws-child-accounts]]
 == Sammeln von AWS-Unterkonten
 
 Data Infrastructure Insights unterstützt die Erfassung untergeordneter Konten für AWS innerhalb eines einzelnen AWS-Datensammlers.  Die Konfiguration für diese Sammlung wird in der AWS-Umgebung durchgeführt:
@@ -147,6 +155,7 @@ link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.h
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -17,6 +17,7 @@ NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:co
 
 
 
+[[summary]]
 == Zusammenfassung
 
 Wenn Sie unter „Teaminhalte“ das „Storage Manager Dashboard“ auswählen, erhalten Sie mehrere Berichte mit Informationen zu Ihrem Datenverkehr und Speicher.
@@ -31,6 +32,7 @@ Diese Komponente zeigt die verwendete Speicherkapazität im Vergleich zur nutzba
 
 
 
+[[storage-tiers-capacity]]
 === Speicherebenenkapazität
 
 Diese Komponente zeigt die genutzte Kapazität der Stufe im Vergleich zur der Stufe zugewiesenen Kapazität. Dies gibt an, wie die genutzte Kapazität über einen Zeitraum von 12 Monaten zunimmt oder abnimmt und wie viele Monate bis zur vollständigen Auslastung verbleiben.  Die Kapazitätsauslastung wird mit den angegebenen Werten für die tatsächliche Auslastung, die Auslastungsprognose und ein von Ihnen konfigurierbares Kapazitätsziel angezeigt.  Wenn die prognostizierte genutzte Kapazität, die auf dem Prognosedatum für die zukünftige Nutzung basiert, die Zielkapazität überschreitet, wird neben einer Stufe eine Warnung (durchgezogener roter Kreis) angezeigt.
@@ -39,6 +41,7 @@ Sie können auf eine beliebige Ebene klicken, um den Bericht „Kapazitäts- und
 
 
 
+[[daily-storage-traffic]]
 === Täglicher Speicherverkehr
 
 Diese Komponente zeigt die Leistung der Umgebung und ob es im Vergleich zu den letzten sechs Monaten zu starkem Wachstum, Änderungen oder potenziellen Problemen kommt.  Außerdem wird der durchschnittliche Verkehr im Vergleich zum Verkehr der letzten sieben Tage und des Vortages angezeigt.  Sie können alle Anomalien in der Leistung der Infrastruktur visualisieren, da Informationen bereitgestellt werden, die sowohl zyklische (letzte sieben Tage) als auch saisonale Schwankungen (letzte sechs Monate) hervorheben.
@@ -47,6 +50,7 @@ Sie können auf den Titel (Täglicher Speicherverkehr) klicken, um den Bericht �
 
 
 
+[[data-centers-time-to-full]]
 === Zeit bis zur Auslastung von Rechenzentren
 
 Diese Komponente zeigt alle Rechenzentren im Vergleich zu allen Ebenen und wie viel Kapazität in jedem Rechenzentrum für jede Speicherebene basierend auf den prognostizierten Wachstumsraten verbleibt.  Die Kapazitätsstufe wird in Blau angezeigt. Je dunkler die Farbe, desto weniger Zeit bleibt der Stufe am Standort, bevor sie voll ist.
@@ -55,6 +59,7 @@ Sie können auf einen Abschnitt einer Ebene klicken, um den Bericht „Tage bis 
 
 
 
+[[top-10-applications]]
 === Top 10 Anwendungen
 
 Diese Komponente zeigt die Top 10-Anwendungen basierend auf der verwendeten Kapazität.  Unabhängig davon, wie die Ebene die Daten organisiert, zeigt dieser Bereich die aktuell genutzte Kapazität und den Anteil der Infrastruktur an.  Sie können die Bandbreite der Benutzererfahrung der letzten sieben Tage visualisieren, um zu sehen, ob die Verbraucher akzeptable (oder, noch wichtiger, inakzeptable) Reaktionszeiten erlebt haben.
@@ -63,6 +68,7 @@ In diesem Bereich werden auch Trends angezeigt, die darauf hinweisen, ob die Anw
 
 
 
+[[storage-tiers-daily-performance]]
 === Tägliche Leistung der Speicherebenen
 
 Diese Komponente zeigt eine Zusammenfassung der Leistung der Ebene hinsichtlich Reaktionszeit und IOPS für die letzten sieben Tage.  Diese Leistung wird mit einem SLO verglichen, das Sie konfigurieren können. So können Sie erkennen, ob die Möglichkeit besteht, Ebenen zu konsolidieren, die von diesen Ebenen bereitgestellten Arbeitslasten neu auszurichten oder Probleme mit bestimmten Ebenen zu identifizieren.  Wenn die mittlere Antwortzeit oder der mittlere IOPS außerhalb des akzeptablen SLO-Bereichs liegt, wird neben einer Stufe eine Warnung (durchgezogener roter Kreis) angezeigt.
@@ -71,6 +77,7 @@ Sie können auf einen Tier-Namen klicken, um den Bericht „Kapazitäts- und Lei
 
 
 
+[[orphaned-capacity]]
 === Verwaiste Kapazität
 
 Diese Komponente zeigt die gesamte verwaiste Kapazität und die verwaiste Kapazität nach Ebene an, vergleicht sie mit akzeptablen Bereichen für die gesamte nutzbare Kapazität und zeigt die tatsächlich verwaiste Kapazität an.  Verwaiste Kapazität wird durch Konfiguration und Leistung definiert.  Durch Konfiguration verwaister Speicher beschreibt eine Situation, in der einem Host Speicher zugewiesen ist.  Die Konfiguration wurde jedoch nicht ordnungsgemäß durchgeführt und der Host kann nicht auf den Speicher zugreifen.  Von „verwaist durch Leistung“ spricht man, wenn der Speicher korrekt für den Zugriff durch einen Host konfiguriert ist.  Es gab jedoch keinen Speicherverkehr.

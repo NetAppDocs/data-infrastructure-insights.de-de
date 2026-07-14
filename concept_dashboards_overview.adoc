@@ -21,6 +21,7 @@ IMPORTANT: Die Beispiele in diesen Abschnitten dienen nur zu Erklärungszwecken 
 
 
 
+[[creating-a-dashboard]]
 == Erstellen eines Dashboards
 
 Sie erstellen ein neues Dashboard an einem von zwei Orten:
@@ -31,12 +32,14 @@ Sie erstellen ein neues Dashboard an einem von zwei Orten:
 
 
 
+[[see-it-in-action]]
 == Sehen Sie es in Aktion
 
 link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8["Erstellen Sie leistungsstarke Dashboards mit NetApp (Video), Fenster=Später lesen"]
 
 
 
+[[dashboard-controls]]
 == Dashboard-Steuerelemente
 
 Der Dashboard-Bildschirm verfügt über mehrere Steuerelemente:
@@ -55,6 +58,7 @@ Die Größe von Widgets kann geändert und sie können an verschiedene Positione
 
 
 
+[[widget-types]]
 == Widget-Typen
 
 Sie können aus den folgenden Widget-Typen wählen:
@@ -107,6 +111,7 @@ Ausführlichere Erklärungen zu diesen und anderen Dashboard-Funktionen finden S
 
 
 
+[[setting-a-dashboard-as-your-home-page]]
 == Ein Dashboard als Startseite festlegen
 
 Sie können mit einer der folgenden Methoden auswählen, welches Dashboard als *Startseite* Ihres Mandanten festgelegt werden soll:

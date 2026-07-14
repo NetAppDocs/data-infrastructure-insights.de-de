@@ -20,6 +20,7 @@ Data Infrastructure Insights Workload Security lässt sich in ONTAP integrieren,
 
 
 
+[[prerequisites]]
 == Voraussetzungen
 
 * Mindestversion von ONTAP : 9.13.0.
@@ -30,6 +31,7 @@ image:WS_Access_Denied_Enable_in_Collector.png["Aktivieren Sie „Zugriff verwei
 
 
 
+[[user-permissions-required]]
 == Erforderliche Benutzerberechtigungen
 
 Wenn der Datensammler mithilfe der Clusteradministrationsanmeldeinformationen hinzugefügt wird, sind keine neuen Berechtigungen erforderlich.
@@ -46,6 +48,7 @@ Lesen Sie mehr über die Konfiguration andererlink:task_add_collector_svm.html["
 
 
 
+[[access-denied-events]]
 == Ereignisse vom Typ „Zugriff verweigert“
 
 Sobald Ereignisse vom ONTAP System abgerufen wurden, werden auf der Seite „Workload Security Forensics“ Ereignisse mit dem Status „Zugriff verweigert“ angezeigt.  Zusätzlich zu den angezeigten Informationen können Sie die fehlenden Benutzerberechtigungen für einen bestimmten Vorgang anzeigen, indem Sie der Tabelle über das Zahnradsymbol die Spalte _Gewünschte Aktivität_ hinzufügen.

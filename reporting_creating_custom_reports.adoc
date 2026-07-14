@@ -34,6 +34,7 @@ Bevor Sie Ihre Berichte entwerfen, führen Sie die folgenden Aufgaben aus:
 
 
 
+[[report-creation-process]]
 == Berichterstellungsprozess
 
 Der Prozess der Erstellung benutzerdefinierter (auch „Ad-hoc“-)Berichte umfasst mehrere Aufgaben:
@@ -47,6 +48,7 @@ Der Prozess der Erstellung benutzerdefinierter (auch „Ad-hoc“-)Berichte umfa
 
 
 
+[[planning-the-results-of-your-custom-report]]
 === Planen der Ergebnisse Ihres benutzerdefinierten Berichts
 
 Bevor Sie die Tools zur Berichterstellung öffnen, möchten Sie möglicherweise die Ergebnisse planen, die Sie mit dem Bericht erzielen möchten.  Mit Berichterstellungstools können Sie Berichte einfach erstellen und benötigen dafür möglicherweise nicht viel Planung. Es ist jedoch ratsam, sich beim Berichtsanforderer über die Berichtsanforderungen zu informieren.
@@ -72,6 +74,7 @@ Bevor Sie die Tools zur Berichterstellung öffnen, möchten Sie möglicherweise 
 
 
 
+[[tips-for-designing-reports]]
 === Tipps zum Gestalten von Berichten
 
 Beim Entwerfen von Berichten können Ihnen einige Tipps hilfreich sein.
@@ -89,6 +92,7 @@ Um die Informationen für verschiedene Benutzer zu segmentieren, können Sie Ber
 
 
 
+[[reporting-data-models]]
 == Berichtsdatenmodelle
 
 Data Infrastructure Insights umfasst mehrere Datenmodelle, aus denen Sie entweder vordefinierte Berichte auswählen oder Ihren eigenen benutzerdefinierten Bericht erstellen können.
@@ -101,6 +105,7 @@ Jedes Datenmodell enthält einen einfachen Data Mart und einen erweiterten Data 
 
 
 
+[[capacity-data-models]]
 === Kapazitätsdatenmodelle
 
 Ermöglicht Ihnen, Fragen zur Speicherkapazität, Dateisystemauslastung, internen Volumekapazität, Portkapazität, Qtree-Kapazität und Kapazität virtueller Maschinen (VM) zu beantworten.  Das Kapazitätsdatenmodell ist ein Container für mehrere Kapazitätsdatenmodelle.  Mit diesem Datenmodell können Sie Berichte erstellen, die verschiedene Arten von Fragen beantworten:
@@ -199,6 +204,7 @@ Mit diesem Datenmodell können Sie Fragen wie die folgenden beantworten:
 
 
 
+[[chargeback-data-model]]
 === Chargeback-Datenmodell
 
 Ermöglicht Ihnen, Fragen zur verwendeten Kapazität und zur zugewiesenen Kapazität von Speicherressourcen (Volumes, interne Volumes und Qtrees) zu beantworten.  Dieses Datenmodell bietet Informationen zur Speicherkapazitätsrückbelastung und Verantwortlichkeit nach Hosts, Anwendungen und Geschäftseinheiten und umfasst sowohl aktuelle als auch historische Daten.  Berichtsdaten können nach Servicelevel und Speicherebene kategorisiert werden.
@@ -226,6 +232,7 @@ Berichte, die das Chargeback-Datenmodell verwenden, zeigen möglicherweise ander
 
 
 
+[[inventory-data-model]]
 === Inventardatenmodell
 
 Ermöglicht Ihnen, Fragen zu Inventarressourcen zu beantworten, darunter Hosts, Speichersysteme, Switches, Festplatten, Bänder, Qtrees, Kontingente, virtuelle Maschinen und Server sowie generische Geräte.  Das Inventory-Datenmodell umfasst mehrere Submarts, mit denen Sie Informationen zu Replikationen, FC-Pfaden, iSCSI-Pfaden, NFS-Pfaden und Verstößen anzeigen können.  Das Inventardatenmodell enthält keine historischen Daten.  Fragen, die Sie mit diesen Daten beantworten können
@@ -247,6 +254,7 @@ Ermöglicht Ihnen, Fragen zu Inventarressourcen zu beantworten, darunter Hosts, 
 
 
 
+[[performance-data-model]]
 === Leistungsdatenmodell
 
 Ermöglicht Ihnen, Fragen zur Leistung von Volumes, Anwendungsvolumes, internen Volumes, Switches, Anwendungen, VMs, VMDKs, ESX im Vergleich zu VM, Hosts und Anwendungsknoten zu beantworten.  Viele davon melden stündliche Daten, tägliche Daten oder beides.  Mithilfe dieses Datenmodells können Sie Berichte erstellen, die verschiedene Arten von Fragen zum Leistungsmanagement beantworten:
@@ -291,6 +299,7 @@ Das Leistungsdatenmodell enthält Informationen, die Ihnen dabei helfen, die Eig
 
 
 
+[[storage-efficiency-data-model]]
 === Datenmodell zur Speichereffizienz
 
 Ermöglicht Ihnen, den Speichereffizienzwert und das Speicherpotenzial im Laufe der Zeit zu verfolgen.  In diesem Datenmodell werden nicht nur Messungen der bereitgestellten Kapazität gespeichert, sondern auch die Menge, die verwendet oder verbraucht wird (die physikalische Messung).  Wenn beispielsweise Thin Provisioning aktiviert ist, zeigt Data Infrastructure Insights an, wie viel Kapazität vom Gerät genutzt wird.  Sie können dieses Modell auch verwenden, um die Effizienz bei aktivierter Deduplizierung zu bestimmen.  Mithilfe des Datamarts zur Speichereffizienz können Sie verschiedene Fragen beantworten:
@@ -304,6 +313,7 @@ Ermöglicht Ihnen, den Speichereffizienzwert und das Speicherpotenzial im Laufe 
 
 
 
+[[data-model-fact-and-dimension-tables]]
 === Fakten- und Dimensionstabellen des Datenmodells
 
 Jedes Datenmodell enthält sowohl Fakten- als auch Dimensionstabellen.
@@ -316,6 +326,7 @@ Mithilfe unterschiedlicher oder mehrerer Dimensionsattribute (die in den Bericht
 
 
 
+[[colors-used-in-data-model-elements]]
 === In Datenmodellelementen verwendete Farben
 
 Die Farben der Datenmodellelemente haben unterschiedliche Bedeutungen.
@@ -326,6 +337,7 @@ Die Farben der Datenmodellelemente haben unterschiedliche Bedeutungen.
 
 
 
+[[using-multiple-data-models-in-one-report]]
 === Verwenden mehrerer Datenmodelle in einem Bericht
 
 Normalerweise verwenden Sie ein Datenmodell pro Bericht.  Sie können jedoch einen Bericht schreiben, der Daten aus mehreren Datenmodellen kombiniert.

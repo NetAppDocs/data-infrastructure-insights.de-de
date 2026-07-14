@@ -66,6 +66,7 @@ Bei der Suche wird die Groß-/Kleinschreibung nicht berücksichtigt.
 
 
 
+[[search-using-indexed-terms]]
 == Suche mit indexierten Begriffen
 
 Suchen, die mit mehr indexierten Begriffen übereinstimmen, führen zu höheren Punktzahlen.

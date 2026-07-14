@@ -20,6 +20,7 @@ image:ai_assistant_sample_question.png["Beispielfrage für KI-Assistent"]
 
 
 
+[[meet-your-infrastructures-new-intelligent-partner]]
 == Lernen Sie den neuen intelligenten Partner Ihrer Infrastruktur kennen
 
 Der KI-Assistent revolutioniert die Interaktion mit Ihren Daten und verwandelt komplexe Abfragen in einfache Dialoge. Entdecken Sie sofort verborgene Muster, beschleunigen Sie die Fehlersuche und treffen Sie datenbasierte Entscheidungen mit Zuversicht. Erhalten Sie sofort Antworten auf Fragen wie:
@@ -38,6 +39,7 @@ Der KI-Assistent revolutioniert die Interaktion mit Ihren Daten und verwandelt k
 
 
 
+[[before-using-the-ai-assistant]]
 == Bevor Sie den KI-Assistenten verwenden
 
 * Der KI-Assistent ist dazu konzipiert, Sie zu unterstützen. Obwohl er auf Genauigkeit bedacht ist, wird dringend empfohlen, seine Ausgaben mit menschlicher Aufsicht zu überprüfen, um die besten Ergebnisse zu erzielen.
@@ -48,6 +50,7 @@ Der KI-Assistent revolutioniert die Interaktion mit Ihren Daten und verwandelt k
 
 
 
+[[the-ai-assistant-works-with-you]]
 == Der KI-Assistent arbeitet mit Ihnen zusammen
 
 Der DII AI Assistant kann Ihnen helfen, Fragen zu den Daten Ihrer IT-Infrastruktur zu beantworten. Um dies effektiv zu tun, muss er Ihre Anfrage verstehen sowie wissen, welche spezifischen Daten erforderlich sind, um auf Ihre Anfrage zu antworten.
@@ -69,12 +72,14 @@ Für das beste Erlebnis geben Sie dem Assistenten spezifische Informationen zu:
 
 
 
+[[chat-naturally]]
 == Chatten Sie ganz natürlich
 
 Der KI-Assistent unterstützt jetzt über ein Dutzend Sprachen und ermöglicht Ihrem Team so die natürliche Kommunikation in der jeweiligen Muttersprache. Die vollständige Liste finden Sie hier link:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["hier,"].
 
 
 
+[[accessing-the-assistant]]
 == Zugriff auf den Assistenten
 
 Um den DII KI-Assistenten aufzurufen, wählen Sie einfach das Eulensymbol in der unteren Ecke des Bildschirms aus. Ein Benutzer mit der Rolle „Owner“ oder „Admin“ muss den Nutzungsbedingungen zustimmen, bevor ein Benutzer den KI-Assistenten in Ihrem Mandanten nutzen kann.

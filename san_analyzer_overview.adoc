@@ -20,6 +20,7 @@ image:san_analyzer_example_with_panel.png["SAN Analyzer-Topologiekarte eines Spe
 
 
 
+[[explore-connections-among-your-assets]]
 == Untersuchen Sie die Verbindungen zwischen Ihren Assets
 
 Wählen Sie *Beobachtbarkeit > Analysieren > SAN-Analysator*, um den SAN-Analysator anzuzeigen.  Legen Sie einen Filter für Anwendung, Host, Fabric und/oder Speicher fest.  Die Karte für die Objekte wird angezeigt und zeigt verbundene Objekte.  Bewegen Sie den Mauszeiger über ein Objekt, um die Verkehrsmetriken für diese Verbindungen anzuzeigen.
@@ -45,6 +46,7 @@ image:san_analyzer_iscsi_traffic.png["iSCSI-Verkehr hervorgehoben"]
 
 
 
+[[troubleshooting-tips]]
 == Tipps zur Fehlerbehebung
 
 Wenn Probleme auftreten, können Sie Folgendes versuchen:

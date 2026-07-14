@@ -49,6 +49,7 @@ NOTE: In einer großen Data Infrastructure Insights -Umgebung stellen Sie mögli
 
 
 
+[[modifying-annotation-rules]]
 == Ändern von Anmerkungsregeln
 
 Sie können eine Anmerkungsregel ändern, um den Namen der Regel, ihre Anmerkung, den Wert der Anmerkung oder die mit der Regel verknüpfte Abfrage zu ändern.
@@ -72,6 +73,7 @@ Das Dialogfeld „Regel bearbeiten“ wird angezeigt.
 
 
 
+[[changing-the-order-of-rules]]
 == Ändern der Reihenfolge der Regeln
 
 Anmerkungsregeln werden von oben nach unten in der Regelliste verarbeitet.  Um die Reihenfolge zu ändern, in der eine Regel verarbeitet wird, gehen Sie wie folgt vor:
@@ -85,6 +87,7 @@ Beachten Sie, dass beim Ausführen mehrerer Regeln, die dieselbe Anmerkung zu ei
 
 
 
+[[deleting-annotation-rules]]
 == Löschen von Anmerkungsregeln
 
 Möglicherweise möchten Sie Anmerkungsregeln löschen, die nicht mehr verwendet werden.

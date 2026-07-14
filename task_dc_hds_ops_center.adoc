@@ -14,11 +14,12 @@ Dieser Datensammler verwendet die integrierte Anwendungssuite von Hitachi Ops Ce
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält von diesem Datensammler die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -53,6 +54,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[inventory-requirements]]
 == Inventaranforderungen
 
 Um Bestandsdaten erfassen zu können, benötigen Sie Folgendes:
@@ -63,6 +65,7 @@ Um Bestandsdaten erfassen zu können, benötigen Sie Folgendes:
 
 
 
+[[performance-requirements]]
 == Leistungsanforderungen
 
 Um Leistungsdaten erfassen zu können, müssen folgende Voraussetzungen erfüllt sein:
@@ -71,9 +74,10 @@ Das HDS Ops Center „Analyzer“-Modul muss installiert sein. Speicher-Arrays m
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -88,6 +92,7 @@ Das HDS Ops Center „Analyzer“-Modul muss installiert sein. Speicher-Arrays m
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
 |===

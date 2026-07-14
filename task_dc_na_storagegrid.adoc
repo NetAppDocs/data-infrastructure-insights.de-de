@@ -27,11 +27,12 @@ Für Kunden, die das alte (MU) Lizenzmodell verwenden, wird StorageGRID als Seku
 ====
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom NetApp StorageGRID Collector.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -49,6 +50,7 @@ Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Net
 |===
 
 
+[[requirements]]
 == Anforderungen
 
 Für die Konfiguration dieser Datenquelle gelten die folgenden Voraussetzungen:
@@ -60,9 +62,10 @@ Für die Konfiguration dieser Datenquelle gelten die folgenden Voraussetzungen:
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -77,9 +80,10 @@ Für die Konfiguration dieser Datenquelle gelten die folgenden Voraussetzungen:
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -91,6 +95,7 @@ Für die Konfiguration dieser Datenquelle gelten die folgenden Voraussetzungen:
 |===
 
 
+[[single-sign-on-sso]]
 == Einmaliges Anmelden (SSO)
 
 Derlink:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"] Firmware-Versionen haben entsprechende API-Versionen; 3.0 API und neuere Versionen unterstützen die Single Sign-On-Anmeldung (SSO).
@@ -111,6 +116,7 @@ Derlink:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"] Firmware-Versi
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

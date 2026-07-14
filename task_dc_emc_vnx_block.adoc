@@ -14,11 +14,12 @@ Data Infrastructure Insights verwendet den Datensammler Dell EMC VNX Block Stora
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom EMC VNX Block Storage-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -41,6 +42,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Für die Datenerhebung müssen folgende Voraussetzungen erfüllt sein:
@@ -56,15 +58,17 @@ Für die Datenerhebung müssen folgende Voraussetzungen erfüllt sein:
 
 
 
+[[navisphere-command-line-interface-syntax]]
 == Syntax der NaviSphere-Befehlszeilenschnittstelle
 
 naviseccli.exe -h <IP-Adresse> -user <Benutzer> -password <Passwort> -scope <Bereich, verwenden Sie 0 für den globalen Bereich> -port <verwenden Sie standardmäßig 443> Befehl
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -82,9 +86,10 @@ naviseccli.exe -h <IP-Adresse> -user <Benutzer> -password <Passwort> -scope <Ber
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -99,12 +104,14 @@ naviseccli.exe -h <IP-Adresse> -user <Benutzer> -password <Passwort> -scope <Ber
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
 [cols="2a, 2a"]

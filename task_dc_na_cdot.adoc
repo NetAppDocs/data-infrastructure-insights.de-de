@@ -14,11 +14,12 @@ Dieser Datensammler erfasst Inventar- und Leistungsdaten von Speichersystemen, a
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erfasst Bestands- und Leistungsdaten vom ONTAP Datensammler.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für den Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -45,12 +46,14 @@ Data Infrastructure Insights erfasst Bestands- und Leistungsdaten vom ONTAP Date
 |===
 
 
+[[ontap-data-management-terminology]]
 == ONTAP Datenmanagement-Terminologie
 
 Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherweise auf den Zielseiten der ONTAP Data Management-Speicherressourcen finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
 
 
 
+[[storage]]
 === Storage
 
 * Modell – Eine durch Kommas getrennte Liste der eindeutigen, diskreten Knotenmodellnamen innerhalb dieses Clusters.  Wenn alle Knoten in den Clustern vom gleichen Modelltyp sind, wird nur ein Modellname angezeigt.
@@ -65,6 +68,7 @@ Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherw
 
 
 
+[[storage-pool]]
 === Speicherpool
 
 * Speicher – auf welchem Speicher-Array dieser Pool lebt.  Obligatorisch.
@@ -81,6 +85,7 @@ Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherw
 
 
 
+[[storage-node]]
 === Speicherknoten
 
 * Speicher – zu welchem Speicherarray dieser Knoten gehört.  Obligatorisch.
@@ -99,6 +104,7 @@ Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherw
 
 
 
+[[requirements]]
 == Anforderungen
 
 Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden Voraussetzungen:
@@ -121,15 +127,17 @@ Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden 
 
 
 
+[[permission-requirements-for-collecting-ontap-switch-metrics]]
 === Berechtigungsanforderungen für die Erfassung von ONTAP Switch-Metriken
 
 Data Infrastructure Insights bietet die Möglichkeit, ONTAP Cluster-Switch-Daten als Option im Collector zu sammeln<<advanced-configuration,Erweiterte Konfiguration>> Einstellungen.  Zusätzlich zur Aktivierung auf dem Data Infrastructure Insights Kollektor müssen Sie auch *das ONTAP -System* selbst konfigurieren, um Folgendes bereitzustellen:link:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["Switch-Informationen"] und stellen Sie sicher, dass die richtige<<a-note-about-permissions,Berechtigungen>> gesetzt, um die Switch-Daten an Data Infrastructure Insights senden zu können.
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -144,9 +152,10 @@ Data Infrastructure Insights bietet die Möglichkeit, ONTAP Cluster-Switch-Daten
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -185,6 +194,7 @@ Data Infrastructure Insights bietet die Möglichkeit, ONTAP Cluster-Switch-Daten
 |===
 
 
+[[ontap-power-metrics]]
 == ONTAP Leistungsmetriken
 
 Mehrere ONTAP -Modelle bieten Leistungsmetriken für Data Infrastructure Insights , die zur Überwachung oder für Warnmeldungen verwendet werden können.
@@ -202,6 +212,7 @@ FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 806
 
 
 
+[[a-note-about-permissions]]
 == Ein Hinweis zu Berechtigungen
 
 Da eine Reihe von ONTAP -Dashboards von Data Infrastructure Insights auf erweiterten ONTAP -Zählern basieren, müssen Sie im Abschnitt „Erweiterte Konfiguration“ des Datensammlers die Option „Erweiterte Zählerdatenerfassung“ aktivieren.
@@ -254,15 +265,17 @@ NOTE: Wenn die ONTAP Zugriffskontrolle nicht richtig eingestellt ist, können Da
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 
@@ -292,9 +305,10 @@ Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen
 |===
 
 
+[[performance]]
 === Performance
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

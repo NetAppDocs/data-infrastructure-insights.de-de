@@ -14,11 +14,12 @@ Der REST-Datensammler der NetApp E-Serie sammelt Inventar-, Protokoll- und Leist
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erfasst mithilfe von REST die folgenden Bestandsinformationen von der NetApp E-Serie. Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt. Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -44,6 +45,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 * Die IP-Adresse jedes Controllers im Array
@@ -54,9 +56,10 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -65,9 +68,10 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -79,12 +83,14 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 |===
 
 
+[[e-series-terminology-landing-page]]
 == E-Series-Terminologie (Landingpage)
 
 Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie möglicherweise auf den Zielseiten der NetApp E-Series-Assets finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
 
 
 
+[[storage]]
 === Storage
 
 * Modell – Modellname des Geräts.
@@ -100,6 +106,7 @@ Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie mögliche
 
 
 
+[[storage-pool]]
 === Speicherpool
 
 * Speicher – auf welchem Speicher-Array dieser Pool lebt. Obligatorisch
@@ -117,6 +124,7 @@ Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie mögliche
 
 
 
+[[storage-node]]
 === Speicherknoten
 
 * Speicher – zu welchem Speicherarray dieser Knoten gehört. Obligatorisch
@@ -135,6 +143,7 @@ Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie mögliche
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

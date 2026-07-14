@@ -14,9 +14,10 @@ Dieser auf REST-API basierende Collector erwirbt einen Cohesity-Cluster, erkennt
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -31,9 +32,10 @@ Dieser auf REST-API basierende Collector erwirbt einen Cohesity-Cluster, erkennt
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -48,6 +50,7 @@ Dieser auf REST-API basierende Collector erwirbt einen Cohesity-Cluster, erkennt
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

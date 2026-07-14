@@ -18,6 +18,7 @@ Auf der Seite „Alle Aktivitäten“ können Sie die Aktionen nachvollziehen, d
 
 
 
+[[examining-all-activity-data]]
 == Untersuchen aller Aktivitätsdaten
 
 Klicken Sie auf *Forensik > Aktivitätsforensik* und dann auf die Registerkarte *Alle Aktivitäten*, um auf die Seite „Alle Aktivitäten“ zuzugreifen.  Diese Seite bietet einen Überblick über die Aktivitäten Ihres Mandanten und hebt die folgenden Informationen hervor:
@@ -78,6 +79,7 @@ Die Standardmethode „Gruppieren nach“ ist „Aktivitätsforensik“.  Wenn S
 
 
 
+[[filtering-forensic-activity-history-data]]
 == Filtern von Daten zum forensischen Aktivitätsverlauf
 
 Zum Filtern von Daten können Sie zwei Methoden verwenden.
@@ -140,6 +142,7 @@ Bitte beachten Sie, dass bei allen Filterfeldern die Groß- und Kleinschreibung 
 
 
 
+[[activity-forensics-filter-examples]]
 == Beispiele für Aktivitätsforensikfilter:
 
 |===
@@ -183,22 +186,26 @@ NOTIZ:
 
 
 
+[[sorting-forensic-activity-history-data]]
 == Sortieren von Daten zum forensischen Aktivitätsverlauf
 
 Sie können die Aktivitätsverlaufsdaten nach _Zeit, Benutzer, Quell-IP, Aktivität_, _Entitätstyp_, Ordner der 1. Ebene (Stamm), Ordner der 2. Ebene, Ordner der 3. Ebene und Ordner der 4. Ebene sortieren.  Standardmäßig ist die Tabelle in absteigender Zeitreihenfolge sortiert, d. h. die neuesten Daten werden zuerst angezeigt.  Die Sortierung ist für die Felder _Gerät_ und _Protokoll_ deaktiviert.
 
 
 
+[[user-guide-for-asynchronous-exports]]
 == Benutzerhandbuch für asynchrone Exporte
 
 
 
+[[overview]]
 === Überblick
 
 Die Funktion „Asynchrone Exporte“ in Storage Workload Security ist für die Verarbeitung großer Datenexporte konzipiert.
 
 
 
+[[step-by-step-guide-exporting-data-with-asynchronous-exports]]
 === Schritt-für-Schritt-Anleitung: Daten mit asynchronen Exporten exportieren
 
 . *Export starten*: Wählen Sie die gewünschte Zeitdauer und Filter für den Export aus und klicken Sie auf die Schaltfläche „Exportieren“.
@@ -216,6 +223,7 @@ Ein Beispielskript zum Extrahieren forensischer Daten über die API befindet sic
 
 
 
+[[column-selection-for-all-activity]]
 == Spaltenauswahl für alle Aktivitäten
 
 Die Tabelle „Alle Aktivitäten“ zeigt standardmäßig ausgewählte Spalten an.  Um Spalten hinzuzufügen, zu entfernen oder zu ändern, klicken Sie auf das Zahnradsymbol rechts neben der Tabelle und wählen Sie aus der Liste der verfügbaren Spalten aus.
@@ -224,12 +232,14 @@ image:CloudSecure_ActivitySelection.png["Aktivitätsauswahl, Breite = 30 %"]
 
 
 
+[[activity-history-retention]]
 == Aufbewahrung des Aktivitätsverlaufs
 
 Der Aktivitätsverlauf wird für aktive Workload Security-Umgebungen 13 Monate lang aufbewahrt.
 
 
 
+[[applicability-of-filters-in-forensics-page]]
 == Anwendbarkeit von Filtern in der Forensik-Seite
 
 |===
@@ -252,6 +262,7 @@ Der Aktivitätsverlauf wird für aktive Workload Security-Umgebungen 13 Monate l
 |===
 
 
+[[path-search]]
 == Pfadsuche
 
 Suchergebnisse mit und ohne / werden unterschiedlich sein
@@ -284,6 +295,7 @@ Suchergebnisse mit und ohne / werden unterschiedlich sein
 |===
 
 
+[[local-root-svm-user-activity-changes]]
 == Änderungen der Aktivität des lokalen Root-SVM-Benutzers
 
 Wenn ein lokaler Root-SVM-Benutzer eine Aktivität ausführt, wird jetzt die IP des Clients, auf dem die NFS-Freigabe gemountet ist, im Benutzernamen berücksichtigt. Dieser wird sowohl auf der Seite mit der forensischen Aktivität als auch auf der Seite mit der Benutzeraktivität als root@<IP-Adresse des Clients> angezeigt.
@@ -298,6 +310,7 @@ Beispiel:
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 |===

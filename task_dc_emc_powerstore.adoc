@@ -16,11 +16,12 @@ Der EMC PowerStore-Datenkollektor erfasst die Volume-zu-Volume-Replikationsbezie
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält von diesem Datensammler die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -55,6 +56,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
@@ -65,9 +67,10 @@ Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -82,9 +85,10 @@ Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -98,6 +102,7 @@ Die PowerStore-Leistungssammlung von Cloud Insight nutzt die Quelldaten von Powe
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

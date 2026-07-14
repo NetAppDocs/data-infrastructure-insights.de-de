@@ -14,6 +14,7 @@ Für Speichersysteme mit Data ONTAP -Software im 7-Mode verwenden Sie den 7-Mode
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom NetApp 7-Mode-Datenkollektor.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für diesen Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
@@ -21,7 +22,7 @@ Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Net
 
 NOTE: Dieser Datensammler istlink:task_getting_started_with_cloud_insights.html#useful-definitions["veraltet"] .
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -50,6 +51,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration und Nutzung dieses Datensammlers benötigen Sie Folgendes:
@@ -71,9 +73,10 @@ Zur Konfiguration und Nutzung dieses Datensammlers benötigen Sie Folgendes:
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -97,9 +100,10 @@ Zur Konfiguration und Nutzung dieses Datensammlers benötigen Sie Folgendes:
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -117,6 +121,7 @@ Zur Konfiguration und Nutzung dieses Datensammlers benötigen Sie Folgendes:
 |===
 
 
+[[storage-systems-connection]]
 == Speichersystemanbindung
 
 Alternativ zur Verwendung des standardmäßigen Administratorbenutzers für diesen Datensammler können Sie einen Benutzer mit Administratorrechten direkt auf den NetApp -Speichersystemen konfigurieren, sodass dieser Datensammler Daten von NetApp -Speichersystemen abrufen kann.
@@ -156,15 +161,17 @@ Um eine 7-Mode-Datenquelle erfolgreich zu erwerben und keine Warnungen auf dem S
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

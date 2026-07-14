@@ -18,6 +18,7 @@ Erstellen und verwalten Sie Geschäftsentitäten für Ihre Unternehmensumgebung 
 
 
 
+[[creating-a-business-entity]]
 == Erstellen einer Geschäftseinheit
 
 Um eine Geschäftseinheit zu erstellen, gehen Sie wie folgt vor:
@@ -39,6 +40,7 @@ NOTE: Die ausgewählten Werte müssen eine eindeutige Gesamtgeschäftseinheit bi
 
 
 
+[[applying-a-business-entity-to-an-object]]
 == Anwenden einer Geschäftsentität auf ein Objekt
 
 Der einfachste Weg, eine Geschäftsentität auf ein oder mehrere Objekte anzuwenden, ist eine Abfrage.
@@ -59,6 +61,7 @@ NOTE: Einem Objekt kann nur eine Geschäftsentität zugeordnet sein.
 
 
 
+[[removing-a-business-entity-from-an-object]]
 == Entfernen einer Geschäftsentität aus einem Objekt
 
 Um eine Geschäftsentität aus einem oder mehreren Objekten zu entfernen, fragen Sie nach den Objekten, wählen Sie sie aus, klicken Sie auf *Massenaktionen* und wählen Sie _Anmerkung entfernen_.  Wählen Sie die Anmerkung „Geschäftseinheit“ aus und klicken Sie auf *Löschen*.

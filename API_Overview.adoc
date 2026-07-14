@@ -20,6 +20,7 @@ Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/con
 
 
 
+[[requirements-for-api-access]]
 == Voraussetzungen für den API-Zugriff
 
 * Zum Gewähren des Zugriffs wird ein API-Zugriffstokenmodell verwendet.
@@ -28,6 +29,7 @@ Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/con
 
 
 
+[[api-documentation-swagger]]
 == API-Dokumentation (Swagger)
 
 Die neuesten API-Informationen finden Sie, indem Sie sich bei Data Infrastructure Insights anmelden und zu *Admin > API-Zugriff* navigieren.  Klicken Sie auf den Link *API-Dokumentation*.
@@ -40,6 +42,7 @@ image:API_Swagger_Example.png["API Swagger Beispiel"]
 
 
 
+[[api-access-tokens]]
 == API-Zugriffstoken
 
 Bevor Sie die Data Infrastructure Insights API verwenden, müssen Sie ein oder mehrere *API-Zugriffstoken* erstellen.  Zugriffstoken werden für bestimmte API-Typen verwendet und können Lese- und/oder Schreibberechtigungen erteilen.  Sie können auch das Ablaufdatum für jedes Zugriffstoken festlegen.  Alle APIs unter den angegebenen Typen sind für das Zugriffstoken gültig.  Für jedes Token ist weder ein Benutzername noch ein Passwort erforderlich.
@@ -77,6 +80,7 @@ Auf den Swagger-Seiten finden Sie Beispiele speziell für die API, die Sie verwe
 
 
 
+[[api-type]]
 == API-Typ
 
 Die Data Infrastructure Insights API ist kategoriebasiert und enthält derzeit die folgenden Typen:
@@ -100,12 +104,14 @@ Beachten Sie, dass die API-Typen, auf die ein Benutzer Zugriff hat, auch von der
 
 
 
+[[inventory-traversal]]
 == Bestandsdurchlauf
 
 In diesem Abschnitt wird beschrieben, wie Sie eine Hierarchie von Data Infrastructure Insights -Objekten durchlaufen.
 
 
 
+[[top-level-objects]]
 === Objekte der obersten Ebene
 
 Einzelne Objekte werden in Anfragen durch eine eindeutige URL (in JSON „self“ genannt) identifiziert und erfordern die Kenntnis des Objekttyps und der internen ID. Für einige der Objekte der obersten Ebene (Hosts, Speicher usw.) bietet die REST-API Zugriff auf die gesamte Sammlung.
@@ -118,6 +124,7 @@ Um beispielsweise alle Speicher von einem Mandanten namens _mysite.c01.cloudinsi
  https://mysite.c01.cloudinsights.netapp.com/rest/v1/assets/storages
 
 
+[[children-and-related-objects]]
 === Untergeordnete Elemente und zugehörige Objekte
 
 Objekte der obersten Ebene, wie z. B. Speicher, können zum Durchlaufen anderer untergeordneter und verwandter Objekte verwendet werden.  Um beispielsweise alle Datenträger für einen bestimmten Speicher abzurufen, verketten Sie die Speicher-URL „self“ mit „/disks“, zum Beispiel:
@@ -125,6 +132,7 @@ Objekte der obersten Ebene, wie z. B. Speicher, können zum Durchlaufen anderer 
  https://<tenant>/rest/v1/assets/storages/4537/disks
 
 
+[[expands]]
 == Erweitert
 
 Viele API-Befehle unterstützen den Parameter *expand*, der zusätzliche Details zum Objekt oder URLs für verwandte Objekte bereitstellt.
@@ -147,6 +155,7 @@ Um dies zu verhindern, können Anfragen für Sammlungen der obersten Ebene nicht
 
 
 
+[[performance-data]]
 == Leistungsdaten
 
 Leistungsdaten werden über viele Geräte hinweg als separate Stichproben erfasst.  Jede Stunde (Standardeinstellung) aggregiert und fasst Data Infrastructure Insights Leistungsbeispiele zusammen.
@@ -188,6 +197,7 @@ Für die folgenden Zählertypen sind Leistungszusammenfassungen verfügbar:
 
 
 
+[[object-performance-metrics]]
 == Objektleistungsmetriken
 
 Die API kann detaillierte Metriken für Objekte auf Ihrem Mandanten zurückgeben, zum Beispiel:
@@ -200,6 +210,7 @@ Siehe dielink:#api-documentation-swagger["API Swagger-Dokumentation"] für Infor
 
 
 
+[[performance-history-data]]
 == Leistungsverlaufsdaten
 
 Verlaufsdaten werden in Leistungsdaten als Liste von Zeitstempel- und Zählerkartenpaaren dargestellt.
@@ -215,12 +226,14 @@ image:DiskPerformanceExample.png["Festplattenleistung JSON"]
 
 
 
+[[objects-with-capacity-attributes]]
 == Objekte mit Kapazitätsattributen
 
 Objekte mit Kapazitätsattributen verwenden grundlegende Datentypen und das CapacityItem zur Darstellung.
 
 
 
+[[capacityitem]]
 === KapazitätArtikel
 
 CapacityItem ist eine einzelne logische Kapazitätseinheit.  Es verfügt über „Wert“ und „hoher Schwellenwert“ in Einheiten, die durch sein übergeordnetes Objekt definiert sind.  Es unterstützt auch eine optionale Aufschlüsselungskarte, die erklärt, wie der Kapazitätswert aufgebaut ist.  Beispielsweise wäre die Gesamtkapazität eines 100-TB-Speicherpools ein CapacityItem mit dem Wert 100.  Die Aufschlüsselung kann ergeben, dass 60 TB für „Daten“ und 40 TB für „Schnappschüsse“ vorgesehen sind.
@@ -233,6 +246,7 @@ image:StoragePoolCapacity.png["Beispiel für die Speicherpoolkapazität"]
 
 
 
+[[using-search-to-look-up-objects]]
 == Verwenden der Suche zum Nachschlagen von Objekten
 
 Die Such-API ist ein einfacher Einstiegspunkt in das System.  Der einzige Eingabeparameter für die API ist eine Zeichenfolge in freier Form und das resultierende JSON enthält eine kategorisierte Ergebnisliste.  Typen sind verschiedene Asset-Typen aus dem Inventar, wie Speicher, Hosts, Datenspeicher usw.  Jeder Typ würde eine Liste von Objekten des Typs enthalten, die den Suchkriterien entsprechen.
@@ -243,6 +257,7 @@ Die RESTful-API von Cloud Insight ist ein primärer Integrationspunkt, der eine 
 
 
 
+[[disabling-or-revoking-an-api-token]]
 == Deaktivieren oder Widerrufen eines API-Tokens
 
 Um ein API-Token vorübergehend zu deaktivieren, klicken Sie auf der API-Token-Listenseite auf das Menü mit den drei Punkten für die API und wählen Sie _Deaktivieren_.  Sie können das Token jederzeit wieder aktivieren, indem Sie im selben Menü „Aktivieren“ auswählen.
@@ -253,6 +268,7 @@ image:API_Disable_Token.png["Deaktivieren oder Widerrufen eines API-Tokens"]
 
 
 
+[[rotating-expired-api-access-tokens]]
 == Rotieren abgelaufener API-Zugriffstoken
 
 API-Zugriffstoken haben ein Ablaufdatum.  Wenn ein API-Zugriffstoken abläuft, müssen Benutzer ein neues Token (vom Typ _Data Ingestion_ mit Lese-/Schreibberechtigungen) generieren und Telegraf neu konfigurieren, um das neu generierte Token anstelle des abgelaufenen Tokens zu verwenden.  Die folgenden Schritte beschreiben die Vorgehensweise im Detail.

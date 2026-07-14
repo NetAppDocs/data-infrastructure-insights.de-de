@@ -14,6 +14,7 @@ Wenn eine neue Version eines Workload Security-Agenten oder -Collectors verfügb
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 . Überprüfen Sie in Swagger, ob die API-Kategorien mit den Namen „cloudsecure_installers.agent“ und „cloudsecure_installers.collector“ verfügbar sind.  Wenn nicht, ist die Unterstützung für die manuelle Agenteninstallation nicht aktiviert.  Wenden Sie sich bitte an den NetApp Support, um die Funktion zu aktivieren.
@@ -25,6 +26,7 @@ image:ws_manual_install_APIs.png["Manuelle Installations-APIs"]
 
 
 
+[[installing-a-new-agent]]
 == Installieren eines neuen Agenten
 
 . Erstellen Sie ein neues Workload Security API-Zugriffstoken.
@@ -197,6 +199,7 @@ image:ws_agentsPageShowingConnected.png["Benutzeroberfläche mit Anzeige verbund
 
 
 
+[[installing-a-new-data-collector]]
 == Installieren eines neuen Datensammlers.
 
 Hinweis: Dieses Dokument enthält Anweisungen zur Installation des „ONTAP SVM-Datenkollektors“.  Dieselben Schritte gelten für „Cloud Volumes ONTAP Datensammler“ und „Amazon FSx for NetApp ONTAP Datensammler“.
@@ -289,6 +292,7 @@ image:ws_collectorPageList.png["UI-Listenseite mit Sammlern"]
 
 
 
+[[installing-a-new-user-directory-collector]]
 == Installieren eines neuen User Directory Collector
 
 Hinweis: In diesem Dokument haben wir die Schritte zum Installieren eines LDAP-Collectors beschrieben.  Für die Installation eines AD-Collectors gelten die gleichen Schritte.
@@ -401,6 +405,7 @@ image:ws_LDAP_collector_list.png["LDAP-Sammlerliste in der Benutzeroberfläche"]
 
 
 
+[[upgrading-an-agent]]
 == Upgrade eines Agenten
 
 Wenn eine neue Version des Agenten/Sammlers verfügbar ist, wird eine E-Mail-Benachrichtigung gesendet.
@@ -487,6 +492,7 @@ image:ws_agentsPageShowingConnected.png["Benutzeroberfläche mit Anzeige verbund
 
 
 
+[[upgrading-collectors]]
 == Upgrade von Kollektoren
 
 Hinweis: Die Upgrade-Schritte sind für alle Kollektortypen gleich.  In diesem Dokument demonstrieren wir das Upgrade des „ONTAP SVM“-Collectors.
@@ -570,6 +576,7 @@ Wiederholen Sie die obigen Schritte auch zum Aktualisieren anderer Kollektortype
 
 
 
+[[commons-issues-and-fixes]]
 == Allgemeine Probleme und Lösungen.
 
 . AGENT014 Fehler

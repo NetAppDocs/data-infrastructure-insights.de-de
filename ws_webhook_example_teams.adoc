@@ -21,6 +21,7 @@ NOTE: Diese Seite verweist auf Anweisungen von Drittanbietern, die Änderungen u
 
 
 
+[[teams-setup]]
 == Teams-Setup:
 
 . Wählen Sie in Teams den Kebab aus und suchen Sie nach „Eingehender Webhook“.
@@ -33,6 +34,7 @@ image:Webhooks_Teams_Create_Webhook.png["Eingehender Webhook in Teams"]
 
 
 
+[[create-workload-security-teams-webhook]]
 == Erstellen Sie einen Workload Security Teams-Webhook:
 
 . Navigieren Sie zu „Admin > Benachrichtigungen“ und wählen Sie die Registerkarte „Workload Security Webhooks“ aus.  Wählen Sie _+ Webhook_, um einen neuen Webhook zu erstellen.
@@ -46,6 +48,7 @@ image:ws_webhook_teams_example.png["Beispiel für einen Webhook für Workload Se
 
 
 
+[[steps-for-creating-teams-notification-with-adaptive-card-template]]
 === Schritte zum Erstellen einer Teams-Benachrichtigung mit der Adaptive Card-Vorlage
 
 . Ersetzen Sie den Nachrichtentext durch die folgende Vorlage:
@@ -140,6 +143,7 @@ image:ws_webhook_teams_example.png["Beispiel für einen Webhook für Workload Se
 
 
 
+[[notifications-via-webhook]]
 == Benachrichtigungen per Webhook
 
 Um über Ereignisse per Webhook benachrichtigt zu werden, navigieren Sie zu _Workload-Sicherheit > Richtlinien_.  Wählen Sie _+Angriffsrichtlinie_ oder _+Warnrichtlinie_.

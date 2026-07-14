@@ -18,6 +18,7 @@ Tipps und Tricks, die Ihnen helfen, die leistungsstarken Funktionen von Dashboar
 
 
 
+[[finding-the-right-metric]]
 == Die richtige Metrik finden
 
 Data Infrastructure Insights erfasst Zähler und Metriken unter Verwendung von Namen, die sich manchmal von Datensammler zu Datensammler unterscheiden.
@@ -64,6 +65,7 @@ Dies ist keine vollständige Liste.  Dies sind lediglich Beispiele für möglich
 
 
 
+[[finding-the-right-assets]]
 == Die richtigen Vermögenswerte finden
 
 Die Assets, auf die Sie in Widget-Filtern und -Suchen verweisen können, variieren von Asset-Typ zu Asset-Typ.
@@ -96,6 +98,7 @@ Dies ist keine vollständige Liste.
 
 
 
+[[scatter-plot-example-knowing-your-axis]]
 == Streudiagramm-Beispiel: Kennen Sie Ihre Achse
 
 Durch Ändern der Reihenfolge der Zähler in einem Streudiagramm-Widget werden die Achsen geändert, auf denen die Daten angezeigt werden.

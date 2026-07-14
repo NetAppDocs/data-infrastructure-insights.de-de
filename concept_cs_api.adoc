@@ -24,6 +24,7 @@ Voraussetzungen für den API-Zugriff:
 
 
 
+[[api-documentation-swagger]]
 == API-Dokumentation (Swagger)
 
 Die neuesten API-Informationen finden Sie, indem Sie sich bei Workload Security anmelden und zu *Admin > API-Zugriff* navigieren.  Klicken Sie auf den Link *API-Dokumentation*.  Die API-Dokumentation basiert auf Swagger und bietet eine kurze Beschreibung und Nutzungsinformationen für die API. Sie können sie auch auf Ihrem Mandanten ausprobieren.
@@ -33,6 +34,7 @@ NOTE: Wenn Sie die Forensics Activity API aufrufen, verwenden Sie die API clouds
 
 
 
+[[api-access-tokens]]
 == API-Zugriffstoken
 
 Bevor Sie die Workload Security API verwenden, müssen Sie ein oder mehrere *API-Zugriffstoken* erstellen.  Zugriffstoken gewähren Leseberechtigungen.  Sie können auch das Ablaufdatum für jedes Zugriffstoken festlegen.
@@ -65,6 +67,7 @@ Detaillierte Informationen finden Sie im Link _API-Dokumentation_ unter *Admin >
 
 
 
+[[script-to-extract-data-via-the-api]]
 == Skript zum Extrahieren von Daten über die API
 
 Workload Security-Agenten enthalten ein Exportskript, um parallele Aufrufe der v2-API zu ermöglichen, indem der angeforderte Zeitbereich in kleinere Stapel aufgeteilt wird.

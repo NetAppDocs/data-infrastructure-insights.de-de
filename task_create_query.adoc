@@ -37,16 +37,19 @@ image:QuerySelectColumns.png["Spalten auswählen"]
 
 
 
+[[see-it-in-action]]
 == Sehen Sie es in Aktion
 
 link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Erkunden und Analysieren mit Abfragen in Data Infrastructure Insights (Video)"]
 
 
 
+[[choosing-aggregation-units-conditional-formatting]]
 == Auswählen von Aggregation, Einheiten und bedingter Formatierung
 
 
 
+[[aggregation-and-units]]
 === Aggregation und Einheiten
 
 Bei „Wert“-Spalten können Sie Ihre Abfrageergebnisse weiter verfeinern, indem Sie auswählen, wie die angezeigten Werte aggregiert werden, und indem Sie die Einheiten auswählen, in denen diese Werte angezeigt werden.  Diese Optionen finden Sie, indem Sie das Menü mit den drei Punkten in der oberen Ecke einer Spalte auswählen.
@@ -87,16 +90,19 @@ Durch das Umbenennen einer Spalte wird der angezeigte Name in der Abfrageergebni
 
 
 
+[[save]]
 === Speichern
 
 Nachdem Sie Ihre Abfrage so konfiguriert haben, dass die gewünschten Ergebnisse angezeigt werden, können Sie auf die Schaltfläche *Speichern* klicken, um die Abfrage für die zukünftige Verwendung zu speichern.  Geben Sie ihm einen aussagekräftigen und eindeutigen Namen.
 
 
 
+[[more-on-filtering]]
 == Mehr zum Filtern
 
 
 
+[[wildcards-and-expressions]]
 === Platzhalter und Ausdrücke
 
 Wenn Sie in Abfragen oder Dashboard-Widgets nach Text oder Listenwerten filtern, wird Ihnen beim Eintippen die Option angezeigt, einen *Platzhalterfilter* basierend auf dem aktuellen Text zu erstellen.  Wenn Sie diese Option auswählen, werden alle Ergebnisse zurückgegeben, die mit dem Platzhalterausdruck übereinstimmen.  Sie können *Ausdrücke* auch mit NOT oder OR erstellen oder die Option „Keine“ auswählen, um nach Nullwerten im Feld zu filtern.
@@ -111,6 +117,7 @@ Beachten Sie, dass die Platzhalter- und Ausdrucksfilterung mit Text oder Listen 
 
 
 
+[[refining-filters]]
 === Filter verfeinern
 
 Sie können Ihren Filter folgendermaßen verfeinern:
@@ -142,6 +149,7 @@ Wenn Sie eine Filterzeichenfolge in doppelte Anführungszeichen setzen, behandel
 
 
 
+[[filtering-for-boolean-values]]
 === Filtern nach Booleschen Werten
 
 Beim Filtern nach einem Booleschen Wert werden Ihnen möglicherweise die folgenden Filteroptionen angezeigt:
@@ -154,6 +162,7 @@ Beim Filtern nach einem Booleschen Wert werden Ihnen möglicherweise die folgend
 
 
 
+[[what-do-i-do-now-that-i-have-query-results]]
 == Was mache ich jetzt, da ich Abfrageergebnisse habe?
 
 Durch Abfragen können auf einfache Weise Anmerkungen hinzugefügt oder Anwendungen Assets zugewiesen werden.  Beachten Sie, dass Sie Ihren Inventarressourcen (Festplatte, Speicher usw.) nur Anwendungen oder Anmerkungen zuweisen können.  Integrationsmetriken können keine Anmerkungen oder Anwendungszuweisungen übernehmen.
@@ -164,6 +173,7 @@ image:QueryVolumeBulkActions.png["Beispiel für Abfrage-Massenaktionen"]
 
 
 
+[[annotation-rules-require-query]]
 == Anmerkungsregeln erfordern eine Abfrage
 
 Wenn Sie konfigurierenlink:task_create_annotation_rules.html["Anmerkungsregeln"] , jeder Regel muss eine zugrunde liegende Abfrage zugrunde liegen, mit der gearbeitet werden kann.  Aber wie Sie oben gesehen haben, können Abfragen so weit oder so eng gefasst werden, wie Sie es benötigen.

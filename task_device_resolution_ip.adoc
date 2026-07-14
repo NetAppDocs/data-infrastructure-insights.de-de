@@ -16,6 +16,7 @@ image:Device_Resolution_IP.png["IP-Geräteauflösung"]
 
 
 
+[[adding-ip-devices-manually]]
 == IP-Geräte manuell hinzufügen
 
 Sie können Data Infrastructure Insights manuell ein IP-Gerät hinzufügen, indem Sie die Funktion zum manuellen Hinzufügen im Bildschirm „IP-Identifizierung“ verwenden.
@@ -36,6 +37,7 @@ Das von Ihnen eingegebene Gerät wird der Geräteliste auf der Registerkarte „
 
 
 
+[[importing-ip-device-identification-from-a-csv-file]]
 == Importieren der IP-Geräteidentifikation aus einer CSV-Datei
 
 Sie können IP-Gerätekennungen manuell in die Funktion „Geräteauflösung“ importieren, indem Sie eine Liste von Gerätekennungen in einer CSV-Datei verwenden.
@@ -63,6 +65,7 @@ NOTE: Als bewährte Methode wird empfohlen, zunächst die IP-Adressidentifizieru
 
 
 
+[[exporting-ip-device-identification-to-a-csv-file]]
 == Exportieren der IP-Geräteidentifikation in eine CSV-Datei
 
 Sie können vorhandene IP-Geräteidentifikationen aus der Geräteauflösungsfunktion von Data Infrastructure Insights in eine CSV-Datei exportieren.  Möglicherweise möchten Sie eine Gerätekennung exportieren, damit Sie sie ändern und dann wieder in Data Infrastructure Insights importieren können, wo sie dann zum Identifizieren von Geräten verwendet wird, die denen ähneln, die ursprünglich mit der exportierten Kennung übereinstimmten.

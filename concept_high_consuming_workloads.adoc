@@ -14,6 +14,7 @@ Workloads mit hoher Auswirkung können die Leistung anderer Workloads in einer g
 
 
 
+[[terminology]]
 === Terminologie
 
 Wenn es um Arbeitsbelastung oder Ressourcenauswirkungen geht, sind die folgenden Definitionen hilfreich.
@@ -32,6 +33,7 @@ Ein *Konflikt* tritt auf, wenn festgestellt wird, dass IOPS andere Ressourcen od
 
 
 
+[[high-consuming-workloads]]
 === Arbeitslasten mit hohem Zeitaufwand
 
 Alle von Data Infrastructure Insights erkannten Workloads mit hohem Arbeitsaufwand werden in der Einsicht „Gemeinsam genutzte Ressourcen unter Belastung“ angezeigt.  Navigieren Sie zu *Observability > Infrastructure Insights*, um diese Insights anzuzeigen.
@@ -48,6 +50,7 @@ image:Insights_Demanding_Workload_Chart.png["Anspruchsvolles Arbeitspensum-Diagr
 
 
 
+[[what-do-i-do-to-resolve-saturation]]
 === Was kann ich tun, um die Sättigung zu beheben?
 
 Sie können eine Reihe von Schritten unternehmen, um die Gefahr einer Überlastung Ihres Mieters zu verringern oder auszuschließen.  Hier sind ein paar Dinge, die Sie ausprobieren können.

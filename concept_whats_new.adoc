@@ -13,39 +13,46 @@ keywords: features
 :imagesdir: ./media/
 
 
+[[whats-new]]
 [role="lead"]
 NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hier sind einige der neuesten Features und Funktionen, die in Data Infrastructure Insights (ehemals Cloud Insights) verfügbar sind.
 
 
 
+[[june-2026]]
 == Juni 2026
 
 
 
+[[share-important-updates-with-login-messages]]
 === Wichtige Aktualisierungen mit Anmeldenachrichten teilen
 
 Das Team bleibt mit anpassbaren Anmeldenachrichten informiert und abgestimmt. Wichtige Ankündigungen, Wartungspläne oder Richtlinienaktualisierungen werden direkt bei der Anmeldung an die Benutzer kommuniziert. Mit Markdown-Unterstützung lassen sich Nachrichten übersichtlich formatieren, sodass kritische Informationen jeden DII-Benutzer erreichen. Konten mit Administratorrechten finden die Konfiguration im Admin-Menü unter Benachrichtigungen.
 
 
 
+[[more-workspace-less-clutter]]
 === Mehr Arbeitsfläche, weniger Unordnung
 
 Das DII-Navigationsmenü präsentiert sich in einem neuen Look, der farblich und funktional an die Console angepasst ist und so für ein einheitlicheres Benutzererlebnis sorgt. Das bisher statische Hauptmenü ist standardmäßig ausgeblendet, um einen übersichtlicheren Arbeitsbereich und eine effizientere Nutzung des Bildschirmplatzes zu ermöglichen. Klicken Sie einfach auf das Hamburger-Symbol (☰) oben links, um es aufzurufen.
 
 
 
+[[expand-device-visibility-with-intelligent-ai-assistance]]
 === Erweitern Sie die Gerätetransparenz mit intelligenter KI-Unterstützung
 
 Beschleunigen Sie die Integration neuer Geräte mit KI-gestützter Geräteidentifizierung. Data Infrastructure Insights analysiert Ihre Umgebung und schlägt Regeln zur automatischen Geräteerkennung vor, damit Sie Geräte schnell identifizieren und verwalten können. Prüfen und genehmigen Sie einfach die KI-generierten Regeln und DII kümmert sich um den Rest, wodurch die Transparenz und Verwaltung Ihrer Geräte in Ihrer gesamten Infrastruktur verbessert wird.
 
 
 
+[[a-smarter-ai-assistant-for-global-teams]]
 === Ein intelligenterer KI-Assistent für globale Teams
 
 Der KI-Assistent unterstützt jetzt über ein Dutzend Sprachen und ermöglicht Ihrem Team so die natürliche Kommunikation in der jeweiligen Muttersprache. Die vollständige Liste finden Sie hier link:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["hier,"^].
 
 
 
+[[new-monitors-for-infrastructure-attribute-changes]]
 === Neue Überwachungsfunktionen für Änderungen der Infrastrukturattribute
 
 Attributmonitore sind jetzt verfügbar, um Ihr Team automatisch zu benachrichtigen, wenn Assets zwischen Rechenzentren verschoben werden, ein Speicherpool nicht verschlüsselt ist oder Attributänderungen vorgenommen werden. Dies trägt zur Einhaltung der Konfigurationsbaselines bei und hilft sicherzustellen, dass bei neuen Bereitstellungen oder Änderungen nichts übersehen wird.
@@ -54,6 +61,7 @@ image:attribute_monitor_in_list.png["Attributmonitore werden zu Monitortypen hin
 
 
 
+[[build-smarter-alerts-and-webhooks-with-dynamic-context-rich-messages]]
 === Erstellen Sie intelligentere Benachrichtigungen und Webhooks mit dynamischen, kontextreichen Nachrichten
 
 Beim Erstellen eines Monitors oder Webhooks geben Sie einfach „%“ in der Alarmbeschreibung, der Webhook-URL, im Header oder im Body ein, um aus einer dynamisch gefüllten Liste verfügbarer Objektattribute und Annotationen auszuwählen. Geben Sie Ihren Alarmen den richtigen Kontext, um die Verständlichkeit zu verbessern, die Webhook-Integration zu verbessern und die Reaktionszeiten zu verkürzen.
@@ -63,10 +71,12 @@ image:attribute_list_example.png["Attributliste in einer Monitorbeschreibung, Br
 '''
 
 
+[[april-2026]]
 == April 2026
 
 
 
+[[dii-knows-your-environment-better-than-ever]]
 === DII kennt Ihre Umgebung besser als je zuvor
 
 Wir haben Verbesserungen daran vorgenommen, wie die KI in Data Infrastructure Insights Ihre Einrichtung versteht. Sie greift nun auf umfassendere Kontextinformationen zu Ihrer aktuellen Nutzung des Dienstes, der Konfiguration und den Leistungsmustern zurück, bevor sie antwortet. Das Ergebnis ist eine erste Anleitung, die Ihre Umgebung widerspiegelt, anstatt nur einen generischen Ausgangspunkt zu bieten, sodass weniger Nachfragen nötig sind, um zu einer hilfreichen Antwort zu gelangen.
@@ -81,10 +91,12 @@ Navigieren Sie beispielsweise zu einem Speichermedium, und der KI-Assistent lief
 '''
 
 
+[[march-2026]]
 == März 2026
 
 
 
+[[ai-assistant-is-now-generally-available]]
 === AI Assistant ist jetzt allgemein verfügbar
 
 Der Data Infrastructure Insights AI Assistant ist jetzt allgemein für alle Kunden für DII-Sites, die auf AWS gehostet werden, verfügbar.
@@ -93,16 +105,19 @@ Bitte beachten Sie, dass sich der KI-Assistent auf Azure sites noch in der Vorsc
 
 
 
+[[infrastructure-insights-features-removed]]
 === Infrastructure Insights-Funktionen entfernt
 
 Die „Infrastructure Insights“-Funktionen von DII _Shared Resources Under Stress_, _Kubernetes Namespaces Running out of Space_ und _Reclaiming ONTAP Cold Storage_ sind in DII nicht mehr verfügbar.
 
 
 
+[[february-2026]]
 == Februar 2026
 
 
 
+[[instant-intelligent-answers-about-your-infrastructure]]
 === Sofort intelligente Antworten zu Ihrer Infrastruktur
 
 Lernen Sie den neuen intelligenten Partner Ihrer Infrastruktur kennen: Die link:ai_for_dii_overview.html["*Data Infrastructure Insights KI-Assistent*"] transformiert die Interaktion mit Ihren Daten und macht aus komplexen Abfragen einfache Gespräche. Entdecken Sie sofort verborgene Muster, beschleunigen Sie die Fehlersuche und treffen Sie datenbasierte Entscheidungen mit Vertrauen. Erhalten Sie sofort Antworten auf Fragen wie:
@@ -118,6 +133,7 @@ image:ai_assistant_icon.png["KI-Assistent-Symbol"]
 
 
 
+[[monitor-improvements]]
 === Monitor-Verbesserungen
 
 
@@ -142,6 +158,7 @@ image:health_monitoring_exclude_object.png["Objekt von der Gesundheitsüberwachu
 
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Die folgenden Linux-Betriebssysteme werden derzeit von Data Infrastructure Insights link:concept_acquisition_unit_requirements.html["Akquisitionseinheiten"] unterstützt:
@@ -161,10 +178,12 @@ Die folgenden Linux-Betriebssysteme werden derzeit von Data Infrastructure Insig
 '''
 
 
+[[december-2025]]
 == Dezember 2025
 
 
 
+[[control-query-access-with-shared-queries]]
 === Zugriff auf Abfragen mit freigegebenen Abfragen steuern
 
 Teilen Sie Ihre erstellten Abfragen mit fein abgestuften Berechtigungssteuerungen. Wählen Sie den schreibgeschützten Anzeigemodus, um Änderungen zu verhindern, oder den Bearbeitungsmodus, um Änderungen zu ermöglichen. Private Abfragen sind nur für die Ersteller zugänglich, während gemeinsam genutzte Abfragen in Annotationsregeln verwendet oder für spezielle Anwendungsfälle dupliziert werden können. Dadurch haben Sie die volle Kontrolle darüber, wie Abfragen in Ihrer Organisation verwendet und geändert werden.
@@ -175,6 +194,7 @@ Darüber hinaus können Benutzer mit der Rolle „Gast“ nun ihre eigenen priva
 
 
 
+[[better-filtering-when-managing-monitors]]
 === Verbesserte Filterung bei der Monitorverwaltung
 
 Die Filterung von Monitorlisten und -gruppen wurde verbessert und bietet nun Unterstützung für Platzhalter, mehrere Filter, Ein-/Ausschlussfunktionen und mehr.
@@ -183,6 +203,7 @@ image:monitor_list_filters.png["Neue Monitorfilterung, Breite=500"]
 
 
 
+[[cleaner-dashboard-visualizations]]
 === Übersichtlichere Dashboard-Visualisierungen
 
 Das verbesserte Dashboard-Design hilft Ihnen, das Wichtigste im Blick zu behalten. Verbesserte visuelle Klarheit durch Schlagschattenränder, die Widgets voneinander trennen, und entfernte Trennlinien, um Unordnung zu vermeiden, damit Sie sich auf Ihre Dateneinblicke konzentrieren können. Diese Verbesserungen schaffen ein übersichtlicheres und intuitiveres Dashboard-Erlebnis, das das Erkennen von Trends und Anomalien schneller und einfacher macht.
@@ -190,10 +211,12 @@ Das verbesserte Dashboard-Design hilft Ihnen, das Wichtigste im Blick zu behalte
 '''
 
 
+[[november-2025]]
 == November 2025
 
 
 
+[[set-your-personalized-home-page]]
 === Legen Sie Ihre personalisierte Startseite fest
 
 Optimieren Sie Ihren täglichen Überwachungs-Workflow, indem Sie _eine beliebige_ Seite von Data Infrastructure Insights als Ihre personalisierte Startseite festlegen. Jeder Benutzer kann eine andere Startseite auswählen, um sich auf das zu konzentrieren, was ihm wichtig ist: ein wichtiges Dashboard, Warnmeldungen, Infrastrukturzustand, Workload-Sicherheit oder mehr.
@@ -202,6 +225,7 @@ image:home_page_set.png["Startseite festlegen, Breite=300"]
 
 
 
+[[stay-organized-with-automatic-dashboard-grouping]]
 === Bleiben Sie organisiert mit automatischer Dashboard-Gruppierung
 
 Optimieren Sie Ihr Dashboard-Erlebnis mit intelligenter Gruppierung, die importierte Galerie-Dashboards automatisch in logische Kategorien einordnet. Die neue Gruppierungsfunktion macht den Import von Dashboards zum Kinderspiel und ordnet jedes Dashboard der entsprechenden Gruppe zu, basierend auf seiner Funktion und Relevanz für Ihre Umgebung.
@@ -211,10 +235,12 @@ image:dashboard_gallery_groups.png["Galeriegruppen beim Import, Breite=500"]
 '''
 
 
+[[october-2025]]
 == Oktober 2025
 
 
 
+[[infrastructure-health-instant-visibility-into-storage-and-fabric-risk]]
 === Infrastrukturzustand: Sofortige Transparenz bei Speicher- und Fabric-Risiken
 
 Erhalten Sie mit unserer neuen Funktion „Infrastructure Health“ sofortigen Einblick in potenzielle Risiken in Ihrem Speicher und Ihren Fabrics.  Ein einziges, farbcodiertes Dashboard bietet Ihnen eine einheitliche Risikotransparenz und hilft Ihnen, Ausfallzeiten zu minimieren und Umsatzeinbußen schnell zu vermeiden.
@@ -229,6 +255,7 @@ image:infra_health_detailpanel.png["Infra Health Detail Panel, Breite=600"]
 
 
 
+[[multi-condition-monitors-for-precise-alerting]]
 === Multi-Condition-Monitore für präzise Alarmierung
 
 Reduzieren Sie Alarmgeräusche und verbessern Sie die Überwachungspräzision, indem Sie jedem Metrikmonitor eine optionale zweite Bedingung hinzufügen.  Warnungen werden nur ausgelöst, wenn beide Bedingungen erfüllt sind. So erhalten Sie gezieltere Benachrichtigungen, die sich auf die Szenarien konzentrieren, die für Sie am wichtigsten sind.
@@ -237,6 +264,7 @@ image:multi-condition_monitor_second_condition.png["Hinzufügen einer zweiten Be
 
 
 
+[[query-improvements-at-a-glance-object-details]]
 === Abfrageverbesserungen: Objektdetails auf einen Blick
 
 Durch Auswählen einer Zeile in einer Objektabfrage-Ergebnisliste wird ein Detailbereich für das ausgewählte Objekt geöffnet.  Zeigen Sie schnell Metriken und Attribute (die Standardansicht für Objektabfragen), Warnungen und Änderungen, Leistungs- und Integritätswerte an oder erkunden Sie verwandte Ressourcen.  Alle relevanten Objektinformationen stehen Ihnen zur Verfügung.
@@ -245,6 +273,7 @@ image:query_slideout_panel.png["Abbildung eines Abfrage-Slideout-Panels, standar
 
 
 
+[[workload-security-improvements]]
 === Verbesserungen der Workload-Sicherheit
 
 Zwei neue APIs geben Ihnen mehr Kontrolle über Ihre Workload Security-Umgebung:
@@ -258,10 +287,12 @@ Darüber hinaus sind die Berechtigungsprüfungen für Workload Security-Rollen j
 '''
 
 
+[[august-2025]]
 == August 2025
 
 
 
+[[focused-widget-data-at-your-fingertips]]
 === Fokussierte Widget-Daten immer zur Hand
 
 Mit der neuen *Analysieren*-Funktion in den meisten Widgets können Sie die Daten in jeweils einem Widget genauer betrachten. Klicken Sie einfach auf die Schaltfläche „Analysieren“ in einem Widget, um eine Detailansicht zu öffnen, in der Sie die zugrunde liegenden Daten interaktiv erkunden und für tiefere Einblicke hineinzoomen können – ohne den Kontext Ihres Dashboards zu verlassen.
@@ -270,6 +301,7 @@ image:widget_analyze_panel.png["Analysebereich für ein Linien-Widget, Breite=90
 
 
 
+[[export-and-import-dashboards]]
 === Dashboards exportieren und importieren
 
 Wenn Sie mehrere Mandanten verwalten und ein nützliches Dashboard entwickelt haben, können Sie das Dashboard exportieren und in einen anderen Mandanten importieren.
@@ -278,18 +310,21 @@ image:dashboard_import_from_file.png["Bild zeigt Import"] image:dashboard_export
 
 
 
+[[enhanced-cloud-integration-google-cloud-netapp-volumes-gcnv-support]]
 === Verbesserte Cloud-Integration: Unterstützung für Google Cloud NetApp Volumes (GCNV)
 
 * Google Cloud NetApp Volumes* (GCNV) wird jetzt als Datensammler in DII vollständig unterstützt und vervollständigt unser Ökosystem für die Hybrid-Cloud-Überwachung. Erhalten Sie Einblick in kritische Speicherobjekte wie Organisationen, Pools und Volumes in der gesamten Infrastruktur. Jetzt können Sie alle Ihre Speicherumgebungen – vor Ort oder in der Cloud – von einer einzigen Plattform aus verfolgen.
 
 
 
+[[enhanced-storagegrid-monitoring]]
 === Verbesserte StorageGRID -Überwachung
 
 Die StorageGRID Protokollsammlung ist jetzt standardmäßig aktiviert und stellt DII Ereignisverfolgungsdaten bereit. Außerdem haben wir die StorageGrid-Überwachung um über 50 Standardwarnungen, Echtzeit-Ereignisverfolgung und neue Dashboards erweitert, um komplexe Speichernetzvorgänge zu vereinfachen. Bleiben Sie Problemen immer einen Schritt voraus, indem Sie tiefere Einblicke in Verkehrsrichtlinien und Bucket-Leistung erhalten.
 
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Die folgenden Betriebssysteme werden jetzt mit Data Infrastructure Insights Acquisition Units unterstützt, zusätzlich zu denenlink:concept_acquisition_unit_requirements.html["bereits unterstützt"] :
@@ -301,10 +336,12 @@ Die folgenden Betriebssysteme werden jetzt mit Data Infrastructure Insights Acqu
 
 
 
+[[june-2025]]
 == Juni 2025
 
 
 
+[[vm-analyzer-holistic-vm-to-storage-visibility-troubleshooting]]
 === VM Analyzer: Ganzheitliche VM-to-Storage-Transparenz und Fehlerbehebung
 
 Die *VM Analyzer*-Funktion von DII bietet eine umfassende End-to-End-Ansicht Ihrer virtualisierten Umgebungen.  Der VM Analyzer vereinfacht die Fehlerbehebung, indem er den gesamten Pfad von virtuellen Maschinen zum Speicher abbildet. So können Benutzer Leistungsprobleme bei virtuellen Datenträgern, VMs, Hosts, Datenspeichern, Volumes und Speichern schnell lokalisieren.  Mit einer intuitiven Topologieansicht, Filterung und detaillierten Leistungsmetriken können Administratoren Engpässe leicht erkennen, Verkehrsungleichgewichte analysieren und die Gesamtspeicherleistung optimieren.
@@ -313,6 +350,7 @@ image:vm_analyzer_example_with_panel.png["VM Analyzer-Topologiekarte eines Speic
 
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Die folgenden Betriebssysteme werden jetzt mit Data Infrastructure Insights Acquisition Units unterstützt, zusätzlich zu denenlink:concept_acquisition_unit_requirements.html["bereits unterstützt"] :
@@ -325,10 +363,12 @@ Die folgenden Betriebssysteme werden jetzt mit Data Infrastructure Insights Acqu
 '''
 
 
+[[may-2025]]
 == Mai 2025
 
 
 
+[[new-landing-pages-keep-you-in-the-flow]]
 === Neue Landingpages halten Sie im Flow
 
 Die neu gestalteten Zielseiten zeigen alles, was Sie brauchen – zusammenfassende Daten, Leistungsdiagramme, Korrelationen, Warnungen und Änderungen sowie wichtige Ressourcen – in einer Ansicht.
@@ -339,6 +379,7 @@ image:lp_new_design.png["neues Landingpage-Design mit Platzierung der Abschnitte
 
 
 
+[[workload-security-improvements]]
 === Verbesserungen der Workload-Sicherheit
 
 *Webhooks jetzt für Workload-Sicherheitswarnungen verfügbar*
@@ -355,6 +396,7 @@ image:ws_migrate_collector_to_another_agent.png["Migrieren Sie den Kollektor, Br
 
 
 
+[[csv-asynchronous-export]]
 === Asynchroner CSV-Export
 
 Das Exportieren von Daten in das CSV-Format kann je nach der zu exportierenden Datenmenge einige Sekunden bis mehrere Stunden dauern.  Data Infrastructure Insights exportiert diese Daten jetzt asynchron, sodass Sie weiterarbeiten können, während die CSV-Datei kompiliert wird.
@@ -366,10 +408,12 @@ image:csv_export_async.png["Glockensymbol mit Liste der zum Download bereitstehe
 '''
 
 
+[[april-2025]]
 == April 2025
 
 
 
+[[ml-powered-anomaly-bounds-in-line-widgets-for-proactive-issue-resolution]]
 === ML-gestützte Anomaliegrenzen in Zeilen-Widgets zur proaktiven Problemlösung
 
 Um Leistungsprobleme mit Linien- oder Spline-Diagramm-Widgets zu beheben, können Sie jetzt erwartete Verhaltensgrenzen neben tatsächlichen Messwerten anzeigen, sodass Sie zwischen normalen und abnormalen Messwerttrends unterscheiden können.
@@ -380,6 +424,7 @@ image:expected_bounds_example_showing_spike.png["erwartete Grenzen zeigen Spitze
 
 
 
+[[optimize-vmware-costs-with-vsan-storage-support]]
 === Optimieren Sie VMware-Kosten mit VSAN-Speicherunterstützung
 
 Unsere VM-Optimierungsfunktion umfasst jetzt Unterstützung für VMWare-Umgebungen mit VSAN-Speicher.  Zusätzlich zur CPU- und Speichernutzung berücksichtigt die Analyse jetzt auch den lokalen VSAN-Speicher für Rückgewinnungsempfehlungen und hilft Ihnen so, die Lizenzkosten weiter zu senken.
@@ -388,6 +433,7 @@ image:vm_optimization_with_vsan.png["VM-Optimierungsbeispiel mit VSAN"]
 
 
 
+[[alert-details-at-your-fingertips]]
 === Alarmdetails immer zur Hand
 
 Mit dem neuen Slideout-Panel ist die Untersuchung von Warnungen einfacher als je zuvor.  Wählen Sie eine Warnung aus, um Details zu dieser Warnung anzuzeigen, und wechseln Sie einfach zwischen Warnungen, ohne beim Untersuchen von Problemen die Übersicht zu verlieren.
@@ -396,12 +442,14 @@ image:alert_slideout_example.png["Alarm-Slideout für einfachere Navigation"]
 
 
 
+[[workload-security-forensics-asynchronous-export]]
 === Asynchroner Export der Workload-Sicherheitsforensik
 
 Das Exportieren forensischer Daten kann je nach der Menge der zu exportierenden Daten zwischen einigen Sekunden und mehreren Stunden dauern.  Workload Security exportiert diese Daten asynchron, sodass Sie weiterarbeiten können, während die CSV-Datei kompiliert wird.
 
 
 
+[[data-collector-notifications-grouped-into-rules]]
 === In Regeln gruppierte Datensammlerbenachrichtigungen
 
 Wenn Sie Benachrichtigungen für Datensammler konfiguriert haben, werden diese Benachrichtigungen ab dem 15. April in Benachrichtigungsregeln behandelt, mit einer einzigen Regel für Sammler mit identischen Empfängern.  Für Sammler mit unterschiedlichen Empfängern gelten separate Regeln.  Vorhandene Collector-Benachrichtigungen werden in Benachrichtigungsregeln migriert.
@@ -409,10 +457,12 @@ Wenn Sie Benachrichtigungen für Datensammler konfiguriert haben, werden diese B
 '''
 
 
+[[march-2025]]
 == März 2025
 
 
 
+[[enhanced-contextual-navigation-for-efficient-infrastructure-management]]
 === Verbesserte Kontextnavigation für effizientes Infrastrukturmanagement
 
 Sparen Sie Zeit, indem Sie Data Infrastructure Insights für operative Exzellenz nutzen.  Wir fügen jetzt Kontextmenü-Links hinzu, mit denen Sie von jedem Objekt direkt zur Asset-Landingpage springen können, um Einblicke in die Geräteleistung zu erhalten, zum SAN Analyzer zur Visualisierung der Netzwerktopologie, zu Protokollen für Betriebsbewusstsein oder zum Change Analyzer für das Konfigurationsmanagement.
@@ -423,6 +473,7 @@ image:contextual_menu_example.png["Beispiel für ein Kontextmenü, Breite=500"]
 
 
 
+[[preserve-the-history-of-removed-assets]]
 === Bewahren Sie den Verlauf entfernter Assets auf
 
 Unsere erweiterte Infra Change-Funktion bewahrt jetzt den Verlauf entfernter Assets wie Qtrees und Volumes auf, die verschoben wurden und nicht mehr verfügbar sind.
@@ -435,6 +486,7 @@ image:infra_change_removed_assets.png["Entfernte Assets in der Infra-Änderung w
 
 
 
+[[kubernetes-operator-push-button-upgrade]]
 === Kubernetes Operator Push-Button-Upgrade
 
 Möchten Sie sicher sein, dass Sie den neuesten Kubernetes Operator haben?  Aktualisieren Sie den Operator bei Bedarf über das Clustermenü von DII Kubernetes Collectors.  Wählen Sie einfach „Upgrade“ aus dem Menü aus. Der Operator überprüft die Bildsignaturen, erfasst einen Schnappschuss Ihrer aktuellen Installation und führt das Upgrade durch.
@@ -445,6 +497,7 @@ image:dii_push_button_upgrade.png["Upgrade des Push-Button-Operators aus dem Clu
 
 
 
+[[test-connectivity-for-storage-workload-security-data-collectors]]
 === Testen der Konnektivität für Storage Workload Security-Datenkollektoren
 
 Die Funktion zum Testen der Konnektivität soll Endbenutzern dabei helfen, die spezifischen Ursachen von Fehlern beim Einrichten von Datensammlern in Data Infrastructure Insights (DII) Workload Security zu identifizieren.  Dadurch können die Benutzer Probleme im Zusammenhang mit der Netzwerkkommunikation oder fehlenden Rollen selbst beheben.
@@ -453,6 +506,7 @@ image:ws_test_connection_button.png["Schaltfläche „Verbindung zum Workload-Si
 
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Die folgenden Betriebssysteme werden jetzt mit Data Infrastructure Insights Acquisition Units unterstützt, zusätzlich zu denenlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["bereits unterstützt"] :
@@ -470,6 +524,7 @@ Die folgenden Betriebssysteme werden jetzt mit Data Infrastructure Insights Acqu
 '''
 
 
+[[february-2025]]
 == Februar 2025
 
 ONTAP essentials umfasst jetzt sofort einsatzbereite Verwaltbarkeit für die neueste Generation vonlink:task_dc_na_ontap_all_san_array.html["ASA"] Geräte.  Dazu gehört SAN Analyzer für VM-zu-LUN-Topologien von Workloads, die auf ONTAP ausgeführt werden, jetzt auch mit NetApp Unterstützung als Teil der Data Infrastructure Insights Basic Edition verfügbar.
@@ -478,6 +533,7 @@ image:ontap_essentials_asa_views.png["Dropdown-Liste „ONTAP Essentials“ zeig
 
 
 
+[[dii-api-usage-tracking-enhance-security-and-efficiency]]
 === DII API-Nutzungsverfolgung: Verbessern Sie Sicherheit und Effizienz
 
 Stärken Sie Ihre Sicherheitslage und optimieren Sie die Ressourcenverwaltung mit der erweiterten REST-API-Nutzungsverfolgung, die für Administratorbenutzer verfügbar ist.  Mit der API-Nutzungsverfolgung können Sie sehen, welche API-Token von welchen IP-Adressen verwendet werden und welches Datenverkehrsvolumen sie generieren.  Durch die Verknüpfung von Token mit bestimmten IP-Adressen und Nutzungsstufen erhalten Sie aussagekräftige Einblicke in Systemzugriffs- und Nutzungstrends und haben so die Kontrolle, die Sie benötigen, um eine sichere, effiziente Umgebung aufrechtzuerhalten und einen reibungslosen Betrieb zu gewährleisten.
@@ -488,6 +544,7 @@ image:api_usage_analytics_screenshot.png["Beispiel für API-Nutzungsanalyse"]
 
 
 
+[[workload-security-api-to-restrict-users]]
 === Workload Security API zum Einschränken von Benutzern
 
 Zur Verwaltung von Benutzerbeschränkungen in Workload Security wurde eine neue API hinzugefügt.  Mit der API können Sie einen Benutzer sperren oder entsperren oder die Dauer seines eingeschränkten Zugriffs ändern.  Weitere Informationen zur API _cloudsecure_actions.block_ finden Sie auf der Seite „Admin > API-Zugriff > API-Dokumentation“.
@@ -495,10 +552,12 @@ Zur Verwaltung von Benutzerbeschränkungen in Workload Security wurde eine neue 
 '''
 
 
+[[january-2025]]
 == Januar 2025
 
 
 
+[[proactively-manage-risk-with-forensics-grouping]]
 === Proaktives Risikomanagement mit Forensics Grouping
 
 Wir stellen unsere neueste Funktion vor, die Ihre Sicherheits- und Ressourcenverwaltungsfunktionen verbessern soll!  Mit der erweiterten Gruppierungsfunktion und der Unterstützung für hierarchisches Mehrfachgruppieren können Sie jetzt problemlos Benutzer identifizieren, die auf bestimmte Ordner zugegriffen haben, die aktivsten Benutzer und Freigaben ermitteln und Risiken proaktiv verwalten, indem Sie aktive Client-IP-Adressen verfolgen.  Optimieren Sie Ihre Speicher- und Bandbreitennutzung, indem Sie die am häufigsten aufgerufenen Dateien und Ordner ermitteln und durch die Identifizierung von Benutzern eine bessere Kontrolle über den Systemzugriff erlangen.
@@ -507,6 +566,7 @@ image:forensics_activity_example.png["Beispielbildschirm zur forensischen Aktivi
 
 
 
+[[dashboard-access-control]]
 === Dashboard-Zugriffskontrolle
 
 Data Infrastructure Insights gibt Ihnen jetzt mehr Kontrolle über den Zugriff auf die von Ihnen erstellten Dashboards.  Sie entscheiden, wer Ihre Diagramme ändern kann.  Sie kontrollieren die Offenlegung potenziell sensibler Informationen.  Arbeiten Sie noch an einem Dashboard, das noch nicht für die allgemeine Sichtbarkeit bereit ist?  Sie können es privat halten, bis Sie bereit sind, es freizugeben.
@@ -516,10 +576,12 @@ image:Dashboard_Sharing_Options.png["Optionen zur Dashboard-Freigabe"]
 '''
 
 
+[[december-2024]]
 == Dezember 2024
 
 
 
+[[introducing-san-analyzer-enhanced-visibility-for-block-workloads]]
 === Einführung von SAN Analyzer: Verbesserte Sichtbarkeit für Block-Workloads
 
 SAN spielt eine entscheidende Rolle bei der Bewältigung wichtiger Arbeitslasten, seine Komplexität kann jedoch zu erheblichen Ausfällen und Störungen für die Kunden führen.  Mit dem *SAN Analyzer* von DII wird die SAN-Verwaltung einfacher und effizienter.  Dieses leistungsstarke Tool bietet End-to-End-Sichtbarkeit und bildet Abhängigkeiten von VM/Host über Netzwerk bis hin zu LUN und Speicher ab.  Durch die Bereitstellung einer interaktiven Topologiekarte ermöglicht Ihnen SAN Analyzer, Probleme zu lokalisieren, Änderungen zu verstehen und das Verständnis des Datenflusses zu verbessern.  Optimieren Sie die SAN-Verwaltung in komplexen IT-Umgebungen mit SAN Analyzer und erhöhen Sie Ihre Transparenz bei Block-Workloads.
@@ -528,6 +590,7 @@ image:san_analyzer_example_with_panel.png["SAN Analyzer-Topologiekarte eines Spe
 
 
 
+[[optimize-vm-costs-with-intelligent-host-decommissioning-and-vm-reclamation]]
 === Optimieren Sie VM-Kosten mit intelligenter Host-Stilllegung und VM-Rückgewinnung
 
 Data Infrastructure Insights unterstützt Sie bei der Verwaltung der Infrastruktur- und Lizenzkosten, indem es das historische Verhalten der Umgebung analysiert und kurz- und langfristige Prognosen erstellt und detaillierte Empfehlungen für die Außerbetriebnahme von Hosts und die Wiederherstellung ausgeschalteter und inaktiver VMs generiert.  Diese Empfehlungen helfen Ihnen, die Leistungsstabilität sicherzustellen, ungenutzte Kapazitäten freizugeben und die Speicher- und CPU-Zuweisung zu reduzieren.
@@ -536,6 +599,7 @@ image:vm_optimization_summary.png["Bildschirm „VM-Optimierungsübersicht“"]
 
 
 
+[[uncover-log-insights-with-time-charts-and-table-widget-support]]
 === Entdecken Sie Log-Einblicke mit Zeitdiagrammen und Tabellen-Widget-Unterstützung
 
 Jetzt können Sie Zeitdiagramme (Balken, Linien, Flächen) nutzen, um Trends und Muster in Protokolldaten zu erkennen, z. B. wiederkehrende Fehler oder Aktivitätsspitzen, und so wertvolle Einblicke in das Systemverhalten im Zeitverlauf gewinnen.  Darüber hinaus können Sie jetzt mithilfe von Tabellen Protokollmeldungen direkt in das Dashboard einbinden und so eine umfassendere Ansicht der Protokolldetails erhalten.
@@ -545,10 +609,12 @@ image:log_insights_dashboard_example.png["Erkenntnisse auf einem Dashboard proto
 '''
 
 
+[[november-2024]]
 == November 2024
 
 
 
+[[new-workload-security-alerts-api]]
 === Neue API für Workload-Sicherheitswarnungen
 
 Forensische Warnmeldungen mit der neuen Workload Security abrufenlink:concept_cs_api.html["*cloudsecure_forensics.alerts* API"] .
@@ -557,6 +623,7 @@ image:ws_forensics_alerts_api.png["API für Workload-Sicherheitsforensikwarnunge
 
 
 
+[[analyze-configuration-changes-in-your-environment]]
 === Analysieren Sie Konfigurationsänderungen in Ihrer Umgebung
 
 Konfigurationsänderungen sind eine der häufigsten Ursachen für Probleme in der modernen IT.  Data Infrastructure Insights(DII) neulink:infrastructure_change_analytics.html["Änderungsanalyse"] Mithilfe dieser Funktion können Sie Änderungen, die in Ihrer Umgebung Probleme verursachen, klar erkennen.  Beschleunigen Sie die Fehlerbehebung, indem Sie alle Änderungen an Geräten und zugehörigen Infrastrukturkomponenten anzeigen, die möglicherweise zu einem Problem geführt haben.  Wenn Sie oder Ihr Team geplante Änderungen durchführen, können Sie diese außerdem schnell validieren und sicherstellen, dass es keine unerwarteten Auswirkungen gibt, bevor die Service-Level beeinträchtigt werden.
@@ -565,6 +632,7 @@ image:Change_Analysis_Example_showing_alert-change_correlation.png["Beispiel fü
 
 
 
+[[kubevirt-support-monitor-virtual-machine-workloads-running-within-your-kubernetes-cluster]]
 === KubeVirt-Support: Überwachen Sie die Workloads virtueller Maschinen, die in Ihrem Kubernetes-Cluster ausgeführt werden
 
 DII unterstützt jetzt vollständig KubeVirt, die Kubernetes-native Virtualisierungslösung, die von Plattformen wie OpenShift Virtualization und Harvester verwendet wird.  Erhalten Sie vollständige Transparenz über die Metriken, Ereignisse, Konfigurationsänderungen und den Netzwerkverkehr sowohl der virtuellen Maschinen als auch der Container-Workloads innerhalb Ihrer Kubernetes-Cluster.
@@ -572,10 +640,12 @@ DII unterstützt jetzt vollständig KubeVirt, die Kubernetes-native Virtualisier
 '''
 
 
+[[october-2024]]
 == Oktober 2024
 
 
 
+[[unlock-new-insights-with-custom-expressions-in-monitors]]
 === Gewinnen Sie neue Erkenntnisse mit benutzerdefinierten Ausdrücken in Monitoren
 
 Mithilfe von Ausdrücken können Sie arithmetische Operationen in Metrik- und Anomalieerkennungsmonitoren durchführen.  Hier sind einige Beispiele:
@@ -590,6 +660,7 @@ image:Expressions_In_Monitors.png["Erstellen eines Ausdrucks in einem Metrikmoni
 
 
 
+[[minimize-alert-disruptions-during-maintenance-period]]
 === Minimieren Sie Alarmunterbrechungen während der Wartungszeit
 
 Mithilfe von Wartungsfenstern können Sie Warnmeldungen während geplanter Wartungszeiträume unterdrücken und so unnötige Unterbrechungen vermeiden.
@@ -602,6 +673,7 @@ image:Maintenance_Windows_example.png["Beispiel für Wartungsfenster"]
 
 
 
+[[streamline-alert-management-with-new-alert-notification-rules]]
 === Optimieren Sie das Alarmmanagement mit neuen Alarmbenachrichtigungsregeln
 
 Regeln für Warnbenachrichtigungen vereinfachen die Benachrichtigungsverwaltung über Monitore und Teams hinweg.
@@ -612,6 +684,7 @@ image:notification_rule_configure.png["Festlegen von Filtern für Benachrichtigu
 
 
 
+[[log-analytics-in-dashboards]]
 === Log Analytics in Dashboards
 
 Sie können jetzt Protokollereignisse in Ihre Dashboards aufnehmen, um Ereignisdaten zu visualisieren und ein umfassenderes und kontextbezogeneres Verständnis Ihrer Umgebung zu erhalten.  Untersuchen Sie Protokolle und zeigen Sie zugehörige Metriken an, ohne das Dashboard zu verlassen!
@@ -620,6 +693,7 @@ image:log_analytics_bar_graph_example.png["Beispiel für eine Protokollanalyse"]
 
 
 
+[[better-vmware-observability-with-vmware-events]]
 === Bessere VMware-Beobachtbarkeit mit VMware Events
 
 Verwalten und beheben Sie Probleme in Ihrer VMware-Umgebung proaktiv mit Echtzeitereignissen.  VMware-Ereignisse bieten Einblicke in VM-Migrationen, Ressourcenzuweisungen und Host-Integrität.  Jetzt zur Verwendung in Abfragen, Dashboards und Monitoren verfügbar.  Erfordert VMware Version 8 oder höher.  Wählen Sie einfach die Quelle _logs.vmware.events_ aus.
@@ -630,6 +704,7 @@ image:vmware_log_events.png["VMware-Protokollauswahl im Dropdown"]
 
 
 
+[[data-collector-updates]]
 === Aktualisierungen des Datensammlers:
 
 * *Pure FlashBlade*: Dieser Collector sammelt Inventar- und Leistungsdaten von FlashBlade-Clustern, die Version 2 ihrer REST-API bereitstellen.
@@ -638,10 +713,12 @@ image:vmware_log_events.png["VMware-Protokollauswahl im Dropdown"]
 '''
 
 
+[[september-2024]]
 == September 2024
 
 
 
+[[introducing-data-infrastructure-insights-formerly-cloud-insights]]
 === Einführung von Data Infrastructure Insights, ehemals Cloud Insights
 
 Am Dienstag, den 24. September 2024, hat NetApp den Namen von Cloud Insights offiziell in * Data Infrastructure Insights* (DII) geändert.  Dies wurde während der Insight-Benutzerkonferenz von Haiyan Song in ihrer Keynote-Präsentation auf der Hauptbühne und in einer Produkt-Pressemitteilung der Insight-Konferenz angekündigt.
@@ -650,10 +727,12 @@ Der DII-Dienst bleibt derselbe; es gibt keine Funktionsänderungen oder Modifika
 
 
 
+[[august-2024]]
 == August 2024
 
 
 
+[[view-data-specific-to-your-time-range]]
 === Anzeigen spezifischer Daten für Ihren Zeitraum
 
 Untersuchen Sie eine Warnung?  In ein Diagramm hineingezoomt?  Diese Aktionen ändern den Zeitbereich für diese Seiten.  Jetzt können Sie diesen Zeitraum sperren, zu anderen Cloud Insights -Seiten navigieren und Daten anzeigen, die für diesen gesperrten Zeitraum spezifisch sind.  Die Untersuchung und Fehlerbehebung ist jetzt viel einfacher!
@@ -662,6 +741,7 @@ image:timerange_lock.png["Tooltip mit der Aufforderung, auf das Symbol zu klicke
 
 
 
+[[change-and-change-ratio-analysis]]
 === Analyse von Veränderungen und Veränderungsverhältnissen (%)
 
 Mithilfe von Änderungsverhältnis-Zeitaggregationen können Sie signifikante Änderungen und Trends in Metrikwerten im Zeitverlauf erkennen.  Diese Erkenntnisse sind der Schlüssel zum Verständnis der Änderungen, beispielsweise eines erheblichen Kapazitätswachstums für einen bestimmten Zeitraum oder einer Änderung der Leistung einzelner Ports.
@@ -674,6 +754,7 @@ image:change_and_change_ratio_bar_chart.png["Beispiel eines Balkendiagramms, das
 
 
 
+[[export-log-query-results-to-csv]]
 === Exportieren Sie die Ergebnisse der Protokollabfrage in eine CSV-Datei
 
 Beim Anzeigen der Ergebnisse der Protokollabfrage können Sie durch Klicken auf die neue Schaltfläche „Exportieren“ ganz einfach bis zu 10.000 Zeilen in das CSV-Format exportieren.  Dies verbessert die Datenzugänglichkeit, vereinfacht die Datenanalyse und -berichterstattung und ermöglicht eine nahtlose Integration mit anderen Datenverarbeitungstools.
@@ -682,6 +763,7 @@ image:csv_export_button.png["Schaltfläche „In CSV exportieren“ auf einer Pr
 
 
 
+[[resolve-alerts-by-time]]
 === Beheben Sie Warnungen nach Zeit
 
 Cloud Insights bietet Ihnen jetzt die Möglichkeit, eine Warnung aufzulösen, wenn die überwachte Metrik für eine bestimmte Dauer innerhalb des akzeptablen Bereichs bleibt.  Dadurch können Sie sich auf echte Probleme konzentrieren und den Lärm reduzieren, der durch wiederholtes Überschreiten definierter Schwellenwerte bei Metriken entsteht, indem Sie mehrere Warnungen zu einer einzigen zusammenfassen.
@@ -691,10 +773,12 @@ image:resolve_alert_by_time_dropdown.png["Auflösen einer Warnung basierend auf 
 '''
 
 
+[[july-2024]]
 == Juli 2024
 
 
 
+[[aiops-anomaly-detection]]
 === AIOps: Anomalieerkennung
 
 Cloud Insights nutzt maschinelles Lernen, um unerwartete Änderungen in den Datenmustern Ihrer Umgebung zu erkennen und proaktive Warnungen bereitzustellen, die Ihnen helfen, Probleme frühzeitig zu erkennen.
@@ -709,6 +793,7 @@ image:anomaly_detection_expert_view.png["Diagramm mit erkannter Anomalie"]
 
 
 
+[[workload-security-improvements]]
 === Verbesserungen der Workload-Sicherheit
 
 *NFS 4.1-Unterstützung*
@@ -723,6 +808,7 @@ Beachten Sie, dass Sie bei mehreren Aufrufen dieser API für optimale Ergebnisse
 
 
 
+[[easier-dashboard-navigation]]
 === Einfachere Dashboard-Navigation
 
 Bei dieser Funktion geht es darum, Ihre Betriebsabläufe zu optimieren und die Zusammenarbeit zwischen Teams zu erleichtern.
@@ -734,10 +820,12 @@ image:Dashboard_Nav_Group_Dropdown.png["Dropdown-Menü zur Auswahl eines anderen
 '''
 
 
+[[june-2024]]
 == Juni 2024
 
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Die folgenden Betriebssysteme werden mit Cloud Insights Acquisition Units unterstützt, zusätzlich zu denenlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["bereits unterstützt"] :
@@ -749,10 +837,12 @@ Die folgenden Betriebssysteme werden mit Cloud Insights Acquisition Units unters
 
 
 
+[[may-2024]]
 == Mai 2024
 
 
 
+[[automatically-resolve-alerts-based-on-time]]
 === Automatisches Lösen von Warnmeldungen basierend auf der Zeit
 
 Protokollwarnungen können jetzt zeitbasiert aufgelöst werden. Wenn die Warnbedingung nicht mehr auftritt, kann Cloud Insights die Warnung nach Ablauf einer angegebenen Zeit automatisch auflösen.  Sie können wählen, ob die Warnung innerhalb von Minuten, Stunden oder Tagen behoben werden soll.
@@ -762,10 +852,12 @@ image:alerts_resolve_based_on_time.png["Lösen Sie eine Warnung basierend auf de
 '''
 
 
+[[april-2024]]
 == April 2024
 
 
 
+[[iscsi-support-for-kubernetes]]
 === iSCSI-Unterstützung für Kubernetes
 
 Cloud Insights unterstützt jetzt die Zuordnung des mit Kubernetes verknüpften iSCSI-Speichers. Dies ermöglicht eine schnellere Fehlerbehebung mithilfe der Kubernetes-Netzwerkkarte und die Möglichkeit, über Reporting Chargeback- oder Showback-Berichte bereitzustellen.
@@ -774,6 +866,7 @@ image:pod-to-storage.png["Pod-to-Storage-Beispiel"]
 
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Die folgenden Betriebssysteme werden mit Cloud Insights Acquisition Units unterstützt, zusätzlich zu denenlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["bereits unterstützt"] :
@@ -788,10 +881,12 @@ Die folgenden Betriebssysteme werden mit Cloud Insights Acquisition Units unters
 '''
 
 
+[[march-2024]]
 == März 2024
 
 
 
+[[workload-security-agent-details]]
 === Details zum Workload Security Agent
 
 Jeder Ihrer Workload Security Agents verfügt über eine eigene Zielseite, auf der Sie leicht zusammenfassende Informationen zum Agenten sowie zu den installierten Daten- und Benutzerverzeichnis-Sammlern sehen können, die mit diesem Agenten verknüpft sind.
@@ -800,6 +895,7 @@ image:Agent_Detail_Page.png["Beispiel für eine Zielseite mit Agentendetails"]
 
 
 
+[[chart-more-data-more-quickly]]
 === Schnelleres Darstellen größerer Datenmengen
 
 Beim Analysieren von Daten auf der Zielseite eines Assets ist das Hinzufügen zusätzlicher Daten zu den Diagrammen der Expertenansicht ein Kinderspiel.  Wenn ein Objekttyp relevante Daten enthält, bewegen Sie für jede Tabelle auf der Zielseite den Mauszeiger über das Objekt, um das Symbol „Zur Expertenansicht hinzufügen“ anzuzeigen.  Durch Auswahl dieses Symbols wird das Objekt zu den zusätzlichen Ressourcen hinzugefügt und in den Diagrammen der Expertenansicht angezeigt.
@@ -813,10 +909,12 @@ image:LPTableShowChartIcon.png["Symbol „Diagramm anzeigen“"]
 '''
 
 
+[[february-2024]]
 == Februar 2024
 
 
 
+[[usability-improvements]]
 === Verbesserungen der Benutzerfreundlichkeit
 
 Speichern Sie einen *Schnappschuss* Ihres aktuellen Dashboards, indem Sie im Dropdown-Menü in der rechten Ecke „Als Bild exportieren“ auswählen.  Cloud Insights erstellt eine PNG-Datei mit den aktuellen Widget-Zuständen.
@@ -841,6 +939,7 @@ image:TriggeredOnLink.png["Links im Alarmfeld „TriggeredOn“"]
 
 
 
+[[see-all-changes-in-your-namespace]]
 === Alle Änderungen in Ihrem Namespace anzeigen
 
 Mit der Kubernetes-Änderungsanalyse können Sie jetzt eine Zeitleiste der Änderungen anzeigen, wenn Sie Cluster und Namespace auswählen.  Zuvor muss auch Workload ausgewählt worden sein.  Beim Filtern nach Cluster und Namespace wird die Zeitleiste aller Workloadänderungen in diesem Namespace in einer Zeile angezeigt.
@@ -849,6 +948,7 @@ image:NamespaceTimeline.png["Namespace-Zeitleiste"]
 
 
 
+[[related-logs-for-alerts]]
 === Zugehörige Protokolle für Warnungen
 
 Beim Anzeigen einer Protokollwarnung werden zugehörige Protokolleinträge in einer neuen Tabelle angezeigt.  Ein Protokolleintrag ist relevant, wenn er aus derselben Quelle und im selben Zeitraum wie die Warnung stammt und denselben Bedingungen unterliegt.  Wählen Sie „Protokolle analysieren“, um weitere Informationen zu erhalten.
@@ -857,12 +957,14 @@ image:RelatedLogsTable.png["Zugehörige Protokolle auf einer Zielseite für Prot
 
 
 
+[[collect-ontap-switch-data]]
 === Erfassen Sie ONTAP Switch-Daten
 
 Cloud Insights kann Daten von den Back-End-Switches des ONTAP Systems sammeln. Aktivieren Sie dazu einfach die Sammlung im Abschnitt „Erweiterte Konfiguration“ des Datensammlers und stellen Sie sicher, dass das ONTAP System so konfiguriert ist, dass eslink:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["Switch-Informationen"] und verfügt über die entsprechendenlink:task_dc_na_cdot.html#a-note-about-permissions["Berechtigungen"] Satz.
 
 
 
+[[workload-security-data-collector-api]]
 === Workload Security Data Collector-API
 
 In großen Umgebungen können Sie die Erstellung von Workload Security-Collectoren mithilfe der neuen Data Collectors-API automatisieren.  Navigieren Sie zu *Admin > API-Zugriff > API-Dokumentation* und wählen Sie den API-Typ _Workload Security_ aus, um mehr zu erfahren.
@@ -870,16 +972,19 @@ In großen Umgebungen können Sie die Erstellung von Workload Security-Collector
 '''
 
 
+[[january-2024]]
 == Januar 2024
 
 
 
+[[try-cloud-insights-features-you-havent-used-yet]]
 === Testen Sie Cloud Insights -Funktionen, die Sie noch nicht verwendet haben
 
 Zusätzlich zu Ihrer ersten Testversion von Cloud Insights können Sie auch folgende Vorteile nutzen:link:concept_subscribing_to_cloud_insights.html#module-evaluation["Modulevaluationen"] .  Wenn Sie beispielsweise Cloud Insights abonniert haben und Speicher und virtuelle Maschinen überwacht haben, starten Sie beim Hinzufügen von Kubernetes zu Ihrer Umgebung automatisch eine 30-tägige Testversion von Kubernetes Observability.  Die Nutzung der verwalteten Einheiten von Kubernetes Observability wird erst nach Ablauf des Testzeitraums auf Ihren abonnierten Anspruch angerechnet.
 
 
 
+[[how-healthy-are-my-workloads]]
 === Wie gesund ist meine Arbeitsbelastung?
 
 Der Workload-Status ist auf der Seite *Kubernetes > Erkunden > Workloads* auf einen Blick verfügbar, sodass Sie schnell erkennen können, welche Workloads gut funktionieren und welche möglicherweise etwas Hilfe benötigen.  Ermitteln Sie mühelos, ob das Integritätsproblem mit Infrastruktur-, Netzwerk- oder Konfigurationsänderungen zusammenhängt, und analysieren Sie die Grundursache im Detail.
@@ -888,6 +993,7 @@ image:WorkloadHealth.png["Workload-Integrität auf einen Blick"]
 
 
 
+[[data-collector-updates]]
 === Datensammler-Updates
 
 
@@ -898,6 +1004,7 @@ Der Data Domain-Collector wurde verbessert, um HA-Systeme für eine längere Leb
 
 
 
+[[enhanced-ransomware-detection-ml-algorithm]]
 === Verbesserter ML-Algorithmus zur Ransomware-Erkennung
 
 Workload Security umfasst einen neuen ML-Algorithmus der 2. Generation zur Ransomware-Erkennung, um die raffiniertesten Angriffe schneller und genauer zu erkennen.
@@ -906,6 +1013,7 @@ Workload Security umfasst einen neuen ML-Algorithmus der 2. Generation zur Ranso
 
 
 
+[[deprecated-functionality]]
 === Veraltete Funktionalität
 
 Gelegentlich werden Funktionen aufgrund der Weiterentwicklung veraltet.  Hier sind einige der Features und Funktionen, die in Cloud Insights veraltet sind:
@@ -950,10 +1058,12 @@ Weitere Einzelheiten finden Sie in der Swagger-Dokumentation unter „Admin > AP
 '''
 
 
+[[december-2023]]
 == Dezember 2023
 
 
 
+[[change-analytics-at-a-glance]]
 === Change Analytics auf einen Blick
 
 Kuberneteslink:kubernetes_change_analytics.html["Änderungsanalyse"] bietet Ihnen eine umfassende Übersicht über die jüngsten Änderungen an Ihrer Kubernetes-Umgebung.  Sie haben immer Zugriff auf Warnmeldungen und den Bereitstellungsstatus.  Mit Change Analytics können Sie jede Bereitstellungs- und Konfigurationsänderung verfolgen und mit dem Zustand und der Leistung der Dienste, Infrastruktur und Cluster von K8s korrelieren.
@@ -962,6 +1072,7 @@ image:ChangeAnalytitcs_Main_Screen.png["Dashboard für Änderungsanalysen"]
 
 
 
+[[kubernetes-workload-performance-dashboard]]
 === Kubernetes-Workload-Leistungs-Dashboard
 
 Die Workload-Leistung ist im umfassenden Kubernetes Workload Performance-Dashboard auf einen Blick verfügbar.  Zeigen Sie schnell Diagramme zu Volumen, Durchsatz, Latenz und Neuübertragungstrends sowie eine Tabelle mit dem Workload-Verkehr für jeden Namespace in Ihrer Umgebung an.  Filter ermöglichen eine einfache Fokussierung auf interessante Bereiche.
@@ -972,6 +1083,7 @@ image:K8s_Workload_performance_dashboard.png["Dashboard zur Arbeitslastleistung"
 
 
 
+[[query-details-on-one-screen]]
 === Abfragedetails auf einem Bildschirm
 
 Wenn Sie in einer Abfrage eine Zeile auswählen, wird ein Seitenbereich geöffnet, in dem Attribut-, Anmerkungs- und Metrikdetails für die ausgewählte Zeile angezeigt werden. So erhalten Sie hilfreiche Informationen, ohne dass Sie sich in die Zielseite des Objekts einarbeiten müssen.  Links in der Zeile oder im Seitenbereich ermöglichen eine einfache Navigation.
@@ -980,6 +1092,7 @@ image:MetricQuerySlideoutPanel.png["Slideout-Panel für Metrikabfrage"]
 
 
 
+[[data-collector-updates]]
 === Aktualisierungen des Datensammlers:
 
 * * Brocade FOS REST*: Dieser Collector wurde aus der „Vorschau“ entfernt und ist jetzt allgemein verfügbar.  Einige Dinge, die Sie beachten sollten:
@@ -994,16 +1107,19 @@ image:MetricQuerySlideoutPanel.png["Slideout-Panel für Metrikabfrage"]
 '''
 
 
+[[november-2023]]
 == November 2023
 
 
 
+[[workload-security-pauseresume-a-collector]]
 === Workload-Sicherheit: Einen Collector anhalten/fortsetzen
 
 In Workload Security können Sie einen Datensammler anhalten, wenn sich der Sammler im Status „Wird ausgeführt“ befindet.  Öffnen Sie das „Drei-Punkte“-Menü für den Collector und wählen Sie PAUSE.  Während der Collector angehalten ist, werden keine Daten von ONTAP gesammelt und keine Daten vom Collector an ONTAP gesendet.  Wählen Sie „Fortsetzen“, um erneut mit dem Sammeln zu beginnen.
 
 
 
+[[storage-node-support-information]]
 === Informationen zum Storage Node-Support
 
 Auf der Zielseite eines Speicherknotens bietet der Abschnitt „Benutzerdaten“ auf einen Blick Informationen zu Ihrem Supportangebot, dem aktuellen Status, dem Supportstatus und dem Garantieende.  Beachten Sie, dass Cloud Insights diese Informationen derzeit nur für NetApp -Geräte automatisch veröffentlicht.  Beachten Sie auch, dass es sich bei diesen Supportfeldern um Anmerkungen handelt, sodass sie in Abfragen und Dashboards verwendet werden können.
@@ -1012,12 +1128,14 @@ image:StorageNodeSupportData.png["Informationen zum Storage Node-Support"]
 
 
 
+[[map-vmware-tags-to-cloud-insights-annotations]]
 === VMWare-Tags zu Cloud Insights -Anmerkungen zuordnen
 
 Derlink:task_dc_vmware.html["VMWare"] Mit dem Datensammler können Sie Cloud Insights -Textanmerkungen mit gleichnamigen Tags füllen, die auf VMWare konfiguriert sind.
 
 
 
+[[brocade-cli-collector-reliability-enhancements-for-fos-9-1-1c-and-higher-firmware]]
 === Verbesserungen der Brocade CLI-Collector-Zuverlässigkeit für FOS 9.1.1c und höhere Firmware
 
 Auf einigen Brocade Fibre Channel-Switches mit der Firmware 9.1.1c kann der Ausgabe bestimmter CLI-Befehle der Anmeldebannertext „motd“ oder Warnungen für Benutzer vorangestellt sein, die Standardkennwörter zu ändern.  Der Brocade CLI-Collector wurde erweitert, um diese beiden Arten von irrelevantem Text zu ignorieren.
@@ -1027,10 +1145,12 @@ Vor dieser Verbesserung waren mit diesem Collector-Typ wahrscheinlich nur FOS 9.
 '''
 
 
+[[october-2023]]
 == Oktober 2023
 
 
 
+[[enhanced-workload-security]]
 === Verbesserte Workload-Sicherheit
 
 Die Workload-Sicherheit wurde wie folgt verbessert:
@@ -1041,12 +1161,14 @@ Die Workload-Sicherheit wurde wie folgt verbessert:
 
 
 
+[[module-trials]]
 === Modulversuche
 
 Zusätzlich zu Ihrer ersten Testversion von Cloud Insights können Sie auch folgende Vorteile nutzen:link:concept_subscribing_to_cloud_insights.html#module-evaluation["Modulevaluationen"] .  Wenn Sie beispielsweise Infrastructure Observability bereits abonniert haben, aber Kubernetes zu Ihrer Umgebung hinzufügen, beginnen Sie automatisch mit einer 30-tägigen Testversion von Kubernetes Observability.  Die Nutzung Ihrer verwalteten Kubernetes Observability-Einheit wird Ihnen erst am Ende des Evaluierungszeitraums in Rechnung gestellt.
 
 
 
+[[restrict-access-to-specified-domains]]
 === Beschränken Sie den Zugriff auf bestimmte Domänen
 
 Administratoren und Kontoinhaber haben nun die Möglichkeit,link:concept_user_roles.html#restricting-access-by-domain["Beschränken Sie den Zugriff auf Cloud Insights"] an die von ihnen angegebenen E-Mail-Domänen.  Gehen Sie zu *Admin > Benutzerverwaltung* und wählen Sie die Schaltfläche _Domänen einschränken_.
@@ -1055,6 +1177,7 @@ image:Restrict_Domains_Modal.png["Domänen einschränken – Modal"]
 
 
 
+[[data-collector-updates]]
 === Datensammler-Updates
 
 Die folgenden Änderungen an der Datenerfassungseinheit wurden vorgenommen:
@@ -1066,10 +1189,12 @@ Die folgenden Änderungen an der Datenerfassungseinheit wurden vorgenommen:
 '''
 
 
+[[september-2023]]
 == September 2023
 
 
 
+[[easily-find-what-you-want-in-the-logs]]
 === Finden Sie ganz einfach, was Sie in den Protokollen suchen
 
 Log Query (*Observability > Log Queries > +New Log Query*) beinhaltet eine Reihe vonlink:concept_log_explorer.html#advanced-filtering["Verbesserungen"] um die Protokollerkundung einfacher und informativer zu gestalten.
@@ -1102,6 +1227,7 @@ image:Log_Query_Group_By_Chart.png["Beispiel für „Log Query Group By“ mit g
 
 
 
+[[floating-log-detail-panel]]
 === „Floating“-Log-Detailbereich
 
 Wenn Sie Protokolle mithilfe der Protokollabfrage untersuchen, wird durch Auswahl eines Eintrags in der Liste ein Detailbereich für diesen Eintrag geöffnet.  Sie können nun wählen, ob das Slideout-Panel „schwebend“ (d. h. über dem Rest des Bildschirms angezeigt) oder „auf der Seite“ (d. h. als eigener Rahmen innerhalb der Seite angezeigt) angezeigt werden soll.  Um zwischen diesen Ansichten zu wechseln, wählen Sie die Schaltfläche „Auf der Seite/Schwebend“ in der oberen rechten Ecke des Bedienfelds.
@@ -1110,6 +1236,7 @@ image:Log_Query_Floating_Detail_Panel.png["Slideout-Panel „In-Page“ mit herv
 
 
 
+[[collapse-the-menu]]
 === Menü einklappen
 
 Sie können das Cloud Insights -Navigationsmenü auf der linken Seite reduzieren, indem Sie die Schaltfläche „Minimieren“ unter dem Menü auswählen.  Wenn das Menü minimiert ist, können Sie mit der Maus über ein Symbol fahren, um zu sehen, welcher Abschnitt geöffnet wird. Wenn Sie das Symbol auswählen, wird das Menü geöffnet und Sie gelangen direkt zu diesem Abschnitt.
@@ -1118,6 +1245,7 @@ image:CI_Menu_Minimize_Button.png["Menü minimieren"]
 
 
 
+[[data-collector-improvements]]
 === Verbesserungen beim Datensammler
 
 Cloud Insights hat das Anzeigen und Auffinden von Datensammlerinformationen vereinfacht:
@@ -1131,10 +1259,12 @@ Cloud Insights hat das Anzeigen und Auffinden von Datensammlerinformationen vere
 '''
 
 
+[[august-2023]]
 == August 2023
 
 
 
+[[collecting-isilonpowerscale-logs-and-advanced-analytics-data]]
 === Sammeln von Isilon/PowerScale-Protokollen und erweiterten Analysedaten
 
 Die Isilon REST- und PowerScale REST-Kollektoren enthalten die folgenden Verbesserungen:
@@ -1154,6 +1284,7 @@ Diese sind standardmäßig für Benutzer der Isilon REST- und/oder PowerScale RE
 
 
 
+[[improved-workload-map]]
 === Verbesserte Workload-Karte
 
 Die Workload-Karte ist benutzerfreundlicher und weniger verrauscht. Sie gruppiert alle ähnlichen externen Dienste in einem Knoten, wenn sie mit denselben Workloads kommunizieren. Dadurch wird die Komplexität des Diagramms reduziert und es wird leichter verständlich, wie die Dienste miteinander verbunden sind.
@@ -1162,6 +1293,7 @@ Wenn Sie einen gruppierten Knoten auswählen, wird eine detaillierte Tabelle mit
 
 
 
+[[kubernetes-managed-unit-usage-adjustment]]
 === Anpassung der Kubernetes Managed Unit-Nutzung
 
 Falls eine Rechenressource in Ihrer Kubernetes-Clusterumgebung sowohl vom NetApp Kubernetes Monitoring Operator als auch von einem zugrunde liegenden Infrastrukturdatensammler (z. B. VMware) gezählt wird, wird Ihre Nutzung dieser Ressourcen angepasst, um eine möglichst effiziente Zählung der verwalteten Einheiten zu gewährleisten.  Sie können die Kubernetes MU-Anpassungen auf der Seite „Admin > Abonnement“ sowohl auf der Registerkarte „Zusammenfassung“ als auch auf der Registerkarte „Nutzung“ anzeigen.
@@ -1172,6 +1304,7 @@ Registerkarte „Verwendung“:image:MU_Adjustments_K8s_Usage_Tab.png["k8s MU-An
 
 
 
+[[collectoracquisition-changes]]
 === Änderungen beim Sammler/Erwerb:
 
 Die folgenden Änderungen an der Datenerfassungseinheit wurden vorgenommen:
@@ -1181,6 +1314,7 @@ Die folgenden Änderungen an der Datenerfassungseinheit wurden vorgenommen:
 
 
 
+[[improved-menus]]
 === Verbesserte Menüs
 
 Wir haben das linke Navigationsmenü aktualisiert, um die Arbeitsabläufe unserer Kunden besser zu unterstützen.  Neue Elemente der obersten Ebene wie _Kubernetes_ bieten beschleunigten Zugriff auf die Anforderungen des Kunden und eine konsolidierte Administratorkonsole unterstützt die Rolle des Mandanteneigentümers.
@@ -1240,10 +1374,12 @@ Administrator:
 
 
 
+[[july-2023]]
 == Juli 2023
 
 
 
+[[show-recent-changes]]
 === Letzte Änderungen anzeigen
 
 Die Zielseiten des Datensammlers enthalten jetzt eine Liste der letzten Änderungen.  Klicken Sie einfach auf die Schaltfläche „Letzte Änderungen“ unten auf einer beliebigen Zielseite des Datensammlers, um die letzten Änderungen am Datensammler anzuzeigen.
@@ -1252,6 +1388,7 @@ image:Recent_Changes_Example.png["Beispiel für „Letzte Änderungen“"]
 
 
 
+[[operator-improvements]]
 === Verbesserungen für den Operator
 
 Die folgenden Verbesserungen wurden vorgenommen anlink:telegraf_agent_k8s_config_options.html["Kubernetes-Operator"] Einsatz:
@@ -1262,12 +1399,14 @@ Die folgenden Verbesserungen wurden vorgenommen anlink:telegraf_agent_k8s_config
 
 
 
+[[insight-reclaim-cold-storage]]
 === Einblick: Kühllager zurückgewinnen
 
 Reclaim ONTAP Cold-Storage Insight unterstützt jetzt FlexGroups und ist ab sofort für alle Kunden verfügbar.
 
 
 
+[[operator-image-signature]]
 === Bildsignatur des Bedieners
 
 Kunden, die ein privates Repository für ihren NetApp Kubernetes Monitoring Operator verwenden, können jetzt während der Operator-Installation den öffentlichen Schlüssel der Image-Signatur kopieren und so die Authentizität der heruntergeladenen Software bestätigen.  Wählen Sie im optionalen Schritt „Operatorbild in Ihr privates Repository hochladen“ die Schaltfläche „Öffentlichen Schlüssel der Bildsignatur kopieren“ aus.
@@ -1276,6 +1415,7 @@ image:Operator_Public_Image_Key.png["Laden Sie den öffentlichen Schlüssel heru
 
 
 
+[[aggregation-conditional-formatting-and-more-for-queries]]
 === Aggregation, bedingte Formatierung und mehr für Abfragen
 
 Aggregation, Einheitenauswahl, bedingte Formatierung und Spaltenumbenennung gehören zu den nützlichsten Funktionen eines Dashboard-Tabellen-Widgets, und jetzt sind dieselben Funktionen verfügbar fürlink:task_create_query.html["Abfragen"] .
@@ -1286,6 +1426,7 @@ Diese Funktionen sind jetzt für Daten vom Integrationstyp (Kubernetes, ONTAP Ad
 
 
 
+[[api-for-audit]]
 === API für Audit
 
 Sie können jetzt eine API verwenden, um überwachte Ereignisse abzufragen oder zu exportieren.  Gehen Sie zu Admin > API-Zugriff und wählen Sie den Link _API-Dokumentation_ aus, um weitere Informationen zu erhalten.
@@ -1294,6 +1435,7 @@ image:Audit_API_Swagger.png["API Swagger für Audit, Breite=400"]
 
 
 
+[[data-collector-trident-economy]]
 === Datensammler: Trident Economy
 
 Cloud Insights unterstützt jetzt den Trident Economy Driver und bietet folgende Vorteile:
@@ -1306,10 +1448,12 @@ Cloud Insights unterstützt jetzt den Trident Economy Driver und bietet folgende
 '''
 
 
+[[june-2023]]
 == Juni 2023
 
 
 
+[[check-out-your-usage]]
 === Überprüfen Sie Ihre Nutzung
 
 Ab Juni 2023 bietet Cloud Insights eine Aufschlüsselung der Nutzung verwalteter Einheiten basierend auf dem Funktionsumfang.  Jetzt können Sie die Nutzung verwalteter Einheiten (MU) für Ihre Infrastruktur sowie die an Kubernetes gebundene MU-Nutzung schnell anzeigen und überwachen.
@@ -1318,12 +1462,14 @@ image:Metering_Usage.png["Aufschlüsselung der Messnutzung"]
 
 
 
+[[kubernetes-network-monitoring-and-map-is-available-for-all]]
 === Kubernetes Network Monitoring und Map ist für alle verfügbar
 
 Derlink:concept_kubernetes_network_monitoring_and_map.html["_Kubernetes-Netzwerkleistung und -Karte_"] Vereinfacht die Fehlerbehebung durch die Abbildung von Abhängigkeiten zwischen Kubernetes-Workloads und bietet Echtzeit-Einblicke in die Leistungslatenzen und -anomalien des Kubernetes-Netzwerks, um Leistungsprobleme zu erkennen, bevor sie sich auf die Benutzer auswirken.  Viele Kunden fanden es während der Vorschau hilfreich und jetzt steht es allen zur Verfügung.
 
 
 
+[[collectoracquisition-changes]]
 === Änderungen beim Sammler/Erwerb:
 
 Die folgenden Änderungen an der Datenerfassungseinheit wurden vorgenommen:
@@ -1334,6 +1480,7 @@ Die folgenden Änderungen an der Datenerfassungseinheit wurden vorgenommen:
 
 
 
+[[new-ontap-essentials-dashboards]]
 === Neue ONTAP Essentials Dashboards
 
 Die folgenden ONTAP Essentials-Dashboards waren in Vorschauumgebungen verfügbar und sind jetzt für alle verfügbar:
@@ -1344,6 +1491,7 @@ Die folgenden ONTAP Essentials-Dashboards waren in Vorschauumgebungen verfügbar
 
 
 
+[[additional-system-monitors]]
 === Zusätzliche Systemmonitore
 
 Die folgenden Systemmonitore sind in Cloud Insights enthalten:
@@ -1355,10 +1503,12 @@ Die folgenden Systemmonitore sind in Cloud Insights enthalten:
 '''
 
 
+[[may-2023]]
 == Mai 2023
 
 
 
+[[improved-kubernetes-monitoring-operator-installation]]
 === Verbesserte Installation des Kubernetes-Überwachungsoperators
 
 Installation und Konfiguration deslink:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"] ist mit den folgenden Verbesserungen einfacher als je zuvor:
@@ -1372,6 +1522,7 @@ Installation und Konfiguration deslink:task_config_telegraf_agent_k8s.html["NetA
 
 
 
+[[storage-virtualization]]
 === Speichervirtualisierung
 
 Cloud Insights kann zwischen einem Speicherarray mit lokalem Speicher oder der Virtualisierung anderer Speicherarrays unterscheiden.  Dadurch haben Sie die Möglichkeit, Kosten in Beziehung zu setzen und die Leistung vom Front-End bis zum Back-End Ihrer Infrastruktur zu unterscheiden.
@@ -1380,6 +1531,7 @@ image:StorageVirtualization_StorageSummary.png["Speicher-Landingpage mit Informa
 
 
 
+[[new-webhook-parameters]]
 === Neue Webhook-Parameter
 
 Beim Erstellen einerlink:task_create_webhook.html["Webhook"] Benachrichtigung: Sie können jetzt diese Parameter in Ihre Webhook-Definition aufnehmen:
@@ -1390,12 +1542,14 @@ Beim Erstellen einerlink:task_create_webhook.html["Webhook"] Benachrichtigung: S
 
 
 
+[[reporting-on-kubernetes-data]]
 === Berichterstellung zu Kubernetes-Daten
 
 Von Cloud Insights erfasste Kubernetes-Daten – einschließlich Persistent Volumes (PV), PVC, Workloads, Cluster und Namespaces – stehen jetzt für die Berichterstellung zur Verfügung und ermöglichen Chargeback, Trendanalyse, Prognosen, TTF-Berechnungen und andere Geschäftsberichte zu Metriken für Kubernetes.
 
 
 
+[[default-ontap-system-monitors-enabled-for-new-customers]]
 === Standardmäßige ONTAP -Systemmonitore für Neukunden aktiviert
 
 Viele ONTAP -Systemmonitore sind in neuen Cloud Insights Umgebungen standardmäßig aktiviert (d. h. _Fortgesetzt_).  Zuvor befanden sich die meisten Monitore standardmäßig im Zustand „Angehalten“.  Da die Geschäftsanforderungen von Unternehmen zu Unternehmen unterschiedlich sind, empfehlen wir immer einen Blick auf dielink:task_system_monitors.html["Systemmonitore"] in Ihrer Umgebung und pausieren oder setzen Sie jeden Vorgang basierend auf Ihren Alarmierungsanforderungen fort.
@@ -1403,10 +1557,12 @@ Viele ONTAP -Systemmonitore sind in neuen Cloud Insights Umgebungen standardmä�
 '''
 
 
+[[april-2023]]
 == April 2023
 
 
 
+[[kubernetes-performance-monitoring-and-map]]
 === Kubernetes-Leistungsüberwachung und -Karte
 
 Derlink:concept_kubernetes_network_monitoring_and_map.html["_Kubernetes-Netzwerkleistung und -Karte_"] Die Funktion vereinfacht die Fehlerbehebung durch die Zuordnung von Abhängigkeiten zwischen Kubernetes-Workloads.  Es bietet Echtzeit-Einblicke in die Leistungslatenzen und -anomalien des Kubernetes-Netzwerks, um Leistungsprobleme zu erkennen, bevor sie sich auf die Benutzer auswirken.  Diese Funktion hilft Unternehmen, die Gesamtkosten durch die Analyse und Prüfung von Kubernetes-Verkehrsflüssen zu senken.
@@ -1421,6 +1577,7 @@ Kubernetes Performance Monitoring und Map ist verfügbar alslink:concept_preview
 
 
 
+[[ontap-essentials-security-dashboard]]
 === ONTAP Essentials Sicherheits-Dashboard
 
 Derlink:concept_ontap_essentials.html#security["Sicherheits-Dashboard"] bietet Ihnen einen sofortigen Überblick über Ihre aktuelle Sicherheitslage und zeigt Diagramme zur Hardware- und Software-Volume-Verschlüsselung, zum Anti-Ransomware-Status und zu Cluster-Authentifizierungsmethoden.  Das Security Dashboard ist verfügbar alslink:concept_preview_features.html["Vorschau"] Besonderheit.
@@ -1429,6 +1586,7 @@ image:OE_SecurityDashboard.png["ONTAP Essentials Sicherheits-Dashboard"]
 
 
 
+[[reclaim-ontap-cold-storage]]
 === ONTAP Cold Storage zurückgewinnen
 
 Der _Reclaim ONTAP Cold Storage_ Insight bietet Daten zur Kaltkapazität, zu potenziellen Kosten-/Stromeinsparungen und empfohlenen Aktionselementen für Volumes auf ONTAP Systemen.
@@ -1446,6 +1604,7 @@ _Reclaim ONTAP Cold Storage_ gilt alslink:concept_preview_features.html["_Vorsch
 
 
 
+[[subscription-notification-also-controls-banner-messages]]
 === Die Abonnementbenachrichtigung steuert auch Bannernachrichten
 
 Durch das Festlegen von Empfängern für Abonnementbenachrichtigungen (Admin > Benachrichtigungen) wird jetzt auch gesteuert, wer abonnementbezogene Bannerbenachrichtigungen im Produkt sieht.
@@ -1454,6 +1613,7 @@ image:Subscription_Expiring_Banner.png["Bannerbeispiel „Abonnement läuft in 2
 
 
 
+[[reporting-has-a-new-look]]
 === Reporting im neuen Look
 
 Sie werden feststellen, dass die Bildschirme der Cloud Insights Berichterstellung ein neues Aussehen haben und dass sich einige Teile der Menünavigation geändert haben.  Diese Bildschirme und Navigationsänderungen wurden in der aktuellenlink:reporting_overview.html["Berichtsdokumentation"] .
@@ -1462,12 +1622,14 @@ image:Reporting_Menu.png["Neues Aussehen des Berichtsmenüs"]
 
 
 
+[[monitors-paused-by-default]]
 === Monitore standardmäßig angehalten
 
 Beachten Sie bei neuen Cloud Insights -Umgebungen, dasslink:task_system_monitors.html["systemdefinierte Monitore"] Senden Sie standardmäßig keine Warnbenachrichtigungen.  Sie müssen Benachrichtigungen für jeden Monitor aktivieren, der Sie benachrichtigen möchte, indem Sie eine oder mehrere Übermittlungsmethoden für den Monitor hinzufügen.  Für vorhandene Cloud Insights -Umgebungen wurde die standardmäßige _globale_ Benachrichtigungsempfängerliste für alle systemdefinierten Monitore entfernt, die sich derzeit im Status _Angehalten_ befinden.  Benutzerdefinierte Benachrichtigungen bleiben unverändert, ebenso wie die Benachrichtigungseinstellungen für derzeit aktive systemdefinierte Monitore.
 
 
 
+[[looking-for-the-api-metering-tab]]
 === Suchen Sie nach der Registerkarte „API-Messung“?
 
 Die API-Messung wurde von der Abonnementseite auf die Seite *Admin > API-Zugriff* verschoben.
@@ -1475,10 +1637,12 @@ Die API-Messung wurde von der Abonnementseite auf die Seite *Admin > API-Zugriff
 '''
 
 
+[[march-2023]]
 == März 2023
 
 
 
+[[cloud-connection-for-ontap-9-9-deprecated]]
 === Cloud Connection für ONTAP 9.9+ veraltet
 
 Der Datensammler Cloud Connection für ONTAP 9.9+ wird nicht mehr unterstützt.  Ab dem 4. April 2023 erfassen Cloud Connection-Datensammler in Ihrer Umgebung keine Daten mehr und zeigen stattdessen beim Polling einen Fehler an.  Der Cloud Connection-Datensammler wird in einem nachfolgenden Update vollständig aus Cloud Insights entfernt.
@@ -1488,10 +1652,12 @@ Vor dem 4. April 2023 muss für alle ONTAP -Systeme, die derzeit von Cloud Conne
 '''
 
 
+[[january-2023]]
 == Januar 2023
 
 
 
+[[new-log-monitors]]
 === Neue Protokollmonitore
 
 Wir haben fast zwei Dutzend hinzugefügtlink:task_system_monitors.html["zusätzliche Systemmonitore"] um vor unterbrochenen Verbindungsverbindungen, Heartbeat-Problemen und mehr zu warnen.  Darüber hinaus wurden drei neue Protokollmonitore für den Datenschutz hinzugefügt, um auf Änderungen bei SnapMirror Auto Resync, MetroCluster Mirroring und FabricPool Mirror Resync hinzuweisen.
@@ -1500,6 +1666,7 @@ Beachten Sie, dass einige dieser Monitore standardmäßig _aktiviert_ sind. Sie 
 
 
 
+[[csv-export-for-all-dashboard-table-widgets]]
 === .CSV-Export für alle Dashboard-Tabellen-Widgets
 
 Die Gewährleistung des Zugriffs auf Ihre Daten ist von entscheidender Bedeutung. Deshalb haben wir den CSV-Export für alle Metrikabfragen, Dashboard-Tabellen-Widgets und Objekt-Landingpages verfügbar gemacht, unabhängig von der Art der Daten (Asset oder Integration), die Sie abfragen.
@@ -1509,16 +1676,19 @@ Datenanpassungen wie Spaltenauswahl, Umbenennen von Spalten und Einheitenumrechn
 '''
 
 
+[[december-2022]]
 == Dezember 2022
 
 
 
+[[explore-ransomware-protection-and-other-security-features-during-cloud-insights-trial]]
 === Entdecken Sie Ransomware-Schutz und andere Sicherheitsfunktionen während der Cloud Insights -Testversion
 
 Wenn Sie sich ab heute für eine neue Testversion von Cloud Insights anmelden, können Sie Sicherheitsfunktionen wie Ransomware-Erkennung und eine automatische Reaktionsrichtlinie zur Benutzerblockierung erkunden.  Wenn Sie sich noch nicht für Ihre Testversion angemeldet haben, tun Sie es noch heute!
 
 
 
+[[kubernetes-workloads-have-their-own-landing-page]]
 === Kubernetes Workloads haben eine eigene Landingpage
 
 Workloads sind ein wichtiger Teil Ihrer Kubernetes-Umgebung, daher bietet Cloud Insights jetzt Zielseiten für diese Workloads.  Von hier aus können Sie Probleme anzeigen, untersuchen und beheben, die Ihre Kubernetes-Workloads betreffen.
@@ -1527,6 +1697,7 @@ image:Kubernetes_Workload_LP.png["Beispiel für eine Kubernetes-Workload-Landing
 
 
 
+[[check-your-checksums]]
 === Überprüfen Sie Ihre Prüfsummen
 
 Sie haben uns gebeten, Ihnen während der Installation des Agenten für Windows und Linux Prüfsummenwerte bereitzustellen, und wir halten das für eine großartige Idee.  Hier sind sie:
@@ -1535,6 +1706,7 @@ image:Agent_Checksum_Instructions.png["Während der Installation angezeigte Agen
 
 
 
+[[log-alerting-improvements]]
 === Verbesserungen bei der Protokollwarnung
 
 
@@ -1557,6 +1729,7 @@ image:Log_Monitor_Duplicate.png["Duplizieren eines Protokollmonitors"]
 
 
 
+[[11-new-default-ontap-monitors-covering-snapmirror-for-business-continuity]]
 === 11 neue Standard ONTAP -Monitore für SnapMirror zur Gewährleistung der Geschäftskontinuität
 
 Wir haben fast ein Dutzend neuelink:task_system_monitors.html#snapmirror-for-business-continuity-smbc-mediator-log-monitors["Systemmonitore"] für SnapMirror for Business Continuity (SMBC), das bei Änderungen an SMBC-Zertifikaten und ONTAP Mediatoren warnt.
@@ -1564,10 +1737,12 @@ Wir haben fast ein Dutzend neuelink:task_system_monitors.html#snapmirror-for-bus
 '''
 
 
+[[november-2022]]
 == November 2022
 
 
 
+[[more-than-40-new-security-data-collection-and-cvo-monitors]]
 === Mehr als 40 neue Sicherheits-, Datenerfassungs- und CVO-Monitore!
 
 Wir haben Dutzende neuer systemdefinierter Monitore hinzugefügt, um Sie auf potenzielle Probleme mit Cloud Volumes, Sicherheit und Datenschutz aufmerksam zu machen.  Lesen Sie mehr über diese Monitorelink:task_system_monitors.html#security-monitors["hier,"] .
@@ -1575,10 +1750,12 @@ Wir haben Dutzende neuer systemdefinierter Monitore hinzugefügt, um Sie auf pot
 '''
 
 
+[[october-2022]]
 == Oktober 2022
 
 
 
+[[better-and-more-accurate-ransomware-detection-with-ontap-autonomous-ransomware-protection-integration]]
 === Bessere und genauere Ransomware-Erkennung mit der ONTAP Autonomous Ransomware Protection-Integration
 
 Cloud Secure verbessert Ransomware-Erkennung durch Integration mit ONTAPlink:concept_cs_integration_with_ontap_arp.html["Autonomer Ransomware-Schutz"] (ARP).
@@ -1593,22 +1770,26 @@ Cloud Secure empfängt ONTAP ARP-Ereignisse bei potenzieller Volume-Dateiverschl
 '''
 
 
+[[september-2022]]
 == September 2022
 
 
 
+[[monitors-available-in-basic-edition]]
 === Monitore in der Basic Edition verfügbar
 
 ONTAPlink:task_system_monitors.html["Standardmonitore"] jetzt zur Verwendung in der Cloud Insights Basic Edition verfügbar.  Dazu gehören mehr als 70 Infrastrukturmonitore und 30 Workload-Beispiele.
 
 
 
+[[ontap-power-and-storagegrid-dashboards]]
 === ONTAP Power- und StorageGRID Dashboards
 
 Die Dashboard-Galerie enthält ein neues Dashboard für ONTAP Power und Temperature sowie vier Dashboards für StorageGRID.  Wenn Ihre Umgebung ONTAP Leistungsmetriken und/oder StorageGRID Daten sammelt, importieren Sie diese Dashboards, indem Sie *+Aus Galerie* auswählen.
 
 
 
+[[at-a-glance-threshold-visibility-in-tables]]
 === Schwellenwertsichtbarkeit in Tabellen auf einen Blick
 
 Mit der bedingten Formatierung können Sie Schwellenwerte für Warn- und kritische Werte in Tabellen-Widgets festlegen und hervorheben, sodass Ausreißer und außergewöhnliche Datenpunkte sofort sichtbar werden.
@@ -1617,12 +1798,14 @@ image:ConditionalFormattingExample.png["Beispiel für bedingte Formatierung"]
 
 
 
+[[security-monitor]]
 === Sicherheitsmonitor
 
 Cloud Insights kann Sie benachrichtigen, wenn es erkennt, dass der FIPS-Modus auf dem ONTAP -System deaktiviert ist.  Lesen Sie mehr überlink:task_system_monitors.html#security-monitors["Systemmonitore"] , und schauen Sie hier nach weiteren Sicherheitsmonitoren, die bald verfügbar sind!
 
 
 
+[[chat-from-anywhere]]
 === Chatten Sie von überall
 
 Chatten Sie von jedem Cloud Insights -Bildschirm aus mit einem NetApp -Support-Spezialisten, indem Sie den neuen Link *Hilfe > Live-Chat* auswählen.  Hilfe erhalten Sie über das Symbol „?“ oben rechts auf dem Bildschirm.
@@ -1631,6 +1814,7 @@ image:Help_LiveChat.png["Hilfemenü mit hervorgehobenem Live-Chat"]
 
 
 
+[[new-data-collectors]]
 === Neue Datensammler
 
 * Amazon S3 (in der Vorschau verfügbar)
@@ -1640,12 +1824,14 @@ image:Help_LiveChat.png["Hilfemenü mit hervorgehobenem Live-Chat"]
 
 
 
+[[other-data-collector-updates]]
 === Weitere Updates des Datensammlers
 
 Alle Datenquellen sind jetzt optimiert, um die Leistungsabfrage nach Updates und/oder Patches der Erfassungseinheit wieder aufzunehmen.
 
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Die folgenden Betriebssysteme werden mit Cloud Insights Acquisition Units unterstützt, zusätzlich zu denenlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["bereits unterstützt"] :
@@ -1656,10 +1842,12 @@ Die folgenden Betriebssysteme werden mit Cloud Insights Acquisition Units unters
 '''
 
 
+[[august-2022]]
 == August 2022
 
 
 
+[[cloud-insights-has-a-new-look]]
 === Cloud Insights hat ein neues Aussehen!
 
 Ab diesem Monat wurde „Überwachen und Optimieren“ in *Beobachtbarkeit* umbenannt.  Hier finden Sie alle Ihre Lieblingsfunktionen wie Dashboards, Abfragen, Warnungen und Berichte.  Suchen Sie außerdem im neuen Menü *Sicherheit* nach Cloud Secure .  Beachten Sie, dass sich nur die Menüs geändert haben; die Funktionalität der Funktionen bleibt gleich.
@@ -1675,6 +1863,7 @@ image:New_Help_Menu_2022.png["Das Hilfemenü befindet sich in der oberen rechten
 
 
 
+[[not-sure-where-to-start-check-out-ontap-essentials]]
 === Sie wissen nicht, wo Sie anfangen sollen?  Schauen Sie sich ONTAP Essentials an!
 
 link:concept_ontap_essentials.html["* ONTAP Essentials*"]ist eine Reihe von Dashboards und Workflows, die detaillierte Einblicke in Ihre NetApp ONTAP -Bestände, Workloads und Datensicherung bieten, einschließlich Vorhersagen zur Speicherkapazität und Leistung in Tagen bis zur vollständigen Auslastung.  Sie können sogar sehen, ob Controller mit hoher Auslastung laufen.  ONTAP Essentials ist der ideale Ort für alle Ihre NetApp ONTAP Überwachungsanforderungen!
@@ -1685,6 +1874,7 @@ image:ONTAP_Essentials_Menu_and_screen.png["Übersichts-Dashboard für ONTAP Ess
 
 
 
+[[storage-data-families-are-merged]]
 === Speicherdatenfamilien werden zusammengeführt
 
 Sie haben danach gefragt und jetzt haben Sie es.  Speicherdateneinheiten zur Basis 2 und Basis 10 werden jetzt in einer Familie zusammengefasst, von Bits und Bytes bis hin zu Tebibits und Terabytes, wodurch die Anzeige von Daten auf Ihren Dashboards einfacher wird.  Auch die Datenraten sind mittlerweile eine eigene große Familie.
@@ -1693,6 +1883,7 @@ image:DataFamilyMerged.png["Dropdown-Menü mit der Zusammenführung von Datenfam
 
 
 
+[[how-much-power-is-my-storage-using]]
 === Wie viel Strom verbraucht mein Speicher?
 
 Zeigen Sie den Stromverbrauch, die Temperatur und die Lüftergeschwindigkeit Ihres ONTAP Speicherregals und -Knotens an und überwachen Sie ihn mithilfe der Metriken netapp_ontap.storage_shelf, netapp_ontap.system_node und netapp_ontap.cluster (nur Stromverbrauch).
@@ -1701,6 +1892,7 @@ image:ONTAP_Power_Metrics_1.png["Kennzahlen zum Speicherstromverbrauch"]
 
 
 
+[[features-graduated-from-preview]]
 === Aus der Vorschau entfernte Funktionen
 
 Die folgenden Funktionen wurden aus der Vorschau entfernt und stehen jetzt allen Kunden zur Verfügung:
@@ -1721,6 +1913,7 @@ Die folgenden Funktionen wurden aus der Vorschau entfernt und stehen jetzt allen
 |===
 
 
+[[hows-my-data-collection-health]]
 === Wie steht es um die Gesundheit meiner Datenerfassung?
 
 Cloud Insights bietet zwei neue Heartbeat-Monitore für Ihre Erfassungseinheiten sowie zwei Monitore, die Sie auf Fehler beim Datensammler aufmerksam machen.  Diese können verwendet werden, um Sie schnell auf Probleme bei der Datenerfassung aufmerksam zu machen.
@@ -1737,24 +1930,28 @@ Beachten Sie, dass sich diese Monitore standardmäßig im Status _Pausiert_ befi
 
 
 
+[[auto-renewing-api-tokens]]
 === Automatisch erneuernde API-Token
 
 API-Zugriffstoken können jetzt für die automatische Verlängerung eingestellt werden.  Durch Aktivieren dieser Funktion werden für ablaufende Token automatisch neue/aktualisierte API-Zugriffstoken generiert.  Cloud Insights Agenten, die ein ablaufendes Token verwenden, werden automatisch aktualisiert, um das entsprechende neue/aktualisierte API-Zugriffstoken zu verwenden, sodass sie weiterhin nahtlos funktionieren können.  Aktivieren Sie beim Erstellen Ihres Tokens einfach das Kontrollkästchen „Token automatisch erneuern“.  Diese Funktion wird derzeit auf Cloud Insights -Agenten unterstützt, die auf der Kubernetes-Plattform mit dem neuesten NetApp Kubernetes Monitoring Operator ausgeführt werden.
 
 
 
+[[basic-edition-gives-you-more-than-before]]
 === Die Basic Edition bietet Ihnen mehr als je zuvor
 
 Ihre Testphase läuft ab, aber Sie sind sich noch nicht sicher, ob ein Abonnement das Richtige für Sie ist?  Mit der Basic Edition hatten Sie schon immer die Möglichkeit, Cloud Insights weiterhin mit Ihrem aktuellen ONTAP Datensammler zu verwenden. Jetzt können Sie jedoch auch weiterhin VMWare-Versions-, Topologie- und IOPS-/Durchsatz-/Latenzdaten erfassen.  NetApp -Kunden mit Premium-Support für ihre Speichersysteme haben auch Anspruch auf Support für Cloud Insights.
 
 
 
+[[ready-to-learn-more]]
 === Möchten Sie mehr erfahren?
 
 Im Abschnitt *Learning Center* auf der Seite „Hilfe > Support“ finden Sie Links zu den Kursangeboten von NetApp University Cloud Insights !
 
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Das folgende Betriebssystem wird mit Cloud Insights Acquisition Units unterstützt, zusätzlich zu denenlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["bereits unterstützt"] :
@@ -1765,10 +1962,12 @@ Das folgende Betriebssystem wird mit Cloud Insights Acquisition Units unterstüt
 '''
 
 
+[[june-2022]]
 == Juni 2022
 
 
 
+[[kubernetes-cluster-saturation-and-other-details]]
 === Kubernetes-Clustersättigung und andere Details
 
 Mit Cloud Insights können Sie Ihre Kubernetes-Umgebung einfacher denn je erkunden. Die verbesserte Cluster-Detailseite bietet Sättigungsdetails sowie eine übersichtlichere Ansicht von Namespaces und Workloads.
@@ -1781,6 +1980,7 @@ image:Kubernetes_List_Page_new.png["Clusterlistenseite mit Sättigungszahlen"]
 
 
 
+[[how-old-is-your-kubernetes-cluster]]
 === Wie alt ist Ihr Kubernetes-Cluster?
 
 Steht Ihr Cluster noch ganz am Anfang seiner Entwicklung oder hat er bereits ein langes digitales Leben hinter sich?  _Alter_ wurde als für Kubernetes-Knoten erfasste Zeitmetrik hinzugefügt.
@@ -1789,6 +1989,7 @@ image:Kubernetes_Table_Showing_Age.png["Kubernetes-Knotentabelle mit Alter in Ta
 
 
 
+[[capacity-time-to-full-forecasting]]
 === Kapazitätsprognose bis zur vollständigen Auslastung
 
 Cloud Insights bietet ein Dashboard zur Prognose der Anzahl der Tage bis zur Kapazitätserschöpfung für jedes überwachte interne Volume.  Diese Werte können dazu beitragen, das Ausfallrisiko deutlich zu reduzieren.
@@ -1801,6 +2002,7 @@ Beachten Sie, dass die Time-to-Full-Prognose aus der _Vorschau_-Phase herausgeno
 
 
 
+[[whats-changed-in-my-environment]]
 === Was hat sich in meiner Umgebung geändert?
 
 ONTAP Änderungsprotokolleinträge können im Protokoll-Explorer angezeigt werden.
@@ -1809,6 +2011,7 @@ image:ChangeLogEntries.png["Bild mit Beispielen für Änderungsprotokolleinträg
 
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Die folgenden Betriebssysteme werden mit Cloud Insights Acquisition Units unterstützt, zusätzlich zu denenlink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["bereits unterstützt"] :
@@ -1819,12 +2022,14 @@ Die folgenden Betriebssysteme werden mit Cloud Insights Acquisition Units unters
 
 
 
+[[updated-telegraf-agent]]
 === Aktualisierter Telegraf-Agent
 
 Der Agent für die Aufnahme von Telegraf-Integrationsdaten wurde auf Version *1.22.3* aktualisiert und bietet Leistungs- und Sicherheitsverbesserungen.  Benutzer, die ein Update durchführen möchten, können sich auf den entsprechenden Upgrade-Abschnitt derlink:task_config_telegraf_agent.html["Agent-Installation"] Dokumentation.  Frühere Versionen des Agenten funktionieren weiterhin, ohne dass ein Eingreifen des Benutzers erforderlich ist.
 
 
 
+[[preview-features]]
 === Vorschaufunktionen
 
 Cloud Insights stellt regelmäßig eine Reihe spannender neuer Funktionen in der Vorschau vor. Bei Interesse an einer oder mehreren dieser Funktionen kann das NetApp Sales Team für weitere Informationen kontaktiert werden.
@@ -1846,10 +2051,12 @@ Cloud Insights stellt regelmäßig eine Reihe spannender neuer Funktionen in der
 '''
 
 
+[[may-2022]]
 == Mai 2022
 
 
 
+[[chat-live-with-netapp-support]]
 === Chatten Sie live mit dem NetApp Support
 
 Sie können jetzt live mit dem Support-Personal von NetApp chatten!  Klicken Sie auf der Seite „Hilfe“ > „Support“ einfach auf das Chat-Symbol oder im Abschnitt „Kontakt“ auf „Chat“, um eine Chat-Sitzung zu starten.  Für Benutzer der Standard- und Premium-Edition ist Chat-Support an US-Wochentagen verfügbar.
@@ -1858,6 +2065,7 @@ image:ChatIcon.png["Chat-Symbol mit dem blauen NetApp „N“ über einem Läche
 
 
 
+[[kubernetes-operator]]
 === Kubernetes-Operator
 
 Wir haben Ihnen den Einstieg mit der erweiterten Kubernetes-Überwachung und dem Cluster-Explorer von Cloud Insights erleichtert.
@@ -1868,12 +2076,14 @@ Klicken Sie auf den Link oben, um weitere Informationen und Voraussetzungen zu e
 
 
 
+[[manage-users-and-invites-with-api]]
 === Verwalten Sie Benutzer und Einladungen mit der API
 
 Sie können jetzt Benutzer und Einladungen mithilfe der leistungsstarken API von Cloud Insights verwalten.  Lesen Sie mehr imlink:https://docs.netapp.com/us-en/cloudinsights/API_Overview.html["API Swagger-Dokumentation"] .
 
 
 
+[[data-collection-alerts]]
 === Datenerfassungswarnungen
 
 Verpassen Sie keine wichtigen Messdaten aufgrund eines ausgefallenen Collectors!
@@ -1882,6 +2092,7 @@ Es ist einfacher denn je, den Überblick über Ihre Datensammler zu behalten mit
 
 
 
+[[alert-on-ontap-storage-changes]]
 === Warnmeldung zu Änderungen am ONTAP -Speicher
 
 Lassen Sie nicht zu, dass unerwartete Speicheränderungen zu Ausfällen führen!
@@ -1890,6 +2101,7 @@ Sie können Cloud Insights jetzt so konfigurieren, dass eine Warnung ausgegeben 
 
 
 
+[[preview-features]]
 === Vorschaufunktionen
 
 Cloud Insights stellt regelmäßig eine Reihe spannender neuer Funktionen in der Vorschau vor. Bei Interesse an einer oder mehreren dieser Funktionen kann das NetApp Sales Team für weitere Informationen kontaktiert werden.
@@ -1914,16 +2126,19 @@ Cloud Insights stellt regelmäßig eine Reihe spannender neuer Funktionen in der
 '''
 
 
+[[april-2022]]
 == April 2022
 
 
 
+[[share-your-feedback]]
 === Teile dein Feedback!
 
 Wir möchten, dass Ihr Input dazu beiträgt, Cloud Insights zu gestalten.  Sammeln Sie Punkte und Preise, indem Sie am *Insights to Action*-Programm von NetApp teilnehmen. link:https://netapp.co1.qualtrics.com/jfe/form/SV_2aVWcE58J7oIDs1["*Jetzt anmelden*"] !
 
 
 
+[[updated-dashboard-editor]]
 === Aktualisierter Dashboard-Editor
 
 Wir haben unsere Tools zur Dashboard-Erstellung überarbeitet, damit Sie Ihre Daten noch schneller visualisieren können.  Navigieren Sie zur Seite „Dashboards“ von Cloud Insights, um ein vorhandenes Dashboard zu bearbeiten, eines aus unserer Dashboard-Galerie hinzuzufügen oder ein eigenes neues Dashboard zu erstellen, um es auszuprobieren.
@@ -1943,12 +2158,14 @@ Darüber hinaus können Sie bei Liniendiagrammen jetzt eine von drei Optionen au
 
 
 
+[[enhanced-monitoring-for-your-kubernetes-infrastructure]]
 === Verbesserte Überwachung Ihrer Kubernetes-Infrastruktur
 
 Cloud Insights hält Sie über Änderungen in Ihrer Kubernetes-Umgebung auf dem Laufenden, indem es Sie benachrichtigt, wenn Pods, Daemonsets und Replikatsets erstellt oder entfernt werden, sowie wenn neue Bereitstellungen erstellt werden.  Kubernetes-Monitore befinden sich standardmäßig im Zustand „angehalten“, Sie sollten daher nur die Monitore aktivieren, die Sie benötigen.
 
 
 
+[[preview-features]]
 === Vorschaufunktionen
 
 Cloud Insights stellt regelmäßig eine Reihe spannender neuer Funktionen in der Vorschau vor. Bei Interesse an einer oder mehreren dieser Funktionen kann das NetApp Sales Team für weitere Informationen kontaktiert werden.
@@ -1969,6 +2186,7 @@ Cloud Insights stellt regelmäßig eine Reihe spannender neuer Funktionen in der
 |===
 
 
+[[new-data-collector]]
 === Neuer Datensammler
 
 * *Cohesity SmartFiles* – Dieser auf REST-API basierende Collector erwirbt einen Cohesity-Cluster, erkennt die „Ansichten“ (als interne CI-Volumes) und die verschiedenen Knoten und sammelt Leistungsmetriken.
@@ -1976,6 +2194,7 @@ Cloud Insights stellt regelmäßig eine Reihe spannender neuer Funktionen in der
 
 
 
+[[other-data-collector-updates]]
 === Weitere Updates des Datensammlers
 
 Die Erfassung und Anzeige von Leistungsdaten wurde bei den folgenden Datensammlern verbessert:
@@ -1990,16 +2209,19 @@ Diese Leistungsverbesserungen sind bereits in allen NetApp Datenkollektoren sowi
 '''
 
 
+[[march-2022]]
 == März 2022
 
 
 
+[[cloud-connection-for-ontap-9-9]]
 === Cloud-Verbindung für ONTAP 9.9+
 
 Derlink:task_dc_na_cloud_connection.html["NetApp Cloud Connection für ONTAP 9.9+"] Der Datensammler macht die Installation einer externen Erfassungseinheit überflüssig und vereinfacht so die Fehlerbehebung, Wartung und Erstbereitstellung.
 
 
 
+[[new-fsx-for-netapp-ontap-monitors]]
 === Neue FSx für NetApp ONTAP -Monitore
 
 Die Überwachung Ihrer FSx für NetApp ONTAP -Umgebung ist einfach mit neuenlink:task_system_monitors.html["systemdefinierte Monitore"] sowohl für die Infrastruktur (Metriken) als auch für die Arbeitslasten (Protokolle).
@@ -2008,6 +2230,7 @@ image:FSx_System_Monitors_Metrics.png["FSx-Monitore für die Infrastruktur"] ima
 
 
 
+[[new-cloud-secure-features-available-to-all]]
 === Neue Cloud Secure -Funktionen für alle verfügbar
 
 Ihre Umgebung ist mit den folgenden, jetzt allgemein verfügbaren Cloud Secure -Funktionen sicherer als je zuvor:
@@ -2025,12 +2248,14 @@ Ihre Umgebung ist mit den folgenden, jetzt allgemein verfügbaren Cloud Secure -
 |===
 
 
+[[updated-telegraf-agent]]
 === Aktualisierter Telegraf-Agent
 
 Der Agent für die Aufnahme von Telegraf-Integrationsdaten wurde auf Version *1.21.2* aktualisiert und bietet Leistungs- und Sicherheitsverbesserungen.  Benutzer, die ein Update durchführen möchten, können sich auf den entsprechenden Upgrade-Abschnitt derlink:task_config_telegraf_agent.html["Agent-Installation"] Dokumentation.  Frühere Versionen des Agenten funktionieren weiterhin, ohne dass ein Eingreifen des Benutzers erforderlich ist.
 
 
 
+[[data-collector-updates]]
 === Datensammler-Updates
 
 * Der Datensammler der Broadcom Fibre Channel Switches wurde optimiert, um die Anzahl der bei jeder Bestandsabfrage ausgegebenen CLI-Befehle zu reduzieren.
@@ -2039,10 +2264,12 @@ Der Agent für die Aufnahme von Telegraf-Integrationsdaten wurde auf Version *1.
 '''
 
 
+[[february-2022]]
 == Februar 2022
 
 
 
+[[cloud-insights-addresses-apache-log4j-vulnerabilities]]
 === Cloud Insights behebt Apache Log4j-Schwachstellen
 
 Die Sicherheit der Kunden hat bei NetApp höchste Priorität.  Cloud Insights enthält Updates für seine Softwarebibliotheken, um die jüngsten Apache Log4j-Sicherheitslücken zu beheben.
@@ -2055,6 +2282,7 @@ Weitere Informationen zu diesen Sicherheitslücken und zur Reaktion von NetApp f
 
 
 
+[[kubernetes-namespace-detail-page]]
 === Kubernetes-Namespace-Detailseite
 
 Das Erkunden Ihrer Kubernetes-Umgebung ist jetzt besser als je zuvor, mit informativen Detailseiten für die Namespaces Ihres Clusters.  Die Namespace-Detailseite bietet eine Zusammenfassung aller von einem Namespace verwendeten Assets, einschließlich aller Back-End-Speicherressourcen und ihrer Kapazitätsauslastung.
@@ -2064,16 +2292,19 @@ image:Kubernetes_Namespace_Detail_Example_2.png["Kubernetes-Namespace-Detailseit
 '''
 
 
+[[december-2021]]
 == Dezember 2021
 
 
 
+[[deeper-integration-for-ontap-systems]]
 === Tiefere Integration für ONTAP -Systeme
 
 Vereinfachen Sie die Warnmeldung bei ONTAP Hardwarefehlern und mehr durch die neue Integration mit dem NetApp Event Management System (EMS). link:task_system_monitors.html["Erkunden und alarmieren"] auf Low-Level ONTAP -Nachrichten in Cloud Insights, um Fehlerbehebungs-Workflows zu informieren und zu verbessern und die Abhängigkeit von ONTAP Elementverwaltungstools weiter zu reduzieren.
 
 
 
+[[querying-logs]]
 === Abfragen von Protokollen
 
 Für ONTAP -Systeme umfassen Cloud Insights Queries eine leistungsstarkelink:concept_log_explorer.html["Protokoll-Explorer"] , sodass Sie EMS-Protokolleinträge einfach untersuchen und Fehler beheben können.
@@ -2082,12 +2313,14 @@ image:LogQueryExplorer.png["Protokollabfragen"]
 
 
 
+[[data-collector-level-notifications]]
 === Benachrichtigungen auf Datensammlerebene.
 
 Zusätzlich zu den systemdefinierten und benutzerdefinierten Monitoren für Warnmeldungen können Sie auch Warnbenachrichtigungen für ONTAP Datenkollektoren festlegen. So können Sie Empfänger für Warnmeldungen auf Kollektorebene angeben, unabhängig von anderen Monitorwarnungen.
 
 
 
+[[greater-flexibility-of-cloud-secure-roles]]
 === Größere Flexibilität der Cloud Secure -Rollen
 
 Benutzern kann der Zugriff auf Cloud Secure -Funktionen gewährt werden, basierend auflink:concept_user_roles.html#permission-levels["Rollen"] von einem Administrator festgelegt:
@@ -2108,12 +2341,14 @@ Benutzern kann der Zugriff auf Cloud Secure -Funktionen gewährt werden, basiere
 |===
 
 
+[[operating-system-support]]
 === Betriebssystemunterstützung
 
 Die CentOS 8.x-Unterstützung wird durch die *CentOS 8 Stream*-Unterstützung ersetzt.  CentOS 8.x erreicht am 31. Dezember 2021 das End-of-Life.
 
 
 
+[[data-collector-updates]]
 === Datensammler-Updates
 
 Um Anbieteränderungen widerzuspiegeln, wurden eine Reihe von Cloud Insights Datensammlernamen hinzugefügt:
@@ -2135,10 +2370,12 @@ Um Anbieteränderungen widerzuspiegeln, wurden eine Reihe von Cloud Insights Dat
 '''
 
 
+[[november-2021]]
 == November 2021
 
 
 
+[[adaptive-dashboards]]
 === Adaptive Dashboards
 
 _Neue Variablen für Attribute und die Möglichkeit, Variablen in Widgets zu verwenden_.
@@ -2149,12 +2386,14 @@ image:Variables_Drop_Down_Showing_Annotations.png["Dropdown-Anmerkungen in einer
 
 
 
+[[access-the-reporting-database-via-api]]
 === Zugriff auf die Berichtsdatenbank über die API
 
 Erweiterte Funktionen für die Integration mit Reporting-, ITSM- und Automatisierungstools von Drittanbietern: Cloud Insights' leistungsstarkelink:API_Overview.html["API"] ermöglicht es Benutzern, die Cloud Insights Reporting-Datenbank direkt abzufragen, ohne die Cognos Reporting-Umgebung zu durchlaufen.
 
 
 
+[[pod-tables-on-vm-landing-page]]
 === Pod-Tabellen auf der VM-Landingpage
 
 Nahtlose Navigation zwischen VMs und den sie verwendenden Kubernetes-Pods: Zur verbesserten Fehlerbehebung und Verwaltung des Leistungsspielraums wird jetzt auf den VM-Landingpages eine Tabelle mit den zugehörigen Kubernetes-Pods angezeigt.
@@ -2163,6 +2402,7 @@ image:Kubernetes_Pod_Table_on_VM_Page.png["Kubernetes-Pod-Tabelle auf einer VM-L
 
 
 
+[[data-collector-updates]]
 === Datensammler-Updates
 
 * ECS meldet jetzt Firmware für Speicher und Knoten
@@ -2174,6 +2414,7 @@ image:Kubernetes_Pod_Table_on_VM_Page.png["Kubernetes-Pod-Tabelle auf einer VM-L
 
 
 
+[[additional-operating-systems-supported]]
 === Weitere unterstützte Betriebssysteme
 
 Die Cloud Insights Acquisition Unit unterstützt zusätzlich zu den bereits unterstützten Betriebssystemen die folgenden:
@@ -2186,10 +2427,12 @@ Die Cloud Insights Acquisition Unit unterstützt zusätzlich zu den bereits unte
 '''
 
 
+[[october-2021]]
 == Oktober 2021
 
 
 
+[[filters-on-k8s-explorer-pages]]
 === Filter auf K8S Explorer-Seiten
 
 link:kubernetes_landing_page.html["Kubernetes Explorer"]Seitenfilter geben Ihnen eine gezielte Kontrolle über die für Ihre Kubernetes-Cluster-, Knoten- und Pod-Erkundung angezeigten Daten.
@@ -2198,6 +2441,7 @@ image:Filter_Kubernetes_Explorer.png["Beispiel für die Filterung im Kubernetes 
 
 
 
+[[k8s-data-for-reporting]]
 === K8s-Daten für die Berichterstattung
 
 Kubernetes-Daten stehen jetzt für die Verwendung in der Berichterstattung zur Verfügung, sodass Sie Chargeback- oder andere Berichte erstellen können.  Damit Kubernetes-Chargeback-Daten an Reporting übergeben werden können, müssen Sie über eine aktive Verbindung zu Ihrem Kubernetes-Cluster und seinem Back-End-Speicher verfügen und Cloud Insights muss Daten von diesem empfangen.  Wenn keine Daten vom Back-End-Speicher empfangen werden, kann Cloud Insights keine Kubernetes-Objektdaten an Reporting senden.
@@ -2206,12 +2450,14 @@ image:Kubernetes_ETL_Example.png["Kubernetes-Daten werden in einem Chargeback-Be
 
 
 
+[[dark-theme-has-arrived]]
 === Das dunkle Design ist da
 
 Viele von Ihnen haben nach einem dunklen Design gefragt und Cloud Insights hat geantwortet.  Um zwischen hellem und dunklem Design zu wechseln, klicken Sie auf das Dropdown-Menü neben Ihrem Benutzernamen.image:DarkModeSwitch.png["Die Option „Zum dunklen Design wechseln“ ist im Dropdown-Menü „Benutzer“ verfügbar."] image:DarkModeDashboard.png["Ein Bild eines typischen Dashboards im dunklen Design"]
 
 
 
+[[data-collector-support]]
 === Datensammler-Unterstützung
 
 Wir haben einige Verbesserungen an den Cloud Insights Datensammlern vorgenommen.  Hier sind einige Highlights:
@@ -2222,16 +2468,19 @@ Wir haben einige Verbesserungen an den Cloud Insights Datensammlern vorgenommen.
 '''
 
 
+[[september-2021]]
 == September 2021
 
 
 
+[[performance-policies-are-now-monitors]]
 === Leistungsrichtlinien sind jetzt Monitore
 
 Monitore und Warnungen haben Leistungsrichtlinien und -verstöße in Cloud Insights ersetzt. link:task_create_monitor.html["Alarmierung mit Monitoren"] bietet mehr Flexibilität und Einblick in potenzielle Probleme oder Trends in Ihrer Umgebung.
 
 
 
+[[autocomplete-suggestions-wildcards-and-expressions-in-monitors]]
 === Autovervollständigungsvorschläge, Platzhalter und Ausdrücke in Monitoren
 
 Beim Erstellen eines Monitors für Warnmeldungen erfolgt die Eingabe eines Filters jetzt vorausschauend, sodass Sie die Metriken oder Attribute für Ihren Monitor einfach suchen und finden können.  Darüber hinaus haben Sie die Möglichkeit, basierend auf dem von Ihnen eingegebenen Text einen Platzhalterfilter zu erstellen.
@@ -2240,12 +2489,14 @@ image:Type-Ahead_Monitor_1.png["Type-Ahead-Filter in Monitoren"]
 
 
 
+[[updated-telegraf-agent]]
 === Aktualisierter Telegraf-Agent
 
 Der Agent für die Aufnahme von Telegraf-Integrationsdaten wurde auf Version *1.19.3* aktualisiert und bietet Leistungs- und Sicherheitsverbesserungen.  Benutzer, die ein Update durchführen möchten, können sich auf den entsprechenden Upgrade-Abschnitt derlink:task_config_telegraf_agent.html["Agent-Installation"] Dokumentation.  Frühere Versionen des Agenten funktionieren weiterhin, ohne dass ein Eingreifen des Benutzers erforderlich ist.
 
 
 
+[[data-collector-support]]
 === Datensammler-Unterstützung
 
 Wir haben einige Verbesserungen an den Cloud Insights Datensammlern vorgenommen.  Hier sind einige Highlights:
@@ -2271,16 +2522,19 @@ Und da wir die Datenerfassung ständig verbessern, sind hier einige weitere wich
 '''
 
 
+[[august-2021]]
 == August 2021
 
 
 
+[[new-audit-page-user-interface]]
 === Neue Benutzeroberfläche der Audit-Seite
 
 Derlink:concept_audit.html["Audit-Seite"] bietet eine übersichtlichere Benutzeroberfläche und ermöglicht jetzt den Export von Audit-Ereignissen in eine CSV-Datei.
 
 
 
+[[enhanced-user-role-management]]
 === Verbesserte Benutzerrollenverwaltung
 
 Cloud Insights ermöglicht jetzt noch mehr Freiheit bei der Zuweisung von Benutzerrollen und Zugriffskontrollen.  Benutzern können jetzt separat detaillierte Berechtigungen für Überwachung, Berichterstellung und Cloud Secure zugewiesen werden.
@@ -2292,10 +2546,12 @@ link:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["Mehr e
 '''
 
 
+[[june-2021]]
 == Juni 2021
 
 
 
+[[autocomplete-suggestions-wildcards-and-expressions-in-filters]]
 === Autovervollständigungsvorschläge, Platzhalter und Ausdrücke in Filtern
 
 Mit dieser Version von Cloud Insights müssen Sie nicht mehr alle möglichen Namen und Werte kennen, nach denen Sie in einer Abfrage oder einem Widget filtern können.  Beim Filtern können Sie einfach mit der Eingabe beginnen und Cloud Insights schlägt Ihnen Werte basierend auf Ihrem Text vor.  Sie müssen nicht mehr im Voraus nach Anwendungsnamen oder Kubernetes-Attributen suchen, nur um diejenigen zu finden, die Sie in Ihrem Widget anzeigen möchten.
@@ -2310,6 +2566,7 @@ Lesen Sie mehr überlink:task_create_query.html#more-on-filtering["Filteroptione
 
 
 
+[[apis-available-by-edition]]
 === Verfügbare APIs nach Edition
 
 Die leistungsstarken APIs von Cloud Insights sind zugänglicher als je zuvor, da Alerts-APIs jetzt in der Standard- und Premium-Edition verfügbar sind.  Für jede Edition sind die folgenden APIs verfügbar:
@@ -2335,6 +2592,7 @@ Die leistungsstarken APIs von Cloud Insights sind zugänglicher als je zuvor, da
 |===
 
 
+[[kubernetes-pv-and-pod-visibility]]
 === Kubernetes PV und Pod-Sichtbarkeit
 
 Cloud Insights bietet Einblick in den Back-End-Speicher Ihrer Kubernetes-Umgebungen und gibt Ihnen Einblick in Ihre Kubernetes-Pods und Persistent Volumes (PVs).  Sie können jetzt PV-Zähler wie IOPS, Latenz und Durchsatz von der Nutzung eines einzelnen Pods über einen PV-Zähler bis hin zu einem PV und dem gesamten Weg zum Back-End-Speichergerät verfolgen.
@@ -2347,6 +2605,7 @@ Beachten Sie, dass es zur Nutzung dieser neuen Tabellen empfohlen wird, Ihren ak
 
 
 
+[[kubernetes-node-to-vm-links]]
 === Kubernetes-Knoten-zu-VM-Links
 
 Auf einer Kubernetes-Knotenseite können Sie jetzt klicken, um die VM-Seite des Knotens zu öffnen.  Die VM-Seite enthält auch einen Link zurück zum Knoten selbst.
@@ -2355,18 +2614,21 @@ image:Kubernetes_Node_Page_with_VM_Link.png["Kubernetes-Knotenseite mit VM-Link"
 
 
 
+[[alert-monitors-replacing-performance-policies]]
 === Alert-Monitore ersetzen Leistungsrichtlinien
 
 Um die zusätzlichen Vorteile mehrerer Schwellenwerte, der Zustellung von Webhook- und E-Mail-Benachrichtigungen, der Benachrichtigung zu allen Metriken über eine einzige Schnittstelle und mehr zu ermöglichen, wird Cloud Insights in den Monaten Juli und August 2021 Kunden der Standard- und Premium-Edition von *Leistungsrichtlinien* auf *Monitore* umstellen.  Erfahren Sie mehr überlink:https://docs.netapp.com/us-en/cloudinsights/task_create_monitor.html["Warnungen und Monitore"] , und bleiben Sie dran für diese aufregende Änderung.
 
 
 
+[[cloud-secure-supports-nfs]]
 === Cloud Secure unterstützt NFS
 
 Cloud Secure unterstützt jetzt NFS für die ONTAP Datenerfassung.  Überwachen Sie den SMB- und NFS-Benutzerzugriff, um Ihre Daten vor Ransomware-Angriffen zu schützen.  Darüber hinaus unterstützt Cloud Secure Active Directory- und LDAP-Benutzerverzeichnisse zum Sammeln von NFS-Benutzerattributen.
 
 
 
+[[cloud-secure-snapshot-purge]]
 === Cloud Secure -Snapshot-Bereinigung
 
 Cloud Secure löscht Snapshots automatisch basierend auf den Snapshot-Bereinigungseinstellungen, um Speicherplatz zu sparen und die Notwendigkeit manueller Snapshot-Löschung zu reduzieren.
@@ -2375,6 +2637,7 @@ image:CloudSecure_SnapshotPurgeSettings.png["Bereinigungseinstellungen"]
 
 
 
+[[cloud-secure-data-collection-speed]]
 === Geschwindigkeit der Cloud Secure Datenerfassung
 
 Ein einzelnes Datenerfassungsagentensystem kann jetzt bis zu 20.000 Ereignisse pro Sekunde an Cloud Secure senden.
@@ -2382,18 +2645,21 @@ Ein einzelnes Datenerfassungsagentensystem kann jetzt bis zu 20.000 Ereignisse p
 '''
 
 
+[[may-2021]]
 == Juni 2021
 
 Hier sind einige der Änderungen, die wir im April vorgenommen haben:
 
 
 
+[[updated-telegraf-agent]]
 === Aktualisierter Telegraf-Agent
 
 Der Agent für die Aufnahme von Telegraf-Integrationsdaten wurde auf Version 1.17.3 aktualisiert und bietet Leistungs- und Sicherheitsverbesserungen.  Benutzer, die ein Update durchführen möchten, können sich auf den entsprechenden Upgrade-Abschnitt derlink:https://docs.netapp.com/us-en/cloudinsights/task_config_telegraf_agent.html["Agent-Installation"] Dokumentation.  Frühere Versionen des Agenten funktionieren weiterhin, ohne dass ein Eingreifen des Benutzers erforderlich ist.
 
 
 
+[[add-corrective-actions-to-an-alert]]
 === Hinzufügen von Korrekturmaßnahmen zu einer Warnung
 
 Sie können jetzt beim Erstellen oder Ändern eines Monitors eine optionale Beschreibung sowie zusätzliche Erkenntnisse und/oder Korrekturmaßnahmen hinzufügen, indem Sie den Abschnitt *Alarmbeschreibung hinzufügen* ausfüllen.  Die Beschreibung wird mit der Benachrichtigung gesendet.  Das Feld „Erkenntnisse und Korrekturmaßnahmen“ kann detaillierte Schritte und Anleitungen zum Umgang mit Warnungen bereitstellen und wird im Zusammenfassungsbereich der Zielseite der Warnung angezeigt.
@@ -2402,6 +2668,7 @@ image:Monitors_Alert_Description.png["Korrekturmaßnahmen und Beschreibung der W
 
 
 
+[[cloud-insights-apis-for-all-editions]]
 === Cloud Insights -APIs für alle Editionen
 
 API-Zugriff ist jetzt in allen Editionen von Cloud Insights verfügbar.  Benutzer der Basic Edition können jetzt Aktionen für Erfassungseinheiten und Datensammler automatisieren und Benutzer der Standard Edition können Metriken abfragen und benutzerdefinierte Metriken aufnehmen.  Die Premium-Edition ermöglicht weiterhin die vollständige Nutzung aller API-Kategorien.
@@ -2430,10 +2697,12 @@ Einzelheiten zur API-Nutzung finden Sie imlink:API_Overview.html#api-documentati
 '''
 
 
+[[april-2021]]
 == April 2021
 
 
 
+[[easier-management-of-monitors]]
 === Einfachere Verwaltung von Monitoren
 
 link:task_create_monitor.html#monitor-groups["Monitorgruppierung"]vereinfacht die Verwaltung von Monitoren in Ihrer Umgebung.  Mehrere Monitore können jetzt gruppiert und als einer angehalten werden.  Wenn beispielsweise ein Update für einen Infrastrukturstapel durchgeführt wird, können Sie die Benachrichtigungen von allen diesen Geräten mit einem Klick anhalten.
@@ -2444,6 +2713,7 @@ image:Monitors_GroupList.png["Monitorgruppierung"]
 
 
 
+[[enhanced-alerting-options-using-webhooks]]
 === Erweiterte Warnoptionen durch Webhooks
 
 Viele kommerzielle Anwendungen unterstützenlink:task_create_webhook.html["Webhooks"] als Standard-Eingabeschnittstelle.  Cloud Insights unterstützt jetzt viele dieser Bereitstellungskanäle und bietet Standardvorlagen für Slack, PagerDuty, Teams und Discord sowie anpassbare generische Webhooks zur Unterstützung vieler anderer Anwendungen.
@@ -2452,12 +2722,14 @@ image:Webhooks_Notifications_sm.png["Webhook-Benachrichtigungen"]
 
 
 
+[[improved-device-identification]]
 === Verbesserte Geräteidentifikation
 
 Um die Überwachung und Fehlerbehebung zu verbessern und genaue Berichte zu liefern, ist es hilfreich, die Namen der Geräte zu kennen und nicht ihre IP-Adressen oder andere Kennungen.  Cloud Insights bietet jetzt eine automatische Methode zur Identifizierung der Namen von Speicher- und physischen Hostgeräten in der Umgebung. Dabei kommt ein regelbasierter Ansatz namenslink:concept_device_resolution_overview.html["*Geräteauflösung*"] , verfügbar im Menü *Verwalten*.
 
 
 
+[[you-asked-for-more]]
 === Sie haben nach mehr gefragt!
 
 Eine häufige Anfrage unserer Kunden betraf mehr Standardoptionen zur Visualisierung des Datenbereichs. Daher haben wir die folgenden fünf neuen Auswahlmöglichkeiten hinzugefügt, die jetzt im gesamten Dienst über die Zeitbereichsauswahl verfügbar sind:
@@ -2471,18 +2743,21 @@ Eine häufige Anfrage unserer Kunden betraf mehr Standardoptionen zur Visualisie
 
 
 
+[[multiple-subscriptions-in-one-cloud-insights-environment]]
 === Mehrere Abonnements in einer Cloud Insights Umgebung
 
 Ab dem 2. April unterstützt Cloud Insights mehrere Abonnements desselben Editionstyps für einen Kunden in einer einzigen Cloud Insights Instanz.  Dadurch können Kunden Teile ihres Cloud Insights -Abonnements mit Infrastrukturkäufen zusammenlegen.  Wenden Sie sich an den NetApp -Vertrieb, wenn Sie Unterstützung bei mehreren Abonnements benötigen.
 
 
 
+[[choose-your-path]]
 === Wähle deinen Weg
 
 Beim Einrichten von Cloud Insights können Sie jetzt wählen, ob Sie mit Überwachung und Warnmeldungen oder mit der Erkennung von Ransomware und Insider-Bedrohungen beginnen möchten.  Cloud Insights konfiguriert Ihre Startumgebung basierend auf dem von Ihnen gewählten Pfad.  Den anderen Pfad können Sie jederzeit nachträglich konfigurieren.
 
 
 
+[[easier-cloud-secure-onboarding]]
 === Einfacheres, Cloud Secure -Onboarding
 
 Und mit einer neuen Schritt-für-Schritt-Checkliste zur Einrichtung ist es einfacher denn je, mit der Nutzung von Cloud Secure zu beginnen.
@@ -2494,16 +2769,19 @@ Wie immer freuen wir uns über Ihre Vorschläge!  Senden Sie sie an ng-cloudinsi
 '''
 
 
+[[february-2021]]
 == Februar 2021
 
 
 
+[[updated-telegraf-agent]]
 === Aktualisierter Telegraf-Agent
 
 Der Agent für die Aufnahme von Telegraf-Integrationsdaten wurde auf Version 1.17.0 aktualisiert, die Schwachstellen- und Fehlerbehebungen enthält.
 
 
 
+[[cloud-cost-analyzer]]
 === Cloud-Kostenanalysator
 
 Erleben Sie die Leistungsfähigkeit von Spot by NetApp mit Cloud Cost, das eine detaillierte Kostenanalyse der vergangenen, aktuellen und geschätzten Ausgaben bietet und Ihnen Einblick in die Cloud-Nutzung in Ihrer Umgebung gewährt.  Das Cloud-Kosten-Dashboard bietet eine klare Übersicht über die Cloud-Ausgaben und eine detaillierte Analyse einzelner Workloads, Konten und Dienste.
@@ -2519,6 +2797,7 @@ Der Schwerpunkt von Cloud Cost liegt auf der Überwachung.  Führen Sie ein Upgr
 
 
 
+[[querying-for-objects-having-null-values-using-filters]]
 === Abfragen von Objekten mit Nullwerten mithilfe von Filtern
 
 Cloud Insights ermöglicht jetzt die Suche nach Attributen und Metriken mit Null-/Keine-Werten durch die Verwendung von Filtern.  Sie können diese Filterung für beliebige Attribute/Metriken an den folgenden Stellen durchführen:
@@ -2535,6 +2814,7 @@ image:Filter_Null_Example.png["Nullfilter im Dropdown"]
 
 
 
+[[multi-region-support]]
 === Unterstützung mehrerer Regionen
 
 Ab heute bieten wir den Cloud Insights -Dienst in verschiedenen Regionen weltweit an, der die Leistung verbessert und die Sicherheit für Kunden außerhalb der USA erhöht.  Cloud Insights/ Cloud Secure speichert Informationen entsprechend der Region, in der Ihre Umgebung erstellt wird.
@@ -2544,10 +2824,12 @@ Klickenlink:http://docs.netapp.com/us-en/cloudinsights/security_information_and_
 '''
 
 
+[[january-2021]]
 == Januar 2021
 
 
 
+[[additional-ontap-metrics-renamed]]
 === Zusätzliche ONTAP -Metriken umbenannt
 
 Im Rahmen unserer kontinuierlichen Bemühungen, die Effizienz der Datenerfassung von ONTAP -Systemen zu verbessern, wurden die folgenden ONTAP -Metriken umbenannt.
@@ -2689,6 +2971,7 @@ Wenn Sie über vorhandene Dashboard-Widgets oder Abfragen verfügen, die eine di
 |===
 
 
+[[new-kubernetes-explorer]]
 === Neuer Kubernetes Explorer
 
 Derlink:kubernetes_landing_page.html["Kubernetes Explorer"] bietet eine einfache Topologieansicht von Kubernetes-Clustern, sodass auch Nicht-Experten Probleme und Abhängigkeiten schnell erkennen können, von der Clusterebene bis hin zum Container und Speicher.
@@ -2701,18 +2984,21 @@ image:Kubernetes_Cluster_Detail_Example.png["Der Kubernetes Explorer"]
 
 
 
+[[acquisition-unit-detail-page]]
 === Detailseite der Erfassungseinheit
 
 Akquisitionseinheiten verfügen jetzt über eine eigene Zielseite, die nützliche Details zu jeder AU sowie Informationen zur Fehlerbehebung bietet.  Derlink:task_configure_acquisition_unit.html#viewing-au-details["AU-Detailseite"] bietet Links zu den Datensammlern der AU sowie hilfreiche Statusinformationen.
 
 
 
+[[cloud-secure-docker-dependency-removed]]
 === Cloud Secure Docker-Abhängigkeit entfernt
 
 Die Abhängigkeit von Cloud Secure von Docker wurde entfernt.  Docker ist für die Installation des Cloud Secure -Agenten nicht mehr erforderlich.
 
 
 
+[[reporting-user-roles]]
 === Berichterstellung für Benutzerrollen
 
 Wenn Sie über Cloud Insights Premium Edition mit Reporting verfügen, verfügt jeder Cloud Insights Benutzer in Ihrer Umgebung auch über eine Single Sign-On (SSO)-Anmeldung bei der Reporting-Anwendung (z. B. Cognos). Durch Klicken auf den Link *Berichte* im Menü werden sie automatisch bei Reporting angemeldet.
@@ -2741,6 +3027,7 @@ IMPORTANT: Wenn Sie bereits Premium Edition-Kunde sind und Ihre Berichte behalte
 
 
 
+[[new-api-category-for-data-ingestion]]
 === Neue API-Kategorie für die Datenaufnahme
 
 Cloud Insights hat eine API-Kategorie *Data Ingestion* hinzugefügt, die Ihnen mehr Kontrolle über benutzerdefinierte Daten und Agenten gibt.  Eine ausführliche Dokumentation zu dieser und anderen API-Kategorien finden Sie in Cloud Insights , indem Sie zu *Admin > API-Zugriff* navigieren und auf den Link _API-Dokumentation_ klicken.  Sie können der AU auch einen Kommentar im Feld „Notiz“ hinzufügen, der auf der AU-Detailseite sowie der AU-Listenseite angezeigt wird.

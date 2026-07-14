@@ -22,6 +22,7 @@ image:lp_new_design.png["neues LP-Design"]
 
 
 
+[[summary-section]]
 == Zusammenfassung
 
 Oben auf einer Zielseite befindet sich der erweiterbare Abschnitt „Zusammenfassung“, der mehrere Sparkline-Diagramme enthält, die aktuelle Datentrends für Dinge wie Durchsatz oder Latenz sowie Objektinformationen und -attribute und alle Monitore anzeigen, die möglicherweise Warnungen für das Objekt ausgeben.
@@ -30,6 +31,7 @@ Im Abschnitt „Zusammenfassung“ werden auch die dem Asset zugewiesenen Anmerk
 
 
 
+[[performance-section]]
 == Leistungsbereich
 
 Im Abschnitt „Leistung“ werden Leistungsdaten für das Objekt angezeigt.  Wählen Sie _Einstellungen_, um der Anzeige zusätzliche Diagramme wie Durchsatz oder Kapazität hinzuzufügen, oder wählen Sie korrelierte oder beitragende Ressourcen aus, um deren Daten neben denen des Objekts darzustellen.  Geräte, die möglicherweise Konflikte verursachen, werden auch im Abschnitt „Leistung“ aufgeführt.  Die Daten in den Diagrammen werden automatisch aktualisiert, wenn Datensammler Abfragen durchführen und aktualisierte Daten erfasst werden.
@@ -62,12 +64,14 @@ Zeigt die Assets an, die sich auf andere gemeinsam genutzte Ressourcen wie Hosts
 
 
 
+[[additional-resources-section]]
 == Abschnitt „Zusätzliche Ressourcen“
 
 Im Abschnitt „Zusätzliche Ressourcen“ werden Datentabellen für Ressourcen angezeigt, die sich auf den aktuellen Objekttyp beziehen.  Sie können diese Tabellen erweitern und reduzieren, um sich auf bestimmte Ressourcen zu konzentrieren.  Wählen Sie das Zahnradsymbol aus, um vorübergehend zusätzliche Metriken oder Attribute in einer Tabelle anzuzeigen.
 
 
 
+[[add-custom-widgets]]
 == Benutzerdefinierte Widgets hinzufügen
 
 Sie können jeder Asset-Seite Ihre eigenen Widgets hinzufügen.  Von Ihnen hinzugefügte Widgets werden auf den Asset-Seiten für alle Objekte dieses Typs angezeigt.  Wenn Sie beispielsweise einer Speicher-Asset-Seite ein benutzerdefiniertes Widget hinzufügen, wird dieses Widget auf den Asset-Seiten für alle Speicher-Assets angezeigt.
@@ -76,6 +80,7 @@ Benutzerdefinierte Widgets werden unten auf einer Zielseite unter den Abschnitte
 
 
 
+[[types-of-asset-pages]]
 == Arten von Asset-Seiten
 
 Data Infrastructure Insights bietet Asset-Seiten für die folgenden Assets:
@@ -102,6 +107,7 @@ Data Infrastructure Insights bietet Asset-Seiten für die folgenden Assets:
 
 
 
+[[changing-the-time-range-of-displayed-data]]
 == Ändern des Zeitbereichs der angezeigten Daten
 
 Standardmäßig werden auf einer Asset-Seite die Daten der letzten drei Stunden angezeigt. Sie können den Zeitabschnitt der angezeigten Daten jedoch mithilfe einer Option ändern, die sich auf jeder Asset-Seite befindet, unabhängig vom Asset-Typ.  Um den Zeitraum zu ändern, klicken Sie auf den angezeigten Zeitraum in der oberen Leiste und wählen Sie aus den folgenden Zeitsegmenten:
@@ -128,6 +134,7 @@ Die Informationen auf der Seite werden basierend auf dem ausgewählten Zeitraum 
 
 
 
+[[performance-metric-definitions]]
 == Definitionen von Leistungsmetriken
 
 Im Abschnitt „Leistung“ können basierend auf dem für das Asset ausgewählten Zeitraum mehrere Kennzahlen angezeigt werden.  Jede Metrik wird in einem eigenen Leistungsdiagramm angezeigt.  Sie können den Diagrammen Metriken und zugehörige Assets hinzufügen oder daraus entfernen, je nachdem, welche Daten Sie sehen möchten. Die zur Auswahl stehenden Metriken variieren je nach Asset-Typ.

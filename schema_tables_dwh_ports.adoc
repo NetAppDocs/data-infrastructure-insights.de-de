@@ -18,10 +18,12 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_ports Date
 
 
 
+[[tables-and-views]]
 == Tabellen und Ansichten
 
 
 
+[[cardinals]]
 === Kardinäle
 
 [cols="1,1,2"]
@@ -34,6 +36,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_ports Date
 '''
 
 
+[[connecteddevicedimension]]
 === connected_device_dimension
 
 *Primärschlüssel:* tk
@@ -74,6 +77,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_ports Date
 '''
 
 
+[[datedimension]]
 === Datumsdimension
 
 [cols="1,1,2"]
@@ -148,6 +152,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_ports Date
 '''
 
 
+[[portdimension]]
 === port_dimension
 
 [cols="1,1,2"]
@@ -195,6 +200,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_ports Date
 '''
 
 
+[[portsfact]]
 === ports_fact
 
 *Primärschlüssel:* tk
@@ -244,6 +250,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_ports Date
 '''
 
 
+[[portsfactcurrent]]
 === ports_fact_current
 
 [cols="1,1,2"]
@@ -283,6 +290,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_ports Date
 '''
 
 
+[[switchdimension]]
 === switch_dimension
 
 [cols="1,1,2"]

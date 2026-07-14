@@ -29,6 +29,7 @@ Die Schritte in dieser Anleitung können auch auf Speichersysteme anderer Anbiet
 
 
 
+[[creating-a-query-to-identify-netapp-root-aggregates]]
 == Erstellen einer Abfrage zum Identifizieren von NetApp Root-Aggregaten
 
 Abfragen ermöglichen eine Suche auf granularer Ebene basierend auf vom Benutzer ausgewählten Kriterien.  Mithilfe einer Abfrage können Sie nach internen Volumes auf Ihrem Mandanten suchen, die das NetApp Root-Aggregat enthalten.
@@ -54,6 +55,7 @@ Wie bereits erwähnt, kann dies ein iterativer Prozess sein und mehrere Abfragen
 
 
 
+[[create-an-annotation-for-the-root-volumes-returned-by-your-queries]]
 == Erstellen Sie eine Anmerkung für die von Ihren Abfragen zurückgegebenen Stammvolumes
 
 Anmerkungen sind spezielle Notizen, die Sie Ihren Assets zuweisen und die es Ihnen ermöglichen, Assets nach ihren Anmerkungen zu filtern.  Die von Ihnen erstellte Anmerkung wird verwendet, um die NetApp Root-Aggregate auf Ihrem Mandanten zu identifizieren und sicherzustellen, dass sie nicht in einem bestimmten Bericht enthalten sind.
@@ -75,6 +77,7 @@ Sie müssen alle Root-Aggregate identifiziert haben, die Sie aus dem Bericht „
 
 
 
+[[create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-io-density-report]]
 == Erstellen Sie eine Anmerkungsregel, um bestimmte Aggregate automatisch aus Ihrem E/A-Dichtebericht auszuschließen.
 
 Als Alternative zum manuellen Anwenden von Anmerkungen auf einzelne Assets können Sie mithilfe von Anmerkungsregeln automatisch Anmerkungen auf mehrere Assets anwenden.  Anmerkungsregeln basieren auf von Ihnen erstellten Abfragen und fügen bei der Ausführung auf dem System neue Assets zu vorhandenen Asset-Sets hinzu.  Wenn diese Asset-Gruppen aus einem Bericht ausgeschlossen werden, werden die neuen Assets automatisch ebenfalls ausgeschlossen.

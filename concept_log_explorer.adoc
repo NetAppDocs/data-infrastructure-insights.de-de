@@ -32,10 +32,12 @@ image:LogExplorer_QueryForFailed.png["Abfragebeispiel mit Filter"]
 
 
 
+[[filtering]]
 == Filtern
 
 
 
+[[include-exclude]]
 === Einschließen / Ausschließen
 
 Beim Filtern der Protokolle können Sie wählen, ob Sie die eingegebenen Zeichenfolgen *einschließen* (d. h. „Filtern nach“) oder *ausschließen* möchten.  Ausgeschlossene Zeichenfolgen werden im vervollständigten Filter als „NOT <string>“ angezeigt.
@@ -49,6 +51,7 @@ NOTE: Sie können jederzeit auf „Protokollmonitor erstellen“ klicken, um ein
 
 
 
+[[advanced-filtering]]
 === Erweiterte Filterung
 
 Wenn Sie in Abfragen oder Dashboard-Widgets nach Text oder Listenwerten filtern, wird Ihnen beim Eintippen die Option angezeigt, einen *Platzhalterfilter* basierend auf dem aktuellen Text zu erstellen.  Wenn Sie diese Option auswählen, werden alle Ergebnisse zurückgegeben, die mit dem Platzhalterausdruck übereinstimmen.  Sie können auch Ausdrücke mit NOT, AND oder OR erstellen oder die Option „Keine“ auswählen, um nach Nullwerten zu filtern.
@@ -112,6 +115,7 @@ Sie können einen einfachen Filter mit einem erweiterten Abfragefilter kombinier
 
 
 
+[[the-chart-legend]]
 === Die Chart-Legende
 
 Auch die _Legende_ unter dem Diagramm hält einige Überraschungen bereit.  Für jedes in der Legende angezeigte Ergebnis (basierend auf dem aktuellen Filter) haben Sie die Möglichkeit, nur Ergebnisse für diese Zeile anzuzeigen (Filter hinzufügen) oder alle Ergebnisse anzuzeigen, die NICHT für diese Zeile gelten (Ausschlussfilter hinzufügen).  Das Diagramm und die Liste der Protokolleinträge werden aktualisiert, um die Ergebnisse basierend auf Ihrer Auswahl anzuzeigen.  Um diese Filterung zu entfernen, öffnen Sie die Legende erneut und wählen Sie das [X] aus, um den legendenbasierten Filter zu löschen.
@@ -120,6 +124,7 @@ image:Log_Advanced_Query_Legend.png["Erweiterte Abfragelegende zeigt „Filter h
 
 
 
+[[log-details]]
 == Protokolldetails
 
 Wenn Sie irgendwo in der Liste auf einen Protokolleintrag klicken, wird ein Detailbereich für diesen Eintrag geöffnet.  Hier können Sie weitere Informationen zur Veranstaltung finden.
@@ -132,6 +137,7 @@ image:LogExplorer_DetailPane.png["Detailbereich des Protokolleintrags"]
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Hier finden Sie Vorschläge zur Behebung von Problemen mit Protokollabfragen.

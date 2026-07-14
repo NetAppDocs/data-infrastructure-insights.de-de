@@ -18,11 +18,12 @@ Dieser Datensammler erfasst Inventarinformationen von DELL EMC Data Domain Dedup
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Data Domain-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -48,6 +49,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
@@ -59,9 +61,10 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -76,9 +79,10 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -90,6 +94,7 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

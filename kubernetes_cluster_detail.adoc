@@ -16,12 +16,14 @@ image:Kubernetes_Detail_Page_new.png["Cluster-Detailseite"]
 
 
 
+[[namespace-node-and-pod-counts]]
 == Anzahl der Namespaces, Knoten und Pods
 
 Die Zählungen oben auf der Seite zeigen Ihnen die Gesamtzahl der Namespaces, Knoten und Pods im Cluster sowie die Anzahl der Popds, die derzeit Alarm schlagen und ausstehen.
 
 
 
+[[shared-resources-and-saturation]]
 == Gemeinsam genutzte Ressourcen und Sättigung
 
 Oben rechts auf der Detailseite wird Ihre Clustersättigung als aktueller Prozentsatz sowie ein Diagramm angezeigt, das den aktuellen Trend im Zeitverlauf zeigt.  Die Clustersättigung ist die höchste CPU-, Speicher- oder Speichersättigung zu jedem Zeitpunkt.
@@ -32,6 +34,7 @@ Die Geräte mit der höchsten Nutzung werden unten in einer Tabelle angezeigt.  
 
 
 
+[[namespaces]]
 == Namensräume
 
 Auf der Registerkarte „Namespaces“ wird eine Liste aller Namespaces in Ihrer Kubernetes-Umgebung angezeigt, die die CPU- und Speicherauslastung sowie die Anzahl der Workloads in jedem Namespace anzeigt.  Klicken Sie auf die Namenslinks, um die einzelnen Namespaces zu erkunden.
@@ -40,6 +43,7 @@ image:Kubernetes_Namespace_tab_new.png["Liste der aktuellen Namespaces in Ihrer 
 
 
 
+[[workloads]]
 == Arbeitslasten
 
 Ebenso wird auf der Registerkarte „Workloads“ eine Liste der Workloads in jedem Namespace angezeigt, wobei auch hier die CPU- und Speicherauslastung angezeigt wird.  Durch Klicken auf die Namespace-Links gelangen Sie zu den einzelnen Links.
@@ -48,6 +52,7 @@ image:Kubernetes_Workloads_tab_new.png["Liste der aktuellen Namespaces in Ihrer 
 
 
 
+[[the-cluster-wheel]]
 == Das Cluster-„Rad“
 
 image:Kubernetes_Wheel_Section.png["Cluster-Rad"]
@@ -74,6 +79,7 @@ image:Kubernetes_Capacity_Info.png["Knotenkapazität und -zuweisung"]
 
 
 
+[[a-note-about-the-gauges]]
 == Ein Hinweis zu den Messgeräten
 
 Die Speicher- und CPU-Anzeigen zeigen drei Farben an, da sie die _Nutzung_ im Verhältnis zur _zuweisbaren Kapazität_ und zur _Gesamtkapazität_ anzeigen.

@@ -21,6 +21,7 @@ NOTE: Diese Seite verweist auf Anweisungen von Drittanbietern, die Änderungen u
 
 
 
+[[discord-setup]]
 == Discord-Setup:
 
 * Wählen Sie in Discord den Server aus und wählen Sie unter „Textkanäle“ die Option „Kanal bearbeiten“ (Zahnradsymbol).
@@ -30,6 +31,7 @@ NOTE: Diese Seite verweist auf Anweisungen von Drittanbietern, die Änderungen u
 
 
 
+[[create-workload-security-webhook]]
 == Erstellen Sie einen Workload-Sicherheits-Webhook:
 
 . Navigieren Sie zu „Admin > Benachrichtigungen“ und wählen Sie die Registerkarte „Workload Security Webhooks“ aus.  Klicken Sie auf „+ Webhook“, um einen neuen Webhook zu erstellen.
@@ -46,6 +48,7 @@ Denken Sie daran, den Nachrichtentext nach Abschluss des Tests wiederherzustelle
 
 
 
+[[notifications-via-webhook]]
 == Benachrichtigungen per Webhook
 
 Um über Ereignisse per Webhook benachrichtigt zu werden, navigieren Sie zu _Workload-Sicherheit > Richtlinien_.  Klicken Sie auf _+Angriffsrichtlinie_ oder _+Warnrichtlinie_.

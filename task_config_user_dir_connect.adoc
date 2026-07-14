@@ -111,6 +111,7 @@ Klicken Sie auf „Optionale Attribute einschließen“, um die folgenden Attrib
 |===
 
 
+[[testing-your-user-directory-collector-configuration]]
 == Testen der Konfiguration Ihres Benutzerverzeichnis-Collectors
 
 Sie können LDAP-Benutzerberechtigungen und Attributdefinitionen mithilfe der folgenden Verfahren validieren:
@@ -131,6 +132,7 @@ image:cs_ADExample.png["AD-Verbindung"]
 
 
 
+[[troubleshooting-user-directory-collector-configuration-errors]]
 == Fehlerbehebung bei Konfigurationsfehlern des User Directory Collector
 
 In der folgenden Tabelle werden bekannte Probleme und Lösungen beschrieben, die während der Collector-Konfiguration auftreten können:

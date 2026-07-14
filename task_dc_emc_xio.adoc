@@ -14,6 +14,7 @@ Der EMC XtremIO-Datenkollektor erfasst Bestands- und Leistungsdaten vom EMC Xtre
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zum Konfigurieren des EMC XtremIO (HTTP)-Datenkollektors benötigen Sie:
@@ -25,11 +26,12 @@ Zum Konfigurieren des EMC XtremIO (HTTP)-Datenkollektors benötigen Sie:
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom EMC XtremIO-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieser Datenquelle die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -55,6 +57,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 * Die Host-IP-Adresse des XtremIO Management Server (XMS)
@@ -63,9 +66,10 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -80,9 +84,10 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -97,6 +102,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

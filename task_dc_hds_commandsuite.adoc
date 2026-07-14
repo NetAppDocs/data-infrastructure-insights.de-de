@@ -14,11 +14,12 @@ Der Datensammler der Hitachi Vantara Command Suite unterstützt den HiCommand De
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Datensammler der Hitachi Vantara Command Suite.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -44,6 +45,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[storage]]
 === Storage
 
 Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie möglicherweise auf den Zielseiten von HDS-Speicherressourcen finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
@@ -58,6 +60,7 @@ Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie mögliche
 
 
 
+[[storage-pool]]
 === Speicherpool
 
 Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie möglicherweise auf den Zielseiten der HDS-Speicherpool-Assets finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
@@ -84,6 +87,7 @@ Stattdessen verkleinert der HDS Command Suite-Datensammler von Data Infrastructu
 
 
 
+[[storage-node]]
 === Speicherknoten
 
 Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie möglicherweise auf den Zielseiten der HDS-Speicherknoten-Assets finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
@@ -94,6 +98,7 @@ Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie mögliche
 
 
 
+[[inventory-requirements]]
 == Inventaranforderungen
 
 Um Bestandsdaten erfassen zu können, benötigen Sie Folgendes:
@@ -107,6 +112,7 @@ Um Bestandsdaten erfassen zu können, benötigen Sie Folgendes:
 
 
 
+[[performance-requirements]]
 == Leistungsanforderungen
 
 Um Leistungsdaten erfassen zu können, müssen folgende Voraussetzungen erfüllt sein:
@@ -130,9 +136,10 @@ Um Leistungsdaten erfassen zu können, müssen folgende Voraussetzungen erfüllt
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -170,6 +177,7 @@ Hinweis: In HDS USP, USP V und VSP kann jede Festplatte zu mehr als einer Array-
 
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
 |===
@@ -200,15 +208,17 @@ Hinweis: In HDS USP, USP V und VSP kann jede Festplatte zu mehr als einer Array-
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 
@@ -223,9 +233,10 @@ Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen
 |===
 
 
+[[performance]]
 === Performance
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

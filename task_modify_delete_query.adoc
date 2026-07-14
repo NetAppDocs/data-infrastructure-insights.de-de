@@ -14,6 +14,7 @@ Sie können die mit einer Abfrage verknüpften Kriterien ändern, wenn Sie die S
 
 
 
+[[modifying-a-query]]
 == Ändern einer Abfrage
 
 .Schritte
@@ -35,6 +36,7 @@ Wenn Sie alle erforderlichen Änderungen vorgenommen haben, führen Sie einen de
 
 
 
+[[deleting-a-query]]
 == Löschen einer Abfrage
 
 Um eine Abfrage zu löschen, klicken Sie auf *Abfragen*, wählen Sie *Alle Abfragen anzeigen* und führen Sie einen der folgenden Schritte aus:

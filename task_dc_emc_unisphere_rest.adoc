@@ -20,6 +20,7 @@ Zur Konfiguration benötigt der Datensammler eine IP-Adresse/einen FQDN des Unis
 
 
 
+[[requirements]]
 == Anforderungen
 
 * Eine IP-Adresse/ein vollständig qualifizierter Domänenname des Unisphere-Servers
@@ -29,9 +30,10 @@ Zur Konfiguration benötigt der Datensammler eine IP-Adresse/einen FQDN des Unis
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -49,9 +51,10 @@ Zur Konfiguration benötigt der Datensammler eine IP-Adresse/einen FQDN des Unis
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -72,15 +75,17 @@ Zur Konfiguration benötigt der Datensammler eine IP-Adresse/einen FQDN des Unis
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

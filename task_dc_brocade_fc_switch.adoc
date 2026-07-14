@@ -14,11 +14,12 @@ Data Infrastructure Insights verwendet die Datenquelle Brocade FC Switch (SSH), 
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Brocade FC Switch-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -47,6 +48,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 * Die Data Infrastructure Insights Acquisition Unit (AU) initiiert Verbindungen zum TCP-Port 22 auf Brocade -Switches, um Inventardaten zu erfassen.  Die AU initiiert außerdem Verbindungen zum UDP-Port 161, um Leistungsdaten zu erfassen.
@@ -58,9 +60,10 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -87,9 +90,10 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -134,15 +138,17 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 
@@ -163,9 +169,10 @@ Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen
 |===
 
 
+[[performance]]
 === Performance
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

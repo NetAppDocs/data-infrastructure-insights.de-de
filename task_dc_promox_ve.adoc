@@ -18,11 +18,12 @@ Der DII Promox Virtual Environment Collector erfasst Inventardaten. Dies ist ein
 
 
 
+[[terminology]]
 == Terminologie
 
 Für jeden von Data Infrastructure Insights erfassten Asset-Typ wird die am häufigsten verwendete Terminologie für das Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -45,9 +46,10 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -55,16 +57,17 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 | Hostname oder IP-Adresse | Hostname-IP-Adresse des Storage-Systems 
 
 
-| API-Token-ID | API-Token für Zugriff erforderlich 
+| API-Token-ID | API-Token erforderlich für den Zugriff 
 
 
 | API-Token-Secret | Geheimnis für das oben genannte Token 
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -76,6 +79,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

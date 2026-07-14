@@ -38,6 +38,7 @@ Data Infrastructure Insights Reporting kann benutzerdefinierte Berichte für Ber
 
 
 
+[[accessing-data-infrastructure-insights-reporting]]
 == Zugriff auf Data Infrastructure Insights Reporting
 
 Sie können auf die Data Infrastructure Insights -Berichterstellung zugreifen, indem Sie im Menü auf den Link *Berichte* klicken.
@@ -46,6 +47,7 @@ Sie werden zur Berichtsoberfläche weitergeleitet.  Data Infrastructure Insights
 
 
 
+[[what-is-etl]]
 == Was ist ETL?
 
 Wenn Sie mit Reporting arbeiten, werden Sie die Begriffe „Data Warehouse“ und „ETL“ hören.  ETL steht für „Extract, Transform, and Load“.  Der ETL-Prozess ruft in Data Infrastructure Insights erfasste Daten ab und wandelt die Daten in ein Format um, das in der Berichterstattung verwendet werden kann.  „Data Warehouse“ bezieht sich auf die gesammelten Daten, die für die Berichterstattung zur Verfügung stehen.

@@ -10,6 +10,7 @@ keywords: reporting, annotations, publish, unpublish, data warehouse, dwh
 
 
 
+[[publishing-and-unpublishing-annotations-for-reporting]]
 == Veröffentlichung und Aufhebung der Veröffentlichung von Anmerkungen für Berichte
 
 [role="lead"]
@@ -17,12 +18,14 @@ Erfahren Sie, wie Sie Anmerkungen zur Verwendung in Berichten und im Data Wareho
 
 
 
+[[publishing-annotations-for-reporting]]
 == Veröffentlichung von Anmerkungen für Berichte
 
 Nachdem Sie in Data Infrastructure Insights Annotationen erstellt haben, können Sie diese zur Verwendung in der Berichterstellung veröffentlichen.
 
 
 
+[[steps-to-publish-annotations]]
 === Schritte zum Veröffentlichen von Anmerkungen
 
 . Navigieren Sie zur Seite *Observability > Enrich > Annotations* und wählen Sie die Registerkarte _Annotations for Reporting_ aus.
@@ -39,12 +42,14 @@ Alle Berichte, die auf die Annotation Bezug nehmen, verwenden die veröffentlich
 ====
 
 
+[[unpublishing-annotations-for-reporting]]
 == Veröffentlichung von Anmerkungen für die Berichterstellung aufheben
 
 Es kann vorkommen, dass Sie Anmerkungen entfernen oder deren Veröffentlichung aufheben müssen, damit sie in der Berichterstellung nicht mehr verwendet werden.  Beispielsweise kann eine Anmerkung nicht mehr benötigt werden oder veraltete Informationen enthalten, die nicht in Berichten erscheinen sollten.
 
 
 
+[[steps-to-unpublish-annotations]]
 === Schritte zum Aufheben der Veröffentlichung von Anmerkungen
 
 Bevor Sie eine Anmerkung entfernen, beachten Sie bitte, dass diese Aktion Auswirkungen auf alle bestehenden Berichte hat, die diese Anmerkung verwenden.  Berichte müssen gegebenenfalls redaktionell bearbeitet oder durch professionelle Dienstleistungen unterstützt werden, um die Anmerkungsverweise zu entfernen.
@@ -64,6 +69,7 @@ Annotationen werden so lange im Data Warehouse angezeigt, bis sie ordnungsgemä�
 ====
 
 
+[[impact-on-existing-reports]]
 == Auswirkungen auf bestehende Berichte
 
 Das Entfernen oder Aufheben der Veröffentlichung von Anmerkungen kann Änderungen an bestehenden Berichten erfordern, die auf diese Anmerkungen Bezug nehmen. Beachten Sie Folgendes:

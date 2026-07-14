@@ -21,24 +21,28 @@ NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:co
 
 
 
+[[inventory-datamart]]
 == Inventar-Datamart
 
 Die folgenden Bilder beschreiben den Inventar-Datamart.
 
 
 
+[[annotations]]
 === Anmerkungen
 
 image:annotations.png["Anmerkungen"]
 
 
 
+[[applications]]
 === Anwendungen
 
 image:apps_annot.jpg["Anwendungen"]
 
 
 
+[[kubernetes-metrics]]
 === Kubernetes-Metriken
 
 image:k8s.jpg["Kubernetes"]
@@ -75,42 +79,49 @@ image:k8s_workload_metrics_fact.jpg["Fakten zu Kubernetes-Workload-Metriken"]
 
 
 
+[[nas]]
 === NAS
 
 image:nas.jpg["nas"]
 
 
 
+[[paths-and-violations]]
 === Pfade und Verstöße
 
 image:logical.jpg["Pfade und Verstöße"]
 
 
 
+[[port-connectivity]]
 === Port-Konnektivität
 
 image:connectivity.jpg["Portkonnektivität"]
 
 
 
+[[san-fabric]]
 === SAN-Gewebe
 
 image:fabric.jpg["SAN-Gewebe"]
 
 
 
+[[storage]]
 === Storage
 
 image:storage.jpg["Lagerung"]
 
 
 
+[[storage-node]]
 === Speicherknoten
 
 image:storage_node.jpg["Speicherknoten"]
 
 
 
+[[vm]]
 === VM
 
 image:vm.jpg["virtuelle Maschine"]
@@ -118,78 +129,91 @@ image:vm.jpg["virtuelle Maschine"]
 '''
 
 
+[[capacity-datamart]]
 == Kapazitäts-Datamart
 
 Die folgenden Bilder beschreiben den Kapazitäts-Datamart.
 
 
 
+[[chargeback]]
 === Rückbuchung
 
 image:Chargeback_Fact.jpg["Rückbuchung"]
 
 
 
+[[disk-group-capacity]]
 === Kapazität der Datenträgergruppe
 
 image:Disk_Group_Capacity.jpg["Kapazität der Datenträgergruppe"]
 
 
 
+[[file-system-utilization]]
 === Dateisystemauslastung
 
 image:fs_util.jpg["Dateisystemauslastung"]
 
 
 
+[[internal-volume-capacity]]
 === Interne Volumenkapazität
 
 image:Internal_Volume_Capacity_Fact.jpg["Interne Volumenkapazität"]
 
 
 
+[[kubernetes-pv-capacity]]
 === Kubernetes PV-Kapazität
 
 image:k8s_pvc_capacity_fact.jpg["Kubernetes PV-Kapazität"]
 
 
 
+[[port-capacity]]
 === Hafenkapazität
 
 image:ports.png["Hafenkapazität"]
 
 
 
+[[qtree-capacity]]
 === Qtree-Kapazität
 
 image:Qtree_Capacity_Fact.jpg["Qtree-Kapazität"]
 
 
 
+[[storage-capacity-efficiency]]
 === Speicherkapazitätseffizienz
 
 image:efficiency.jpg["Speicherkapazitätseffizienz"]
 
 
 
+[[storage-and-storage-pool-capacity]]
 === Speicher- und Speicherpoolkapazität
 
 image:Storage_and_Storage_Pool_Capacity_Fact.jpg["Speicher- und Speicherpoolkapazität"]
 
 
 
+[[storage-node-capacity]]
 === Speicherknotenkapazität
 
 image:Storage_Node_Capacity_Fact.jpg["Speicherknotenkapazität"]
 
 
 
+[[vm-capacity]]
 === VM-Kapazität
 
 image:VM_Capacity_Fact.jpg["VM-Kapazität"]
 
 
 
+[[volume-capacity]]
 === Volumenkapazität
 
 image:Volume_Capacity.jpg["Volumenkapazität"]
@@ -197,162 +221,189 @@ image:Volume_Capacity.jpg["Volumenkapazität"]
 '''
 
 
+[[performance-datamart]]
 == Leistungs-Datamart
 
 Die folgenden Bilder beschreiben den Performance-Datamart.
 
 
 
+[[application-volume-hourly-performance]]
 === Anwendungsvolumen Stündliche Leistung
 
 image:application_performance_fact.jpg["Anwendungsvolumen Stündliche Leistung"]
 
 
 
+[[cluster-switch-performance]]
 === Cluster-Switch-Leistung
 
 image:cluster_switch_performance_fact.jpg["Cluster-Switch-Leistung"]
 
 
 
+[[disk-daily-performance]]
 === Tägliche Festplattenleistung
 
 image:disk_daily_performance_fact.jpg["Tägliche Festplattenleistung"]
 
 
 
+[[disk-hourly-performance]]
 === Stündliche Festplattenleistung
 
 image:disk_hourly_performance_fact.jpg["Stündliche Festplattenleistung"]
 
 
 
+[[host-hourly-performance]]
 === Host-Stundenleistung
 
 image:host_performance_fact.jpg["Host-Stundenleistung"]
 
 
 
+[[host-vm-daily-performance]]
 === Tägliche Leistung der Host-VM
 
 image:host_vm_daily_performance_fact.jpg["Tägliche Leistung der Host-VM"]
 
 
 
+[[host-vm-hourly-performance]]
 === Host-VM-Stündliche Leistung
 
 image:host_vm_hourly_performance_fact.jpg["Host-VM-Stündliche Leistung"]
 
 
 
+[[internal-volume-hourly-performance]]
 === Internes Volumen, stündliche Leistung
 
 image:internal_volume_performance_fact.jpg["Internes Volumen, stündliche Leistung"]
 
 
 
+[[internal-volume-daily-performance]]
 === Internes Volumen – Tägliche Leistung
 
 image:internal_volume_daily_performance_fact.jpg["Internes Volumen – Tägliche Leistung"]
 
 
 
+[[qtree-daily-performance]]
 === Qtree Tägliche Leistung
 
 image:QtreeDailyPerformanceFact.jpg["Qtree Tägliche Leistung"]
 
 
 
+[[qtree-hourly-perfromance]]
 === Qtree Stundenleistung
 
 image:QtreeHourlyPerformanceFact.jpg["Qtree-Stundenleistung"]
 
 
 
+[[storage-node-daily-performance]]
 === Tägliche Leistung des Speicherknotens
 
 image:storage_node_daily_performance_fact.jpg["Tägliche Leistung des Speicherknotens"]
 
 
 
+[[storage-node-hourly-performance]]
 === Stündliche Leistung des Speicherknotens
 
 image:storage_node_hourly_performance_fact.jpg["Stündliche Leistung des Speicherknotens"]
 
 
 
+[[switch-hourly-performance-for-host]]
 === Switch-Stundenleistung für Host
 
 image:switch_performance_for_host_hourly_fact.jpg["Switch-Stundenleistung für Host"]
 
 
 
+[[switch-hourly-performance-for-port]]
 === Switch-Stundenleistung für Port
 
 image:switch_performance_for_port_hourly_fact.jpg["Switch-Stundenleistung für Port"]
 
 
 
+[[switch-hourly-performance-for-storage]]
 === Switch-Stundenleistung für Speicher
 
 image:switch_performance_for_storage_hourly_fact.jpg["Switch-Stundenleistung für Speicher"]
 
 
 
+[[switch-hourly-performance-for-tape]]
 === Switch-Stundenleistung für Band
 
 image:switch_performance_for_tape_hourly_fact.jpg["Switch-Stundenleistung für Band"]
 
 
 
+[[vm-performance]]
 === VM-Leistung
 
 image:vm_hourly_performance_fact.png["VM-Leistung"]
 
 
 
+[[vm-daily-performance-for-host]]
 === Tägliche VM-Leistung für Host
 
 image:vm_daily_performance_fact.png["Tägliche VM-Leistung für Host"]
 
 
 
+[[vm-hourly-performance-for-host]]
 === VM-Stundenleistung für Host
 
 image:vmware_host_performance_fact.jpg["Stündliche VM-Hostleistung"]
 
 
 
+[[vm-daily-performance-for-host]]
 === Tägliche VM-Leistung für Host
 
 image:vm_daily_performance_fact.png["Tägliche VM-Leistung für Host"]
 
 
 
+[[vm-hourly-performance-for-host]]
 === VM-Stundenleistung für Host
 
 image:vm_hourly_performance_fact.png["VM-Stundenleistung für Host"]
 
 
 
+[[vmdk-daily-performance]]
 === Tägliche VMDK-Leistung
 
 image:vmdk_daily_performance_fact.jpg["Tägliche VMDK-Leistung"]
 
 
 
+[[vmdk-hourly-performance]]
 === VMDK-Stundenleistung
 
 image:vmdk_hourly_performance_fact.jpg["VMDK-Stundenleistung"]
 
 
 
+[[volume-hourly-performance]]
 === Volumen Stündliche Leistung
 
 image:volume_performance_fact.jpg["Volumen Stündliche Leistung"]
 
 
 
+[[volume-daily-performance]]
 === Volumen Tägliche Leistung
 
 image:volume_daily_performance_fact.jpg["Volumen Tägliche Leistung"]

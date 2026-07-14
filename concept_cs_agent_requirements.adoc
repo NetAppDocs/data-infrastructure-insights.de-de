@@ -47,6 +47,7 @@ Bitte beachten: Der Workload Security-Agent kann auf derselben Maschine wie eine
 |===
 
 
+[[additional-recommendations]]
 == Zusätzliche Empfehlungen
 
 * Es wird dringend empfohlen, die Zeit sowohl auf dem ONTAP -System als auch auf der Agent-Maschine mithilfe von *Network Time Protocol (NTP)* oder *Simple Network Time Protocol (SNTP)* zu synchronisieren.
@@ -54,6 +55,7 @@ Bitte beachten: Der Workload Security-Agent kann auf derselben Maschine wie eine
 
 
 
+[[cloud-network-access-rules]]
 == Cloud-Netzwerkzugriffsregeln
 
 Für *US-basierte* Workload Security-Umgebungen:
@@ -94,6 +96,7 @@ Für *APAC-basierte* Workload Security-Umgebungen:
 |===
 
 
+[[in-network-rules]]
 == Netzwerkinterne Regeln
 
 [cols="5*"]
@@ -117,6 +120,7 @@ Für *APAC-basierte* Workload Security-Umgebungen:
 |===
 
 
+[[system-sizing]]
 == Systemdimensionierung
 
 Siehe dielink:concept_cs_event_rate_checker.html["Event-Raten-Checker"] Informationen zur Größenbestimmung finden Sie in der Dokumentation.

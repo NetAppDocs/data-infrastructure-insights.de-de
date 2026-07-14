@@ -18,11 +18,12 @@ Data Infrastructure Insights verwendet diesen Datensammler, um Inventar- und Lei
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält von diesem Datensammler die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -39,6 +40,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
@@ -50,9 +52,10 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -67,9 +70,10 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -84,6 +88,7 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

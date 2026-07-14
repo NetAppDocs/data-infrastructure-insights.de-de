@@ -18,6 +18,7 @@ Um sowohl erwartete (zur Nachverfolgung) als auch unerwartete (zur Fehlerbehebun
 
 
 
+[[viewing-audited-events]]
 == Anzeigen überwachter Ereignisse
 
 Um die Audit-Seite anzuzeigen, klicken Sie im Menü auf *Admin > Audit*.  Die Seite „Audit“ wird angezeigt und enthält die folgenden Details für jeden Auditeintrag:
@@ -33,6 +34,7 @@ Um die Audit-Seite anzuzeigen, klicken Sie im Menü auf *Admin > Audit*.  Die Se
 
 
 
+[[displaying-audit-entries]]
 == Anzeigen von Auditeinträgen
 
 Es gibt verschiedene Möglichkeiten, Auditeinträge anzuzeigen:
@@ -50,6 +52,7 @@ image:Audit_Filters.png["Audit-Filter"]
 
 
 
+[[more-on-filtering]]
 === Mehr zum Filtern
 
 Sie können Ihren Filter mit den folgenden Optionen verfeinern:
@@ -84,6 +87,7 @@ Wenn Sie eine Filterzeichenfolge in doppelte Anführungszeichen setzen, behandel
 
 
 
+[[audited-events-and-actions]]
 == Überwachte Ereignisse und Aktionen
 
 Die von Data Infrastructure Insights geprüften Ereignisse und Aktionen können in die folgenden allgemeinen Bereiche eingeteilt werden:
@@ -121,6 +125,7 @@ Beispiel: Empfänger _ci-alerts-notifications-dl_ erstellt
 
 
 
+[[exporting-audit-events]]
 == Exportieren von Audit-Ereignissen
 
 Sie können die Ergebnisse Ihrer Audit-Anzeige in eine CSV-Datei exportieren, sodass Sie die Daten analysieren oder in eine andere Anwendung importieren können.
@@ -134,6 +139,7 @@ Die angezeigten Audit-Ereignisse werden in eine CSV-Datei mit maximal 10.000 Zei
 
 
 
+[[retention-of-audit-data]]
 == Aufbewahrung von Prüfdaten
 
 Die Dauer der Aufbewahrung von Audit-Daten Data Infrastructure Insights hängt von Ihrem Abonnement ab:
@@ -148,6 +154,7 @@ Prüfeinträge, die älter als die Aufbewahrungsdauer sind, werden automatisch g
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Hier finden Sie Vorschläge zur Behebung von Problemen mit Audit.

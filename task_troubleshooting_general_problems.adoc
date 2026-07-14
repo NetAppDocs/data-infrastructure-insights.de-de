@@ -16,6 +16,7 @@ Siehe auchlink:task_troubleshooting_linux_acquisition_unit_problems.html["Fehler
 
 
 
+[[login-issues]]
 == Anmeldeprobleme
 
 |===
@@ -44,6 +45,7 @@ Siehe auchlink:task_troubleshooting_linux_acquisition_unit_problems.html["Fehler
 |===
 
 
+[[other-issues]]
 == Andere Probleme
 
 |===
@@ -62,6 +64,7 @@ Siehe auchlink:task_troubleshooting_linux_acquisition_unit_problems.html["Fehler
 |===
 
 
+[[resources]]
 == Ressourcen
 
 Weitere Tipps zur Fehlerbehebung finden Sie imlink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp Wissensdatenbank"] (Support-Anmeldung erforderlich).

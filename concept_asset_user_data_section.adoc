@@ -14,6 +14,7 @@ Im Abschnitt „Benutzerdaten“ einer Asset-Seite werden alle benutzerdefiniert
 
 
 
+[[using-the-user-data-section-to-assign-or-modify-applications]]
 == Verwenden des Abschnitts „Benutzerdaten“ zum Zuweisen oder Ändern von Anwendungen
 
 Sie können auf Ihrem Mandanten ausgeführte Anwendungen bestimmten Assets (Host, virtuelle Maschinen, Volumes, interne Volumes, Qtrees und Hypervisoren) zuweisen.  Im Abschnitt „Benutzerdaten“ können Sie die einem Asset zugewiesenen Anwendungen hinzufügen, ändern oder entfernen.  Für alle diese Asset-Typen außer Volumes können Sie mehr als eine Anwendung zuweisen.
@@ -37,6 +38,7 @@ Um eine Anwendung zu entfernen, öffnen Sie die Anwendungsliste und deaktivieren
 
 
 
+[[using-the-user-data-section-to-assign-or-modify-annotations]]
 == Verwenden des Abschnitts „Benutzerdaten“ zum Zuweisen oder Ändern von Anmerkungen
 
 Wenn Sie Data Infrastructure Insights anpassen, um Daten für Ihre Unternehmensanforderungen zu verfolgen, können Sie spezielle Notizen, sogenannte Anmerkungen, definieren und sie Ihren Assets zuweisen.  Im Abschnitt „Benutzerdaten“ einer Asset-Seite werden einem Asset zugewiesene Anmerkungen angezeigt. Außerdem können Sie die diesem Asset zugewiesenen Anmerkungen ändern.

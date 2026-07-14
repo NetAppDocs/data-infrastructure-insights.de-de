@@ -14,6 +14,7 @@ Data Infrastructure Insights verwendet den Datensammler Brocade Enterprise Fabri
 
 
 
+[[requirements]]
 == Anforderungen
 
 * Netzwerkadresse oder vollqualifizierter Domänenname für den EFCM-Server
@@ -25,9 +26,10 @@ Data Infrastructure Insights verwendet den Datensammler Brocade Enterprise Fabri
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -42,9 +44,10 @@ Data Infrastructure Insights verwendet den Datensammler Brocade Enterprise Fabri
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 

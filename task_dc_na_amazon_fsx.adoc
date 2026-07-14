@@ -17,11 +17,12 @@ NOTE: Dieser Data Infrastructure Insights Collector erfordert einen ONTAP Benutz
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erfasst Bestands- und Leistungsdaten vom FSx- NetApp Datenkollektor.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für den Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -36,12 +37,14 @@ Data Infrastructure Insights erfasst Bestands- und Leistungsdaten vom FSx- NetAp
 |===
 
 
+[[fsx-netapp-terminology]]
 == FSx- NetApp -Terminologie
 
 Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie möglicherweise auf den Zielseiten der FSx- NetApp Speicherressourcen finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
 
 
 
+[[storage]]
 === Storage
 
 * Modell – Eine durch Kommas getrennte Liste der eindeutigen, diskreten Modellnamen innerhalb dieses Clusters.
@@ -55,6 +58,7 @@ Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie mögliche
 
 
 
+[[storage-pool]]
 === Speicherpool
 
 * Speicher – auf welchem Speicher-Array dieser Pool lebt.  Obligatorisch.
@@ -66,6 +70,7 @@ Die folgenden Bedingungen gelten für Objekte oder Referenzen, die Sie mögliche
 
 
 
+[[requirements]]
 == Anforderungen
 
 Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden Voraussetzungen:
@@ -77,9 +82,10 @@ Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden 
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -94,6 +100,7 @@ Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden 
 |===
 
 
+[[advanced-metrics]]
 == Erweiterte Metriken
 
 Dieser Datensammler sammelt die folgenden erweiterten Metriken aus dem FSx für NetApp ONTAP -Speicher:
@@ -115,15 +122,17 @@ Beachten Sie, dass FSx CLI- und API-Befehle einige Kapazitätswerte abrufen, die
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

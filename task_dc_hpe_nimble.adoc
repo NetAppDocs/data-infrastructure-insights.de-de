@@ -14,11 +14,12 @@ Der HP Enterprise Alletra 6000 (früher Nimble) Datensammler unterstützt Invent
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält von diesem Collector die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -47,6 +48,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Um Inventar- und Konfigurationsdaten vom Speicherarray zu erfassen, müssen Sie über Folgendes verfügen:
@@ -65,9 +67,10 @@ Um Leistungsdaten vom Speicherarray zu erfassen, müssen Sie über Folgendes ver
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -82,6 +85,7 @@ Um Leistungsdaten vom Speicherarray zu erfassen, müssen Sie über Folgendes ver
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
 |===

@@ -14,6 +14,7 @@ Data Infrastructure Insights bietet bis zu vier Benutzerkontorollen: Kontoinhabe
 
 
 
+[[permission-levels]]
 == Berechtigungsstufen
 
 Sie verwenden ein Konto mit Administratorrechten, um Benutzerkonten zu erstellen oder zu ändern.  Jedem Benutzerkonto wird für jede Data Infrastructure Insights -Funktion eine Rolle aus den folgenden Berechtigungsstufen zugewiesen.
@@ -37,6 +38,7 @@ Es empfiehlt sich, die Anzahl der Benutzer mit Administratorberechtigungen zu be
 
 
 
+[[data-infrastructure-insights-permissions-by-user-role]]
 === Data Infrastructure Insights Berechtigungen nach Benutzerrolle
 
 Die folgende Tabelle zeigt die den einzelnen Benutzerrollen erteilten Data Infrastructure Insights Berechtigungen.
@@ -122,6 +124,7 @@ Die folgende Tabelle zeigt die den einzelnen Benutzerrollen erteilten Data Infra
 
 
 
+[[creating-accounts-by-inviting-users]]
 == Erstellen von Konten durch Einladen von Benutzern
 
 Das Erstellen eines neuen Benutzerkontos erfolgt über die NetApp Console.  Ein Benutzer kann auf die per E-Mail gesendete Einladung antworten. Wenn der Benutzer jedoch kein Konto bei Console hat, muss er sich anmelden, damit er die Einladung annehmen kann.
@@ -164,6 +167,7 @@ Die Einladung wird an den Benutzer gesendet.  Benutzer haben 14 Tage Zeit, die E
 
 
 
+[[modifying-an-existing-users-role]]
 == Ändern der Rolle eines vorhandenen Benutzers
 
 Um die Rolle eines vorhandenen Benutzers zu ändern, einschließlich der Hinzufügung als *sekundärer Kontoinhaber*, führen Sie die folgenden Schritte aus.
@@ -176,6 +180,7 @@ Um die Rolle eines vorhandenen Benutzers zu ändern, einschließlich der Hinzuf�
 
 
 
+[[to-assign-a-secondary-account-owner]]
 === So weisen Sie einen sekundären Kontoinhaber zu
 
 Sie müssen als Kontoinhaber für Observability angemeldet sein, um die Rolle des Kontoinhabers einem anderen Benutzer zuweisen zu können.
@@ -192,6 +197,7 @@ Sie können so viele Kontoinhaber haben, wie Sie möchten. Es empfiehlt sich jed
 
 
 
+[[deleting-users]]
 == Löschen von Benutzern
 
 Ein Benutzer mit der Administratorrolle kann einen Benutzer löschen (z. B. jemanden, der nicht mehr im Unternehmen ist), indem er auf den Namen des Benutzers klickt und im Dialogfeld auf _Benutzer löschen_ klickt.  Der Benutzer wird aus der Data Infrastructure Insights -Umgebung entfernt.
@@ -200,10 +206,12 @@ Beachten Sie, dass alle vom Benutzer erstellten Dashboards, Abfragen usw. auch n
 
 
 
+[[single-sign-on-sso-and-identity-federation]]
 == Single Sign-On (SSO) und Identitätsföderation
 
 
 
+[[what-is-identity-federation]]
 === Was ist Identitätsföderation?
 
 Mit Identity Federation:
@@ -226,6 +234,7 @@ Wenn ein Benutzer im obigen Diagramm auf Data Infrastructure Insights zugreift, 
 
 
 
+[[enabling-identity-federation]]
 === Aktivieren der Identitätsföderation
 
 Die Konsole verwendet Auth0, um die Identitätsföderation zu implementieren und in Dienste wie Active Directory Federation Services (ADFS) und Microsoft Azure Active Directory (AD) zu integrieren.  Informationen zum Konfigurieren der Identitätsföderation finden Sie imlink:https://services.cloud.netapp.com/misc/federation-support["Anweisungen zur Föderation"] .
@@ -241,6 +250,7 @@ Für dieses oder andere Föderationsprobleme können Sie ein Support-Ticket erö
 
 
 
+[[single-sign-on-sso-user-auto-provisioning]]
 === Automatische Benutzerbereitstellung per Single Sign-On (SSO)
 
 Zusätzlich zum Einladen von Benutzern können Administratoren allen Benutzern in ihrer Unternehmensdomäne den Zugriff auf Data Infrastructure Insights per *Single Sign-On (SSO) User Auto-Provisioning* ermöglichen, ohne sie einzeln einladen zu müssen.  Wenn SSO aktiviert ist, kann sich jeder Benutzer mit derselben Domänen-E-Mail-Adresse mit seinen Unternehmensanmeldeinformationen bei Data Infrastructure Insights anmelden.
@@ -266,6 +276,7 @@ Aktivieren Sie die automatische SSO-Benutzerbereitstellung jedoch nicht, wenn ei
 
 
 
+[[restricting-access-by-domain]]
 == Zugriffsbeschränkung nach Domäne
 
 Data Infrastructure Insights kann den Benutzerzugriff auf die von Ihnen angegebenen Domänen beschränken.  Wählen Sie auf der Seite *Admin > Benutzerverwaltung* die Option „Domänen einschränken“ aus.

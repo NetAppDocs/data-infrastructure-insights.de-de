@@ -22,6 +22,7 @@ image:vm_analyzer_example_with_panel_a.png["VM Analyzer-Topologiekarte eines Spe
 
 
 
+[[explore-connections-among-your-assets]]
 == Untersuchen Sie die Verbindungen zwischen Ihren Assets
 
 Wählen Sie *Beobachtbarkeit > Analysieren > VM-Analysator*, um den VM-Analysator anzuzeigen.  Legen Sie einen Filter für Anwendung, virtuelle Maschine, Volume, internes Volume fest oder fügen Sie Ihre eigenen Filter hinzu.  Die Karte für die Objekte wird angezeigt und zeigt verbundene Objekte.  Bewegen Sie den Mauszeiger über ein Objekt, um die Verkehrsmetriken für diese Verbindungen anzuzeigen.
@@ -35,6 +36,7 @@ Durch Klicken auf ein Objekt oder eine Gruppe wird ein Slideout-Fenster geöffne
 
 
 
+[[see-it-in-action]]
 == Sehen Sie es in Aktion
 
 link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["Vereinfachte Fehlerbehebung mit VM Analyzer (Video), Fenster=Später lesen"]

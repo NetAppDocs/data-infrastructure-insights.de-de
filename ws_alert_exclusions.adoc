@@ -24,6 +24,7 @@ Der Alarmausschluss wird pro Mandant konfiguriert und umfasst Folgendes:
 
 
 
+[[manage-exclusions-and-auditing]]
 == Ausschlüsse und Prüfungen verwalten
 
 * Administratoren können jederzeit Dateierweiterungen, einzelne Benutzer oder Pfade hinzufügen oder entfernen.
@@ -32,6 +33,7 @@ Der Alarmausschluss wird pro Mandant konfiguriert und umfasst Folgendes:
 
 
 
+[[users-and-paths]]
 == Benutzer und Pfade
 
 * Benutzer-Ausschlussliste: Fügen Sie Benutzer hinzu, die von Benachrichtigungen ausgeschlossen werden sollen.
@@ -46,6 +48,7 @@ Einzelne Benutzer und Verzeichnispfade können der jeweiligen Ausschlussliste hi
 
 
 
+[[file-types]]
 == Dateitypen
 
 Sobald ein Dateityp zur Liste der zulässigen Dateitypen hinzugefügt wurde, wird für diesen Dateityp keine Warnung vor Dateimanipulationsangriffen generiert. Beachten Sie, dass die Richtlinie für Dateitypen nur für die Erkennung von Dateimanipulationen gilt.

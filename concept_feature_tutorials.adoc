@@ -18,6 +18,7 @@ Lernen Sie Data Infrastructure Insights effizient kennen mit unseren Feature-Tut
 
 
 
+[[checklist-and-video-tutorials]]
 == Checkliste und Video-Tutorials
 
 Die auf Ihrem Data Infrastructure Insights Mandanten angezeigte *Startup-Checkliste* enthält eine Liste mit mehreren nützlichen Aufgaben und Konzepten.  Wenn Sie ein Element in der Checkliste auswählen, gelangen Sie zur entsprechenden Data Infrastructure Insights -Seite für dieses Konzept.  Wenn Sie beispielsweise auf das Element „Dashboard erstellen“ klicken, wird die Seite „Data Infrastructure Insights *Dashboards*“ geöffnet.
@@ -35,12 +36,14 @@ NOTE: Sie können die Tutorials in beliebiger Reihenfolge und so oft Sie möchte
 
 
 
+[[dismissing-the-checklist]]
 === Verwerfen der Checkliste
 
 Die Start-Checkliste wird angezeigt, bis Sie unten in der Checkliste auf den Link „Nicht mehr anzeigen“ klicken.  Auch nach dem Schließen der Checkliste sind die Tutorials weiterhin auf jeder entsprechenden Data Infrastructure Insights -Seite verfügbar, bis Sie jedes einzelne aus der Nachrichtenkopfzeile schließen.
 
 
 
+[[video-tutorials]]
 == Video-Tutorials
 
 Sehen Sie sich die folgenden Videos an, um mehr zu erfahren.

@@ -18,11 +18,12 @@ Data Infrastructure Insights verwendet den SSH-Datensammler Dell EMC PowerScale 
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält von diesem Datensammler die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -42,6 +43,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
@@ -53,9 +55,10 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -70,9 +73,10 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -87,15 +91,17 @@ Zur Konfiguration dieses Datensammlers benötigen Sie folgende Informationen:
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

@@ -14,11 +14,12 @@ Data Infrastructure Insights verwendet den Rubrik-Datensammler, um Bestands- und
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Rubrik-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -35,6 +36,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlich:
@@ -49,9 +51,10 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -69,9 +72,10 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Inventarabfrageintervall (min) | Der Standardwert ist 60 
 
@@ -80,15 +84,17 @@ Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlic
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

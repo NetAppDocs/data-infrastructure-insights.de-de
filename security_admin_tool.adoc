@@ -18,18 +18,21 @@ Verschlüsselte Passwörter von Datenquellen werden in Data Infrastructure Insig
 
 
 
+[[upgrade-and-installation-considerations]]
 == Überlegungen zu Upgrades und Installationen
 
 Wenn Ihr Insight-System nicht standardmäßige Sicherheitskonfigurationen enthält (d. h. Sie haben Passwörter neu verschlüsselt), müssen Sie Ihre Sicherheitskonfigurationen sichern.  Durch die Installation neuer Software oder in einigen Fällen durch ein Software-Upgrade wird Ihr System auf die Standardsicherheitskonfiguration zurückgesetzt.  Wenn Ihr System zur Standardkonfiguration zurückkehrt, müssen Sie die nicht standardmäßige Konfiguration wiederherstellen, damit das System ordnungsgemäß funktioniert.
 
 
 
+[[managing-security-on-the-acquisition-unit]]
 == Verwalten der Sicherheit auf der Erfassungseinheit
 
 Mit dem Tool SecurityAdmin können Sie Sicherheitsoptionen für Data Infrastructure Insights verwalten. Es wird auf dem System der Erfassungseinheit ausgeführt.  Zur Sicherheitsverwaltung gehört die Verwaltung von Schlüsseln und Passwörtern, das Speichern und Wiederherstellen der von Ihnen erstellten Sicherheitskonfigurationen oder das Zurücksetzen der Konfigurationen auf die Standardeinstellungen.
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 * Sie müssen über Administratorrechte auf dem AU-System verfügen, um die Acquisition Unit-Software (einschließlich des SecurityAdmin-Tools) zu installieren.
@@ -44,6 +47,7 @@ Linux - /bin/oci-securityadmin.sh
 ....
 
 
+[[using-the-securityadmin-tool]]
 == Verwenden des SecurityAdmin-Tools
 
 Starten Sie das SecurityAdmin-Tool im interaktiven Modus (-i).
@@ -126,6 +130,7 @@ Wählen Sie die Option, die Sie konfigurieren möchten, und folgen Sie den Anwei
 
 
 
+[[specifying-a-user-to-run-the-tool]]
 == Festlegen eines Benutzers zum Ausführen des Tools
 
 Wenn Sie sich in einer kontrollierten, sicherheitsbewussten Umgebung befinden, verfügen Sie möglicherweise nicht über die Gruppe _cisys_, möchten aber dennoch, dass bestimmte Benutzer das Tool SecurityAdmin ausführen.
@@ -148,6 +153,7 @@ Wenn der angegebene Benutzer und/oder die angegebene Gruppe nicht vorhanden sind
 
 
 
+[[updating-or-removing-proxy]]
 == Aktualisieren oder Entfernen des Proxys
 
 Mit dem Tool SecurityAdmin können Sie Proxy-Informationen für die Erfassungseinheit festlegen oder entfernen, indem Sie das Tool mit dem Parameter _-pr_ ausführen:
@@ -194,6 +200,7 @@ Um einen Proxy zu aktualisieren, lautet der Befehl
  ./securityadmin -pr -upr <arg>
 
 
+[[external-key-retrieval]]
 == Externer Schlüsselabruf
 
 Wenn Sie ein UNIX-Shell-Skript bereitstellen, kann es von der Erfassungseinheit ausgeführt werden, um den *privaten Schlüssel* und den *öffentlichen Schlüssel* aus Ihrem Schlüsselverwaltungssystem abzurufen.
@@ -226,6 +233,7 @@ Das Skript muss mithilfe des SecurityAdmin-Tools bei der Erfassungseinheit regis
 |===
 
 
+[[encrypting-a-password-for-use-in-api]]
 == Verschlüsseln eines Passworts zur Verwendung in der API
 
 Option 8 ermöglicht Ihnen die Verschlüsselung eines Passworts, welches Sie dann per API an einen Datensammler weitergeben können.

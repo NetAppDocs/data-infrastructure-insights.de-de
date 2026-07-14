@@ -18,6 +18,7 @@ Identifizieren Sie sowohl erwartete (zur Nachverfolgung) als auch unerwartete (z
 
 
 
+[[viewing-audited-events]]
 == Anzeigen überwachter Ereignisse
 
 Um die Seite „Audit“ anzuzeigen, klicken Sie im Menü auf „Admin“ > „Audit“. Die Seite „Audit“ wird angezeigt und enthält die folgenden Details zu jedem Audit-Eintrag:
@@ -44,6 +45,7 @@ Zu den überwachten Workload-Sicherheitsereignissen gehören unter anderem die f
 
 
 
+[[displaying-audit-entries]]
 == Anzeigen von Auditeinträgen
 
 Es gibt verschiedene Möglichkeiten, Auditeinträge anzuzeigen:
@@ -55,6 +57,7 @@ Es gibt verschiedene Möglichkeiten, Auditeinträge anzuzeigen:
 
 
 
+[[more-on-filtering]]
 == Mehr zum Filtern
 
 Sie können Ihren Filter mit den folgenden Optionen verfeinern:
@@ -89,6 +92,7 @@ Wenn Sie eine Filterzeichenfolge in doppelte Anführungszeichen setzen, behandel
 
 
 
+[[audited-events-and-actions]]
 == Überwachte Ereignisse und Aktionen
 
 Die von Workload Security geprüften Ereignisse und Aktionen lassen sich in folgende Hauptkategorien einteilen:
@@ -122,12 +126,14 @@ Beispiel: _Empfänger ci-alerts-notifications-dl erstellt_
 
 
 
+[[exporting-audit-events]]
 == Exportieren von Audit-Ereignissen
 
 Sie können die Ergebnisse Ihrer Audit-Anzeige in eine .CSV-Datei exportieren, um die Daten zu analysieren oder in eine andere Anwendung zu importieren. Schritte 1. Legen Sie auf der Audit-Seite den gewünschten Zeitraum und alle gewünschten Filter fest. Workload Security exportiert nur die Audit-Einträge, die den von Ihnen festgelegten Filtern und dem Zeitraum entsprechen. 2. Klicken Sie oben rechts in der Tabelle auf die Schaltfläche Export. Die angezeigten Audit-Ereignisse werden in eine .CSV-Datei exportiert, bis zu maximal 10.000 Zeilen.
 
 
 
+[[retention-of-audit-data]]
 == Aufbewahrung von Prüfdaten
 
 Die Speicherdauer der Audit-Daten durch Workload Security richtet sich nach Ihrem Abonnement:

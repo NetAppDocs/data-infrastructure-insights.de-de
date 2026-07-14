@@ -58,6 +58,7 @@ Hier finden Sie Vorschläge zur Behebung von Problemen mit Acquisition Units auf
 |===
 
 
+[[considerations-about-proxies-and-firewalls]]
 == Überlegungen zu Proxys und Firewalls
 
 Wenn Ihre Organisation die Verwendung eines Proxys für den Internetzugang erfordert, müssen Sie möglicherweise das Proxy-Verhalten Ihrer Organisation verstehen und nach bestimmten Ausnahmen suchen, damit Data Infrastructure Insights funktioniert.  Beachten Sie Folgendes:
@@ -80,6 +81,7 @@ Falls der Proxy nicht für die Verkehrskontrolle eingerichtet ist, kann eine Aus
 
 
 
+[[viewing-proxy-endpoints]]
 === Anzeigen von Proxy-Endpunkten
 
 Sie können Ihre Proxy-Endpunkte anzeigen, indem Sie beim Auswählen eines Datensammlers während des Onboardings auf den Link *Proxy-Einstellungen* oder auf der Seite *Hilfe > Support* auf den Link unter _Proxy-Einstellungen_ klicken.  Es wird eine Tabelle wie die folgende angezeigt.  Wenn Sie in Ihrer Umgebung über Workload Security verfügen, werden die konfigurierten Endpunkt-URLs auch in dieser Liste angezeigt.
@@ -88,6 +90,7 @@ image:ProxyEndpoints_NewTable.png["Tabelle der Proxy-Endpunkte"]
 
 
 
+[[resources]]
 == Ressourcen
 
 Weitere Tipps zur Fehlerbehebung finden Sie imlink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["NetApp Wissensdatenbank"] (Support-Anmeldung erforderlich).

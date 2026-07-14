@@ -20,6 +20,7 @@ Wenn Sie an einer Vorschau einer oder mehrerer dieser Funktionen interessiert si
 
 
 
+[[current-previews]]
 == Aktuelle Previews:
 
 * link:ai_for_dii_overview.html["Data Infrastructure Insights AI Assistant"] Vorschau.

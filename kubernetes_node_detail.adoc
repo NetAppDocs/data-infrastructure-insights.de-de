@@ -16,6 +16,7 @@ image:KubernetesNodeFiltering.png["Kubernetes-Knoten-Detailseite mit Filterung"]
 
 
 
+[[exploring-the-nodes-pods-and-persistent-volumes]]
 == Erkunden der Pods und persistenten Volumes des Knotens
 
 Data Infrastructure Insights bietet Einblick in den Back-End-Speicher Ihrer Kubernetes-Umgebungen und gibt Ihnen Einblick in Ihre Kubernetes-Pods und Persistent Volumes (PVs).  Sie können PV-Zähler wie IOPS, Latenz und Durchsatz von der Nutzung eines einzelnen Pods über einen PV-Zähler bis hin zu einem PV und dem gesamten Weg zum Back-End-Speichergerät verfolgen.
@@ -33,6 +34,7 @@ Beachten Sie, dass es zur Nutzung dieser neuen Tabellen empfohlen wird, Ihren ak
 
 
 
+[[kubernetes-node-to-vm-links]]
 == Kubernetes-Knoten-zu-VM-Links
 
 Auf einer Kubernetes-Knotenseite können Sie klicken, um die VM-Seite des Knotens zu öffnen.  Die VM-Seite enthält auch einen Link zurück zum Knoten selbst.

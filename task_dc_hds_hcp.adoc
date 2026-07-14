@@ -17,11 +17,12 @@ NOTE: Für die Hitachi Content Platform gilt ein anderer Preis für Raw TB als f
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom Hitachi HCP-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -41,6 +42,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[inventory-requirements]]
 == Inventaranforderungen
 
 Um Bestandsdaten erfassen zu können, benötigen Sie Folgendes:
@@ -51,9 +53,10 @@ Um Bestandsdaten erfassen zu können, benötigen Sie Folgendes:
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -74,6 +77,7 @@ Um Bestandsdaten erfassen zu können, benötigen Sie Folgendes:
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
 |===

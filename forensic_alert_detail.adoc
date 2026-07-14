@@ -14,6 +14,7 @@ Wenn Sie auf die Zusammenfassung einer Warnung klicken, wird die Seite mit ausf�
 
 
 
+[[alert-details-page-displays-user]]
 == Die Seite „Alarmdetails“ zeigt den Benutzer
 
 Unter „Alarmdetails“ finden Sie Informationen zu dem auf der Seite „Alarme“ ausgewählten Alarm.
@@ -55,6 +56,7 @@ Unter „Alarmdetails“ finden Sie Informationen zu dem auf der Seite „Alarme
 
 
 
+[[related-user]]
 === Zugehöriger Benutzer
 
 * Benutzername und Titel
@@ -67,6 +69,7 @@ Unter „Alarmdetails“ finden Sie Informationen zu dem auf der Seite „Alarme
 
 
 
+[[activity]]
 === Aktivität
 
 Zeigt die Aktivität des Benutzers der letzten 7 Tage und den letzten Standort, von dem aus der Benutzer zugegriffen hat.

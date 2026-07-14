@@ -27,6 +27,7 @@ image:AIQ_Summary_Example.png["Zusammenfassung der Speicherseite"]
 
 
 
+[[opening-the-digital-advisor-page]]
 == Öffnen der Digital Advisor Seite
 
 Wenn Sie auf den Link zu einer Digital Advisor -Seite klicken und derzeit nicht bei Ihrem Digital Advisor -Konto angemeldet sind, müssen Sie die folgenden Schritte ausführen, um die Digital Advisor -Seite für den Speicherknoten anzuzeigen.
@@ -37,12 +38,14 @@ Wenn Sie auf den Link zu einer Digital Advisor -Seite klicken und derzeit nicht 
 
 
 
+[[querying-for-risks]]
 == Abfragen nach Risiken
 
 In Data Infrastructure Insights können Sie die Spalte *monitoring.count* zu einer Speicher- oder Speicherknotenabfrage hinzufügen.  Wenn das zurückgegebene Ergebnis von Digital Advisor überwachte Speichersysteme umfasst, wird in der Spalte „monitoring.count“ die Anzahl der Risiken für das Speichersystem oder den Knoten angezeigt.
 
 
 
+[[dashboards]]
 == Dashboards
 
 Sie können Widgets erstellen (z. B. Kreisdiagramm-, Tabellen-Widget, Balken-, Säulen-, Streudiagramm- und Einzelwert-Widgets), um Objektrisiken für Speicher und Speicherknoten für NetApp Clustered Data ONTAP Systeme zu visualisieren, die von Digital Advisor überwacht werden.  „Objektrisiken“ können in diesen Widgets als Spalte oder Metrik ausgewählt werden, wobei Speicher oder Speicherknoten im Mittelpunkt stehen.

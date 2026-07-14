@@ -16,11 +16,12 @@ DS3xxx-, DS4xxx- und DS5xxx-Geräte werden unterstützt vonlink:task_dc_na_eseri
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom IBM DS-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -43,6 +44,7 @@ Hinweis: Dies sind nur allgemeine Terminologiezuordnungen und stellen möglicher
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration dieses Datensammlers benötigen Sie Folgendes:
@@ -56,9 +58,10 @@ Zur Konfiguration dieses Datensammlers benötigen Sie Folgendes:
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -76,9 +79,10 @@ Zur Konfiguration dieses Datensammlers benötigen Sie Folgendes:
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -102,15 +106,17 @@ Zur Konfiguration dieses Datensammlers benötigen Sie Folgendes:
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

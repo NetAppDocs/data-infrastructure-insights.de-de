@@ -14,6 +14,7 @@ Data Infrastructure Insights speichert Daten je nach Abonnement für Zeiträume 
 
 
 
+[[data-retention]]
 == Datenaufbewahrung
 
 Data Infrastructure Insights speichert Daten für einen Zeitraum, der von Ihrem Abonnementtyp abhängt.
@@ -31,12 +32,14 @@ Ausführliche Informationen zu den Funktionen und Preisoptionen von Data Infrast
 
 
 
+[[downsampling-of-data]]
 == Downsampling von Daten
 
 *Downsampling* bietet eine statistische Annäherung Ihrer Daten in Diagrammen und verschafft Ihnen einen effizienten Überblick über die Daten, ohne jeden Datenpunkt anzeigen zu müssen, während Sie gleichzeitig eine genaue Ansicht Ihrer gesammelten Daten behalten.
 
 
 
+[[why-is-downsampling-needed]]
 === Warum ist Downsampling erforderlich?
 
 Da die Vorbereitung der Daten für die Anzeige in Diagrammen und Grafiken einen großen Verarbeitungsaufwand erfordert, können die Daten, um eine schnelle und effiziente Anzeige der Diagramme zu ermöglichen, so heruntergerechnet werden, dass die Gesamtform eines Diagramms erhalten bleibt, ohne dass jeder einzelne Datenpunkt für dieses Diagramm verarbeitet werden muss.
@@ -45,6 +48,7 @@ Hinweis: Beim Downsampling gehen keine tatsächlichen Daten verloren.  Sie könn
 
 
 
+[[how-downsampling-works]]
 === So funktioniert Downsampling
 
 Die Daten werden unter den folgenden Bedingungen heruntergerechnet:
@@ -76,6 +80,7 @@ NOTE: Aufgrund der Art und Weise, wie Daten für das Downsampling angenähert we
 
 
 
+[[violations-on-downsampled-charts]]
 === Verstöße bei heruntergerechneten Diagrammen
 
 Beachten Sie beim Anzeigen heruntergerechneter Diagramme, dass Verstöße nicht angezeigt werden.  Um Verstöße anzuzeigen, haben Sie zwei Möglichkeiten:

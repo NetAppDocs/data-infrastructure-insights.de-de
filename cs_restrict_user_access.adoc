@@ -24,6 +24,7 @@ Wenn vier SVMs vorhanden sind und eine SVM für SMB, eine für NFS und die beide
 
 
 
+[[prerequisites-for-user-access-blocking]]
 == Voraussetzungen für die Benutzerzugriffssperre
 
 Damit diese Funktion funktioniert, sind Anmeldeinformationen auf Clusterebene erforderlich.
@@ -45,6 +46,7 @@ Lesen Sie unbedingt den Abschnitt „Berechtigungen“ derlink:task_add_collecto
 
 
 
+[[how-to-enable-the-feature]]
 == Wie aktiviere ich die Funktion?
 
 * Navigieren Sie in Workload Security zu *Workload Security > Richtlinien > Richtlinien für automatisierte Antworten*.  Wählen Sie *+Angriffsrichtlinie*.
@@ -53,6 +55,7 @@ Lesen Sie unbedingt den Abschnitt „Berechtigungen“ derlink:task_add_collecto
 
 
 
+[[how-to-set-up-automatic-user-access-blocking]]
 == Wie richte ich die automatische Sperrung des Benutzerzugriffs ein?
 
 * Erstellen Sie eine neue Angriffsrichtlinie oder bearbeiten Sie eine vorhandene Angriffsrichtlinie.
@@ -64,6 +67,7 @@ Lesen Sie unbedingt den Abschnitt „Berechtigungen“ derlink:task_add_collecto
 
 
 
+[[how-to-know-if-there-are-blocked-users-in-the-system]]
 == Wie kann ich feststellen, ob es im System blockierte Benutzer gibt?
 
 * Auf der Seite mit den Warnlisten wird oben auf dem Bildschirm ein Banner angezeigt, falls ein Benutzer blockiert wird.
@@ -73,6 +77,7 @@ Lesen Sie unbedingt den Abschnitt „Berechtigungen“ derlink:task_add_collecto
 
 
 
+[[restrict-and-manage-user-access-manually]]
 == Manuelles Einschränken und Verwalten des Benutzerzugriffs
 
 * Sie können zum Bildschirm mit den Alarmdetails oder Benutzerdetails gehen und dann von diesen Bildschirmen aus einen Benutzer manuell sperren oder wiederherstellen.
@@ -80,12 +85,14 @@ Lesen Sie unbedingt den Abschnitt „Berechtigungen“ derlink:task_add_collecto
 
 
 
+[[user-access-limitation-history]]
 == Verlauf der Benutzerzugriffsbeschränkungen
 
 Auf der Seite mit den Alarmdetails und Benutzerdetails im Benutzerbereich können Sie eine Prüfung des Zugriffsbeschränkungsverlaufs des Benutzers anzeigen: Zeit, Aktion (Blockieren, Entsperren), Dauer, durchgeführte Aktion, manuell/automatisch und betroffene IPs für NFS.
 
 
 
+[[how-to-disable-the-feature]]
 == Wie deaktiviere ich die Funktion?
 
 Sie können die Funktion jederzeit deaktivieren.  Wenn im System eingeschränkte Benutzer vorhanden sind, müssen Sie deren Zugriff zuerst wiederherstellen.
@@ -98,6 +105,7 @@ Die Funktion wird auf allen Seiten ausgeblendet.
 
 
 
+[[manually-restore-ips-for-nfs]]
 == Manuelles Wiederherstellen von IPs für NFS
 
 Führen Sie die folgenden Schritte aus, um alle IPs von ONTAP manuell wiederherzustellen, wenn Ihre Workload Security-Testversion abläuft oder der Agent/Collector ausgefallen ist.
@@ -143,6 +151,7 @@ svm2         test            3       cifs,    0.0.0.0/0             any
 
 
 
+[[manually-restore-users-for-smb]]
 == Manuelles Wiederherstellen von Benutzern für SMB
 
 Führen Sie die folgenden Schritte aus, um alle Benutzer von ONTAP manuell wiederherzustellen, wenn Ihre Workload Security-Testversion abläuft oder der Agent/Collector ausgefallen ist.
@@ -181,6 +190,7 @@ Für die zuvor gesperrten Benutzer sollen keine Einträge mehr angezeigt werden.
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 |===

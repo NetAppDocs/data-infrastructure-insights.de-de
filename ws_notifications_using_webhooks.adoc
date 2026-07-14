@@ -45,6 +45,7 @@ Die Webhook-Kanalinstanz besteht aus den folgenden Elementen
 |===
 
 
+[[creating-a-webhook]]
 == Erstellen eines Webhooks
 
 Um einen Workload Security Webhook zu erstellen, gehen Sie zu Admin > Benachrichtigungen und wählen Sie die Registerkarte „Workload Security Webhooks“.  Das folgende Bild zeigt einen Beispielbildschirm zum Erstellen eines Slack-Webhooks.
@@ -60,6 +61,7 @@ image:ws_webhook_slack_example.png["Webhook-Slack-Beispiel für Workload Securit
 
 
 
+[[parameters-what-are-they-and-how-to-use-them]]
 == Parameter: Was sind sie und wie werden sie verwendet?
 
 Alarmparameter sind dynamische Werte, die pro Alarm ausgefüllt werden.  Beispielsweise wird der Parameter _%%severity%%_ durch den Schweregradtyp der Warnung ersetzt.
@@ -68,6 +70,7 @@ Beachten Sie, dass beim Klicken auf die Schaltfläche „Webhook testen“ keine
 
 
 
+[[custom-parameters-and-secrets]]
 === Benutzerdefinierte Parameter und Geheimnisse
 
 In diesem Abschnitt können Sie beliebige benutzerdefinierte Parameter und/oder Geheimnisse hinzufügen.  Ein benutzerdefinierter Parameter oder ein Geheimnis kann in der URL oder im Nachrichtentext enthalten sein.  Mithilfe von Geheimnissen können Benutzer sichere benutzerdefinierte Parameter wie Kennwort, API-Schlüssel usw. konfigurieren.
@@ -78,6 +81,7 @@ image:ws_webhook_parameters_example.png["Workload-Sicherheits-Webhook mit Parame
 
 
 
+[[workload-security-webhooks-list-page]]
 == Seite „Workload Security Webhooks – Liste“
 
 Auf der Webhook-Listenseite werden die Felder „Name“, „Erstellt von“, „Erstellt am“, „Status“, „Sicher“ und „Zuletzt gemeldet“ angezeigt.  Hinweis: Der Wert der Spalte „Status“ ändert sich ständig basierend auf dem Ergebnis des letzten Webhook-Triggers.  Nachfolgend finden Sie Beispiele für Statusergebnisse.
@@ -115,6 +119,7 @@ Auf der Webhook-Listenseite können Benutzer Webhooks auch bearbeiten/dupliziere
 
 
 
+[[configure-webhook-notification-in-alert-policy]]
 == Konfigurieren der Webhook-Benachrichtigung in der Warnrichtlinie
 
 Um einer Warnrichtlinie eine Webhook-Benachrichtigung hinzuzufügen, gehen Sie zu -Workload-Sicherheit > Richtlinien- und wählen Sie eine vorhandene Richtlinie aus oder fügen Sie eine neue Richtlinie hinzu.  Wählen Sie im Abschnitt „Aktionen“ > Dropdown-Menü „Webhook-Benachrichtigungen“ die erforderlichen Webhooks aus.
@@ -131,6 +136,7 @@ Hinweis: E-Mail-Benachrichtigungen sind unabhängig von Richtlinien und werden w
 
 
 
+[[workload-security-webhook-examples]]
 === Beispiele für Workload-Sicherheits-Webhooks
 
 Webhooks fürlink:ws_webhook_example_slack.html["Locker"]

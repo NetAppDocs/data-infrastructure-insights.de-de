@@ -18,6 +18,7 @@ Mithilfe der Anweisungen auf dieser Seite können Sie die Manipulation von Datei
 
 
 
+[[things-to-note-before-you-begin]]
 == Dinge, die Sie vor dem Beginn beachten sollten
 
 * Das Skript zur Simulation von Dateimanipulationen funktioniert nur unter Linux. Das Simulationsskript sollte außerdem Warnmeldungen mit hoher Zuverlässigkeit generieren, falls der Benutzer ONTAP ARP in die Workload-Sicherheit integriert hat.
@@ -30,6 +31,7 @@ Mithilfe der Anweisungen auf dieser Seite können Sie die Manipulation von Datei
 
 
 
+[[guidelines]]
 == Richtlinien:
 
 Dieses Skript sollte auf einer SVM ausgeführt werden, die einen Ordner mit einer beträchtlichen Anzahl zu verschlüsselnder Dateien enthält, idealerweise 100 oder mehr, einschließlich Dateien in Unterordnern.  Stellen Sie sicher, dass die Dateien nicht leer sind.
@@ -38,10 +40,12 @@ Um die Warnung zu generieren, halten Sie den Collector vor der Erstellung der Te
 
 
 
+[[steps]]
 == Schritte:
 
 
 
+[[prepare-the-system]]
 === Bereiten Sie das System vor:
 
 Mounten Sie zunächst das Zielvolume auf der Maschine.  Sie können entweder einen NFS- oder einen CIFS-Export mounten.
@@ -81,6 +85,7 @@ Richten Sie als Nächstes einen Datensammler ein:
 
 
 
+[[generate-the-sample-files-programmatically]]
 == Generieren Sie die Beispieldateien programmgesteuert:
 
 Bevor Sie die Dateien erstellen, müssen Sie zuerst stoppen oderlink:task_add_collector_svm.html#play-pause-data-collector["den Datensammler anhalten"] Verarbeitung.
@@ -91,6 +96,7 @@ Wenn Sie die Dateien programmgesteuert erstellen möchten, können Sie die Shell
 
 
 
+[[shell]]
 === Hülse:
 
 . Melden Sie sich beim Agentenfeld an.
@@ -104,6 +110,7 @@ Wenn Sie die Dateien programmgesteuert erstellen möchten, können Sie die Shell
 
 
 
+[[python]]
 === Python:
 
 
@@ -148,18 +155,21 @@ Wenn Sie die Dateien programmgesteuert erstellen möchten, können Sie die Shell
 
 
 
+[[resume-the-collector]]
 == Fortsetzen des Collectors
 
 Wenn Sie den Collector vor dem Ausführen dieser Schritte angehalten haben, denken Sie bitte daran, den Collector wieder aufzunehmen, sobald die Beispieldateien erstellt wurden.
 
 
 
+[[generate-file-tampering-alert]]
 == Warnung bei Dateimanipulation
 
 Um eine Warnung wegen Dateimanipulation zu generieren, können Sie das beigefügte Skript ausführen, das eine solche Warnung in Workload Security simuliert.
 
 
 
+[[shell]]
 === Hülse:
 
 . Kopieren Sie das Skript aus dem Agent-Installationsverzeichnis (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/simulate_attack.sh) an den Ziel-Mount-Speicherort.
@@ -171,6 +181,7 @@ Um eine Warnung wegen Dateimanipulation zu generieren, können Sie das beigefüg
 
 
 
+[[python]]
 === Python:
 
 . Kopieren Sie das Skript aus dem Agent-Installationsverzeichnis (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/simulate_attack.py) an den Ziel-Mount-Speicherort.
@@ -183,6 +194,7 @@ Um eine Warnung wegen Dateimanipulation zu generieren, können Sie das beigefüg
 
 
 
+[[generate-an-alert-in-workload-security]]
 == Generieren einer Warnung in Workload Security
 
 Sobald die Ausführung des Simulatorskripts abgeschlossen ist, wird innerhalb weniger Minuten eine Warnung auf der Web-Benutzeroberfläche angezeigt.
@@ -208,6 +220,7 @@ image:ws_high_confidence_alert_detail.png["Beispiel für eine Warnung mit hoher 
 
 
 
+[[triggering-alert-multiple-times]]
 == Alarm wird mehrmals ausgelöst
 
 Workload Security lernt das Benutzerverhalten und generiert keine Warnmeldungen bei wiederholten Dateimanipulationsangriffen innerhalb von 24 Stunden für denselben Benutzer.

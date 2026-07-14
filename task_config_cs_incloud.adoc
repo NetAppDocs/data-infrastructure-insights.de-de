@@ -18,6 +18,7 @@ summary: Richten Sie Workload Security-Datensammler für Cloud Volumes ONTAP und
 
 
 
+[[cloud-volumes-ontap-storage-configuration]]
 == Cloud Volumes ONTAP Speicherkonfiguration
 
 Informationen zum Konfigurieren einer AWS-Instanz mit einem einzelnen Knoten/HA zum Hosten des Workload Security Agent finden Sie in der OnCommand Cloud Volumes ONTAP Dokumentation:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/index.html[]
@@ -26,6 +27,7 @@ Nachdem die Konfiguration abgeschlossen ist, befolgen Sie die Schritte zum Einri
 
 
 
+[[supported-platforms]]
 == Unterstützte Plattformen
 
 * Cloud Volumes ONTAP, wird von allen verfügbaren Cloud-Service-Anbietern unterstützt, sofern verfügbar.  Zum Beispiel: Amazon, Azure, Google Cloud.
@@ -34,6 +36,7 @@ Nachdem die Konfiguration abgeschlossen ist, befolgen Sie die Schritte zum Einri
 
 
 
+[[agent-machine-configuration]]
 == Agent-Computerkonfiguration
 
 Die Agent-Maschine muss in den jeweiligen Subnetzen der Cloud-Dienstanbieter konfiguriert werden.  Weitere Informationen zum Netzwerkzugriff finden Sie in den [Agentenanforderungen].
@@ -62,6 +65,7 @@ Führen Sie die folgenden Schritte aus, um die Maschine für die Verwendung als 
 
 
 
+[[install-the-workload-security-agent]]
 == Installieren des Workload Security Agent
 
 . Melden Sie sich als Administrator oder Kontoinhaber bei Ihrer Data Infrastructure Insights Umgebung an.
@@ -75,6 +79,7 @@ Detaillierte Schritte finden Sie unter diesem Link: https://docs.netapp.com/us-e
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Bekannte Probleme und deren Lösungen werden in der folgenden Tabelle beschrieben.

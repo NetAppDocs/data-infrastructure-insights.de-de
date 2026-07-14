@@ -18,18 +18,21 @@ Data Infrastructure Insights verwendet diesen Datensammler, um Kubernetes-Pod-, 
 
 
 
+[[installation]]
 == Installation
 
 Anweisungen zur Installation von Kubernetes finden Sie imlink:task_config_telegraf_agent_k8s.html["Kubernetes-Überwachungsoperator"] Seite.
 
 
 
+[[about-kube-state-metrics]]
 == Über Kube-State-Metrics
 
 Der Kubernetes Monitoring Operator installiert kube-state-metrics automatisch; es ist keine Benutzerinteraktion erforderlich.
 
 
 
+[[kube-state-metrics-counters]]
 === Kube-State-Metrics-Zähler
 
 Der NetApp Kubernetes Monitoring Operator extrahiert die unten aufgeführten Kube-State-Metrics-Zähler.  Weitere Einzelheiten zu den einzelnen Zählern finden Sie unter: https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[] .

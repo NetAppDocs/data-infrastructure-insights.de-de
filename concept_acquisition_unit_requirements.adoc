@@ -18,6 +18,7 @@ Sie müssen eine Acquisition Unit (AU) installieren, um Informationen von Ihren 
 
 
 
+[[requirements]]
 == Anforderungen
 
 |===
@@ -92,6 +93,7 @@ Ihr Dateisystem verwendet möglicherweise etwas Speicherplatz für seinen Overhe
 |===
 
 
+[[additional-recommendations]]
 == Zusätzliche Empfehlungen
 
 * Für eine genaue Prüfung und Datenberichterstattung wird dringend empfohlen, die Zeit auf dem Computer der Erfassungseinheit mithilfe des *Network Time Protocol (NTP)* oder des *Simple Network Time Protocol (SNTP)* zu synchronisieren.
@@ -99,6 +101,7 @@ Ihr Dateisystem verwendet möglicherweise etwas Speicherplatz für seinen Overhe
 
 
 
+[[regarding-sizing]]
 == Zur Größenbestimmung
 
 Sie können mit einer Data Infrastructure Insights Acquisition Unit mit nur 8 GB Speicher und 50 GB Festplattenspeicher beginnen. Bei größeren Umgebungen sollten Sie sich jedoch die folgenden Fragen stellen:

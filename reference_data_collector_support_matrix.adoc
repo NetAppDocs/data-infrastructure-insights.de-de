@@ -18,6 +18,7 @@ Die Data Collector Support Matrix bietet Referenzen für von Data Infrastructure
 
 
 
+[[hp-enterprise-3par-alletra-9000-primera-storeserv-storage]]
 == HP Enterprise 3PAR / Alletra 9000 / Primera StoreServ Storage
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -828,6 +829,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[amazon-aws-ec2]]
 == Amazon AWS EC2
 
 Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
@@ -1102,6 +1104,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[amazon-aws-s3]]
 == Amazon AWS S3
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -1265,6 +1268,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[microsoft-azure-netapp-files]]
 == Microsoft Azure NetApp Files
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -1587,6 +1591,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[brocade-fibre-channel-switches]]
 == Brocade Fibre Channel Switches
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -2162,6 +2167,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[brocade-network-advisor-http]]
 == Brocade Network Advisor HTTP
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -2418,6 +2424,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[brocade-fos-rest]]
 == Brocade FOS REST
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -2898,6 +2905,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[cisco-mds-nexus-fabric-switches]]
 == Cisco MDS- und Nexus Fabric-Switches
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -3412,6 +3420,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[cohesity]]
 == Zusammenhalt
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -3683,6 +3692,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-celerra-ssh]]
 == EMC Celerra (SSH)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -3963,6 +3973,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-clariion-navicli]]
 == EMC CLARiiON (NaviCLI)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -4576,6 +4587,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-data-domain-ssh]]
 == EMC-Datendomäne (SSH)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -4929,6 +4941,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-ecs]]
 == EMV ECS
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -5260,6 +5273,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[dell-emc-isilon-powerscale-rest]]
 == Dell EMC Isilon und PowerScale Rest
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -5982,6 +5996,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[dell-emc-isilon-powerscale-cli]]
 == Dell EMC Isilon / PowerScale (CLI)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -6549,6 +6564,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-powerstore-rest]]
 == EMC PowerStore REST
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -7184,6 +7200,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-recoverpoint-http]]
 == EMC RecoverPoint (HTTP)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -7311,6 +7328,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-scaleio-powerflex-rest]]
 == EMC ScaleIO und PowerFlex REST
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -7525,6 +7543,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-symmetrix-cli]]
 == EMC Symmetrix-CLI
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -8388,6 +8407,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[dell-unisphere-rest]]
 == Dell Unisphere REST
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -9111,6 +9131,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-vnx-ssh]]
 == EMC VNX (SSH)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -9796,6 +9817,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-vnxe-unity-unisphere-cli]]
 == EMC VNXe und Unity Unisphere (CLI)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -10390,6 +10412,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-vplex]]
 == EMC VPLEX
 
 |===
@@ -10469,6 +10492,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[emc-xtremio-http]]
 == EMC XtremIO (HTTP)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -11026,6 +11050,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[netapp-e-series]]
 == NetApp E-Serie
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -11672,6 +11697,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[pure-storage-flashblade-rest]]
 == Pure Storage FlashBlade REST
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -12045,6 +12071,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[google-cloud-compute]]
 == Google Cloud Compute
 
 Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
@@ -12277,6 +12304,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[hds-hcp-https]]
 == HDS HCP (HTTPS)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -12461,6 +12489,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[hicommand-device-manager]]
 == HiCommand-Gerätemanager
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -13135,6 +13164,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[hitachi-ops-center]]
 == Hitachi Ops Center
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -13822,6 +13852,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[hds-hnas-cli]]
 == HDS HNAS (CLI)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -14108,6 +14139,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[hpe-nimble-alletra-6000-storage]]
 == HPE Nimble / Alletra 6000 Storage
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -14598,6 +14630,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[huawei-oceanstor-resthttps]]
 == Huawei OceanStor (REST/HTTPS)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -15322,6 +15355,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[ibm-cleversafe]]
 == IBM Cleversafe
 
 |===
@@ -15512,6 +15546,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[ibm-ds-8k-dscli]]
 == IBM DS 8K (DSCLI)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -16011,6 +16046,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[ibm-powervm-ssh]]
 == IBM PowerVM (SSH)
 
 |===
@@ -16192,6 +16228,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[ibm-svc-cli]]
 == IBM SVC (CLI)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -16939,6 +16976,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[ibm-xiv-a9000-xivcli]]
 == IBM XIV und A9000 (XIVCLI)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -17171,6 +17209,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[infinidat-infinibox-http]]
 == Infinidat Infinibox (HTTP)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -17520,6 +17559,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[microsoft-azure-compute]]
 == Microsoft Azure Compute
 
 Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
@@ -17776,6 +17816,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[microsoft-hyper-v]]
 == Microsoft Hyper-V
 
 |===
@@ -18257,6 +18298,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[netapp-7-mode]]
 == NetApp 7-Modus
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -19239,6 +19281,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[netapp-e-series-rest]]
 == NetApp E-Serie REST
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -19609,6 +19652,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[amazon-fsx-for-netapp-ontap]]
 == Amazon FSx for NetApp ONTAP
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -20534,6 +20578,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[netapp-clustered-data-ontap-8-1-1]]
 == NetApp Clustered Data ONTAP 8.1.1+
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -22289,6 +22334,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[asa]]
 == ASA
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -22917,6 +22963,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[netapp-ontap-rest]]
 == NetApp ONTAP REST
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -23775,6 +23822,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[netapp-solidfire-8-1]]
 == NetApp SolidFire 8.1+
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -24520,6 +24568,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[netapp-storagegrid-https]]
 == NetApp StorageGRID (HTTPS)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -24903,6 +24952,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[nutanix-storage-rest]]
 == Nutanix-Speicher (REST)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -25414,6 +25464,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[oracle-zfs-https]]
 == Oracle ZFS (HTTPS)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -25964,6 +26015,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[pure-storage-flasharray-http]]
 == Pure Storage FlashArray (HTTP)
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -26573,6 +26625,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[red-hat-rhv-rest]]
 == Red Hat RHV (REST)
 
 |===
@@ -26817,6 +26870,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[rubrik-storage]]
 == Rubrik Storage
 
 Von diesem Datensammler unterstützte Modelle und Versionen: Firmware-Versionen:
@@ -27159,6 +27213,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[vast-datastore]]
 == VAST DataStore
 
 Von diesem Datensammler unterstützte Modelle und Versionen:
@@ -27571,6 +27626,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[netapp-hci-virtual-center]]
 == NetApp HCI Virtual Center
 
 Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
@@ -28119,6 +28175,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[vmware-cloud-on-aws]]
 == VMware Cloud auf AWS
 
 Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:
@@ -28461,6 +28518,7 @@ Von diesem Datensammler verwendete Verwaltungs-APIs:
 |===
 
 
+[[vmware-vsphere-web-services]]
 == VMware vSphere (Webdienste)
 
 Von diesem Datensammler unterstützte Modelle und Versionen: API-Versionen:

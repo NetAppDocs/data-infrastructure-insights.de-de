@@ -20,6 +20,7 @@ IMPORTANT: Bevor Sie Änderungen an den Berichtsberechtigungen oder der Sicherhe
 
 
 
+[[customizing-a-reports-output-format-and-delivery]]
 == Anpassen des Ausgabeformats und der Bereitstellung eines Berichts
 
 Sie können das Format und die Übermittlungsmethode von Berichten anpassen.
@@ -41,6 +42,7 @@ image:Reporting_Output_and_Delivery.png["Berichtsausgabe und -übermittlung"]
 
 
 
+[[copying-a-report-to-the-clipboard]]
 == Kopieren eines Berichts in die Zwischenablage
 
 Verwenden Sie diesen Vorgang, um einen Bericht in die Zwischenablage zu kopieren.
@@ -59,6 +61,7 @@ image:Reporting_Copy_To_Clipboard.png["Kopieren eines Berichts in die Zwischenab
 
 
 
+[[opening-reports-from-the-clipboard]]
 == Öffnen von Berichten aus der Zwischenablage
 
 Sie können eine Berichtsspezifikation öffnen, die zuvor in die Zwischenablage kopiert wurde.
@@ -80,12 +83,14 @@ image:Reporting_Open_From_Clipboard.png["Öffnen eines Berichts aus der Zwischen
 
 
 
+[[editing-an-existing-report]]
 == Bearbeiten eines vorhandenen Berichts
 
 Beachten Sie, dass beim Bearbeiten von Dateien an ihrem Standardspeicherort das Risiko besteht, dass diese Berichte bei der nächsten Aktualisierung des Berichtskatalogs überschrieben werden.  Es wird empfohlen, den bearbeiteten Bericht unter einem neuen Namen oder an einem anderen als dem Standardspeicherort zu speichern.
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Hier finden Sie Vorschläge zur Behebung von Problemen mit dem Reporting.

@@ -19,12 +19,14 @@ image:anomaly_detection_expert_view.png["Diagramm mit erkannter Anomalie"]
 
 
 
+[[what-is-anomaly-detection]]
 == Was ist Anomalieerkennung?
 
 Eine Anomalie tritt auf, wenn der Mittelwert einer Metrik um eine bestimmte Anzahl von Standardabweichungen vom gewichteten Mittelwert dieser Metrik der letzten Wochen abweicht, wobei die letzten Wochen stärker gewichtet werden als die vorherigen Wochen.  Data Infrastructure Insights bietet die Möglichkeit, Daten zu überwachen und bei erkannten Anomalien eine Warnung auszugeben.  Sie haben die Möglichkeit, die Empfindlichkeitsstufen der Erkennung einzustellen.  Eine höhere Empfindlichkeit liegt beispielsweise vor, wenn der Mittelwert weniger Standardabweichungen vom Mittelwert aufweist und somit mehr Warnungen generiert werden.  Umgekehrt gilt: geringere Empfindlichkeit = mehr Standardabweichungen vom Mittelwert = weniger Warnungen.
 
 
 
+[[anomaly-detection-monitoring-differs-from-threshold-monitoring]]
 === Die Überwachung der Anomalieerkennung unterscheidet sich von der Schwellenwertüberwachung.
 
 * *Schwellenwertbasierte Überwachung* funktioniert, wenn Sie vordefinierte Schwellenwerte für bestimmte Metriken haben.  Mit anderen Worten, wenn Sie ein klares Verständnis davon haben, was erwartet wird (d. h. innerhalb eines normalen Bereichs).
@@ -39,6 +41,7 @@ image:ADMonitor_blurb.png["Anomalieerkennungsmonitore sind für den Fall gedacht
 
 
 
+[[when-would-i-need-anomaly-detection]]
 == Wann benötige ich eine Anomalieerkennung?
 
 Die Überwachung der Anomalieerkennung kann in vielen Situationen hilfreiche Warnungen liefern, darunter in den folgenden:
@@ -50,6 +53,7 @@ Die Überwachung der Anomalieerkennung kann in vielen Situationen hilfreiche War
 
 
 
+[[creating-an-anomaly-detection-monitor]]
 == Erstellen eines Anomalieerkennungsmonitors
 
 Um bei Anomalien Warnungen auszugeben, erstellen Sie einen Monitor, indem Sie zu *Beobachtbarkeit > Warnungen > +Monitor* navigieren.  Wählen Sie _Anomaly Detection Monitor_ als Monitortyp aus.
@@ -79,6 +83,7 @@ NOTE: Wenn ein Monitor erstellt wird, prüft DII alle vorhandenen Daten der vorh
 
 
 
+[[viewing-the-anomalies]]
 == Anzeigen der Anomalien
 
 Auf einer Warnmeldungs-Landingpage werden Warnmeldungen, die bei der Erkennung von Anomalien ausgelöst werden, im Diagramm durch ein hervorgehobenes Band angezeigt, und zwar von dem Zeitpunkt an, als die Metrik die vorhergesagten Grenzen überschritt, bis zu dem Zeitpunkt, als sie wieder innerhalb dieser Grenzen lag.

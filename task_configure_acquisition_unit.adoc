@@ -21,6 +21,7 @@ Lesen Sie mehr über die Sicherheit von Data Infrastructure Insightslink:securit
 
 
 
+[[adding-a-linux-acquisition-unit]]
 == Hinzufügen einer Linux-Erfassungseinheit
 
 .Bevor Sie beginnen
@@ -61,6 +62,7 @@ image:NewLinuxAUInstall.png["Linux AU-Anweisungen"]
 
 
 
+[[setting-proxy-environment-variables]]
 === Festlegen von Proxy-Umgebungsvariablen
 
 Für Umgebungen, die einen Proxy verwenden, müssen Sie die Proxy-Umgebungsvariablen festlegen, bevor Sie die Erfassungseinheit hinzufügen.  Die Anweisungen zum Konfigurieren des Proxys finden Sie im Dialogfeld „Erfassungseinheit hinzufügen“.
@@ -76,6 +78,7 @@ Hinweis: Beachten Sie die Einschränkungen für Sonderzeichen in den Feldern fü
 
 
 
+[[proxy-configuration]]
 === Proxy-Konfiguration
 
 Die Acquisition Unit verwendet eine 2-Wege-/gegenseitige Authentifizierung, um eine Verbindung zum Data Infrastructure Insights -Server herzustellen.  Zur Authentifizierung muss das Client-Zertifikat an den Data Infrastructure Insights -Server übergeben werden.  Um dies zu erreichen, muss der Proxy so eingerichtet werden, dass er die https-Anfrage an den Data Infrastructure Insights -Server weiterleitet, ohne die Daten zu entschlüsseln.
@@ -100,6 +103,7 @@ Wenn Sie Workload Security auf Ihrem Mandanten haben, werden die konfigurierten 
 
 
 
+[[adding-a-windows-acquisition-unit]]
 == Hinzufügen einer Windows-Erfassungseinheit
 
 .Schritte zur Installation der Windows-Erfassungseinheit
@@ -133,6 +137,7 @@ image:NewWindowsAUInstall.png["Windows AU-Installation"]
 
 
 
+[[proxy-configuration]]
 === Proxy-Konfiguration
 
 Die Acquisition Unit verwendet eine 2-Wege-/gegenseitige Authentifizierung, um eine Verbindung zum Data Infrastructure Insights -Server herzustellen.  Zur Authentifizierung muss das Client-Zertifikat an den Data Infrastructure Insights -Server übergeben werden.  Um dies zu erreichen, muss der Proxy so eingerichtet werden, dass er die https-Anfrage an den Data Infrastructure Insights -Server weiterleitet, ohne die Daten zu entschlüsseln.
@@ -157,6 +162,7 @@ Wenn Sie Workload Security auf Ihrem Mandanten haben, werden die konfigurierten 
 
 
 
+[[uninstalling-an-acquisition-unit]]
 == Deinstallieren einer Erfassungseinheit
 
 Um die Software der Erfassungseinheit zu deinstallieren, gehen Sie wie folgt vor:
@@ -201,6 +207,7 @@ image:AU_for_Device_Resolution.png["AU für die Geräteauflösung verwendet"]
 
 
 
+[[reinstalling-an-acquisition-unit]]
 == Neuinstallation einer Erfassungseinheit
 
 Um eine Erfassungseinheit auf demselben Server/derselben VM neu zu installieren, müssen Sie die folgenden Schritte ausführen:
@@ -223,6 +230,7 @@ Sie können auch mehrere Datensammler desselben Typs auswählen und auf die Scha
 
 
 
+[[viewing-au-details]]
 == Anzeigen von AU-Details
 
 Die Detailseite der Erfassungseinheit (AU) bietet nützliche Einzelheiten zu einer AU sowie Informationen zur Fehlerbehebung.  Die AU-Detailseite enthält die folgenden Abschnitte:

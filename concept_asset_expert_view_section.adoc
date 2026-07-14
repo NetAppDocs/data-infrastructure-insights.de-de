@@ -18,6 +18,7 @@ Im Abschnitt „Leistung“ einer Asset-Seite oder eines Slideout-Panels können
 
 
 
+[[using-the-performance-section]]
 == Verwenden des Abschnitts „Leistung“
 
 Nachfolgend sehen Sie ein Beispiel für den Abschnitt „Leistung“ auf einer Speicherressourcenseite:
@@ -46,6 +47,7 @@ Zeigt die Assets an, die sich auf andere gemeinsam genutzte Ressourcen wie Hosts
 
 
 
+[[alerts-in-performance-section]]
 == Warnungen im Abschnitt „Leistung“
 
 Warnungen werden auch im Abschnitt „Leistung“ einer Asset-Landingpage angezeigt und geben die Uhrzeit und Dauer der Warnung sowie die Monitorbedingung an, die sie ausgelöst hat.  Bewegen Sie den Mauszeiger über einen Warnhinweis, um Details zu dem Warnhinweis anzuzeigen.
@@ -54,6 +56,7 @@ image:asset_page_alert_section.png["Warnungen im Leistungsbereich"]
 
 
 
+[[performance-metric-definitions]]
 == Definitionen von Leistungsmetriken
 
 Der Abschnitt „Leistung“ einer Asset-Seite zeigt mehrere Metriken basierend auf dem für das Asset ausgewählten Zeitraum an.  Jede Metrik wird in einem eigenen Leistungsdiagramm angezeigt.  Sie können den Diagrammen Metriken und zugehörige Assets hinzufügen oder daraus entfernen, je nachdem, welche Daten Sie sehen möchten.  Die Metriken, die Sie auswählen können, variieren je nach Asset-Typ.
@@ -164,6 +167,7 @@ Der Abschnitt „Leistung“ einer Asset-Seite zeigt mehrere Metriken basierend 
 |===
 
 
+[[using-the-performance-section]]
 == Verwenden des Abschnitts „Leistung“
 
 Im Abschnitt „Leistung“ können Sie Leistungsdiagramme für einen Vermögenswert basierend auf einer beliebigen Anzahl anwendbarer Kennzahlen während eines ausgewählten Zeitraums anzeigen und zugehörige Vermögenswerte hinzufügen, um die Leistung von Vermögenswerten und zugehörigen Vermögenswerten über verschiedene Zeiträume hinweg zu vergleichen und gegenüberzustellen.

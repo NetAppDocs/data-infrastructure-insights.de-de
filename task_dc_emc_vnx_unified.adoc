@@ -14,11 +14,12 @@ Zur Konfiguration benötigt der Dell EMC VNX Unified (SSH)-Datensammler die IP-A
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält von diesem Datensammler die folgenden Bestandsinformationen.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -57,6 +58,7 @@ Data Infrastructure Insights erhält von diesem Datensammler die folgenden Besta
 |===
 
 
+[[requirements]]
 == Anforderungen
 
 Zum Konfigurieren des VNX (SSH)-Datenkollektors benötigen Sie Folgendes:
@@ -68,9 +70,10 @@ Zum Konfigurieren des VNX (SSH)-Datenkollektors benötigen Sie Folgendes:
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -85,9 +88,10 @@ Zum Konfigurieren des VNX (SSH)-Datenkollektors benötigen Sie Folgendes:
 |===
 
 
+[[advanced-configiration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -99,6 +103,7 @@ Zum Konfigurieren des VNX (SSH)-Datenkollektors benötigen Sie Folgendes:
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

@@ -18,6 +18,7 @@ Dieser Datensammler erfasst mithilfe von REST-API-Aufrufen Inventar-, EMS-Protok
 
 
 
+[[requirements]]
 == Anforderungen
 
 Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden Voraussetzungen:
@@ -33,6 +34,7 @@ Für die Konfiguration und Verwendung dieses Datensammlers gelten die folgenden 
 
 
 
+[[a-note-about-permissions]]
 == Ein Hinweis zu Berechtigungen
 
 Da eine Reihe von ONTAP -Dashboards von Data Infrastructure Insights auf erweiterten ONTAP Zählern basieren, sollten Sie im Abschnitt „Erweiterte Konfiguration“ des Datensammlers die Option „Erweiterte Zählerdatenerfassung aktivieren“ aktiviert lassen.
@@ -83,6 +85,7 @@ restUser       http        password      restRole         no     none
 ----
 
 
+[[migration]]
 == Migration
 
 Um von einem früheren ONTAP Datensammler (ontapi) zum neueren ONTAP REST-Sammler zu migrieren, gehen Sie wie folgt vor:
@@ -97,9 +100,10 @@ Mit demselben Verfahren können Sie bei Bedarf zum vorherigen Collector zurückk
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -114,9 +118,10 @@ Mit demselben Verfahren können Sie bei Bedarf zum vorherigen Collector zurückk
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -137,11 +142,12 @@ Mit demselben Verfahren können Sie bei Bedarf zum vorherigen Collector zurückk
 |===
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erfasst Inventar-, Protokoll- und Leistungsdaten vom ONTAP Datensammler.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für den Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -174,12 +180,14 @@ Data Infrastructure Insights erfasst Inventar-, Protokoll- und Leistungsdaten vo
 |===
 
 
+[[ontap-data-management-terminology]]
 == ONTAP Datenmanagement-Terminologie
 
 Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherweise auf den Zielseiten der ONTAP Data Management-Speicherressourcen finden.  Viele dieser Begriffe gelten auch für andere Datensammler.
 
 
 
+[[storage]]
 === Storage
 
 * Modell – Eine durch Kommas getrennte Liste der eindeutigen, diskreten Knotenmodellnamen innerhalb dieses Clusters.  Wenn alle Knoten in den Clustern vom gleichen Modelltyp sind, wird nur ein Modellname angezeigt.
@@ -194,6 +202,7 @@ Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherw
 
 
 
+[[storage-pool]]
 === Speicherpool
 
 * Speicher – auf welchem Speicher-Array dieser Pool lebt.  Obligatorisch.
@@ -210,6 +219,7 @@ Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherw
 
 
 
+[[storage-node]]
 === Speicherknoten
 
 * Speicher – zu welchem Speicherarray dieser Knoten gehört.  Obligatorisch.
@@ -228,6 +238,7 @@ Die folgenden Bedingungen gelten für Objekte oder Verweise, die Sie möglicherw
 
 
 
+[[ontap-power-metrics]]
 == ONTAP Leistungsmetriken
 
 Mehrere ONTAP -Modelle bieten Leistungsmetriken für Data Infrastructure Insights , die zur Überwachung oder für Warnmeldungen verwendet werden können.  Die unten stehenden Listen unterstützter und nicht unterstützter Modelle sind nicht vollständig, sollen aber als Orientierung dienen. Im Allgemeinen gilt: Wenn ein Modell zur selben Familie gehört wie eines auf der Liste, sollte auch die Unterstützung dieselbe sein.
@@ -242,11 +253,12 @@ FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 806
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 

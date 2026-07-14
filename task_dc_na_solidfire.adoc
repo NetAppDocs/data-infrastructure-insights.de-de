@@ -16,11 +16,12 @@ Der SolidFire Datensammler verwendet die SolidFire REST-API.  Die Erfassungseinh
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom NetApp SolidFire All-Flash Array-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -49,6 +50,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Für die Konfiguration dieses Datensammlers gelten die folgenden Voraussetzungen:
@@ -60,9 +62,10 @@ Für die Konfiguration dieses Datensammlers gelten die folgenden Voraussetzungen
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -77,9 +80,10 @@ Für die Konfiguration dieses Datensammlers gelten die folgenden Voraussetzungen
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -97,6 +101,7 @@ Für die Konfiguration dieses Datensammlers gelten die folgenden Voraussetzungen
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn SolidFire einen Fehler meldet, wird dieser in Data Infrastructure Insights wie folgt angezeigt:

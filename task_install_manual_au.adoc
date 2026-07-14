@@ -18,6 +18,7 @@ Der Vorgang ist für Linux und Windows ähnlich.
 
 
 
+[[performing-a-new-au-install-on-linux]]
 == Durchführen einer NEUEN AU-Installation unter Linux:
 
 . Erstellen Sie in Data Infrastructure Insights ein API-Token.
@@ -103,6 +104,7 @@ Zu diesem Zeitpunkt ist die AU-Software auf dem System installiert und für den 
 
 
 
+[[manually-installing-data-collectors]]
 == Manuelles Installieren von Datenkollektoren
 
 Laden Sie die neueste Datei datasources.war mithilfe der API /collector/patch/datasourceswar/latest herunter:
@@ -146,6 +148,7 @@ Hinweis: Wenn Sie die Installation mit verschiedenen benutzerdefinierten Benutze
 
 
 
+[[downloading-a-patch]]
 == Herunterladen eines Patches
 
 Laden Sie den Patch mit der API /collector/patch/file/{version} herunter:
@@ -189,6 +192,7 @@ Hinweis: Wenn Sie die Installation mit verschiedenen benutzerdefinierten Benutze
 
 
 
+[[external-key-retrieval]]
 == Externer Schlüsselabruf
 
 Wenn Sie ein UNIX-Shell-Skript bereitstellen, kann es von der Erfassungseinheit ausgeführt werden, um den *privaten Schlüssel* und den *öffentlichen Schlüssel* aus Ihrem Schlüsselverwaltungssystem abzurufen.

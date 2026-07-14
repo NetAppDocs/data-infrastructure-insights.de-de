@@ -14,6 +14,7 @@ Auf der Registerkarte „Einstellungen für die Geräteauflösung“ können Sie
 
 
 
+[[auto-resolution-schedule]]
 == Zeitplan für die automatische Auflösung
 
 Ein Zeitplan für die automatische Auflösung kann angeben, wann die automatische Geräteauflösung ausgeführt wird:
@@ -39,6 +40,7 @@ Wenn Sie _Manuell_ angeben, wird die nächtliche automatische Geräteauflösung 
 
 
 
+[[dns-processing-options]]
 == DNS-Verarbeitungsoptionen
 
 Mit den DNS-Verarbeitungsoptionen können Sie die folgenden Funktionen auswählen:
@@ -50,6 +52,7 @@ Mit den DNS-Verarbeitungsoptionen können Sie die folgenden Funktionen auswähle
 
 
 
+[[including-or-excluding-specific-storage-and-tape-vendors]]
 === Einbeziehung oder Ausschluss bestimmter Speicher- und Bandanbieter
 
 Sie können bestimmte Speicher- und Bandanbieter zur automatischen Lösung ein- oder ausschließen.  Möglicherweise möchten Sie bestimmte Anbieter ausschließen, wenn Sie beispielsweise wissen, dass ein bestimmter Host zu einem Legacy-Host wird und aus Ihrer neuen Umgebung ausgeschlossen werden sollte.  Sie können auch Anbieter erneut hinzufügen, die Sie zuvor ausgeschlossen hatten, aber nicht mehr ausschließen möchten.

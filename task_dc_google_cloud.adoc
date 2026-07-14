@@ -14,6 +14,7 @@ Dieser Datensammler unterstützt die Bestands- und Leistungserfassung von Google
 
 
 
+[[service-account-requirements]]
 == Anforderungen für Dienstkonten
 
 * Sie müssen ein Dienstkonto erstellen, indem Sie den Anweisungen inlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Erstellen/Verwalten von Dienstkonten"] .  Ein solches Dienstkonto wird durch eine eindeutige ID identifiziert, die als _clientId_ bezeichnet wird und als Benutzername verwendet wird.
@@ -23,9 +24,10 @@ Dieser Datensammler unterstützt die Bestands- und Leistungserfassung von Google
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -46,9 +48,10 @@ Dieser Datensammler unterstützt die Bestands- und Leistungserfassung von Google
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -66,6 +69,7 @@ Dieser Datensammler unterstützt die Bestands- und Leistungserfassung von Google
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

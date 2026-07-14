@@ -14,6 +14,7 @@ Data Infrastructure Insights verwendet den Brocade Sphereon/Intrepid Switch (SNM
 
 
 
+[[requirements]]
 == Anforderungen
 
 Um diesen Datensammler zu konfigurieren, müssen folgende Voraussetzungen erfüllt sein:
@@ -26,9 +27,10 @@ Um diesen Datensammler zu konfigurieren, müssen folgende Voraussetzungen erfül
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -49,9 +51,10 @@ Um diesen Datensammler zu konfigurieren, müssen folgende Voraussetzungen erfül
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -81,6 +84,7 @@ Um diesen Datensammler zu konfigurieren, müssen folgende Voraussetzungen erfül
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

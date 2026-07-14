@@ -44,6 +44,7 @@ Die Funktion zur Geräteauflösung (Verwalten > Geräteauflösung) umfasst die f
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 Sie müssen wissen, wie Ihre Umgebung konfiguriert ist, bevor Sie die Regeln zur Identifizierung von Geräten definieren.  Je mehr Sie über Ihre Umgebung wissen, desto einfacher ist es, Geräte zu identifizieren.
@@ -66,6 +67,7 @@ In diesem Beispiel wird die größte Anzahl von Geräten zuverlässig durch Spei
 
 
 
+[[steps-to-identifying-devices]]
 == Schritte zum Identifizieren von Geräten
 
 Normalerweise verwenden Sie einen Workflow ähnlich dem folgenden, um Geräte auf Ihrem Mandanten zu identifizieren.  Die Identifizierung ist ein iterativer Prozess und kann mehrere Schritte der Planung und Verfeinerung von Regeln erfordern.

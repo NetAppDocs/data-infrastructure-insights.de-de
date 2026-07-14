@@ -22,12 +22,14 @@ Sie können die physischen oder virtuellen Inventarressourcen (und die zugehöri
 
 
 
+[[inventory-assets]]
 == Inventarvermögen
 
 Alle Inventar- (auch Infrastruktur-) Asset-Typen (Storage, Switch, VM, Application usw.) können in Abfragen, Dashboard-Widgets und benutzerdefinierten Asset-Landingpages verwendet werden. Die für Filter, Ausdrücke und Anzeige verfügbaren Felder und Zähler variieren je nach Asset-Typ.
 
 
 
+[[integration-metrics]]
 == Integrationsmetriken
 
 Zusätzlich zur Abfrage von Inventarressourcen und den zugehörigen Leistungsmetriken können Sie auch *Integrationsdaten*-Metriken abfragen, wie sie beispielsweise von Kubernetes oder Docker generiert oder mit ONTAP Advanced Metrics bereitgestellt werden.
@@ -36,6 +38,7 @@ image:QueryPageFilter.png["Beispiel für einen Integrationsabfragefilter"]
 
 
 
+[[sharing-queries]]
 == Abfragen freigeben
 
 Steuern Sie den Zugriff auf Ihre Abfragen, indem Sie festlegen, wer sie anzeigen und bearbeiten darf. Standardmäßig sind neue Abfragen privat und nur für Sie sichtbar, und Sie können sie mit bestimmten Benutzern oder Ihrer gesamten Organisation mit flexiblen Berechtigungsstufen (Nur Lesen oder Bearbeiten) teilen.

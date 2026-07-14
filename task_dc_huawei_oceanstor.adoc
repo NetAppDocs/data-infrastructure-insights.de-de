@@ -14,11 +14,12 @@ Data Infrastructure Insights verwendet den Huawei OceanStor (REST/HTTPS)-Datensa
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestands- und Leistungsinformationen vom Huawei OceanStor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -54,6 +55,7 @@ Data Infrastructure Insights erhält die folgenden Bestands- und Leistungsinform
 |===
 
 
+[[requirements]]
 == Anforderungen
 
 Zum Konfigurieren dieses Datensammlers sind die folgenden Voraussetzungen erforderlich:
@@ -65,9 +67,10 @@ Zum Konfigurieren dieses Datensammlers sind die folgenden Voraussetzungen erford
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -82,9 +85,10 @@ Zum Konfigurieren dieses Datensammlers sind die folgenden Voraussetzungen erford
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -99,6 +103,7 @@ Zum Konfigurieren dieses Datensammlers sind die folgenden Voraussetzungen erford
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

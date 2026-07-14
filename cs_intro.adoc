@@ -14,6 +14,7 @@ Data Infrastructure Insights Storage Workload Security (früher Cloud Secure) hi
 
 
 
+[[visibility]]
 == Sichtweite
 
 Erhalten Sie zentrale Transparenz und Kontrolle über den Benutzerzugriff auf Ihre kritischen Unternehmensdaten, die vor Ort oder in der Cloud gespeichert sind.
@@ -22,6 +23,7 @@ Ersetzen Sie Tools und manuelle Prozesse, die keinen zeitnahen und genauen Einbl
 
 
 
+[[protection]]
 == Schutz
 
 Schützen Sie Unternehmensdaten durch fortschrittliches maschinelles Lernen und Anomalieerkennung vor Missbrauch durch böswillige oder kompromittierte Benutzer.
@@ -30,6 +32,7 @@ Warnt Sie bei abnormalen Datenzugriffen durch fortschrittliches maschinelles Ler
 
 
 
+[[compliance]]
 == Einhaltung
 
 Stellen Sie die Unternehmenskonformität sicher, indem Sie den Benutzerdatenzugriff auf Ihre kritischen Unternehmensdaten prüfen, die vor Ort oder in der Cloud gespeichert sind.

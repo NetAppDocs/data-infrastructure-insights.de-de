@@ -23,6 +23,7 @@ Sie können Berichte in verschiedenen Formaten erstellen, darunter HTML, PDF, CS
 
 
 
+[[navigating-to-pre-defined-reports]]
 == Navigieren zu vordefinierten Berichten
 
 Wenn Sie das Reporting-Portal öffnen, ist der Ordner „Team Content“ der Ausgangspunkt für die Auswahl der Art von Informationen, die Sie in den Data Infrastructure Insights -Berichten benötigen.
@@ -35,18 +36,21 @@ image:Reporting_Menu.png["Berichtsmenü"] image:Reporting_Team_Content.png["Team
 
 
 
+[[using-predefined-reports-to-answer-common-questions]]
 == Verwenden vordefinierter Berichte zum Beantworten häufiger Fragen
 
 Die folgenden vordefinierten Berichte sind unter *Teaminhalte > Berichte* verfügbar.
 
 
 
+[[application-service-level-capacity-and-performance]]
 === Kapazität und Leistung der Anwendungsdienstebene
 
 Der Bericht zur Service-Level-Kapazität und -Leistung von Anwendungen bietet einen umfassenden Überblick über Ihre Anwendungen.  Sie können diese Informationen für die Kapazitätsplanung oder einen Migrationsplan verwenden.
 
 
 
+[[chargeback]]
 === Rückbuchung
 
 Der Chargeback-Bericht bietet Informationen zum Chargeback der Speicherkapazität und zur Verantwortlichkeit nach Hosts, Anwendungen und Geschäftseinheiten und enthält sowohl aktuelle als auch historische Daten.
@@ -55,60 +59,70 @@ Um eine Doppelzählung zu vermeiden, schließen Sie keine ESX-Server ein, überw
 
 
 
+[[data-sources]]
 === Datenquellen
 
 Der Bericht „Datenquellen“ zeigt alle auf Ihrer Site installierten Datenquellen, den Status der Datenquelle (Erfolg/Fehler) und Statusmeldungen.  Der Bericht enthält Informationen dazu, wo Sie mit der Fehlerbehebung bei Datenquellen beginnen können.  Fehlerhafte Datenquellen beeinträchtigen die Genauigkeit der Berichterstattung und die allgemeine Benutzerfreundlichkeit des Produkts.
 
 
 
+[[esx-vs-vm-performance]]
 === ESX vs. VM-Leistung
 
 Der Bericht „ESX vs. VM-Leistung“ bietet einen Vergleich von ESX-Servern und VMs und zeigt durchschnittliche und Spitzen-IOPs, Durchsatz sowie Latenz und Auslastung für ESX-Server und VMs.  Um eine Doppelzählung zu vermeiden, schließen Sie die ESX-Server aus und schließen Sie nur die VMs ein.  Eine aktualisierte Version dieses Berichts ist im NetApp Storage Automation Store verfügbar.
 
 
 
+[[fabric-summary]]
 === Stoffübersicht
 
 Der Fabric-Zusammenfassungsbericht identifiziert Switches und Switch-Informationen, einschließlich Portanzahl, Firmware-Versionen und Lizenzstatus.  Der Bericht enthält keine NPV-Switch-Ports.
 
 
 
+[[host-hbas]]
 === Host-HBAs
 
 Der Host-HBA-Bericht bietet einen Überblick über die Hosts in der Umgebung und gibt den Anbieter, das Modell und die Firmware-Version der HBAs sowie die Firmware-Ebene der Switches an, mit denen sie verbunden sind.  Dieser Bericht kann verwendet werden, um die Firmware-Kompatibilität zu analysieren, wenn ein Firmware-Upgrade für einen Switch oder einen HBA geplant wird.
 
 
 
+[[host-service-level-capacity-and-performance]]
 === Kapazität und Leistung des Host-Service-Levels
 
 Der Bericht „Host Service Level Capacity and Performance“ bietet einen Überblick über die Speicherauslastung nach Host für Nur-Block-Anwendungen.
 
 
 
+[[host-summary]]
 === Host-Zusammenfassung
 
 Der Host-Zusammenfassungsbericht bietet einen Überblick über die Speicherauslastung jedes ausgewählten Hosts mit Informationen zu Fibre Channel- und iSCSI-Hosts.  Mit dem Bericht können Sie Ports und Pfade, die Fibre Channel- und ISCSI-Kapazität sowie die Anzahl der Verstöße vergleichen.
 
 
 
+[[license-details]]
 === Lizenzdetails
 
 Der Bericht „Lizenzdetails“ zeigt die Menge der Ressourcen an, für die Sie über eine Lizenz verfügen, und zwar für alle Sites mit aktiven Lizenzen.  Der Bericht zeigt auch eine Zusammenfassung der tatsächlichen Menge aller Sites mit aktiven Lizenzen.  Die Summierung kann Überschneidungen von Speicher-Arrays enthalten, die von mehreren Servern verwaltet werden.
 
 
 
+[[mapped-but-not-masked-volumes]]
 === Zugeordnete, aber nicht maskierte Volumes
 
 Der Bericht „Zugeordnete, aber nicht maskierte Volumes“ listet die Volumes auf, deren logische Gerätenummer (LUN) für die Verwendung durch einen bestimmten Host zugeordnet wurde, für diesen Host jedoch nicht maskiert ist.  In einigen Fällen kann es sich dabei um stillgelegte LUNs handeln, die demaskiert wurden.  Auf nicht maskierte Volumes kann von jedem Host aus zugegriffen werden, wodurch sie anfällig für Datenbeschädigungen sind.
 
 
 
+[[netapp-capacity-and-performance]]
 === NetApp Kapazität und Performance
 
 Der NetApp Kapazitäts- und Leistungsbericht bietet globale Daten zur zugewiesenen, genutzten und zugesagten Kapazität mit Trend- und Leistungsdaten zur NetApp -Kapazität.
 
 
 
+[[scorecard]]
 === Scorecard
 
 Der Scorecard-Bericht bietet eine Zusammenfassung und den allgemeinen Status aller von Data Infrastructure Insights erworbenen Assets.  Der Status wird durch grüne, gelbe und rote Flaggen angezeigt:
@@ -122,54 +136,63 @@ Alle Felder im Bericht werden im mit dem Bericht bereitgestellten Datenwörterbu
 
 
 
+[[storage-summary]]
 === Speicherübersicht
 
 Der Speicherzusammenfassungsbericht bietet eine globale Zusammenfassung der verwendeten und ungenutzten Kapazitätsdaten für Roh- und zugewiesene Speicherpools und Volumes.  Dieser Bericht bietet einen Überblick über alle erkannten Speicher.
 
 
 
+[[vm-capacity-and-performance]]
 === VM-Kapazität und -Leistung
 
 Beschreibt die Umgebung der virtuellen Maschine (VM) und ihre Kapazitätsnutzung.  Um bestimmte Daten anzuzeigen, beispielsweise wann VMs heruntergefahren wurden, müssen VM-Tools aktiviert sein.
 
 
 
+[[vm-paths]]
 === VM-Pfade
 
 Der Bericht „VM-Pfade“ liefert Daten zur Speicherkapazität und Leistungsmetriken für die virtuelle Maschine, die auf dem Host ausgeführt wird, die Hosts, die auf die freigegebenen Volumes zugreifen, den aktiven Zugriffspfad und die Kapazitätszuweisung und -nutzung.
 
 
 
+[[hds-capacity-by-thin-pool]]
 === HDS-Kapazität nach Thin Pool
 
 Der Bericht „HDS-Kapazität nach Thin Pool“ zeigt die Menge der nutzbaren Kapazität eines Thin Provisioning-Speicherpools.
 
 
 
+[[netapp-capacity-by-aggregate]]
 === NetApp -Kapazität nach Aggregat
 
 Der Bericht „NetApp -Kapazität nach Aggregat“ zeigt den gesamten Rohspeicherplatz, den gesamten, den genutzten, den verfügbaren und den zugesicherten Speicherplatz der Aggregate an.
 
 
 
+[[symmetrix-capacity-by-thick-array]]
 === Symmetrix-Kapazität durch Thick Array
 
 Der Bericht „Symmetrix-Kapazität nach Thick-Array“ zeigt Rohkapazität, nutzbare Kapazität, freie Kapazität, zugeordnete, maskierte und gesamte freie Kapazität.
 
 
 
+[[symmetrix-capacity-by-thin-pool]]
 === Symmetrix-Kapazität nach Thin Pool
 
 Der Bericht „Symmetrix-Kapazität nach Thin Pool“ zeigt Rohkapazität, nutzbare Kapazität, genutzte Kapazität, freie Kapazität, genutzten Prozentsatz, abonnierte Kapazität und Abonnementrate.
 
 
 
+[[xiv-capacity-by-array]]
 === XIV Kapazität nach Array
 
 Der XIV-Kapazitätsbericht nach Array zeigt die verwendete und ungenutzte Kapazität für das Array.
 
 
 
+[[xiv-capacity-by-pool]]
 === XIV Kapazität nach Pool
 
 Der XIV-Kapazitätsbericht nach Pool zeigt die genutzte und ungenutzte Kapazität für Speicherpools.

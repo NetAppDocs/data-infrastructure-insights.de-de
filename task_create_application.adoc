@@ -29,6 +29,7 @@ Nachdem eine Anwendung definiert wurde, kann sie den Assets zugewiesen werden.
 
 
 
+[[assigning-applications-to-assets]]
 == Zuweisen von Anwendungen zu Assets
 
 Dieses Verfahren weist die Anwendung beispielhaft einem Host zu.  Sie können einer Anwendung Host, virtuelle Maschine, Volume oder interne Volumes zuweisen.

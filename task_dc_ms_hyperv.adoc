@@ -14,11 +14,12 @@ Der Microsoft Hyper-V-Datensammler erfasst Inventar- und Leistungsdaten aus der 
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen von Microsoft Hyper-V (WMI).  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -44,6 +45,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration dieses Datensammlers sind folgende Voraussetzungen erforderlich:
@@ -68,9 +70,10 @@ NOTE: Der Hyper-V-Datensammler erfordert eine Windows-Erfassungseinheit.
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -88,9 +91,10 @@ NOTE: Der Hyper-V-Datensammler erfordert eine Windows-Erfassungseinheit.
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -99,6 +103,7 @@ NOTE: Der Hyper-V-Datensammler erfordert eine Windows-Erfassungseinheit.
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

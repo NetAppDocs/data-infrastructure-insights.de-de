@@ -19,6 +19,7 @@ image:Notifications_email_list.png["E-Mail-Benachrichtigungen"]
 
 
 
+[[subscription-notification-recipients]]
 == Empfänger von Abonnementbenachrichtigungen
 
 Um Empfänger für abonnementbezogene Ereignisbenachrichtigungen zu konfigurieren, gehen Sie zum Abschnitt „Empfänger von Abonnementbenachrichtigungen“.  Sie können festlegen, dass E-Mail-Benachrichtigungen zu abonnementbezogenen Ereignissen an einen oder alle der folgenden Empfänger gesendet werden:
@@ -58,6 +59,7 @@ Um sicherzustellen, dass Ihre Empfänger Benachrichtigungen von Data Infrastruct
 ====
 
 
+[[global-recipient-list-for-alerts]]
 == Globale Empfängerliste für Warnmeldungen
 
 Für jede Aktion im Zusammenhang mit der Warnung werden E-Mail-Benachrichtigungen zu Warnungen an die Warnungsempfängerliste gesendet.  Sie können Warnbenachrichtigungen an eine globale Empfängerliste senden.
@@ -71,6 +73,7 @@ NOTE: ONTAP Data Collector-Benachrichtigungen haben Vorrang vor allen spezifisch
 
 
 
+[[editing-notifications-for-ontap]]
 == Bearbeiten von Benachrichtigungen für ONTAP
 
 Sie können Benachrichtigungen für ONTAP Cluster ändern, indem Sie auf einer Speicher-Landingpage im Dropdown-Menü oben rechts „Benachrichtigungen bearbeiten“ auswählen.

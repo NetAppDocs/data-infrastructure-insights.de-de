@@ -14,9 +14,10 @@ Dieser Datensammler unterstützt die Bestandserfassung von Cloud Volumes ONTAP -
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -31,9 +32,10 @@ Dieser Datensammler unterstützt die Bestandserfassung von Cloud Volumes ONTAP -
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -75,6 +77,7 @@ Dieser Datensammler unterstützt die Bestandserfassung von Cloud Volumes ONTAP -
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

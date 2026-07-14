@@ -18,6 +18,7 @@ Data Infrastructure Insights bietet eine Reihe empfohlener Dashboards, um gesch�
 
 
 
+[[importing-from-the-dashboard-gallery]]
 == Importieren aus der Dashboard-Galerie
 
 Um ein Dashboard aus der Galerie zu importieren, gehen Sie wie folgt vor:
@@ -36,6 +37,7 @@ Der Import aus der Dashboard-Galerie ist für Benutzer mit der Rolle „Administ
 
 
 
+[[importing-an-exported-dashboard]]
 == Importieren eines exportierten Dashboards
 
 Um ein Dashboard zu *exportieren*, klicken Sie auf der Seite *Observability > Explore > All Dashboards* auf das Menü rechts neben dem Dashboard und wählen Sie _Export_. Sie können auch mehrere Dashboards auswählen und im Dropdown-Menü „Massenaktionen“ die Option „Exportieren“ wählen. Die Dashboards werden in einer ZIP-Datei auf Ihrem lokalen System gespeichert.

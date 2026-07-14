@@ -20,6 +20,7 @@ Inhaltsverzeichnis:[]
 
 
 
+[[widget-naming]]
 == Widget-Benennung
 
 Widgets werden automatisch basierend auf dem Objekt, der Metrik oder dem Attribut benannt, das für die erste Widget-Abfrage ausgewählt wurde.  Wenn Sie zusätzlich eine Gruppierung für das Widget wählen, werden die „Gruppieren nach“-Attribute in die automatische Benennung (Aggregationsmethode und Metrik) einbezogen.
@@ -32,18 +33,21 @@ Wenn Sie den automatischen Widget-Namen nicht verwenden möchten, können Sie ei
 
 
 
+[[widget-placement-and-size]]
 == Platzierung und Größe des Widgets
 
 Alle Dashboard-Widgets können entsprechend Ihren Anforderungen für das jeweilige Dashboard positioniert und in der Größe angepasst werden.
 
 
 
+[[duplicating-a-widget]]
 == Duplizieren eines Widgets
 
 Klicken Sie im Dashboard-Bearbeitungsmodus auf das Menü im Widget und wählen Sie *Duplizieren*.  Der Widget-Editor wird gestartet und ist bereits mit der Konfiguration des Original-Widgets und dem Suffix „Kopie“ im Widget-Namen ausgefüllt.  Sie können problemlos alle erforderlichen Änderungen vornehmen und das neue Widget speichern.  Das Widget wird unten in Ihrem Dashboard platziert und Sie können es nach Bedarf positionieren.  Denken Sie daran, Ihr Dashboard zu speichern, wenn alle Änderungen abgeschlossen sind.
 
 
 
+[[displaying-widget-legends]]
 == Anzeigen von Widget-Legenden
 
 Die meisten Widgets auf Dashboards können mit oder ohne Legenden angezeigt werden.  Legenden in Widgets können auf einem Dashboard mit einer der folgenden Methoden ein- oder ausgeschaltet werden:
@@ -57,6 +61,7 @@ Wenn Legenden angezeigt werden und die Zielseite des durch die Legende angegeben
 
 
 
+[[transforming-metrics]]
 == Metriken transformieren
 
 Data Infrastructure Insights bietet verschiedene *Transformations*optionen für bestimmte Metriken in Widgets (insbesondere die als „Benutzerdefiniert“ oder „Integrationsmetriken“ bezeichneten Metriken, z. B. von Kubernetes, ONTAP Advanced Data, Telegraf-Plugins usw.), sodass Sie die Daten auf verschiedene Arten anzeigen können.  Wenn Sie einem Widget transformierbare Metriken hinzufügen, wird Ihnen ein Dropdown-Menü mit den folgenden Transformationsoptionen angezeigt:
@@ -77,10 +82,12 @@ Beachten Sie, dass durch die Transformation von Metriken nicht die zugrunde lieg
 
 
 
+[[dashboard-widget-queries-and-filters]]
 == Dashboard-Widget-Abfragen und -Filter
 
 
 
+[[queries]]
 === Abfragen
 
 Die Abfrage in einem Dashboard-Widget ist ein leistungsstarkes Tool zum Verwalten der Anzeige Ihrer Daten.  Hier sind einige Dinge, die Sie bei Widget-Abfragen beachten sollten.
@@ -108,6 +115,7 @@ Die übrigen Widgettypen können nur eine einzige Abfrage haben:
 
 
 
+[[filtering-in-dashboard-widget-queries]]
 === Filtern in Dashboard-Widget-Abfragen
 
 Hier sind einige Dinge, die Sie tun können, um das Beste aus Ihren Filtern herauszuholen.
@@ -208,6 +216,7 @@ um Felder anzuzeigen, die keinen Wert enthalten.
 
 
 
+[[identifying-objects-returned-by-queries-and-filters]]
 === Identifizieren von Objekten, die von Abfragen und Filtern zurückgegeben werden
 
 Die von Abfragen und Filtern zurückgegebenen Objekte ähneln denen in der folgenden Abbildung.  Objekte mit zugewiesenen „Tags“ sind Anmerkungen, während Objekte ohne Tags Leistungsindikatoren oder Objektattribute sind.
@@ -216,10 +225,12 @@ image:ObjectsReturnedByFilters.png["Von Filtern zurückgegebene Objekte"]
 
 
 
+[[grouping-identifying-and-aggregating]]
 == Gruppieren, Identifizieren und Aggregieren
 
 
 
+[[grouping-rolling-up]]
 === Gruppierung (Aufrollen)
 
 Die in einem Widget angezeigten Daten werden aus den während der Erfassung gesammelten zugrunde liegenden Datenpunkten gruppiert (manchmal auch als zusammengefasst bezeichnet). Wenn Sie beispielsweise über ein Liniendiagramm-Widget verfügen, das die Speicher-IOPS im Zeitverlauf anzeigt, möchten Sie möglicherweise für jedes Ihrer Rechenzentren eine separate Linie anzeigen, um einen schnellen Vergleich zu ermöglichen. Im Feld „Gruppieren nach“ wählen Sie den Objekttyp selbst aus, um einzelne Linien, Bereiche, Balken, Spalten usw. (abhängig vom Widget-Typ) für jedes Objekt anzuzeigen.  Sie können die Objekte nach jedem in der Liste verfügbaren Attribut gruppieren.  Wenn Sie beispielsweise Daten für ein internes Volume anzeigen, möchten Sie die Daten möglicherweise nach dem Speichernamen gruppieren.
@@ -240,6 +251,7 @@ Wenn Sie einen Filter für die Abfrage festgelegt haben, werden die Daten basier
 
 
 
+[[identifying-custom-data]]
 === Identifizierung kundenspezifischer Daten
 
 Wenn Sie ein Widget erstellen oder ändern, das auf Ihren eigenen benutzerdefinierten Daten basiert, werden Ihre Daten im Widget möglicherweise nicht korrekt dargestellt, wenn kein identifizierendes Attribut vorhanden ist.  Falls DII das von Ihnen für Ihr Widget ausgewählte Objekt nicht identifizieren kann, wird Ihnen im Bereich „Gruppieren nach“ ein Link zur _Erweiterten Konfiguration_ angezeigt.  Erweitern Sie diese Option, um das Attribut auszuwählen, anhand dessen Sie Ihre Daten identifizieren möchten.
@@ -248,6 +260,7 @@ image:unmodeled_data_identify_by.png["Unbekannte Daten über Dropdown-Menü iden
 
 
 
+[[aggregating-data]]
 === Daten aggregieren
 
 Sie können Ihre Diagramme noch besser ausrichten, indem Sie Datenpunkte in Minuten-, Stunden- oder Tagesintervalle aggregieren, bevor diese Daten anschließend nach Attributen zusammengefasst werden (falls ausgewählt). Sie können Datenpunkte nach ihrem _Durchschnitt, Maximum, Minimum, ihrer Summe oder ihrer _Anzahl_ aggregieren.
@@ -258,12 +271,14 @@ Die meisten Asset-Zähler ergeben standardmäßig den _Durchschnitt_.  Einige Z�
 
 
 
+[[showing-topbottom-results]]
 == Anzeigen der Top-/Bottom-Ergebnisse
 
 In einem Diagramm-Widget können Sie entweder die *obersten* oder *untersten* Ergebnisse für zusammengefasste Daten anzeigen und die Anzahl der angezeigten Ergebnisse aus der bereitgestellten Dropdown-Liste auswählen.  In einem Tabellen-Widget können Sie nach jeder Spalte sortieren.
 
 
 
+[[chart-widget-topbottom]]
 === Diagramm-Widget oben/unten
 
 Wenn Sie in einem Diagramm-Widget die Daten nach einem bestimmten Attribut zusammenfassen, haben Sie die Möglichkeit, entweder die obersten N oder die untersten N Ergebnisse anzuzeigen.  Beachten Sie, dass Sie nicht die obersten oder untersten Ergebnisse auswählen können, wenn Sie die Zusammenfassung nach _allen_ Attributen auswählen.
@@ -272,6 +287,7 @@ Sie können auswählen, welche Ergebnisse angezeigt werden sollen, indem Sie im 
 
 
 
+[[table-widget-show-entries]]
 === Tabellen-Widget zeigt Einträge an
 
 In einem Tabellen-Widget können Sie die Anzahl der in den Tabellenergebnissen angezeigten Ergebnisse auswählen.  Sie haben nicht die Möglichkeit, die obersten oder untersten Ergebnisse auszuwählen, da Sie in der Tabelle bei Bedarf nach jeder Spalte aufsteigend oder absteigend sortieren können.
@@ -280,6 +296,7 @@ Sie können die Anzahl der in der Tabelle auf dem Dashboard anzuzeigenden Ergebn
 
 
 
+[[grouping-in-table-widget]]
 == Gruppierung im Tabellen-Widget
 
 Daten in einem Tabellen-Widget können nach jedem verfügbaren Attribut gruppiert werden, sodass Sie eine Übersicht über Ihre Daten erhalten und für weitere Details tiefer in die Daten einsteigen können.  Die Messwerte in der Tabelle werden zur einfacheren Anzeige in jeder reduzierten Zeile zusammengefasst.
@@ -290,6 +307,7 @@ Gruppierung ist nur im Widgettyp „Tabelle“ verfügbar.
 
 
 
+[[grouping-example-with-rollup-explained]]
 === Gruppierungsbeispiel (mit Erläuterung der Zusammenfassung)
 
 Mit Tabellen-Widgets können Sie Daten zur einfacheren Anzeige gruppieren.
@@ -327,12 +345,14 @@ Die VM-Liste ist jetzt nach Hypervisor gruppiert.  Sie können jeden Hypervisor 
 
 
 
+[[performance-data-roll-up]]
 === Leistungsdaten-Rollup
 
 Wenn Sie in ein Tabellen-Widget eine Spalte für Leistungsdaten (z. B. _IOPS – Gesamt_) aufnehmen und die Daten gruppieren möchten, können Sie anschließend eine Rollup-Methode für diese Spalte auswählen.  Die Standard-Rollup-Methode besteht darin, den Durchschnitt (_avg_) der zugrunde liegenden Daten in der Gruppenzeile anzuzeigen.  Sie können auch wählen, ob die Summe, das Minimum oder das Maximum der Daten angezeigt werden soll.
 
 
 
+[[dashboard-time-range-selector]]
 == Dashboard-Zeitbereichsauswahl
 
 Sie können den Zeitraum für Ihre Dashboard-Daten auswählen.  In Widgets auf dem Dashboard werden nur Daten angezeigt, die für den ausgewählten Zeitraum relevant sind.  Sie können aus folgenden Zeiträumen auswählen:
@@ -357,12 +377,14 @@ Mit dem benutzerdefinierten Zeitbereich können Sie bis zu 31 aufeinanderfolgend
 
 
 
+[[zooming-in-to-a-time-range]]
 === In einen Zeitbereich hineinzoomen
 
 Beim Anzeigen eines Zeitreihen-Widgets (Linie, Spline, Fläche, gestapelte Fläche) – oder eines Diagramms auf einer Zielseite – können Sie die Maus über das Diagramm ziehen, um es zu vergrößern. Oben rechts auf dem Bildschirm können Sie dann diesen Zeitraum sperren, sodass Diagramme auf anderen Seiten Daten für diesen gesperrten Zeitraum widerspiegeln.  Wählen Sie zum Entsperren einen anderen Zeitraum aus der Liste aus.
 
 
 
+[[overriding-dashboard-time-in-individual-widgets]]
 == Überschreiben der Dashboard-Zeit in einzelnen Widgets
 
 Sie können die Zeitbereichseinstellung des Haupt-Dashboards in einzelnen Widgets überschreiben.  Diese Widgets zeigen Daten basierend auf ihrem festgelegten Zeitrahmen an, nicht auf dem Zeitrahmen des Dashboards.
@@ -377,6 +399,7 @@ image:OverrideTimeOnWidget.png["Überschreiben des Dashboard-Zeitbereichs für e
 
 
 
+[[primary-and-secondary-axis]]
 == Primäre und sekundäre Achse
 
 Verschiedene Metriken verwenden unterschiedliche Maßeinheiten für die Daten, die sie in einem Diagramm darstellen.  Bei IOPS beispielsweise ist die Maßeinheit die Anzahl der E/A-Vorgänge pro Sekunde (IO/s), während die Latenz ein reines Zeitmaß ist (Millisekunden, Mikrosekunden, Sekunden usw.).  Wenn Sie beide Metriken in einem einzelnen Liniendiagramm mit einem einzigen Satz von Werten für die Y-Achse darstellen, werden die Latenzzahlen (normalerweise einige Millisekunden) auf derselben Skala wie die IOPS (normalerweise im Tausenderbereich) dargestellt, und die Latenzlinie geht in dieser Skala verloren.
@@ -405,6 +428,7 @@ image:SecondaryAxisExplained.png["Beispiel für eine sekundäre Achse"]
 
 
 
+[[expressions-in-widgets]]
 == Ausdrücke in Widgets
 
 In einem Dashboard können Sie mit jedem Zeitreihen-Widget (Linie, Spline, Fläche, gestapelte Fläche), Balkendiagramm, Säulendiagramm, Kreisdiagramm oder Tabellen-Widget Ausdrücke aus den von Ihnen gewählten Metriken erstellen und das Ergebnis dieser Ausdrücke in einem einzelnen Diagramm (oder einer Spalte im Fall des<<expressions-in-a-table-widget,Tabellen-Widget>> ).  In den folgenden Beispielen werden Ausdrücke verwendet, um bestimmte Probleme zu lösen.  Im ersten Beispiel möchten wir die Lese-IOPS als Prozentsatz der Gesamt-IOPS für alle Speicherressourcen Ihres Mandanten anzeigen.  Das zweite Beispiel bietet Einblick in die „System“- oder „Overhead“-IOPS, die auf Ihrem Mandanten auftreten – jene IOPS, die nicht direkt durch das Lesen oder Schreiben von Daten entstehen.
@@ -413,6 +437,7 @@ Sie können Variablen in Ausdrücken verwenden (z. B. _$Var1 * 100_).
 
 
 
+[[expressions-example-read-iops-percentage]]
 === Ausdrucksbeispiel: IOPS-Prozentsatz lesen
 
 In diesem Beispiel möchten wir die Lese-IOPS als Prozentsatz der Gesamt-IOPS anzeigen.  Sie können sich dies als folgende Formel vorstellen:
@@ -450,6 +475,7 @@ Das Diagramm zeigt den IOPS-Leseprozentsatz im Zeitverlauf für die ausgewählte
 
 
 
+[[expressions-example-system-io]]
 === Ausdrucksbeispiel: „System“-E/A
 
 Beispiel 2: Zu den aus Datenquellen gesammelten Metriken gehören Lese-, Schreib- und Gesamt-IOPS.  Allerdings umfasst die Gesamtzahl der von einer Datenquelle gemeldeten IOPS manchmal auch „System“-IOPS, also E/A-Vorgänge, die nicht direkt zum Lesen oder Schreiben von Daten gehören.  Diese System-E/A kann auch als „Overhead“-E/A betrachtet werden, die für den ordnungsgemäßen Systembetrieb erforderlich ist, aber nicht direkt mit Datenoperationen zusammenhängt.
@@ -499,6 +525,7 @@ Um eine Variable in einem Ausdruck zu verwenden, geben Sie einfach den Variablen
 
 
 
+[[expressions-in-a-table-widget]]
 === Ausdrücke in einem Tabellen-Widget
 
 Tabellen-Widgets behandeln Ausdrücke etwas anders.  Sie können bis zu fünf Ausdrücke in einem einzelnen Tabellen-Widget haben, von denen jeder als neue Spalte zur Tabelle hinzugefügt wird.  Jeder Ausdruck kann bis zu fünf Werte enthalten, auf deren Grundlage die Berechnung durchgeführt wird.  Sie können der Spalte ganz einfach einen aussagekräftigen Namen geben.
@@ -507,12 +534,14 @@ image:ExpressionExample.png["Ausdruck in einem Tabellen-Widget"]
 
 
 
+[[variables]]
 == Variablen
 
 Mithilfe von Variablen können Sie die in einigen oder allen Widgets auf einem Dashboard angezeigten Daten gleichzeitig ändern.  Indem Sie ein oder mehrere Widgets so einstellen, dass sie eine gemeinsame Variable verwenden, führen an einer Stelle vorgenommene Änderungen dazu, dass die in jedem Widget angezeigten Daten automatisch aktualisiert werden.
 
 
 
+[[variable-types]]
 === Variablentypen
 
 Eine Variable kann einen der folgenden Typen haben:
@@ -604,6 +633,7 @@ Variablennamen:
 
 
 
+[[formatting-gauge-widgets]]
 == Formatieren von Messinstrument-Widgets
 
 Mit den Widgets „Vollständige Anzeige“ und „Aufzählungszeichen“ können Sie Schwellenwerte für die Stufen „Warnung“ und/oder „Kritisch“ festlegen und so eine klare Darstellung der von Ihnen angegebenen Daten bereitstellen.
@@ -623,6 +653,7 @@ image:Gauge-Solid.png["Massive/traditionelle Spurweite, Breite=374"] image:Gauge
 
 
 
+[[formatting-single-value-widget]]
 == Formatieren des Einzelwert-Widgets
 
 Im Einzelwert-Widget können Sie zusätzlich zur Einstellung der Warnschwellen (orange) und der kritischen Schwelle (rot) wählen, ob Werte „im Bereich“ (unter der Warnstufe) mit grünem oder weißem Hintergrund angezeigt werden sollen.
@@ -633,6 +664,7 @@ Wenn Sie in einem Einzelwert-Widget oder einem Messinstrument-Widget auf den Lin
 
 
 
+[[formatting-table-widgets]]
 == Tabellen-Widgets formatieren
 
 Wie bei Einzelwert- und Mess-Widgets können Sie in Tabellen-Widgets eine bedingte Formatierung festlegen, sodass Sie Daten mit Farben und/oder speziellen Symbolen hervorheben können.
@@ -651,6 +683,7 @@ Sie können wählen, ob die Bedingungsformatierung als Farbe, Symbole oder beide
 
 
 
+[[choosing-the-unit-for-displaying-data]]
 == Auswählen der Einheit zur Datenanzeige
 
 Bei den meisten Widgets auf einem Dashboard können Sie die Einheiten angeben, in denen Werte angezeigt werden sollen, beispielsweise _Megabyte_, _Tausende_, _Prozent_, _Millisekunden (ms)_ usw. In vielen Fällen kennt Data Infrastructure Insights das beste Format für die erfassten Daten.  In Fällen, in denen das beste Format nicht bekannt ist, können Sie das gewünschte Format festlegen.
@@ -671,6 +704,7 @@ Um Ihre Einstellungen zu löschen und neu zu beginnen, klicken Sie auf *Auf Stan
 
 
 
+[[a-word-about-auto-format]]
 === Ein Wort zur automatischen Formatierung
 
 Die meisten Messwerte werden von Datensammlern in der kleinsten Einheit gemeldet, beispielsweise als ganze Zahl wie 1.234.567.890 Bytes.  Standardmäßig formatiert Data Infrastructure Insights den Wert automatisch für die am besten lesbare Anzeige.  Beispielsweise würde ein Datenwert von 1.234.567.890 Bytes automatisch auf 1,23 _Gibibytes_ formatiert.  Sie können es auch in einem anderen Format anzeigen, beispielsweise _Mebibyte_.  Der Wert wird entsprechend angezeigt.
@@ -680,6 +714,7 @@ NOTE: Data Infrastructure Insights verwendet amerikanische englische Nummernbene
 
 
 
+[[widgets-with-multiple-queries]]
 === Widgets mit mehreren Abfragen
 
 Wenn Sie ein Zeitreihen-Widget (z. B. Linie, Spline, Fläche, gestapelte Fläche) mit zwei Abfragen haben, die beide auf der primären Y-Achse dargestellt werden, wird die Basiseinheit oben auf der Y-Achse nicht angezeigt.  Wenn Ihr Widget jedoch eine Abfrage auf der primären Y-Achse und eine Abfrage auf der sekundären Y-Achse hat, werden die Basiseinheiten für jede angezeigt.
@@ -690,6 +725,7 @@ Wenn Ihr Widget drei oder mehr Abfragen hat, werden auf der Y-Achse keine Basise
 
 
 
+[[available-units]]
 === Verfügbare Einheiten
 
 Die folgende Tabelle zeigt alle verfügbaren Einheiten nach Kategorie.
@@ -740,6 +776,7 @@ Die folgende Tabelle zeigt alle verfügbaren Einheiten nach Kategorie.
 |===
 
 
+[[tv-mode-and-auto-refresh]]
 == TV-Modus und automatische Aktualisierung
 
 Daten in Widgets auf Dashboards und Asset-Landingpages werden automatisch gemäß einem Aktualisierungsintervall aktualisiert, das durch den ausgewählten Dashboard-Zeitbereich bestimmt wird.  Das Aktualisierungsintervall hängt davon ab, ob es sich bei dem Widget um ein Zeitreihen- (Linien-, Spline-, Flächen-, gestapeltes Flächendiagramm) oder Nicht-Zeitreihen- (alle anderen Diagramme) Widget handelt.
@@ -804,6 +841,7 @@ image:AutoRefreshPaused.png["Automatische Aktualisierung angehalten"]
 
 
 
+[[dashboard-groups]]
 == Dashboard-Gruppen
 
 Durch Gruppieren können Sie zugehörige Dashboards anzeigen und verwalten.  Sie können beispielsweise eine Dashboard-Gruppe einrichten, die ausschließlich dem Speicher Ihres Mandanten gewidmet ist.  Dashboard-Gruppen werden auf der Seite *Dashboards > Alle Dashboards anzeigen* verwaltet.
@@ -833,6 +871,7 @@ NOTE: Durch das Entfernen eines Dashboards aus einer Gruppe wird das Dashboard n
 
 
 
+[[pin-your-favorite-dashboards]]
 == Pinn deine Lieblings-Dashboards an
 
 Sie können Ihre Dashboards weiter verwalten, indem Sie Ihre Favoriten oben in Ihrer Dashboard-Liste anheften.  Um ein Dashboard anzuheften, klicken Sie einfach auf die Reißzwecken-Schaltfläche, die angezeigt wird, wenn Sie mit der Maus über ein Dashboard in einer beliebigen Liste fahren.
@@ -843,6 +882,7 @@ image:DashboardPin.png["Angeheftete Dashboards"]
 
 
 
+[[dark-theme]]
 == Dunkles Design
 
 Sie können Data Infrastructure Insights entweder mit einem hellen Design (Standard) anzeigen, bei dem die meisten Bildschirme mit einem hellen Hintergrund und dunklem Text angezeigt werden, oder mit einem dunklen Design, bei dem die meisten Bildschirme mit einem dunklen Hintergrund und hellem Text angezeigt werden.
@@ -860,6 +900,7 @@ NOTE: Einige Bildschirmbereiche, wie etwa bestimmte Widget-Diagramme, zeigen auc
 
 
 
+[[line-chart-interpolation]]
 == Liniendiagramm-Interpolation
 
 Verschiedene Datensammler fragen ihre Daten oft in unterschiedlichen Intervallen ab.  Beispielsweise kann Datensammler A alle 15 Minuten eine Abfrage durchführen, während Datensammler B alle fünf Minuten eine Abfrage durchführt.  Wenn ein Liniendiagramm-Widget (auch Spline-, Flächen- und gestapelte Flächendiagramme) diese Daten aus mehreren Datensammlern in einer einzigen Linie aggregiert (z. B. wenn das Widget nach „alle“ gruppiert) und die Linie alle fünf Minuten aktualisiert, werden die Daten von Sammler B möglicherweise genau angezeigt, während die Daten von Sammler A Lücken aufweisen können, wodurch die Aggregation beeinträchtigt wird, bis Sammler A erneut abfragt.
@@ -868,6 +909,7 @@ Um dies zu verhindern, interpoliert Data Infrastructure Insights die Daten beim 
 
 
 
+[[interpolation-methods]]
 === Interpolationsmethoden
 
 Beim Erstellen oder Ändern eines Liniendiagramms (oder Spline-, Flächen- oder gestapelten Flächendiagramms) können Sie die Interpolationsmethode auf einen von drei Typen einstellen.  Wählen Sie im Abschnitt „Gruppieren nach“ die gewünschte Interpolation aus.
@@ -891,6 +933,7 @@ image:Interpolation_Linear.png["Einfache gerade Linie, die eine lineare Interpol
 
 
 
+[[anomaly-bounds-in-line-widgets]]
 === Anomaliegrenzen in Linien-Widgets
 
 Wenn Sie ein Linien- oder Spline-Diagramm-Widget in ein Dashboard oder eine Zielseite einbinden, können Sie das Diagramm im Kontext der *erwarteten Grenzen* für die Daten anzeigen.  Sie können sich das so vorstellen, als würden Sie in den Mustern Ihrer Daten nach Anomalien suchen.

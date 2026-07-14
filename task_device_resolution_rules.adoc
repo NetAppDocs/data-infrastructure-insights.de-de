@@ -18,6 +18,7 @@ Sie erstellen Geräteauflösungsregeln, um Hosts, Speicher und Bänder zu identi
 
 
 
+[[creating-device-resolution-rules]]
 == Erstellen von Geräteauflösungsregeln
 
 Wenn Sie Regeln erstellen, identifizieren Sie zunächst die Informationsquelle, auf die die Regel angewendet wird, die zum Extrahieren der Informationen verwendete Methode und ob auf die Ergebnisse der Regel eine DNS-Suche angewendet wird.
@@ -109,12 +110,14 @@ Die Ergebnisse des Regellaufs werden auf der Registerkarte *FC-Identifizierung* 
 
 
 
+[[pausing-and-resuming-rules]]
 === Regeln zum Pausieren und Fortsetzen
 
 Um die Ausführung einer Regel zu verhindern, wählen Sie im Menü auf der rechten Seite der Regel „Pause“ oder wählen Sie mehrere Regeln aus und wählen Sie dann im Dropdown-Menü „Massenaktionen“ die Option „Pause“. Sie können die Ausführung der Regel auf dieselbe Weise fortsetzen.
 
 
 
+[[starting-an-automatic-device-resolution-update]]
 == Starten einer automatischen Aktualisierung der Geräteauflösung
 
 Bei einer Aktualisierung der Geräteauflösung werden manuelle Änderungen übernommen, die seit dem letzten vollautomatischen Geräteauflösungslauf hinzugefügt wurden.  Durch Ausführen eines Updates können nur die neuen manuellen Einträge in der Geräteauflösungskonfiguration übernommen und ausgeführt werden.  Es wird kein vollständiger Geräteauflösungslauf durchgeführt.
@@ -128,6 +131,7 @@ Bei einer Aktualisierung der Geräteauflösung werden manuelle Änderungen über
 
 
 
+[[rule-assisted-manual-identification]]
 == Regelgestützte manuelle Identifikation
 
 Diese Funktion wird für Sonderfälle verwendet, in denen Sie eine bestimmte Regel oder eine Liste von Regeln (mit oder ohne einmalige Neuordnung) ausführen möchten, um unbekannte Hosts, Speicher- und Bandgeräte aufzulösen.
@@ -163,12 +167,14 @@ Wenn zutreffende Regeln gefunden werden, werden die Regelnamen in der Spalte „
 
 
 
+[[ai-assisted-rule-generation]]
 == KI-gestützte Regelgenerierung
 
 Alternativ lässt sich das Rätselraten mit KI-gestützter Geräteidentifizierung vermeiden, sodass Regeln schnell und einfach erstellt werden können. Mit dem KI-gestützten Rule Generator wird die Umgebung analysiert und es werden Vorschläge für Device Resolution-Regeln gemacht, wodurch mehr Geräte schnell identifiziert und verwaltet werden können.
 
 
 
+[[get-started]]
 === Los geht's
 
 Um KI zur Generierung von Auflösungsregeln zu nutzen, muss ein Administrator zunächst AI Generated Rules aktivieren.
@@ -183,6 +189,7 @@ Sie werden aufgefordert, Ihre Domainnamen zu bestätigen, bevor KI-generierte Re
 
 
 
+[[check-progress]]
 === Fortschritt prüfen
 
 DII erstellt regelmäßig eine Benachrichtigung, wenn zusätzliche Geräte zur möglichen Identifizierung verfügbar sind. Ist oben rechts auf der Seite ein grüner Punkt auf dem Glockensymbol zu sehen, kann darüber die Benachrichtigung angezeigt werden.
@@ -197,12 +204,14 @@ image:ahr_ai_badge.png["KI-generiertes Regelabzeichen, Breite=400"]
 
 
 
+[[resume-and-go]]
 === Fortsetzen und fortfahren
 
 KI-generierte Regeln befinden sich standardmäßig im Status _Pausiert_. Jede Regel muss überprüft und auf _Fortsetzen_ gesetzt werden, bevor sie Geräte identifizieren kann.
 
 
 
+[[related]]
 == Verwandt:
 
 link:task_device_resolution_fibre_channel.html["Fibre Channel-Geräteauflösung"] link:task_device_resolution_ip.html["IP-Geräteauflösung"] link:task_device_resolution_preferences.html["Festlegen der Geräteauflösungseinstellungen"]

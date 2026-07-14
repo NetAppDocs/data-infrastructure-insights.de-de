@@ -17,6 +17,7 @@ TIP: Monitore und Warnungen sind in der Data Infrastructure Insights Standard Ed
 
 
 
+[[viewing-and-managing-alerts]]
 == Anzeigen und Verwalten von Warnungen
 
 Gehen Sie wie folgt vor, um Warnungen anzuzeigen und zu verwalten.
@@ -52,6 +53,7 @@ Durch Klicken auf eine Alarm-ID wird die Alarmdetailseite geöffnet.
 
 
 
+[[alert-detail-panel]]
 == Alarmdetailbereich
 
 Wählen Sie eine beliebige Alarmzeile aus, um das Detailfenster des Alarms zu öffnen.  Das Alarmdetailfenster bietet zusätzliche Einzelheiten zum Alarm, darunter eine _Zusammenfassung_, einen Abschnitt _Leistung_ mit Diagrammen zu den Daten des Objekts, alle _zugehörigen Assets_ und _Kommentare_, die von den Alarmermittlern eingegeben wurden.
@@ -60,6 +62,7 @@ image:metric_alert_detail_pane.png["Detailbereich für Metrikwarnungen"]
 
 
 
+[[alerts-when-data-is-missing]]
 == Warnmeldungen bei fehlenden Daten
 
 Um in einem Echtzeitsystem wie Data Infrastructure Insights die Analyse eines Monitors auszulösen und zu entscheiden, ob eine Warnung generiert werden soll, verlassen wir uns auf eines von zwei Dingen:
@@ -74,6 +77,7 @@ Wenn Sie einen Monitor mit einem 30-Minuten-Fenster haben, der erkennt, dass ein
 
 
 
+[[permanently-active-alerts]]
 == „Dauerhaft aktive“ Warnungen
 
 Es ist möglich, einen Monitor so zu konfigurieren, dass die Bedingung für das überwachte Objekt *immer* erfüllt ist – beispielsweise IOPS > 1 oder Latenz > 0.  Diese werden oft als „Test“-Monitore erstellt und dann vergessen.  Solche Monitore erstellen Warnungen, die für die einzelnen Objekte dauerhaft offen bleiben, was mit der Zeit zu Systembelastungen und Stabilitätsproblemen führen kann.

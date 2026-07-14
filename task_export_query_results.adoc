@@ -27,6 +27,7 @@ NOTE: Der Export in .CSV ist auch im Menü „Drei Punkte“ in Dashboard-Tabell
 
 
 
+[[asynchronous-export]]
 == Asynchroner Export
 
 Das Exportieren von Daten in das CSV-Format kann je nach der zu exportierenden Datenmenge zwischen einigen Sekunden und mehreren Stunden dauern.  Data Infrastructure Insights exportiert diese Daten asynchron, sodass Sie weiterarbeiten können, während die CSV-Datei kompiliert wird.
@@ -39,12 +40,14 @@ Die exportierten Daten spiegeln die aktuelle Filterung, die angezeigten Spalten 
 
 
 
+[[commas-in-asset-names]]
 == Kommas in Asset-Namen
 
 Hinweis: Wenn in einem Asset-Namen ein Komma erscheint, wird der Name beim Export in Anführungszeichen gesetzt, wodurch der Asset-Name und das richtige CSV-Format erhalten bleiben.
 
 
 
+[[time-format-or-not-time-format]]
 == Zeitformat oder kein Zeitformat?
 
 Wenn Sie eine exportierte CSV-Datei mit Excel öffnen und ein Objektname oder ein anderes Feld im Format NN:NN (zwei Ziffern gefolgt von einem Doppelpunkt und zwei weiteren Ziffern) vorliegt, interpretiert Excel diesen Namen manchmal als Zeitformat statt als Textformat.  Dies kann dazu führen, dass Excel in diesen Spalten falsche Werte anzeigt.  Beispielsweise würde ein Objekt mit dem Namen „81:45“ in Excel als „81:45:00“ angezeigt.

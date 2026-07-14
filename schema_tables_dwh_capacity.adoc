@@ -18,10 +18,12 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 
 
 
+[[tables-and-views]]
 == Tabellen und Ansichten
 
 
 
+[[applicationdimension]]
 === Anwendungsdimension
 
 [cols="1,1,2"]
@@ -63,6 +65,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[applicationgroupbridge]]
 === Anwendungsgruppenbrücke
 
 [cols="1,1,2"]
@@ -81,6 +84,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[applicationgroupdimension]]
 === Anwendungsgruppendimension
 
 [cols="1,1,2"]
@@ -113,6 +117,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[businessentitydimension]]
 === business_entity_dimension
 
 [cols="1,1,2"]
@@ -157,6 +162,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[capacitytype]]
 === Kapazitätstyp
 
 *Primärschlüssel:* type
@@ -188,6 +194,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[cardinals]]
 === Kardinäle
 
 [cols="1,1,2"]
@@ -200,6 +207,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[chargebackfact]]
 === chargeback_fact
 
 *Primärschlüssel:* tk, dateTk
@@ -303,6 +311,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[datastoredimension]]
 === Datenspeicherdimension
 
 [cols="1,1,2"]
@@ -344,6 +353,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[datedimension]]
 === Datumsdimension
 
 [cols="1,1,2"]
@@ -428,6 +438,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[diskgroupcapacityfact]]
 === Festplattengruppe_Kapazität_Fakt
 
 *Primärschlüssel:* tk, dateTk
@@ -471,6 +482,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[diskgroupcapacityfuturefact]]
 === Festplattengruppe_Kapazität_Zukunft_Fakt
 
 *Primärschlüssel:* tk, dateTk
@@ -511,6 +523,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[diskgroupdimension]]
 === Festplattengruppe_Dimension
 
 [cols="1,1,2"]
@@ -562,6 +575,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[hostdimension]]
 === Hostdimension
 
 [cols="1,1,2"]
@@ -626,6 +640,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[hostgroupbridge]]
 === host_group_bridge
 
 [cols="1,1,2"]
@@ -644,6 +659,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[hostgroupdimension]]
 === Hostgruppendimension
 
 [cols="1,1,2"]
@@ -675,6 +691,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[internalvolumecapacityfact]]
 === interner_Volumenkapazitätsfaktor
 
 *Primärschlüssel:* tk, dateTk
@@ -800,6 +817,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[internalvolumedimension]]
 === interne_Volumendimension
 
 [cols="1,1,2"]
@@ -869,6 +887,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[k8sclusterdimension]]
 === k8s_cluster_dimension
 
 [cols="1,1,2"]
@@ -901,6 +920,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[k8snamespacedimension]]
 === k8s_namespace_dimension
 
 [cols="1,1,2"]
@@ -939,6 +959,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[k8snamespacegroupbridge]]
 === k8s_namespace_group_bridge
 
 [cols="1,1,2"]
@@ -957,6 +978,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[k8snamespacegroupdimension]]
 === k8s_namespace_group_dimension
 
 [cols="1,1,2"]
@@ -989,6 +1011,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[k8snodedimension]]
 === k8s_node_dimension
 
 [cols="1,1,2"]
@@ -1030,6 +1053,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[k8spvdimension]]
 === k8s_pv_dimension
 
 [cols="1,1,2"]
@@ -1074,6 +1098,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[k8spvccapacityfact]]
 === k8s_pvc_capacity_fact
 
 *Primärschlüssel:* tk, dateTk
@@ -1118,6 +1143,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[k8spvcdimension]]
 === k8s_pvc_dimension
 
 [cols="1,1,2"]
@@ -1162,6 +1188,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[k8sworkloaddimension]]
 === k8s_workload_dimension
 
 [cols="1,1,2"]
@@ -1198,6 +1225,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[qtreecapacityfact]]
 === qtree_capacity_fact
 
 *Primärschlüssel:* tk, dateTk
@@ -1291,6 +1319,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[qtreedimension]]
 === qtree_dimension
 
 [cols="1,1,2"]
@@ -1338,6 +1367,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[serviceleveldimension]]
 === Service-Level-Dimension
 
 [cols="1,1,2"]
@@ -1377,6 +1407,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[sptimetofill]]
 === sp_time_to_fill
 
 *Primärschlüssel:* saspFactTk
@@ -1402,6 +1433,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[storageandstoragepoolcapacityfact]]
 === Speicher- und Speicherpoolkapazität
 
 *Primärschlüssel:* tk, dateTk
@@ -1522,6 +1554,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[storageandstoragepoolcapacityfuturefact]]
 === zukünftige Speicherkapazität und Speicherpoolkapazität
 
 *Primärschlüssel:* tk, dateTk
@@ -1574,6 +1607,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[storagedimension]]
 === Speicherdimension
 
 [cols="1,1,2"]
@@ -1636,6 +1670,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[storagenodecapacityfact]]
 === storage_node_capacity_fact
 
 *Primärschlüssel:* tk, dateTk
@@ -1685,6 +1720,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[storagenodedimension]]
 === Speicherknotendimension
 
 [cols="1,1,2"]
@@ -1735,6 +1771,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[storagepooldimension]]
 === Speicherpooldimension
 
 [cols="1,1,2"]
@@ -1804,6 +1841,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[tierdimension]]
 === Tierdimension
 
 [cols="1,1,2"]
@@ -1846,6 +1884,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[vmcapacityfact]]
 === vm_capacity_fact
 
 *Primärschlüssel:* tk, dateTk
@@ -1948,6 +1987,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[vmdimension]]
 === vm_dimension
 
 [cols="1,1,2"]
@@ -1992,6 +2032,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[volumecapacityfact]]
 === volume_capacity_fact
 
 [cols="1,1,2"]
@@ -2079,6 +2120,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[volumedimension]]
 === Volumendimension
 
 [cols="1,1,2"]
@@ -2147,6 +2189,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[volumefactcurrent]]
 === volume_fact_current
 
 *Primärschlüssel:* volumeId
@@ -2202,6 +2245,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[volumehistorycapacityfact]]
 === volume_history_capacity_fact
 
 *Primärschlüssel:* tk, dateTk
@@ -2323,6 +2367,7 @@ Diese Referenz enthält detaillierte Schemainformationen für die dwh_capacity D
 '''
 
 
+[[volumelastaccessedtime]]
 === volume_last_accessed_time
 
 *Primärschlüssel:* volumeName, storageIdentifier

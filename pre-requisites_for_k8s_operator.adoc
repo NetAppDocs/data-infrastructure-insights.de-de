@@ -45,6 +45,7 @@ Lesen Sie diese Informationen, bevor Sie daslink:task_config_telegraf_agent_k8s.
 |===
 
 
+[[important-things-to-note-before-you-start]]
 == Wichtige Hinweise vor dem Start
 
 Wenn Sie mit einem<<configuring-proxy-support,Proxy>> , haben eine<<using-a-custom-or-private-docker-repository,benutzerdefiniertes Repository>> oder verwenden<<openshift-instructions,OpenShift>> , lesen Sie die folgenden Abschnitte sorgfältig durch.
@@ -53,6 +54,7 @@ Lesen Sie auch über<<Berechtigungen,Berechtigungen>> .
 
 
 
+[[configuring-proxy-support]]
 === Konfigurieren der Proxy-Unterstützung
 
 Es gibt zwei Stellen, an denen Sie einen Proxy auf Ihrem Mandanten verwenden können, um den NetApp Kubernetes Monitoring Operator zu installieren.  Dabei kann es sich um dasselbe oder um separate Proxy-Systeme handeln:
@@ -107,6 +109,7 @@ agent:
 ----
 
 
+[[using-a-custom-or-private-docker-repository]]
 === Verwenden eines benutzerdefinierten oder privaten Docker-Repositorys
 
 Standardmäßig ruft der NetApp Kubernetes Monitoring Operator Container-Images aus dem Data Infrastructure Insights -Repository ab.  Wenn Sie einen Kubernetes-Cluster als Ziel für die Überwachung verwenden und dieser Cluster so konfiguriert ist, dass er nur Container-Images aus einem benutzerdefinierten oder privaten Docker-Repository oder einer Container-Registrierung abruft, müssen Sie den Zugriff auf die vom NetApp Kubernetes Monitoring Operator benötigten Container konfigurieren.
@@ -155,6 +158,7 @@ agent:
 ----
 
 
+[[openshift-instructions]]
 === OpenShift-Anweisungen
 
 Wenn Sie OpenShift 4.6 oder höher verwenden, müssen Sie die AgentConfiguration in _operator-config.yaml_ bearbeiten, um die Einstellung _runPrivileged_ zu aktivieren:
@@ -167,6 +171,7 @@ Openshift implementiert möglicherweise eine zusätzliche Sicherheitsebene, die 
 
 
 
+[[permissions]]
 === Berechtigungen
 
 Wenn der Cluster, den Sie überwachen, benutzerdefinierte Ressourcen enthält, die keine ClusterRole haben, dielink:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["Aggregate zum Anzeigen"] , müssen Sie dem Operator manuell Zugriff auf diese Ressourcen gewähren, um sie mit Ereignisprotokollen zu überwachen.

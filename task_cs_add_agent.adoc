@@ -18,6 +18,7 @@ Workload Security-Agenten sind unerlässlich, um die Benutzeraktivitäten zu üb
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 * Für die Installation, das Ausführen von Skripts und die Deinstallation ist das Sudo-Privileg erforderlich.
@@ -27,6 +28,7 @@ Workload Security-Agenten sind unerlässlich, um die Benutzeraktivitäten zu üb
 
 
 
+[[best-practices]]
 == Bewährte Verfahren
 
 Beachten Sie Folgendes, bevor Sie Ihren Workload Security-Agenten konfigurieren.
@@ -45,6 +47,7 @@ Beachten Sie Folgendes, bevor Sie Ihren Workload Security-Agenten konfigurieren.
 |===
 
 
+[[steps-to-install-agent]]
 == Schritte zum Installieren des Agenten
 
 . Melden Sie sich als Administrator oder Kontobesitzer bei Ihrer Workload Security-Umgebung an.
@@ -76,6 +79,7 @@ image::new-agent-detect.png[Meldung bei erfolgreicher Agenteninstallation]
 
 
 
+[[network-configuration]]
 == Netzwerkkonfiguration
 
 Führen Sie die folgenden Befehle auf dem lokalen System aus, um Ports zu öffnen, die von Workload Security verwendet werden.  Wenn Sicherheitsbedenken hinsichtlich des Portbereichs bestehen, können Sie einen kleineren Portbereich verwenden, beispielsweise _35000:35100_.  Jede SVM verwendet zwei Ports.
@@ -105,6 +109,7 @@ Beispielausgabe:
  35000-55000/tcp
 
 
+[[pinning-an-agent-at-the-current-version]]
 == Einen Agenten auf der aktuellen Version „fixieren“
 
 Standardmäßig aktualisiert Data Infrastructure Insights Workload Security Agents automatisch.  Einige Kunden möchten die automatische Aktualisierung möglicherweise anhalten, wodurch ein Agent auf seiner aktuellen Version verbleibt, bis eines der folgenden Ereignisse eintritt:
@@ -127,6 +132,7 @@ image:ws_agent_version.png["In der Agententabelle angezeigte WS-Agent-Versionen"
 
 
 
+[[troubleshooting-agent-errors]]
 == Fehlerbehebung bei Agentenfehlern
 
 Bekannte Probleme und deren Lösungen werden in der folgenden Tabelle beschrieben.

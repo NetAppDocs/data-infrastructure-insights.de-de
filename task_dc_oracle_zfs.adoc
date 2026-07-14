@@ -14,11 +14,12 @@ Data Infrastructure Insights verwendet den Oracle ZFS Storage Appliance-Datensam
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erfasst Bestandsinformationen mit dem Oracle ZFS-Datenkollektor.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -47,6 +48,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[requirements]]
 == Anforderungen
 
 * Hostnamen für den ZFS-Controller-1 und den ZFS-Controller-2
@@ -56,6 +58,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 
 
 
+[[required-performance-metrics]]
 == Erforderliche Leistungsmetriken
 
 Oracle ZFS-Geräte bieten Speicheradministratoren große Flexibilität bei der Erfassung von Leistungsstatistiken.  Data Infrastructure Insights erwartet, dass Sie _jeden_ Controller in einem Hochverfügbarkeitspaar so konfigurieren, dass die folgenden Metriken erfasst werden:
@@ -70,9 +73,10 @@ Wenn der Controller einige oder alle dieser Daten nicht erfasst, führt dies wah
 
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -90,9 +94,10 @@ Wenn der Controller einige oder alle dieser Daten nicht erfasst, führt dies wah
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -110,12 +115,14 @@ Wenn der Controller einige oder alle dieser Daten nicht erfasst, führt dies wah
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
 [cols="2a, 2a"]

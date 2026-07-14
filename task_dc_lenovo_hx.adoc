@@ -14,6 +14,7 @@ Der Lenovo HX-Datenkollektor erfasst Bestands- und Leistungsinformationen von Le
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
@@ -25,11 +26,12 @@ Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestands- und Leistungsinformationen vom Lenovo HX-Datensammler.  Für jeden von Data Infrastructure Insights erworbenen Asset-Typ wird die am häufigsten verwendete Terminologie für dieses Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -53,9 +55,10 @@ Data Infrastructure Insights erhält die folgenden Bestands- und Leistungsinform
 |===
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -70,9 +73,10 @@ Data Infrastructure Insights erhält die folgenden Bestands- und Leistungsinform
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 

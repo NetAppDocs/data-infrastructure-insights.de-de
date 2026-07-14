@@ -18,6 +18,7 @@ E-Mail-Benachrichtigungen ermöglichen es Ihnen, über potenzielle Angriffe, Sic
 
 
 
+[[potential-attack-alerts-and-warnings]]
 == Alarme und Warnungen vor potenziellen Angriffen
 
 Um Warnmeldungen zu _potenziellen Angriffen_ zu senden, geben Sie die E-Mail-Adressen der Empfänger im Abschnitt _Warnmeldungen zu potenziellen Angriffen senden_ ein.  Für jede Aktion im Zusammenhang mit der Warnung werden E-Mail-Benachrichtigungen an die Empfängerliste der Warnung gesendet.
@@ -26,6 +27,7 @@ Um _Warnbenachrichtigungen_ zu senden, geben Sie die E-Mail-Adressen der Empfän
 
 
 
+[[agent-and-data-collector-health-monitoring]]
 == Integritätsüberwachung für Agenten und Datensammler
 
 Sie können den Zustand von Agenten und Datenquellen durch Benachrichtigungen überwachen.
@@ -43,6 +45,7 @@ Beachten Sie Folgendes:
 
 
 
+[[receiving-agent-and-data-collector-upgrade-notifications]]
 == Empfangen von Agent- und Data Collector-Upgrade-Benachrichtigungen
 
 * Geben Sie die E-Mail-ID(s) in den „Health Alerts zur Datenerfassung“ ein.
@@ -52,6 +55,7 @@ Beachten Sie Folgendes:
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 |===

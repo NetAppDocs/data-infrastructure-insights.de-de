@@ -25,6 +25,7 @@ Die Seite wird automatisch basierend auf dem aktuell ausgewählten Data Infrastr
 
 
 
+[[filtering]]
 == Filtern
 
 Wie bei allen Funktionen von Data Infrastructure Insights ist das Filtern der Änderungsliste intuitiv: Geben Sie oben auf der Seite Werte für Ihren Kubernetes-Cluster, Namespace oder Workload ein oder wählen Sie diese aus oder fügen Sie Ihre eigenen Filter hinzu, indem Sie die Schaltfläche {+] auswählen.
@@ -35,6 +36,7 @@ image:ChangeAnalytitcs_Filtered_Timeline.png["Beispiel für eine Workload-Zeitle
 
 
 
+[[quick-status]]
 == Schnellstatus
 
 Unterhalb des Filterbereichs befinden sich eine Reihe von Indikatoren auf hoher Ebene.  Links steht die Anzahl der Alarme (Warnung und Kritisch).  Diese Zahl umfasst sowohl _aktive_ als auch _gelöste_ Warnungen.  Um nur _aktive_ Warnungen anzuzeigen, legen Sie einen Filter für „Status“ fest und wählen Sie „Aktiv“.
@@ -51,6 +53,7 @@ image:ChangeAnalytitcs_ExploreWorkloadAlerts.png["Optionen zur Untersuchung der 
 
 
 
+[[detail-panel]]
 == Detailbereich
 
 Wenn Sie eine Änderung in der Liste auswählen, wird ein Fenster geöffnet, in dem die Änderung ausführlicher beschrieben wird.  Wenn Sie beispielsweise eine fehlgeschlagene Bereitstellung auswählen, wird eine Zusammenfassung der Bereitstellung mit Start- und Endzeit, Dauer und Auslöseort der Bereitstellung sowie Links zum Durchsuchen dieser Ressourcen angezeigt.  Außerdem werden der Grund für den Fehler, alle damit verbundenen Änderungen und alle zugehörigen Ereignisse angezeigt.

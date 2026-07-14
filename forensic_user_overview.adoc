@@ -18,6 +18,7 @@ Informationen zu jedem Benutzer finden Sie in der Benutzerübersicht.  Verwenden
 
 
 
+[[user-profile]]
 == Benutzerprofil
 
 Zu den Benutzerprofilinformationen gehören Kontaktinformationen und Standort des Benutzers.  Das Profil enthält die folgenden Informationen:
@@ -31,6 +32,7 @@ Zu den Benutzerprofilinformationen gehören Kontaktinformationen und Standort de
 
 
 
+[[user-behavior]]
 == Nutzerverhalten
 
 Die Informationen zum Benutzerverhalten identifizieren die letzten Aktivitäten und Vorgänge, die der Benutzer durchgeführt hat.  Zu diesen Informationen gehören:
@@ -53,12 +55,14 @@ Die Informationen zum Benutzerverhalten identifizieren die letzten Aktivitäten 
 
 
 
+[[refresh-interval]]
 == Aktualisierungsintervall
 
 Die Benutzerliste wird alle 12 Stunden aktualisiert.
 
 
 
+[[retention-policy]]
 == Aufbewahrungsrichtlinie
 
 Wenn die Benutzerliste nicht erneut aktualisiert wird, bleibt sie 13 Monate lang erhalten.  Nach 13 Monaten werden die Daten gelöscht.  Wenn Ihre Workload Security-Umgebung gelöscht wird, werden alle mit der Umgebung verknüpften Daten gelöscht.

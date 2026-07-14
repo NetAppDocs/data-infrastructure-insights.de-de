@@ -31,6 +31,7 @@ Wenn beispielsweise ein Vermögenswert geleast wird und der Leasingvertrag inner
 
 
 
+[[default-annotation-types]]
 == Standard-Annotationstypen
 
 Data Infrastructure Insights bietet einige Standardanmerkungstypen.  Diese Anmerkungen können zum Filtern oder Gruppieren von Daten verwendet werden.
@@ -86,6 +87,7 @@ NOTE: Alias, Data Center, Hot, Service Level, Sunset, Switch Level, Tier und Vio
 
 
 
+[[creating-custom-annotations]]
 == Erstellen benutzerdefinierter Anmerkungen
 
 Mithilfe von Anmerkungen können Sie den Assets benutzerdefinierte, geschäftsspezifische Daten hinzufügen, die Ihren Geschäftsanforderungen entsprechen.  Obwohl Data Infrastructure Insights eine Reihe von Standardanmerkungen bereitstellt, möchten Sie die Daten möglicherweise auf andere Weise anzeigen.  Die Daten in benutzerdefinierten Anmerkungen ergänzen bereits erfasste Gerätedaten, wie etwa Speicherhersteller, Anzahl der Datenträger und Leistungsstatistiken.  Die Daten, die Sie mithilfe von Anmerkungen hinzufügen, werden von Data Infrastructure Insights nicht erkannt.

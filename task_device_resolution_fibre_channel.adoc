@@ -27,6 +27,7 @@ Der Link „Gesamtabdeckung“ zeigt eine Liste der Anzahl der identifizierten G
 
 
 
+[[adding-a-fibre-channel-device-manually]]
 == Manuelles Hinzufügen eines Fibre Channel-Geräts
 
 Sie können Data Infrastructure Insights manuell ein Fibre-Channel-Gerät hinzufügen, indem Sie die Funktion „Manuell hinzufügen“ verwenden, die auf der Registerkarte „Fibre-Channel-Identifizierung“ der Geräteauflösung verfügbar ist.  Dieser Prozess kann zur Voridentifizierung eines Geräts verwendet werden, das voraussichtlich in der Zukunft entdeckt wird.
@@ -53,6 +54,7 @@ Das von Ihnen eingegebene Gerät wird der Geräteliste auf der Registerkarte „
 
 
 
+[[importing-fibre-channel-device-identification-from-a-csv-file]]
 == Importieren der Fibre Channel-Geräteidentifikation aus einer CSV-Datei
 
 Sie können die Fibre-Channel-Geräteidentifikation manuell in die Data Infrastructure Insights -Geräteauflösung importieren, indem Sie eine Geräteliste in einer CSV-Datei verwenden.
@@ -92,6 +94,7 @@ Die von Ihnen eingegebenen Geräte werden der Geräteliste auf der Registerkarte
 
 
 
+[[exporting-fibre-channel-device-identifications-to-a-csv-file]]
 == Exportieren von Fibre Channel-Gerätekennungen in eine CSV-Datei
 
 Sie können vorhandene Fibre-Channel-Geräteidentifikationen aus der Geräteauflösungsfunktion von Data Infrastructure Insights in eine CSV-Datei exportieren.  Möglicherweise möchten Sie eine Gerätekennung exportieren, damit Sie sie ändern und dann wieder in Data Infrastructure Insights importieren können, wo sie dann zum Identifizieren von Geräten verwendet wird, die denen ähneln, die ursprünglich mit der exportierten Kennung übereinstimmten.

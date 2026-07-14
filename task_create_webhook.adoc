@@ -47,6 +47,7 @@ Die Webhook-Kanalinstanz besteht aus den folgenden Elementen:
 |===
 
 
+[[creating-a-webhook]]
 == Erstellen eines Webhooks
 
 Um einen Data Infrastructure Insights -Webhook zu erstellen, gehen Sie zu *Admin > Benachrichtigungen* und wählen Sie die Registerkarte *Webhooks* aus.
@@ -65,6 +66,7 @@ image:Webhook_Default_Parameters.png["Standard-Webhook-Parameter von Data Infras
 
 
 
+[[parameters-what-are-they-and-how-do-i-use-them]]
 === Parameter: Was sind sie und wie verwende ich sie?
 
 Alarmparameter sind dynamische Werte, die pro Alarm ausgefüllt werden.  Beispielsweise wird der Parameter _%%TriggeredOn%%_ durch das Objekt ersetzt, bei dem der Alarm ausgelöst wurde.
@@ -75,18 +77,21 @@ Beachten Sie, dass in diesem Abschnitt beim Klicken auf die Schaltfläche „Web
 
 
 
+[[custom-parameters-and-secrets]]
 === Benutzerdefinierte Parameter und Geheimnisse
 
 In diesem Abschnitt können Sie beliebige benutzerdefinierte Parameter und/oder Geheimnisse hinzufügen.  Aus Sicherheitsgründen kann nur der Ersteller des Webhooks diesen Webhook-Kanal ändern, wenn ein Geheimnis definiert ist.  Für andere ist es schreibgeschützt.  Sie können Geheimnisse in URLs/Headern als _%%<secret_name>%%_ verwenden.
 
 
 
+[[webhooks-list-page]]
 === Webhooks-Listenseite
 
 Auf der Webhook-Listenseite werden die Felder „Name“, „Erstellt von“, „Erstellt am“, „Status“, „Sicher“ und „Zuletzt gemeldet“ angezeigt.
 
 
 
+[[choosing-webhook-notification-in-a-monitor]]
 == Auswählen einer Webhook-Benachrichtigung in einem Monitor
 
 Um die Webhook-Benachrichtigung in einemlink:task_create_monitor.html["Monitor"] , gehen Sie zu *Warnungen > Monitore verwalten* und wählen Sie den gewünschten Monitor aus oder fügen Sie einen neuen Monitor hinzu.  Wählen Sie im Abschnitt „Teambenachrichtigungen einrichten“ „Webhook“ als Übermittlungsmethode.  Wählen Sie die Warnstufen (Kritisch, Warnung, Gelöst) und dann den gewünschten Webhook aus.
@@ -95,6 +100,7 @@ image:Webhook_Monitor_Notify.png["Webhook-Monitor-Benachrichtigung"]
 
 
 
+[[webhook-examples]]
 == Webhook-Beispiele:
 
 Webhooks fürlink:task_webhook_example_slack.html["Locker"] Webhooks fürlink:task_webhook_example_pagerduty.html["PagerDuty"] Webhooks fürlink:task_webhook_example_teams.html["Teams"] Webhooks fürlink:task_webhook_example_discord.html["Zwietracht"]

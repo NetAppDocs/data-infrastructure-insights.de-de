@@ -21,6 +21,7 @@ NOTE: Diese Dokumentation bezieht sich auf die Data Infrastructure Insights -Ber
 
 
 
+[[odata]]
 == Odata
 
 Die Data Infrastructure Insights Reporting API folgt demlink:https://www.odata.org/["OData v4"] (Open Data Protocol)-Standard für die Abfrage der Reporting-Datenbank.  Weitere Informationen und weitere Informationen finden Sie unterlink:https://www.odata.org/getting-started/basic-tutorial/["dieses Tutorial"] auf OData.
@@ -29,6 +30,7 @@ Alle Anfragen beginnen mit der URL _\https://< Data Infrastructure Insights URL>
 
 
 
+[[generating-an-apikey]]
 == Generieren eines API-Schlüssels
 
 Lesen Sie mehr überlink:API_Overview.html["APIs für Data Infrastructure Insights"] .
@@ -48,6 +50,7 @@ APIkeys sind gut für<<synchronous-or-asynchronous,_Sync_ oder _Async_>> .
 
 
 
+[[direct-query-of-tables]]
 == Direkte Abfrage von Tabellen
 
 Mit dem vorhandenen API-Schlüssel sind nun direkte Abfragen der Reporting-Datenbank möglich.  Lange URLs können zu Anzeigezwecken auf \https://.../odata/ vereinfacht werden, anstatt auf die vollständige Version \https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata/
@@ -63,6 +66,7 @@ Versuchen Sie es mit einfachen Abfragen wie
 
 
 
+[[rest-api-examples]]
 == REST-API-Beispiele
 
 Die URL für alle Aufrufe lautet _\https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata_.
@@ -107,6 +111,7 @@ Ergebnis:
 ....
 
 
+[[helpful-hints]]
 == Hilfreiche Hinweise
 
 Beachten Sie beim Arbeiten mit Reporting-API-Abfragen Folgendes.
@@ -133,6 +138,7 @@ Ihr API-Schlüssel ist spezifisch für Ihre Data Infrastructure Insights Umgebun
 
 
 
+[[synchronous-or-asynchronous]]
 == Synchron oder asynchron?
 
 Standardmäßig wird ein API-Befehl im _synchronen_ Modus ausgeführt, d. h. Sie senden die Anfrage und die Antwort wird sofort zurückgegeben.  Manchmal kann die Ausführung einer Abfrage jedoch sehr lange dauern, was zu einer Zeitüberschreitung der Anforderung führen kann.  Um dies zu umgehen, können Sie eine Anfrage _asynchron_ ausführen.  Im asynchronen Modus gibt die Anfrage eine URL zurück, über die die Ausführung überwacht werden kann.  Die URL gibt das Ergebnis zurück, wenn es fertig ist.

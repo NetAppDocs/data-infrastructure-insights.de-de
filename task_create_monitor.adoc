@@ -24,12 +24,14 @@ Data Infrastructure Insights bietet eine Reihe vonlink:task_system_monitors.html
 
 
 
+[[security-best-practice]]
 == Best Practice für die Sicherheit
 
 Die Warnmeldungen von Data Infrastructure Insights sollen Datenpunkte und Trends zu Ihrem Mandanten hervorheben. Außerdem können Sie mit Data Infrastructure Insights eine beliebige gültige E-Mail-Adresse als Warnmeldungsempfänger eingeben.  Wenn Sie in einer sicheren Umgebung arbeiten, achten Sie besonders darauf, wer die Benachrichtigung erhält oder anderweitig Zugriff auf die Warnung hat.
 
 
 
+[[metric-or-log-monitor]]
 == Metrik- oder Protokollmonitor?
 
 . Klicken Sie im Menü „Data Infrastructure Insights“ auf *Warnungen > Monitore verwalten*
@@ -56,6 +58,7 @@ Nachdem Sie Ihren Monitortyp ausgewählt haben, wird das Dialogfeld „Monitorko
 
 
 
+[[metric-monitor]]
 === Metrikmonitor
 
 . Suchen Sie in der Dropdown-Liste nach einem zu überwachenden Objekttyp und einer Metrik und wählen Sie diese aus.
@@ -112,6 +115,7 @@ Sie können auswählen, wie eine Metriküberwachungswarnung aufgelöst wird.  Ih
 
 
 
+[[log-monitor]]
 === Protokollmonitor
 
 Wählen Sie beim Erstellen eines *Protokollmonitors* zunächst aus der verfügbaren Protokollliste aus, welches Protokoll überwacht werden soll.  Anschließend können Sie wie oben beschrieben anhand der verfügbaren Attribute filtern.  Sie können auch ein oder mehrere „Gruppieren nach“-Attribute auswählen.
@@ -142,6 +146,7 @@ image:Monitor_log_monitor_resolution.png["Alarmauflösung"]
 
 
 
+[[anomaly-detection-monitor]]
 === Anomalieerkennungsmonitor
 
 . Suchen Sie in der Dropdown-Liste nach einem zu überwachenden Objekttyp und einer Metrik und wählen Sie diese aus.
@@ -169,6 +174,7 @@ image:AnomalyDetectionMonitorDefineConditions.png["Definieren der Bedingungen zu
 
 
 
+[[select-notification-type-and-recipients]]
 === Benachrichtigungstyp und Empfänger auswählen
 
 Im Abschnitt „Teambenachrichtigung(en) einrichten“ können Sie auswählen, ob Ihr Team per E-Mail oder Webhook benachrichtigt werden soll.
@@ -192,6 +198,7 @@ NOTE: ONTAP Data Collector-Benachrichtigungen haben Vorrang vor allen spezifisch
 
 
 
+[[setting-corrective-actions-or-additional-information]]
 === Festlegen von Korrekturmaßnahmen oder zusätzlichen Informationen
 
 Sie können eine optionale Beschreibung sowie zusätzliche Erkenntnisse und/oder Korrekturmaßnahmen hinzufügen, indem Sie den Abschnitt *Warnungsbeschreibung hinzufügen* ausfüllen.  Die Beschreibung kann bis zu 1024 Zeichen lang sein und wird mit der Warnung gesendet.  Das Feld „Erkenntnisse/Korrekturmaßnahmen“ kann bis zu 67.000 Zeichen umfassen und wird im Zusammenfassungsbereich der Zielseite der Warnung angezeigt.
@@ -204,6 +211,7 @@ image:Monitors_Alert_Description.png["Korrekturmaßnahmen und Beschreibung der W
 
 
 
+[[save-your-monitor]]
 === Speichern Sie Ihren Monitor
 
 . Falls gewünscht, können Sie eine Beschreibung des Monitors hinzufügen.
@@ -215,6 +223,7 @@ Ihr neuer Monitor wird der Liste der aktiven Monitore hinzugefügt.
 
 
 
+[[monitor-list]]
 == Monitorliste
 
 Auf der Seite „Monitor“ werden die aktuell konfigurierten Monitore aufgelistet und Folgendes angezeigt:
@@ -233,6 +242,7 @@ Wenn ein Monitor nicht mehr benötigt wird, können Sie ihn löschen, indem Sie 
 
 
 
+[[monitor-groups]]
 == Monitorgruppen
 
 Durch Gruppieren können Sie zusammengehörige Monitore anzeigen und verwalten.  Sie können beispielsweise eine Monitorgruppe speziell für den Speicher Ihres Mandanten einrichten oder Monitore, die für eine bestimmte Empfängerliste relevant sind.
@@ -252,12 +262,14 @@ NOTE: Benutzerdefinierte Monitore können angehalten, fortgesetzt, gelöscht ode
 
 
 
+[[suspended-monitors]]
 === Hängende Monitore
 
 Diese Gruppe wird nur angezeigt, wenn Data Infrastructure Insights einen oder mehrere Monitore angehalten hat.  Ein Monitor kann ausgesetzt werden, wenn er übermäßig viele oder kontinuierliche Warnungen generiert.  Wenn es sich bei dem Monitor um einen benutzerdefinierten Monitor handelt, ändern Sie die Bedingungen, um die kontinuierliche Alarmierung zu verhindern, und setzen Sie den Monitor dann fort.  Der Monitor wird aus der Gruppe „Angehaltene Monitore“ entfernt, wenn das Problem, das zur Anhaltung geführt hat, behoben ist.
 
 
 
+[[system-defined-monitors]]
 === Systemdefinierte Monitore
 
 Diese Gruppen zeigen die von Data Infrastructure Insights bereitgestellten Monitore an, sofern Ihre Umgebung die von den Monitoren benötigten Geräte und/oder Protokollverfügbarkeit enthält.
@@ -268,6 +280,7 @@ Systemmonitore können Monitore für die ONTAP Infrastruktur (Speicher, Volume u
 
 
 
+[[custom-monitor-groups]]
 === Benutzerdefinierte Monitorgruppen
 
 Sie können Ihre eigenen Gruppen erstellen, um Monitore entsprechend Ihren Anforderungen zu enthalten.  Beispielsweise möchten Sie möglicherweise eine Gruppe für alle Ihre speicherbezogenen Monitore.
@@ -298,6 +311,7 @@ image:Monitors_PauseGroup.png["Eine Gruppe pausieren"]
 
 
 
+[[system-defined-monitors]]
 == Systemdefinierte Monitore
 
 Data Infrastructure Insights umfasst eine Reihe systemdefinierter Monitore für Metriken und Protokolle.  Die verfügbaren Systemmonitore hängen von den auf Ihrem Mandanten vorhandenen Datensammlern ab.  Aus diesem Grund können sich die in Data Infrastructure Insights verfügbaren Monitore ändern, wenn Datensammler hinzugefügt oder ihre Konfigurationen geändert werden.
@@ -306,6 +320,7 @@ Sehen Sie sich dielink:task_system_monitors.html["Systemdefinierte Monitore"] Se
 
 
 
+[[more-information]]
 === Weitere Informationen
 
 * link:task_view_and_manage_alerts.html["Anzeigen und Verwerfen von Warnungen"]

@@ -18,6 +18,7 @@ image:workload-map-animated.gif["Beispiel für eine Workload-Karte"]
 
 
 
+[[pre-requisites]]
 == Voraussetzungen
 
 Bevor Sie die Kubernetes-Netzwerkleistungsüberwachung und -karte verwenden können, müssen Sie Folgendes konfiguriert haben:link:task_config_telegraf_agent_k8s.html["NetApp Kubernetes Monitoring Operator"] um diese Option zu aktivieren.  Aktivieren Sie während der Bereitstellung des Operators das Kontrollkästchen „Netzwerkleistung und Karte“, um die Funktion zu aktivieren.  Sie können diese Option auch aktivieren, indem Sie zu einer Kubernetes-Landingpage navigieren und „Bereitstellung ändern“ auswählen.
@@ -26,6 +27,7 @@ image:ServiceMap_NKMO_Deployment_Options.png["Auswählen der Kartenoption währe
 
 
 
+[[monitors]]
 == Monitore
 
 Die Workload Map verwendetlink:task_create_monitor.html["Monitore"] um Informationen abzuleiten.  Data Infrastructure Insights bietet eine Reihe von standardmäßigen Kubernetes-Monitoren (beachten Sie, dass diese standardmäßig _angehalten_ sein können).  Sie können die gewünschten Monitore _fortsetzen_ (d. h. aktivieren) oder benutzerdefinierte Monitore für Kubernetes-Objekte erstellen, die auch von der Workload Map verwendet werden.
@@ -45,6 +47,7 @@ Sie können Data Infrastructure Insights -Metrikwarnungen für alle der folgende
 
 
 
+[[the-map]]
 == Die Karte
 
 Die Karte zeigt Dienste/Workloads und ihre Beziehungen zueinander.  Pfeile zeigen die Verkehrsrichtung an.  Wenn Sie mit der Maus über eine Arbeitslast fahren, werden zusammenfassende Informationen zu dieser Arbeitslast angezeigt, wie Sie in diesem Beispiel sehen können:
@@ -63,6 +66,7 @@ image:ServiceMap_Node_and_Connection_Legend.png["Legende mit den relativen Kreis
 
 
 
+[[workload-details-and-alerts]]
 == Arbeitslastdetails und Warnungen
 
 Farbig angezeigte Kreise weisen auf eine Warnung oder einen Alarm der kritischen Stufe für die Arbeitslast hin.  Bewegen Sie den Mauszeiger über den Kreis, um eine Zusammenfassung des Problems anzuzeigen, oder klicken Sie auf den Kreis, um ein Slideout-Fenster mit weiteren Details zu öffnen.
@@ -71,6 +75,7 @@ image:Workload_Map_Slideout_with_Alert.png["Workload-Slideout-Details mit Warnun
 
 
 
+[[finding-and-filtering]]
 == Suchen und Filtern
 
 Wie bei anderen Data Infrastructure Insights Funktionen können Sie ganz einfach Filter festlegen, um sich auf die gewünschten spezifischen Objekte oder Workload-Attribute zu konzentrieren.
@@ -83,6 +88,7 @@ image:Workload_Map_Find_Highlighting.png["Durch Eingabe in das Suchfeld werden A
 
 
 
+[[workload-labels]]
 == Arbeitslastbezeichnungen
 
 Arbeitslastbeschriftungen sind erforderlich, wenn die Karte die angezeigten Arbeitslasttypen identifizieren soll (d. h. die Kreissymbole).  Die Bezeichnungen werden wie folgt abgeleitet:
@@ -117,6 +123,7 @@ Beispielsweise wird bei einem DNS-aufgelösten Namen von _s3.eu-north-1.amazonaw
 
 
 
+[[dive-deep]]
 == Tauchen Sie tief ein
 
 Wenn Sie mit der rechten Maustaste auf eine Arbeitslast klicken, werden Ihnen zusätzliche Optionen zur weiteren Erkundung angezeigt.  Von hier aus können Sie beispielsweise hineinzoomen, um die Verbindungen für diese Arbeitslast anzuzeigen.

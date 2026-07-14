@@ -121,6 +121,7 @@ Klicken Sie auf „Optionale Attribute einschließen“, um die folgenden Attrib
 |===
 
 
+[[testing-your-user-directory-collector-configuration]]
 == Testen der Konfiguration Ihres Benutzerverzeichnis-Collectors
 
 Sie können LDAP-Benutzerberechtigungen und Attributdefinitionen mithilfe der folgenden Verfahren validieren:
@@ -140,6 +141,7 @@ image:CloudSecure_LDAPDialog.png["LDAP-Verbindung"]
 
 
 
+[[troubleshooting-ldap-directory-collector-configuration-errors]]
 == Fehlerbehebung bei Konfigurationsfehlern des LDAP-Verzeichnissammlers
 
 In der folgenden Tabelle werden bekannte Probleme und Lösungen beschrieben, die während der Collector-Konfiguration auftreten können:

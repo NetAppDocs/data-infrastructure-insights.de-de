@@ -14,6 +14,7 @@ Data Infrastructure Insights verwendet diesen Datensammler, um Metriken von Acti
 
 
 
+[[installation]]
 == Installation
 
 . Klicken Sie unter *Observability > Collectors* auf *+Data Collector*.  Wählen Sie ActiveMQ.
@@ -29,12 +30,14 @@ image:ActiveMQDCConfigWindows.png["ActiveMQ-Konfiguration"]
 
 
 
+[[setup]]
 == Aufstellen
 
 Informationen finden Sie im http://activemq.apache.org/getting-started.html["ActiveMQ-Dokumentation"]
 
 
 
+[[objects-and-counters]]
 == Objekte und Zähler
 
 Die folgenden Objekte und ihre Zähler werden gesammelt:
@@ -54,6 +57,7 @@ Die folgenden Objekte und ihre Zähler werden gesammelt:
 |===
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Weitere Informationen finden Sie in derlink:concept_requesting_support.html["Support"] Seite.

@@ -18,11 +18,12 @@ Der Datensammler für VMware vSphere sammelt Leistungs- und Konfigurationsinform
 
 
 
+[[terminology]]
 == Terminologie
 
 Data Infrastructure Insights erhält die folgenden Bestandsinformationen vom VMware vSphere-Datenkollektor.  Für jeden erworbenen Vermögenswerttyp wird die am häufigsten verwendete Terminologie für den Vermögenswert angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
 
@@ -48,6 +49,7 @@ Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die mö
 
 
 
+[[requirements]]
 == Anforderungen
 
 Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
@@ -67,9 +69,10 @@ Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
 
 
 
+[[setup-and-connection]]
 == Einrichtung und Anschluss
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -81,9 +84,10 @@ Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
 |===
 
 
+[[configuration]]
 == Konfiguration
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Feld | Beschreibung 
 
@@ -98,14 +102,13 @@ Zur Konfiguration dieses Datensammlers sind folgende Angaben erforderlich:
 |===
 
 
+[[advanced-configuration]]
 == Erweiterte Konfiguration
 
 Aktivieren Sie im Bildschirm „Erweiterte Konfiguration“ das Kontrollkästchen *VM-Leistung*, um Leistungsdaten zu erfassen.  Die Inventarerfassung ist standardmäßig aktiviert.  Die folgenden Felder können konfiguriert werden:
 
-[cols="2*"]
+[cols="50,50"]
 |===
-
-
 | Feld | Beschreibung 
 
 
@@ -131,6 +134,7 @@ Aktivieren Sie im Bildschirm „Erweiterte Konfiguration“ das Kontrollkästche
 |===
 
 
+[[mapping-vmware-tags-to-data-infrastructure-insights-annotations]]
 == Zuordnen von VMware-Tags zu Data Infrastructure Insights -Anmerkungen
 
 Mit dem VMware-Datensammler können Sie Data Infrastructure Insights -Anmerkungen mit auf VMware konfigurierten Tags füllen.  Der DII-Annotationsname muss mit dem VMware-*Kategorie*namen identisch sein. Das Tag wird dann als Annotationswert einer DII-Annotation mit demselben Namen wie die Kategorie angewendet.  Data Infrastructure Insights füllt immer gleichnamige Textanmerkungen aus und unternimmt den bestmöglichen Versuch, Anmerkungen anderer Typen (Zahl, Boolescher Wert usw.) auszufüllen.  Wenn Ihre Anmerkung einen anderen Typ hat und der Datensammler sie nicht ausfüllen kann, kann es erforderlich sein, die Anmerkung zu entfernen und als Texttyp neu zu erstellen.
@@ -146,15 +150,17 @@ Beachten Sie Folgendes:
 
 
 
+[[troubleshooting]]
 == Fehlerbehebung
 
 Wenn bei diesem Datensammler Probleme auftreten, können Sie Folgendes versuchen:
 
 
 
+[[inventory]]
 === Inventar
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problem: | Versuchen Sie Folgendes: 
 
