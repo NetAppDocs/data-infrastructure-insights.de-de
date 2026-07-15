@@ -19,6 +19,25 @@ NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hie
 
 
 
+[[july-2026]]
+== Juli 2026
+
+
+
+[[new-ai-assistant-starting-page]]
+=== Neue KI-Assistent Startseite
+
+Der DII KI-Assistent verfügt nun über eine eigene Startseite, die die intelligente Infrastrukturanalyse in den Mittelpunkt stellt. Neue Konversationen können sofort begonnen, die letzte Sitzung mit einem Klick fortgesetzt oder ein schneller Einstieg mit vorgeschlagenen Eingabeaufforderungen genutzt werden.
+
+image:AI_dashboard_page_default.png["KI Dashboard Standard, Breite=800"]
+
+Auf die Startseite kann über den *AI Assistant* im Navigationsmenü zugegriffen werden oder der AI Assistant kann von überall aus über das „Sterne“-Symbol oben links geöffnet werden.
+
+image:AI_dashboard_page_menu.png["KI Assistant Navigationsmenü, Breite=600"] image:AI_assistant_access_button.png["KI-Assistenten-Zugriff von überall, Breite=300"]
+
+'''
+
+
 [[june-2026]]
 == Juni 2026
 

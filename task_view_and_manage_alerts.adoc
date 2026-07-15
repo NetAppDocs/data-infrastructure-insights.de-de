@@ -83,3 +83,32 @@ Wenn Sie einen Monitor mit einem 30-Minuten-Fenster haben, der erkennt, dass ein
 Es ist möglich, einen Monitor so zu konfigurieren, dass die Bedingung für das überwachte Objekt *immer* erfüllt ist – beispielsweise IOPS > 1 oder Latenz > 0.  Diese werden oft als „Test“-Monitore erstellt und dann vergessen.  Solche Monitore erstellen Warnungen, die für die einzelnen Objekte dauerhaft offen bleiben, was mit der Zeit zu Systembelastungen und Stabilitätsproblemen führen kann.
 
 Um dies zu verhindern, schließt Data Infrastructure Insights alle „dauerhaft aktiven“ Warnungen nach 7 Tagen automatisch.  Beachten Sie, dass die zugrunde liegenden Überwachungsbedingungen möglicherweise (wahrscheinlich) weiterhin bestehen bleiben, sodass fast sofort eine neue Warnung ausgegeben wird. Durch das Schließen der „immer aktiven“ Warnungen wird jedoch ein Teil der Systembelastung gemildert, die andernfalls auftreten kann.
+
+
+
+[[maintenance-windows]]
+== Wartungsfenster
+
+Mithilfe von Wartungsfenstern können Sie Warnmeldungen während geplanter Wartungszeiträume unterdrücken und so unnötige Unterbrechungen vermeiden.
+
+Mit Wartungsfenstern können bestimmte Wartungszeiträume geplant werden, in denen Warnmeldungen für ausgewählte Objekte und Metriken unterdrückt werden. Beispielsweise lassen sich Warnmeldungen unterdrücken, die von bestimmten Speichersystemen ausgelöst werden, wenn sich diese Speichersysteme in einem geplanten Upgrade-Zeitraum befinden.
+
+Es besteht die Möglichkeit, während des Zeitraums sowohl Warnungen als auch Benachrichtigungen zu unterdrücken oder nur Benachrichtigungen zu unterdrücken, während Warnungen weiterhin erkannt werden.
+
+image:Maintenance_Windows_example.png["Beispiel für Wartungsfenster, width=400"]
+
+
+
+[[creating-a-maintenance-window]]
+=== Erstellen eines Wartungsfensters
+
+Zum Erstellen eines Wartungsfensters:
+
+. Zu *Observability > Alerts > Maintenance Windows* navigieren und auf *+ Maintenance Window* klicken.
+. Geben Sie einen *Namen* für das Wartungsfenster ein. Für optimale Ergebnisse sollte der Name aussagekräftig und präzise sein.
+. Das *Speichergerät* oder das *Objektattribut* auswählen.
+. Filter für den *Monitor oder die Monitore*. Platzhalter werden akzeptiert.
+. Wählen Sie die *Startzeit* und die *Endzeit* für das Wartungsfenster aus.
+. Wählen Sie aus, ob *Warnungen und Benachrichtigungen* oder *nur Benachrichtigungen* unterdrückt werden sollen (Warnungen werden während des Fensters weiterhin erkannt).
+. Mit *Speichern* wird das Wartungsfenster erstellt.
+

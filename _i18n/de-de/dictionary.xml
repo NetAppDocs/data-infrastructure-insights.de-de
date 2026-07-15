@@ -14072,8 +14072,6 @@
   <block id="810bac3bcbfe61628b10fe3df2e0ea96" category="paragraph">Ein Administrator kann die Nachricht unter Admin &gt; Benachrichtigungen auf der Registerkarte "Login-Banner" festlegen.</block>
   <block id="22f60aff39394bad553a00e2940bdf11" category="paragraph">Die Nachricht unterstützt grundlegendes Markdown, sodass Formatierungen wie Fettdruck, Kursivschrift, Tabellen usw. angewendet werden können.</block>
   <block id="6a46079dd2d659655fc832470519e71a" category="paragraph">Es kann festgelegt werden, ob die Benutzer die Nachricht nur bei ihrer nächsten Anmeldung oder bei jeder weiteren Anmeldung sehen.</block>
-  <block id="6a5f1dd41e7d3fa22fbd71d29b46cea4" category="inline-image-macro">Einstellungen für das Anmeldebanner</block>
-  <block id="bd6c3bd0a46b9e6da4828acea4a9e315" category="paragraph"><block ref="bd6c3bd0a46b9e6da4828acea4a9e315" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ef61a1b7e25b910ec7beca0741bd208" category="paragraph">Beachten Sie, dass der Benutzer die Anmeldemeldung bestätigen muss, um sie zu schließen. Nach dem Schließen werden alle weiteren Pop-ups (z. B. What's New-Updates, Terms-of-Service-Updates usw.) angezeigt.</block>
   <block id="38f64824b0d19083b9c439a8b4af41e4" category="admonition">Sobald ein Agent auf einem Server oder einer VM installiert ist, sammelt Data Infrastructure Insights Metriken von diesem System sowie von allen konfigurierten Datensammlern. Diese Metriken werden als „Node“-Metriken erfasst.</block>
   <block id="7fa36585f976625a51b4f3be0f46f0b5" category="cell">Diese Fehler können auftreten, wenn Sie ein benutzerdefiniertes oder privates Docker-Repository verwenden und den Kubernetes Monitoring Operator noch nicht so konfiguriert haben, dass er dieses korrekt erkennt. <block ref="2d47cbc88497421e2fe69677ce7d4cef" category="inline-xref-macro-rx"></block> Informationen zur Konfiguration für benutzerdefinierte/private Repositories.</block>
@@ -14176,4 +14174,29 @@
   <block id="4f23d2244ea630f361d554b54b77bf03" category="list-text">IP-Adresse des Red Hat OpenShift Virtualisierungsservers über Port 6443 via REST-API</block>
   <block id="427f91a8692cb3d3ee52ca20ff3b659c" category="cell">Port, der für die HTTPS-Kommunikation mit RHOV verwendet wird. Standard ist 6443.</block>
   <block id="635a6e63b01914992d3584137f9e6ba6" category="sidebar">Nutanix AHV</block>
+  <block id="a257f7f4b2f6e07845ce567df142ad00" category="section-title">Juli 2026</block>
+  <block id="8014692a31dc15996a299cb6c0683d99" category="section-title">Neue KI-Assistent Startseite</block>
+  <block id="217f492cb52cc14d717c54a81afbacfe" category="paragraph">Der DII KI-Assistent verfügt nun über eine eigene Startseite, die die intelligente Infrastrukturanalyse in den Mittelpunkt stellt. Neue Konversationen können sofort begonnen, die letzte Sitzung mit einem Klick fortgesetzt oder ein schneller Einstieg mit vorgeschlagenen Eingabeaufforderungen genutzt werden.</block>
+  <block id="dac1263103d1a0aa0f29eb002af291af" category="inline-image-macro">KI Dashboard Standard, Breite=800</block>
+  <block id="6c78ab210f62dbc85fe22910374ff62b" category="paragraph"><block ref="6c78ab210f62dbc85fe22910374ff62b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7bd22707614b54a5cb3a8b8f12117bb9" category="paragraph">Auf die Startseite kann über den *AI Assistant* im Navigationsmenü zugegriffen werden oder der AI Assistant kann von überall aus über das „Sterne“-Symbol oben links geöffnet werden.</block>
+  <block id="8946b454436a3b11aac461eaa734adfe" category="inline-image-macro">KI Assistant Navigationsmenü, Breite=600</block>
+  <block id="2c8265bfd753072f003bc24b1df77111" category="inline-image-macro">KI-Assistenten-Zugriff von überall, Breite=300</block>
+  <block id="9f6f73922ecce265167332ab3cf87f92" category="paragraph"><block ref="f633ce7b4fef8820f87a799ad31a7cb5" category="inline-image-macro-rx" type="image"></block> <block ref="fefcd3a065be75939d8d47b234d9d0c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="94187d26105df3824bea268e9ae25535" category="inline-image-macro">Anmeldebanner Einstellungen, Breite=400</block>
+  <block id="d1e27aaece77e53fc070c0b0ce490e10" category="paragraph"><block ref="d1e27aaece77e53fc070c0b0ce490e10" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58b6e1ec0b6ec5b4a454251805124640" category="section-title">Wartungsfenster</block>
+  <block id="3f3ec1c35b7249f193c068e0a8c036d3" category="paragraph">Mit Wartungsfenstern können bestimmte Wartungszeiträume geplant werden, in denen Warnmeldungen für ausgewählte Objekte und Metriken unterdrückt werden. Beispielsweise lassen sich Warnmeldungen unterdrücken, die von bestimmten Speichersystemen ausgelöst werden, wenn sich diese Speichersysteme in einem geplanten Upgrade-Zeitraum befinden.</block>
+  <block id="df24d8acd06534f618230d46637d6d1b" category="paragraph">Es besteht die Möglichkeit, während des Zeitraums sowohl Warnungen als auch Benachrichtigungen zu unterdrücken oder nur Benachrichtigungen zu unterdrücken, während Warnungen weiterhin erkannt werden.</block>
+  <block id="1aed277c750cbbf8c2859dca8664dada" category="inline-image-macro">Beispiel für Wartungsfenster, width=400</block>
+  <block id="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="paragraph"><block ref="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="82bc146aadfdab0e3c7443c79b7f4c8b" category="section-title">Erstellen eines Wartungsfensters</block>
+  <block id="4def5c59958a122e22c3d06a018c9ef0" category="paragraph">Zum Erstellen eines Wartungsfensters:</block>
+  <block id="2b2323dddeb141b098fbcd705e90e359" category="list-text">Zu *Observability &gt; Alerts &gt; Maintenance Windows* navigieren und auf *+ Maintenance Window* klicken.</block>
+  <block id="610844a278d3d0601b4bc4c27665563e" category="list-text">Geben Sie einen *Namen* für das Wartungsfenster ein. Für optimale Ergebnisse sollte der Name aussagekräftig und präzise sein.</block>
+  <block id="c74ae4bc562a9f2edcf63aa39e8fac31" category="list-text">Das *Speichergerät* oder das *Objektattribut* auswählen.</block>
+  <block id="5760cc9b0c4d4910c5b80c7479b3f2a3" category="list-text">Filter für den *Monitor oder die Monitore*. Platzhalter werden akzeptiert.</block>
+  <block id="ea10176408e9b54a867b0e298e4b4bc2" category="list-text">Wählen Sie die *Startzeit* und die *Endzeit* für das Wartungsfenster aus.</block>
+  <block id="de3fd64c52ab8fa6a72c862f6f638fb0" category="list-text">Wählen Sie aus, ob *Warnungen und Benachrichtigungen* oder *nur Benachrichtigungen* unterdrückt werden sollen (Warnungen werden während des Fensters weiterhin erkannt).</block>
+  <block id="35d71e914a221fd7fa5e2e2d8c813a2a" category="list-text">Mit *Speichern* wird das Wartungsfenster erstellt.</block>
 </blocks>
