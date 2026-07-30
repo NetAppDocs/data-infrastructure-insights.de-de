@@ -245,4 +245,21 @@ Starten Sie den Collector neu, sobald die Berechtigungen festgelegt sind.
 {leer}
 
 '''
+*Problem:* Nach dem Hinzufügen oder Aktualisieren eines ONTAP SVM Data Collectors (Workload Security) wird beim Mandanten eine Warnung wegen Überprovisionierung oder Abonnementverletzung angezeigt. Die Rohspeicherkapazität hat sich erhöht, obwohl keine neue Hardware hinzugefügt wurde.
+
+*Probieren Sie Folgendes:* Derselbe Speicher kann zweimal gezählt werden, einmal von einem Observability ONTAP Cluster Collector und ein weiteres Mal von einem Workload Security SVM Collector auf demselben Cluster.
+
+Vergleichen Sie die von den Observability ONTAP Collectors und Workload Security SVM Collectors gemeldete Rohspeicherkapazität. Für jeden SVM Collector prüfen, ob sein übergeordneter Cluster bereits von einem Observability ONTAP Collector überwacht wird. Ist dies der Fall, wird nur die Clusterkapazität für die Abonnementnutzung berücksichtigt.
+
+Es sollte geprüft werden, ob kürzlich eine SVM-Migration zwischen Clustern stattgefunden hat. Nach der Migration einer SVM können die Kapazitätsmetriken weiterhin dem vorherigen Cluster zugeordnet bleiben, bis Workload Security aktualisierte Informationen vom Collector erhält.
+
+Sichergestellt ist, dass der ONTAP SVM Data Collector für die migrierte SVM den Status „RUNNING“ aufweist. Falls erforderlich, wird der Collector neu gestartet, damit Workload Security nach der Migration die korrekten Cluster- und Kapazitätsmetriken erfassen kann.
+
+Wenn sowohl die Cluster- als auch die SVM-Kapazität in der Gesamtsumme erscheinen, wird die Kapazität wahrscheinlich doppelt gezählt. Dies tritt häufig kurz nach dem Hinzufügen, Aktualisieren, Neustarten eines SVM-Collectors oder der Migration einer SVM zwischen Clustern auf.
+
+Sollte die Nutzung weiterhin Ihr Abonnement überschreiten, öffnen Sie einen NetApp Supportfall mit Angaben zur Abonnementnutzung vor und nach der Warnung sowie einer Liste der Observability- und SVM-Collector mit deren gemeldeter Rohspeicherkapazität.
+
+{leer}
+
+'''
 Wenn weiterhin Probleme auftreten, verwenden Sie die Support-Links auf der Seite *Hilfe > Support*.
