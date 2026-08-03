@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: task_dc_proxmox_ve.html 
+keywords: data collector, Proxmox Virtual Environment, PVE 
+summary: Konfiguration des Proxmox Virtual Environment Datensammlers. 
+---
+= Proxmox Virtual Environment Datensammler
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Der DII Proxmox Virtual Environment Collector erfasst Inventar- und Leistungsdaten für PVE-basierte virtuelle Maschinen (nicht LXC-Container) sowie Hosts/Hypervisoren. Dies ist ein HTTPS-REST-API-basierter Collector, der mit der von dem pveproxy Service/Daemon bereitgestellten Proxmox REST API kommunizieren muss, die auf TCP 8006 lauscht.
+
+Dieser Datensammler verwendet Benutzer- und Token-Authentifizierung. Für jeden Proxmox Cluster ist ein Dienstkonto zu erstellen, dem Benutzer sind die entsprechenden Berechtigungen zuzuweisen, und anschließend ist ein API-Token mit denselben Rechten zu generieren. Zu beachten ist, dass das Token eines bestimmten Proxmox Benutzers nicht zwangsläufig dieselben Rechte/Berechtigungen wie der Benutzer selbst besitzt. DII benötigt in der Regel globale Audit/Monitor-Berechtigungen, bei der Erstellung eines Dienstkontos über die Proxmox UI ist für PathPermision bei „/“ zu beginnen, „Weitergeben“ auf „Ja“ zu setzen und mindestens die Berechtigungen für Datastore Audit, Mapping Audit, Pool Audit, SDN Audit, Sys Audit, VM Audit, VM Monitor zu aktivieren. Nach der Erstellung des Benutzers kann ein Zugriffstoken dafür generiert werden. Es sollte in Erwägung gezogen werden, das Token mit einer Gültigkeitsdauer von 0 zu erstellen, damit das Token niemals abläuft.
+
+
+
+[[terminology]]
+== Terminologie
+
+Für jeden von Data Infrastructure Insights erfassten Asset-Typ wird die am häufigsten verwendete Terminologie für das Asset angezeigt.  Beachten Sie beim Anzeigen oder bei der Fehlerbehebung dieses Datensammlers die folgende Terminologie:
+
+[cols="50,50"]
+|===
+| Anbieter/Modellbegriff | Begriff „Data Infrastructure Insights“ 
+
+
+| Scheibe | Virtuelle Festplatte 
+
+
+| Gastgeber | Gastgeber 
+
+
+| Virtuelle Maschine | Virtuelle Maschine 
+
+
+| Storage | Datenspeicher 
+|===
+Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen, die möglicherweise nicht jeden Fall für diesen Datensammler darstellen.
+
+
+
+[[configuration]]
+== Konfiguration
+
+[cols="50,50"]
+|===
+| Feld | Beschreibung 
+
+
+| Hostname oder IP-Adresse | Hostname-IP-Adresse des Storage-Systems 
+
+
+| API-Token-ID | API-Token erforderlich für den Zugriff 
+
+
+| API-Token-Secret | Geheimnis für das oben genannte Token 
+|===
+
+
+[[advanced-configuration]]
+== Erweiterte Konfiguration
+
+[cols="50,50"]
+|===
+| Feld | Beschreibung 
+
+
+| HTTPS-Kommunikationsport | Port für die HTTPS-Kommunikation (Standard 8006) 
+
+
+| Inventarabfrageintervall (min) | Der Standardwert beträgt 20 Minuten. 
+|===
+
+
+[[troubleshooting]]
+== Fehlerbehebung
+
+Weitere Informationen zu diesem Datensammler finden Sie imlink:concept_requesting_support.html["Support"] Seite oder in derlink:reference_data_collector_support_matrix.html["Datensammler-Supportmatrix"] .

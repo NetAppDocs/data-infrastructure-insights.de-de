@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_nutanix_ahv.html 
-keywords: data collector, Nutanix, AHV Series 
+keywords: data collector, Nutanix, AHV Series , Acropolis, hypervisor 
 summary: Konfiguration des Nutanix AHV Datensammlers. 
 ---
 = Nutanix AHV Datensammler
@@ -51,10 +51,10 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 == Anforderungen
 
 * Prism Central IP-Adresse oder Fully Qualified Domain Name
-* Prism Central lokaler oder LDAP-Benutzername und Passwort (ein schreibgeschütztes Konto ist für Inventarisierung und Performance ausreichend; Admin ist nicht erforderlich)
+* Prism Central lokaler oder LDAP-Benutzername und Passwort (ein schreibgeschütztes Konto ist ausreichend)
 * Portanforderung: HTTPS 9440
 * Prism Central Version pc.2023.x oder höher (v3 API), pc.7.x oder höher empfohlen (v4 API)
-* Leistungsmetriken erfordern Prism Central mit API v4.0.b1 oder höher (pc.7.3+). Bei älteren Versionen werden weiterhin Inventardaten erfasst, aber keine Leistungsdaten gemeldet.
+* Leistungsmetriken erfordern Prism Central mit API v4.0.b1 oder höher (pc.7.3+). Bei älteren Versionen werden Inventardaten erfasst, aber keine Leistungsdaten gemeldet.
 
 
 
@@ -67,7 +67,7 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 | Feld | Beschreibung 
 
 
-| Prism Central IP-Adresse | IP-Adresse oder FQDN der Prism Central Instanz 
+| Prism Central IP / Hostname | IP-Adresse oder FQDN der Prism Central Instanz 
 
 
 | Benutzername | Prism Central Benutzername 
@@ -85,16 +85,16 @@ Hinweis: Hierbei handelt es sich lediglich um allgemeine Terminologiezuordnungen
 | Feld | Beschreibung 
 
 
-| TCP-Port | TCP-Port, der zur Verbindung mit Prism Central verwendet wird. Der Standardwert ist 9440. 
+| TCP-Port | TCP-Port, der zur Verbindung mit Prism Central verwendet wird. Standard ist 9440. 
 
 
-| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Der Standardwert beträgt 60 Minuten. 
+| Inventarabfrageintervall (min) | Intervall zwischen den Bestandsabfragen. Standardwert ist 60 Minuten. 
 
 
-| Leistungsabfrageintervall (Sek.) | Intervall zwischen Leistungsabfragen. Der Standardwert beträgt 300 Sekunden. 
+| Leistungsabfrageintervall (Sek.) | Intervall zwischen den Leistungsabfragen. Standardwert ist 300 Sekunden. 
 
 
-| HTTP Zeitüberschreitung (Sek) | HTTP-Anfrage-Zeitüberschreitung. Der Standardwert beträgt 60 Sekunden. 
+| HTTP Zeitüberschreitung (Sek) | HTTP-Anfrage-Zeitüberschreitung. Standard ist 60. 
 
 
 | HTTP-Wiederholungsanzahl | Anzahl der HTTP-Wiederholungsversuche bei vorübergehenden Fehlern. Standard ist 3. 

@@ -14131,17 +14131,12 @@
   <block id="25a317566de430ddfd2c6f4b3fdea612" category="list-text">ci-k8s-change-observer</block>
   <block id="9da5aa79f5375ccea3c84723b5759557" category="cell">Ich erhalte Fehlermeldungen von Telegraf, die der folgenden ähneln, aber Telegraf startet und läuft trotzdem: E! [inputs.kubernetes] Fehler im Plugin:<block ref="6d1752bb8ee46f6164f07ea885d5c072" category="inline-link-rx"></block> returned HTTP status 403 Forbidden</block>
   <block id="51635ff11969666db6bdeaf0c68d58b0" category="cell">Diese Meldungen können auftreten, wenn Sie Kubernetes-Versionen unter 1.33 verwenden. Die von telegraf verwendete RBAC-Ressource „nodes/pods“ ist in diesen Versionen nicht vorhanden. Im Abschnitt „For Kubernetes versions &lt; 1.33“ der Datei operator-additional-permissions.yaml sind die für ältere Versionen erforderlichen RBAC-Ressourcen aufgeführt.</block>
-  <block id="55c55b1241c0ea96ea6cef65b10a23e4" category="inline-link-macro">Promox Virtual Environment</block>
-  <block id="9ddb2ce85d3b0c6085884776fe61a596" category="cell"><block ref="9ddb2ce85d3b0c6085884776fe61a596" category="inline-link-macro-rx"></block></block>
-  <block id="66036899193ada3425c77162bf9d742c" category="summary">Konfiguration des Promox Virtual Environment Datensammlers.</block>
-  <block id="dc8f767a3f6e8f9b98077b7e9a688c5d" category="paragraph">Der DII Promox Virtual Environment Collector erfasst Inventardaten. Dies ist ein auf HTTPS REST API basierender Collector.</block>
   <block id="b720c5170acbb344b34398a9ed4fec4b" category="cell">Hostname oder IP-Adresse</block>
   <block id="32d285f157ad1acefe9dbe844cee7acf" category="cell">Hostname-IP-Adresse des Storage-Systems</block>
   <block id="606bae1c220a7cd73cdc71a447b328fd" category="cell">API-Token-ID</block>
   <block id="9ae9995c158c8b32609b8fd098fa5ff5" category="cell">API-Token-Secret</block>
   <block id="923e5171366e1120624f5ea15d195544" category="cell">Geheimnis für das oben genannte Token</block>
   <block id="07d3835e20364558e54bb222fac4e80c" category="cell">Port für die HTTPS-Kommunikation (Standard 8006)</block>
-  <block id="c0dcddaaad9648f13d2e54741430ea94" category="sidebar">Promox VE</block>
   <block id="f45a9049372d3cb48c0a5f07d2274d8a" category="inline-link-macro">Nutanix AHV Series</block>
   <block id="ad9c1c290afb17645c1abe42082fd356" category="cell"><block ref="ad9c1c290afb17645c1abe42082fd356" category="inline-link-macro-rx"></block></block>
   <block id="dfc304efa37c8d1373249ddd368bc0be" category="summary">Konfiguration des Nutanix NX Datensammlers.</block>
@@ -14157,17 +14152,12 @@
   <block id="93aad9faf21d772e6638b83df990a5f5" category="cell">ADSF Volume-Gruppe</block>
   <block id="5ccc8ca7259b2e94529827201b7eb255" category="cell">VM Festplatte</block>
   <block id="59713d7f655f9c892a64a8cfb1bce50f" category="list-text">Prism Central IP-Adresse oder Fully Qualified Domain Name</block>
-  <block id="b4cdc83adeeea6f91bf95fe532871bdd" category="list-text">Prism Central lokaler oder LDAP-Benutzername und Passwort (ein schreibgeschütztes Konto ist für Inventarisierung und Performance ausreichend; Admin ist nicht erforderlich)</block>
   <block id="305bb684f75dc043415486c2063d46c4" category="list-text">Portanforderung: HTTPS 9440</block>
   <block id="539110e77db7f1ce573940c3147dbe68" category="list-text">Prism Central Version pc.2023.x oder höher (v3 API), pc.7.x oder höher empfohlen (v4 API)</block>
-  <block id="74c15fa6625bc3241b81c66466e0ce42" category="list-text">Leistungsmetriken erfordern Prism Central mit API v4.0.b1 oder höher (pc.7.3+). Bei älteren Versionen werden weiterhin Inventardaten erfasst, aber keine Leistungsdaten gemeldet.</block>
-  <block id="fb7d6f6db43d1bb1043df17e264de78a" category="cell">Prism Central IP-Adresse</block>
   <block id="b46321a9cb6ebc3023c7b6ae1f3d8b4f" category="cell">IP-Adresse oder FQDN der Prism Central Instanz</block>
   <block id="893b253db3bdc1ebfb515f1f1cc09f50" category="cell">Prism Central Benutzername</block>
   <block id="0fc00a87efdbecf33bb1448c3eaa5a73" category="cell">Prism Central Passwort</block>
-  <block id="ac2fad2f282b0e32c75912e363cfb735" category="cell">TCP-Port, der zur Verbindung mit Prism Central verwendet wird. Der Standardwert ist 9440.</block>
   <block id="834593f1f41ad9180f7c06531584872b" category="cell">HTTP Zeitüberschreitung (Sek)</block>
-  <block id="b8c5ed136238b59bf386d65bf0787acf" category="cell">HTTP-Anfrage-Zeitüberschreitung. Der Standardwert beträgt 60 Sekunden.</block>
   <block id="625b6c43e9f8c94b5aa84173a04fa961" category="cell">HTTP-Wiederholungsanzahl</block>
   <block id="c8f99bb6092a052b29e43263274e103f" category="cell">Anzahl der HTTP-Wiederholungsversuche bei vorübergehenden Fehlern. Standard ist 3.</block>
   <block id="4a2e4ff5e220e83407c567779aaf9ba1" category="cell">API-Token erforderlich für den Zugriff</block>
@@ -14206,4 +14196,18 @@
   <block id="ed499d4afa165aaf800d50911ee0d6b7" category="paragraph">Sichergestellt ist, dass der ONTAP SVM Data Collector für die migrierte SVM den Status „RUNNING“ aufweist. Falls erforderlich, wird der Collector neu gestartet, damit Workload Security nach der Migration die korrekten Cluster- und Kapazitätsmetriken erfassen kann.</block>
   <block id="01ee0a41b7ba80a315acf774bca95831" category="paragraph">Wenn sowohl die Cluster- als auch die SVM-Kapazität in der Gesamtsumme erscheinen, wird die Kapazität wahrscheinlich doppelt gezählt. Dies tritt häufig kurz nach dem Hinzufügen, Aktualisieren, Neustarten eines SVM-Collectors oder der Migration einer SVM zwischen Clustern auf.</block>
   <block id="d1d2aacb054348275b14473a1f1f31f2" category="paragraph">Sollte die Nutzung weiterhin Ihr Abonnement überschreiten, öffnen Sie einen NetApp Supportfall mit Angaben zur Abonnementnutzung vor und nach der Warnung sowie einer Liste der Observability- und SVM-Collector mit deren gemeldeter Rohspeicherkapazität.</block>
+  <block id="e0a90db369f87ae02adeb16a86201742" category="inline-link-macro">Proxmox Virtual Environment</block>
+  <block id="4a90aaa80c9f510a7ceb078daedd5635" category="cell"><block ref="4a90aaa80c9f510a7ceb078daedd5635" category="inline-link-macro-rx"></block></block>
+  <block id="bf88a9906139e4cb81937529ce5737f7" category="list-text">Prism Central lokaler oder LDAP-Benutzername und Passwort (ein schreibgeschütztes Konto ist ausreichend)</block>
+  <block id="616363ce8a56d3faec8ac114ed04d83b" category="list-text">Leistungsmetriken erfordern Prism Central mit API v4.0.b1 oder höher (pc.7.3+). Bei älteren Versionen werden Inventardaten erfasst, aber keine Leistungsdaten gemeldet.</block>
+  <block id="0c215c7eb97b422d3fbcb651a59480b7" category="cell">Prism Central IP / Hostname</block>
+  <block id="6cb3b4061cdb7e049999801ce8d1d445" category="cell">TCP-Port, der zur Verbindung mit Prism Central verwendet wird. Standard ist 9440.</block>
+  <block id="19b47095e2b176e478290ba0ddfcbdbc" category="cell">Intervall zwischen den Bestandsabfragen. Standardwert ist 60 Minuten.</block>
+  <block id="d9ac9c87b6001203eb8b39a253943bd2" category="cell">Intervall zwischen den Leistungsabfragen. Standardwert ist 300 Sekunden.</block>
+  <block id="8626d73b80be039d958752c296fa4e7c" category="cell">HTTP-Anfrage-Zeitüberschreitung. Standard ist 60.</block>
+  <block id="33c9cb93144548bfcc912b99d1b2555c" category="summary">Konfiguration des Proxmox Virtual Environment Datensammlers.</block>
+  <block id="b37138a3b3b3fcd2958e4e6cc5c5c61b" category="doc">Proxmox Virtual Environment Datensammler</block>
+  <block id="91a0d06a30de7119cf7ba6773ce38416" category="paragraph">Der DII Proxmox Virtual Environment Collector erfasst Inventar- und Leistungsdaten für PVE-basierte virtuelle Maschinen (nicht LXC-Container) sowie Hosts/Hypervisoren. Dies ist ein HTTPS-REST-API-basierter Collector, der mit der von dem pveproxy Service/Daemon bereitgestellten Proxmox REST API kommunizieren muss, die auf TCP 8006 lauscht.</block>
+  <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">Dieser Datensammler verwendet Benutzer- und Token-Authentifizierung. Für jeden Proxmox Cluster ist ein Dienstkonto zu erstellen, dem Benutzer sind die entsprechenden Berechtigungen zuzuweisen, und anschließend ist ein API-Token mit denselben Rechten zu generieren. Zu beachten ist, dass das Token eines bestimmten Proxmox Benutzers nicht zwangsläufig dieselben Rechte/Berechtigungen wie der Benutzer selbst besitzt. DII benötigt in der Regel globale Audit/Monitor-Berechtigungen, bei der Erstellung eines Dienstkontos über die Proxmox UI ist für PathPermision bei „/“ zu beginnen, „Weitergeben“ auf „Ja“ zu setzen und mindestens die Berechtigungen für Datastore Audit, Mapping Audit, Pool Audit, SDN Audit, Sys Audit, VM Audit, VM Monitor zu aktivieren. Nach der Erstellung des Benutzers kann ein Zugriffstoken dafür generiert werden. Es sollte in Erwägung gezogen werden, das Token mit einer Gültigkeitsdauer von 0 zu erstellen, damit das Token niemals abläuft.</block>
+  <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
 </blocks>
