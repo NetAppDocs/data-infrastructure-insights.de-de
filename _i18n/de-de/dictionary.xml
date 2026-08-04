@@ -13298,7 +13298,6 @@
   <block id="ecf8fabbb23da2c68f49fe920a05137b" category="list-text">SELinux auf den oben genannten Plattformen</block>
   <block id="3542743c69e8fceb06c77e5e17299c89" category="sidebar">KI Assistant</block>
   <block id="f7836ca926de84b06b0b4bcbe4b8b756" category="inline-link-macro">Hinweis für Data Infrastructure Insights (einschließlich Workload Security), window=_blank</block>
-  <block id="135e17e82c7d3d3d83bd8b0737be432e" category="paragraph"><block ref="135e17e82c7d3d3d83bd8b0737be432e" category="inline-link-macro-rx"></block></block>
   <block id="b6b93d34f92b439117e54d9343c7efda" category="section-title">Aktuelle Previews:</block>
   <block id="559de301b9b7af9f5b932d860f605701" category="list-text"><block ref="7a32ab5261b86b8c9a5d88b540c79f2d" category="inline-link-macro-rx"></block> Vorschau.</block>
   <block id="ca39a60f24fda5dbbda8809fbd3fe717" category="inline-link-macro">*Data Infrastructure Insights KI-Assistent*</block>
@@ -14210,4 +14209,5 @@
   <block id="91a0d06a30de7119cf7ba6773ce38416" category="paragraph">Der DII Proxmox Virtual Environment Collector erfasst Inventar- und Leistungsdaten für PVE-basierte virtuelle Maschinen (nicht LXC-Container) sowie Hosts/Hypervisoren. Dies ist ein HTTPS-REST-API-basierter Collector, der mit der von dem pveproxy Service/Daemon bereitgestellten Proxmox REST API kommunizieren muss, die auf TCP 8006 lauscht.</block>
   <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">Dieser Datensammler verwendet Benutzer- und Token-Authentifizierung. Für jeden Proxmox Cluster ist ein Dienstkonto zu erstellen, dem Benutzer sind die entsprechenden Berechtigungen zuzuweisen, und anschließend ist ein API-Token mit denselben Rechten zu generieren. Zu beachten ist, dass das Token eines bestimmten Proxmox Benutzers nicht zwangsläufig dieselben Rechte/Berechtigungen wie der Benutzer selbst besitzt. DII benötigt in der Regel globale Audit/Monitor-Berechtigungen, bei der Erstellung eines Dienstkontos über die Proxmox UI ist für PathPermision bei „/“ zu beginnen, „Weitergeben“ auf „Ja“ zu setzen und mindestens die Berechtigungen für Datastore Audit, Mapping Audit, Pool Audit, SDN Audit, Sys Audit, VM Audit, VM Monitor zu aktivieren. Nach der Erstellung des Benutzers kann ein Zugriffstoken dafür generiert werden. Es sollte in Erwägung gezogen werden, das Token mit einer Gültigkeitsdauer von 0 zu erstellen, damit das Token niemals abläuft.</block>
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
+  <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
 </blocks>
