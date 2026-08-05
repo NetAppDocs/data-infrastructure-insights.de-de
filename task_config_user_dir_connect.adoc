@@ -46,7 +46,7 @@ Konfigurieren Sie den User Directory Collector, indem Sie die erforderlichen Dat
 | Waldname | Gesamtstrukturebene der Verzeichnisstruktur.  Der Gesamtstrukturname lässt die beiden folgenden Formate zu: _x.y.z_ => direkter Domänenname, wie er auf Ihrem SVM vorhanden ist.  [Beispiel: hq.firmenname.com] _DC=x,DC=y,DC=z_ => Relative Distinguished Names [Beispiel: DC=hq,DC= Firmenname,DC=com] Oder Sie können Folgendes angeben: _OU=Engineering,DC=hq,DC= Firmenname,DC=com_ [um nach einer bestimmten OU Engineering zu filtern] _CN=Benutzername,OU=Engineering,DC=Firmenname, DC=NetApp, DC=com_ [um nur bestimmte Benutzer mit <Benutzername> aus der OU <Engineering> abzurufen] _CN=Acrobat-Benutzer,CN=Benutzer,DC=hq,DC=Firmenname,DC=com,O= Firmenname,L=Boston,S=MA,C=US_ [um alle Acrobat-Benutzer innerhalb der Benutzer in dieser Organisation abzurufen] Vertrauenswürdige Active Directory-Domänen werden ebenfalls unterstützt. 
 
 
-| Bind-DN | Der Benutzer darf das Verzeichnis durchsuchen.  Beispiel: _Benutzername@Firmenname.com_ oder _Benutzername@Domänenname.com_. Außerdem ist die Berechtigung „Nur Lesen“ für die Domäne erforderlich.  Der Benutzer muss Mitglied der Sicherheitsgruppe „Schreibgeschützte Domänencontroller“ sein. 
+| Bind-DN | Benutzer mit Berechtigung zur Verzeichnissuche. Zum Beispiel: _username@companyname.com_ oder _username@domainname.com_ 
 
 
 | BIND-Passwort | Kennwort für den Verzeichnisserver (d. h. Kennwort für den im Bind-DN verwendeten Benutzernamen) 
