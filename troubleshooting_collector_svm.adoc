@@ -262,4 +262,24 @@ Sollte die Nutzung weiterhin Ihr Abonnement überschreiten, öffnen Sie einen Ne
 {leer}
 
 '''
+*Problem*: Bei einem oder mehreren Datensammlern wird „Beeinträchtigt“ anstelle von „Wird ausgeführt“ angezeigt, obwohl der Sammlerdienst aktiv ist.
+
+*Probieren Sie Folgendes aus*: SWS meldet den Status "Degraded", wenn eine oder mehrere FPolicy-Verbindungen auf einem Knoten getrennt sind. Dies ist kein Ausfall, der Collector läuft weiterhin, aber Audit-Ereignisse von diesen Knoten können verloren gehen, bis die Verbindung wiederhergestellt ist.
+
+ONTAP stellt von jedem Knoten, der über eine betriebsbereite Daten-LIF für die SVM verfügt, eine FPolicy Steuerkanalverbindung her. Ein Knoten ohne lokale Daten-LIF kann keine Verbindung herstellen. Siehe:
+
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/node-fpolicy-server-communication-process-concept.html["Kommunikationsprozess zwischen Knoten und externem ONTAP FPolicy Server"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/fpolicy-external-fpolicy-servers-concept.html["Wie ONTAP FPolicy mit externen FPolicy Servern funktioniert"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/requirements-best-practices-fpolicy-concept.html["Anforderungen, Überlegungen und bewährte Verfahren für die Konfiguration von ONTAP FPolicy"^]
+
+
+In der Benutzeroberfläche ist zu beachten, welche Knoten nicht verbunden sind, anschließend ist zu prüfen, ob diese Knoten über eine Daten-LIF für die SVM verfügen.
+
+* Keine Daten-LIF auf den aufgeführten Knoten: Der Status „Beeinträchtigt“ kann ignoriert werden. ONTAP kann FPolicy als getrennt anzeigen mit der Begründung „Keine lokale LIF vorhanden, um eine Verbindung zum FPolicy Server herzustellen“, wenn keine lokale Daten-LIF vorhanden ist; dies ist erwartungsgemäß. Siehe link:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/Fpolicy_server_not_connected_due_to_no_local_lif_present_on_one_or_more_nodes["KB: Fpolicy Server nicht verbunden, da „kein lokales lif vorhanden“"^]. In einer zukünftigen SWS-Version wird der Collector in diesem Fall nicht mehr als „Beeinträchtigt“ markiert.
+* Data LIF auf den aufgeführten Knoten vorhanden: Untersuchen, warum FPolicy getrennt ist (LIF ausgefallen / fehlender data-fpolicy-client, Netzwerk-/Firewallproblem oder temporärer Neustart/Failover).
+
+
+{leer}
+
+'''
 Wenn weiterhin Probleme auftreten, verwenden Sie die Support-Links auf der Seite *Hilfe > Support*.
