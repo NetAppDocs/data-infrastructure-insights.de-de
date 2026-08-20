@@ -1,0 +1,262 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_capacity_efficiency.html 
+summary: Schematabellen für das Data Warehouse für Kapazitätseffizienz 
+keywords: dwh, data warehouse, schema, reporting, capacity efficiency 
+---
+= Kapazitätseffizienz-Schema
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Quelle: *dwh_capacity_efficiency* OData Endpoint, Data Infrastructure Insights
+
+Gefundene Tabellen: *3* | Assoziationen: *2*
+
+
+
+[[key-relationships-between-tables]]
+== Wichtige Beziehungen zwischen Tabellen
+
+
+
+[[efficiencyfact]]
+=== Effizienzfaktor
+
+[cols="1,1,1"]
+|===
+| Referenzierte (übergeordnete) Tabelle | FK-Spalte | Übergeordneter PK 
+
+
+| link:#entity-date_dimension["Datumsdimension"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["Speicherdimension"] | storageTk | tk 
+|===
+
+
+[[tables-fields]]
+== Tabellen und Felder
+
+PKPrimary KeyFKForeign KeyNOT NULLErforderliches Feld
+
+
+
+[[datedimension]]
+=== Datumsdimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): date_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK des Datumsobjekts. 
+
+
+| fullDate | DateTimeOffset | Ja | Datum des Date-Objekts. 
+
+
+| dayInMonth | Byte | Ja | Tag des Monats für das Datumsobjekt. Der erste Tag des Monats hat den Wert 1. 
+
+
+| dayInYear | Int32 | Ja | Tag im Jahr des Datumsobjekts. Der erste Tag des Jahres hat den Wert 1. 
+
+
+| dateYear | Int32 | Ja | Jahr des Datumsobjekts. 
+
+
+| yearLabel | Zeichenkette | Ja | Jahr als Zeichenkette formatiert 
+
+
+| monthNum | Byte | Ja | Monat des Datumsobjekts. Januar hat den Wert 1. 
+
+
+| monthLabel | Zeichenkette | Ja | Monat formatiert als Zeichenkette 
+
+
+| dayInWeekNum | Byte | Ja | Wochentag für das Datumsobjekt. Sonntag hat den Wert 1. 
+
+
+| Quartal | Byte | Ja | Quartal des Datumsobjekts. Das erste Quartal hat den Wert 1. 
+
+
+| quarterLabel | Zeichenkette | Ja | Quartal als Zeichenkette formatiert 
+
+
+| dayInQuarter | Int32 | Ja | Tag im Quartal des Datumsobjekts. Der erste Tag des Quartals hat den Wert 1. 
+
+
+| repQuarter | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für sein Quartal ist. 
+
+
+| repMonth | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für seinen Monat ist. 
+
+
+| repWeek | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für seine Woche ist. 
+
+
+| repDay | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für diesen Tag ist. 
+
+
+| repMonthOrLatest | Byte | Ja | Gibt an, ob dieses Datum der repmonth oder das neueste ist. Dieses Kennzeichen wird von Datamarts verwendet, die mit monatlichen reps arbeiten. Der einzige Unterschied besteht darin, dass es sich für den aktuellen Monat um das neueste handelt. 
+
+
+| sspFlag | Byte | Ja | Gibt an, ob dieses Datum im Storage und Storage Pool Datamart verwendet wird. Dies gilt für Monatsrepräsentanten und für die letzte in der Konfiguration definierte Anzahl von Tagen. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob dieses Datum das letzte in der Tabelle verfügbare Datum ist. 
+
+
+| Zukunft | Zeichenkette | Ja | Gibt an, ob es sich bei diesem Datum um ein zukünftiges Datum (Projektion) oder ein reguläres Datum handelt. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| Effizienzfaktor | link:#entity-efficiency_fact["Effizienzfaktor"] | viele 
+|===
+
+
+[[efficiencyfact]]
+=== Effizienzfaktor
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): efficiency_fact
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk *[PK]* | Int32 | Ja | TK der Tatsache. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["Datumsdimension"].tk | Int32 | Ja | TK des Datums. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["Speicherdimension"].tk | Int32 | Ja | TK des Speichers, in dem sich die Kapazität befindet. 
+
+
+| Bruttokapazität MB | Int64 | Ja | Bruttokapazität in MB. 0, wenn die Technologie angegeben ist (nicht NULL). 
+
+
+| backendCapacityMB | Int64 | Ja | Gesamtkapazität der Backend-LUNs in einem virtuellen Array, in MB. 0, wenn die Technologie angegeben ist (nicht NULL). 
+
+
+| storageTechnology | Zeichenkette | Ja | Speichereffizienz und Schutztechnologien wie Deduplizierung, Thin Provisioning, Snapshot und RAID. NULL bei der Darstellung der Bruttokapazität und Backend-Kapazität des Speichers (eine Zeile pro Speicher). 
+
+
+| gainMB | Int64 | Ja | Durch den Einsatz der Technologie erzielte Kapazitätssteigerung. 0, wenn keine Technologie angegeben ist (NULL). 
+
+
+| lossMB | Int64 | Ja | Kapazitätsverlust durch die Nutzung der Technologie. 0, wenn keine Technologie angegeben ist (NULL). 
+
+
+| potentialGainMB | Int64 | Ja | Potenzieller Kapazitätsgewinn durch vollständige Nutzung der Technologie. 0, wenn die Technologie nicht angegeben ist (NULL). 
+
+
+| potentialLossMB | Int64 | Ja | Potenzieller Kapazitätsverlust bei vollständiger Nutzung der Technologie. 0, wenn die Technologie nicht angegeben ist (NULL). 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| Speicherdimension | link:#entity-storage_dimension["Speicherdimension"] | ein JOIN:storageTk=link:#entity-storage_dimension["Speicherdimension"].tk 
+
+
+| Datumsdimension | link:#entity-date_dimension["Datumsdimension"] | ein JOIN:dateTk=link:#entity-date_dimension["Datumsdimension"].tk 
+|===
+
+
+[[storagedimension]]
+=== Speicherdimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n):storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK dieser Speicherarray-Zeile. 
+
+
+| Name | Zeichenkette | Ja | Name des Speicherarrays. 
+
+
+| Kennung | Zeichenkette | Ja | Geräteidentifikator. 
+
+
+| ip | Zeichenkette | Ja | IP-Adresse des Speicherarrays. 
+
+
+| Modell | Zeichenkette | Ja | Modell des Speicherarrays. 
+
+
+| Hersteller | Zeichenkette | Ja | Hersteller des Storage-Arrays. 
+
+
+| serialNumber | Zeichenkette | Ja | Seriennummer des Speichersystems. 
+
+
+| microcodeVersion | Zeichenkette | Ja | Version der auf dem Speichersystem laufenden Firmware. 
+
+
+| Familie | Zeichenkette | Ja | Familienname des Speichersystems (z. B. Clariion, Symmetrix etc). 
+
+
+| URL | Zeichenkette | Ja | URL zu diesem Speicher im Insight Server. 
+
+
+| ID | Int64 | Ja | GUID des Speicherarrays in dwh_inventory.storage. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für diesen Storage ist. 
+
+
+| dateTk | Int32 | Ja | TK des Datums, an dem diese Speicherarray-Zeile erstellt wurde. 
+
+
+| dataCenter | Zeichenkette | Ja | dataCenter Annotationswert, der dwh_dimensions.storage_dimension zugewiesen wurde 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| Effizienzfaktor | link:#entity-efficiency_fact["Effizienzfaktor"] | viele 
+|===

@@ -1,0 +1,571 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_fs_util.html 
+summary: Schematabellen für das Data Warehouse zur Dateisystemnutzung 
+keywords: dwh, data warehouse, schema, reporting, file system, fs util 
+---
+= Dateisystemnutzungsschema
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Quelle: *dwh_fs_util* OData Endpoint, Data Infrastructure Insights
+
+Gefundene Tabellen: *8* | Assoziationen: *7*
+
+
+
+[[key-relationships-between-tables]]
+== Wichtige Beziehungen zwischen Tabellen
+
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+[cols="1,1,1"]
+|===
+| Referenzierte (übergeordnete) Tabelle | FK-Spalte | Übergeordneter PK 
+
+
+| link:#entity-compute_resource_dimension["compute_resource_dimension"] | computeResourceTk | tk 
+
+
+| link:#entity-date_dimension["Datumsdimension"] | dateTk | tk 
+
+
+| link:#entity-file_system_dimension["Dateisystemdimension"] | fsTk | tk 
+
+
+| link:#entity-host_dimension["Hostdimension"] | hostTk | tk 
+
+
+| link:#entity-storage_dimension["Speicherdimension"] | storageTk | tk 
+
+
+| link:#entity-tier_dimension["Tierdimension"] | tierTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+|===
+
+
+[[tables-fields]]
+== Tabellen und Felder
+
+PKPrimary KeyFKForeign KeyNOT NULLErforderliches Feld
+
+
+
+[[computeresourcedimension]]
+=== compute_resource_dimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n):compute_resource_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK dieser Rechenressourcenzeile. 
+
+
+| Kennung | Zeichenkette | Ja | Natürlicher Bezeichner der Rechenressource. 
+
+
+| Name | Zeichenkette | Ja | Name der Rechenressource. 
+
+
+| Typ | Zeichenkette | Ja | Ressourcentyp. 
+
+
+| Domäne | Zeichenkette | Ja | Domäne der Rechenressource. 
+
+
+| ip | Zeichenkette | Ja | Durch Kommas getrennte Liste der IP-Adressen der Rechenressource. 
+
+
+| Betriebssystem | Zeichenkette | Ja | Das auf der Rechenressource laufende Betriebssystem. 
+
+
+| ID | Int64 | Ja | GUID der Rechenressource in dwh_inventory.compute_resource 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für diese Compute-Ressource ist. 
+
+
+| dateTk | Int32 | Ja | TK des Datums, an dem diese Compute-Ressourcenzeile erstellt wurde. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | viele 
+|===
+
+
+[[datedimension]]
+=== Datumsdimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): date_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK des Datumsobjekts. 
+
+
+| fullDate | DateTimeOffset | Ja | Datum des Date-Objekts. 
+
+
+| dayInMonth | Byte | Ja | Tag des Monats für das Datumsobjekt. Der erste Tag des Monats hat den Wert 1. 
+
+
+| dayInYear | Int32 | Ja | Tag im Jahr des Datumsobjekts. Der erste Tag des Jahres hat den Wert 1. 
+
+
+| dateYear | Int32 | Ja | Jahr des Datumsobjekts. 
+
+
+| yearLabel | Zeichenkette | Ja | Jahr als Zeichenkette formatiert 
+
+
+| monthNum | Byte | Ja | Monat des Datumsobjekts. Januar hat den Wert 1. 
+
+
+| monthLabel | Zeichenkette | Ja | Monat formatiert als Zeichenkette 
+
+
+| dayInWeekNum | Byte | Ja | Wochentag für das Datumsobjekt. Sonntag hat den Wert 1. 
+
+
+| Quartal | Byte | Ja | Quartal des Datumsobjekts. Das erste Quartal hat den Wert 1. 
+
+
+| quarterLabel | Zeichenkette | Ja | Quartal als Zeichenkette formatiert 
+
+
+| dayInQuarter | Int32 | Ja | Tag im Quartal des Datumsobjekts. Der erste Tag des Quartals hat den Wert 1. 
+
+
+| repQuarter | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für sein Quartal ist. 
+
+
+| repMonth | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für seinen Monat ist. 
+
+
+| repWeek | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für seine Woche ist. 
+
+
+| repDay | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für diesen Tag ist. 
+
+
+| repMonthOrLatest | Byte | Ja | Gibt an, ob dieses Datum der repmonth oder das neueste ist. Dieses Kennzeichen wird von Datamarts verwendet, die mit monatlichen reps arbeiten. Der einzige Unterschied besteht darin, dass es sich für den aktuellen Monat um das neueste handelt. 
+
+
+| sspFlag | Byte | Ja | Gibt an, ob dieses Datum im Storage und Storage Pool Datamart verwendet wird. Dies gilt für Monatsrepräsentanten und für die letzte in der Konfiguration definierte Anzahl von Tagen. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob dieses Datum das letzte in der Tabelle verfügbare Datum ist. 
+
+
+| Zukunft | Zeichenkette | Ja | Gibt an, ob es sich bei diesem Datum um ein zukünftiges Datum (Projektion) oder ein reguläres Datum handelt. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | viele 
+|===
+
+
+[[filesystemdimension]]
+=== Dateisystemdimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n):file_system_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK der Dimension. 
+
+
+| computeResourceIdentifier | Zeichenkette | Ja | Kennung der Rechenressource. Teil des natürlichen Schlüssels. 
+
+
+| Name | Zeichenkette | Ja | Einhängepunkt oder Laufwerksbuchstabe. Teil des natürlichen Schlüssels. 
+
+
+| Standort | Zeichenkette | Ja | Gibt an, wo die Daten gespeichert sind und wie darauf zugegriffen wird. Zum Beispiel: lokal, SAN, NAS. Wird auf „null“ gesetzt, wenn der Speicherort unbekannt ist. 
+
+
+| hardwareId | Zeichenkette | Ja | Hostspezifische Kennung. Wird auf null gesetzt, falls unbekannt. 
+
+
+| Typ | Zeichenkette | Ja | Dateisystemtyp. Beispiel: NTFS, FAT, UFS, UDF, ZFS, ISO 9660, VXFS usw. Wird auf null gesetzt, falls unbekannt. 
+
+
+| ID | Int64 | Ja | GUID des Dateisystems in dwh_inventory.file_system. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für dieses Dateisystem ist. 
+
+
+| dateTk | Int32 | Ja | TK des Datums, an dem diese Dateisystemzeile erstellt wurde. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | viele 
+|===
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): fs_util_fact
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk *[PK]* | Int32 | Ja | TK der Tatsache. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["Datumsdimension"].tk | Int32 | Ja | TK des Datums. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["Hostdimension"].tk | Int32 | Ja | TK des Hosts. 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32 | Ja | TK der VM. 
+
+
+| computeResourceTk *[FK]* →link:#entity-compute_resource_dimension["compute_resource_dimension"].tk | Int32 | Ja | TK der computeResource. 
+
+
+| fsTk *[FK]* →link:#entity-file_system_dimension["Dateisystemdimension"].tk | Int32 | Ja | TK des Dateisystems. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["Speicherdimension"].tk | Int32 | Ja | TK des Speichers. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["Tierdimension"].tk | Int32 | Ja | TK der Tier. 
+
+
+| Größe in MB | Int64 | Ja | Größe des Dateisystems in MB. 
+
+
+| verwendete MB | Int64 | Ja | Menge des belegten und nicht verfügbaren Dateisystemspeichers. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| Dateisystemdimension | link:#entity-file_system_dimension["Dateisystemdimension"] | ein JOIN:fsTk=link:#entity-file_system_dimension["Dateisystemdimension"].tk 
+
+
+| Speicherdimension | link:#entity-storage_dimension["Speicherdimension"] | ein JOIN:storageTk=link:#entity-storage_dimension["Speicherdimension"].tk 
+
+
+| Tierdimension | link:#entity-tier_dimension["Tierdimension"] | ein JOIN:tierTk=link:#entity-tier_dimension["Tierdimension"].tk 
+
+
+| compute_resource_dimension | link:#entity-compute_resource_dimension["compute_resource_dimension"] | ein JOIN:computeResourceTk=link:#entity-compute_resource_dimension["compute_resource_dimension"].tk 
+
+
+| Hostdimension | link:#entity-host_dimension["Hostdimension"] | ein JOIN:hostTk=link:#entity-host_dimension["Hostdimension"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | ein JOIN:vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| Datumsdimension | link:#entity-date_dimension["Datumsdimension"] | ein JOIN:dateTk=link:#entity-date_dimension["Datumsdimension"].tk 
+|===
+
+
+[[hostdimension]]
+=== Hostdimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): host_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK dieser Host-Zeile. 
+
+
+| Name | Zeichenkette | Ja | Name des Hosts. 
+
+
+| Kennung | Zeichenkette | Ja | Geräteidentifikator. 
+
+
+| ip | Zeichenkette | Ja | Durch Kommas getrennte Liste der IP-Adressen des Hosts. 
+
+
+| Betriebssystem | Zeichenkette | Ja | Betriebssystem, das auf dem Host läuft. 
+
+
+| Modell | Zeichenkette | Ja | Modellnummer. 
+
+
+| Hersteller | Zeichenkette | Ja | Hersteller des Hosts. 
+
+
+| URL | Zeichenkette | Ja | URL zu diesem Host im Insight Server. 
+
+
+| ID | Int64 | Ja | GUID des Hosts in dwh_inventory.host. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für diesen Host ist. 
+
+
+| dateTk | Int32 | Ja | TK des Datums, an dem diese Hostzeile erstellt wurde. 
+
+
+| dataCenter | Zeichenkette | Ja | dataCenter Annotationswert, der dwh_dimensions.host_dimension zugewiesen ist 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | viele 
+|===
+
+
+[[storagedimension]]
+=== Speicherdimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n):storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK dieser Speicherarray-Zeile. 
+
+
+| Name | Zeichenkette | Ja | Name des Speicherarrays. 
+
+
+| Kennung | Zeichenkette | Ja | Geräteidentifikator. 
+
+
+| ip | Zeichenkette | Ja | IP-Adresse des Speicherarrays. 
+
+
+| Modell | Zeichenkette | Ja | Modell des Speicherarrays. 
+
+
+| Hersteller | Zeichenkette | Ja | Hersteller des Storage-Arrays. 
+
+
+| serialNumber | Zeichenkette | Ja | Seriennummer des Speichersystems. 
+
+
+| microcodeVersion | Zeichenkette | Ja | Version der auf dem Speichersystem laufenden Firmware. 
+
+
+| Familie | Zeichenkette | Ja | Familienname des Speichersystems (z. B. Clariion, Symmetrix etc). 
+
+
+| URL | Zeichenkette | Ja | URL zu diesem Speicher im Insight Server. 
+
+
+| ID | Int64 | Ja | GUID des Speicherarrays in dwh_inventory.storage. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für diesen Storage ist. 
+
+
+| dateTk | Int32 | Ja | TK des Datums, an dem diese Speicherarray-Zeile erstellt wurde. 
+
+
+| dataCenter | Zeichenkette | Ja | dataCenter Annotationswert, der dwh_dimensions.storage_dimension zugewiesen wurde 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | viele 
+|===
+
+
+[[tierdimension]]
+=== Tierdimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n):tier_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK dieser Tierreihe. 
+
+
+| Name | Zeichenkette | Ja | Bezeichnung für die Ebene. 
+
+
+| Sequenz | Int32 | Ja | Sequenzielle Nummer der Ebene, wie in dwh_inventory.annotation_value definiert. 
+
+
+| Kosten | Doppelt | Ja | Mit dieser Stufe verbundene Kosten. 
+
+
+| ID | Int64 | Ja | GUID der Stufe in dwh_inventory.annotation_value. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für diese Ebene ist. 
+
+
+| dateTk | Int32 | Ja | TK des Datums, an dem diese Tierzeile erstellt wurde. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | viele 
+|===
+
+
+[[vmdimension]]
+=== vm_dimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n):vm_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK dieser virtuellen Maschinenzeile. 
+
+
+| Name | Zeichenkette | Ja | Name der virtuellen Maschine. 
+
+
+| naturalKey | Zeichenkette | Ja | Natürlicher Bezeichner der virtuellen Maschine. 
+
+
+| Betriebssystem | Zeichenkette | Ja | Gastbetriebssystem. 
+
+
+| virtualCenterIp | Zeichenkette | Ja | IP-Adresse des virtuellen Centers der virtuellen Maschine. 
+
+
+| ips | Zeichenkette | Ja | Durch Kommas getrennte Liste der IP-Adressen der virtuellen Maschine. 
+
+
+| URL | Zeichenkette | Ja | URL zu dieser virtuellen Maschine im Insight Server. 
+
+
+| ID | Int64 | Ja | GUID der virtuellen Maschine in dwh_inventory.hv_virtual_machine 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für diese virtuelle Maschine ist. 
+
+
+| dateTk | Int32 | Ja | TK des Datums, an dem diese Zeile der virtuellen Maschine erstellt wurde. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | viele 
+|===

@@ -1,0 +1,462 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_ports.html 
+summary: Schematabellen für das Ports Data Warehouse 
+keywords: dwh, data warehouse, schema, reporting, ports 
+---
+= Portschema
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Quelle: *dwh_ports* OData Endpoint, Data Infrastructure Insights
+
+Gefundene Tabellen: *7* | Assoziationen: *4*
+
+
+
+[[key-relationships-between-tables]]
+== Wichtige Beziehungen zwischen Tabellen
+
+
+
+[[portsfact]]
+=== ports_fact
+
+[cols="1,1,1"]
+|===
+| Referenzierte (übergeordnete) Tabelle | FK-Spalte | Übergeordneter PK 
+
+
+| link:#entity-connected_device_dimension["connected_device_dimension"] | connectedDeviceTk | tk 
+
+
+| link:#entity-date_dimension["Datumsdimension"] | dateTk | tk 
+
+
+| link:#entity-port_dimension["port_dimension"] | portTk | tk 
+
+
+| link:#entity-switch_dimension["switch_dimension"] | switchTk | tk 
+|===
+
+
+[[tables-fields]]
+== Tabellen und Felder
+
+PKPrimary KeyFKForeign KeyNOT NULLErforderliches Feld
+
+
+
+[[cardinals]]
+=== Kardinäle
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): cardinals
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| Ziffer | Int32 | Ja | Eine Zahl zwischen 0 und 99. 
+|===
+
+
+[[connecteddevicedimension]]
+=== connected_device_dimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): connected_device_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk *[PK]* | Int32 | Ja | TK des Geräts. 
+
+
+| Name | Zeichenkette | Ja | Name des Geräts. 
+
+
+| Hersteller | Zeichenkette | Ja | Hersteller des Geräts. 
+
+
+| Modell | Zeichenkette | Ja | Modell des Geräts. 
+
+
+| Typ | Zeichenkette | Ja | Gerätetyp. 
+
+
+| Firmware | Zeichenkette | Ja | Firmware-Version, die auf dem Gerät ausgeführt wird. 
+
+
+| ID | Int64 | Ja | Die ID des Geräts 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für dieses Gerät ist. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| ports_fact | link:#entity-ports_fact["ports_fact"] | viele 
+|===
+
+
+[[datedimension]]
+=== Datumsdimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): date_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK des Datumsobjekts. 
+
+
+| fullDate | DateTimeOffset | Ja | Datum des Date-Objekts. 
+
+
+| dayInMonth | Byte | Ja | Tag des Monats für das Datumsobjekt. Der erste Tag des Monats hat den Wert 1. 
+
+
+| dayInYear | Int32 | Ja | Tag im Jahr des Datumsobjekts. Der erste Tag des Jahres hat den Wert 1. 
+
+
+| dateYear | Int32 | Ja | Jahr des Datumsobjekts. 
+
+
+| yearLabel | Zeichenkette | Ja | Jahr als Zeichenkette formatiert 
+
+
+| monthNum | Byte | Ja | Monat des Datumsobjekts. Januar hat den Wert 1. 
+
+
+| monthLabel | Zeichenkette | Ja | Monat formatiert als Zeichenkette 
+
+
+| dayInWeekNum | Byte | Ja | Wochentag für das Datumsobjekt. Sonntag hat den Wert 1. 
+
+
+| Quartal | Byte | Ja | Quartal des Datumsobjekts. Das erste Quartal hat den Wert 1. 
+
+
+| quarterLabel | Zeichenkette | Ja | Quartal als Zeichenkette formatiert 
+
+
+| dayInQuarter | Int32 | Ja | Tag im Quartal des Datumsobjekts. Der erste Tag des Quartals hat den Wert 1. 
+
+
+| repQuarter | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für sein Quartal ist. 
+
+
+| repMonth | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für seinen Monat ist. 
+
+
+| repWeek | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für seine Woche ist. 
+
+
+| repDay | Byte | Ja | Gibt an, ob dieses Datum das erste verfügbare Datum für diesen Tag ist. 
+
+
+| repMonthOrLatest | Byte | Ja | Gibt an, ob dieses Datum der repmonth oder das neueste ist. Dieses Kennzeichen wird von Datamarts verwendet, die mit monatlichen reps arbeiten. Der einzige Unterschied besteht darin, dass es sich für den aktuellen Monat um das neueste handelt. 
+
+
+| sspFlag | Byte | Ja | Gibt an, ob dieses Datum im Storage und Storage Pool Datamart verwendet wird. Dies gilt für Monatsrepräsentanten und für die letzte in der Konfiguration definierte Anzahl von Tagen. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob dieses Datum das letzte in der Tabelle verfügbare Datum ist. 
+
+
+| Zukunft | Zeichenkette | Ja | Gibt an, ob es sich bei diesem Datum um ein zukünftiges Datum (Projektion) oder ein reguläres Datum handelt. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| ports_fact | link:#entity-ports_fact["ports_fact"] | viele 
+|===
+
+
+[[portdimension]]
+=== port_dimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): port_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK dieser Portzeile. 
+
+
+| wwn | Zeichenkette | Ja | WWN des Ports. 
+
+
+| Name | Zeichenkette | Ja | Name des Ports. 
+
+
+| gbicType | Zeichenkette | Ja | Typ des für den Port verwendeten GBIC (Gigabit Interface Converter). 
+
+
+| Typ | Zeichenkette | Ja | Porttyp, der typischerweise zur Identifizierung des Protokolls verwendet wird, das zur Kommunikation mit dem anderen Gerät genutzt wird, und vom Gerät selbst übernommen wird: F-port, E-port usw. 
+
+
+| Geschwindigkeit | Zeichenkette | Ja | Geschwindigkeit des Ports in Gbit/s. 
+
+
+| isGenerated | Zeichenkette | Ja | Angabe, ob es sich um eine generierte WWN handelt (wenn die tatsächliche WWN nicht bekannt ist). 
+
+
+| URL | Zeichenkette | Ja | URL zu diesem Port im Insight Server. 
+
+
+| ID | Int64 | Ja | GUID des Ports in dwh_inventory.switch_port. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für diesen Port ist. 
+
+
+| dateTk | Int32 | Ja | TK des Datums, an dem die Port-Zeile erstellt wurde. 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| ports_fact | link:#entity-ports_fact["ports_fact"] | viele 
+|===
+
+
+[[portsfact]]
+=== ports_fact
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n):ports_fact
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk *[PK]* | Int32 | Ja | TK der Tatsache. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["Datumsdimension"].tk | Int32 | Ja | TK des Datums. 
+
+
+| switchTk *[FK]* →link:#entity-switch_dimension["switch_dimension"].tk | Int32 | Ja | TK des Switches, der den Port enthält. 
+
+
+| connectedDeviceTk *[FK]* →link:#entity-connected_device_dimension["connected_device_dimension"].tk | Int32 | Ja | TK des Geräts, das mit dem Port verbunden ist. 
+
+
+| portTk *[FK]* →link:#entity-port_dimension["port_dimension"].tk | Int32 | Ja | TK des Ports. 
+
+
+| Fabric | Zeichenkette | Ja | Name oder WWN für das Fabric (oder VSAN), auf dem der Port konfiguriert ist zu arbeiten. 
+
+
+| Geschwindigkeit | Zeichenkette | Ja | Geschwindigkeit des Ports in Gbit/s. 
+
+
+| connectivityType | Zeichenkette | Ja | Typ des angeschlossenen Geräts. 
+
+
+| Typ | Zeichenkette | Ja | Porttyp, der typischerweise zur Identifizierung des Protokolls verwendet wird, das zur Kommunikation mit dem anderen Gerät genutzt wird, und vom Gerät selbst übernommen wird: F-port, E-port usw. 
+
+
+| Status | Zeichenkette | Ja | Status des Ports. Mögliche Werte sind OK, NOT_LICENSED, ERROR, INACTIVE und UNKNOWN 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| connected_device_dimension | link:#entity-connected_device_dimension["connected_device_dimension"] | ein JOIN:connectedDeviceTk=link:#entity-connected_device_dimension["connected_device_dimension"].tk 
+
+
+| port_dimension | link:#entity-port_dimension["port_dimension"] | ein JOIN:portTk=link:#entity-port_dimension["port_dimension"].tk 
+
+
+| Datumsdimension | link:#entity-date_dimension["Datumsdimension"] | ein JOIN:dateTk=link:#entity-date_dimension["Datumsdimension"].tk 
+
+
+| switch_dimension | link:#entity-switch_dimension["switch_dimension"] | ein JOIN:switchTk=link:#entity-switch_dimension["switch_dimension"].tk 
+|===
+
+
+[[portsfactcurrent]]
+=== ports_fact_current
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): ports_fact_current
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK der Tatsache. 
+
+
+| dateTk | Int32 | Ja | TK des Datums. 
+
+
+| switchTk | Int32 | Ja | TK des Switches, der den Port enthält. 
+
+
+| connectedDeviceTk | Int32 | Ja | TK des Geräts, das mit dem Port verbunden ist. 
+
+
+| portTk | Int32 | Ja | TK des Ports. 
+
+
+| Fabric | Zeichenkette | Ja | Name oder WWN für das Fabric (oder VSAN), auf dem der Port konfiguriert ist zu arbeiten. 
+
+
+| Geschwindigkeit | Zeichenkette | Ja | Geschwindigkeit des Ports in Gbit/s. 
+
+
+| connectivityType | Zeichenkette | Ja | Typ des angeschlossenen Geräts. 
+
+
+| Typ | Zeichenkette | Ja | Porttyp, der typischerweise zur Identifizierung des Protokolls verwendet wird, das zur Kommunikation mit dem anderen Gerät genutzt wird, und vom Gerät selbst übernommen wird: F-port, E-port usw. 
+
+
+| Status | Zeichenkette | Ja | Status des Ports. Mögliche Werte sind OK, NOT_LICENSED, ERROR, INACTIVE und UNKNOWN 
+|===
+
+
+[[switchdimension]]
+=== switch_dimension
+
+
+
+[[top]]
+=== ↑ nach oben
+
+Entitätsmenge(n): switch_dimension
+
+[cols="1,1,1,1"]
+|===
+| Feld | Typ | Nullable | Kommentar 
+
+
+| tk | Int32 | Ja | TK dieser Switch-Reihe. 
+
+
+| wwn | Zeichenkette | Ja | WWN des Switches. 
+
+
+| Name | Zeichenkette | Ja | Name des Switches. 
+
+
+| Kennung | Zeichenkette | Ja | Geräteidentifikator. 
+
+
+| ip | Zeichenkette | Ja | IP-Adresse des Switches. 
+
+
+| Modell | Zeichenkette | Ja | Modell des Schalters. 
+
+
+| Hersteller | Zeichenkette | Ja | Hersteller des Switches. 
+
+
+| Firmware | Zeichenkette | Ja | Firmware-Version, die auf dem Switch läuft. 
+
+
+| serialNumber | Zeichenkette | Ja | Seriennummer des Switches. 
+
+
+| npv | Zeichenkette | Ja | Angabe, ob es sich um einen NPV Switch handelt. 
+
+
+| isGenerated | Zeichenkette | Ja | Gibt an, ob dieser Schalter keinem physischen Gerät entspricht. Er wird zur Modellierung von Eins-zu-Viele-Port-Konnektivität verwendet. 
+
+
+| Typ | Zeichenkette | Ja | Switch-Typ. 
+
+
+| URL | Zeichenkette | Ja | URL zu diesem Switch im Insight Server. 
+
+
+| ID | Int64 | Ja | GUID des Switches in dwh_inventory.switch. 
+
+
+| neueste | Zeichenkette | Ja | Gibt an, ob diese Zeile die aktuellste für diesen Switch ist. 
+
+
+| dateTk | Int32 | Ja | TK des Datums, an dem diese Switch-Zeile erstellt wurde. 
+
+
+| dataCenter | Zeichenkette | Ja | dataCenter Annotationswert, der dwh_dimensions.switch_dimension zugewiesen ist 
+
+
+| switchLevel | Zeichenkette | Ja | switchLevel Annotationswert, der dwh_dimensions.switch_dimension zugewiesen wurde 
+|===
+
+
+==== Navigationseigenschaften (Joins)
+
+[cols="1,1,1"]
+|===
+| Navigationseigenschaft | Verwandte Entität | Kardinalität / Join 
+
+
+| ports_fact | link:#entity-ports_fact["ports_fact"] | viele 
+|===
