@@ -19,6 +19,45 @@ NetApp verbessert und erweitert seine Produkte und Services kontinuierlich.  Hie
 
 
 
+[[september-2026]]
+== September 2026
+
+
+
+[[ai-assistant-visualizations]]
+=== KI-Assistent Visualisierungen
+
+Komplexe Daten werden im Handumdrehen in grafische Erkenntnisse umgewandelt. Der KI-Assistent kann gebeten werden, ein Dashboard zu erstellen, woraufhin die Antwort mit interaktiven Grafiken und Tabellen visualisiert wird. So lassen sich Trends erkennen und Probleme schneller lösen, ohne dass eine manuelle Diagrammerstellung erforderlich ist.
+
+image:ai_assistant-column_graph.png["KI Assistant Visualisierung"]
+
+
+
+[[enhanced-vm-analyzer-filtering]]
+=== Erweiterte VM Analyzer Filterung
+
+Eine neue Option in der VM Analyzer-Ansicht ermöglicht es, eingebundene Volumes ohne Datenspeicher auszublenden und bietet so eine übersichtlichere Darstellung, die die Fehlersuche bei VMs vereinfacht.
+
+image:vm_analyzer_datastore_only_view.png["Schieberegler für die reine Datastore-Ansicht"]
+
+
+
+[[ui-update-user-data-edit-mode]]
+=== UI Update: Benutzerdaten Editiermodus
+
+Die Genauigkeit der Anlageninformationen bleibt erhalten, während das Risiko unbeabsichtigter Änderungen verringert wird. Anmerkungen und Attribute (d. h. „Benutzerdaten“) erscheinen standardmäßig im Nur-Lese-Modus, sodass zunächst die Details geprüft werden können und anschließend entschieden werden kann, wann eine Bearbeitung erfolgen soll.
+
+Nur bei Bedarf bearbeiten. In einem ausklappbaren Bedienfeld lassen sich die Asset-Details erweitern und das Stiftsymbol auswählen. Die Asset-Startseite öffnet sich im Bearbeitungsmodus, in dem die Informationen aktualisiert werden können und Speichern ausgewählt werden kann, sobald Sie fertig sind.
+
+Sie können auch direkt die Landingpage des Assets öffnen und oben rechts „Bearbeiten“ auswählen.
+
+image:UserDataEdit-Slideout.png["Benutzerdaten im Slideout Panel mit Stiftsymbol bearbeiten, Breite=400"]
+
+image:UserDataEdit-LP.png["Landing Page Bearbeitungsmodus, Breite=200"]
+
+'''
+
+
 [[july-2026]]
 == Juli 2026
 
