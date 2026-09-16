@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboard_best_practices.html 
-summary: Best Practices für die optimale Nutzung Ihrer Dashboards 
+summary: Es werden bewährte Methoden für das Finden der richtigen Kennzahlen, das effektive Filtern von Assets und das Konfigurieren von Widgets vorgestellt, um leistungsstarke und aussagekräftige Dashboards zu erstellen. 
 keywords: dashboard, hints, tips, best practice, widgets, metrics, 
 ---
 = Best Practices für Dashboards und Widgets
@@ -14,7 +14,7 @@ keywords: dashboard, hints, tips, best practice, widgets, metrics,
 
 
 [role="lead"]
-Tipps und Tricks, die Ihnen helfen, die leistungsstarken Funktionen von Dashboards und Widgets optimal zu nutzen.
+Die Dashboard-Erstellung gelingt mit bewährten Strategien zur Ermittlung der richtigen Kennzahlen, zur effektiven Filterung von Assets und zur Konfiguration von Widgets für maximale Erkenntnisse. Diese Best Practices ermöglichen den Aufbau effektiverer Dashboards, die umsetzbare Informationen über die Infrastruktur liefern.
 
 
 

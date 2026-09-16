@@ -7,10 +7,14 @@ summary: Präsentiert Kubernetes-Workload-Abhängigkeiten und -Flows und hebt Ne
 = Überwachung und Zuordnung der Kubernetes-Netzwerkleistung
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Die Funktion „Netzwerkleistungsüberwachung und -zuordnung“ von Kubernetes vereinfacht die Fehlerbehebung durch die Zuordnung von Abhängigkeiten zwischen Diensten (auch Workloads genannt) und bietet Echtzeit-Einblicke in Latenzen und Anomalien der Netzwerkleistung, um Leistungsprobleme zu erkennen, bevor sie sich auf Benutzer auswirken.  Diese Funktion hilft Unternehmen, die Gesamtkosten durch die Analyse und Prüfung von Kubernetes-Verkehrsflüssen zu senken.
+Data Infrastructure Insights bietet umfassendes Netzwerk-Performance-Monitoring und visuelle Darstellung für Kubernetes-Umgebungen. Echtzeit-Transparenz in Bezug auf Workload-Abhängigkeiten, Netzwerklatenzen und Datenflüsse ermöglicht eine proaktive Identifizierung von Performance-Problemen und eine Kostenoptimierung durch detaillierte Verkehrsanalyse.
 
 Hauptfunktionen: • Die Workload Map stellt Kubernetes-Workload-Abhängigkeiten und -Flows dar und hebt Netzwerk- und Leistungsprobleme hervor.  • Überwachen Sie den Netzwerkverkehr zwischen Kubernetes-Pods, Workloads und Knoten; identifizieren Sie die Quelle von Verkehrs- und Latenzproblemen.  • Reduzieren Sie die Gesamtkosten, indem Sie den eingehenden, ausgehenden, regions- und zonenübergreifenden Netzwerkverkehr analysieren.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: monitor_infrastructure_health.html 
 keywords: infra, infrastructure, health, monitor 
-summary: Überwachen Sie den Zustand Ihrer Infrastruktur mit einer einheitlichen Bewertung basierend auf Leistung, Kapazität, Konfiguration und Komponentenwarnungen zur proaktiven Problemlösung. 
+summary: Ein einheitlicher Überblick über den Zustand Ihrer Speicherumgebung wird durch umfassendes Monitoring ermöglicht, das Leistungs-, Kapazitäts-, Konfigurations- und Komponentenwarnungen zu aussagekräftigen Gesundheitsbewertungen zusammenfasst. 
 ---
 = Überwachen des Infrastrukturzustands
 :hardbreaks:
@@ -14,15 +14,12 @@ summary: Überwachen Sie den Zustand Ihrer Infrastruktur mit einer einheitlichen
 
 
 [role="lead"]
-Data Infrastructure Insights bietet eine umfassende Überwachung der Infrastrukturintegrität, die Leistung, Kapazität, Konfiguration und Komponentenstatus Ihrer Speicherumgebung verfolgt. Die Integritätswerte werden auf Grundlage von Monitorwarnungen in diesen Kategorien berechnet. So erhalten Sie einen einheitlichen Überblick über die Systemintegrität und können Probleme proaktiv lösen.
+Data Infrastructure Insights überwacht den Zustand Ihrer Speicherumgebung durch die Erfassung von Leistung, Kapazität, Konfiguration und Komponentenstatus. Das System berechnet aus den Überwachungsmeldungen in diesen Kategorien einheitliche Zustandsbewertungen, bietet einen klaren Überblick über den Systemzustand und ermöglicht eine proaktive Problemlösung.
 
 
 
 [[the-infrastructure-health-dashboard]]
 == Das Dashboard „Infrastructure Health“
-
-
-NOTE: Die Überwachung des Infrastrukturzustands ist einlink:concept_preview_features.html["Vorschau"] Funktion und kann sich ändern.
 
 Navigieren Sie zu *Beobachtbarkeit > Analysieren* und wählen Sie *Infrastrukturzustand* aus. Das Dashboard bietet einen Überblick über den Zustand Ihres Systems, basierend auf den unten erläuterten Alarmkategorien und Bewertungen des Monitors. Legen Sie oben Filter fest, um den Fokus Ihrer Untersuchung einzugrenzen.
 

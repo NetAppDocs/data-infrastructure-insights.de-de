@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: reporting_storage_manager_dashboard.html 
-summary: Sie können das Storage Manager Dashboard für die tägliche Verwaltung Ihrer Speicherdienste verwenden. 
+summary: Zentralisierte Einblicke in das Speichermanagement stehen mit umfassenden Berichten zur Kapazitätsauslastung, zu Leistungstrends und Ressourcenprognosen für proaktives Rechenzentrumsmanagement zur Verfügung. 
 keywords: reporting, cognos, data warehouse, dwh, smd, storage manager dashboard 
 ---
 = Storage Manager-Dashboard
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Das Storage Manager Dashboard bietet Ihnen eine zentrale Visualisierung, mit der Sie die Ressourcennutzung im Zeitverlauf mit den akzeptablen Bereichen und den Aktivitätstagen der vorherigen Tage vergleichen und gegenüberstellen können.  Indem nur die wichtigsten Leistungskennzahlen für Ihre Speicherdienste angezeigt werden, können Sie Entscheidungen zur Wartung Ihrer Rechenzentren treffen.
+Das Storage Manager Dashboard bietet durch umfassende Berichts- und Visualisierungsfunktionen zentrale Einblicke in die Speicherumgebung. Kapazitätsauslastung lässt sich überwachen, Leistungstrends im Zeitverlauf verfolgen und aktuelle Kennzahlen mit zulässigen Bereichen vergleichen, sodass fundierte Entscheidungen zur Wartung des Rechenzentrums und zur Ressourcenplanung möglich sind.
 
 
 NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:concept_subscribing_to_cloud_insights.html["Premium Edition"] .

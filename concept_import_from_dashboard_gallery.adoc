@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_import_from_dashboard_gallery.html 
-summary: Sie können empfohlene Dashboards importieren, die Ihnen bei der Beantwortung von Fragen zu Geschäftseinblicken helfen. Sie können auch benutzerdefinierte Dashboards importieren, die Sie zuvor exportiert haben. 
+summary: Vorgefertigte Dashboards können aus der Galerie importiert werden, um schnell Geschäftseinblicke zu erhalten, oder benutzerdefinierte Dashboards, die exportiert wurden, um Konfigurationen mandantenübergreifend zu teilen. 
 keywords: dashboard, gallery, import, export 
 ---
 = Dashboards importieren
@@ -14,7 +14,7 @@ keywords: dashboard, gallery, import, export
 
 
 [role="lead"]
-Data Infrastructure Insights bietet eine Reihe empfohlener Dashboards, um geschäftliche Einblicke in Ihre Daten zu gewähren. Jedes Dashboard enthält Widgets, die Ihnen dabei helfen sollen, eine bestimmte Frage zu beantworten oder ein bestimmtes Problem zu lösen, das für die Daten relevant ist, die derzeit über Ihren Mandanten erfasst werden. Mit DII können Sie auch ein nützliches Dashboard exportieren und in einen anderen Mandanten importieren.
+Vorgefertigte Dashboards aus der Galerie ermöglichen einen schnellen Einblick in Ihre Infrastruktur, alternativ lassen sich benutzerdefinierte Dashboards importieren, die aus anderen Mandanten exportiert wurden. Galerie-Dashboards sind auf die Datensammler Ihrer Umgebung zugeschnitten und darauf ausgelegt, spezifische Geschäftsfragen zu beantworten, während exportierte Dashboards das Teilen nützlicher Konfigurationen über mehrere Mandanten hinweg ermöglichen.
 
 
 

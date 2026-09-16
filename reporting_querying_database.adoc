@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reporting_querying_database.html 
-summary: Verwenden Sie Data Infrastructure Insights -APIs, um die Reporting-DB direkt abzufragen. 
+summary: Direkter Zugriff auf die Reporting-Datenbank über APIs, wobei Cognos für benutzerdefinierte Integrationen, automatisierte Berichterstellung und erweiterte Datenanalyse-Workflows umgangen wird. 
 keywords: reporting, cognos, data warehouse, dwh, API 
 ---
 = Zugriff auf die Berichtsdatenbank über die API
@@ -14,7 +14,7 @@ keywords: reporting, cognos, data warehouse, dwh, API
 
 
 [role="lead"]
-Die leistungsstarke API von Data Infrastructure Insights ermöglicht es Benutzern, die Data Infrastructure Insights Reporting-Datenbank direkt abzufragen, ohne die Cognos Reporting-Umgebung zu durchlaufen.
+Direkter Zugriff auf die Data Infrastructure Insights Reporting-Datenbank über OData v4-kompatible APIs, wobei die Cognos-Oberfläche umgangen wird, bietet mehr Flexibilität. Dadurch werden benutzerdefinierte Integrationen, automatisierte Berichtsworkflows und erweiterte Datenanalysen für Benutzer ermöglicht, die programmatischen Zugriff auf ihre Infrastrukturdaten benötigen.
 
 
 NOTE: Diese Dokumentation bezieht sich auf die Data Infrastructure Insights -Berichtsfunktion, die in der Data Infrastructure Insights Premium Edition verfügbar ist.
@@ -24,7 +24,7 @@ NOTE: Diese Dokumentation bezieht sich auf die Data Infrastructure Insights -Ber
 [[odata]]
 == Odata
 
-Die Data Infrastructure Insights Reporting API folgt demlink:https://www.odata.org/["OData v4"] (Open Data Protocol)-Standard für die Abfrage der Reporting-Datenbank.  Weitere Informationen und weitere Informationen finden Sie unterlink:https://www.odata.org/getting-started/basic-tutorial/["dieses Tutorial"] auf OData.
+Die Data Infrastructure Insights Reporting API folgt dem link:https://www.odata.org/["OData v4"] (Open Data Protocol)-Standard für die Abfrage der Reporting-Datenbank. Weitere Informationen sind unter link:https://www.odata.org/getting-started/basic-tutorial/["dieses Tutorial"] OData verfügbar.
 
 Alle Anfragen beginnen mit der URL _\https://< Data Infrastructure Insights URL>/rest/v1/dwh-management/odata_
 

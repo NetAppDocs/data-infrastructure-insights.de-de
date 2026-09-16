@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboards_overview.html 
-summary: Übersicht über Dashboards in Data Infrastructure Insights. 
+summary: Individuelle Dashboards mit flexiblen Widgets ermöglichen die Visualisierung von Infrastrukturdaten, die Überwachung von Leistungstrends und den Aufbau von operativen Ansichten, die auf spezifische Überwachungsanforderungen zugeschnitten sind. 
 keywords: dashboard, widget, custom, view, data 
 ---
 = Dashboards – Übersicht
@@ -14,7 +14,7 @@ keywords: dashboard, widget, custom, view, data
 
 
 [role="lead"]
-Data Infrastructure Insights bietet Benutzern die Flexibilität, Betriebsansichten von Infrastrukturdaten zu erstellen, indem Sie benutzerdefinierte Dashboards mit einer Vielzahl von Widgets erstellen können, von denen jedes umfassende Flexibilität bei der Anzeige und Diagrammerstellung Ihrer Daten bietet.
+Individuelle Dashboards bieten die wichtigsten operativen Einblicke. Es stehen verschiedene Widget-Typen zur Auswahl, darunter Tabellen, Diagramme, Messinstrumente und Grafiken, um Infrastrukturdaten exakt nach Wunsch zu visualisieren, was bessere Entscheidungen und ein effektiveres Monitoring ermöglicht.
 
 
 IMPORTANT: Die Beispiele in diesen Abschnitten dienen nur zu Erklärungszwecken und decken nicht jedes mögliche Szenario ab.  Mit den hierin enthaltenen Konzepten und Schritten können Sie Ihre eigenen Dashboards erstellen, um die Daten hervorzuheben, die für Ihre speziellen Anforderungen spezifisch sind.

@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_query_assign_multiple_applications.html 
-summary: Verwenden Sie eine Abfrage, um Objekten mehrere Anwendungen oder Anmerkungen zuzuweisen oder mehrere Anwendungen oder Anmerkungen von Objekten zu entfernen. 
+summary: Anwendungen und Annotationen können effizient über mehrere Assets hinweg verwaltet werden, indem abfragebasierte Massenoperationen zum Zuweisen oder Entfernen genutzt werden, ohne dass eine manuelle, individuelle Asset-Konfiguration erforderlich ist. 
 keywords: query, queries, application, annotation, multiple 
 ---
 = Zuweisen mehrerer Anwendungen zu oder Entfernen mehrerer Anwendungen von Assets
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Sie können mehrerelink:task_create_application.html["Anwendungen"] Sie können mehrere Anwendungen mithilfe einer Abfrage zu Assets hinzufügen oder daraus entfernen, anstatt sie manuell zuweisen oder entfernen zu müssen.
+Die Asset-Verwaltung lässt sich optimieren, indem Abfragen verwendet werden, um Massenoperationen an Anwendungen und Annotationen durchzuführen. Anstatt jedes Asset einzeln manuell zu konfigurieren, besteht die Möglichkeit, mehreren Anwendungen und Annotationen gruppenweise in einem einzigen Vorgang effizient zuzuweisen oder zu entfernen.
 
 
 NOTE: Mit diesen Schritten können Sie hinzufügen oder entfernenlink:task_defining_annotations.html["Anmerkungen"] auf die gleiche Weise.

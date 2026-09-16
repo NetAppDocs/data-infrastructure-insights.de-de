@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_querying_assets.html 
-summary: Inventarressourcen und Integrationsmetriken abfragen, um die Leistung Ihrer gesamten Infrastruktur, einschließlich Speicher-, Rechen- und Netzwerkressourcen, zu überwachen, Fehler zu beheben und zu analysieren. 
+summary: Physische und virtuelle Infrastrukturressourcen sowie Integrationsmetriken können abgefragt werden, um die Leistung zu überwachen, Probleme zu beheben und gezielte Ansichten Ihrer Umgebung mithilfe granularer Suchkriterien zu erstellen. 
 keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
 ---
 = Abfragen von Assets und Metriken
@@ -14,7 +14,7 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 
 [role="lead"]
-Fragen Sie die physischen und virtuellen Assets Ihrer Infrastruktur ab, um die Leistung zu überwachen, Probleme zu beheben und granulare Suchen anhand benutzerdefinierter Kriterien wie Annotationen durchzuführen. Data Infrastructure Insights ermöglicht Abfragen über verschiedene Asset-Typen hinweg – von Storage-Arrays und Hosts bis hin zu Anwendungen und virtuellen Maschinen – zusammen mit Integrationsmetriken von Kubernetes, Docker und ONTAP Advanced Data für umfassende Sichtbarkeit.
+Abfragen ermöglichen die Suche und Analyse Ihrer Infrastrukturressourcen und Metriken auf granularer Ebene. Physische und virtuelle Inventarressourcen, Integrationsdaten aus Kubernetes und ONTAP sowie Leistungsmetriken können abgefragt werden, um die Umgebung zu überwachen, Probleme zu beheben und gezielte Ansichten auf Basis spezifischer Kriterien zu erstellen.
 
 Beachten Sie, dass Annotationsregeln, die automatisch Annotationen Assets zuweisen, eine Abfrage erfordern, die für alle freigegeben wurde. Weitere Informationen zum Freigeben von Abfragen finden Sie unten.
 

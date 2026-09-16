@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_modify_delete_query.html 
-summary: Ändern oder Löschen einer Abfrage 
+summary: Vorhandene Abfragen lassen sich durch Ändern von Kriterien und Spalten anpassen, mit flexiblen Speicheroptionen zum Aktualisieren, Umbenennen oder Erstellen neuer Versionen sowie Optionen zum Löschen von Abfragen, wenn diese nicht mehr benötigt werden. 
 keywords: query, queries, modify, edit, delete, remove 
 ---
 = Ändern oder Löschen einer Abfrage
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Sie können die mit einer Abfrage verknüpften Kriterien ändern, wenn Sie die Suchkriterien für die abgefragten Assets ändern möchten.
+Abfragen lassen sich effizient verwalten, indem Suchkriterien angepasst, Spalten hinzugefügt oder entfernt und aus flexiblen Speicheroptionen gewählt wird. Bestehende Abfragen können aktualisiert, neue Versionen erstellt oder nicht mehr benötigte Abfragen gelöscht werden, sodass die Bibliothek organisiert und aktuell bleibt.
 
 
 

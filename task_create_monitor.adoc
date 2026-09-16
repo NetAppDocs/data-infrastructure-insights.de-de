@@ -49,6 +49,8 @@ Wenn Sie einen neuen Monitor hinzufügen, werden Sie aufgefordert, einen Metrikm
 +
 ** _Metric_ überwacht Warnungen bei infrastruktur- oder leistungsbezogenen Auslösern
 ** _Log_ überwacht Warnungen bei protokollbezogenen Aktivitäten
+** Die Anomalieerkennung überwacht und warnt bei Änderungen in den Mustern Ihrer Daten.
+** _Attribute_ überwacht Änderungen an den Attributen eines Objekts, wie das Verschieben eines Objekts in ein neues Rechenzentrum
 
 
 +
@@ -171,6 +173,17 @@ image:AnomalyDetectionMonitorMetricChoosing.png["Metrikfilterung zur Anomalieerk
 
 
 image:AnomalyDetectionMonitorDefineConditions.png["Definieren der Bedingungen zum Auslösen einer Anomalieerkennung"]
+
+
+
+[[attribute-monitor]]
+=== Attributmonitor
+
+Attributmonitore benachrichtigen Ihr Team automatisch, wenn Assets zwischen Rechenzentren verschoben werden, ein Speicherpool nicht verschlüsselt ist oder Attributänderungen vorgenommen werden. Dies trägt zur Einhaltung der Konfigurationsbaselines bei und hilft sicherzustellen, dass bei neuen Bereitstellungen oder Änderungen nichts übersehen wird.
+
+image:attribute_monitor_in_list.png["Attributmonitore werden zu Monitortypen hinzugefügt"]
+
+Einfach den Objekttyp auswählen und festlegen, welche Attribute auf Änderungen überwacht werden sollen.
 
 
 

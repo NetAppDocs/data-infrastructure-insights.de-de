@@ -1,20 +1,24 @@
 ---
 sidebar: sidebar 
 permalink: task_view_queries.html 
-summary: Anzeigen erstellter Abfragen 
+summary: Gespeicherte Abfragen lassen sich mit anpassbaren Anzeigeoptionen wie Filterung, Sortierung und Spaltenanordnung anzeigen und verwalten, was eine effiziente Organisation und einen schnellen Zugriff auf Abfragen ermöglicht. 
 keywords: query, queries, viewing 
 ---
 = Anzeigen von Abfragen
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Sie können Ihre Abfragen anzeigen, um Ihre Vermögenswerte zu überwachen und die Anzeige der mit Ihren Vermögenswerten verbundenen Daten in Ihren Abfragen zu ändern.
+Greifen Sie über die Abfrageschnittstelle auf Ihre gespeicherten Abfragen zu und verwalten Sie diese, wobei Sie filtern, sortieren und die Anzeige anpassen können, um die für die Asset-Überwachung und -Analyse benötigten Abfragen effizient zu organisieren und zu finden.
 
 .Schritte
 . Melden Sie sich bei Ihrem Data Infrastructure Insights Mandanten an.
-. Klicken Sie auf *Abfragen* und wählen Sie *Alle Abfragen anzeigen*.  Sie können die Anzeige von Abfragen wie folgt ändern:
+. Klicken Sie auf *Erkunden* und wählen Sie *Alle Metrikabfragen* aus. Die Darstellung der Abfragen kann auf folgende Weise geändert werden:
 . Sie können Text in das Filterfeld eingeben, um nach bestimmten Abfragen zu suchen.
 . Sie können die Sortierreihenfolge der Spalten in der Abfragetabelle entweder aufsteigend (Pfeil nach oben) oder absteigend (Pfeil nach unten) ändern, indem Sie auf den Pfeil in der Spaltenüberschrift klicken.
 . Um die Größe einer Spalte zu ändern, bewegen Sie die Maus über die Spaltenüberschrift, bis ein blauer Balken angezeigt wird.  Platzieren Sie die Maus über der Leiste und ziehen Sie sie nach rechts oder links.

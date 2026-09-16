@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_export_query_results.html 
-summary: So exportieren Sie die Ergebnisse einer Abfrage in eine CSV-Datei 
+summary: Abfrageergebnisse, Dashboard-Tabellen, Landingpage und andere Daten können zur externen Analyse, Berichterstellung und Integration mit anderen Anwendungen unter Verwendung von asynchroner Verarbeitung in .CSV-Dateien exportiert werden. 
 keywords: query, queries, export, csv 
 ---
 = Exportieren von Abfrageergebnissen in eine CSV-Datei
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Sie können die Ergebnisse jeder Abfrage in eine CSV-Datei exportieren, sodass Sie die Daten analysieren oder in eine andere Anwendung importieren können.
+Daten können aus Abfragen, Dashboard-Tabellen-Widgets und Landingpage-Tabellen in .CSV-Dateien für externe Analysen, Berichte und die Integration mit anderen Anwendungen exportiert werden. Der asynchrone Exportprozess ermöglicht es, während der Verarbeitung großer Datensätze im Hintergrund weiterzuarbeiten.
 
 .Schritte
 . Melden Sie sich bei Data Infrastructure Insights an.

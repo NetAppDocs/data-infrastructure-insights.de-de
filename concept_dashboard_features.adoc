@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboard_features.html 
-summary: Dashboard-Funktionen und -Konzepte. 
+summary: Fortgeschrittene Dashboard-Funktionen einschließlich Widget-Anpassung, Abfragefilterung, Variablenkonfiguration, Datentransformationen und Formatierungsoptionen für die Erstellung leistungsstarker, flexibler Visualisierungen gehören zum erweiterten Funktionsumfang. 
 keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
 ---
 = Dashboard-Funktionen
@@ -14,7 +14,7 @@ keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll 
 
 
 [role="lead"]
-Dashboards und Widgets ermöglichen große Flexibilität bei der Datenanzeige.  Hier sind einige Konzepte, die Ihnen dabei helfen, das Beste aus Ihren benutzerdefinierten Dashboards herauszuholen.
+Das volle Potenzial Ihrer Dashboards lässt sich mit erweiterten Funktionen und Anpassungsoptionen ausschöpfen. Die Konfiguration von Widget-Abfragen, die Anwendung von Datentransformationen, die Nutzung von Variablen für dynamische Filterung sowie die Implementierung anspruchsvoller Formatierungen ermöglichen hochwirksame, maßgeschneiderte Visualisierungen für den Bedarf an Infrastrukturüberwachung.
 
 Inhaltsverzeichnis:[]
 

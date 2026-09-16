@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: dashboard_access_management.html 
-summary: Sie bestimmen, ob ein von Ihnen erstelltes Dashboard öffentlich oder privat ist. 
+summary: Die Sichtbarkeit und den Zugriff auf Dashboards mit flexiblen Freigabeoptionen steuern, sodass Dashboards privat gehalten, mit bestimmten Benutzern geteilt oder organisationsweit verfügbar gemacht werden können. 
 keywords: dashboard, public, shared, private 
 ---
 = Dashboard-Zugriffsverwaltung
@@ -14,7 +14,7 @@ keywords: dashboard, public, shared, private
 
 
 [role="lead"]
-Data Infrastructure Insights gibt Ihnen jetzt mehr Kontrolle über den Zugriff auf die von Ihnen erstellten Dashboards.  Sie entscheiden, wer Ihre Diagramme ändern kann.  Sie kontrollieren die Offenlegung potenziell sensibler Informationen.  Wenn Sie ein Dashboard privat halten, können Sie Ihre Visualisierungen fertigstellen, bis sie für die Nutzung durch andere in Ihrer Organisation bereit sind.
+Mit flexiblen Zugriffsverwaltungsoptionen lässt sich steuern, wer Ihre Dashboards einsehen und bearbeiten kann. Dashboards bleiben während der Entwicklung privat und können anschließend mit bestimmten Benutzern oder der gesamten Organisation geteilt werden. Anpassbare Bearbeitungs- oder Leseberechtigungen schützen sensible Informationen und ermöglichen gleichzeitig Zusammenarbeit.
 
 image:Dashboard_Sharing_Options.png["Dashboard-Freigabeoptionen, Breite=300"]
 

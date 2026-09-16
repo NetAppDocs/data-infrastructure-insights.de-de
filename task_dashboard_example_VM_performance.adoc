@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_dashboard_example_VM_performance.html 
-summary: Dashboard-Beispiel zur Hervorhebung der Leistung virtueller Maschinen. 
+summary: Schritt-für-Schritt-Anleitung zur Erstellung eines Dashboards zur Leistungsanalyse virtueller Maschinen mit Tabellen, Diagrammen und Widgets zum Vergleich von VM- und Speichermetriken. 
 keywords: dashboard, widget, custom, example, virtual machine, vm, performance 
 ---
 = Dashboard-Beispiel: Leistung virtueller Maschinen
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Der IT-Betrieb steht heute vor zahlreichen Herausforderungen.  Von Administratoren wird verlangt, mit weniger mehr zu erreichen, und die vollständige Transparenz Ihrer dynamischen Rechenzentren ist ein Muss.  In diesem Beispiel zeigen wir Ihnen, wie Sie ein Dashboard mit Widgets erstellen, die Ihnen betriebliche Einblicke in die Leistung der virtuellen Maschine (VM) auf Ihrem Mandanten geben.  Wenn Sie diesem Beispiel folgen und Widgets erstellen, die auf Ihre eigenen spezifischen Anforderungen zugeschnitten sind, können Sie beispielsweise die Backend-Speicherleistung im Vergleich zur Frontend-Leistung virtueller Maschinen visualisieren oder die VM-Latenz im Vergleich zur E/A-Nachfrage anzeigen.
+In diesem Schritt-für-Schritt-Tutorial wird gezeigt, wie ein umfassendes Dashboard zur Leistung virtueller Maschinen erstellt werden kann. Widgets werden erstellt, die VM-Leistungsdaten visualisieren, Backend-Speichermetriken mit der Frontend-VM-Leistung vergleichen und Zusammenhänge zwischen VM-Latenz und E/A-Anforderung analysieren, um bessere Einblicke in den Betrieb zu ermöglichen.
 
 .Informationen zu diesem Vorgang
 Hier erstellen wir ein Dashboard zur Leistung virtueller Maschinen mit den folgenden Informationen:

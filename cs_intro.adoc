@@ -7,10 +7,14 @@ summary: Schützen Sie Ihre Daten mit Storage Workload Securitys Funktionen zur 
 = Informationen zur Speicher-Workload-Sicherheit
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights Storage Workload Security (früher Cloud Secure) hilft Ihnen, Ihre Daten mit verwertbaren Informationen zu Insider-Bedrohungen zu schützen.  Es bietet eine zentrale Sichtbarkeit und Kontrolle aller Unternehmensdatenzugriffe in Hybrid-Cloud-Umgebungen, um sicherzustellen, dass Sicherheits- und Compliance-Ziele erreicht werden.
+Data Infrastructure Insights Storage Workload Security (ehemals Cloud Secure) schützt die Daten Ihres Unternehmens durch fortschrittliche Erkennung von Insiderbedrohungen und die Bereitstellung umsetzbarer Erkenntnisse. Zentrale Transparenz und Kontrolle über alle Datenzugriffe in hybriden Cloud-Umgebungen werden ermöglicht, während durch Echtzeitüberwachung und automatisierte Reaktionsfunktionen die Erreichung von Sicherheits- und Compliance-Zielen sichergestellt wird.
 
 
 
