@@ -7,6 +7,10 @@ summary: Installieren, Deinstallieren und Konfigurieren der Proxy-Unterstützung
 = Konfigurieren von Erfassungseinheiten
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -89,7 +93,15 @@ Am einfachsten ist es, in Ihrem Proxy/Ihrer Firewall eine Platzhalterkonfigurati
 
 NOTE: Die Verwendung eines Sternchens (*) als Platzhalter ist üblich, Ihre Proxy-/Firewall-Konfiguration verwendet jedoch möglicherweise ein anderes Format.  Überprüfen Sie anhand der Proxy-Dokumentation, ob die Platzhalterspezifikation in Ihrer Umgebung korrekt ist.
 
+Wenn festgestellt wird, dass Ihre AU beim Versuch, eine Verbindung zu DII herzustellen, blockiert ist, empfiehlt es sich, diese Endpunkte zu Ihrem Proxy hinzuzufügen:
+
+....
+api.bluexp.netapp.com
+netapp-cloud-account.auth0.com
+....
 Weitere Informationen zur Proxy-Konfiguration finden Sie in der NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Wissensdatenbank"] .
+
+Spezifische NetApp Console Proxy-Endpunkte, die möglicherweise benötigt werden, sind in der link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["Console Setup Administrator"] Dokumentation aufgeführt.
 
 
 
