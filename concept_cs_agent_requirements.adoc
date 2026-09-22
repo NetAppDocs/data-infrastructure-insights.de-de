@@ -14,17 +14,38 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 [role="lead"]
-Setzen Sie Workload Security Agents auf dedizierten Servern ein, die die Mindestanforderungen an Betriebssystem, CPU, Arbeitsspeicher und Festplattenspeicher erfüllen, um eine optimale Überwachung und Bedrohungserkennung zu gewährleisten. Dieser Leitfaden beschreibt die Hardware- und Netzwerkvoraussetzungen, die vor link:task_cs_add_agent.html["Installation Ihres Workload Security Agent"] erforderlich sind, einschließlich unterstützter Linux-Distributionen, Netzwerkverbindungsregeln und Hinweise zur Systemdimensionierung.
+Workload Security Agents sollten auf dedizierten Servern bereitgestellt werden, die die Mindestanforderungen an Betriebssystem, CPU, Arbeitsspeicher und Festplattenspeicher erfüllen, um eine optimale Überwachung und Bedrohungserkennung zu gewährleisten. Dieser Leitfaden beschreibt die erforderlichen Hardware- und Netzwerkvoraussetzungen vor link:task_cs_add_agent.html["Installation Ihres Workload Security Agent"], einschließlich unterstützter Linux-Distributionen, Netzwerkverbindungsregeln und Hinweise zur Systemdimensionierung.
 
-[cols="36,60"]
+
+
+[[system-requirements]]
+== Systemvoraussetzungen
+
+[cols="50%,50%"]
 |===
-| Komponente | Linux-Anforderungen 
+| *Komponente* | *Linux-Anforderung* 
 
 
-| Betriebssystem | Ein Computer, auf dem eine lizenzierte Version eines der folgenden Betriebssysteme ausgeführt wird: * AlmaLinux 9.4 (64 Bit) bis 9.5 (64 Bit), 10 (64 Bit), einschließlich SELinux * CentOS Stream 9 (64 Bit) * Debian 11 (64 Bit), 12 (64 Bit), einschließlich SELinux * OpenSUSE Leap 15.3 (64 Bit) bis 15.6 (64 Bit) * Oracle Linux 8.10 (64 Bit), 9.1 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux * Red Hat Enterprise Linux 8.10 (64 Bit), 9.1 (64 Bit) bis 9.6 (64 Bit), 10 (64 Bit), einschließlich SELinux * Rocky 9.4 (64 Bit) bis 9.6 (64 Bit), einschließlich SELinux * SUSE Linux Enterprise Server 15 SP4 (64-Bit) bis 15 SP6 (64-Bit), einschließlich SELinux * Ubuntu 20.04 LTS (64-Bit), 22.04 LTS (64-Bit), 24.04 LTS (64-Bit) Auf diesem Computer sollte keine andere Software auf Anwendungsebene ausgeführt werden. Ein dedizierter Server wird empfohlen. 
+| Betriebssystem  a| 
+Alle im Produkt aufgeführten 64-Bit-Linux-Distributionen, einschließlich SELinux-fähiger Systeme.
+
+Die aktuelle Liste der unterstützten Distributionen und Versionen ist in Workload Security unter Collectors ++>++ Agents ++>++ {plus}Agent unter Linux Versions Supported (i) zu finden. Diese Liste wird vom Produkt generiert und ist stets aktuell.
+
+Das Installationsprogramm überprüft auch den Host: Bei einer nicht unterstützten Distribution wird mit der Meldung „This linux distribution is not supported. Exiting the installation“ beendet.
+
+Auf diesem Computer sollte keine andere Anwendungssoftware ausgeführt werden. Ein dedizierter Server wird empfohlen.
 
 
-| Befehle | Für die Installation ist „Entpacken“ erforderlich.  Darüber hinaus ist der Befehl „sudo su –“ für die Installation, das Ausführen von Skripts und die Deinstallation erforderlich. 
+
+| Befehle / Pakete  a| 
+Folgendes ist auf dem Agent Host erforderlich:
+
+* unzip – Agenteninstallation
+* zip – Diagnosepaket (cloudsecure-agent-symptom-collector.sh)
+* sshpass – Event Rate Checker (svm++_++event++_++rate++_++checker.sh)
+* sudo su – Installation, Ausführung von Skripten und Deinstallation
+
+
 
 
 | CPU | 4 CPU-Kerne 
@@ -33,94 +54,136 @@ Setzen Sie Workload Security Agents auf dedizierten Servern ein, die die Mindest
 | Erinnerung | 16 GB RAM 
 
 
-| Verfügbarer Speicherplatz | Der Speicherplatz sollte folgendermaßen zugewiesen werden: /opt/netapp 36 GB (mindestens 35 GB freier Speicherplatz nach der Erstellung des Dateisystems). Hinweis: Es wird empfohlen, etwas zusätzlichen Speicherplatz zuzuweisen, um die Erstellung des Dateisystems zu ermöglichen.  Stellen Sie sicher, dass im Dateisystem mindestens 35 GB freier Speicherplatz vorhanden sind.  Wenn es sich bei /opt um einen bereitgestellten Ordner aus einem NAS-Speicher handelt, stellen Sie sicher, dass lokale Benutzer Zugriff auf diesen Ordner haben.  Die Installation des Agenten oder Datensammlers schlägt möglicherweise fehl, wenn lokale Benutzer keine Berechtigung für diesen Ordner haben. Weitere Informationen finden Sie imlink:task_cs_add_agent.html#troubleshooting-agent-errors["Fehlerbehebung"] Weitere Einzelheiten finden Sie im Abschnitt „Informationen zur Sicherheit“. 
+| Verfügbarer Speicherplatz  a| 
+Weisen Sie den Speicherplatz wie folgt zu:
+
+/opt/netapp – 36 GB (mindestens 35 GB freier Speicherplatz nach der Dateisystemerstellung)
+
+Hinweis: Etwas zusätzlicher Speicherplatz sollte für die Erstellung des Dateisystems eingeplant werden; mindestens 35 GB freier Speicherplatz im Dateisystem sind erforderlich. Wenn /opt von NAS-Speicher eingebunden ist, muss lokaler Benutzern der Zugriff auf den Ordner ermöglicht werden, da andernfalls die Installation des Agent oder Data Collector fehlschlagen kann.
 
 
-| Netzwerk | 100 Mbit/s bis 1 Gbit/s Ethernet-Verbindung, statische IP-Adresse, IP-Konnektivität zu allen Geräten und ein erforderlicher Port zur Workload Security-Instanz (80 oder 443). 
+
+| Zeitsynchronisation | Die Zeit auf dem ONTAP System und dem Agent Host sollte mithilfe von NTP oder SNTP synchronisiert werden. Zeitabweichungen zwischen ONTAP und dem Agent können die Ereigniskorrelation, Integritätsprüfungen und die Fehlerbehebung beeinträchtigen. 
+
+
+| Netzwerk | 100 Mbps bis 1 Gbit/s Ethernet-Verbindung, statische IP-Adresse, IP-Konnektivität zu allen überwachten Geräten und ein erforderlicher Port zur Workload Security Instanz (80 oder 443). 
 |===
-Bitte beachten: Der Workload Security-Agent kann auf derselben Maschine wie eine Data Infrastructure Insights Erfassungseinheit und/oder ein Agent installiert werden.  Es empfiehlt sich jedoch, diese auf separaten Maschinen zu installieren.  Falls diese auf derselben Maschine installiert sind, weisen Sie den Speicherplatz wie unten gezeigt zu:
+Der Workload Security Agent kann auf demselben Rechner wie eine Data Infrastructure Insights Acquisition Unit und/oder ein Agent installiert werden; es gilt jedoch als Best Practice, sie auf separaten Rechnern zu installieren. Wenn sie auf demselben Rechner installiert werden, sollte der Speicherplatz wie unten gezeigt zugewiesen werden:
 
+[cols="50%,50%"]
 |===
+| *Verfügbarer Speicherplatz* | *Zuweisung* 
 
 
-| Verfügbarer Speicherplatz | 50–55 GB Für Linux sollte der Speicherplatz folgendermaßen zugewiesen werden: /opt/netapp 25–30 GB /var/log/netapp 25 GB 
+| 50–55 GB (kombinierte Installation) | Für Linux zuweisen als: /opt/netapp 25–30 GB; /var/log/netapp 25 GB 
 |===
-
-
-[[additional-recommendations]]
-== Zusätzliche Empfehlungen
-
-* Es wird dringend empfohlen, die Zeit sowohl auf dem ONTAP -System als auch auf der Agent-Maschine mithilfe von *Network Time Protocol (NTP)* oder *Simple Network Time Protocol (SNTP)* zu synchronisieren.
-
-
 
 
 [[cloud-network-access-rules]]
-== Cloud-Netzwerkzugriffsregeln
+== Cloud Netzwerkzugriffsregeln
 
-Für *US-basierte* Workload Security-Umgebungen:
+*Für US-basierte Workload Security-Umgebungen:*
 
-[cols="5*"]
+[cols="20%,20%,20%,20%,20%"]
 |===
-| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
+| *Protokoll* | *Port* | *Quelle* | *Ziel* | *Beschreibung* 
 
 
-| TCP | 443 | Workload-Sicherheitsagent | <Sitename>.cs01.cloudinsights.netapp.com <Sitename>.c01.cloudinsights.netapp.com <Sitename>.c02.cloudinsights.netapp.com | Zugriff auf Data Infrastructure Insights 
+| TCP | 443 | Workload-Sicherheitsagent  a| 
+++<++site++_++name++>++.cs01.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c01.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c02.cloudinsights.netapp.com
+| Zugriff auf Data Infrastructure Insights 
 
 
 | TCP | 443 | Workload-Sicherheitsagent | agentlogin.cs01.cloudinsights.netapp.com | Zugriff auf Authentifizierungsdienste 
 |===
-Für *in Europa ansässige* Workload Security-Umgebungen:
+*Für Workload Security Umgebungen mit Standort Europa:*
 
-[cols="5*"]
+[cols="20%,20%,20%,20%,20%"]
 |===
-| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
+| *Protokoll* | *Port* | *Quelle* | *Ziel* | *Beschreibung* 
 
 
-| TCP | 443 | Workload-Sicherheitsagent | <Sitename>.cs01-eu-1.cloudinsights.netapp.com <Sitename>.c01-eu-1.cloudinsights.netapp.com <Sitename>.c02-eu-1.cloudinsights.netapp.com | Zugriff auf Data Infrastructure Insights 
+| TCP | 443 | Workload-Sicherheitsagent  a| 
+++<++site++_++name++>++.cs01-eu-1.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c01-eu-1.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c02-eu-1.cloudinsights.netapp.com
+| Zugriff auf Data Infrastructure Insights 
 
 
 | TCP | 443 | Workload-Sicherheitsagent | agentlogin.cs01-eu-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsdienste 
 |===
-Für *APAC-basierte* Workload Security-Umgebungen:
+*Für Workload Security-Umgebungen mit Standort APAC:*
 
-[cols="5*"]
+[cols="20%,20%,20%,20%,20%"]
 |===
-| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
+| *Protokoll* | *Port* | *Quelle* | *Ziel* | *Beschreibung* 
 
 
-| TCP | 443 | Workload-Sicherheitsagent | <Sitename>.cs01-ap-1.cloudinsights.netapp.com <Sitename>.c01-ap-1.cloudinsights.netapp.com <Sitename>.c02-ap-1.cloudinsights.netapp.com | Zugriff auf Data Infrastructure Insights 
+| TCP | 443 | Workload-Sicherheitsagent  a| 
+++<++site++_++name++>++.cs01-ap-1.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c01-ap-1.cloudinsights.netapp.com
+
+++<++site++_++name++>++.c02-ap-1.cloudinsights.netapp.com
+| Zugriff auf Data Infrastructure Insights 
 
 
 | TCP | 443 | Workload-Sicherheitsagent | agentlogin.cs01-ap-1.cloudinsights.netapp.com | Zugriff auf Authentifizierungsdienste 
 |===
+_Wenn sich der Agent hinter einer SSL-Inspektion befindet (zum Beispiel Zscaler), sollte die SSL-Inspektion für ++*++.cloudinsights.netapp.com und den regionalen agentlogin-Host deaktiviert werden._ _Workload Security funktioniert nicht korrekt, wenn Zwischenzertifikate die SaaS-Endpunkte neu signieren._
+
 
 
 [[in-network-rules]]
 == Netzwerkinterne Regeln
 
-[cols="5*"]
+[cols="20%,20%,20%,20%,20%"]
 |===
-| Protokoll | Hafen | Quelle | Ziel | Beschreibung 
+| *Protokoll* | *Port* | *Quelle* | *Ziel* | *Beschreibung* 
 
 
-| TCP | 389 (LDAP) 636 (LDAPs / Start-TLS) | Workload-Sicherheitsagent | LDAP-Server-URL | Mit LDAP verbinden 
+| TCP  a| 
+389 (LDAP)
+
+636 (LDAPS / start-tls)
+| Workload-Sicherheitsagent | LDAP-Server-URL | Verbindung zu LDAP. SSL (LDAPS/start-tls) wird unterstützt; das vom Server vorgelegte Zertifikat wird akzeptiert. 
 
 
-| TCP | 443 | Workload-Sicherheitsagent | Cluster- oder SVM-Verwaltungs-IP-Adresse (abhängig von der SVM-Collector-Konfiguration) | API-Kommunikation mit ONTAP 
+| TCP | 443 | Workload-Sicherheitsagent | Cluster- oder SVM-Management-IP-Adresse (abhängig von der SVM Collector-Konfiguration) | API-Kommunikation mit ONTAP. 
 
 
-| TCP | 35000 - 55000 | SVM-Daten-LIF-IP-Adressen | Workload-Sicherheitsagent | Kommunikation von ONTAP an den Workload Security Agent für Fpolicy-Ereignisse.  Diese Ports müssen für den Workload Security Agent geöffnet werden, damit ONTAP Ereignisse an ihn senden kann, einschließlich einer Firewall auf dem Workload Security Agent selbst (sofern vorhanden).  BEACHTEN Sie, dass Sie nicht *alle* dieser Ports reservieren müssen, aber die Ports, die Sie dafür reservieren, müssen innerhalb dieses Bereichs liegen.  Es wird empfohlen, zunächst etwa 100 Ports zu reservieren und diese bei Bedarf zu erhöhen. 
+| TCP | 35000–55000 | SVM Daten LIF IP-Adressen | Workload-Sicherheitsagent | Kommunikation von ONTAP zum Agenten für FPolicy-Ereignisse. Diese Ports zum Agenten (einschließlich etwaiger Firewalls auf dem Agenten selbst) müssen geöffnet sein, damit ONTAP Datei-/Benutzerzugriffsereignisse senden kann. 
 
 
-| TCP | 35000-55000 | Cluster-Verwaltungs-IP | Workload-Sicherheitsagent | Kommunikation von der ONTAP Cluster Management IP zum Workload Security Agent für *EMS-Ereignisse*.  Diese Ports müssen für den Workload Security Agent geöffnet werden, damit ONTAP *EMS-Ereignisse* an ihn senden kann, einschließlich einer Firewall auf dem Workload Security Agent selbst (sofern vorhanden).  BEACHTEN Sie, dass Sie nicht *alle* dieser Ports reservieren müssen, aber die Ports, die Sie dafür reservieren, müssen innerhalb dieses Bereichs liegen.  Es wird empfohlen, zunächst etwa 100 Ports zu reservieren und diese bei Bedarf zu erhöhen. 
+| TCP | 35000–55000 | Cluster Management-IP | Workload-Sicherheitsagent | Kommunikation von der ONTAP Cluster-Management-IP zum Agenten für EMS-Ereignisse (zum Beispiel Anti-Ransomware / ARP). Diese Ports müssen in Richtung des Agenten geöffnet werden (einschließlich etwaiger Firewalls auf dem Agenten selbst). 
 
 
 | SSH | 22 | Workload-Sicherheitsagent | Clusterverwaltung | Wird für die CIFS/SMB-Benutzerblockierung benötigt. 
 |===
+*Informationen zum FPolicy/EMS-Portbereich*
+
+Sie müssen nicht den gesamten Bereich 35000–55000/tcp öffnen. Die Reservierung sollte der Anzahl der Collector auf dem Agent entsprechen: Jede SVM nutzt bis zu 4 Ports (2 pro aktiviertem Protokoll, NFS und CIFS/SMB). Für einen voll ausgelasteten Agent (50 Collector) sollten etwa 200 Ports innerhalb dieses Bereichs reserviert werden, bei Bedarf ist eine Erhöhung möglich. Die beiden oben genannten Zeilen verwenden denselben Bereich für unterschiedlichen Datenverkehr: SVM-Daten-LIF → Agent überträgt FPolicy Datei-/Benutzeraktivitätsereignisse, und Cluster-Management-IP → Agent überträgt EMS-Ereignisse (wie ARP). Beide Pfade sollten geöffnet sein, wenn die entsprechenden Funktionen genutzt werden.
+
+Wenn vor dem Hinzufügen eines Collectors Test Connection ausgeführt wird, wird nur eine Teilmenge der aktiven Ports in diesem Bereich überprüft. Der gesamte reservierte Bereich sollte auf der Agent-Firewall und auf jedem Netzwerkpfad zwischen ONTAP und dem Agent offen bleiben.
+
 
 
 [[system-sizing]]
 == Systemdimensionierung
 
-Siehe dielink:concept_cs_event_rate_checker.html["Event-Raten-Checker"] Informationen zur Größenbestimmung finden Sie in der Dokumentation.
+Ein Agent unterstützt maximal 50 Datensammler (alle Typen zusammengenommen), mit einer Obergrenze von etwa 20.000 Ereignissen pro Sekunde.
+
+Typische Richtlinien für einen dedizierten Agent Host:
+
+* *4 CPUs / 16 GB RAM* etwa 10 Collector-Instanzen
+* *4 CPUs / 32 GB RAM* etwa 20 Sammler
+* *Scale-out mit zusätzlichen Agents*, wenn die Grenzen von 50 Kollektoren oder 20.000 Ereignissen/s erreicht werden
+
+
+Mit dem Event Rate Checker (svm++_++event++_++rate++_++checker.sh) lassen sich die maximalen Ereignisraten vor dem Hinzufügen von Kollektoren messen. Die vollständige Methode zur Dimensionierung ist in der Dokumentation des Event Rate Checker beschrieben.

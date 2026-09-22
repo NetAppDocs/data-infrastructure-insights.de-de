@@ -7,41 +7,168 @@ summary: Löschen von Workload Security-Agenten
 = Löschen eines Workload Security Agent
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Wenn Sie einen Workload Security Agent löschen, müssen zuerst alle mit dem Agent verknüpften Datensammler gelöscht werden.
+Einen Agenten löschen, wenn dessen Host außer Betrieb genommen wird oder die Datenerfassung auf einen anderen Agenten konsolidiert wird. Das Löschen eines Agenten löscht auch alle ihm noch zugewiesenen Collector.
+
+[cols="100%"]
+|===
+| *Durch das Löschen eines Agenten werden auch alle verbleibenden Datensammler gelöscht.* Alle dem Agenten noch zugewiesenen Datensammler oder Benutzerverzeichnissammler werden mit ihm entfernt, und die Konfiguration kann anschließend nicht wiederhergestellt werden. Alle noch benötigten Konfigurationen sollten vor dem Löschen des Agenten gesichert oder verschoben werden. 
+|===
+
+
+[[decide-what-you-want-to-keep]]
+== Entscheiden Sie, was Sie behalten möchten.
+
+[cols="37%,63%"]
+|===
+| *Ihr Ziel* | *Was zu tun ist* 
+
+
+| Den gleichen Speicher weiterhin von einem anderen Agenten erfassen | Verschieben Sie jeden Collector auf den anderen Agent, bevor Sie diesen löschen. Die Collector sollten neu zugewiesen und nicht neu erstellt werden, damit die Erfassung nicht doppelt erfolgt. 
+
+
+| Die Erfassung von diesem Storage vollständig beenden | Den Agenten löschen. Die ihm noch zugeordneten Sammler werden gleichzeitig gelöscht. 
+
+
+| Den Agent auf einem neuen Host neu erstellen | Zuerst die Konfiguration jedes einzelnen Collectors protokollieren, dann den neuen Agent bereitstellen und anschließend die Collectors neu erstellen oder verschieben. 
+|===
+
+
+[[before-you-begin]]
+== Bevor Sie beginnen
+
+* Melden Sie sich als Data Infrastructure Insights Administrator oder Kontoinhaber an. Zum Löschen eines Agenten sind Administratorrechte erforderlich.
+* Den Agenten anhand seines Namens identifizieren und die ihm zugewiesenen Collector auf der Agentendetailseite überprüfen.
+* Alle noch benötigten Collector Konfigurationen speichern. Gelöschte Collector Konfigurationen lassen sich nicht wiederherstellen.
+* Alle diesem Agenten zugewiesenen Collector müssen aus allen Alarmrichtlinien entfernt werden, die auf ihn verweisen. Ein Collector, auf den noch in einer Alarmrichtlinie verwiesen wird, verhindert die Löschung.
+
+
+[cols="100%"]
+|===
+| *Sie müssen den Agenten weder pausieren, die Fixierung aufheben noch auf ein Upgrade warten.* Das Pausieren, Fortsetzen, Fixieren und Aufheben der Fixierung hat keinen Einfluss auf das Löschen des Agenten. Geplante oder laufende Agent- und Collector-Vorgänge blockieren dies ebenfalls nicht. 
+|===
+
+
+[[choose-the-procedure-that-matches-your-agent]]
+== Wählen Sie das Verfahren, das zu Ihrem Agent passt.
+
+Die Agentenliste zeigt den Status jedes Agenten an. Was vor dem Löschen zu tun ist, hängt davon ab, ob der Agent noch verbunden ist.
+
+[cols="21%,62%,17%"]
+|===
+| *Agentenstatus* | *Was Workload Security erfordert* | *Verwenden* 
+
+
+| Verbunden | Alle Datensammler und Benutzerverzeichnissammler müssen zuerst vom Agent entfernt werden. Der Status der Sammler ist unerheblich, auch ein gestoppter Sammler zählt. | Verfahren A 
+
+
+| Nicht verbunden | Die Sammler müssen nicht zuerst entfernt werden. Jeder noch zugewiesene Sammler wird zusammen mit dem Agent gelöscht. | Verfahren B 
+|===
+
+
+[[procedure-a-delete-a-connected-agent]]
+== Vorgehensweise A: Einen verbundenen Agent löschen
+
+*1.* Workload Security ++>++ Collectors ++>++ Agents auswählen und dann den Agentennamen wählen, um die Details zu öffnen.
+
+*2.* Jeden für den Agenten aufgeführten Datensammler verschieben oder löschen. Um weiterhin denselben Speicher zu erfassen, kann der Sammler stattdessen einem anderen Agenten zugewiesen werden, anstatt ihn zu löschen.
+
+*3.* Jeder für den Agenten aufgeführte Benutzerverzeichnissammler wird verschoben oder gelöscht.
+
+*4.* Zurück zu Workload Security ++>++ Collectors ++>++ Agents.
+
+*5.* Das Optionsmenü für den Agent auswählen und anschließend Löschen wählen.
+
+*6.* Die Löschung wird im Dialogfeld „Agent löschen“ bestätigt.
+
+*7.* Die Agentensoftware auf dem Host deinstallieren, wie in „Uninstall the Agent software“ beschrieben.
+
+image:ws-delete-agent-confirmation.png["Dialogfeld zum Löschen eines Agenten, das das Löschen eines Beispiel-Agenten bestätigt und den Befehl anzeigt, mit dem die Agentensoftware vom Host deinstalliert wird.,title=\"Delete Agent confirmation dialog\",width=1007,height=562"]
+
+[cols="100%"]
+|===
+| *Wenn im Dialogfeld die Meldung „Cannot Delete Agent“ angezeigt wird, ist diesem verbundenen Agent noch mindestens ein Data Collector oder User Directory Collector zugewiesen. Die verbleibenden Collector müssen entfernt werden, danach kann es erneut versucht werden. Zuerst sollte die Agents-Seite aktualisiert werden, falls sie gerade entfernt wurden. 
+|===
+
+
+[[procedure-b-delete-a-retired-or-unreachable-agent]]
+== Verfahren B: Löschen eines außer Betrieb genommenen oder nicht erreichbaren Agenten
+
+Dieses Verfahren ist anzuwenden, wenn der Agent-Host außer Betrieb genommen wird oder bereits offline ist und die ihm zugewiesenen Collector nicht mehr benötigt werden.
+
+*1.* Bestätigen Sie, dass Sie keine diesem Agenten zugewiesenen Sammler mehr benötigen. Diese Sammler werden zusammen mit ihm gelöscht.
+
+*2.* Falls der Host noch erreichbar ist, sollte die Agentensoftware wie unter „Deinstallieren der Agentensoftware“ beschrieben deinstalliert werden.
+
+*3.* Workload Security ++>++ Collectors ++>++ Agents auswählen und abwarten, bis der Agent als Nicht verbunden angezeigt wird.
+
+*4.* Im Optionsmenü für den Agent die Option „Löschen“ auswählen.
+
+*5.* Die Löschung wird im Dialogfeld „Agent löschen“ bestätigt.
 
 
 
-[[deleting-an-agent]]
-== Löschen eines Agenten
+[[uninstall-the-agent-software]]
+== Die Agentensoftware deinstallieren
+
+Durch das Löschen eines Agenten in Workload Security wird dessen Cloud-seitige Konfiguration entfernt. Die Software wird dadurch nicht vom Host deinstalliert, daher ist eine separate Deinstallation erforderlich, wenn der Host außer Betrieb genommen wird.
+
+*1.* Eine Terminal-Sitzung auf dem Agent-Host öffnen.
+
+*2.* Den Deinstallationsbefehl ausführen und bei Aufforderung „y“ eingeben.
+
+[listing]
+----
+sudo cloudsecure-agent-uninstall.sh
+----
+Das Deinstallationsprogramm beendet und deaktiviert den Agent-Dienst und entfernt das Installationsverzeichnis. Für eine Deinstallation ohne Bestätigungsabfrage kann die Option -n hinzugefügt werden.
 
 
-IMPORTANT: Durch das Löschen eines Agenten werden alle mit dem Agenten verknüpften Datensammler gelöscht.  Wenn Sie die Datensammler mit einem anderen Agenten konfigurieren möchten, sollten Sie vor dem Löschen des Agenten eine Sicherungskopie der Datensammlerkonfigurationen erstellen.
 
-.Bevor Sie beginnen
-. Stellen Sie sicher, dass alle mit dem Agenten verknüpften Datensammler aus dem Workload Security-Portal gelöscht werden.
-+
-Hinweis: Ignorieren Sie diesen Schritt, wenn sich alle zugehörigen Collector im Status STOPPED befinden.
+[[verify-the-deletion]]
+== Löschung überprüfen
+
+* Der Agent wird nicht mehr unter Workload Security ++>++ Collectors ++>++ Agents angezeigt.
+* Die zugewiesenen Sammler erscheinen nicht mehr in den Sammlerlisten.
+* Der Agentendienst ist auf dem Host nicht mehr vorhanden, wenn die Software deinstalliert wurde.
 
 
 
-.Schritte zum Löschen eines Agenten:
-. Melden Sie sich per SSH bei der Agent-VM an und führen Sie den folgenden Befehl aus.  Geben Sie bei der entsprechenden Aufforderung „y“ ein, um fortzufahren.
-+
-....
-sudo /opt/netapp/cloudsecure/agent/install/cloudsecure-agent-uninstall.sh
-Uninstall CloudSecure Agent? [y|N]:
-....
-. Klicken Sie auf *Workload-Sicherheit > Collectors > Agents*
-+
-Das System zeigt die Liste der konfigurierten Agenten an.
 
-. Klicken Sie auf das Optionsmenü für den Agenten, den Sie löschen.
-. Klicken Sie auf *Löschen*.
-+
-Das System zeigt die Seite *Agent löschen* an.
+[[troubleshooting]]
+== Fehlerbehebung
 
-. Klicken Sie auf *Löschen*, um den Löschvorgang zu bestätigen.
+[cols="39%,61%"]
+|===
+| *Nachricht oder Symptom* | *Ursache und Lösung* 
 
+
+| Agent kann nicht gelöscht werden: „Bitte löschen Sie alle auf ++<++Agent++>++ konfigurierten Datensammler.“ | Der Agent ist verbunden und hat noch mindestens einen Datensammler oder Benutzerverzeichnissammler zugewiesen. Die verbleibenden Sammler müssen verschoben oder gelöscht werden, danach die Seite aktualisieren und erneut versuchen. 
+
+
+| „Die unten aufgeführten Geräte des Agenten sind aus diesen Richtlinien zu entfernen, bevor der Agent gelöscht wird.“ | Ein unter diesem Agenten geführter Collector wird weiterhin von den in der Meldung genannten Alarmrichtlinien referenziert. Jede Richtlinie ist zu bearbeiten, der entsprechende Collector zu entfernen, die Richtlinie zu speichern und anschließend der Löschvorgang erneut zu versuchen. 
+
+
+| Das Löschen schlägt mit einem Autorisierungsfehler fehl. | Zum Löschen eines Agenten ist ein Administrator oder Kontoinhaber erforderlich. Andere Rollen können die Agentenseite öffnen, die Löschung jedoch nicht durchführen. 
+
+
+| Der Agent wird als nicht registriert gemeldet. | Der Agent wurde bereits gelöscht, oder Sie arbeiten in einer anderen Umgebung. Die Agentenseite aktualisieren und den Agenten sowie den Mandanten bestätigen. 
+
+
+| Der Agent ist aus Workload Security entfernt, läuft aber weiterhin auf dem Host. | Das Löschen des Agenten deinstalliert die Software nicht. Der Deinstallationsbefehl ist auf dem Host auszuführen. 
+
+
+| Ein gelöschter Collector scheint weiterhin Nutzung zu verbrauchen. | Die Nutzung wird von den während jedes Berichtsintervalls vorhandenen Collectors gemeldet. Agenten und Collectors, die nicht mehr verwendet werden, sollten gelöscht werden, und Collectors sollten verschoben statt neu erstellt werden, damit sich alte und neue Collectors nicht überschneiden. 
+|===
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+https://docs.netapp.com/us-en/data-infrastructure-insights/task_cs_delete_agent.html["[.unterstreichen"]#Aktuelle NetApp Dokumentationsseite#]
