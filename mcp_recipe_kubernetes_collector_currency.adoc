@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_kubernetes_collector_currency.html 
+summary: Mithilfe dieses Rezepts können Kubernetes Cluster identifiziert werden, deren DII Operator oder Erfassungskomponenten veraltet, deaktiviert oder nicht mehr aktuell sind. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Überprüfung der Aktualität des Kubernetes Collectors
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mithilfe dieses Rezepts können Kubernetes Cluster identifiziert werden, deren DII Operator oder Erfassungskomponenten veraltet, deaktiviert oder nicht mehr aktuell sind.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[prerequisites]]
+== Voraussetzungen
+
+* Die Kubernetes Collection ist im DII Tenant konfiguriert.
+* Zugriff auf Informationen zum Kubernetes Collector.
+
+
+
+
+[[tools-used]]
+== Verwendete Tools
+
+* +OperatorsManagement_getKubernetesCollectors+
+* Optional: +AcquisitionUnitsService_getAcquisitionUnits+
+* Optional: +CollectorService_getDataSources+
+
+
+
+
+[[starter-prompt]]
+== Starter-Prompt
+
+[]
+====
+Die Aktualität des DII Kubernetes Collectors wird überprüft. Cluster werden nach ihrem Gesamtstatus gruppiert, veraltete oder deaktivierte Operatoren und Komponenten identifiziert und veraltete Zeitstempel der letzten Meldung gekennzeichnet. Interne Adressen oder UUIDs werden nicht angezeigt.
+
+====
+
+
+[[agent-workflow]]
+== Agent Workflow
+
+. Auflistung der Kubernetes Collectors.
+. Jeder Cluster wird normalisiert in:
++
+** Aktuell
+** Veraltet
+** Deaktiviert
+** Unbekannt
+
+
+. Vergleich:
++
+** Operator Version
+** Version der Network Performance und Map Komponente
+** Version der Komponente „Change Analysis“
+
+
+. Der zuletzt gemeldete Zeitstempel wird in die angeforderte Zeitzone konvertiert.
+. Kennzeichnung von Clustern, die nicht innerhalb der vereinbarten Aktualitätsschwelle gemeldet haben.
+. Unterscheidung  `N/A`von einer veralteten Version:
++
+** `N/A` kann bedeuten, dass die Komponente nicht installiert, nicht aktiviert oder nicht anwendbar ist.
+
+
+. Falls die Berichterstattung veraltet ist, ist, sofern verfügbar, der Status der zugehörigen Acquisition Unit und des Collectors zu prüfen.
+. Es wird eine priorisierte Upgrade- und Untersuchungsliste zurückgegeben.
+
+
+
+
+[[interpretation]]
+== Interpretation
+
+* *Veraltet:* Mindestens eine installierte Komponente liegt hinter der von DII erwarteten Version zurück.
+* *Deaktiviert:* Die Datenerfassung ist absichtlich oder administrativ deaktiviert.
+* *Veraltete Berichterstattung:* Die Versionsdaten spiegeln möglicherweise nicht den aktuellen Zustand des Clusters wider.
+* *N/A:* Kontext erforderlich; eine automatische Klassifizierung als Fehler vermeiden.
+
+
+Das Tool meldet Versionen und den Status. Es führt keine Upgrades durch.
+
+
+
+[[suggested-output]]
+== Empfohlene Ausgabe
+
+. Clusteranzahl nach Status
+. Veraltete Cluster, sortiert nach Aktualität der Berichte
+. Versionsunterschiede auf Komponentenebene
+. Deaktivierte oder nicht verfügbare Komponenten
+. Empfohlene Schritte zur Überprüfung
+
+
+
+
+[[limits-and-privacy]]
+== Grenzen und Datenschutz
+
+* Clusternamen können sensible Daten enthalten; beim Teilen von Ergebnissen sind daher die genehmigten Verfahren zu verwenden.
+* Aus der Versionsnummer allein lässt sich nicht auf die Gefährdung durch Sicherheitslücken schließen.
+* Die Kompatibilität des Upgrades und der Prozess werden außerhalb dieses schreibgeschützten Workflows validiert.
+
+
+
+
+[[follow-up-prompts]]
+== Folgefragen
+
+[]
+====
+Welche Cluster verfügen über einen veralteten Operator und haben in der letzten Stunde keine Daten gemeldet?
+
+====
+[]
+====
+Cluster mit einer veralteten Change Analysis Komponente sind von Clustern zu trennen, bei denen diese Komponente nicht verfügbar ist.
+
+====
+[]
+====
+Bei veralteten Clustern sollte geprüft werden, ob die zugehörige DII Erfassungsinfrastruktur intakt ist.
+
+====
+link:mcp_recipe_overview.html["Zurück zu den Rezepten"]

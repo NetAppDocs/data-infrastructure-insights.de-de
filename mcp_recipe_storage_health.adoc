@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_storage_health.html 
+summary: Mit diesem Rezept lassen sich Speicherprobleme priorisieren, indem aktive Warnmeldungen, Überwachungsabsichten, Korrekturhinweise, relevante Plattformprotokolle und Objektkontext kombiniert werden. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Speicherzustand beurteilen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit diesem Rezept lassen sich Speicherprobleme priorisieren, indem aktive Warnmeldungen, Überwachungsabsichten, Korrekturhinweise, relevante Plattformprotokolle und Objektkontext kombiniert werden.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[prerequisites]]
+== Voraussetzungen
+
+* Ein Zeitraum von 30 Tagen oder weniger.
+* Optionaler Speichersystem-, Cluster-, Pool- oder Volumenbereich.
+* Zugriff auf Alarmierungs-, Überwachungs-, Protokollierungs- und Objektwerkzeuge.
+
+
+
+
+[[tools-used]]
+== Verwendete Tools
+
+* +AlertsService_getMetadata+
+* +AlertsService_queryForAlerts+
+* +AlertsService_getAlertByName+
+* +MonitorsService_getMonitorById+
+* +LogService_getLogTypes+
+* +LogService_getLogTypeMetadata+
+* +LogService_queryLogEvents+
+* +ObjectService_getObjectTypes+
+* +ObjectService_getMetadataForObjectType+
+* +ObjectService_query+
+
+
+
+
+[[starter-prompt]]
+== Starter-Prompt
+
+[]
+====
+Bewertung des Speicherzustands für die letzten 24 Stunden. Identifizierung kritischer und aktiver Warnmeldungen für Speichersysteme, Knoten, Pools und Volumes. Für die Warnmeldungen mit den größten Auswirkungen Erläuterung des Monitorzustands und der Korrekturhinweise, anschließend Prüfung der relevanten EMS- oder Speicherplattform-Protokolle zum Zeitpunkt der Auslösung. Trennung bestätigter Nachweise von wahrscheinlichen Ursachen.
+
+====
+
+
+[[agent-workflow]]
+== Agent Workflow
+
+. Alarmmetadaten werden abgerufen.
+. Gültige Felder für Schweregrad, Status, Monitor, zugehöriges Objekt und Auslösezeitpunkt.
+. Aktive speicherbezogene Warnmeldungen im angeforderten Zeitfenster abfragen.
+. Benachrichtigungen einstufen anhand folgender Kriterien:
++
+** Schwere
+** Betroffener Objekttyp
+** Anzahl der betroffenen Objekte
+** Aktualität und Wiederkehr
+** Auswirkungen auf Verfügbarkeit, Datenschutz, Leistung oder Kapazität
+
+
+. Alle Details zu den Warnmeldungen mit der höchsten Priorität werden abgerufen.
+. Abruf ihrer Monitordefinitionen und Korrekturhinweise.
+. Die Protokolltypen und der plattformnative Datenstrom, der für jede Warnung relevant ist, wie ONTAP EMS oder StorageGRID Ereignisse, werden ausgewählt.
+. Protokollmetadaten abrufen und anschließend ein kurzes Intervall um die Warnung herum abfragen.
+. Objektattribute oder Metriken abrufen, die zur Bestätigung des aktuellen Zustands erforderlich sind.
+. Eine Zustandszusammenfassung mit Nachweisen, wahrscheinlicher Ursache, Auswirkungen und nächstem Prüfschritt erstellen.
+
+
+
+
+[[interpretation]]
+== Interpretation
+
+Ein einzelnes Signal sollte nicht als vollständige Gesundheitsbeurteilung betrachtet werden:
+
+* *Warnungen* zeigen erkannte Zustände an.
+* *Monitore* erläutern die Erkennungsregel und die vorgesehene Korrekturmaßnahme.
+* *Protokolle* liefern den nativen Ereigniskontext der Plattform.
+* *Objekte und Kennzahlen* zeigen den aktuellen Bestand bzw. den gemessenen Zustand an.
+
+
+Eine aktive Warnung kann auch nach einer Änderung der zugrunde liegenden Bedingung weiterhin offen bleiben. Nach Möglichkeit sollten aktuelle Objekt- und Metrikdaten verwendet werden.
+
+
+
+[[suggested-output]]
+== Empfohlene Ausgabe
+
+Für jedes vorrangige Problem:
+
+* Betroffene Ressource
+* Schweregrad und Alarmstatus
+* Auslösezeit
+* Überwachung und Zustand
+* Bestätigende Protokolle oder Metriken
+* Bestätigte Nachweise
+* Wahrscheinliche Ursache, als Schlussfolgerung gekennzeichnet
+* Korrekturhinweise
+* Vertrauen und fehlende Nachweise
+
+
+
+
+[[limits-and-privacy]]
+== Grenzen und Datenschutz
+
+* Es empfiehlt sich, Alarm- und Protokollfenster unter 30 Tagen zu halten.
+* Schmale Protokollfenster reduzieren nicht zusammenhängende Ereignisse.
+* Unnötige UUIDs, Adressen, Annotationen und Rohdaten werden weggelassen.
+* Korrekturhinweise dienen lediglich der Information; die Befehle sind anhand der relevanten Produktdokumentation und des Änderungsprozesses zu validieren.
+
+
+
+
+[[follow-up-prompts]]
+== Folgefragen
+
+[]
+====
+Für Warnmeldungen `AL-123456` werden die Monitoranweisungen und die zugehörigen EMS-Ereignisse innerhalb von 30 Minuten vor und nach dem Auslöser angezeigt.
+
+====
+[]
+====
+Aktive Speicherwarnungen sind nach betroffenem System und Auswirkungsbereich gruppiert. Welches System benötigt zuerst Aufmerksamkeit und warum?
+
+====
+[]
+====
+Es ist zu prüfen, ob die Warnung mit der höchsten Priorität noch durch die aktuellen Objektmetriken unterstützt wird.
+
+====
+link:mcp_recipe_overview.html["Zurück zu den Rezepten"]

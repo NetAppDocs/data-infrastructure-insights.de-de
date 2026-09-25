@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: mcp_overview.html 
+summary: 'KI-Assistenten können mit Data Infrastructure Insights (DII) verbunden werden, damit sie mithilfe natürlicher Sprache Infrastrukturinventar, Telemetriedaten, Warnmeldungen und den Zustand der Datenerfassung untersuchen können.' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= DII MCP Server
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+KI-Assistenten/Agenten werden mit Data Infrastructure Insights (DII) verbunden, damit diese mithilfe natürlicher Sprache Infrastrukturinventar, Telemetriedaten, Warnmeldungen und den Zustand der Datenerfassung untersuchen können.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+Der DII MCP Server implementiert das Model Context Protocol (MCP) und stellt unterstützten KI-Clients mandantenbezogene Tools zur Verfügung. Das aktuelle Produkt Toolset ist *nur lesend*: Es ruft DII-Daten ab und analysiert sie, ändert aber weder die Infrastruktur noch DII Ressourcen.
+
+
+
+[[what-you-can-investigate]]
+== Was untersucht werden kann
+
+* *Infrastrukturinventar:* Speicher, Virtualisierung, Kubernetes, ONTAP, Azure NetApp Files, StorageGRID und zugehörige Ressourcen.
+* *Leistung und Kapazität:* Objektmetriken, gruppierte Aggregate und Zeitreihenverhalten.
+* *Protokolle und Ereignisse:* Protokolltypen ermitteln, Ereignisse suchen und Histogramme der Ereignisanzahl erstellen.
+* *Warnmeldungen:* Aktive Warnmeldungen, Definitionen von Monitoren, Schweregrade und Hinweise zur Behebung werden überprüft.
+* *Zustand der Sammlung:* Eine Überprüfung der Erfassungseinheiten, Datenquellen, unterstützten Sammlertypen und Kubernetes-Sammlerversionen ist möglich.
+* *Benachrichtigungsstatus:* Wartungsfenster, Benachrichtigungsregeln und Webhook-Zieltypen werden überprüft.
+
+
+
+
+[[choose-an-entry-point]]
+== Auswahl eines Einstiegspunkts
+
+
+
+[[connect-an-ai-client]]
+=== Verbinden eines KI-Clients
+
+Verwenden Sie link:mcp_setup.html["Einrichtung des DII MCP Server"] für Cursor, Claude Code, VS Code, Codex oder einen anderen MCP-kompatiblen Client.
+
+
+
+[[browse-available-tools]]
+=== Verfügbare Tools stehen zur Verfügung
+
+Mithilfe von link:mcp_tools_overview.html["Werkzeugreferenz"] lassen sich alle aktuellen Tools, erforderlichen Discovery-Aufrufe, Abfragelimits und benutzerseitigen Namen verstehen.
+
+
+
+[[start-with-an-operational-workflow]]
+=== Begonnen wird mit einem operativen Arbeitsablauf
+
+Verwenden Sie ein link:mcp_recipe_overview.html["Rezept"], wenn Sie das gewünschte Ergebnis bereits kennen:
+
+* Zustand der Bestandsaufnahme
+* Speicherzustand beurteilen
+* Kapazitätsrisiko identifizieren
+* Überprüfung der Aktualität des Kubernetes Collectors
+* Leistungsprobleme beheben
+* Überprüfung des Benachrichtigungsstatus
+
+
+
+
+[[how-dii-mcp-queries-work]]
+== Wie DII MCP Abfragen funktionieren
+
+Viele DII Ressourcen verfügen über dynamische Schemata. Eine zuverlässige Untersuchung folgt einer entdeckungsorientierten Vorgehensweise:
+
+. Verfügbare Objekt- oder Protokolltypen werden aufgelistet.
+. Abrufen der Metadaten für den ausgewählten Typ.
+. Es sind ausschließlich gültige Attribute und Metriken aus diesen Metadaten zu verwenden.
+. Abfrage eines begrenzten Zeitraums.
+. Das Ergebnis lässt sich mit Filtern, Gruppierungen, Sortierungen oder Paginierung verfeinern.
+
+
+Details sind unter link:mcp_concepts.html["Konzepte und Datenmodell"] verfügbar.
+
+
+
+[[important-limitations]]
+== Wichtige Einschränkungen
+
+* Alle aktuell verfügbaren Produkttools sind schreibgeschützt.
+* Objekt-, Leistungs- und Protokollabfragen erzwingen begrenzte Zeitfenster. Zeitfenster von maximal 30 Tagen sind zu verwenden, sofern auf der jeweiligen Tool-Seite kein kürzeres Limit explizit angegeben ist.
+* Die Abfragefelder müssen mit den Metadaten übereinstimmen, die für den ausgewählten Ressourcentyp zurückgegeben werden.
+* Große Ergebnisse sind paginiert oder begrenzt.
+* Die Verfügbarkeit der Tools und die zurückgegebenen Daten hängen von den Collectors des Mandanten, den aktivierten Funktionen und den Benutzerberechtigungen ab.
+* Vollständige Webhook-Endpunktadressen dürfen nicht angefordert oder reproduziert werden. Siehe link:mcp_security.html["Sicherheit und Datenschutz"].
+
+
+
+
+[[next-steps]]
+== Nächste Schritte
+
+. link:mcp_setup.html["Verbindung Ihres Clients"].
+. Sie können link:mcp_recipe_environment_inventory.html["Rezept für Umgebungsinventar"] ausprobieren.
+. Prüfen Sie link:mcp_troubleshooting.html["Fehlerbehebung"], wenn eine Anfrage abgelehnt wird oder unerwartete Ergebnisse liefert.
+

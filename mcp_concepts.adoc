@@ -1,0 +1,161 @@
+---
+sidebar: sidebar 
+permalink: mcp_concepts.html 
+summary: Das Verständnis dieser Konzepte hilft einem KI-Assistenten dabei, die richtigen Werkzeuge auszuwählen und gültige Abfragen zu formulieren. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= DII MCP Konzepte und Datenmodell
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Das Verständnis dieser Konzepte hilft einem KI-Assistenten dabei, die richtigen Werkzeuge auszuwählen und gültige Abfragen zu formulieren.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[tenant-scope]]
+== Tenant-Umfang
+
+Jede DII MCP Anfrage wird innerhalb des DII Mandanten und der Berechtigungen des authentifizierten Benutzers ausgeführt. Ein Tool kann nur Daten zurückgeben, die in diesem Mandanten vorhanden und für diese Identität sichtbar sind.
+
+
+
+[[acquisition-units]]
+== Erfassungseinheiten
+
+Eine Erfassungseinheit (AU) ist ein per Remote-Zugriff installierter Agent, der Datenquellen abfragt und Telemetriedaten an DII meldet. AU-Datensätze umfassen den Verbindungsstatus, die Aktualität der Berichterstattung, das Betriebssystem, die Version und die Anzahl der zugewiesenen Datenquellen.
+
+Verbindungsaufbau und Berichterstellung sind unterschiedliche Signale. Beispielsweise kann eine AU eine Verbindung akzeptieren, ohne dass eine erfolgreiche Berichterstellungsverlauf vorliegt. Sowohl der Status als auch die Berichterstellung  `lastReported` sind zu bewerten.
+
+
+
+[[data-sources]]
+== Datenquellen
+
+Eine Datenquelle, auch Datensammler genannt, ist eine konfigurierte Verbindung zu einem Infrastruktursystem wie einem Speichersystem, einem Switch, einem Hypervisor oder einem Cloud-Dienst.
+
+Die Listenoperation wird für Inventar und Status verwendet. Eine bestimmte Datenquelle wird abgerufen, wenn Konfigurationsdetails wie Erfassungspakete, Abfrageintervalle oder aktuelle Aktivitäten benötigt werden.
+
+Unterstützte Datenquellentypen beschreiben den umfassenderen Katalog der DII Kollektoren. Sie sind nicht identisch mit den im aktuellen Mandanten konfigurierten Kollektoren.
+
+
+
+[[objects]]
+== Objekte
+
+Objekte sind normalisierte Infrastrukturelemente wie Speichersysteme, Pools, Volumes, Hosts, virtuelle Maschinen, Kubernetes-Workloads und produktspezifische Ressourcen.
+
+Objekttypen sind dynamisch. Immer:
+
+. Objekttypen werden aufgelistet.
+. Wählen Sie den genauen Typ aus.
+. Metadaten für diesen Typ werden abgerufen.
+. Es werden nur die in den Metadaten deklarierten Attribute und Metriken abgefragt.
+
+
+
+
+[[attributes-and-metrics]]
+=== Attribute und Metriken
+
+* *Attribute* beschreiben Identität, Konfiguration, Besitzverhältnisse, Bezeichnungen oder Beziehungen.
+* *Metriken* sind zeitlich veränderliche Messgrößen wie Kapazität, Latenz, Durchsatz oder Auslastung.
+* *Gruppierbare Attribute* können eine Aggregatabfrage segmentieren.
+
+
+Metrikfilter werden anhand von Rohmetrikwerten ausgewertet, bevor die angeforderte Zeitfensteraggregation angewendet wird.
+
+
+
+[[logs]]
+== Protokolle
+
+Log-Typen stellen Ereignisströme wie ONTAP EMS, Kubernetes-Ereignisse, StorageGRID-Ereignisse, VMware-Ereignisse und DII Plattformereignisse dar.
+
+Auch bei der Protokollabfrage stehen Metadaten an erster Stelle:
+
+. Liste der verfügbaren Protokolltypen.
+. Abrufen der Metadaten für den ausgewählten Typ.
+. Es sollten nur gültige Attribute angefordert werden.
+. Ereignisse suchen oder ein Histogramm der Ereignisanzahl erstellen.
+
+
+
+
+[[monitors-and-alerts]]
+== Überwachung und Warnmeldungen
+
+Ein Monitor definiert eine Bedingung, die DII auswertet. Eine Warnung ist ein spezifisches Monitorergebnis für ein oder mehrere zugehörige Objekte.
+
+* Mit Überwachungstools lassen sich Absicht, Status, Objekttyp und Korrekturhinweise prüfen.
+* Vor dem Abfragen von Warnmeldungen sollten die Metadaten der Warnmeldungen verwendet werden.
+* Verwenden Sie einen Alert-Namen wie  `AL-123456` oder seine UUID, um einen Alert abzurufen.
+
+
+Alarmstatus und Schweregrad sind unterschiedliche Dimensionen. Bei der Priorisierung der Ergebnisse sind beide zu berücksichtigen.
+
+
+
+[[maintenance-windows]]
+== Wartungsfenster
+
+Ein Wartungsfenster unterdrückt Warnmeldungen, die während eines definierten Zeitraums einem Ausdruck entsprechen. Ein leeres erfolgreiches Ergebnis bedeutet, dass keine passenden Fenster existieren; es ist kein Hinweis auf fehlende Daten.
+
+
+
+[[notification-rules-and-targets]]
+== Benachrichtigungsregeln und Ziele
+
+Benachrichtigungsregeln leiten übereinstimmende Warnmeldungen weiter. Zu den Zielen können Slack, Microsoft Teams, PagerDuty oder benutzerdefinierte HTTP-Integrationen gehören.
+
+Webhook-Adressen können vertrauliche Informationen enthalten. Für Berichte werden nur der Zielname, der Engine-Typ und der Status angefordert. Die vollständige Adresse darf niemals wiedergegeben werden.
+
+
+
+[[metadata-first-query-flow]]
+== Metadaten-zentrierter Abfrageablauf
+
+[source, text]
+----
+Discover types
+    → retrieve type metadata
+        → select valid attributes and metrics
+            → query a bounded time range
+                → paginate, group, or retrieve time series
+----
+
+
+[[filters]]
+== Filter
+
+Die DII-Abfragetools unterstützen Bedingungen und verschachtelte logische Operatoren:
+
+* Vergleiche: `EQ`, `NE`, `GT`, `LT`, `GE`, `LE`
+* Musterabgleich: `WILDCARD`
+* Präsenz: `EXISTS`
+* Logik: `and`, `or`, `not`
+
+
+Verwenden Sie den exakten Feldnamen und den kompatiblen Werttyp, der in den Metadaten deklariert ist. Bei `EXISTS` wird ein Vergleichswert weggelassen, sofern dies von der Version des verbundenen Servers unterstützt wird.
+
+
+
+[[time-ranges-and-pagination]]
+== Zeitbereiche und Paginierung
+
+* ISO-8601-Zeitstempel mit expliziten Offsets oder `Z` verwenden.
+* Geben Sie gegebenenfalls eine IANA-Zeitzone wie +America/New_York+ oder  `UTC` an.
+* Abfragezeiträume sollten auf 30 Tage oder weniger begrenzt sein, es sei denn, ein Tool dokumentiert eine kleinere Grenze.
+* Objekt- und Alarmabfragen verwenden im Allgemeinen `limit` und `offset`.
+* Protokollereignisabfragen verwenden einen zurückgegebenen Cursor für die nächste Seite.
+
+
+Informationen zu Fehlern und Wiederherstellungsschritten finden Sie unter link:mcp_troubleshooting.html["Fehlerbehebung"].

@@ -17,6 +17,4 @@ keywords: dwh, data warehouse, schema, reporting
 Diese Schematabellen dienen hier als Referenz für Data Infrastructure Insights Reporting.
 
 
-NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights verfügbarlink:concept_subscribing_to_cloud_insights.html["Premium Edition"] .
-
-link:reporting_schema_capacity.html["Schema-Tabellen - Kapazität"] link:reporting_schema_capacity_efficiency.html["Schema Tables – Kapazitätseffizienz"] link:reporting_schema_fs_util.html["Schematabellen – Dateisystemauslastung"] link:reporting_schema_inventory.html["Schema-Tabellen - Inventar"] link:reporting_schema_performance.html["Schema-Tabellen - Performance"] link:reporting_schema_ports.html["Schema-Tabellen - Ports"]
+NOTE: Die Berichtsfunktion ist in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"] verfügbar. link:reporting_schema_capacity.html["Schema-Tabellen - Kapazität"] link:reporting_schema_capacity_efficiency.html["Schema Tables – Kapazitätseffizienz"] link:reporting_schema_fs_util.html["Schematabellen – Dateisystemauslastung"] link:reporting_schema_inventory.html["Schema-Tabellen - Inventar"] link:reporting_schema_performance.html["Schema-Tabellen - Performance"] link:reporting_schema_ports.html["Schema-Tabellen - Ports"]

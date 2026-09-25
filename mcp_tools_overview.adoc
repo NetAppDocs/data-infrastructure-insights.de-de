@@ -1,0 +1,466 @@
+---
+sidebar: sidebar 
+permalink: mcp_tools_overview.html 
+summary: 'Der DII MCP Server stellt derzeit 26 schreibgeschützte Produkttools in neun Domänen bereit. Ein separates  `mcp_auth`Hilfsprogramm kann angezeigt werden, wenn sich der verbundene Client authentifizieren muss.' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Referenz für das DII MCP Tool
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Der DII MCP Server stellt derzeit 26 schreibgeschützte Produkttools in neun Domänen bereit. Ein separater +mcp_auth+ Helfer kann angezeigt werden, wenn der verbundene Client sich authentifizieren muss.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+Die Verfügbarkeit des Tools und die Ergebnisse hängen vom authentifizierten Mandanten, den aktivierten DII-Funktionen, den konfigurierten Sammlern und den Benutzerberechtigungen ab.
+
+
+
+[[query-conventions]]
+== Abfragekonventionen
+
+* Typen und Metadaten können ermittelt werden, bevor dynamische Felder abgefragt werden.
+* Es sind die exakten, die Groß- und Kleinschreibung berücksichtigenden Attribut- und Metriknamen zu verwenden, die von den Metadaten zurückgegeben werden.
+* Gegebenenfalls sind ISO-8601-Zeitstempel und IANA-Zeitzonennamen zu verwenden.
+* Die Abfragezeiträume sollten auf maximal 30 Tage begrenzt sein.
+* Verwenden Sie  `limit` und  `offset` für die Objekt- und Warnungspaginierung.
+* Der zurückgegebene Cursor wird für die Paginierung der Log-Ereignisse verwendet.
+* Vollständige Webhook-Endpunktadressen werden nicht angezeigt.
+
+
+
+
+[[acquisition-units]]
+== Erfassungseinheiten
+
+
+
+[[list-acquisition-units]]
+=== Akquisitionseinheiten auflisten
+
++AcquisitionUnitsService_getAcquisitionUnits+
+
+Gibt alle Erfassungseinheiten mit Verbindungsstatus, Aktualität der Berichterstattung, Betriebssystem, Version, IP-Adresse und Anzahl der zugewiesenen Datenquellen zurück.
+
+Beispiel:
+
+[]
+====
+Erfassungseinheiten auflisten. Verbundene, ausgefallene und nie gemeldete Einheiten zusammenfassen, ohne IP-Adressen oder UUIDs anzuzeigen.
+
+====
+
+
+[[get-an-acquisition-unit]]
+=== Eine Akquisitionseinheit beziehen
+
++AcquisitionUnitsService_getAcquisitionUnitByUuid+
+
+Ruft die vollständigen Details für eine Erfassungseinheit ab. Wenn der Benutzer einen Namen angibt, werden zuerst die Erfassungseinheiten aufgelistet, um die UUID zu ermitteln.
+
+Erforderliche Eingabe: `uuid`
+
+
+
+[[alerts]]
+== Warnungen
+
+
+
+[[get-alert-metadata]]
+=== Abrufen von Alarmmetadaten
+
++AlertsService_getMetadata+
+
+Gibt gültige Feldnamen und Datentypen für Benachrichtigungen zurück. Dies sollte vor dem Abfragen von Benachrichtigungen aufgerufen werden.
+
+
+
+[[query-alerts]]
+=== Warnungen abfragen
+
++AlertsService_queryForAlerts+
+
+Fragt aktive oder inaktive Warnmeldungen mit ausgewählten Attributen, Filtern, Sortierung, Zeitgrenzen und Offset-Paginierung ab.
+
+Erforderliche Eingaben:
+
+* `active`
+* `attributeNames`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+Optionale Eingaben sind `filter`, `sortField`, `sortAscending`, `limit` und `offset`. `limit` ist 1-500; `offset` ist 0-1000. Der Zeitraum sollte unter 30 Tagen liegen.
+
+Beispiel:
+
+[]
+====
+Kritische aktive Speicherwarnungen der letzten sieben Tage werden abgerufen. Zurückgegeben werden Warnungs-ID, Monitorname, Schweregrad, Status und der zugehörige Speichername.
+
+====
+
+
+[[get-an-alert-by-name]]
+=== Abrufen einer Warnmeldung nach Name
+
++AlertsService_getAlertByName+
+
+Ruft eine Warnung anhand einer Warnungs-ID im `AL-123456` Format ab.
+
+Erforderliche Eingabe: `name`
+
+
+
+[[get-an-alert-by-uuid]]
+=== Abrufen einer Warnmeldung nach UUID
+
++AlertsService_getAlertByUUID+
+
+Ruft eine Warnmeldung anhand ihrer UUID ab.
+
+Erforderliche Eingabe: `uuid`
+
+
+
+[[data-collectors]]
+== Datensammler
+
+
+
+[[list-data-sources]]
+=== Datenquellen auflisten
+
++CollectorService_getDataSources+
+
+Listet konfigurierte Datensammler mit Name, Status, Hersteller, Modell, Erfassungseinheit, Version und letzter erfolgreicher Erfassung auf. Optional kann nach einer AU UUID gefiltert werden.
+
+Beispiel:
+
+[]
+====
+Konfigurierte Datenquellen nach Status und Anbieter gruppiert. Fehlgeschlagene und veraltete erfolgreiche Datenerfassungen hervorgehoben.
+
+====
+
+
+[[get-a-data-source]]
+=== Datenquelle abrufen
+
++CollectorService_getDataSourceById+
+
+Ruft einen Collector mit Konfiguration, Collection Package Status, Abfrageaktivität, erkannten Geräten, Patch-Informationen und Acquisition Unit Kontext ab.
+
+Erforderliche Eingabe: `id`
+
+Dieses Tool eignet sich für Abfrageintervalle, konfigurierte Metriken, Erfassungseinstellungen oder zur Untersuchung von Fehlern.
+
+
+
+[[list-supported-data-source-types]]
+=== Unterstützte Datenquellentypen auflisten
+
++CollectorService_getDataSourceTypes+
+
+Listet die vom DII Collector Katalog unterstützten Produkttypen auf. Dies ist keine Liste der im Mandanten konfigurierten Collectors.
+
+
+
+[[logs]]
+== Protokolle
+
+
+
+[[list-log-types]]
+=== Protokolltypen auflisten
+
++LogService_getLogTypes+
+
+Listet die im Mandanten aktuell verfügbaren Protokolltypen auf.
+
+
+
+[[get-log-type-metadata]]
+=== Metadaten des Protokolltyps abrufen
+
++LogService_getLogTypeMetadata+
+
+Gibt gültige Attribute für einen Protokolltyp zurück. Vor der Suche oder Gruppierung von Ereignissen sollte diese Funktion aufgerufen werden.
+
+Erforderliche Eingabe: `type`
+
+
+
+[[query-log-events]]
+=== Abfrageprotokollereignisse
+
++LogService_queryLogEvents+
+
+Gibt die Protokollereignisse in absteigender Reihenfolge der Zeitstempel zurück.
+
+Erforderliche Eingaben:
+
+* `type`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+Optionale Eingaben sind `attributes`, `filter`, `limit` und `cursor`. `limit` liegt zwischen 1 und 200. Das Ereignisfenster darf 30 Tage nicht überschreiten. Der Cursor der vorherigen Antwort ist zu übergeben, um die nächste Seite abzurufen.
+
+
+
+[[count-log-events-over-time]]
+=== Anzahl der Protokollereignisse im Zeitverlauf
+
++LogService_queryLogEventsCountHistogram+
+
+Gibt Zeitintervalle fester Größe mit Ereignisanzahlen zurück. Optional kann jedes Intervall nach einem gültigen gruppierbaren Attribut gruppiert werden; gruppierte Ergebnisse geben die obersten Segmente und ein +__other__+ Segment zurück.
+
+Erforderliche Eingaben:
+
+* `type`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+Optionale Eingaben: `filter`, `groupBy`
+
+
+
+[[maintenance-windows]]
+== Wartungsfenster
+
+
+
+[[list-maintenance-windows]]
+=== Wartungsfenster auflisten
+
++MaintenanceWindowService_getMaintenanceWindows+
+
+Listet aktive, nicht abgelaufene Alarmunterdrückungsfenster auf. Mit  `includeExpired` auf  `true` werden auch abgelaufene Fenster einbezogen.
+
+Eine erfolgreiche leere Antwort bedeutet, dass keine passenden Wartungsfenster existieren.
+
+
+
+[[get-a-maintenance-window]]
+=== Ein Wartungsfenster erhalten
+
++MaintenanceWindowService_getMaintenanceWindowById+
+
+Ruft ein Wartungsfenster ab.
+
+Erforderliche Eingabe: `id`
+
+
+
+[[monitors]]
+== Monitore
+
+
+
+[[list-monitors]]
+=== Monitore auflisten
+
++MonitorsService_queryMonitors+
+
+Listet DII Monitore auf. Mit  `isSystem` werden nur Systemmonitore zurückgegeben, Systemmonitore ausgeschlossen oder alle Monitore zurückgegeben.
+
+
+
+[[get-a-monitor]]
+=== Einen Monitor erhalten
+
++MonitorsService_getMonitorById+
+
+Ruft einen Monitor einschließlich seiner Beschreibung und, falls verfügbar, Korrekturhinweisen ab.
+
+Erforderliche Eingabe: `id`
+
+
+
+[[notifications]]
+== Benachrichtigungen
+
+
+
+[[list-notification-rules]]
+=== Benachrichtigungsregeln auflisten
+
++NotificationService_getNotificationRules+
+
+Listet Regeln auf, die übereinstimmende Warnmeldungen an Benachrichtigungsziele weiterleiten. Eine erfolgreiche leere Antwort bedeutet, dass keine übereinstimmenden Regeln existieren.
+
+
+
+[[get-a-notification-rule]]
+=== Benachrichtigungsregel abrufen
+
++NotificationService_getNotificationRuleById+
+
+Eine Routing-Regel wird abgerufen.
+
+Erforderliche Eingabe: `id`
+
+
+
+[[list-webhook-targets]]
+=== Webhook-Ziele auflisten
+
++NotificationService_getWebhooks+
+
+Listet Metadaten für Webhook-Ziele von Slack, Microsoft Teams, Discord, PagerDuty und benutzerdefinierten HTTP-Integrationen auf. Optional kann nach durch Kommas getrennten Engine-Typen gefiltert werden.
+
+Sicherheitsanforderung: Vollständige Endpunktadressen können Anmeldeinformationen enthalten. Anwendungen und Agenten müssen das Adressfeld in den angezeigten oder weitergeleiteten Ergebnissen auslassen oder unkenntlich machen.
+
+Sicheres Beispiel:
+
+[]
+====
+Webhook-Ziele nach Engine-Typ zählen und nur Zielnamen und Status auflisten. Endpunktadressen nicht zurückgeben.
+
+====
+
+
+[[objects-and-metrics]]
+== Objekte und Metriken
+
+
+
+[[list-object-types]]
+=== Objekttypen auflisten
+
++ObjectService_getObjectTypes+
+
+Listet die im Mandanten aktuell verfügbaren Objekttypen auf.
+
+
+
+[[get-object-metadata]]
+=== Objektmetadaten abrufen
+
++ObjectService_getMetadataForObjectType+
+
+Gibt gültige Attribute, Metriken, Typen und Gruppierungsfunktionen für einen Objekttyp zurück.
+
+Erforderliche Eingabe: `objectType`
+
+
+
+[[query-objects]]
+=== Abfrageobjekte
+
++ObjectService_query+
+
+Ruft Objekte, ausgewählte Attribute und optionale Metriken ab. Filter, die sich auf Metriken beziehen, werden vor der Zeitfensteraggregation auf die Rohwerte angewendet.
+
+Erforderliche Eingaben:
+
+* `objectType`
+* `attributeNames`
+
+
+Optionale Eingaben umfassen `metricNames`, `filter`, `sortFieldName`, `isSortAscending`, `fromTime`, `toTime`, `aggregateFunctions`, `limit` und `offset`.
+
+Unterstützte Abfrageaggregationen: `MAX`, `MIN`, `AVG`, `SUM`, `LAST`. `limit` ist 1-500. Wenn keine Zeitgrenzen angegeben werden, verwendet das Tool standardmäßig ein aktuelles Drei-Stunden-Fenster.
+
+
+
+[[group-objects]]
+=== Gruppenobjekte
+
++ObjectService_groupObjects+
+
+Objekte werden nach einem gültigen gruppierbaren Attribut gruppiert, und ausgewählte Metriken werden aggregiert. Filter werden vor der Aggregation auf die Rohwerte angewendet.
+
+Erforderliche Eingaben:
+
+* `objectType`
+* `groupByAttribute`
+* `metricNames`
+
+
+Optionale Eingaben umfassen `aggregateFunctions`, `filter`, Sortierung, Zeitgrenzen, `limit` und `offset`.
+
+Unterstützte Gruppenaggregationen: `MAX`, `MIN`, `AVG`, `SUM`, `FIRST`, `CHANGE`, +CHANGE_RATIO+.
+
+
+
+[[query-performance-time-series]]
+=== Zeitreihen zur Abfrageleistung
+
++ObjectService_queryPerformanceMetricsForObjects+
+
+Gibt Zeitreihendaten in Buckets für eine Metrik und übereinstimmende Objekte zurück.
+
+Erforderliche Eingaben:
+
+* `objectType`
+* `metricName`
+* `fromTime`
+* `toTime`
+* `timezone`
+
+
+Optionale Eingaben umfassen `filter`, `aggregationFunction`, `limit` und `isSortAscending`. `limit` steuert die Anzahl der zurückgegebenen Serien und muss 1-50 sein.
+
+Unterstützte Bucket-Aggregationen: `MAX`, `MIN`, `AVG`, `SUM`, `FIRST`, `CHANGE`, +CHANGE_RATIO+.
+
+
+
+[[kubernetes-collectors]]
+== Kubernetes Kollektoren
+
+
+
+[[list-kubernetes-collectors]]
+=== Liste der Kubernetes Kollektoren
+
++OperatorsManagement_getKubernetesCollectors+
+
+Der Clustername, der allgemeine aktuelle Status, die Operator-Version, die Version der Komponente Network Performance and Map, die Version der Komponente Change Analysis und der zuletzt gemeldete Zeitstempel werden zurückgegeben.
+
+Beispiel:
+
+[]
+====
+Veraltete Kubernetes Collector und die Komponenten, die Aufmerksamkeit erfordern, werden zusammengefasst.
+
+====
+
+
+[[filter-operators]]
+== Filteroperatoren
+
+Warnungs-, Protokoll- und Objektabfragen unterstützen verschachtelte Bedingungen:
+
+* `EQ`, `NE`
+* `GT`, `LT`, `GE`, `LE`
+* `WILDCARD` unter Verwendung von `++*++` und `?`
+* `EXISTS`
+* Verschachtelt `and`, `or` und `not`
+
+
+Der verbundene Server validiert die Felder anhand der Metadaten. Wenn eine Abfrage abgelehnt wird, aktualisieren Sie die relevanten Metadaten und erstellen den Filter neu.
+
+
+
+[[related-documentation]]
+== Zugehörige Dokumentation
+
+* link:mcp_overview.html["DII MCP Übersicht"]
+* link:mcp_concepts.html["Konzepte und Datenmodell"]
+* link:mcp_recipe_overview.html["Betriebsverfahren"]
+* link:mcp_troubleshooting.html["Fehlerbehebung"]
+

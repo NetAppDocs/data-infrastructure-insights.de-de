@@ -1,0 +1,162 @@
+---
+sidebar: sidebar 
+permalink: mcp_troubleshooting.html 
+summary: Gängige Lösungen für Probleme mit der MCP Serververbindung, Authentifizierungsfehler, Abfrageablehnungen und API-Ratenbegrenzung. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Fehlerbehebung bei DII MCP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[the-server-does-not-connect]]
+== Der Server stellt keine Verbindung her
+
+Prüfung:
+
+. Die konfigurierte URL entspricht dem für Ihre DII Umgebung bereitgestellten Endpunkt.
+. Der Client unterstützt Remote-HTTP-MCP-Server und den erforderlichen Authentifizierungsablauf.
+. Authentifizierung erfolgreich abgeschlossen.
+. Die Netzwerkrichtlinie erlaubt den Zugriff auf den Endpunkt.
+. Die verbundene Identität kann auf den DII Mandanten zugreifen.
+
+
+Der MCP Server sollte nach der Änderung der Clientkonfiguration neu gestartet oder neu geladen werden.
+
+
+
+[[authentication-is-required]]
+== Authentifizierung ist erforderlich
+
+Der Anmeldevorgang des Clients ist abzuschließen, danach ist die ursprüngliche Anfrage erneut zu senden. Falls eine Dienstidentität verwendet wird, ist zu prüfen, ob ihre Anmeldedaten gültig sind und über einen genehmigten Secret-Mechanismus gespeichert werden.
+
+Eine bestätigte Autorisierungsverweigerung sollte nicht wiederholt erneut versucht werden. Ein DII-Administrator sollte die Mandanten- und Ressourcenberechtigungen des Benutzers überprüfen.
+
+
+
+[[an-object-query-rejects-a-field]]
+== Eine Objektabfrage weist ein Feld zurück
+
+Objektattribute und Metriken variieren je nach Typ.
+
+. +ObjectService_getObjectTypes+ wird aufgerufen.
+. Bestätigen Sie den genauen Objekttyp.
+. +ObjectService_getMetadataForObjectType+ wird aufgerufen.
+. Die Feldnamen sind exakt aus den Metadaten zu übernehmen.
+. Stellen Sie sicher, dass Werttyp und Aggregationsfunktion kompatibel sind.
+
+
+Nur Attribute, die als gruppierbar gekennzeichnet sind, können zum Gruppieren von Objekten verwendet werden.
+
+
+
+[[a-log-query-rejects-an-attribute]]
+== Eine Protokollabfrage lehnt ein Attribut ab
+
+. +LogService_getLogTypes+ wird aufgerufen.
+. Der genaue Protokolltyp ist zu bestätigen.
+. +LogService_getLogTypeMetadata+ wird aufgerufen.
+. Es sollten nur die Attribute verwendet werden, die für diesen Protokolltyp zurückgegeben werden.
+
+
+Protokollereignisabfragen verwenden cursorbasierte Paginierung. Der von der vorherigen Seite zurückgegebene Cursor wird anstelle eines Offsets übergeben.
+
+
+
+[[an-alert-query-rejects-a-field]]
+== Eine Alert-Abfrage lehnt ein Feld ab
+
++AlertsService_getMetadata+ sollte unmittelbar vor dem Erstellen der Abfrage aufgerufen werden. Alarmmetadaten können umfangreich und mandantenabhängig sein; daher sind exakte Feldnamen zu verwenden.
+
+
+
+[[the-time-range-is-invalid]]
+== Der angegebene Zeitraum ist ungültig
+
+* Sicherstellen, dass `fromTime` kleiner oder gleich `toTime` ist.
+* ISO-8601-Zeitstempel mit einem Offset oder `Z` verwenden.
+* Der angeforderte Zeitraum sollte unter 30 Tagen liegen.
+* Längere Untersuchungen in aufeinanderfolgende, sich nicht überschneidende Zeiträume unterteilen und die Ergebnisse zusammenfassen.
+* Eine gültige IANA-Zeitzone ist anzugeben, wenn das Tool dies erfordert.
+
+
+Die Laufzeitdurchsetzung ist maßgeblich, wenn sie strenger ist als eine clientseitig zwischengespeicherte Werkzeugbeschreibung.
+
+
+
+[[a-query-returns-too-many-results]]
+== Eine Abfrage liefert zu viele Ergebnisse
+
+* Fügen Sie einen gültigen Filter hinzu.
+* Der Zeitraum kann verkürzt werden.
+* Sortierung nach der relevantesten Kennzahl.
+* Verringern Sie die Ergebnisgrenze.
+* Gruppierungen oder ein Histogramm sind geeignet, wenn einzelne Datensätze nicht erforderlich sind.
+* Setzen Sie nur dann mit `offset` oder einem Protokollcursor fort, wenn weitere Details benötigt werden.
+
+
+
+
+[[a-successful-call-returns-no-rows]]
+== Ein erfolgreicher Aufruf liefert keine Zeilen zurück
+
+Ein leeres Ergebnis ist oft eine gültige Antwort. Es kann Folgendes bedeuten:
+
+* Keine Ressourcen entsprechen dem Filter.
+* Im ausgewählten Zeitraum sind keine Ereignisse aufgetreten.
+* Es sind keine Wartungsfenster oder Benachrichtigungsregeln konfiguriert.
+* Der ausgewählte Datentyp wird von den Datensammlern des Mandanten nicht erfasst.
+
+
+Ein erfolgreiches leeres Ergebnis sollte nicht als fehlende Daten beschrieben werden, es sei denn, andere Anhaltspunkte deuten auf ein Problem bei der Datenerfassung hin.
+
+
+
+[[an-acquisition-unit-is-connected-but-has-never-reported]]
+== Eine Akquisitionseinheit ist angeschlossen, hat aber noch nie Daten gemeldet
+
+Verbindungsstatus und erfolgreiche Berichterstellung sind getrennt. Folgendes ist zu prüfen:
+
+* `lastReported`
+* Anzahl der zugewiesenen Datenquellen
+* Status der Datenquellenerfassung
+* AU Host-Konnektivität und Version
+* Abfrageaktivität für eine zugewiesene Datenquelle
+
+
+
+
+[[a-collector-is-failed]]
+== Ein Collector ist ausgefallen
+
++CollectorService_getDataSourceById+ wird für den betroffenen Collector verwendet. Eine Überprüfung der letzten Abfrageaktivitäten, der Informationen zu aktiven Patches, des Paketstatus, der Konfiguration und des Zeitpunkts der letzten erfolgreichen Datenerfassung ist möglich. Die Anzeige von Anmeldeinformationen oder privaten Konfigurationswerten sollte vermieden werden.
+
+
+
+[[webhook-results-include-complete-addresses]]
+== Die Ergebnisse des Webhooks enthalten vollständige Adressen
+
+Die Werte nicht wiederholen. Es sind nur Zielnamen, Integrationstypen, Anzahlen und Status zusammenzufassen. Es ist link:mcp_security.html["Sicherheit und Datenschutz"] zu befolgen, wenn geheimes Material angezeigt oder weitergegeben wurde.
+
+
+
+[[the-ai-assistant-selected-the-wrong-tool]]
+== Der KI-Assistent hat das falsche Werkzeug ausgewählt
+
+Verwenden Sie eine präzisere Aufforderung:
+
+[]
+====
+Zuerst werden die verfügbaren Objekttypen aufgelistet. Anschließend werden die Metadaten für den ausgewählten Typ abgerufen. Danach werden nur gültige Felder abgefragt, und es wird erläutert, welche DII Tools verwendet wurden.
+
+====
+Bei allgemeinen Untersuchungen beginnt man mit einem link:mcp_recipe_overview.html["Betriebsanleitung"].

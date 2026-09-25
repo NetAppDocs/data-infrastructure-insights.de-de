@@ -1,0 +1,154 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_capacity_risk.html 
+summary: Mit diesem Rezept lassen sich Speicherpools oder gleichwertige Kapazitätsbereiche identifizieren, die an ihre Auslastungsgrenzen stoßen, und potenzielle Kandidaten für eine Neuausrichtung finden. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Kapazitätsrisiko identifizieren
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit diesem Rezept lassen sich Speicherpools oder gleichwertige Kapazitätsbereiche identifizieren, die an ihre Auslastungsgrenzen stoßen, und potenzielle Kandidaten für eine Neuausrichtung finden.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[prerequisites]]
+== Voraussetzungen
+
+* Ein Speicherbereich oder eine Berechtigung zur Überprüfung aller sichtbaren Speicherpools.
+* Ein Betrachtungszeitraum von 30 Tagen oder weniger.
+* Vereinbarung über organisatorische Warn- und kritische Schwellenwerte.
+
+
+
+
+[[tools-used]]
+== Verwendete Tools
+
+* +ObjectService_getObjectTypes+
+* +ObjectService_getMetadataForObjectType+
+* +ObjectService_query+
+* +ObjectService_groupObjects+
+* +ObjectService_queryPerformanceMetricsForObjects+
+* +AlertsService_getMetadata+
+* +AlertsService_queryForAlerts+
+
+
+
+
+[[starter-prompt]]
+== Starter-Prompt
+
+[]
+====
+Bewertung des Speicherkapazitätsrisikos über die letzten 30 Tage. Ermittlung des korrekten Speicherpool Objekttyps und der Metadaten, anschließend Einstufung der Pools anhand von Signalen zum Verhältnis der belegten zur verfügbaren Kapazität, zur freien Kapazität, zum Wachstum und zur Zeit bis zur vollständigen Belegung. Identifizierung kritischer Pools, Warnpools und Pools auf der Beobachtungsliste sowie Vorschlag evidenzbasierter Kandidaten für eine Neuausrichtung. Angabe der verwendeten Schwellenwerte und Aggregationsfunktionen.
+
+====
+
+
+[[agent-workflow]]
+== Agent Workflow
+
+. Die Objekttypen werden aufgelistet, und der entsprechende normalisierte oder produktspezifische Pooltyp wird ausgewählt.
+. Metadaten werden abgerufen.
+. Folgende Elemente sind gültig:
++
+** Pool- und Speichersystemnamen
+** Kennzahlen für Gesamtkapazität, genutzte und freie Kapazität
+** Kennzahl für das Nutzungsverhältnis
+** Zeit bis zur vollständigen Auslastung oder Prognosekennzahl
+** Gruppierbare Speicher-, Tier-, Standort- oder Servicelevelattribute
+
+
+. Abfrage einer aktuellen Rangfolge-Momentaufnahme unter Verwendung kompatibler Aggregationen.
+. Zeitreihen für wachstumssensitive Kennzahlen über den angeforderten Betrachtungszeitraum werden abgerufen.
+. Sofern unterstützt, wird die Kapazität nach Speichersystem, Ebene oder Standort gruppiert.
+. Aktive kapazitätsbezogene Warnmeldungen werden zur Bestätigung abgefragt.
+. Die Klassifizierung des Risikos erfolgt anhand der vereinbarten Schwellenwerte.
+. Potenzielle Quellen und Ziele für die Umverteilung von Ressourcen werden anhand von Kapazitäts- und betrieblichen Einschränkungen ermittelt.
+
+
+
+
+[[example-risk-model]]
+== Beispiel eines Risikomodells
+
+Verwenden Sie die Mandantenrichtlinie, sofern verfügbar. Andernfalls ist das Folgende als Beispiel zu kennzeichnen:
+
+* *Kritisch:* Nutzungsverhältnis bei oder über 90 % oder Zeit bis zur vollständigen Auslastung unter 30 Tagen
+* *Warnung:* Verhältnis der genutzten Kapazität bei oder über 80 % oder Zeit bis zur vollständigen Auslastung unter 90 Tagen
+* *Ansehen:* kontinuierlich positives Wachstum mit einer Zeit bis zur Vollauslastung unter 180 Tagen
+* *Geringeres Risiko:* keine der oben genannten Bedingungen
+
+
+Wenn DII eine Prognosemetrik liefert, sollte die Zeit bis zur vollständigen Erschöpfung nicht nur aus zwei Stichproben abgeleitet werden. Liegt keine Prognose vor, ist der Trend zu beschreiben, ohne ein genaues Datum der vollständigen Erschöpfung anzugeben.
+
+
+
+[[rebalance-guidance]]
+== Leitlinien zur Neuausrichtung
+
+Ein Ziel ist nicht allein deshalb geeignet, weil es über freie Kapazität verfügt. Zu berücksichtigen sind:
+
+* Kompatibilität von Speichersystemen und Protokollen
+* Service Level und Leistungsspielraum
+* Datensicherungs- und Replikationsbeziehungen
+* Einschränkungen bei der Workload-Platzierung
+* Thin Provisioning und Überprovisionierung
+* Betriebliche Änderungsfenster
+
+
+
+
+[[suggested-output]]
+== Empfohlene Ausgabe
+
+. Zusammenfassung des Kapazitätsrisikos
+. Kritische und Warnungs-Pools
+. Wachstumsnarrativ
+. Aktive Kapazitätswarnungen
+. Mögliche Quell- und Zielpaare
+. Annahmen und fehlende Daten
+
+
+
+
+[[limits-and-privacy]]
+== Grenzen und Datenschutz
+
+* Die Objektfenster dürfen 30 Tage pro Aufruf nicht überschreiten. Für längere Trends werden aufeinanderfolgende, sich nicht überschneidende Zeitfenster verwendet.
+* Filter gelten für Rohmesswerte vor der Aggregation.
+* Eine Gruppierung erfolgt nur nach Attributen, die in den Metadaten als gruppierbar gekennzeichnet sind.
+* Kapazitätswerte können unterschiedliche Einheiten verwenden; vor dem Vergleich sollten sie normalisiert werden.
+
+
+
+
+[[follow-up-prompts]]
+== Folgefragen
+
+[]
+====
+Der 30-Tage-Trend der genutzten Kapazität für die fünf Pools mit dem höchsten Risiko wird angezeigt.
+
+====
+[]
+====
+Die Pool-Kapazität wird nach Speichersystem gruppiert, und Systeme mit sowohl einem kritischen Pool als auch einem geeigneten Ziel mit geringerem Risiko werden identifiziert.
+
+====
+[]
+====
+Die Pools mit dem höchsten Risiko werden mit aktiven Kapazitätsmonitoren und Warnmeldungen korreliert.
+
+====
+link:mcp_recipe_overview.html["Zurück zu den Rezepten"]

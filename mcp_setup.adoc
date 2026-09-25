@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: mcp_setup.html 
+summary: Diese Anleitung dient dazu, einen MCP-kompatiblen KI-Client mit DII zu verbinden. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Einrichtung des DII MCP Server
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Diese Anleitung dient dazu, einen MCP-kompatiblen KI-Client mit DII zu verbinden.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[before-you-begin]]
+== Bevor Sie beginnen
+
+Sie benötigen:
+
+* Zugriff auf einen DII-Mandanten.
+* Eine DII-Benutzer- oder Dienstidentität, die zum Lesen der Ressourcen autorisiert ist, die Sie abfragen möchten.
+* Der für Ihre DII Umgebung bereitgestellte Remote MCP Endpunkt.
+* Ein MCP-Client, der Remote-HTTP-Server und das Authentifizierungsverfahren Ihrer Organisation unterstützt.
+
+
+Die Beispiele verwenden +<DII_HOST_URL>+ als Platzhalter. Zugriffstoken dürfen nicht in versionskontrollierte Dateien eingefügt werden. Die von Cursor verwendete URL lautet beispielsweise:
+
+ https://<DII_HOST_URL>/api/v1/mcp
+Die spezifischen Code-Ausschnitte für Ihre Verbindung sind nachfolgend aufgeführt.
+
+
+
+[[configure-the-mcp-client]]
+== Konfiguration des MCP Client
+
+. Zu Admin > API-Zugriff navigieren und die Registerkarte „MCP Configuration“ auswählen.
+. Wählen Sie den Client aus, den Sie konfigurieren möchten.
+. Geben Sie einen aussagekräftigen Namen und ein Ablaufdatum an und wählen Sie _Generate Token_.
+. *Code-Snippet kopieren* Dies ist nur während dieses Schritts möglich. Das Token ist im Snippet ausgeblendet, wird aber korrekt in Ihre Client-App eingefügt.
+. In den Clienteinstellungen ist die korrekte DII Host URL im Feld „url“ einzugeben.
+. Die Konfiguration wird gespeichert.
+
+
+
+IMPORTANT: Bearer-Token dürfen nicht in der Shell-Historie, in Eingabeaufforderungen, Screenshots, Projektdateien oder in der Quellcodeverwaltung gespeichert werden.
+
+
+
+[[verify-access]]
+== Überprüfung des Zugriffs
+
+Nachdem der Client gemeldet hat, dass die Verbindung zum Server hergestellt ist, können Anfragen wie die folgenden gesendet werden:
+
+[]
+====
+Die mir zur Verfügung stehenden DII-Objekttypen werden aufgelistet. Die mir zur Verfügung stehenden DII-Protokolltypen werden aufgelistet. Meine Erfassungseinheiten werden aufgelistet, ohne dass IP-Adressen oder UUIDs angezeigt werden.
+
+====
+Eine erfolgreiche Erkennung bestätigt die Konnektivität, garantiert aber keinen Zugriff auf alle zugrunde liegenden Ressourcen. Mandantenmerkmale, Datensammler und Berechtigungen bestimmen, welche Daten zurückgegeben werden.
+
+
+
+[[credential-safety]]
+== Sicherheit der Zugangsdaten
+
+* Sofern verfügbar, ist interaktives OAuth oder ein anderer kurzlebiger Anmeldeinformationsablauf zu bevorzugen.
+* Für unbeaufsichtigte Clients ist eine dedizierte Serviceidentität zu verwenden.
+* Token dürfen nicht in Prompts, Screenshots, Beispielen, Problembeschreibungen oder der Quellcodeverwaltung enthalten sein.
+* Der Agent sollte nicht aufgefordert werden, vollständige Webhook-Adressen anzuzeigen.
+
+
+Weitere Hinweise finden Sie unter link:mcp_security.html["Sicherheit und Datenschutz"].
+
+
+
+[[next-steps]]
+== Nächste Schritte
+
+* link:mcp_concepts.html["Das DII-Datenmodell verstehen"]
+* link:mcp_tools_overview.html["Die Werkzeugreferenz kann durchsucht werden"]
+* link:mcp_recipe_environment_inventory.html["Ausführen des Rezepts für die Umgebungsinventur"]
+* link:mcp_troubleshooting.html["Beheben von Verbindungs- und Abfragefehlern"]
+

@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: mcp_security.html 
+summary: Der DII MCP Server ermöglicht einem KI Client den Zugriff auf den Infrastrukturkontext des Mandanten. Dieser Kontext sollte mit derselben Sorgfalt behandelt werden wie die DII Benutzeroberfläche und die APIs. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Sicherheit und Datenschutz
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Der DII MCP Server ermöglicht einem KI Client den Zugriff auf den Infrastrukturkontext des Mandanten. Dieser Kontext sollte mit derselben Sorgfalt behandelt werden wie die DII Benutzeroberfläche und die APIs.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[least-privilege-access]]
+== Zugriff nach dem Prinzip der geringsten Berechtigungen
+
+* Es sollte eine Identität verwendet werden, die der Person, Anwendung oder Automatisierung zugewiesen ist, die eine Verbindung zu MCP herstellt.
+* Nur die für die beabsichtigten Workflows erforderlichen DII Leseberechtigungen sollten gewährt werden.
+* Die Zugriffsrechte sind zu überprüfen, wenn sich die Rolle oder die operative Verantwortung eines Benutzers ändert.
+* Für die unbeaufsichtigte Automatisierung ist eine separate Dienstidentität zu verwenden.
+
+
+Das hier dokumentierte aktuelle DII Produkt Toolset ist schreibgeschützt. Auch bei schreibgeschütztem Zugriff können sensible Namen, Topologie, Konfiguration, Telemetriedaten und Betriebszustand offengelegt werden.
+
+
+
+[[authentication]]
+== Authentifizierung
+
+Interaktivem OAuth oder einem anderen kurzlebigen Authentifizierungsverfahren, das von Ihrer Bereitstellung unterstützt wird, sollte der Vorzug gegeben werden. Falls nicht interaktive Anmeldeinformationen erforderlich sind:
+
+* Die Aufbewahrung sollte in einem zugelassenen Secret Manager erfolgen.
+* Geltungsbereich und Rotation gemäß den Unternehmensrichtlinien festlegen.
+* Sie sollten niemals in Projektdateien, Shell-Verlauf, Eingabeaufforderungen, Screenshots oder Dokumentationen platziert werden.
+
+
+
+
+[[sensitive-fields]]
+== Sensible Felder
+
+Potenziell sensible DII-Daten umfassen:
+
+* IP-Adressen, Hostnamen, mandantenspezifische Ressourcennamen und UUIDs
+* Infrastrukturtopologie und Konfiguration
+* Alarmbeschreibungen und Protokollnutzdaten
+* Benutzer-, Eigentümer-, Label- und Annotationswerte
+* Webhook Endpunktadressen
+
+
+Webhook-URLs enthalten üblicherweise Routing-Schlüssel, Signaturen, Token oder eindeutige Pfade. Ein Agent sollte nicht aufgefordert werden, eine vollständige Webhook-Adresse zurückzugeben. Es sollte nur Folgendes angefordert werden:
+
+* Zielname
+* Integrations- oder Engine-Typ
+* Aktiviert oder Lieferstatus
+
+
+Anwendungen, die den MCP Server integrieren, sollten Webhook-Adressen unkenntlich machen, bevor sie Tool-Ergebnisse anzeigen, speichern oder weiterleiten.
+
+
+
+[[prompt-and-output-hygiene]]
+== Prompt- und Ausgabehygiene
+
+* In wiederverwendbaren Eingabeaufforderungen und Beispielen sind fiktive Bezeichner zu verwenden.
+* Der Agent sollte IP-Adressen, UUIDs, Endpunktadressen und Rohdaten aus Protokolldateien weglassen, sofern diese nicht erforderlich sind.
+* Ergebnisse sollten zusammengefasst werden, anstatt große Rohdaten zu kopieren.
+* Generierte Inhalte sollten überprüft werden, bevor sie in Tickets, Chatkanälen oder externen Dokumenten eingefügt werden.
+* Für den ausgewählten KI-Client sind die organisatorischen Anforderungen an den Umgang mit Daten einzuhalten.
+
+
+
+
+[[tenant-isolation]]
+== Mandantenisolierung
+
+Die Ergebnisse von MCP sind auf den authentifizierten DII-Kontext des Mandanten beschränkt. Ergebnisse mehrerer Mandanten dürfen nicht kombiniert werden, es sei denn, der Workflow und die Autorisierung erlauben dies ausdrücklich.
+
+
+
+[[audit-and-retention]]
+== Prüfung und Aufbewahrung
+
+Die Abdeckung und Aufbewahrung von Audit-Ereignissen hängen von der DII-Bereitstellung und dem verbundenen AI client ab. Vor dem Produktiveinsatz sollten Administratoren Folgendes bestätigen:
+
+* Ob MCP Authentifizierung und Tool-Aufrufe protokolliert werden
+* Welche Anfrageargumente und Ergebnismetadaten beibehalten werden
+* Wer kann diese Aufzeichnungen einsehen
+* Wie lange der KI-Client Eingabeaufforderungen und Tool-Ergebnisse speichert
+
+
+Es sollte nicht davon ausgegangen werden, dass MCP-spezifische Audit-Ereignisse oder Aufbewahrungsgarantien bestehen, sofern diese nicht für Ihre Implementierung dokumentiert sind.
+
+
+
+[[incident-response]]
+== Reaktion auf Zwischenfälle
+
+Wenn in einem MCP-Ergebnis, einer Eingabeaufforderung, einem Protokoll oder einem veröffentlichten Dokument eine Anmeldeinformation oder ein Endpunkt mit Anmeldeinformationen erscheint:
+
+. Die Weitergabe der betroffenen Inhalte ist einzustellen.
+. Widerrufen oder ändern Sie die Zugangsdaten oder das Integrationsgeheimnis.
+. Der Wert sollte nach Möglichkeit aus den gespeicherten Artefakten entfernt werden.
+. Zugriffs- und Prüfprotokolle werden überprüft.
+. Die Meldung der Gefährdung erfolgt über den Sicherheitsprozess Ihrer Organisation.
+
+
+
+
+[[related-documentation]]
+== Zugehörige Dokumentation
+
+* link:mcp_setup.html["Einrichtung des DII MCP Server"]
+* link:mcp_concepts.html["Konzepte und Datenmodell"]
+* link:mcp_recipe_notification_posture.html["Rezept für die Benachrichtigungskonfiguration"]
+* link:mcp_troubleshooting.html["Fehlerbehebung"]
+

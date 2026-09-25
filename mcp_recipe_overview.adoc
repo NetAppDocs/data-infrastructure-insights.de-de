@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_overview.html 
+summary: Rezepte kombinieren mehrere schreibgeschützte DII-Tools zu wiederholbaren Infrastruktur-Workflows. Sie dienen als Ausgangspunkte, wobei fiktive Ressourcennamen durch Werte aus Ihrem Mandanten ersetzt werden. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= DII MCP Betriebsverfahren
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Rezepte kombinieren mehrere schreibgeschützte DII-Tools zu wiederholbaren Infrastruktur-Workflows. Sie dienen als Ausgangspunkte, wobei fiktive Ressourcennamen durch Werte aus Ihrem Mandanten ersetzt werden.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[choose-a-workflow]]
+== Auswahl eines Workflows
+
+|===
+| Ziel | Rezept | Primäre DII Oberflächen 
+
+
+| Validierung von Bestandsabdeckung und Aktualität | link:mcp_recipe_environment_inventory.html["Bestandsumgebung und Integrität der Datenerfassung"] | Erfassungseinheiten, Datenquellen 
+
+
+| Aktive Infrastrukturprobleme haben Priorität | link:mcp_recipe_storage_health.html["Speicherzustand beurteilen"] | Warnungen, Monitore, Protokolle, Objekte 
+
+
+| Pools mit zunehmender Kapazitätsauslastung finden | link:mcp_recipe_capacity_risk.html["Kapazitätsrisiko identifizieren"] | Objektmetadaten, Gruppierung, Zeitreihen 
+
+
+| Prüfung der Versionen der Kubernetes Collection Komponenten | link:mcp_recipe_kubernetes_collector_currency.html["Überprüfung der Aktualität des Kubernetes Collectors"] | Kubernetes Kollektoren 
+
+
+| Untersuchung eines langsamen Volumes oder Workloads | link:mcp_recipe_performance_rca.html["Leistungsprobleme beheben"] | Objektmetriken, Warnungen, Protokolle 
+
+
+| Routing und Unterdrückung sicher überprüfen | link:mcp_recipe_notification_posture.html["Überprüfung des Benachrichtigungsstatus"] | Regeln, Ziele, Wartungsfenster 
+|===
+
+
+[[standard-investigation-pattern]]
+== Standardmäßiges Untersuchungsmuster
+
+. Klärung des Ressourcenumfangs und des Zeitrahmens.
+. Verfügbare Typen sind verfügbar.
+. Metadaten vor der Verwendung dynamischer Felder abrufen.
+. Abfrage eines begrenzten Zeitfensters.
+. Unabhängige Signale korrelieren.
+. Es ist zwischen beobachteten Fakten und Schlussfolgerungen zu unterscheiden.
+. Einschränkungen des Berichts und empfohlene Folgemaßnahmen.
+
+
+
+
+[[safety]]
+== Sicherheit
+
+* Diese Rezepte verwenden schreibgeschützte Werkzeuge.
+* Zeitfenster sollten auf maximal 30 Tage begrenzt sein.
+* Anmeldeinformationen, private Adressen, UUIDs, rohe Webhook-Endpunkte und unnötige Protokollnutzdaten sind wegzulassen.
+* Die Bestätigung operativer Maßnahmen mit hoher Auswirkung erfolgt außerhalb des MCP Workflows.
+
+
+
+
+[[related-documentation]]
+== Zugehörige Dokumentation
+
+* link:mcp_overview.html["DII MCP Übersicht"]
+* link:mcp_concepts.html["Konzepte und Datenmodell"]
+* link:mcp_tools_overview.html["Werkzeugreferenz"]
+* link:mcp_security.html["Sicherheit und Datenschutz"]
+

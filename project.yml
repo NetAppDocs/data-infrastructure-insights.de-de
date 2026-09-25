@@ -52,7 +52,41 @@ sidebar:
     - title: SecurityAdmin-Tool
       url: "/security_admin_tool.html"
   - title: KI Assistant
-    url: "/ai_for_dii_overview.html"
+    entries:
+    - title: Übersicht über AI Assistant
+      url: "/ai_for_dii_overview.html"
+    - title: DII MCP
+      entries:
+      - title: DII MCP Übersicht
+        url: "/mcp_overview.html"
+      - title: DII MCP Server
+        url: "/mcp_overview.html"
+      - title: Konzepte
+        url: "/mcp_concepts.html"
+      - title: Aufstellen
+        url: "/mcp_setup.html"
+      - title: Sicherheit
+        url: "/mcp_security.html"
+      - title: Fehlerbehebung
+        url: "/mcp_troubleshooting.html"
+      - title: Tools
+        url: "/mcp_tools_overview.html"
+      - title: Anwendungsfälle
+        entries:
+        - title: Anwendungsfallübersicht
+          url: "/mcp_recipe_overview.html"
+        - title: Kapazitätsrisikoanalyse
+          url: "/mcp_recipe_capacity_risk.html"
+        - title: Bestandsaufnahme der Umgebung
+          url: "/mcp_recipe_environment_inventory.html"
+        - title: Kubernetes Collector Aktualität
+          url: "/mcp_recipe_kubernetes_collector_currency.html"
+        - title: Benachrichtigungsstatus
+          url: "/mcp_recipe_notification_posture.html"
+        - title: Analyse der Ursachen von Leistungsproblemen
+          url: "/mcp_recipe_performance_rca.html"
+        - title: Storage-Zustand
+          url: "/mcp_recipe_storage_health.html"
   - title: Datensammlerliste
     url: "/data_collector_list.html"
   - title: Abonnieren von Data Infrastructure Insights

@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_environment_inventory.html 
+summary: Anhand dieses Rezepts lässt sich feststellen, ob die Erfassungseinheiten von DII und die konfigurierten Datenquellen erfolgreich verbunden sind, Berichte erstellen und Daten erfassen. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Bestandsumgebung und Integrität der Datenerfassung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Anhand dieses Rezepts lässt sich feststellen, ob die Erfassungseinheiten von DII und die konfigurierten Datenquellen erfolgreich verbunden sind, Berichte erstellen und Daten erfassen.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[prerequisites]]
+== Voraussetzungen
+
+* Zugriff auf Erfassungseinheits- und Collector-Tools.
+* Ein optionaler Name der Erfassungseinheit oder des Collectors, um die Untersuchung einzugrenzen.
+
+
+
+
+[[tools-used]]
+== Verwendete Tools
+
+* +AcquisitionUnitsService_getAcquisitionUnits+
+* +AcquisitionUnitsService_getAcquisitionUnitByUuid+
+* +CollectorService_getDataSources+
+* +CollectorService_getDataSourceById+
+* +CollectorService_getDataSourceTypes+
+
+
+
+
+[[starter-prompt]]
+== Starter-Prompt
+
+[]
+====
+Meine DII Erfassungsumgebung soll überprüft werden. Erfassungseinheiten sollen nach Verbindungsstatus und Aktualität der Berichterstattung zusammengefasst werden, anschließend die konfigurierten Datenquellen nach Erfassungsstatus und Anbieter. Hervorzuheben sind Erfassungseinheiten, die nie Berichte gesendet haben, Einheiten ohne zugewiesene Collector, fehlgeschlagene Collector und veraltete erfolgreiche Erfassungen. IP-Adressen, UUIDs oder Anmeldeinformationen dürfen nicht angezeigt werden.
+
+====
+
+
+[[agent-workflow]]
+== Agent Workflow
+
+. Alle Erfassungseinheiten.
+. Die Klassifizierung jeder AU erfolgt anhand des Verbindungsstatus und `lastReported`.
+. Anzahl der zugewiesenen Datenquellen pro AU.
+. Alle konfigurierten Datenquellen werden aufgelistet.
+. Sammler werden nach Status, Anbieter, Modell und AU gruppiert.
+. Identifizierung:
++
+** Getrennte oder aufgrund von Heartbeat-Fehlern nicht mehr erreichbare AUs
+** Verbundene AUs, die nie gemeldet wurden
+** AUs ohne Datenquellen
+** Fehlgeschlagene Collector
+** Collector ohne erfolgreiche Erfassung
+** Erfolgreiche Sammler, deren letzte Erfassung unerwartet alt ist
+
+
+. Die vollständigen AU- oder Collector-Details werden nur für die Ausnahmen abgerufen.
+. Eine priorisierte Zusammenfassung wird zurückgegeben, und der verwendete Frischeschwellenwert wird klar angegeben.
+
+
+
+
+[[interpretation]]
+== Interpretation
+
+Diese Unterscheidungen sind zu beachten:
+
+* *Verbunden und meldet:* Die AU ist verbunden und verfügt über einen aktuellen `lastReported`Wert.
+* *Verbunden, aber nie gemeldet:* Es besteht eine Verbindung, aber eine erfolgreiche Telemetrieberichterstattung ist nicht eingerichtet.
+* *Heartbeat fehlgeschlagen:* Der AU-Host, der Netzwerkpfad und der Dienst sollten untersucht werden.
+* *Collector fehlgeschlagen:* Die letzten Abfrageaktivitäten des Collectors, den Paketstatus, die Konfiguration und die letzte erfolgreiche Datenerfassung überprüfen.
+* *Keine zugewiesenen Sammler:* Dies kann beabsichtigt sein; eine Überprüfung vor der Behandlung als Fehler wird empfohlen.
+
+
+Der Katalog der unterstützten Datenquellentypen beschreibt Produkte, die DII erfassen kann. Er weist nicht nach, dass diese Produkte im Mandanten konfiguriert sind.
+
+
+
+[[suggested-output]]
+== Empfohlene Ausgabe
+
+. Zusammenfassung
+. Anzahl der Status der Akquisitionseinheit
+. Anzahl der Collector-Status
+. Ausnahmen, geordnet nach ihren Auswirkungen auf den Betrieb
+. Empfohlene Prüfungen
+. Datenbeschränkungen
+
+
+
+
+[[limits-and-privacy]]
+== Grenzen und Datenschutz
+
+* Die Rückgabe von AU UUIDs, IP-Adressen, privaten Hostnamen oder Collector-Anmeldeinformationen sollte vermieden werden.
+* Ein Statuswert allein belegt nicht die Aktualität der Daten.
+* Die detaillierte Konfiguration wird nur für benannte Ausnahmen abgerufen.
+
+
+
+
+[[follow-up-prompts]]
+== Folgefragen
+
+[]
+====
+Untersuchung des fehlgeschlagenen Collectors mit dem Namen `example-array`. Zusammenfassung der letzten Abfrageaktivitäten und Fehler des Erfassungspakets, ohne Anmeldeinformationen oder private Adressen anzuzeigen.
+
+====
+[]
+====
+Welche Erfassungseinheiten haben in den letzten 30 Minuten keine Meldung abgegeben, und welche Datensammler sind von ihnen abhängig?
+
+====
+[]
+====
+Ein Vergleich der konfigurierten Collector Anbieter mit dem von DII unterstützten Katalog der Datenquellentypen.
+
+====
+link:mcp_recipe_overview.html["Zurück zu den Rezepten"]

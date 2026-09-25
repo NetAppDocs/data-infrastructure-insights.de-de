@@ -1,0 +1,150 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_notification_posture.html 
+summary: Mithilfe dieses Rezepts lässt sich nachvollziehen, wie DII Warnungen weitergeleitet und unterdrückt werden, ohne Webhook-Endpunktadressen offenzulegen. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Überprüfung des Benachrichtigungsstatus
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mithilfe dieses Rezepts lässt sich nachvollziehen, wie DII Warnungen weitergeleitet und unterdrückt werden, ohne Webhook-Endpunktadressen offenzulegen.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[prerequisites]]
+== Voraussetzungen
+
+* Zugriff auf Benachrichtigungs- und Wartungsfenster-Tools.
+* Ein optionaler Monitor-, Ressourcen- oder Integrationstyp zur Eingrenzung der Überprüfung.
+
+
+
+
+[[tools-used]]
+== Verwendete Tools
+
+* +NotificationService_getNotificationRules+
+* +NotificationService_getNotificationRuleById+
+* +NotificationService_getWebhooks+
+* +MaintenanceWindowService_getMaintenanceWindows+
+* +MaintenanceWindowService_getMaintenanceWindowById+
+* Optional: +MonitorsService_queryMonitors+
+
+
+
+
+[[starter-prompt]]
+== Starter-Prompt
+
+[]
+====
+Der Status der DII-Benachrichtigungen ist zu überprüfen. Zusammenzufassen sind aktive und inaktive Benachrichtigungsregeln, der Monitor- oder Ressourcenbereich jeder Regel, die Anzahl der Webhook-Ziele nach Integrationstyp und die aktuellen Wartungsfenster. Es sind nur Zielnamen, Engine-Typen und Status zurückzugeben, niemals Endpunktadressen.
+
+====
+
+
+[[agent-workflow]]
+== Agent Workflow
+
+. Benachrichtigungsregeln auflisten.
+. Regeln lassen sich als aktiv, inaktiv, ablaufend oder ohne Ablaufdatum klassifizieren.
+. Zusammenfassung des Geltungsbereichs jeder Regel:
++
+** Name oder Gruppe des Monitors
+** Zugehöriges Objekt
+** Breiter Wildcard-Bereich
+
+
+. Eine bestimmte Regel wird nur dann abgerufen, wenn zusätzliche Details erforderlich sind.
+. Die Webhook-Ziele werden aufgelistet, und das Adressfeld wird sofort aus dem Arbeitsergebnis entfernt.
+. Ziele nach Engine-Typ und Status gruppieren.
+. Aktive Wartungsfenster werden aufgelistet.
+. Unterdrückungsfenster, die sich mit wichtigen Ressourcen oder ungewöhnlich langen Zeiträumen überschneiden, werden identifiziert.
+. Optional können Regelausdrücke mit verfügbaren Monitoren verglichen werden.
+. Bericht über Routingabdeckung, allgemeine Regeln, inaktive Regeln und Unterdrückungsrisiken.
+
+
+
+
+[[security-requirement]]
+== Sicherheitsanforderung
+
+Vollständige Webhook-Adressen können Folgendes enthalten:
+
+* Slack oder Teams Signaturpfade
+* PagerDuty Routing-Schlüssel
+* API Tokens
+* Eindeutige Workflow-Signaturen
+* Benutzerdefinierte Integrationsanmeldedaten
+
+
+Das Adressfeld darf niemals angezeigt, zitiert, zusammengefasst, gespeichert oder weitergeleitet werden. Ein maskiertes Suffix ist für diesen Workflow ebenfalls nicht erforderlich.
+
+Wenn ein vollständiger Endpunkt in einem Transkript oder einem freigegebenen Artefakt erscheint, sind die Schritte zum Vorfall in link:mcp_security.html["Sicherheit und Datenschutz"] zu befolgen.
+
+
+
+[[interpretation]]
+== Interpretation
+
+* Eine inaktive Regel kann beabsichtigt sein; vor einer Empfehlung zur Entfernung sollte die Zuständigkeit bestätigt werden.
+* Ein weit gefasster Platzhalterausdruck kann zu Benachrichtigungsrauschen oder unbeabsichtigtem Routing führen.
+* Ein Zielstatus kann null oder unbekannt sein; er darf nicht als aktiviert gemeldet werden.
+* Ein erfolgreiches Ergebnis für ein leeres Wartungsfenster bedeutet, dass keine übereinstimmenden Fenster vorhanden sind.
+* Ein langlebiges Fenster kann reale Probleme verschleiern, selbst wenn es technisch aktiv und gültig ist.
+
+
+
+
+[[suggested-output]]
+== Empfohlene Ausgabe
+
+. Anzahl der Regeln nach Status
+. Regelbereich und Zieltyp
+. Zielanzahlen nach Engine
+. Aktive Wartungsfenster
+. Weit gefasste, inaktive oder mehrdeutige Konfigurationen
+. Sicherheits- und Datenqualitätshinweise
+
+
+
+
+[[limits-and-privacy]]
+== Grenzen und Datenschutz
+
+* Adressen, Token, UUIDs oder private Ressourcenkennungen dürfen nicht zurückgegeben werden.
+* Dieser Workflow überprüft die Konfiguration, testet aber nicht die Nachrichtenzustellung.
+* Mit den aktuellen Tools können Regeln und Ziele weder erstellt, aktualisiert, deaktiviert noch gelöscht werden.
+
+
+
+
+[[follow-up-prompts]]
+== Folgefragen
+
+[]
+====
+Welche aktiven Benachrichtigungsregeln verfügen über breite Platzhalterausdrücke, und mit welchen Überwachungsgruppen können sie übereinstimmen?
+
+====
+[]
+====
+Aktuelle und anstehende Wartungsfenster sowie die von ihnen unterdrückten Alarmbereiche werden aufgelistet und erläutert.
+
+====
+[]
+====
+Benachrichtigungsziele werden nach Integrationstyp gezählt, und Ziele mit unbekanntem Status werden identifiziert. Adressen werden nicht angezeigt.
+
+====
+link:mcp_recipe_overview.html["Zurück zu den Rezepten"]

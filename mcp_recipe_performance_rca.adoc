@@ -1,0 +1,163 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_performance_rca.html 
+summary: Mit diesem Rezept lässt sich ein langsames Volume, ein Datenspeicher, eine virtuelle Maschine, eine Kubernetes Workload oder ein anderes DII Objekt untersuchen, indem Leistungsmetriken, Warnmeldungen und Plattformprotokolle korreliert werden. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Leistungsprobleme beheben
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit diesem Rezept lässt sich ein langsames Volume, ein Datenspeicher, eine virtuelle Maschine, eine Kubernetes Workload oder ein anderes DII Objekt untersuchen, indem Leistungsmetriken, Warnmeldungen und Plattformprotokolle korreliert werden.
+
+
+NOTE: Der DII MCP ist eine link:concept_preview_features.html["Vorschau"] Funktion und kann sich daher ändern.
+
+
+
+[[prerequisites]]
+== Voraussetzungen
+
+* Name der betroffenen Ressource und ungefähre Uhrzeit des Vorfalls.
+* Ein Zeitraum von 30 Tagen oder weniger.
+* Wenn möglich ein Vergleichszeitraum oder ein bekannter gesunder Ausgangswert.
+
+
+
+
+[[tools-used]]
+== Verwendete Tools
+
+* +ObjectService_getObjectTypes+
+* +ObjectService_getMetadataForObjectType+
+* +ObjectService_query+
+* +ObjectService_queryPerformanceMetricsForObjects+
+* +ObjectService_groupObjects+
+* +AlertsService_getMetadata+
+* +AlertsService_queryForAlerts+
+* +LogService_getLogTypes+
+* +LogService_getLogTypeMetadata+
+* +LogService_queryLogEvents+
+
+
+
+
+[[starter-prompt]]
+== Starter-Prompt
+
+[]
+====
+Untersuchen Sie die Ursache dafür, dass das Volume `example-volume` zwischen 09:00 und 11:00 UTC langsam war. Ermitteln Sie den korrekten Objekttyp und die gültigen Metriken, vergleichen Sie Latenz, IOPS und Durchsatz im Zeitraum des Vorfalls, prüfen Sie zugehörige aktive Warnmeldungen und Plattformprotokolle und vergleichen Sie dies mit einem fehlerfreien Zeitraum. Trennen Sie Belege von Hypothesen und ermitteln Sie die nächste erforderliche Messung.
+
+====
+
+
+[[agent-workflow]]
+== Agent Workflow
+
+. Die Ressource wird einem exakten Objekttyp und einer exakten Identität zugeordnet.
+. Metadaten für diesen Objekttyp werden abgerufen.
+. Gültige Kennzahlen für Latenz, Operationen, Durchsatz, Auslastung und Kapazität.
+. Abfrage der aktuellen Objektattribute zur Ermittlung von Platzierung und Beziehungen.
+. Zeitreihen abrufen über:
++
+** Das Vorfallfenster
+** Ein vergleichbares intaktes Zeitfenster
+
+
+. Zeitstempel und Aggregationsfunktionen über Metriken hinweg angleichen.
+. Warnmeldungen abrufen, die sich auf die Ressource beziehen und System, Host, Knoten oder Speicherpool enthalten.
+. Wählen Sie relevante Log-Streams aus, rufen Sie Metadaten ab und durchsuchen Sie ein enges Intervall um Metrikänderungen.
+. Plausible Hypothesen testen:
++
+** Nachfrageanstieg
+** Ressourcensättigung
+** Storage- oder Fabric-Fehler
+** Kapazitätsdruck
+** Host- oder VM-Konflikte
+** Erfassungslücke
+
+
+. Die am besten belegte Erklärung und die noch offenen Alternativen sind zu melden.
+
+
+
+
+[[evidence-standards]]
+== Beweisstandards
+
+Erkenntnisse kennzeichnen:
+
+* *Beobachtet:* direkt von einem Tool zurückgegeben.
+* *Korreliert:* Unabhängige Signale haben sich im selben Intervall geändert.
+* *Abgeleitet:* eine plausible Erklärung, die noch nicht bewiesen ist.
+* *Unbekannt:* erforderliche Nachweise sind nicht verfügbar.
+
+
+Korrelation ist nicht gleich Kausalität. Ein gleichzeitig auftretender Alarm sollte als Indiz, nicht als Beweis, gelten, solange der zugrunde liegende Mechanismus nicht geklärt ist.
+
+
+
+[[metric-guidance]]
+== Metrikanleitung
+
+* Verwenden Sie  `AVG`für das allgemeine Verhalten, aber prüfen Sie  `MAX`, wenn kurze Spitzenwerte wichtig sind.
+* Verwenden Sie  `SUM`nur für additive Kennzahlen.
+* Verwendet wird  `CHANGE` oder +CHANGE_RATIO+ für Zähler oder Wachstum, sofern die Metadaten dies unterstützen.
+* Der Vergleich von Reihen mit unterschiedlichen Bucket-Grenzen oder Einheiten sollte vermieden werden.
+* Filter werden vor der Zeitbucket-Aggregation angewendet.
+
+
+
+
+[[suggested-output]]
+== Empfohlene Ausgabe
+
+. Umfang und Zeitplan des Vorfalls
+. Metrische Nachweise
+. Warnungs- und Protokollnachweise
+. Vergleich mit einem fehlerfreien Zeitraum
+. Wahrscheinlichste Erklärung
+. Alternative Hypothesen
+. Vertrauen und fehlende Nachweise
+. Empfohlene nächste Überprüfung
+
+
+
+
+[[limits-and-privacy]]
+== Grenzen und Datenschutz
+
+* Zeitreihenfenster dürfen 30 Tage nicht überschreiten.
+* Das Performance Tool gibt eine begrenzte Anzahl von Datenreihen zurück; der Filter sollte eingegrenzt werden, bevor das Limit erhöht wird.
+* Empfindliche Rohprotokollfelder, die nicht zur Diagnose beitragen, sollten weggelassen werden.
+* Es sollten keine disruptiven Sanierungsmaßnahmen vorgeschlagen werden, ohne sie zuvor anhand normaler betrieblicher Kontrollen zu validieren.
+
+
+
+
+[[follow-up-prompts]]
+== Folgefragen
+
+[]
+====
+Die maximale und die durchschnittliche Latenzzeit während des Vorfalls im Vergleich zur gleichen Stunde am vorherigen fehlerfreien Tag.
+
+====
+[]
+====
+Zusammengehörige Workloads werden nach Host oder Speicherpool gruppiert, und es wird ermittelt, ob die Verlangsamung isoliert auftrat oder gemeinsam genutzt wurde.
+
+====
+[]
+====
+Die Plattformereignisse werden innerhalb von 15 Minuten nach dem ersten Anstieg der Latenz angezeigt.
+
+====
+link:mcp_recipe_overview.html["Zurück zu den Rezepten"]
