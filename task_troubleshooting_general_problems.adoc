@@ -65,6 +65,9 @@ Siehe auchlink:task_troubleshooting_linux_acquisition_unit_problems.html["Fehler
 
 
 | Beim Eingeben einer Zeitplanzeit für einen Cognos-Bericht erhalte ich manchmal ein zusätzliches „m“ in der Zeitplanzeit.  Wenn ich die Uhrzeit beispielsweise als „02:15 PM“ eingebe, wird möglicherweise ein zusätzliches Zeichen hinzugefügt: „02:15 PMM“ (oder PMm).  Wenn ich nach draußen klicke, ändert sich die Anzeige in „2:15 Uhr“.  Ich kann den Bericht speichern, aber wenn ich den gespeicherten Bericht erneut öffne, wird als geplante Zeit AM (also Morgen) angezeigt, unabhängig davon, ob ich in der geplanten Zeit AM oder PM eingegeben habe. | Geben Sie die geplante Zeit erneut ein und achten Sie darauf, nicht die vollständigen Zeichen „AM“ oder „PM“ einzugeben. Es reicht aus, „A“ für „AM“ oder „P“ für „PM“ einzugeben.  Wenn Ihnen das zusätzliche Zeichen nicht angezeigt wird, ist die geplante Zeit korrekt eingestellt. 
+
+
+| In DII sind die Kapazitätszahlen für FlexGroups "0". Die Bestandteile sind in Ordnung, aber die FlexGroup zeigt keine Gesamtkapazität aller Bestandteile an. | Dies ist beabsichtigt. Die meisten Kapazitätskennzahlen werden für die Bestandteile der FlexGroup gemeldet, nicht für die übergeordnete FlexGroup. Wenn dieselbe Kapazität für beide gemeldet würde, würde sie doppelt gezählt. Die Bevorzugung der Berichterstattung auf Ebene der Bestandteile unterstützt wichtige Anwendungsfälle und vermeidet diese Duplizierung. Um die Kapazität für eine FlexGroup in einer Abfrage, einem Dashboard oder einem Monitor zu melden, wird der Verweis des Bestandteils auf seine übergeordnete FlexGroup verwendet. Die Bestandteile werden nach diesem Verweis gruppiert, und ihre Kapazitätswerte werden aggregiert. 
 |===
 
 
