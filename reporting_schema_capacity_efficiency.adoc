@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, capacity efficiency
 :imagesdir: ./media/
 
 
+[role="lead"]
+Das Schema zur Kapazitätseffizienz liefert Kennzahlen zur Speichereffizienz, darunter Datenreduktionsraten und Optimierungspotenziale. Dieses Schema dient zur Überwachung und Analyse der Effektivität von Speichertechnologien wie Deduplizierung und Komprimierung.
+
 Quelle: *dwh_capacity_efficiency* OData Endpoint, Data Infrastructure Insights
 
 Gefundene Tabellen: *3* | Assoziationen: *2*

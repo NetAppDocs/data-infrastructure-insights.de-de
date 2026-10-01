@@ -36,9 +36,9 @@ image:ai_assistant-column_graph.png["KI Assistant Visualisierung"]
 [[enhanced-vm-analyzer-filtering]]
 === Erweiterte VM Analyzer Filterung
 
-Eine neue Option in der VM Analyzer-Ansicht ermöglicht es, eingebundene Volumes ohne Datenspeicher auszublenden und bietet so eine übersichtlichere Darstellung, die die Fehlersuche bei VMs vereinfacht.
+Mit einer neuen Umschaltoption in der VM Analyzer Ansicht lassen sich eingebundene Volumes ohne Datenspeicher ausblenden, was eine übersichtlichere Ansicht für die einfachere Fehlerbehebung bei VMs bietet.
 
-image:vm_analyzer_datastore_only_view.png["Schieberegler für die reine Datastore-Ansicht"]
+image:vm_analyzer_datastore_only_view.png["VM Analyzer mit der Umschaltoption zum Ausblenden eingebundener Volumes ohne Datenspeicher"]
 
 
 
@@ -51,9 +51,9 @@ Nur bei Bedarf bearbeiten. In einem ausklappbaren Bedienfeld lassen sich die Ass
 
 Sie können auch direkt die Landingpage des Assets öffnen und oben rechts „Bearbeiten“ auswählen.
 
-image:UserDataEdit-Slideout.png["Benutzerdaten im Slideout Panel mit Stiftsymbol bearbeiten, Breite=400"]
+image:user_data_edit_slideout.png["Asset-Details-Slideout, das Benutzerdaten im schreibgeschützten Modus mit dem Stiftsymbol zum Wechsel in den Bearbeitungsmodus anzeigt, Breite=400"]
 
-image:UserDataEdit-LP.png["Landing Page Bearbeitungsmodus, Breite=200"]
+image:user_data_edit_lp.png["Asset Landingpage mit User Data im Bearbeitungsmodus, bereit zum Speichern von Änderungen, Breite=200"]
 
 '''
 

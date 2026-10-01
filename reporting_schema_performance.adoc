@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, performance
 :imagesdir: ./media/
 
 
+[role="lead"]
+Das Performance Schema liefert Zeitreihenmetriken zu E/A, Latenz, Durchsatz und anderen Leistungsindikatoren über Speicher, Hosts, Volumes und Anwendungen hinweg. Dieses Schema dient der Analyse von Leistungstrends, der Identifizierung von Engpässen und der Optimierung der Workload Platzierung.
+
 Quelle: *dwh_performance* OData-Endpunkt, Data Infrastructure Insights
 
 Gefundene Tabellen: *74* | Assoziationen: *167*

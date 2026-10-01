@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, file system, fs util
 :imagesdir: ./media/
 
 
+[role="lead"]
+Das Schema zur Dateisystemauslastung erfasst den Speicherverbrauch und die Nutzungsmuster über Dateisysteme, Hosts und Rechenressourcen hinweg. Dieses Schema dient zur Identifizierung von Kapazitätsengpässen und zur Optimierung der Speicherzuweisung auf Dateisystemebene.
+
 Quelle: *dwh_fs_util* OData Endpoint, Data Infrastructure Insights
 
 Gefundene Tabellen: *8* | Assoziationen: *7*

@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, capacity
 :imagesdir: ./media/
 
 
+[role="lead"]
+Das Kapazitätsschema enthält Tabellen und Kennzahlen zu Speicherkapazität, Auslastung und Bereitstellung in Ihrer Infrastruktur. Dieses Schema dient zur Analyse von Kapazitätstrends, zur Prognose zukünftiger Bedarfe und zur Optimierung der Ressourcenzuweisung.
+
 Quelle: *dwh_capacity* OData Endpoint, Data Infrastructure Insights
 
 Gefundene Tabellen: *44* | Assoziationen: *92*
