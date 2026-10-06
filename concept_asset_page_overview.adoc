@@ -34,13 +34,15 @@ Sie können auf einen der Asset-Links klicken, um die entsprechenden Asset-Seite
 
 NOTE: Möglicherweise stellen Sie fest, dass die Volumekapazität bei einigen Speicherressourcen über 100 % liegt.  Dies liegt daran, dass Metadaten zur Kapazität des Datenträgers Teil der vom Asset gemeldeten Daten zur verbrauchten Kapazität sind.
 
+[NOTE]
+====
+Möglicherweise fällt auf, dass die Kapazitätszahlen für FlexGroups „0“ anzeigen können, während die Konstituenten Werte anzeigen. In DII setzen FlexGroups selbst die meisten Kapazitätsmetriken auf null, während die Konstituenten sie enthalten. Das Problem ist die doppelte Zählung: Wenn beide Entitäten vollständige Kapazitätsmetriken melden würden, würde DII dieselbe Kapazität zweimal ausweisen (einmal für die FlexGroup und einmal für die Konstituente). Die Bevorzugung der Berichterstattung auf Konstituentenebene unterstützt wichtige Anwendungsfälle und vermeidet gleichzeitig diese Duplizierung.
 
-NOTE: Möglicherweise fällt auf, dass die Kapazitätszahlen für FlexGroups „0“ anzeigen können, während die Konstituenten Werte anzeigen. In DII setzen FlexGroups selbst die meisten Kapazitätsmetriken auf null, während die Konstituenten sie enthalten. Das Problem ist die doppelte Zählung: Wenn beide Entitäten vollständige Kapazitätsmetriken melden würden, würde DII dieselbe Kapazität zweimal ausweisen (einmal für die FlexGroup und einmal für die Konstituente). Die Bevorzugung der Berichterstattung auf Konstituentenebene unterstützt wichtige Anwendungsfälle und vermeidet gleichzeitig diese Duplizierung.
+In diesem Fall erfolgt die Angabe der Kapazität für eine FlexGroup in einer Abfrage, einem Dashboard oder einem Monitor über die Referenz des Bestandteils auf die übergeordnete FlexGroup. Anschließend können Sie die Bestandteile anhand dieser Referenz gruppieren und ihre Kapazitätswerte aggregieren.
 
-+ In diesem Fall wird zum Melden der Kapazität für eine FlexGroup in einer Abfrage, einem Dashboard oder einem Monitor die Referenz des Bestandteils auf die übergeordnete FlexGroup verwendet. Anschließend können die Bestandteile anhand dieser Referenz gruppiert und ihre Kapazitätswerte aggregiert werden.
+DII setzt die Kapazität der übergeordneten FlexGroup absichtlich auf null; ONTAP selbst meldet die Kapazität weiterhin. Dies gilt für Kapazitäts-/Effizienzkennzahlen, nicht für Leistungskennzahlen. Es wird empfohlen, Bestandteile nach der Gruppen-ID zu gruppieren, da der Gruppenname möglicherweise nicht global eindeutig ist.
 
-+ DII setzt die Kapazität des FlexGroup-Elternelements absichtlich auf null; ONTAP selbst meldet weiterhin Kapazität. Dies gilt für Kapazitäts-/Effizienzkennzahlen, nicht für Leistungskennzahlen. Eine Gruppierung von Komponenten nach Gruppen-ID ist empfehlenswert, da der Gruppenname möglicherweise nicht global eindeutig ist.
-
+====
 
 
 [[performance-section]]

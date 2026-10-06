@@ -110,8 +110,8 @@ ____
 
 *Genaue Fehler abgedeckt*
 
-* ONTAP-Typ für ++[++host++]++ konnte nicht ermittelt werden. Grund: Verbindungsfehler zum Storage System: Host ist nicht erreichbar
-* ++[++IP++]++ wird als Cluster/Knoten identifiziert und kann in diesem Modus nicht hinzugefügt werden
+* ONTAP Typ für [host] konnte nicht ermittelt werden. Grund: Verbindungsfehler zum Speichersystem: Host ist nicht erreichbar
+* [IP] wurde als Cluster/Node identifiziert und kann in diesem Modus nicht hinzugefügt werden
 * Keine gültige Datenschnittstelle ... auf der SVM gefunden.
 * Fehlende Berechtigung: vserver fpolicy
 * Rollen, die für diesen Active Directory Benutzer auf Gruppenebene statt auf Benutzerebene zugewiesen wurden
@@ -177,7 +177,7 @@ Das bedeutet, dass ONTAP die Verbindung, die Datei- und Benutzeraktivitäten an 
 
 *Behoben, wenn*
 
-* Die cloudsecure++_++ FPolicy-Richtlinie ist aktiviert und der Collector bleibt aktiv.
+* Die cloudsecure_ FPolicy Richtlinie ist aktiviert, und der Collector bleibt Running.
 
 
 
@@ -240,8 +240,8 @@ Ein beeinträchtigter Collector ist weiterhin aktiv, jedoch sind eine oder mehre
 . Es sollte geprüft werden, ob das Clientprotokoll aktiviert ist und ob die SVM über einen CIFS-Server verfügt.
 . Eingeschlossene und ausgeschlossene Shares und Volumes werden angezeigt. Vollständige Namen ohne Anführungszeichen verwenden.
 . Die Überwachung des Ordnerzugriffs ist zu aktivieren, wenn allgemeine Ordnerzugriffsereignisse erforderlich sind. Das Erstellen, Umbenennen und Löschen von Ordnern wird auch ohne diese Option erfasst.
-. Wenn nur die Aktivitäten der Dateien .ini und .DS++_++Store fehlen, ist keine Aktion erforderlich; diese Erweiterungen sind von der FPolicy-Ereigniserfassung ausgeschlossen.
-. Wenn weiterhin keine Aktivitäten festgestellt werden, können die erweiterten Diagnosefunktionen verwendet werden, um die cloudsecure++_++ Richtlinie und das ONTAP FPolicy-Ereignisprotokoll zu überprüfen.
+. Wenn nur Aktivitäten für .ini- und .DS_Store-Dateien fehlen, ist keine Aktion erforderlich; diese Erweiterungen sind von der FPolicy-Ereigniserfassung ausgeschlossen.
+. Falls weiterhin keine Aktivität vorliegt, kann mit der erweiterten Diagnose die cloudsecure_ Richtlinie und das ONTAP FPolicy-Ereignisprotokoll überprüft werden.
 
 
 *Behoben, wenn*
@@ -309,7 +309,7 @@ ONTAP Überwachung funktioniert; die Identitätsauflösung ist ein separates Pro
 . Bestätigen Sie, dass der Collector ausgeführt wird und nicht pausiert ist.
 . Für die Benutzerblockierung sind Anmeldeinformationen auf Clusterebene zu verwenden. Ein benutzerdefinierter Benutzer benötigt außerdem SSH-Zugriff auf TCP 22 und die dokumentierten Blockierungsberechtigungen.
 . Es wird bestätigt, dass der benutzerdefinierte Benutzer über die erforderlichen Snapshot-Berechtigungen verfügt.
-. Wenn ONTAP Multi-Admin Verify aktiviert ist, sind die dokumentierten Ausnahmen für cloudsecure++_++ Snapshots und die bei der Benutzerblockierung verwendete Set-Operation hinzuzufügen.
+. Wenn ONTAP Multi-Admin Verify aktiviert ist, müssen die dokumentierten Ausnahmen für cloudsecure_ Snapshots und der für die Benutzersperrung verwendete Set-Vorgang hinzugefügt werden.
 . Im Clustermodus den Verbindungstest ausführen und die Ergebnisse der Snapshot- und Benutzerblockierungsfunktionen überprüfen.
 
 
@@ -334,7 +334,7 @@ ONTAP Überwachung funktioniert; die Identitätsauflösung ist ein separates Pro
 | Degradierte Listen führen einen Knoten ohne lokale Daten-LIF auf | ONTAP kann keinen FPolicy-Kanal von einem Knoten aus herstellen, der die SVM nicht lokal bereitstellt. | Der aufgeführte Knoten verfügt über eine betriebsbereite SVM-Daten-LIF. 
 
 
-| Keine Ereignisse für .ini oder .DS++_++Store | Diese Erweiterungen sind vom Geltungsbereich der FPolicy ausgeschlossen. | Weitere erwartete Dateiaktivität fehlt ebenfalls. 
+| Keine Ereignisse für .ini oder .DS_Store | Diese Erweiterungen sind vom Geltungsbereich der FPolicy ausgeschlossen. | Weitere erwartete Dateiaktivität fehlt ebenfalls. 
 
 
 | Kurzer Initialisierungs-, Stopp- oder degradierter Zustand | Neustart, Upgrade, Migration, Failover und Wiederaufnahme erfordern eine erneute Verbindung. | Der Zustand bleibt auch nach der Operation oder Wiederholung bestehen. 
@@ -374,7 +374,7 @@ Der Befehl erstellt cloudsecure-agent-symptoms.zip. Zip ist zu installieren, fal
 
 
 | Collector-Protokoll  a| 
-/opt/netapp/cloudsecure/data-collectors/++<++collector-uuid++>++/logs/dsc.log
+/opt/netapp/cloudsecure/data-collectors/{lt}collector-uuid{gt}/logs/dsc.log
 
 Enthält alle Aktivitäten des Collectors, einschließlich Fehler. Dieses Protokoll dient zur Untersuchung von Collector-Problemen.
 
@@ -384,9 +384,9 @@ Enthält alle Aktivitäten des Collectors, einschließlich Fehler. Dieses Protok
 
 
 | Agent Installation und Upgrade  a| 
-/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++install.log
+/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_install.log
 
-/opt/netapp/cloudsecure/agent/logs/cloudsecure++_++agent++_++upgrade.log
+/opt/netapp/cloudsecure/agent/logs/cloudsecure_agent_upgrade.log
 
 
 
@@ -419,7 +419,7 @@ event log show -source fpolicy -fields event,action,description
 fpolicy show
 fpolicy show-engine
 ----
-Suchen Sie nach einer Workload Security Richtlinie mit dem Präfix cloudsecure++_++. Die Richtlinie sollte aktiviert sein, und jeder datenbereitstellende Node sollte eine verbundene externe Engine anzeigen. Der Ereignisgrund und der Node-Name bleiben erhalten, wenn ein Kanal getrennt wird.
+Es sollte eine Workload Security Richtlinie mit dem Präfix „cloudsecure_“ vorhanden sein. Die Richtlinie sollte aktiviert sein, und jeder datenbereitstellende Node sollte eine verbundene externe Engine anzeigen. Wenn ein Kanal getrennt wird, sollten der Ereignisgrund und der Node-Name beibehalten werden.
 
 
 
@@ -455,7 +455,7 @@ ____
 
 [listing]
 ----
-curl -kv https://++<++management-ip++>++:443
+curl -kv https://<management-ip>:443
 ----
 Eine TLS-Antwort bestätigt den TCP-Pfad. Eine Zeitüberschreitung weist auf eine Routing- oder Firewall-Blockierung hin. Eine Authentifizierungsantwort bestätigt die Erreichbarkeit, jedoch nicht, ob die Anmeldedaten oder Rollen korrekt sind.
 
@@ -468,7 +468,7 @@ Von ONTAP aus das Routing von jedem relevanten SVM-Daten-LIF testen:
 
 [listing]
 ----
-network ping -vserver ++<++svm++>++ -lif ++<++data-lif++>++ -destination ++<++agent-ip++>++ -show-detail
+network ping -vserver <svm> -lif <data-lif> -destination <agent-ip> -show-detail
 ----
 Auf dem Agent die Host-Firewall prüfen:
 
@@ -486,17 +486,10 @@ Bestätigen Sie, dass die reservierten Callback-Ports für eingehende Verbindung
 
 Ab ONTAP 9.8 und höher muss ein operatives SVM-Daten-LIF data-fpolicy-client mit data-nfs und/oder data-cifs enthalten.
 
-[listing]
-----
-network interface show -vserver ++<++svm++>++ -fields service-policy,status-admin,status-oper
-----
+ network interface show -vserver <svm> -fields service-policy,status-admin,status-oper
 Falls keine geeignete Richtlinie existiert, kann eine entsprechend dem ONTAP Netzwerkdesign erstellt oder angepasst werden. Beispielsweise:
 
-[listing]
-----
-net int service-policy create -policy only++_++data++_++fpolicy -vserver ++<++svm++>++ ++\++ \
--allowed-addresses 0.0.0.0/0 -services data-cifs,data-nfs,data,-core,data-fpolicy-client
-----
+ net int service-policy create -policy only_data_fpolicy -vserver <svm> \
 *Hinweis:* Bei ONTAP früher als 9.8 ist data-fpolicy-client nicht erforderlich. Die LIF muss die Rolle data haben, betriebsbereit sein und NFS und/oder CIFS unterstützen.
 
 
@@ -509,7 +502,7 @@ Eine Paketverfolgung kommt nur dann zum Einsatz, wenn die Verbindungsprüfung so
 . Eine Paketverfolgung auf ONTAP für die relevante Daten-LIF und die Agenten-IP starten.
 . Testverbindung versuchen oder den Collector neu starten.
 . Warten Sie auf den Fehler, dann die Ablaufverfolgung beenden.
-. Die Ablaufverfolgung von  https://++<++cluster-management-ip++>++/spi/++<++cluster-name++>++/etc/log/packet++_++traces/[] abrufen.
+. Die Ablaufverfolgung von  https://<cluster-management-ip>/spi/<cluster-name>/etc/log/packet_traces/[] abrufen.
 . Suchen Sie nach einem SYN von ONTAP an den Agent Callback-Port. Kein SYN weist auf ein Pfad- oder Richtlinienproblem auf ONTAP-Seite hin. Ein SYN ohne abgeschlossenen Handschlag weist auf ein Firewall- oder Routingproblem zwischen ONTAP und dem Agent hin.
 
 
@@ -539,7 +532,7 @@ Zwei Collector können nicht dieselbe SVM überwachen, selbst wenn sie zu unters
 
 [quote]
 ____
-*Hinweis:* cloudsecure++_++ Objekte für einen aktiven Collector dürfen nicht gelöscht werden. Der Collector ist Eigentümer und aktualisiert diese Objekte.
+*Hinweis:* Für einen aktiven Collector dürfen cloudsecure_-Objekte nicht gelöscht werden. Der Collector besitzt diese Objekte und aktualisiert sie.
 
 ____
 
@@ -553,11 +546,11 @@ Für eine nicht verwendete Richtlinie die zugehörigen Objekte in Abhängigkeits
 
 [listing]
 ----
-fpolicy disable -vserver ++<++svm++>++ -policy-name ++<++policy-name++>++
-fpolicy policy scope delete -vserver ++<++svm++>++ -policy-name ++<++policy-name++>++
-fpolicy policy delete -vserver ++<++svm++>++ -policy-name ++<++policy-name++>++
-fpolicy policy event delete -vserver ++<++svm++>++ -event-name ++<++event-name++>++
-fpolicy policy external-engine delete -vserver ++<++svm++>++ -engine-name ++<++engine-name++>++
+fpolicy disable -vserver <svm> -policy-name <policy-name>
+fpolicy policy scope delete -vserver <svm> -policy-name <policy-name>
+fpolicy policy delete -vserver <svm> -policy-name <policy-name>
+fpolicy policy event delete -vserver <svm> -event-name <event-name>
+fpolicy policy external-engine delete -vserver <svm> -engine-name <engine-name>
 ----
 Der Workload Security Collector wird neu gestartet, nachdem Sequenz-Slots oder in Konflikt stehende Objekte entfernt wurden.
 
@@ -583,7 +576,7 @@ Der Workload Security Collector wird neu gestartet, nachdem Sequenz-Slots oder i
 | AGENT009 | Es sollte bestätigt werden, dass der Collector im ausgewählten Agent und in der ausgewählten Umgebung weiterhin existiert und nicht durch eine gleichzeitige Löschung oder Migration entfernt wurde. 
 
 
-| Agent NICHT++_++VERBUNDEN | Systemctl und journalctl, SaaS-Egress über TCP 443, Proxy-Konfiguration, SSL-Inspektion und das cssys-Konto prüfen. 
+| Agent NOT_CONNECTED | Systemctl und journalctl, SaaS-Egress über TCP 443, Proxy-Konfiguration, SSL-Inspektion und das cssys-Konto prüfen. 
 |===
 Verwenden Sie den Event Rate Checker, um die Größe des Agent zu bestimmen. Nicht allein auf die Anzahl der Collector verlassen, da das Ereignisvolumen und aktivierte Funktionen die Last beeinflussen.
 
@@ -593,7 +586,7 @@ Verwenden Sie den Event Rate Checker, um die Größe des Agent zu bestimmen. Nic
 == *Keine Aktivitäten nach den grundlegenden Überprüfungen festgestellt*
 
 . Den Befehl `event log show -source fpolicy` ausführen und dabei alle Fehler protokollieren.
-. Mit dem Befehl „fpolicy show“ lässt sich bestätigen, dass eine cloudsecure++_++ Richtlinie aktiviert ist.
+. Mit fpolicy show lässt sich bestätigen, dass eine cloudsecure_ Richtlinie aktiviert ist.
 . Es sollte bestätigt werden, dass das Protokoll, das Client-Operationen generiert, im Collector aktiviert und auf der SVM zugelassen ist.
 . Bestätigen Sie, dass die Freigabe oder das Volume nicht ausgeschlossen ist.
 . Bestätigen Sie, dass der Datensammler zum Zeitpunkt des Vorgangs nicht pausiert war.
@@ -640,7 +633,7 @@ Multi-Admin Verify kann die für Snapshots und Benutzerblockierung verwendeten O
 
 [quote]
 ____
-multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !++*++cloudsecure++_*++" + multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !++*++cloudsecure++_*++" + multi-admin-verify rule delete -operation set
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !\*cloudsecure\_*" + multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !\*cloudsecure\_*" + multi-admin-verify rule delete -operation set
 
 *Hinweis:* Durch das Löschen der festgelegten Regel ändert sich der Multi-Admin Verify-Schutz für diesen Vorgang. Die Änderung sollte mit dem ONTAP Security Administrator überprüft werden.
 
@@ -655,7 +648,7 @@ Den Support kontaktieren, wenn ein Fehler nach den angeordneten Prüfungen weite
 
 *Enthalten*
 
-* Die vollständige Meldung von Status ++>++ Weitere Details und der Zeitpunkt des Fehlers.
+* Die vollständige Meldung unter Status > Weitere Details sowie der Zeitpunkt des Fehlers.
 * Ergebnisse des Verbindungstests, einschließlich übersprungener Prüfungen.
 * Agenten- und Sammlerversionen und deren aktueller Status.
 * ONTAP Version, Cluster- und SVM-Name, Verbindungsmodus und kürzliche Topologieänderungen.
@@ -666,4 +659,4 @@ Den Support kontaktieren, wenn ein Fehler nach den angeordneten Prüfungen weite
 * Zur Kapazität: Nutzung vor und nach dem Abonnement sowie die von jedem Collector gemeldete Bruttokapazität.
 
 
-Hilfe ++>++ Support in Data Infrastructure Insights kann verwendet werden, um einen Fall zu eröffnen.
+Ein Supportfall lässt sich in Data Infrastructure Insights über „Hilfe > Support“ eröffnen.
