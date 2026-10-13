@@ -76,6 +76,28 @@ Die folgende Tabelle zeigt die für jede Berichterstellungsrolle verfügbaren Fu
 |===
 
 
+[[reporting-administration]]
+== Berichtsverwaltung
+
+Die bisherige Berichtsverwaltungskonsole ist nicht mehr verfügbar. Für die Berichtsverwaltung steht Manage zur Verfügung.
+
+. In Data Infrastructure Insights können Sie *Reports* öffnen.
+. Die Auswahl erfolgt über *Menü > Verwalten*.
+
+
+Von Manage aus kann ein Reporting-Administrator Berichte konfigurieren und mit aktuellen, vergangenen und anstehenden Reporting-Aktivitäten arbeiten.
+
+Öffnen der Ausführungsdetails für eine abgeschlossene Aktivität:
+
+. Die Auswahl erfolgt über *Menü > Verwalten > Aktivitäten > Vergangenes*.
+. Bei der Aktivität wird das Drei-Punkte-Menü geöffnet.
+. *Run Details* auswählen.
+
+
+Weitere Informationen finden Sie in diesem link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/IBM_Cognos_Administration_Console_Does_Not_Load_for_DII_Reporting_Scheduled_Reports["KB-Artikel"^].
+
+
+
 [[setting-reporting-cognos-email-preferences]]
 == Festlegen von E-Mail-Einstellungen für Reporting (Cognos)
 
